@@ -3,6 +3,9 @@
 .trash/
 Thumbs.db
 Desktop.ini
+.wiki-cache.json
+.llm-wiki-path
+.wiki-tmp/
 
 # High-sensitivity local materials must never be published
 raw/private*/

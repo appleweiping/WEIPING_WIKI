@@ -2,6 +2,8 @@
 
 `vipin wiki` exists to become a serious long-term knowledge system rather than a dumping ground for files.
 
+Language: English
+
 ## Primary Research Directions
 
 - large language models
@@ -32,4 +34,3 @@
 3. Prefer synthesis over duplication.
 4. Protect private materials by default.
 5. Turn repeated questions into durable pages and tools.
-

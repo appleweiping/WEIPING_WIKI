@@ -19,11 +19,13 @@ Its purpose is not just to store documents, but to compile them into an evolving
 
 - [[index]]
 - [[log]]
+- [[overview]]
 - [[knowledge-graph]]
 
 At the repository root, the main operating files are:
 
 - `.wiki-schema.md`
+- `WORKFLOWS.md`
 - `purpose.md`
 - `AGENTS.md`
 
@@ -35,6 +37,7 @@ Instead of re-deriving knowledge from raw files on every question, the agent inc
 
 - [[index]]
 - [[log]]
+- [[overview]]
 - [[knowledge-graph]]
 - [[vipin]]
 - [[llm-wiki]]
@@ -53,7 +56,7 @@ Instead of re-deriving knowledge from raw files on every question, the agent inc
 ## Near-Term Goals
 
 - Establish a reliable ingest workflow.
-- Introduce stronger schema, graph, and lint support.
+- Introduce stronger schema, graph, lint, and compatibility support.
 - Build core pages around Vipin's interests, projects, and long-term themes.
 - Keep a running synthesis instead of scattered chat history.
 

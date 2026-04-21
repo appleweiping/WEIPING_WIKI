@@ -3,7 +3,7 @@ title: Index
 type: index
 status: active
 created: 2026-04-21
-updated: 2026-04-21
+updated: 2026-04-22
 tags:
   - index
 ---
@@ -15,6 +15,7 @@ This is the main catalog of the wiki.
 ## Overview
 
 - [[home]] - Top-level overview of the knowledge base and workflow.
+- [[overview]] - Structural map of the repository layers, sections, and active public domains.
 - [[log]] - Chronological record of ingests, analyses, queries, and maintenance actions.
 - [[knowledge-graph]] - Generated public wiki-link graph for structural inspection.
 
@@ -38,10 +39,12 @@ This is the main catalog of the wiki.
 
 - [[2026-04-21-vipin-wiki-bootstrap]] - Initial implementation memo describing how this repository instantiates the LLM wiki idea.
 - [[2026-04-21-llm-rec-research-map]] - First-pass map of the LLM-for-recommendation literature represented in the current local paper collections.
+- [[2026-04-22-llm-wiki-skill-alignment]] - System alignment memo describing how this repository now matches the reference `llm-wiki-skill` operating model.
 
 ## Synthesis
 
 - [[synthesis-home]] - Entry page for the `wiki/synthesis/` section.
+- [[README|synthesis sessions]] - Session-level synthesis notes and crystallized checkpoints.
 
 ## Timelines
 
@@ -50,3 +53,11 @@ This is the main catalog of the wiki.
 ## Queries
 
 - [[queries-home]] - Entry page for durable saved answers.
+
+## Topics
+
+- [[topics-home]] - Entry page for durable subject clusters.
+
+## Comparisons
+
+- [[comparisons-home]] - Entry page for side-by-side evaluations and tradeoff notes.

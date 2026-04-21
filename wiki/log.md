@@ -3,7 +3,7 @@ title: Log
 type: log
 status: active
 created: 2026-04-21
-updated: 2026-04-21
+updated: 2026-04-22
 tags:
   - log
 ---
@@ -61,3 +61,23 @@ tags:
   - Added a stronger schema layer with `.wiki-schema.md` and `purpose.md`.
   - Added operational scripts for status, graph generation, and linting.
   - Upgraded the repository from a lightweight starter wiki toward a more systematized knowledge base.
+
+## [2026-04-22 00:18] analysis | align with llm-wiki-skill operating model
+
+- Pages created:
+  - [[2026-04-22-llm-wiki-skill-alignment]]
+  - [[overview]]
+  - [[topics-home]]
+  - [[comparisons-home]]
+  - [[README|synthesis sessions]]
+- Pages updated:
+  - [[home]]
+  - [[index]]
+  - [[log]]
+- Sources used:
+  - local repository structure
+  - imported `llm-wiki-skill` reference scripts and templates
+- Notes:
+  - Added workflow documentation, source routing tables, adapter-state checks, cache helpers, compatibility inspection, delete scanning, and a session-start hook.
+  - Added bash-native status, lint, graph-data, and graph-html generation so the repo now supports the same major operating surfaces as the reference system.
+  - Verified the public/private boundary and generated `wiki/graph-data.json` plus `wiki/knowledge-graph.html`.

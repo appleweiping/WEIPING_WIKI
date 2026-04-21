@@ -1,0 +1,10 @@
+field_name	requiredness	filled_by	value_rule
+source_id	required	router	Must match a source_id in source-registry.tsv
+source_label	required	router	Must match a source_label in source-registry.tsv
+source_category	required	router	Must be one of core_builtin, optional_adapter, manual_only
+input_mode	required	caller_or_router	Must be one of url, file, text, asset
+raw_dir	required	router	Must be a relative path under raw/
+original_ref	required	caller	Store the original URL, file path, or provenance note
+ingest_text	required	adapter_or_user	Must be non-empty text before entering the main ingest flow
+adapter_name	required_may_be_empty	router_or_adapter	Leave empty for core/manual routes; fill for optional adapters
+fallback_hint	required	router	Must provide a concrete manual fallback for the user

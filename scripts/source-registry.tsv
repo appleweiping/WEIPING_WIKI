@@ -1,0 +1,10 @@
+source_id	source_label	source_category	input_mode	match_rule	raw_dir	adapter_name	dependency_name	dependency_type	fallback_hint
+local_pdf	Local PDF	core_builtin	file	file_ext:.pdf	raw/pdfs	-	-	none	Provide the file path directly and proceed with manual ingest
+local_document	Local markdown or text	core_builtin	file	file_ext:.md,.txt,.html	raw/notes	-	-	none	Provide the file path directly and proceed with manual ingest
+plain_text	Pasted text	core_builtin	text	text:inline	raw/notes	-	-	none	Paste the content directly into the ingest flow
+x_twitter	X or Twitter post	optional_adapter	url	url_host:x.com,twitter.com	raw/tweets	baoyu-url-to-markdown	baoyu-url-to-markdown	bundled	If extraction fails, copy the post text manually
+wechat_article	WeChat article	optional_adapter	url	url_host:mp.weixin.qq.com	raw/wechat	wechat-article-to-markdown	wechat-article-to-markdown	install_time	If extraction fails, open the article and copy the text manually
+youtube_video	YouTube video	optional_adapter	url	url_host:youtube.com,youtu.be	raw/articles	youtube-transcript	youtube-transcript	bundled	If extraction fails, provide a transcript or summary manually
+zhihu_article	Zhihu article	optional_adapter	url	url_host:zhihu.com	raw/zhihu	baoyu-url-to-markdown	baoyu-url-to-markdown	bundled	If extraction fails, copy the article text manually
+xiaohongshu_post	Xiaohongshu post	manual_only	url	url_host:xiaohongshu.com,xhslink.com	raw/xiaohongshu	-	-	none	Copy the post content manually before ingest
+web_article	General web article	optional_adapter	url	url_host:*	raw/articles	baoyu-url-to-markdown	baoyu-url-to-markdown	bundled	If extraction fails, save or paste the article manually
