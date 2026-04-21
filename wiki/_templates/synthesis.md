@@ -1,6 +1,6 @@
 ---
 title:
-type: analysis
+type: synthesis
 status: active
 created:
 updated:
@@ -10,20 +10,13 @@ source_pages: []
 
 # Title
 
-## Question
+## Scope
 
 ## Summary
 
-## Key Points
+## Main Claims
 
-## Evidence
-
-## Confidence
-
-- EXTRACTED:
-- INFERRED:
-- AMBIGUOUS:
-- UNVERIFIED:
+## Evidence And Confidence
 
 ## Open Questions
 

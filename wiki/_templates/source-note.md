@@ -18,6 +18,13 @@ provenance:
 
 ## Evidence / Important Details
 
+## Confidence
+
+- EXTRACTED:
+- INFERRED:
+- AMBIGUOUS:
+- UNVERIFIED:
+
 ## Tensions / Uncertainties
 
 ## Related Pages

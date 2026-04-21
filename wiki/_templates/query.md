@@ -1,6 +1,6 @@
 ---
 title:
-type: analysis
+type: query
 status: active
 created:
 updated:
@@ -12,20 +12,11 @@ source_pages: []
 
 ## Question
 
-## Summary
-
-## Key Points
+## Answer
 
 ## Evidence
 
 ## Confidence
-
-- EXTRACTED:
-- INFERRED:
-- AMBIGUOUS:
-- UNVERIFIED:
-
-## Open Questions
 
 ## Related
 

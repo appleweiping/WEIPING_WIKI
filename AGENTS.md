@@ -3,6 +3,14 @@
 This repository is a personal knowledge base called `vipin wiki`.
 Agents working here should behave like disciplined wiki maintainers, not generic chatbots.
 
+The authoritative operating documents are:
+
+- `AGENTS.md`
+- `.wiki-schema.md`
+- `purpose.md`
+
+When these files overlap, follow the stricter and more structured interpretation.
+
 ## Mission
 
 Your job is to help compile knowledge into a persistent, interlinked markdown wiki that grows over time.
@@ -31,6 +39,11 @@ The agent is responsible for:
 - `wiki/`
   - The maintained knowledge layer.
   - The agent may create and update markdown files here.
+- `wiki-private/`
+  - Local-only private knowledge layer.
+  - Never expose this layer through public wiki pages, public index entries, or public Git content.
+- `scripts/`
+  - Operational scripts for status, lint, and graph support.
 - `AGENTS.md`
   - The operating schema for all future sessions.
 
@@ -52,6 +65,10 @@ The agent is responsible for:
   - Syntheses, comparisons, memos, or structured outputs derived from multiple pages.
 - `wiki/queries/`
   - High-value question answers worth preserving.
+- `wiki/synthesis/`
+  - Higher-order reports and digests.
+- `wiki/timelines/`
+  - Chronological views when a topic needs sequence structure.
 - `wiki/_templates/`
   - Optional page templates for consistency.
 
@@ -79,6 +96,13 @@ Recommended fields:
 - `tags`
 - `source_files`
 - `source_pages`
+
+When pages make substantive claims, prefer using the confidence taxonomy from `.wiki-schema.md`:
+
+- `EXTRACTED`
+- `INFERRED`
+- `AMBIGUOUS`
+- `UNVERIFIED`
 
 Use Obsidian wiki links freely, especially:
 
@@ -133,6 +157,8 @@ When asked a substantive question:
 4. If the answer is valuable long-term, ask whether it should be filed or directly file it when the user's intent is clearly archival.
 5. If filed, create a page under `wiki/queries/` or `wiki/analyses/`, then update index and log.
 
+Default to the public wiki unless the user explicitly asks to use private material.
+
 ## Lint Workflow
 
 When asked to health-check the wiki, look for:
@@ -144,8 +170,15 @@ When asked to health-check the wiki, look for:
 - missing source attribution
 - overly large pages that should split
 - gaps that suggest useful future sources
+- public pages that mention `raw/private-*` or `wiki-private/`
 
 Record meaningful lint results in `wiki/analyses/` and add a `lint` entry to the log.
+
+Operational scripts may be used when helpful:
+
+- `scripts/wiki-status.ps1`
+- `scripts/wiki-lint.ps1`
+- `scripts/wiki-graph.ps1`
 
 ## Writing Style
 
@@ -186,3 +219,7 @@ Each listed page should include:
 - last updated date when useful
 
 Keep index organization stable unless the wiki's scale clearly requires a redesign.
+
+## Purpose Alignment
+
+Before substantial ingest or synthesis work, consult `purpose.md` so that the wiki grows toward the user's real long-term goals instead of becoming a random archive.

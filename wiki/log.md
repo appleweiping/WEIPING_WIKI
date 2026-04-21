@@ -45,3 +45,19 @@ tags:
 - Notes:
   - Registered three external local research collections related to LLMs and recommendation.
   - Added a concept page and first-pass synthesis page to make future paper ingest and querying easier.
+
+## [2026-04-21 23:22] analysis | upgrade wiki operating system
+
+- Pages created:
+  - [[knowledge-graph]]
+- Pages updated:
+  - [[home]]
+  - [[index]]
+  - [[log]]
+- Sources used:
+  - local repository structure
+  - llm-wiki-skill reference design
+- Notes:
+  - Added a stronger schema layer with `.wiki-schema.md` and `purpose.md`.
+  - Added operational scripts for status, graph generation, and linting.
+  - Upgraded the repository from a lightweight starter wiki toward a more systematized knowledge base.

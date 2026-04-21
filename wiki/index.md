@@ -16,6 +16,7 @@ This is the main catalog of the wiki.
 
 - [[home]] - Top-level overview of the knowledge base and workflow.
 - [[log]] - Chronological record of ingests, analyses, queries, and maintenance actions.
+- [[knowledge-graph]] - Generated public wiki-link graph for structural inspection.
 
 ## Entities
 
@@ -38,6 +39,14 @@ This is the main catalog of the wiki.
 - [[2026-04-21-vipin-wiki-bootstrap]] - Initial implementation memo describing how this repository instantiates the LLM wiki idea.
 - [[2026-04-21-llm-rec-research-map]] - First-pass map of the LLM-for-recommendation literature represented in the current local paper collections.
 
+## Synthesis
+
+- [[synthesis-home]] - Entry page for the `wiki/synthesis/` section.
+
+## Timelines
+
+- [[timelines-home]] - Entry page for the `wiki/timelines/` section.
+
 ## Queries
 
-- No saved query pages yet.
+- [[queries-home]] - Entry page for durable saved answers.
