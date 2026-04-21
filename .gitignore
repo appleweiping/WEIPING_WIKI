@@ -1,0 +1,14 @@
+.obsidian/workspace*
+.obsidian/cache
+.trash/
+Thumbs.db
+Desktop.ini
+
+# High-sensitivity local materials must never be published
+raw/private*/
+raw/private-images/
+raw/private-videos/
+raw/private-chat/
+raw/private-journal/
+raw/private-docs/
+wiki-private/
