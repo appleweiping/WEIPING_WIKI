@@ -19,6 +19,7 @@ Vipin is the owner and primary subject of this personal knowledge base.
 
 - Wants to build a personal wiki maintained by an LLM agent.
 - Is starting from the `LLM Wiki` pattern rather than a plain document archive or simple RAG setup.
+- Is actively collecting learning and research materials related to LLMs and recommender systems.
 
 ## Likely Uses
 
@@ -26,6 +27,7 @@ Vipin is the owner and primary subject of this personal knowledge base.
 - research tracking
 - project and idea development
 - preserving high-value analyses from conversations
+- paper reading and literature mapping for LLM-based recommendation research
 
 ## Open Questions
 
@@ -36,6 +38,7 @@ Vipin is the owner and primary subject of this personal knowledge base.
 ## Related
 
 - [[llm-wiki]]
+- [[llm-based-recommendation]]
 - [[2026-04-21-llm-wiki-pattern]]
 - [[2026-04-21-vipin-wiki-bootstrap]]
 

@@ -26,3 +26,22 @@ tags:
   - Created repository structure for raw materials, wiki pages, and agent schema.
   - Added initial operating conventions in `AGENTS.md`.
   - Seeded the wiki with a concept page, a source note, and a bootstrap analysis.
+
+## [2026-04-21 19:34] ingest | llm and recommendation research collections
+
+- Pages created:
+  - [[llm-based-recommendation]]
+  - [[2026-04-21-nh-baseline-paper-set]]
+  - [[2026-04-21-nr-baseline-paper-set]]
+  - [[2026-04-21-recommendation-paper-library]]
+  - [[2026-04-21-llm-rec-research-map]]
+- Pages updated:
+  - [[index]]
+  - [[vipin]]
+- Sources used:
+  - `D:\Research\Uncertainty-LLM4Rec\Paper\BASELINE\NH`
+  - `D:\Research\Uncertainty-LLM4Rec\Paper\BASELINE\NR`
+  - `D:\Research\LLM\papers\recommendation`
+- Notes:
+  - Registered three external local research collections related to LLMs and recommendation.
+  - Added a concept page and first-pass synthesis page to make future paper ingest and querying easier.
