@@ -102,3 +102,30 @@ tags:
   - Added a first-class reader layer, structured contributions record, machine-readable catalog generation, scored search, and layered context packing.
   - Expanded the source registry for meeting transcripts and voice-note workflows.
   - Added divergence-check language so the wiki preserves counterarguments and missing evidence instead of only reinforcing the dominant view.
+
+## [2026-04-22 10:45] query | github submit prompts
+
+- Pages created:
+  - [[2026-04-22-how-to-reduce-github-submit-prompts]]
+- Pages updated:
+  - [[queries-home]]
+  - [[index]]
+  - [[log]]
+- Sources used:
+  - user question in chat about repeated GitHub submit prompts
+  - observed repository workflow under the current Codex safety model
+- Notes:
+  - Recorded why `git add`, `git commit`, and `git push` often trigger approval prompts in this environment.
+  - Captured the preferred workflow of batching wiki edits and pushing once per coherent session.
+
+## [2026-04-22 10:52] query | persistent approval rules
+
+- Pages updated:
+  - [[2026-04-22-how-to-reduce-github-submit-prompts]]
+  - [[log]]
+- Sources used:
+  - user follow-up question in chat about how to configure persistent approval rules
+  - observed approval model in the current Codex desktop environment
+- Notes:
+  - Added concrete guidance on where to look in permission dialogs and which narrow command prefixes are reasonable to persist.
+  - Added a warning against overly broad `powershell` or `python` approvals.

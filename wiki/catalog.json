@@ -1,7 +1,7 @@
 {
   "meta": {
     "root": "D:\\Research\\vipin's knowledgebase",
-    "page_count": 24
+    "page_count": 25
   },
   "pages": [
     {
@@ -409,6 +409,7 @@
         "2026-04-21-nr-baseline-paper-set",
         "2026-04-21-recommendation-paper-library",
         "2026-04-21-vipin-wiki-bootstrap",
+        "2026-04-22-how-to-reduce-github-submit-prompts",
         "2026-04-22-karpathy-llm-wiki-zh-compilation",
         "2026-04-22-karpathy-upgrade-session",
         "2026-04-22-llm-wiki-skill-alignment",
@@ -429,13 +430,14 @@
       ],
       "backlinks": [
         "2026-04-21-vipin-wiki-bootstrap",
+        "2026-04-22-how-to-reduce-github-submit-prompts",
         "2026-04-22-llm-wiki-skill-alignment",
         "home",
         "log",
         "overview"
       ],
       "has_counterpoints": false,
-      "word_count": 374,
+      "word_count": 399,
       "source_pages": [],
       "source_files": [],
       "body_preview": "# Index This is the main catalog of the wiki. ## Overview - [[home]] - Top-level overview of the knowledge base and workflow. - [[overview]] - Structural map of the repository layers, sections, and active public domains. - [[log]] - Chronological record of ingests, analyses, quer"
@@ -454,7 +456,9 @@
         "[2026-04-21 19:34] ingest | llm and recommendation research collections",
         "[2026-04-21 23:22] analysis | upgrade wiki operating system",
         "[2026-04-22 00:18] analysis | align with llm-wiki-skill operating model",
-        "[2026-04-22 10:20] analysis | integrate karpathy article extensions"
+        "[2026-04-22 10:20] analysis | integrate karpathy article extensions",
+        "[2026-04-22 10:45] query | github submit prompts",
+        "[2026-04-22 10:52] query | persistent approval rules"
       ],
       "links": [
         "2026-04-21-llm-rec-research-map",
@@ -463,6 +467,7 @@
         "2026-04-21-nr-baseline-paper-set",
         "2026-04-21-recommendation-paper-library",
         "2026-04-21-vipin-wiki-bootstrap",
+        "2026-04-22-how-to-reduce-github-submit-prompts",
         "2026-04-22-karpathy-llm-wiki-zh-compilation",
         "2026-04-22-karpathy-upgrade-session",
         "2026-04-22-llm-wiki-skill-alignment",
@@ -477,18 +482,20 @@
         "log",
         "overview",
         "personal-knowledge-systems",
+        "queries-home",
         "topics-home",
         "vipin"
       ],
       "backlinks": [
         "2026-04-21-vipin-wiki-bootstrap",
+        "2026-04-22-how-to-reduce-github-submit-prompts",
         "2026-04-22-llm-wiki-skill-alignment",
         "home",
         "index",
         "log"
       ],
       "has_counterpoints": false,
-      "word_count": 461,
+      "word_count": 613,
       "source_pages": [],
       "source_files": [],
       "body_preview": "# Log ## [2026-04-21 17:36] bootstrap | initialize vipin wiki - Pages created: - [[home]] - [[index]] - [[log]] - [[vipin]] - [[llm-wiki]] - [[2026-04-21-llm-wiki-pattern]] - [[2026-04-21-vipin-wiki-bootstrap]] - Sources used: - user-provided idea brief in chat describing the `LL"
@@ -535,6 +542,52 @@
       "body_preview": "# Overview This page describes the current operating shape of `vipin wiki`. ## Layers - Public wiki: `wiki/` - Private local-only wiki: maintained in a separate local-only layer - Raw sources: `raw/` - Reader layer: `reader-context.md` - Operating layer: `AGENTS.md`, `.wiki-schem"
     },
     {
+      "id": "2026-04-22-how-to-reduce-github-submit-prompts",
+      "title": "How To Reduce GitHub Submit Prompts",
+      "type": "query",
+      "path": "wiki/queries/2026-04-22-how-to-reduce-github-submit-prompts.md",
+      "tags": [
+        "query",
+        "github",
+        "workflow",
+        "codex"
+      ],
+      "headings": [
+        "How To Reduce GitHub Submit Prompts",
+        "Question",
+        "Short Answer",
+        "What This Means In Practice",
+        "Best Workflow For Vipin",
+        "Good Options",
+        "Option 1: Batch pushes by session",
+        "Option 2: Let the agent prepare, then push manually",
+        "Option 3: Persist safe approvals when available",
+        "How To Set Persistent Approval Rules",
+        "Practical Recommendation",
+        "Recommendation",
+        "Counterpoints and Gaps",
+        "Related"
+      ],
+      "links": [
+        "2026-04-22-karpathy-upgrade-session",
+        "index",
+        "log",
+        "queries-home"
+      ],
+      "backlinks": [
+        "index",
+        "log",
+        "queries-home"
+      ],
+      "has_counterpoints": true,
+      "word_count": 510,
+      "source_pages": [
+        "2026-04-22-karpathy-upgrade-session"
+      ],
+      "source_files": [],
+      "body_preview": "# How To Reduce GitHub Submit Prompts ## Question Why does updating GitHub often require an extra manual submit or approval step, and what is the best workflow to reduce that friction? ## Short Answer The extra prompt usually appears because commit and push operations cross a saf"
+    },
+    {
       "id": "queries-home",
       "title": "Queries Home",
       "type": "query",
@@ -543,18 +596,23 @@
         "query"
       ],
       "headings": [
-        "Queries Home"
+        "Queries Home",
+        "Current Queries"
       ],
-      "links": [],
+      "links": [
+        "2026-04-22-how-to-reduce-github-submit-prompts"
+      ],
       "backlinks": [
+        "2026-04-22-how-to-reduce-github-submit-prompts",
         "index",
+        "log",
         "overview"
       ],
       "has_counterpoints": false,
-      "word_count": 9,
+      "word_count": 20,
       "source_pages": [],
       "source_files": [],
-      "body_preview": "# Queries Home Store durable answers to important questions here."
+      "body_preview": "# Queries Home Store durable answers to important questions here. ## Current Queries - [[2026-04-22-how-to-reduce-github-submit-prompts]]"
     },
     {
       "id": "2026-04-21-llm-wiki-pattern",
@@ -778,6 +836,7 @@
         "personal-knowledge-systems"
       ],
       "backlinks": [
+        "2026-04-22-how-to-reduce-github-submit-prompts",
         "2026-04-22-karpathy-llm-wiki-zh-compilation",
         "README",
         "index",

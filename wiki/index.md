@@ -54,6 +54,7 @@ This is the main catalog of the wiki.
 ## Queries
 
 - [[queries-home]] - Entry page for durable saved answers.
+- [[2026-04-22-how-to-reduce-github-submit-prompts]] - Workflow note on why GitHub updates may require approval prompts and how to reduce the friction.
 
 ## Topics
 
