@@ -1,7 +1,7 @@
 {
   "meta": {
     "root": "D:\\Research\\vipin's knowledgebase",
-    "page_count": 26
+    "page_count": 33
   },
   "pages": [
     {
@@ -409,11 +409,18 @@
         "2026-04-21-nr-baseline-paper-set",
         "2026-04-21-recommendation-paper-library",
         "2026-04-21-vipin-wiki-bootstrap",
+        "2026-04-22-5eid0-venus-project-course-materials",
+        "2026-04-22-how-are-k-omega-and-v-derived",
+        "2026-04-22-how-to-position-yourself-for-embedded-software-in-5eid0",
         "2026-04-22-how-to-reduce-github-submit-prompts",
         "2026-04-22-karpathy-llm-wiki-zh-compilation",
         "2026-04-22-karpathy-upgrade-session",
         "2026-04-22-llm-wiki-skill-alignment",
+        "2026-04-22-security-course-self-study-guide",
         "2026-04-22-what-is-dbm",
+        "2026-04-22-what-is-spectroscopy",
+        "2026-04-22-what-to-pay-attention-to-in-5eid0-project-course",
+        "2026-04-22-what-to-pay-attention-to-in-security-self-study-guide",
         "README",
         "comparisons-home",
         "home",
@@ -431,15 +438,22 @@
       ],
       "backlinks": [
         "2026-04-21-vipin-wiki-bootstrap",
+        "2026-04-22-5eid0-venus-project-course-materials",
+        "2026-04-22-how-are-k-omega-and-v-derived",
+        "2026-04-22-how-to-position-yourself-for-embedded-software-in-5eid0",
         "2026-04-22-how-to-reduce-github-submit-prompts",
         "2026-04-22-llm-wiki-skill-alignment",
+        "2026-04-22-security-course-self-study-guide",
         "2026-04-22-what-is-dbm",
+        "2026-04-22-what-is-spectroscopy",
+        "2026-04-22-what-to-pay-attention-to-in-5eid0-project-course",
+        "2026-04-22-what-to-pay-attention-to-in-security-self-study-guide",
         "home",
         "log",
         "overview"
       ],
       "has_counterpoints": false,
-      "word_count": 420,
+      "word_count": 593,
       "source_pages": [],
       "source_files": [],
       "body_preview": "# Index This is the main catalog of the wiki. ## Overview - [[home]] - Top-level overview of the knowledge base and workflow. - [[overview]] - Structural map of the repository layers, sections, and active public domains. - [[log]] - Chronological record of ingests, analyses, quer"
@@ -462,7 +476,10 @@
         "[2026-04-22 10:45] query | github submit prompts",
         "[2026-04-22 10:52] query | persistent approval rules",
         "[2026-04-22 10:58] analysis | preserve substantive q-and-a by default",
-        "[2026-04-22 11:05] query | what is dbm"
+        "[2026-04-22 11:05] query | what is dbm",
+        "[2026-04-22 11:12] query | optics course terminology and wave derivation",
+        "[2026-04-22 11:22] ingest | security self-study guide",
+        "[2026-04-22 11:35] ingest | 5eid0 venus project course materials"
       ],
       "links": [
         "2026-04-21-llm-rec-research-map",
@@ -471,11 +488,18 @@
         "2026-04-21-nr-baseline-paper-set",
         "2026-04-21-recommendation-paper-library",
         "2026-04-21-vipin-wiki-bootstrap",
+        "2026-04-22-5eid0-venus-project-course-materials",
+        "2026-04-22-how-are-k-omega-and-v-derived",
+        "2026-04-22-how-to-position-yourself-for-embedded-software-in-5eid0",
         "2026-04-22-how-to-reduce-github-submit-prompts",
         "2026-04-22-karpathy-llm-wiki-zh-compilation",
         "2026-04-22-karpathy-upgrade-session",
         "2026-04-22-llm-wiki-skill-alignment",
+        "2026-04-22-security-course-self-study-guide",
         "2026-04-22-what-is-dbm",
+        "2026-04-22-what-is-spectroscopy",
+        "2026-04-22-what-to-pay-attention-to-in-5eid0-project-course",
+        "2026-04-22-what-to-pay-attention-to-in-security-self-study-guide",
         "README",
         "comparisons-home",
         "home",
@@ -493,15 +517,22 @@
       ],
       "backlinks": [
         "2026-04-21-vipin-wiki-bootstrap",
+        "2026-04-22-5eid0-venus-project-course-materials",
+        "2026-04-22-how-are-k-omega-and-v-derived",
+        "2026-04-22-how-to-position-yourself-for-embedded-software-in-5eid0",
         "2026-04-22-how-to-reduce-github-submit-prompts",
         "2026-04-22-llm-wiki-skill-alignment",
+        "2026-04-22-security-course-self-study-guide",
         "2026-04-22-what-is-dbm",
+        "2026-04-22-what-is-spectroscopy",
+        "2026-04-22-what-to-pay-attention-to-in-5eid0-project-course",
+        "2026-04-22-what-to-pay-attention-to-in-security-self-study-guide",
         "home",
         "index",
         "log"
       ],
       "has_counterpoints": false,
-      "word_count": 747,
+      "word_count": 1027,
       "source_pages": [],
       "source_files": [],
       "body_preview": "# Log ## [2026-04-21 17:36] bootstrap | initialize vipin wiki - Pages created: - [[home]] - [[index]] - [[log]] - [[vipin]] - [[llm-wiki]] - [[2026-04-21-llm-wiki-pattern]] - [[2026-04-21-vipin-wiki-bootstrap]] - Sources used: - user-provided idea brief in chat describing the `LL"
@@ -546,6 +577,93 @@
       "source_pages": [],
       "source_files": [],
       "body_preview": "# Overview This page describes the current operating shape of `vipin wiki`. ## Layers - Public wiki: `wiki/` - Private local-only wiki: maintained in a separate local-only layer - Raw sources: `raw/` - Reader layer: `reader-context.md` - Operating layer: `AGENTS.md`, `.wiki-schem"
+    },
+    {
+      "id": "2026-04-22-how-are-k-omega-and-v-derived",
+      "title": "How Are k Omega And v Derived",
+      "type": "query",
+      "path": "wiki/queries/2026-04-22-how-are-k-omega-and-v-derived.md",
+      "tags": [
+        "query",
+        "optics",
+        "waves",
+        "physics"
+      ],
+      "headings": [
+        "How Are k Omega And v Derived",
+        "Question",
+        "Starting Point",
+        "Deriving `k = 2pi / lambda`",
+        "Deriving `omega = 2pi / T = 2pi f`",
+        "Deriving `v = omega / k`",
+        "Recovering `v = f lambda`",
+        "Final Relations",
+        "Counterpoints and Gaps",
+        "Related"
+      ],
+      "links": [
+        "2026-04-22-what-is-dbm",
+        "index",
+        "log",
+        "queries-home"
+      ],
+      "backlinks": [
+        "index",
+        "log",
+        "queries-home"
+      ],
+      "has_counterpoints": true,
+      "word_count": 335,
+      "source_pages": [],
+      "source_files": [
+        "chat"
+      ],
+      "body_preview": "# How Are k Omega And v Derived ## Question How does the board derive the relations among `k`, `omega`, `lambda`, `T`, `f`, and wave speed `v`? ## Starting Point A traveling wave can be written as: ```text y(x,t) = A cos(kx - omega t + phi) ``` Where: - `k` is the wave number - `"
+    },
+    {
+      "id": "2026-04-22-how-to-position-yourself-for-embedded-software-in-5eid0",
+      "title": "How To Position Yourself For Embedded Software In 5EID0",
+      "type": "query",
+      "path": "wiki/queries/2026-04-22-how-to-position-yourself-for-embedded-software-in-5eid0.md",
+      "tags": [
+        "query",
+        "embedded-software",
+        "course",
+        "teamwork"
+      ],
+      "headings": [
+        "How To Position Yourself For Embedded Software In 5EID0",
+        "Question",
+        "Short Answer",
+        "Good Positioning",
+        "What You Should Be Ready To Own",
+        "Important Warning",
+        "Practical Recommendation",
+        "Team-Sheet Note",
+        "Counterpoints and Gaps",
+        "Related"
+      ],
+      "links": [
+        "2026-04-22-5eid0-venus-project-course-materials",
+        "2026-04-22-what-to-pay-attention-to-in-5eid0-project-course",
+        "index",
+        "log",
+        "queries-home"
+      ],
+      "backlinks": [
+        "2026-04-22-5eid0-venus-project-course-materials",
+        "2026-04-22-what-to-pay-attention-to-in-5eid0-project-course",
+        "index",
+        "log",
+        "queries-home"
+      ],
+      "has_counterpoints": true,
+      "word_count": 378,
+      "source_pages": [
+        "2026-04-22-5eid0-venus-project-course-materials"
+      ],
+      "source_files": [],
+      "body_preview": "# How To Position Yourself For Embedded Software In 5EID0 ## Question If you want to tell your teammates that you prefer `embedded software` and mainly want to do coding, how should you think about it? ## Short Answer That preference is valid. The manual explicitly lists `embedde"
     },
     {
       "id": "2026-04-22-how-to-reduce-github-submit-prompts",
@@ -621,6 +739,7 @@
         "queries-home"
       ],
       "backlinks": [
+        "2026-04-22-how-are-k-omega-and-v-derived",
         "index",
         "log",
         "queries-home"
@@ -632,6 +751,141 @@
         "chat"
       ],
       "body_preview": "# What Is dBm ## Question What does the formula on the board mean, and how should `dBm` be interpreted? ## Core Definition `dBm` is a logarithmic power unit referenced to `1 mW`. Formula: ```text dBm = 10 log10(P / 1 mW) ``` Where: - `P` is power - the reference value is `1 mW` #"
+    },
+    {
+      "id": "2026-04-22-what-is-spectroscopy",
+      "title": "What Is Spectroscopy",
+      "type": "query",
+      "path": "wiki/queries/2026-04-22-what-is-spectroscopy.md",
+      "tags": [
+        "query",
+        "optics",
+        "spectroscopy",
+        "physics"
+      ],
+      "headings": [
+        "What Is Spectroscopy",
+        "Question",
+        "Short Answer",
+        "Core Idea",
+        "Common Related Terms",
+        "Why It Matters In Optics",
+        "Counterpoints and Gaps",
+        "Related"
+      ],
+      "links": [
+        "index",
+        "log",
+        "queries-home"
+      ],
+      "backlinks": [
+        "index",
+        "log",
+        "queries-home"
+      ],
+      "has_counterpoints": true,
+      "word_count": 175,
+      "source_pages": [],
+      "source_files": [
+        "chat"
+      ],
+      "body_preview": "# What Is Spectroscopy ## Question In the course outline image, what does `Spectroscopy` mean? ## Short Answer `Spectroscopy` means `spectroscopy`, or in Chinese, `光谱学`. In the course outline, `Wave Optics: Spectroscopy` means the spectroscopy part of wave optics. ## Core Idea Sp"
+    },
+    {
+      "id": "2026-04-22-what-to-pay-attention-to-in-5eid0-project-course",
+      "title": "What To Pay Attention To In 5EID0 Project Course",
+      "type": "query",
+      "path": "wiki/queries/2026-04-22-what-to-pay-attention-to-in-5eid0-project-course.md",
+      "tags": [
+        "query",
+        "course",
+        "project",
+        "tue",
+        "system-engineering"
+      ],
+      "headings": [
+        "What To Pay Attention To In 5EID0 Project Course",
+        "Question",
+        "Most Important Points",
+        "1. This is not just a coding course",
+        "2. The V-model and process must be visible",
+        "3. Deliverables are heavy on reporting",
+        "4. You still need broad system understanding",
+        "5. Teamwork is part of the course",
+        "6. TAs will not solve the project for you",
+        "7. Final demo constraints matter",
+        "Best Practical Summary",
+        "Counterpoints and Gaps",
+        "Related"
+      ],
+      "links": [
+        "2026-04-22-5eid0-venus-project-course-materials",
+        "2026-04-22-how-to-position-yourself-for-embedded-software-in-5eid0",
+        "index",
+        "log",
+        "queries-home"
+      ],
+      "backlinks": [
+        "2026-04-22-5eid0-venus-project-course-materials",
+        "2026-04-22-how-to-position-yourself-for-embedded-software-in-5eid0",
+        "index",
+        "log",
+        "queries-home"
+      ],
+      "has_counterpoints": true,
+      "word_count": 462,
+      "source_pages": [
+        "2026-04-22-5eid0-venus-project-course-materials"
+      ],
+      "source_files": [],
+      "body_preview": "# What To Pay Attention To In 5EID0 Project Course ## Question What are the main things to pay attention to in this TU/e project course? ## Most Important Points ### 1. This is not just a coding course The project absolutely includes coding, but the manual is very explicit that: "
+    },
+    {
+      "id": "2026-04-22-what-to-pay-attention-to-in-security-self-study-guide",
+      "title": "What To Pay Attention To In Security Self-Study Guide",
+      "type": "query",
+      "path": "wiki/queries/2026-04-22-what-to-pay-attention-to-in-security-self-study-guide.md",
+      "tags": [
+        "query",
+        "security",
+        "self-study",
+        "study-strategy"
+      ],
+      "headings": [
+        "What To Pay Attention To In Security Self-Study Guide",
+        "Question",
+        "Most Important Points",
+        "1. Do not study passively",
+        "2. Self-study should be question-driven",
+        "3. Trustworthiness of information matters",
+        "4. AI use is restricted and should not replace thinking",
+        "5. Week one is especially important",
+        "6. Practice by applying tools to scenarios",
+        "7. Formative work still matters",
+        "8. Start the non-technical requirements early",
+        "Best Practical Summary",
+        "Counterpoints and Gaps",
+        "Related"
+      ],
+      "links": [
+        "2026-04-22-security-course-self-study-guide",
+        "index",
+        "log",
+        "queries-home"
+      ],
+      "backlinks": [
+        "2026-04-22-security-course-self-study-guide",
+        "index",
+        "log",
+        "queries-home"
+      ],
+      "has_counterpoints": true,
+      "word_count": 547,
+      "source_pages": [
+        "2026-04-22-security-course-self-study-guide"
+      ],
+      "source_files": [],
+      "body_preview": "# What To Pay Attention To In Security Self-Study Guide ## Question What are the main points to pay attention to in this self-study guide? ## Most Important Points ### 1. Do not study passively The guide explicitly says not to just read the book linearly. The intended flow is: - "
     },
     {
       "id": "queries-home",
@@ -646,21 +900,33 @@
         "Current Queries"
       ],
       "links": [
-        "2026-04-22-how-to-reduce-github-submit-prompts",
-        "2026-04-22-what-is-dbm"
-      ],
-      "backlinks": [
+        "2026-04-22-how-are-k-omega-and-v-derived",
+        "2026-04-22-how-to-position-yourself-for-embedded-software-in-5eid0",
         "2026-04-22-how-to-reduce-github-submit-prompts",
         "2026-04-22-what-is-dbm",
+        "2026-04-22-what-is-spectroscopy",
+        "2026-04-22-what-to-pay-attention-to-in-5eid0-project-course",
+        "2026-04-22-what-to-pay-attention-to-in-security-self-study-guide"
+      ],
+      "backlinks": [
+        "2026-04-22-5eid0-venus-project-course-materials",
+        "2026-04-22-how-are-k-omega-and-v-derived",
+        "2026-04-22-how-to-position-yourself-for-embedded-software-in-5eid0",
+        "2026-04-22-how-to-reduce-github-submit-prompts",
+        "2026-04-22-security-course-self-study-guide",
+        "2026-04-22-what-is-dbm",
+        "2026-04-22-what-is-spectroscopy",
+        "2026-04-22-what-to-pay-attention-to-in-5eid0-project-course",
+        "2026-04-22-what-to-pay-attention-to-in-security-self-study-guide",
         "index",
         "log",
         "overview"
       ],
       "has_counterpoints": false,
-      "word_count": 26,
+      "word_count": 79,
       "source_pages": [],
       "source_files": [],
-      "body_preview": "# Queries Home Store durable answers to important questions here. ## Current Queries - [[2026-04-22-how-to-reduce-github-submit-prompts]] - [[2026-04-22-what-is-dbm]]"
+      "body_preview": "# Queries Home Store durable answers to important questions here. ## Current Queries - [[2026-04-22-how-to-reduce-github-submit-prompts]] - [[2026-04-22-what-is-dbm]] - [[2026-04-22-what-is-spectroscopy]] - [[2026-04-22-how-are-k-omega-and-v-derived]] - [[2026-04-22-what-to-pay-a"
     },
     {
       "id": "2026-04-21-llm-wiki-pattern",
@@ -819,6 +1085,54 @@
       "body_preview": "# Recommendation Paper Library ## Source Summary This source records a broader external local library of papers related to LLMs and recommender systems. ## Minimal Metadata - path: `D:\\Research\\LLM\\papers\\recommendation` - file count: 28 - PDF count: 28 - subdirectory count: 15 #"
     },
     {
+      "id": "2026-04-22-5eid0-venus-project-course-materials",
+      "title": "5EID0 Venus Project Course Materials",
+      "type": "source",
+      "path": "wiki/sources/2026-04-22-5eid0-venus-project-course-materials.md",
+      "tags": [
+        "source",
+        "course",
+        "project",
+        "embedded-software",
+        "tue"
+      ],
+      "headings": [
+        "5EID0 Venus Project Course Materials",
+        "Provenance",
+        "Core Course Structure",
+        "Mission Summary",
+        "Key Course Constraints",
+        "Specializations Mentioned In The Manual",
+        "Embedded Software Relevance",
+        "Deliverables And Grading",
+        "Team Sheet Note",
+        "Counterpoints and Gaps",
+        "Related"
+      ],
+      "links": [
+        "2026-04-22-how-to-position-yourself-for-embedded-software-in-5eid0",
+        "2026-04-22-what-to-pay-attention-to-in-5eid0-project-course",
+        "index",
+        "log",
+        "queries-home"
+      ],
+      "backlinks": [
+        "2026-04-22-how-to-position-yourself-for-embedded-software-in-5eid0",
+        "2026-04-22-what-to-pay-attention-to-in-5eid0-project-course",
+        "index",
+        "log"
+      ],
+      "has_counterpoints": true,
+      "word_count": 374,
+      "source_pages": [],
+      "source_files": [
+        "D:/Undergraduate_study_netherlands/EE electrical engineering/5EID0/5EID0_Manual_2025_Q4.pdf",
+        "D:/Undergraduate_study_netherlands/EE electrical engineering/5EID0/5EID0-kickoff.pdf",
+        "D:/Undergraduate_study_netherlands/EE electrical engineering/5EID0/Teams.xlsx"
+      ],
+      "body_preview": "# 5EID0 Venus Project Course Materials ## Provenance - origin: local files provided by user - files: - `5EID0_Manual_2025_Q4.pdf` - `5EID0-kickoff.pdf` - `Teams.xlsx` ## Core Course Structure - this is a challenge-based project course around a Venus exploration mission - teams us"
+    },
+    {
       "id": "2026-04-22-karpathy-llm-wiki-zh-compilation",
       "title": "Karpathy LLM Wiki Chinese Compilation",
       "type": "source",
@@ -858,6 +1172,46 @@
         "chat"
       ],
       "body_preview": "# Karpathy LLM Wiki Chinese Compilation ## Provenance - origin: chat - note: user-provided Chinese compilation of the Karpathy `LLM Wiki` idea plus selected high-quality community comments ## Core Claims - An LLM wiki compounds knowledge during ingest instead of rediscovering it "
+    },
+    {
+      "id": "2026-04-22-security-course-self-study-guide",
+      "title": "Security Course Self-Study Guide",
+      "type": "source",
+      "path": "wiki/sources/2026-04-22-security-course-self-study-guide.md",
+      "tags": [
+        "source",
+        "security",
+        "self-study",
+        "course"
+      ],
+      "headings": [
+        "Security Course Self-Study Guide",
+        "Provenance",
+        "Core Messages",
+        "Learning Focus",
+        "Week-One Emphasis",
+        "Suggested Study Behavior",
+        "Counterpoints and Gaps",
+        "Related"
+      ],
+      "links": [
+        "2026-04-22-what-to-pay-attention-to-in-security-self-study-guide",
+        "index",
+        "log",
+        "queries-home"
+      ],
+      "backlinks": [
+        "2026-04-22-what-to-pay-attention-to-in-security-self-study-guide",
+        "index",
+        "log"
+      ],
+      "has_counterpoints": true,
+      "word_count": 311,
+      "source_pages": [],
+      "source_files": [
+        "chat"
+      ],
+      "body_preview": "# Security Course Self-Study Guide ## Provenance - origin: chat - note: user-provided course self-study guide for a security course, including expectations for weekly study, AI use, information trustworthiness, and week-one suggested activities ## Core Messages - self-study shoul"
     },
     {
       "id": "2026-04-22-karpathy-upgrade-session",

@@ -18,3 +18,6 @@ Store durable answers to important questions here.
 - [[2026-04-22-what-is-dbm]]
 - [[2026-04-22-what-is-spectroscopy]]
 - [[2026-04-22-how-are-k-omega-and-v-derived]]
+- [[2026-04-22-what-to-pay-attention-to-in-security-self-study-guide]]
+- [[2026-04-22-what-to-pay-attention-to-in-5eid0-project-course]]
+- [[2026-04-22-how-to-position-yourself-for-embedded-software-in-5eid0]]

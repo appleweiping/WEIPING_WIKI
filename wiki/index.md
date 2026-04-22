@@ -31,6 +31,8 @@ This is the main catalog of the wiki.
 
 - [[2026-04-21-llm-wiki-pattern]] - Seed source note based on the user-provided idea brief describing the LLM wiki pattern.
 - [[2026-04-22-karpathy-llm-wiki-zh-compilation]] - User-provided Chinese compilation of the Karpathy article plus selected community commentary.
+- [[2026-04-22-security-course-self-study-guide]] - User-provided security course self-study guide describing AI rules, trustworthiness, and suggested week-one study behavior.
+- [[2026-04-22-5eid0-venus-project-course-materials]] - Local project-course materials for TU/e 5EID0, including the Venus manual, kickoff slides, and team sheet.
 - [[2026-04-21-nh-baseline-paper-set]] - External local paper set with 21 PDFs from the `NH` baseline folder under `Uncertainty-LLM4Rec`.
 - [[2026-04-21-nr-baseline-paper-set]] - External local paper set with 14 PDFs from the `NR` baseline folder under `Uncertainty-LLM4Rec`.
 - [[2026-04-21-recommendation-paper-library]] - Larger external local library of LLM-and-recommendation papers, with PDFs plus topic/project subfolders.
@@ -58,6 +60,9 @@ This is the main catalog of the wiki.
 - [[2026-04-22-what-is-dbm]] - Short explanation of the `dBm` formula, its `1 mW` reference, and common power conversion rules.
 - [[2026-04-22-what-is-spectroscopy]] - Short explanation of the term `spectroscopy` in a wave optics course context.
 - [[2026-04-22-how-are-k-omega-and-v-derived]] - Step-by-step derivation of `k = 2pi/lambda`, `omega = 2pi f`, and `v = omega/k = f lambda`.
+- [[2026-04-22-what-to-pay-attention-to-in-security-self-study-guide]] - Practical summary of what matters most in the security course self-study guide.
+- [[2026-04-22-what-to-pay-attention-to-in-5eid0-project-course]] - Practical summary of what matters most in the TU/e 5EID0 Venus project course.
+- [[2026-04-22-how-to-position-yourself-for-embedded-software-in-5eid0]] - How to present and scope an embedded-software role in the 5EID0 team project.
 
 ## Topics
 

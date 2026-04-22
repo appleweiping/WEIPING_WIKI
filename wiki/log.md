@@ -172,3 +172,36 @@ tags:
 - Notes:
   - Preserved a reusable explanation of `spectroscopy` in the wave optics context.
   - Preserved a step-by-step derivation of the relations among `k`, `omega`, `lambda`, `T`, `f`, and `v`.
+
+## [2026-04-22 11:22] ingest | security self-study guide
+
+- Pages created:
+  - [[2026-04-22-security-course-self-study-guide]]
+  - [[2026-04-22-what-to-pay-attention-to-in-security-self-study-guide]]
+- Pages updated:
+  - [[queries-home]]
+  - [[index]]
+  - [[log]]
+- Sources used:
+  - user-provided security course self-study guide text in chat
+- Notes:
+  - Registered the course self-study guide as a chat source.
+  - Preserved a practical summary focusing on study method, trustworthiness, AI restrictions, week-one planning, and scenario-based practice.
+
+## [2026-04-22 11:35] ingest | 5eid0 venus project course materials
+
+- Pages created:
+  - [[2026-04-22-5eid0-venus-project-course-materials]]
+  - [[2026-04-22-what-to-pay-attention-to-in-5eid0-project-course]]
+  - [[2026-04-22-how-to-position-yourself-for-embedded-software-in-5eid0]]
+- Pages updated:
+  - [[queries-home]]
+  - [[index]]
+  - [[log]]
+- Sources used:
+  - `D:/Undergraduate_study_netherlands/EE electrical engineering/5EID0/5EID0_Manual_2025_Q4.pdf`
+  - `D:/Undergraduate_study_netherlands/EE electrical engineering/5EID0/5EID0-kickoff.pdf`
+  - `D:/Undergraduate_study_netherlands/EE electrical engineering/5EID0/Teams.xlsx`
+- Notes:
+  - Registered the 5EID0 Venus project manual, kickoff slides, and team sheet as course source material.
+  - Preserved a practical note on what the course actually grades and how to position an embedded-software specialization inside the team.
