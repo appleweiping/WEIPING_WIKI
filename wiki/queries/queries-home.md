@@ -23,3 +23,4 @@ Store durable answers to important questions here.
 - [[2026-04-22-how-to-position-yourself-for-embedded-software-in-5eid0]]
 - [[2026-04-22-computer-software-vs-embedded-software-in-5eid0]]
 - [[2026-04-22-computer-software-ui-role-plan-for-5eid0]]
+- [[2026-04-22-what-language-for-5eid0-computer-software-ui]]

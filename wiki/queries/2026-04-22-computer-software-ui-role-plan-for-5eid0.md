@@ -21,6 +21,12 @@ source_pages:
 
 Vipin decided to take the `computer software and user interface` role for the 5EID0 Venus project.
 
+## Project Repository
+
+- GitHub: [appleweiping/venus-basestation](https://github.com/appleweiping/venus-basestation)
+- Local path: `D:/Undergraduate_project_netherlands/Venus basestation`
+- Initial MVP status: Python base-station scaffold initialized with simulated data, message parsing, map state, MQTT wrapper, matplotlib dashboard, examples, and tests.
+
 ## Why This Role Can Be Good
 
 This role is valuable because the course mission explicitly requires a computer-side system that:
@@ -48,6 +54,18 @@ Vipin should try to own these parts clearly:
 - graphical visualization
 - UI/dashboard
 - screenshots and demo scenes for the report/video
+
+## Suggested Implementation Language
+
+The default recommendation is to use `Python` for the first working version.
+
+Reasons:
+
+- the course manual already includes Python MQTT material
+- Python is fast for prototyping, simulation, plotting, and replay tests
+- it keeps the base-station software easier to finish before the demo
+
+See [[2026-04-22-what-language-for-5eid0-computer-software-ui]].
 
 ## Most Important Interface
 
@@ -132,6 +150,7 @@ For the final report and individual reflection, collect:
 
 - [[2026-04-22-5eid0-venus-project-course-materials]]
 - [[2026-04-22-computer-software-vs-embedded-software-in-5eid0]]
+- [[2026-04-22-what-language-for-5eid0-computer-software-ui]]
 - [[2026-04-22-what-to-pay-attention-to-in-5eid0-project-course]]
 - [[queries-home]]
 - [[index]]

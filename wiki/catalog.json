@@ -1,7 +1,7 @@
 {
   "meta": {
     "root": "D:\\Research\\vipin's knowledgebase",
-    "page_count": 35
+    "page_count": 36
   },
   "pages": [
     {
@@ -421,6 +421,7 @@
         "2026-04-22-security-course-self-study-guide",
         "2026-04-22-what-is-dbm",
         "2026-04-22-what-is-spectroscopy",
+        "2026-04-22-what-language-for-5eid0-computer-software-ui",
         "2026-04-22-what-to-pay-attention-to-in-5eid0-project-course",
         "2026-04-22-what-to-pay-attention-to-in-security-self-study-guide",
         "README",
@@ -450,6 +451,7 @@
         "2026-04-22-security-course-self-study-guide",
         "2026-04-22-what-is-dbm",
         "2026-04-22-what-is-spectroscopy",
+        "2026-04-22-what-language-for-5eid0-computer-software-ui",
         "2026-04-22-what-to-pay-attention-to-in-5eid0-project-course",
         "2026-04-22-what-to-pay-attention-to-in-security-self-study-guide",
         "home",
@@ -457,7 +459,7 @@
         "overview"
       ],
       "has_counterpoints": false,
-      "word_count": 642,
+      "word_count": 669,
       "source_pages": [],
       "source_files": [],
       "body_preview": "# Index This is the main catalog of the wiki. ## Overview - [[home]] - Top-level overview of the knowledge base and workflow. - [[overview]] - Structural map of the repository layers, sections, and active public domains. - [[log]] - Chronological record of ingests, analyses, quer"
@@ -485,7 +487,9 @@
         "[2026-04-22 11:22] ingest | security self-study guide",
         "[2026-04-22 11:35] ingest | 5eid0 venus project course materials",
         "[2026-04-22 11:42] query | computer software vs embedded software in 5eid0",
-        "[2026-04-22 11:48] query | 5eid0 computer software ui role decision"
+        "[2026-04-22 11:48] query | 5eid0 computer software ui role decision",
+        "[2026-04-22 11:55] query | language choice for 5eid0 computer software ui",
+        "[2026-04-22 12:08] analysis | initialize venus basestation repository"
       ],
       "links": [
         "2026-04-21-llm-rec-research-map",
@@ -506,6 +510,7 @@
         "2026-04-22-security-course-self-study-guide",
         "2026-04-22-what-is-dbm",
         "2026-04-22-what-is-spectroscopy",
+        "2026-04-22-what-language-for-5eid0-computer-software-ui",
         "2026-04-22-what-to-pay-attention-to-in-5eid0-project-course",
         "2026-04-22-what-to-pay-attention-to-in-security-self-study-guide",
         "README",
@@ -535,6 +540,7 @@
         "2026-04-22-security-course-self-study-guide",
         "2026-04-22-what-is-dbm",
         "2026-04-22-what-is-spectroscopy",
+        "2026-04-22-what-language-for-5eid0-computer-software-ui",
         "2026-04-22-what-to-pay-attention-to-in-5eid0-project-course",
         "2026-04-22-what-to-pay-attention-to-in-security-self-study-guide",
         "home",
@@ -542,7 +548,7 @@
         "log"
       ],
       "has_counterpoints": false,
-      "word_count": 1208,
+      "word_count": 1376,
       "source_pages": [],
       "source_files": [],
       "body_preview": "# Log ## [2026-04-21 17:36] bootstrap | initialize vipin wiki - Pages created: - [[home]] - [[index]] - [[log]] - [[vipin]] - [[llm-wiki]] - [[2026-04-21-llm-wiki-pattern]] - [[2026-04-21-vipin-wiki-bootstrap]] - Sources used: - user-provided idea brief in chat describing the `LL"
@@ -603,8 +609,10 @@
       "headings": [
         "Computer Software UI Role Plan For 5EID0",
         "Decision",
+        "Project Repository",
         "Why This Role Can Be Good",
         "What To Own",
+        "Suggested Implementation Language",
         "Most Important Interface",
         "How To Make The Role Look Strong",
         "Suggested Message To Teammates",
@@ -616,6 +624,7 @@
       "links": [
         "2026-04-22-5eid0-venus-project-course-materials",
         "2026-04-22-computer-software-vs-embedded-software-in-5eid0",
+        "2026-04-22-what-language-for-5eid0-computer-software-ui",
         "2026-04-22-what-to-pay-attention-to-in-5eid0-project-course",
         "index",
         "log",
@@ -624,18 +633,19 @@
       "backlinks": [
         "2026-04-22-5eid0-venus-project-course-materials",
         "2026-04-22-computer-software-vs-embedded-software-in-5eid0",
+        "2026-04-22-what-language-for-5eid0-computer-software-ui",
         "index",
         "log",
         "queries-home"
       ],
       "has_counterpoints": true,
-      "word_count": 480,
+      "word_count": 587,
       "source_pages": [
         "2026-04-22-5eid0-venus-project-course-materials",
         "2026-04-22-computer-software-vs-embedded-software-in-5eid0"
       ],
       "source_files": [],
-      "body_preview": "# Computer Software UI Role Plan For 5EID0 ## Decision Vipin decided to take the `computer software and user interface` role for the 5EID0 Venus project. ## Why This Role Can Be Good This role is valuable because the course mission explicitly requires a computer-side system that:"
+      "body_preview": "# Computer Software UI Role Plan For 5EID0 ## Decision Vipin decided to take the `computer software and user interface` role for the 5EID0 Venus project. ## Project Repository - GitHub: [appleweiping/venus-basestation](https://github.com/appleweiping/venus-basestation) - Local pa"
     },
     {
       "id": "2026-04-22-computer-software-vs-embedded-software-in-5eid0",
@@ -674,6 +684,7 @@
       ],
       "backlinks": [
         "2026-04-22-computer-software-ui-role-plan-for-5eid0",
+        "2026-04-22-what-language-for-5eid0-computer-software-ui",
         "index",
         "log",
         "queries-home"
@@ -902,6 +913,55 @@
       "body_preview": "# What Is Spectroscopy ## Question In the course outline image, what does `Spectroscopy` mean? ## Short Answer `Spectroscopy` means `spectroscopy`, or in Chinese, `光谱学`. In the course outline, `Wave Optics: Spectroscopy` means the spectroscopy part of wave optics. ## Core Idea Sp"
     },
     {
+      "id": "2026-04-22-what-language-for-5eid0-computer-software-ui",
+      "title": "What Language For 5EID0 Computer Software UI",
+      "type": "query",
+      "path": "wiki/queries/2026-04-22-what-language-for-5eid0-computer-software-ui.md",
+      "tags": [
+        "query",
+        "computer-software",
+        "ui",
+        "python",
+        "mqtt",
+        "course"
+      ],
+      "headings": [
+        "What Language For 5EID0 Computer Software UI",
+        "Question",
+        "Short Answer",
+        "Why Python Is The Best Default",
+        "Recommended Architecture",
+        "Minimum Viable Version",
+        "When To Consider A Web UI",
+        "Practical Recommendation",
+        "Suggested Team Message",
+        "Counterpoints and Gaps",
+        "Related"
+      ],
+      "links": [
+        "2026-04-22-5eid0-venus-project-course-materials",
+        "2026-04-22-computer-software-ui-role-plan-for-5eid0",
+        "2026-04-22-computer-software-vs-embedded-software-in-5eid0",
+        "index",
+        "log",
+        "queries-home"
+      ],
+      "backlinks": [
+        "2026-04-22-computer-software-ui-role-plan-for-5eid0",
+        "index",
+        "log",
+        "queries-home"
+      ],
+      "has_counterpoints": true,
+      "word_count": 423,
+      "source_pages": [
+        "2026-04-22-5eid0-venus-project-course-materials",
+        "2026-04-22-computer-software-ui-role-plan-for-5eid0"
+      ],
+      "source_files": [],
+      "body_preview": "# What Language For 5EID0 Computer Software UI ## Question What programming language should Vipin use for the `computer software / UI` role in the 5EID0 Venus project? ## Short Answer Use `Python` as the default choice. Best starting stack: - `Python` - `paho-mqtt` - `matplotlib`"
+    },
+    {
       "id": "2026-04-22-what-to-pay-attention-to-in-5eid0-project-course",
       "title": "What To Pay Attention To In 5EID0 Project Course",
       "type": "query",
@@ -1019,6 +1079,7 @@
         "2026-04-22-how-to-reduce-github-submit-prompts",
         "2026-04-22-what-is-dbm",
         "2026-04-22-what-is-spectroscopy",
+        "2026-04-22-what-language-for-5eid0-computer-software-ui",
         "2026-04-22-what-to-pay-attention-to-in-5eid0-project-course",
         "2026-04-22-what-to-pay-attention-to-in-security-self-study-guide"
       ],
@@ -1032,6 +1093,7 @@
         "2026-04-22-security-course-self-study-guide",
         "2026-04-22-what-is-dbm",
         "2026-04-22-what-is-spectroscopy",
+        "2026-04-22-what-language-for-5eid0-computer-software-ui",
         "2026-04-22-what-to-pay-attention-to-in-5eid0-project-course",
         "2026-04-22-what-to-pay-attention-to-in-security-self-study-guide",
         "index",
@@ -1039,7 +1101,7 @@
         "overview"
       ],
       "has_counterpoints": false,
-      "word_count": 99,
+      "word_count": 109,
       "source_pages": [],
       "source_files": [],
       "body_preview": "# Queries Home Store durable answers to important questions here. ## Current Queries - [[2026-04-22-how-to-reduce-github-submit-prompts]] - [[2026-04-22-what-is-dbm]] - [[2026-04-22-what-is-spectroscopy]] - [[2026-04-22-how-are-k-omega-and-v-derived]] - [[2026-04-22-what-to-pay-a"
@@ -1239,6 +1301,7 @@
         "2026-04-22-computer-software-ui-role-plan-for-5eid0",
         "2026-04-22-computer-software-vs-embedded-software-in-5eid0",
         "2026-04-22-how-to-position-yourself-for-embedded-software-in-5eid0",
+        "2026-04-22-what-language-for-5eid0-computer-software-ui",
         "2026-04-22-what-to-pay-attention-to-in-5eid0-project-course",
         "index",
         "log"

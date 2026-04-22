@@ -237,3 +237,30 @@ tags:
 - Notes:
   - Recorded the updated role decision.
   - Added an execution plan for owning the base-station software, MQTT receiver, data format agreement, and map/dashboard visualization.
+
+## [2026-04-22 11:55] query | language choice for 5eid0 computer software ui
+
+- Pages created:
+  - [[2026-04-22-what-language-for-5eid0-computer-software-ui]]
+- Pages updated:
+  - [[2026-04-22-computer-software-ui-role-plan-for-5eid0]]
+  - [[queries-home]]
+  - [[index]]
+  - [[log]]
+- Sources used:
+  - [[2026-04-22-5eid0-venus-project-course-materials]]
+  - [[2026-04-22-computer-software-ui-role-plan-for-5eid0]]
+- Notes:
+  - Recommended Python as the default implementation language for the base-station UI because the manual includes Python MQTT material and Python supports fast prototyping, simulation, map drawing, and replay tests.
+
+## [2026-04-22 12:08] analysis | initialize venus basestation repository
+
+- Pages updated:
+  - [[2026-04-22-computer-software-ui-role-plan-for-5eid0]]
+  - [[log]]
+- Sources used:
+  - local repository `D:/Undergraduate_project_netherlands/Venus basestation`
+  - GitHub repository `https://github.com/appleweiping/venus-basestation`
+- Notes:
+  - Initialized the standalone `venus-basestation` code repository for the 5EID0 computer software/UI role.
+  - Added a Python MVP with simulated messages, message schema validation, map state, MQTT wrapper, matplotlib dashboard, examples, tests, and secret-safe configuration.
