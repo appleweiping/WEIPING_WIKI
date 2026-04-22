@@ -142,3 +142,17 @@ tags:
 - Notes:
   - Promoted Q&A preservation from an informal habit to a repository-level default rule.
   - Clarified that reusable answers should be filed into queries, analyses, comparisons, concepts, or topics based on fit.
+
+## [2026-04-22 11:05] query | what is dbm
+
+- Pages created:
+  - [[2026-04-22-what-is-dbm]]
+- Pages updated:
+  - [[queries-home]]
+  - [[index]]
+  - [[log]]
+- Sources used:
+  - user-provided board image in chat
+  - direct explanation of the `dBm = 10 log10(P / 1 mW)` definition
+- Notes:
+  - Preserved the explanation of `dBm` as a reusable query note with worked examples and common rules of thumb.

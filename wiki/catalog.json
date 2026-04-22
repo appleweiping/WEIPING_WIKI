@@ -1,7 +1,7 @@
 {
   "meta": {
     "root": "D:\\Research\\vipin's knowledgebase",
-    "page_count": 25
+    "page_count": 26
   },
   "pages": [
     {
@@ -413,6 +413,7 @@
         "2026-04-22-karpathy-llm-wiki-zh-compilation",
         "2026-04-22-karpathy-upgrade-session",
         "2026-04-22-llm-wiki-skill-alignment",
+        "2026-04-22-what-is-dbm",
         "README",
         "comparisons-home",
         "home",
@@ -432,12 +433,13 @@
         "2026-04-21-vipin-wiki-bootstrap",
         "2026-04-22-how-to-reduce-github-submit-prompts",
         "2026-04-22-llm-wiki-skill-alignment",
+        "2026-04-22-what-is-dbm",
         "home",
         "log",
         "overview"
       ],
       "has_counterpoints": false,
-      "word_count": 399,
+      "word_count": 420,
       "source_pages": [],
       "source_files": [],
       "body_preview": "# Index This is the main catalog of the wiki. ## Overview - [[home]] - Top-level overview of the knowledge base and workflow. - [[overview]] - Structural map of the repository layers, sections, and active public domains. - [[log]] - Chronological record of ingests, analyses, quer"
@@ -458,7 +460,9 @@
         "[2026-04-22 00:18] analysis | align with llm-wiki-skill operating model",
         "[2026-04-22 10:20] analysis | integrate karpathy article extensions",
         "[2026-04-22 10:45] query | github submit prompts",
-        "[2026-04-22 10:52] query | persistent approval rules"
+        "[2026-04-22 10:52] query | persistent approval rules",
+        "[2026-04-22 10:58] analysis | preserve substantive q-and-a by default",
+        "[2026-04-22 11:05] query | what is dbm"
       ],
       "links": [
         "2026-04-21-llm-rec-research-map",
@@ -471,6 +475,7 @@
         "2026-04-22-karpathy-llm-wiki-zh-compilation",
         "2026-04-22-karpathy-upgrade-session",
         "2026-04-22-llm-wiki-skill-alignment",
+        "2026-04-22-what-is-dbm",
         "README",
         "comparisons-home",
         "home",
@@ -490,12 +495,13 @@
         "2026-04-21-vipin-wiki-bootstrap",
         "2026-04-22-how-to-reduce-github-submit-prompts",
         "2026-04-22-llm-wiki-skill-alignment",
+        "2026-04-22-what-is-dbm",
         "home",
         "index",
         "log"
       ],
       "has_counterpoints": false,
-      "word_count": 613,
+      "word_count": 747,
       "source_pages": [],
       "source_files": [],
       "body_preview": "# Log ## [2026-04-21 17:36] bootstrap | initialize vipin wiki - Pages created: - [[home]] - [[index]] - [[log]] - [[vipin]] - [[llm-wiki]] - [[2026-04-21-llm-wiki-pattern]] - [[2026-04-21-vipin-wiki-bootstrap]] - Sources used: - user-provided idea brief in chat describing the `LL"
@@ -588,6 +594,46 @@
       "body_preview": "# How To Reduce GitHub Submit Prompts ## Question Why does updating GitHub often require an extra manual submit or approval step, and what is the best workflow to reduce that friction? ## Short Answer The extra prompt usually appears because commit and push operations cross a saf"
     },
     {
+      "id": "2026-04-22-what-is-dbm",
+      "title": "What Is dBm",
+      "type": "query",
+      "path": "wiki/queries/2026-04-22-what-is-dbm.md",
+      "tags": [
+        "query",
+        "signal",
+        "electronics",
+        "communications"
+      ],
+      "headings": [
+        "What Is dBm",
+        "Question",
+        "Core Definition",
+        "Interpretation",
+        "Why `0 dBm = 1 mW`",
+        "Why `-10 dBm = 0.1 mW`",
+        "Useful Rules Of Thumb",
+        "Counterpoints and Gaps",
+        "Related"
+      ],
+      "links": [
+        "index",
+        "log",
+        "queries-home"
+      ],
+      "backlinks": [
+        "index",
+        "log",
+        "queries-home"
+      ],
+      "has_counterpoints": true,
+      "word_count": 207,
+      "source_pages": [],
+      "source_files": [
+        "chat"
+      ],
+      "body_preview": "# What Is dBm ## Question What does the formula on the board mean, and how should `dBm` be interpreted? ## Core Definition `dBm` is a logarithmic power unit referenced to `1 mW`. Formula: ```text dBm = 10 log10(P / 1 mW) ``` Where: - `P` is power - the reference value is `1 mW` #"
+    },
+    {
       "id": "queries-home",
       "title": "Queries Home",
       "type": "query",
@@ -600,19 +646,21 @@
         "Current Queries"
       ],
       "links": [
-        "2026-04-22-how-to-reduce-github-submit-prompts"
+        "2026-04-22-how-to-reduce-github-submit-prompts",
+        "2026-04-22-what-is-dbm"
       ],
       "backlinks": [
         "2026-04-22-how-to-reduce-github-submit-prompts",
+        "2026-04-22-what-is-dbm",
         "index",
         "log",
         "overview"
       ],
       "has_counterpoints": false,
-      "word_count": 20,
+      "word_count": 26,
       "source_pages": [],
       "source_files": [],
-      "body_preview": "# Queries Home Store durable answers to important questions here. ## Current Queries - [[2026-04-22-how-to-reduce-github-submit-prompts]]"
+      "body_preview": "# Queries Home Store durable answers to important questions here. ## Current Queries - [[2026-04-22-how-to-reduce-github-submit-prompts]] - [[2026-04-22-what-is-dbm]]"
     },
     {
       "id": "2026-04-21-llm-wiki-pattern",
