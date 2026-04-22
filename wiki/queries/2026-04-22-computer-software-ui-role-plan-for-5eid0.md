@@ -25,7 +25,7 @@ Vipin decided to take the `computer software and user interface` role for the 5E
 
 - GitHub: [appleweiping/venus-basestation](https://github.com/appleweiping/venus-basestation)
 - Local path: `D:/Undergraduate_project_netherlands/Venus basestation`
-- Initial MVP status: Python base-station scaffold initialized with simulated data, message parsing, map state, MQTT wrapper, matplotlib dashboard, examples, and tests.
+- Current prototype status: Python base-station scaffold plus simulated data, JSONL replay, message parsing, map state, MQTT wrapper, status tracking, SVG snapshot export, optional matplotlib dashboard support, examples, and tests.
 
 ## Why This Role Can Be Good
 
@@ -113,7 +113,7 @@ This sounds more engineering-oriented and better matches the course grading.
 ## Suggested Message To Teammates
 
 ```text
-I’ll take the computer software / UI role. I can focus on the base-station program, receiving MQTT data from the robots, defining the data format together with the robot-side team, and building the map/visualization for the demo. I think this can make our final demo and report much clearer, as long as we agree early on the message format and coordinates.
+I'll take the computer software / UI role. I can focus on the base-station program, receiving MQTT data from the robots, defining the data format together with the robot-side team, and building the map/visualization for the demo. I think this can make our final demo and report much clearer, as long as we agree early on the message format and coordinates.
 ```
 
 ## Testing Plan Ideas
@@ -126,6 +126,7 @@ Useful tests:
 - receive cliff/boundary/mountain events and update the map
 - handle multiple robots
 - handle repeated or conflicting observations
+- export a state summary and SVG snapshot from replayed data
 - replay a scripted exploration path
 - verify that screenshots match the reported system behavior
 
@@ -151,6 +152,7 @@ For the final report and individual reflection, collect:
 - [[2026-04-22-5eid0-venus-project-course-materials]]
 - [[2026-04-22-computer-software-vs-embedded-software-in-5eid0]]
 - [[2026-04-22-what-language-for-5eid0-computer-software-ui]]
+- [[2026-04-22-what-can-i-finish-independently-for-venus-basestation]]
 - [[2026-04-22-what-to-pay-attention-to-in-5eid0-project-course]]
 - [[queries-home]]
 - [[index]]

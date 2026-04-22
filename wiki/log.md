@@ -264,3 +264,36 @@ tags:
 - Notes:
   - Initialized the standalone `venus-basestation` code repository for the 5EID0 computer software/UI role.
   - Added a Python MVP with simulated messages, message schema validation, map state, MQTT wrapper, matplotlib dashboard, examples, tests, and secret-safe configuration.
+
+## [2026-04-22 12:16] query | teammate inputs for venus basestation
+
+- Pages created:
+  - [[2026-04-22-what-do-i-need-from-teammates-for-venus-basestation]]
+- Pages updated:
+  - [[queries-home]]
+  - [[index]]
+  - [[log]]
+- Sources used:
+  - [[2026-04-22-computer-software-ui-role-plan-for-5eid0]]
+  - [[2026-04-22-what-language-for-5eid0-computer-software-ui]]
+  - local project repo `venus-basestation`
+- Notes:
+  - Clarified that the key dependency is the interface contract rather than teammates' whole codebase.
+  - Listed the concrete inputs needed from teammates: MQTT topics, message schema, robot IDs, coordinate system, update behavior, and sample messages.
+
+## [2026-04-22 21:58] query | independent venus basestation baseline
+
+- Pages created:
+  - [[2026-04-22-what-can-i-finish-independently-for-venus-basestation]]
+- Pages updated:
+  - [[2026-04-22-computer-software-ui-role-plan-for-5eid0]]
+  - [[queries-home]]
+  - [[index]]
+  - [[log]]
+- Sources used:
+  - [[2026-04-22-computer-software-ui-role-plan-for-5eid0]]
+  - [[2026-04-22-what-do-i-need-from-teammates-for-venus-basestation]]
+  - local project repo `D:/Undergraduate_project_netherlands/Venus basestation`
+- Notes:
+  - Recorded that most of the basestation software can already be completed and tested independently of teammates.
+  - Captured the current prototype boundary: parser, replay, state model, status tracking, SVG export, and tests are already in place; final MQTT and payload details remain the main team-dependent inputs.
