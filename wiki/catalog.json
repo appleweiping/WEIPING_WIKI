@@ -1,7 +1,7 @@
 {
   "meta": {
     "root": "D:\\Research\\vipin's knowledgebase",
-    "page_count": 33
+    "page_count": 35
   },
   "pages": [
     {
@@ -410,6 +410,8 @@
         "2026-04-21-recommendation-paper-library",
         "2026-04-21-vipin-wiki-bootstrap",
         "2026-04-22-5eid0-venus-project-course-materials",
+        "2026-04-22-computer-software-ui-role-plan-for-5eid0",
+        "2026-04-22-computer-software-vs-embedded-software-in-5eid0",
         "2026-04-22-how-are-k-omega-and-v-derived",
         "2026-04-22-how-to-position-yourself-for-embedded-software-in-5eid0",
         "2026-04-22-how-to-reduce-github-submit-prompts",
@@ -439,6 +441,8 @@
       "backlinks": [
         "2026-04-21-vipin-wiki-bootstrap",
         "2026-04-22-5eid0-venus-project-course-materials",
+        "2026-04-22-computer-software-ui-role-plan-for-5eid0",
+        "2026-04-22-computer-software-vs-embedded-software-in-5eid0",
         "2026-04-22-how-are-k-omega-and-v-derived",
         "2026-04-22-how-to-position-yourself-for-embedded-software-in-5eid0",
         "2026-04-22-how-to-reduce-github-submit-prompts",
@@ -453,7 +457,7 @@
         "overview"
       ],
       "has_counterpoints": false,
-      "word_count": 593,
+      "word_count": 642,
       "source_pages": [],
       "source_files": [],
       "body_preview": "# Index This is the main catalog of the wiki. ## Overview - [[home]] - Top-level overview of the knowledge base and workflow. - [[overview]] - Structural map of the repository layers, sections, and active public domains. - [[log]] - Chronological record of ingests, analyses, quer"
@@ -479,7 +483,9 @@
         "[2026-04-22 11:05] query | what is dbm",
         "[2026-04-22 11:12] query | optics course terminology and wave derivation",
         "[2026-04-22 11:22] ingest | security self-study guide",
-        "[2026-04-22 11:35] ingest | 5eid0 venus project course materials"
+        "[2026-04-22 11:35] ingest | 5eid0 venus project course materials",
+        "[2026-04-22 11:42] query | computer software vs embedded software in 5eid0",
+        "[2026-04-22 11:48] query | 5eid0 computer software ui role decision"
       ],
       "links": [
         "2026-04-21-llm-rec-research-map",
@@ -489,6 +495,8 @@
         "2026-04-21-recommendation-paper-library",
         "2026-04-21-vipin-wiki-bootstrap",
         "2026-04-22-5eid0-venus-project-course-materials",
+        "2026-04-22-computer-software-ui-role-plan-for-5eid0",
+        "2026-04-22-computer-software-vs-embedded-software-in-5eid0",
         "2026-04-22-how-are-k-omega-and-v-derived",
         "2026-04-22-how-to-position-yourself-for-embedded-software-in-5eid0",
         "2026-04-22-how-to-reduce-github-submit-prompts",
@@ -518,6 +526,8 @@
       "backlinks": [
         "2026-04-21-vipin-wiki-bootstrap",
         "2026-04-22-5eid0-venus-project-course-materials",
+        "2026-04-22-computer-software-ui-role-plan-for-5eid0",
+        "2026-04-22-computer-software-vs-embedded-software-in-5eid0",
         "2026-04-22-how-are-k-omega-and-v-derived",
         "2026-04-22-how-to-position-yourself-for-embedded-software-in-5eid0",
         "2026-04-22-how-to-reduce-github-submit-prompts",
@@ -532,7 +542,7 @@
         "log"
       ],
       "has_counterpoints": false,
-      "word_count": 1027,
+      "word_count": 1208,
       "source_pages": [],
       "source_files": [],
       "body_preview": "# Log ## [2026-04-21 17:36] bootstrap | initialize vipin wiki - Pages created: - [[home]] - [[index]] - [[log]] - [[vipin]] - [[llm-wiki]] - [[2026-04-21-llm-wiki-pattern]] - [[2026-04-21-vipin-wiki-bootstrap]] - Sources used: - user-provided idea brief in chat describing the `LL"
@@ -577,6 +587,105 @@
       "source_pages": [],
       "source_files": [],
       "body_preview": "# Overview This page describes the current operating shape of `vipin wiki`. ## Layers - Public wiki: `wiki/` - Private local-only wiki: maintained in a separate local-only layer - Raw sources: `raw/` - Reader layer: `reader-context.md` - Operating layer: `AGENTS.md`, `.wiki-schem"
+    },
+    {
+      "id": "2026-04-22-computer-software-ui-role-plan-for-5eid0",
+      "title": "Computer Software UI Role Plan For 5EID0",
+      "type": "query",
+      "path": "wiki/queries/2026-04-22-computer-software-ui-role-plan-for-5eid0.md",
+      "tags": [
+        "query",
+        "computer-software",
+        "ui",
+        "course",
+        "project"
+      ],
+      "headings": [
+        "Computer Software UI Role Plan For 5EID0",
+        "Decision",
+        "Why This Role Can Be Good",
+        "What To Own",
+        "Most Important Interface",
+        "How To Make The Role Look Strong",
+        "Suggested Message To Teammates",
+        "Testing Plan Ideas",
+        "Report Evidence To Collect",
+        "Counterpoints and Gaps",
+        "Related"
+      ],
+      "links": [
+        "2026-04-22-5eid0-venus-project-course-materials",
+        "2026-04-22-computer-software-vs-embedded-software-in-5eid0",
+        "2026-04-22-what-to-pay-attention-to-in-5eid0-project-course",
+        "index",
+        "log",
+        "queries-home"
+      ],
+      "backlinks": [
+        "2026-04-22-5eid0-venus-project-course-materials",
+        "2026-04-22-computer-software-vs-embedded-software-in-5eid0",
+        "index",
+        "log",
+        "queries-home"
+      ],
+      "has_counterpoints": true,
+      "word_count": 480,
+      "source_pages": [
+        "2026-04-22-5eid0-venus-project-course-materials",
+        "2026-04-22-computer-software-vs-embedded-software-in-5eid0"
+      ],
+      "source_files": [],
+      "body_preview": "# Computer Software UI Role Plan For 5EID0 ## Decision Vipin decided to take the `computer software and user interface` role for the 5EID0 Venus project. ## Why This Role Can Be Good This role is valuable because the course mission explicitly requires a computer-side system that:"
+    },
+    {
+      "id": "2026-04-22-computer-software-vs-embedded-software-in-5eid0",
+      "title": "Computer Software Vs Embedded Software In 5EID0",
+      "type": "query",
+      "path": "wiki/queries/2026-04-22-computer-software-vs-embedded-software-in-5eid0.md",
+      "tags": [
+        "query",
+        "comparison",
+        "embedded-software",
+        "computer-software",
+        "course"
+      ],
+      "headings": [
+        "Computer Software Vs Embedded Software In 5EID0",
+        "Question",
+        "Updated Decision",
+        "Earlier Comparison",
+        "Comparison",
+        "Why Embedded Software Is Better For Vipin",
+        "The Main Risk",
+        "Why Computer Software/UI Is Still Attractive",
+        "Recommended Positioning",
+        "Practical Decision",
+        "Counterpoints and Gaps",
+        "Related"
+      ],
+      "links": [
+        "2026-04-22-5eid0-venus-project-course-materials",
+        "2026-04-22-computer-software-ui-role-plan-for-5eid0",
+        "2026-04-22-how-to-position-yourself-for-embedded-software-in-5eid0",
+        "2026-04-22-what-to-pay-attention-to-in-5eid0-project-course",
+        "index",
+        "log",
+        "queries-home"
+      ],
+      "backlinks": [
+        "2026-04-22-computer-software-ui-role-plan-for-5eid0",
+        "index",
+        "log",
+        "queries-home"
+      ],
+      "has_counterpoints": true,
+      "word_count": 659,
+      "source_pages": [
+        "2026-04-22-5eid0-venus-project-course-materials",
+        "2026-04-22-how-to-position-yourself-for-embedded-software-in-5eid0"
+      ],
+      "source_files": [],
+      "body_preview": "# Computer Software Vs Embedded Software In 5EID0 ## Question For Vipin, which is more beneficial in the 5EID0 project course: `computer software and user interface` or `embedded software`? ## Updated Decision Vipin has decided to take the `computer software and user interface` r"
     },
     {
       "id": "2026-04-22-how-are-k-omega-and-v-derived",
@@ -652,6 +761,7 @@
       ],
       "backlinks": [
         "2026-04-22-5eid0-venus-project-course-materials",
+        "2026-04-22-computer-software-vs-embedded-software-in-5eid0",
         "2026-04-22-what-to-pay-attention-to-in-5eid0-project-course",
         "index",
         "log",
@@ -827,6 +937,8 @@
       ],
       "backlinks": [
         "2026-04-22-5eid0-venus-project-course-materials",
+        "2026-04-22-computer-software-ui-role-plan-for-5eid0",
+        "2026-04-22-computer-software-vs-embedded-software-in-5eid0",
         "2026-04-22-how-to-position-yourself-for-embedded-software-in-5eid0",
         "index",
         "log",
@@ -900,6 +1012,8 @@
         "Current Queries"
       ],
       "links": [
+        "2026-04-22-computer-software-ui-role-plan-for-5eid0",
+        "2026-04-22-computer-software-vs-embedded-software-in-5eid0",
         "2026-04-22-how-are-k-omega-and-v-derived",
         "2026-04-22-how-to-position-yourself-for-embedded-software-in-5eid0",
         "2026-04-22-how-to-reduce-github-submit-prompts",
@@ -910,6 +1024,8 @@
       ],
       "backlinks": [
         "2026-04-22-5eid0-venus-project-course-materials",
+        "2026-04-22-computer-software-ui-role-plan-for-5eid0",
+        "2026-04-22-computer-software-vs-embedded-software-in-5eid0",
         "2026-04-22-how-are-k-omega-and-v-derived",
         "2026-04-22-how-to-position-yourself-for-embedded-software-in-5eid0",
         "2026-04-22-how-to-reduce-github-submit-prompts",
@@ -923,7 +1039,7 @@
         "overview"
       ],
       "has_counterpoints": false,
-      "word_count": 79,
+      "word_count": 99,
       "source_pages": [],
       "source_files": [],
       "body_preview": "# Queries Home Store durable answers to important questions here. ## Current Queries - [[2026-04-22-how-to-reduce-github-submit-prompts]] - [[2026-04-22-what-is-dbm]] - [[2026-04-22-what-is-spectroscopy]] - [[2026-04-22-how-are-k-omega-and-v-derived]] - [[2026-04-22-what-to-pay-a"
@@ -1094,6 +1210,7 @@
         "course",
         "project",
         "embedded-software",
+        "computer-software",
         "tue"
       ],
       "headings": [
@@ -1104,12 +1221,14 @@
         "Key Course Constraints",
         "Specializations Mentioned In The Manual",
         "Embedded Software Relevance",
+        "Vipin Role Decision",
         "Deliverables And Grading",
         "Team Sheet Note",
         "Counterpoints and Gaps",
         "Related"
       ],
       "links": [
+        "2026-04-22-computer-software-ui-role-plan-for-5eid0",
         "2026-04-22-how-to-position-yourself-for-embedded-software-in-5eid0",
         "2026-04-22-what-to-pay-attention-to-in-5eid0-project-course",
         "index",
@@ -1117,13 +1236,15 @@
         "queries-home"
       ],
       "backlinks": [
+        "2026-04-22-computer-software-ui-role-plan-for-5eid0",
+        "2026-04-22-computer-software-vs-embedded-software-in-5eid0",
         "2026-04-22-how-to-position-yourself-for-embedded-software-in-5eid0",
         "2026-04-22-what-to-pay-attention-to-in-5eid0-project-course",
         "index",
         "log"
       ],
       "has_counterpoints": true,
-      "word_count": 374,
+      "word_count": 436,
       "source_pages": [],
       "source_files": [
         "D:/Undergraduate_study_netherlands/EE electrical engineering/5EID0/5EID0_Manual_2025_Q4.pdf",

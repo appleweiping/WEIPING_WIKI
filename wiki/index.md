@@ -63,6 +63,8 @@ This is the main catalog of the wiki.
 - [[2026-04-22-what-to-pay-attention-to-in-security-self-study-guide]] - Practical summary of what matters most in the security course self-study guide.
 - [[2026-04-22-what-to-pay-attention-to-in-5eid0-project-course]] - Practical summary of what matters most in the TU/e 5EID0 Venus project course.
 - [[2026-04-22-how-to-position-yourself-for-embedded-software-in-5eid0]] - How to present and scope an embedded-software role in the 5EID0 team project.
+- [[2026-04-22-computer-software-vs-embedded-software-in-5eid0]] - Comparison of computer software/UI versus embedded software roles for Vipin in the 5EID0 project.
+- [[2026-04-22-computer-software-ui-role-plan-for-5eid0]] - Execution plan for Vipin's chosen computer software/UI role in the 5EID0 project.
 
 ## Topics
 

@@ -9,6 +9,7 @@ tags:
   - course
   - project
   - embedded-software
+  - computer-software
   - tue
 source_files:
   - D:/Undergraduate_study_netherlands/EE electrical engineering/5EID0/5EID0_Manual_2025_Q4.pdf
@@ -69,6 +70,17 @@ The manual defines embedded software as:
 
 This means embedded software is a legitimate and explicit specialization within the course.
 
+## Vipin Role Decision
+
+Vipin has decided to take the `computer software and user interface` role.
+
+This means the most relevant course responsibilities are likely:
+
+- receiving and processing MQTT data from robots
+- building the base-station map or dashboard
+- visualizing rocks, cliffs, mountains, and explored area
+- coordinating data formats with embedded/software teammates
+
 ## Deliverables And Grading
 
 - design report: `15%`
@@ -100,6 +112,7 @@ From `Teams.xlsx`, the user appears in:
 
 - [[2026-04-22-what-to-pay-attention-to-in-5eid0-project-course]]
 - [[2026-04-22-how-to-position-yourself-for-embedded-software-in-5eid0]]
+- [[2026-04-22-computer-software-ui-role-plan-for-5eid0]]
 - [[queries-home]]
 - [[index]]
 - [[log]]

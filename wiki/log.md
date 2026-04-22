@@ -205,3 +205,35 @@ tags:
 - Notes:
   - Registered the 5EID0 Venus project manual, kickoff slides, and team sheet as course source material.
   - Preserved a practical note on what the course actually grades and how to position an embedded-software specialization inside the team.
+
+## [2026-04-22 11:42] query | computer software vs embedded software in 5eid0
+
+- Pages created:
+  - [[2026-04-22-computer-software-vs-embedded-software-in-5eid0]]
+- Pages updated:
+  - [[queries-home]]
+  - [[index]]
+  - [[log]]
+- Sources used:
+  - [[2026-04-22-5eid0-venus-project-course-materials]]
+  - [[2026-04-22-how-to-position-yourself-for-embedded-software-in-5eid0]]
+- Notes:
+  - Compared the course value, risk, demo visibility, and long-term value of `computer software/UI` versus `embedded software`.
+  - Recommended primary ownership of embedded software plus a secondary interface role around MQTT/data integration.
+
+## [2026-04-22 11:48] query | 5eid0 computer software ui role decision
+
+- Pages created:
+  - [[2026-04-22-computer-software-ui-role-plan-for-5eid0]]
+- Pages updated:
+  - [[2026-04-22-5eid0-venus-project-course-materials]]
+  - [[2026-04-22-computer-software-vs-embedded-software-in-5eid0]]
+  - [[queries-home]]
+  - [[index]]
+  - [[log]]
+- Sources used:
+  - user statement in chat that they will do `computer software/UI`
+  - [[2026-04-22-5eid0-venus-project-course-materials]]
+- Notes:
+  - Recorded the updated role decision.
+  - Added an execution plan for owning the base-station software, MQTT receiver, data format agreement, and map/dashboard visualization.

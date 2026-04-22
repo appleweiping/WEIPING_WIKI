@@ -21,3 +21,5 @@ Store durable answers to important questions here.
 - [[2026-04-22-what-to-pay-attention-to-in-security-self-study-guide]]
 - [[2026-04-22-what-to-pay-attention-to-in-5eid0-project-course]]
 - [[2026-04-22-how-to-position-yourself-for-embedded-software-in-5eid0]]
+- [[2026-04-22-computer-software-vs-embedded-software-in-5eid0]]
+- [[2026-04-22-computer-software-ui-role-plan-for-5eid0]]
