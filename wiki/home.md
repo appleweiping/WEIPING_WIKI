@@ -3,7 +3,7 @@ title: Vipin Wiki Home
 type: overview
 status: active
 created: 2026-04-21
-updated: 2026-04-21
+updated: 2026-04-22
 tags:
   - wiki
   - overview
@@ -20,12 +20,13 @@ Its purpose is not just to store documents, but to compile them into an evolving
 - [[index]]
 - [[log]]
 - [[overview]]
-- [[knowledge-graph]]
 
 At the repository root, the main operating files are:
 
 - `.wiki-schema.md`
 - `WORKFLOWS.md`
+- `reader-context.md`
+- `CONTRIBUTIONS.md`
 - `purpose.md`
 - `AGENTS.md`
 
@@ -38,10 +39,12 @@ Instead of re-deriving knowledge from raw files on every question, the agent inc
 - [[index]]
 - [[log]]
 - [[overview]]
-- [[knowledge-graph]]
 - [[vipin]]
 - [[llm-wiki]]
 - [[llm-based-recommendation]]
+- [[personal-knowledge-systems]]
+- [[llm-wiki-vs-rag]]
+- [[2026-04-22-karpathy-llm-wiki-zh-compilation]]
 - [[2026-04-21-llm-wiki-pattern]]
 - [[2026-04-21-vipin-wiki-bootstrap]]
 
@@ -55,8 +58,8 @@ Instead of re-deriving knowledge from raw files on every question, the agent inc
 
 ## Near-Term Goals
 
-- Establish a reliable ingest workflow.
-- Introduce stronger schema, graph, lint, and compatibility support.
+- Establish a reliable ingest, search, and context workflow.
+- Strengthen personalization, divergence checks, and durable query filing.
 - Build core pages around Vipin's interests, projects, and long-term themes.
 - Keep a running synthesis instead of scattered chat history.
 

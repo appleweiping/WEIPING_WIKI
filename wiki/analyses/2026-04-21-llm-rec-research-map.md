@@ -61,6 +61,12 @@ Vipin currently has three local research collections that together form an initi
 - Which subset is required reading for the current paper or experiment?
 - Which papers are already deeply read versus merely collected?
 
+## Counterpoints and Gaps
+
+- the map is collection-driven rather than paper-by-paper, so it is still coarse and may overstate coverage in some clusters
+- folder presence does not imply equal relevance to Vipin's active research question
+- uncertainty-specific structure is still missing, so the current map is a literature inventory, not yet a working thesis
+
 ## Recommended Next Steps
 
 1. Pick 3 to 5 cornerstone papers from these collections.

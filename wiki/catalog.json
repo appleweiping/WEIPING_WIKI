@@ -1,0 +1,936 @@
+{
+  "meta": {
+    "root": "D:\\Research\\vipin's knowledgebase",
+    "page_count": 24
+  },
+  "pages": [
+    {
+      "id": "2026-04-21-llm-rec-research-map",
+      "title": "LLM Recommendation Research Map",
+      "type": "analysis",
+      "path": "wiki/analyses/2026-04-21-llm-rec-research-map.md",
+      "tags": [
+        "analysis",
+        "research-map",
+        "llm",
+        "recommendation"
+      ],
+      "headings": [
+        "LLM Recommendation Research Map",
+        "Summary",
+        "Current Collections",
+        "Emerging Topic Clusters",
+        "Likely Reading Strategy",
+        "Important Unknowns",
+        "Counterpoints and Gaps",
+        "Recommended Next Steps",
+        "Related"
+      ],
+      "links": [
+        "2026-04-21-nh-baseline-paper-set",
+        "2026-04-21-nr-baseline-paper-set",
+        "2026-04-21-recommendation-paper-library",
+        "llm-based-recommendation",
+        "vipin"
+      ],
+      "backlinks": [
+        "2026-04-21-nh-baseline-paper-set",
+        "2026-04-21-nr-baseline-paper-set",
+        "2026-04-21-recommendation-paper-library",
+        "index",
+        "llm-based-recommendation",
+        "log",
+        "overview"
+      ],
+      "has_counterpoints": true,
+      "word_count": 331,
+      "source_pages": [
+        "2026-04-21-nh-baseline-paper-set",
+        "2026-04-21-nr-baseline-paper-set",
+        "2026-04-21-recommendation-paper-library"
+      ],
+      "source_files": [],
+      "body_preview": "# LLM Recommendation Research Map ## Summary Vipin currently has three local research collections that together form an initial literature base for `LLM + recommendation` work. ## Current Collections - `NH` baseline set: - 21 PDFs - appears to focus on baseline and recent papers "
+    },
+    {
+      "id": "2026-04-21-vipin-wiki-bootstrap",
+      "title": "Vipin Wiki Bootstrap",
+      "type": "analysis",
+      "path": "wiki/analyses/2026-04-21-vipin-wiki-bootstrap.md",
+      "tags": [
+        "analysis",
+        "bootstrap",
+        "architecture"
+      ],
+      "headings": [
+        "Vipin Wiki Bootstrap",
+        "Summary",
+        "Chosen Structure",
+        "Why This Shape",
+        "Initial Assumptions",
+        "Counterpoints and Gaps",
+        "Next Recommended Steps",
+        "Related"
+      ],
+      "links": [
+        "2026-04-21-llm-wiki-pattern",
+        "home",
+        "index",
+        "llm-wiki",
+        "log",
+        "vipin"
+      ],
+      "backlinks": [
+        "2026-04-21-llm-wiki-pattern",
+        "2026-04-22-llm-wiki-skill-alignment",
+        "home",
+        "index",
+        "llm-wiki",
+        "log",
+        "vipin"
+      ],
+      "has_counterpoints": true,
+      "word_count": 246,
+      "source_pages": [
+        "2026-04-21-llm-wiki-pattern"
+      ],
+      "source_files": [],
+      "body_preview": "# Vipin Wiki Bootstrap ## Summary This note records the initial decisions used to instantiate the `LLM Wiki` pattern in this repository. ## Chosen Structure - `raw/` for immutable source material - `wiki/` for maintained knowledge pages - `AGENTS.md` as the operating schema Withi"
+    },
+    {
+      "id": "2026-04-22-llm-wiki-skill-alignment",
+      "title": "LLM Wiki Skill Alignment",
+      "type": "analysis",
+      "path": "wiki/analyses/2026-04-22-llm-wiki-skill-alignment.md",
+      "tags": [
+        "analysis",
+        "architecture",
+        "workflow",
+        "llm-wiki-skill"
+      ],
+      "headings": [
+        "LLM Wiki Skill Alignment",
+        "Summary",
+        "Aligned Capabilities",
+        "Repository-Specific Additions",
+        "Files Added Or Reworked",
+        "Validation Outcome",
+        "Remaining Content Gaps",
+        "Counterpoints and Gaps",
+        "Related"
+      ],
+      "links": [
+        "2026-04-21-vipin-wiki-bootstrap",
+        "home",
+        "index",
+        "log",
+        "overview"
+      ],
+      "backlinks": [
+        "index",
+        "log"
+      ],
+      "has_counterpoints": true,
+      "word_count": 437,
+      "source_pages": [],
+      "source_files": [],
+      "body_preview": "# LLM Wiki Skill Alignment ## Summary This note records how `vipin wiki` was upgraded to match the operating model of the reference `llm-wiki-skill` repository while preserving this repository's public/private split. ## Aligned Capabilities - `init` Creates or repairs the expecte"
+    },
+    {
+      "id": "comparisons-home",
+      "title": "Comparisons Home",
+      "type": "comparison",
+      "path": "wiki/comparisons/comparisons-home.md",
+      "tags": [
+        "comparisons"
+      ],
+      "headings": [
+        "Comparisons",
+        "Intended Use",
+        "Current State"
+      ],
+      "links": [
+        "llm-wiki-vs-rag"
+      ],
+      "backlinks": [
+        "index",
+        "log",
+        "overview"
+      ],
+      "has_counterpoints": false,
+      "word_count": 60,
+      "source_pages": [],
+      "source_files": [],
+      "body_preview": "# Comparisons This section stores structured side-by-side evaluations. ## Intended Use - compare papers, tools, methods, and research directions - preserve tradeoffs that would otherwise stay trapped in chat - support future decision-making without repeating the same analysis ## "
+    },
+    {
+      "id": "llm-wiki-vs-rag",
+      "title": "LLM Wiki vs RAG",
+      "type": "comparison",
+      "path": "wiki/comparisons/llm-wiki-vs-rag.md",
+      "tags": [
+        "comparison",
+        "llm-wiki",
+        "rag"
+      ],
+      "headings": [
+        "LLM Wiki vs RAG",
+        "Summary",
+        "Compared Items",
+        "Similarities",
+        "Differences",
+        "Tradeoffs",
+        "Counterpoints and Gaps",
+        "Recommendation"
+      ],
+      "links": [],
+      "backlinks": [
+        "2026-04-22-karpathy-llm-wiki-zh-compilation",
+        "2026-04-22-karpathy-upgrade-session",
+        "comparisons-home",
+        "home",
+        "index",
+        "log",
+        "personal-knowledge-systems"
+      ],
+      "has_counterpoints": true,
+      "word_count": 230,
+      "source_pages": [
+        "2026-04-21-llm-wiki-pattern",
+        "2026-04-22-karpathy-llm-wiki-zh-compilation"
+      ],
+      "source_files": [],
+      "body_preview": "# LLM Wiki vs RAG ## Summary RAG optimizes retrieval from raw material at query time. An LLM wiki optimizes durable synthesis during ingest and maintenance. ## Compared Items - RAG-style document QA - LLM-maintained wiki compilation ## Similarities - both can start from the same "
+    },
+    {
+      "id": "llm-based-recommendation",
+      "title": "LLM-Based Recommendation",
+      "type": "concept",
+      "path": "wiki/concepts/llm-based-recommendation.md",
+      "tags": [
+        "concept",
+        "llm",
+        "recommendation",
+        "research"
+      ],
+      "headings": [
+        "LLM-Based Recommendation",
+        "Typical Problem Settings",
+        "Typical Roles For The LLM",
+        "Common Research Tensions",
+        "Current Local Evidence",
+        "Open Questions",
+        "Counterpoints and Gaps",
+        "Related"
+      ],
+      "links": [
+        "2026-04-21-llm-rec-research-map",
+        "2026-04-21-nh-baseline-paper-set",
+        "2026-04-21-nr-baseline-paper-set",
+        "2026-04-21-recommendation-paper-library",
+        "vipin"
+      ],
+      "backlinks": [
+        "2026-04-21-llm-rec-research-map",
+        "2026-04-21-nh-baseline-paper-set",
+        "2026-04-21-nr-baseline-paper-set",
+        "2026-04-21-recommendation-paper-library",
+        "home",
+        "index",
+        "log",
+        "overview",
+        "vipin"
+      ],
+      "has_counterpoints": true,
+      "word_count": 263,
+      "source_pages": [
+        "2026-04-21-nh-baseline-paper-set",
+        "2026-04-21-nr-baseline-paper-set",
+        "2026-04-21-recommendation-paper-library"
+      ],
+      "source_files": [],
+      "body_preview": "# LLM-Based Recommendation `LLM-based recommendation` is the research area concerned with using large language models inside recommender systems, recommendation pipelines, or recommendation-oriented evaluation tasks. ## Typical Problem Settings - sequential recommendation - conve"
+    },
+    {
+      "id": "llm-wiki",
+      "title": "LLM Wiki",
+      "type": "concept",
+      "path": "wiki/concepts/llm-wiki.md",
+      "tags": [
+        "concept",
+        "knowledge-base",
+        "llm"
+      ],
+      "headings": [
+        "LLM Wiki",
+        "Core Idea",
+        "Core Layers",
+        "Why It Matters",
+        "Operational Modes",
+        "Practical Extensions",
+        "Counterpoints and Gaps",
+        "Related"
+      ],
+      "links": [
+        "2026-04-21-llm-wiki-pattern",
+        "2026-04-21-vipin-wiki-bootstrap",
+        "2026-04-22-karpathy-llm-wiki-zh-compilation",
+        "personal-knowledge-systems",
+        "vipin"
+      ],
+      "backlinks": [
+        "2026-04-21-llm-wiki-pattern",
+        "2026-04-21-vipin-wiki-bootstrap",
+        "2026-04-22-karpathy-llm-wiki-zh-compilation",
+        "2026-04-22-karpathy-upgrade-session",
+        "home",
+        "index",
+        "log",
+        "overview",
+        "personal-knowledge-systems",
+        "vipin"
+      ],
+      "has_counterpoints": true,
+      "word_count": 306,
+      "source_pages": [
+        "2026-04-21-llm-wiki-pattern"
+      ],
+      "source_files": [],
+      "body_preview": "# LLM Wiki An `LLM Wiki` is a knowledge-management pattern in which an LLM continuously compiles raw source material into a persistent, structured, interlinked markdown wiki. ## Core Idea The key shift is from query-time rediscovery to persistent synthesis. Instead of retrieving "
+    },
+    {
+      "id": "vipin",
+      "title": "Vipin",
+      "type": "entity",
+      "path": "wiki/entities/vipin.md",
+      "tags": [
+        "person",
+        "self"
+      ],
+      "headings": [
+        "Vipin",
+        "Current Context",
+        "Likely Uses",
+        "Open Questions",
+        "Related"
+      ],
+      "links": [
+        "2026-04-21-llm-wiki-pattern",
+        "2026-04-21-vipin-wiki-bootstrap",
+        "llm-based-recommendation",
+        "llm-wiki"
+      ],
+      "backlinks": [
+        "2026-04-21-llm-rec-research-map",
+        "2026-04-21-llm-wiki-pattern",
+        "2026-04-21-vipin-wiki-bootstrap",
+        "home",
+        "index",
+        "llm-based-recommendation",
+        "llm-wiki",
+        "log"
+      ],
+      "has_counterpoints": false,
+      "word_count": 130,
+      "source_pages": [
+        "2026-04-21-llm-wiki-pattern"
+      ],
+      "source_files": [],
+      "body_preview": "# Vipin Vipin is the owner and primary subject of this personal knowledge base. ## Current Context - Wants to build a personal wiki maintained by an LLM agent. - Is starting from the `LLM Wiki` pattern rather than a plain document archive or simple RAG setup. - Is actively collec"
+    },
+    {
+      "id": "home",
+      "title": "Vipin Wiki Home",
+      "type": "overview",
+      "path": "wiki/home.md",
+      "tags": [
+        "wiki",
+        "overview"
+      ],
+      "headings": [
+        "Vipin Wiki",
+        "System Files",
+        "Core Principle",
+        "Current Seed Pages",
+        "Operating Loop",
+        "Near-Term Goals"
+      ],
+      "links": [
+        "2026-04-21-llm-wiki-pattern",
+        "2026-04-21-vipin-wiki-bootstrap",
+        "2026-04-22-karpathy-llm-wiki-zh-compilation",
+        "index",
+        "llm-based-recommendation",
+        "llm-wiki",
+        "llm-wiki-vs-rag",
+        "log",
+        "overview",
+        "personal-knowledge-systems",
+        "vipin"
+      ],
+      "backlinks": [
+        "2026-04-21-vipin-wiki-bootstrap",
+        "2026-04-22-llm-wiki-skill-alignment",
+        "index",
+        "log",
+        "overview"
+      ],
+      "has_counterpoints": false,
+      "word_count": 202,
+      "source_pages": [],
+      "source_files": [],
+      "body_preview": "# Vipin Wiki `vipin wiki` is a personal knowledge base maintained by an LLM agent. Its purpose is not just to store documents, but to compile them into an evolving set of linked notes, summaries, entities, concepts, and analyses. ## System Files - [[index]] - [[log]] - [[overview"
+    },
+    {
+      "id": "index",
+      "title": "Index",
+      "type": "index",
+      "path": "wiki/index.md",
+      "tags": [
+        "index"
+      ],
+      "headings": [
+        "Index",
+        "Overview",
+        "Entities",
+        "Concepts",
+        "Sources",
+        "Analyses",
+        "Synthesis",
+        "Timelines",
+        "Queries",
+        "Topics",
+        "Comparisons"
+      ],
+      "links": [
+        "2026-04-21-llm-rec-research-map",
+        "2026-04-21-llm-wiki-pattern",
+        "2026-04-21-nh-baseline-paper-set",
+        "2026-04-21-nr-baseline-paper-set",
+        "2026-04-21-recommendation-paper-library",
+        "2026-04-21-vipin-wiki-bootstrap",
+        "2026-04-22-karpathy-llm-wiki-zh-compilation",
+        "2026-04-22-karpathy-upgrade-session",
+        "2026-04-22-llm-wiki-skill-alignment",
+        "README",
+        "comparisons-home",
+        "home",
+        "llm-based-recommendation",
+        "llm-wiki",
+        "llm-wiki-vs-rag",
+        "log",
+        "overview",
+        "personal-knowledge-systems",
+        "queries-home",
+        "synthesis-home",
+        "timelines-home",
+        "topics-home",
+        "vipin"
+      ],
+      "backlinks": [
+        "2026-04-21-vipin-wiki-bootstrap",
+        "2026-04-22-llm-wiki-skill-alignment",
+        "home",
+        "log",
+        "overview"
+      ],
+      "has_counterpoints": false,
+      "word_count": 374,
+      "source_pages": [],
+      "source_files": [],
+      "body_preview": "# Index This is the main catalog of the wiki. ## Overview - [[home]] - Top-level overview of the knowledge base and workflow. - [[overview]] - Structural map of the repository layers, sections, and active public domains. - [[log]] - Chronological record of ingests, analyses, quer"
+    },
+    {
+      "id": "log",
+      "title": "Log",
+      "type": "log",
+      "path": "wiki/log.md",
+      "tags": [
+        "log"
+      ],
+      "headings": [
+        "Log",
+        "[2026-04-21 17:36] bootstrap | initialize vipin wiki",
+        "[2026-04-21 19:34] ingest | llm and recommendation research collections",
+        "[2026-04-21 23:22] analysis | upgrade wiki operating system",
+        "[2026-04-22 00:18] analysis | align with llm-wiki-skill operating model",
+        "[2026-04-22 10:20] analysis | integrate karpathy article extensions"
+      ],
+      "links": [
+        "2026-04-21-llm-rec-research-map",
+        "2026-04-21-llm-wiki-pattern",
+        "2026-04-21-nh-baseline-paper-set",
+        "2026-04-21-nr-baseline-paper-set",
+        "2026-04-21-recommendation-paper-library",
+        "2026-04-21-vipin-wiki-bootstrap",
+        "2026-04-22-karpathy-llm-wiki-zh-compilation",
+        "2026-04-22-karpathy-upgrade-session",
+        "2026-04-22-llm-wiki-skill-alignment",
+        "README",
+        "comparisons-home",
+        "home",
+        "index",
+        "knowledge-graph",
+        "llm-based-recommendation",
+        "llm-wiki",
+        "llm-wiki-vs-rag",
+        "log",
+        "overview",
+        "personal-knowledge-systems",
+        "topics-home",
+        "vipin"
+      ],
+      "backlinks": [
+        "2026-04-21-vipin-wiki-bootstrap",
+        "2026-04-22-llm-wiki-skill-alignment",
+        "home",
+        "index",
+        "log"
+      ],
+      "has_counterpoints": false,
+      "word_count": 461,
+      "source_pages": [],
+      "source_files": [],
+      "body_preview": "# Log ## [2026-04-21 17:36] bootstrap | initialize vipin wiki - Pages created: - [[home]] - [[index]] - [[log]] - [[vipin]] - [[llm-wiki]] - [[2026-04-21-llm-wiki-pattern]] - [[2026-04-21-vipin-wiki-bootstrap]] - Sources used: - user-provided idea brief in chat describing the `LL"
+    },
+    {
+      "id": "overview",
+      "title": "Overview",
+      "type": "overview",
+      "path": "wiki/overview.md",
+      "tags": [
+        "overview",
+        "structure"
+      ],
+      "headings": [
+        "Overview",
+        "Layers",
+        "Active Public Domains",
+        "Section Entrypoints",
+        "Notes"
+      ],
+      "links": [
+        "2026-04-21-llm-rec-research-map",
+        "comparisons-home",
+        "home",
+        "index",
+        "llm-based-recommendation",
+        "llm-wiki",
+        "personal-knowledge-systems",
+        "queries-home",
+        "synthesis-home",
+        "timelines-home",
+        "topics-home"
+      ],
+      "backlinks": [
+        "2026-04-22-llm-wiki-skill-alignment",
+        "home",
+        "index",
+        "log"
+      ],
+      "has_counterpoints": false,
+      "word_count": 121,
+      "source_pages": [],
+      "source_files": [],
+      "body_preview": "# Overview This page describes the current operating shape of `vipin wiki`. ## Layers - Public wiki: `wiki/` - Private local-only wiki: maintained in a separate local-only layer - Raw sources: `raw/` - Reader layer: `reader-context.md` - Operating layer: `AGENTS.md`, `.wiki-schem"
+    },
+    {
+      "id": "queries-home",
+      "title": "Queries Home",
+      "type": "query",
+      "path": "wiki/queries/queries-home.md",
+      "tags": [
+        "query"
+      ],
+      "headings": [
+        "Queries Home"
+      ],
+      "links": [],
+      "backlinks": [
+        "index",
+        "overview"
+      ],
+      "has_counterpoints": false,
+      "word_count": 9,
+      "source_pages": [],
+      "source_files": [],
+      "body_preview": "# Queries Home Store durable answers to important questions here."
+    },
+    {
+      "id": "2026-04-21-llm-wiki-pattern",
+      "title": "LLM Wiki Pattern",
+      "type": "source",
+      "path": "wiki/sources/2026-04-21-llm-wiki-pattern.md",
+      "tags": [
+        "source",
+        "knowledge-base",
+        "llm"
+      ],
+      "headings": [
+        "LLM Wiki Pattern",
+        "Source Summary",
+        "Key Claims",
+        "Concrete Design Ideas Mentioned",
+        "Relevance To This Repository",
+        "Related Pages"
+      ],
+      "links": [
+        "2026-04-21-vipin-wiki-bootstrap",
+        "llm-wiki",
+        "vipin"
+      ],
+      "backlinks": [
+        "2026-04-21-vipin-wiki-bootstrap",
+        "home",
+        "index",
+        "llm-wiki",
+        "log",
+        "vipin"
+      ],
+      "has_counterpoints": false,
+      "word_count": 207,
+      "source_pages": [],
+      "source_files": [],
+      "body_preview": "# LLM Wiki Pattern ## Source Summary The source describes a pattern for building personal knowledge bases where an LLM does not merely retrieve from raw documents at query time, but incrementally maintains a persistent wiki between the human and the raw sources. ## Key Claims - T"
+    },
+    {
+      "id": "2026-04-21-nh-baseline-paper-set",
+      "title": "NH Baseline Paper Set",
+      "type": "source",
+      "path": "wiki/sources/2026-04-21-nh-baseline-paper-set.md",
+      "tags": [
+        "source",
+        "research",
+        "papers",
+        "recommendation",
+        "llm"
+      ],
+      "headings": [
+        "NH Baseline Paper Set",
+        "Source Summary",
+        "Minimal Metadata",
+        "Observed Coverage",
+        "Representative Titles",
+        "Notes",
+        "Related Pages"
+      ],
+      "links": [
+        "2026-04-21-llm-rec-research-map",
+        "llm-based-recommendation"
+      ],
+      "backlinks": [
+        "2026-04-21-llm-rec-research-map",
+        "2026-04-21-nr-baseline-paper-set",
+        "index",
+        "llm-based-recommendation",
+        "log"
+      ],
+      "has_counterpoints": false,
+      "word_count": 173,
+      "source_pages": [],
+      "source_files": [
+        "D:\\Research\\Uncertainty-LLM4Rec\\Paper\\BASELINE\\NH"
+      ],
+      "body_preview": "# NH Baseline Paper Set ## Source Summary This source records an external local paper collection under the `NH` baseline folder of the `Uncertainty-LLM4Rec` project. ## Minimal Metadata - path: `D:\\Research\\Uncertainty-LLM4Rec\\Paper\\BASELINE\\NH` - file count: 22 - PDF count: 21 -"
+    },
+    {
+      "id": "2026-04-21-nr-baseline-paper-set",
+      "title": "NR Baseline Paper Set",
+      "type": "source",
+      "path": "wiki/sources/2026-04-21-nr-baseline-paper-set.md",
+      "tags": [
+        "source",
+        "research",
+        "papers",
+        "recommendation",
+        "llm"
+      ],
+      "headings": [
+        "NR Baseline Paper Set",
+        "Source Summary",
+        "Minimal Metadata",
+        "Observed Coverage",
+        "Notes",
+        "Related Pages"
+      ],
+      "links": [
+        "2026-04-21-llm-rec-research-map",
+        "2026-04-21-nh-baseline-paper-set",
+        "llm-based-recommendation"
+      ],
+      "backlinks": [
+        "2026-04-21-llm-rec-research-map",
+        "index",
+        "llm-based-recommendation",
+        "log"
+      ],
+      "has_counterpoints": false,
+      "word_count": 131,
+      "source_pages": [],
+      "source_files": [
+        "D:\\Research\\Uncertainty-LLM4Rec\\Paper\\BASELINE\\NR"
+      ],
+      "body_preview": "# NR Baseline Paper Set ## Source Summary This source records an external local paper collection under the `NR` baseline folder of the `Uncertainty-LLM4Rec` project. ## Minimal Metadata - path: `D:\\Research\\Uncertainty-LLM4Rec\\Paper\\BASELINE\\NR` - file count: 15 - PDF count: 14 -"
+    },
+    {
+      "id": "2026-04-21-recommendation-paper-library",
+      "title": "Recommendation Paper Library",
+      "type": "source",
+      "path": "wiki/sources/2026-04-21-recommendation-paper-library.md",
+      "tags": [
+        "source",
+        "research",
+        "papers",
+        "recommendation",
+        "llm"
+      ],
+      "headings": [
+        "Recommendation Paper Library",
+        "Source Summary",
+        "Minimal Metadata",
+        "Observed Coverage",
+        "Representative Titles",
+        "Representative Subfolders",
+        "Notes",
+        "Related Pages"
+      ],
+      "links": [
+        "2026-04-21-llm-rec-research-map",
+        "llm-based-recommendation"
+      ],
+      "backlinks": [
+        "2026-04-21-llm-rec-research-map",
+        "index",
+        "llm-based-recommendation",
+        "log"
+      ],
+      "has_counterpoints": false,
+      "word_count": 229,
+      "source_pages": [],
+      "source_files": [
+        "D:\\Research\\LLM\\papers\\recommendation"
+      ],
+      "body_preview": "# Recommendation Paper Library ## Source Summary This source records a broader external local library of papers related to LLMs and recommender systems. ## Minimal Metadata - path: `D:\\Research\\LLM\\papers\\recommendation` - file count: 28 - PDF count: 28 - subdirectory count: 15 #"
+    },
+    {
+      "id": "2026-04-22-karpathy-llm-wiki-zh-compilation",
+      "title": "Karpathy LLM Wiki Chinese Compilation",
+      "type": "source",
+      "path": "wiki/sources/2026-04-22-karpathy-llm-wiki-zh-compilation.md",
+      "tags": [
+        "source",
+        "llm-wiki",
+        "karpathy",
+        "knowledge-base"
+      ],
+      "headings": [
+        "Karpathy LLM Wiki Chinese Compilation",
+        "Provenance",
+        "Core Claims",
+        "Key Extensions Raised In The Commentary",
+        "Adopted Into Vipin Wiki",
+        "Counterpoints and Gaps"
+      ],
+      "links": [
+        "2026-04-22-karpathy-upgrade-session",
+        "llm-wiki",
+        "llm-wiki-vs-rag",
+        "personal-knowledge-systems"
+      ],
+      "backlinks": [
+        "2026-04-22-karpathy-upgrade-session",
+        "home",
+        "index",
+        "llm-wiki",
+        "log",
+        "personal-knowledge-systems"
+      ],
+      "has_counterpoints": true,
+      "word_count": 226,
+      "source_pages": [],
+      "source_files": [
+        "chat"
+      ],
+      "body_preview": "# Karpathy LLM Wiki Chinese Compilation ## Provenance - origin: chat - note: user-provided Chinese compilation of the Karpathy `LLM Wiki` idea plus selected high-quality community comments ## Core Claims - An LLM wiki compounds knowledge during ingest instead of rediscovering it "
+    },
+    {
+      "id": "2026-04-22-karpathy-upgrade-session",
+      "title": "Karpathy Upgrade Session",
+      "type": "synthesis",
+      "path": "wiki/synthesis/sessions/2026-04-22-karpathy-upgrade-session.md",
+      "tags": [
+        "synthesis",
+        "session",
+        "llm-wiki"
+      ],
+      "headings": [
+        "Karpathy Upgrade Session",
+        "Goal",
+        "Changes Landed",
+        "Why These Matter",
+        "Counterpoints and Gaps",
+        "Related"
+      ],
+      "links": [
+        "2026-04-22-karpathy-llm-wiki-zh-compilation",
+        "llm-wiki",
+        "llm-wiki-vs-rag",
+        "personal-knowledge-systems"
+      ],
+      "backlinks": [
+        "2026-04-22-karpathy-llm-wiki-zh-compilation",
+        "README",
+        "index",
+        "log"
+      ],
+      "has_counterpoints": true,
+      "word_count": 196,
+      "source_pages": [
+        "2026-04-22-karpathy-llm-wiki-zh-compilation"
+      ],
+      "source_files": [],
+      "body_preview": "# Karpathy Upgrade Session ## Goal Upgrade `vipin wiki` from a strong starter system into a more complete personal knowledge workbench informed by Karpathy's `LLM Wiki` pattern and the strongest community extensions. ## Changes Landed - added a first-class reader layer via `reade"
+    },
+    {
+      "id": "README",
+      "title": "Synthesis Sessions",
+      "type": "synthesis",
+      "path": "wiki/synthesis/sessions/README.md",
+      "tags": [
+        "synthesis",
+        "sessions"
+      ],
+      "headings": [
+        "Synthesis Sessions",
+        "Use Cases",
+        "Current Sessions"
+      ],
+      "links": [
+        "2026-04-22-karpathy-upgrade-session"
+      ],
+      "backlinks": [
+        "index",
+        "log"
+      ],
+      "has_counterpoints": false,
+      "word_count": 54,
+      "source_pages": [],
+      "source_files": [],
+      "body_preview": "# Synthesis Sessions This folder stores dated synthesis increments, working memos, and crystallized session outputs. ## Use Cases - preserve progress during a long research thread - checkpoint a developing thesis before it is stable enough for a long-lived synthesis page - captur"
+    },
+    {
+      "id": "synthesis-home",
+      "title": "Synthesis Home",
+      "type": "synthesis",
+      "path": "wiki/synthesis/synthesis-home.md",
+      "tags": [
+        "synthesis"
+      ],
+      "headings": [
+        "Synthesis Home"
+      ],
+      "links": [],
+      "backlinks": [
+        "index",
+        "overview"
+      ],
+      "has_counterpoints": false,
+      "word_count": 12,
+      "source_pages": [],
+      "source_files": [],
+      "body_preview": "# Synthesis Home Store higher-order reports, comparisons, and multi-source digests here."
+    },
+    {
+      "id": "timelines-home",
+      "title": "Timelines Home",
+      "type": "timeline",
+      "path": "wiki/timelines/timelines-home.md",
+      "tags": [
+        "timeline"
+      ],
+      "headings": [
+        "Timelines Home"
+      ],
+      "links": [],
+      "backlinks": [
+        "index",
+        "overview"
+      ],
+      "has_counterpoints": false,
+      "word_count": 14,
+      "source_pages": [],
+      "source_files": [],
+      "body_preview": "# Timelines Home Store durable timeline views here when a topic benefits from chronological structure."
+    },
+    {
+      "id": "personal-knowledge-systems",
+      "title": "Personal Knowledge Systems",
+      "type": "topic",
+      "path": "wiki/topics/personal-knowledge-systems.md",
+      "tags": [
+        "topic",
+        "knowledge-systems",
+        "llm-wiki"
+      ],
+      "headings": [
+        "Personal Knowledge Systems",
+        "Scope",
+        "Core Questions",
+        "Key Pages",
+        "Major Claims",
+        "Counterpoints and Gaps",
+        "Next Sources To Ingest"
+      ],
+      "links": [
+        "2026-04-22-karpathy-llm-wiki-zh-compilation",
+        "llm-wiki",
+        "llm-wiki-vs-rag"
+      ],
+      "backlinks": [
+        "2026-04-22-karpathy-llm-wiki-zh-compilation",
+        "2026-04-22-karpathy-upgrade-session",
+        "home",
+        "index",
+        "llm-wiki",
+        "log",
+        "overview",
+        "topics-home"
+      ],
+      "has_counterpoints": true,
+      "word_count": 182,
+      "source_pages": [
+        "2026-04-21-llm-wiki-pattern",
+        "2026-04-22-karpathy-llm-wiki-zh-compilation"
+      ],
+      "source_files": [],
+      "body_preview": "# Personal Knowledge Systems ## Scope This topic covers systems that help one person accumulate, structure, revisit, and refine knowledge over time. ## Core Questions - when should knowledge be compiled into durable pages versus retrieved on demand? - what kinds of maintenance sh"
+    },
+    {
+      "id": "topics-home",
+      "title": "Topics Home",
+      "type": "topic",
+      "path": "wiki/topics/topics-home.md",
+      "tags": [
+        "topics"
+      ],
+      "headings": [
+        "Topics",
+        "Intended Use",
+        "Current State"
+      ],
+      "links": [
+        "personal-knowledge-systems"
+      ],
+      "backlinks": [
+        "index",
+        "log",
+        "overview"
+      ],
+      "has_counterpoints": false,
+      "word_count": 69,
+      "source_pages": [],
+      "source_files": [],
+      "body_preview": "# Topics This section holds durable subject clusters that are broader than a single concept page. ## Intended Use - map a research area with multiple concepts and sources - group recurring questions that span multiple pages - provide a stable landing page for long-running domains"
+    }
+  ]
+}

@@ -6,13 +6,16 @@ It combines:
 
 - a public markdown wiki for durable, publishable knowledge
 - a private local-only layer for sensitive materials
-- an operating schema that tells an agent how to ingest, synthesize, lint, graph, and grow the repository over time
+- a reader-specific context layer that shapes how knowledge is selected and synthesized
+- an operating schema that tells an agent how to ingest, synthesize, lint, search, and grow the repository over time
 
 ## Core Files
 
 - `AGENTS.md`
 - `.wiki-schema.md`
 - `WORKFLOWS.md`
+- `reader-context.md`
+- `CONTRIBUTIONS.md`
 - `purpose.md`
 - `wiki/home.md`
 - `wiki/index.md`
@@ -24,7 +27,8 @@ It combines:
 - `raw/`: immutable or externally referenced source materials
 - `wiki/`: public knowledge layer
 - `wiki-private/`: local-only private knowledge layer
-- `scripts/`: operational scripts for routing, validation, cacheing, status, graph generation, and linting
+- `reader-context.md`: reader-specific personalization layer
+- `scripts/`: operational scripts for routing, validation, cacheing, search, context packing, status, and linting
 
 ## Supported Workflows
 
@@ -34,8 +38,9 @@ It combines:
 - `query`: answer from curated wiki pages
 - `digest`: write higher-order syntheses, comparisons, and reports
 - `lint`: check structure, link health, and public/private boundaries
+- `search`: search the machine-readable catalog instead of relying only on the handwritten index
+- `context`: assemble L0/L1/L2/L3 context packs for future agent sessions
 - `status`: summarize repository scale and recent activity
-- `graph`: generate a public wiki-link graph
 - `delete`: scan references before removing durable pages
 - `crystallize`: save valuable conversations back into the wiki
 
@@ -44,7 +49,9 @@ It combines:
 ```powershell
 ./scripts/wiki-status.ps1
 ./scripts/wiki-lint.ps1
-./scripts/wiki-graph.ps1
+./scripts/wiki-catalog.ps1
+./scripts/wiki-search.ps1 "llm recommendation"
+./scripts/wiki-context.ps1 l0
 ```
 
 ```bash
@@ -52,9 +59,18 @@ bash scripts/wiki-status.sh
 bash scripts/source-registry.sh validate
 bash scripts/wiki-compat.sh inspect .
 bash scripts/lint-runner.sh .
-bash scripts/build-graph-data.sh .
-bash scripts/build-graph-html.sh .
+python scripts/wiki-catalog.py --root .
+bash scripts/wiki-search.py "llm recommendation" --root .
+bash scripts/wiki-context.py l0 --root .
 ```
+
+## Validation Rule
+
+For non-trivial ingest, synthesis, and comparison work:
+
+- the agent should preserve explicit source attribution
+- the agent should preserve counterarguments and data gaps when a topic is contested
+- the human remains the final validator for important claims
 
 ## Public / Private Safety
 
@@ -76,11 +92,10 @@ The repository is intentionally structured so that private files stay local whil
 - `wiki/analyses/` for maps, memos, and synthesis outputs
 - `wiki/queries/` for saved answers
 - `wiki/synthesis/` and `wiki/synthesis/sessions/` for long-running synthesis work
+- `wiki/catalog.json` for machine-readable search and context assembly
 
-The graph workflow generates:
+## Optional Artifacts
 
-- `wiki/graph-data.json`
-- `wiki/knowledge-graph.html`
-- `wiki/knowledge-graph.md`
+- `wiki/graph-data.json` and `wiki/knowledge-graph.html` can still be generated, but graph output is secondary to ingest quality, search quality, and durable retrieval.
 
 

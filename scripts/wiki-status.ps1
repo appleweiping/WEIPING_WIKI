@@ -8,6 +8,9 @@ $rootPath = (Resolve-Path $Root).Path
 $wikiPath = Join-Path $rootPath "wiki"
 $privateWikiPath = Join-Path $rootPath "wiki-private"
 $rawPath = Join-Path $rootPath "raw"
+$catalogPath = Join-Path $wikiPath "catalog.json"
+$readerContextPath = Join-Path $rootPath "reader-context.md"
+$contributionsPath = Join-Path $rootPath "CONTRIBUTIONS.md"
 
 function Get-MarkdownCount {
     param([string]$Path)
@@ -27,6 +30,8 @@ $publicSourcePages = Get-MarkdownCount -Path (Join-Path $wikiPath "sources")
 $publicConceptPages = Get-MarkdownCount -Path (Join-Path $wikiPath "concepts")
 $publicEntityPages = Get-MarkdownCount -Path (Join-Path $wikiPath "entities")
 $publicAnalysisPages = Get-MarkdownCount -Path (Join-Path $wikiPath "analyses")
+$publicTopicPages = Get-MarkdownCount -Path (Join-Path $wikiPath "topics")
+$publicComparisonPages = Get-MarkdownCount -Path (Join-Path $wikiPath "comparisons")
 $publicQueryPages = Get-MarkdownCount -Path (Join-Path $wikiPath "queries")
 $publicSynthesisPages = Get-MarkdownCount -Path (Join-Path $wikiPath "synthesis")
 
@@ -38,6 +43,14 @@ $privateVideoCount = if (Test-Path (Join-Path $rawPath "private-videos")) {
     (Get-ChildItem -LiteralPath (Join-Path $rawPath "private-videos") -File | Where-Object { $_.Name -ne "README.md" }).Count
 } else { 0 }
 
+$catalogStatus = if (-not (Test-Path $catalogPath)) {
+    "missing"
+} else {
+    $catalogTime = (Get-Item $catalogPath).LastWriteTimeUtc
+    $latestWikiTime = (Get-ChildItem -LiteralPath $wikiPath -Recurse -File | Sort-Object LastWriteTimeUtc -Descending | Select-Object -First 1).LastWriteTimeUtc
+    if ($latestWikiTime -gt $catalogTime) { "stale" } else { "fresh" }
+}
+
 Write-Output "# Wiki Status"
 Write-Output ""
 Write-Output "- Root: $rootPath"
@@ -47,10 +60,15 @@ Write-Output "- Public source pages: $publicSourcePages"
 Write-Output "- Public concept pages: $publicConceptPages"
 Write-Output "- Public entity pages: $publicEntityPages"
 Write-Output "- Public analysis pages: $publicAnalysisPages"
+Write-Output "- Public topic pages: $publicTopicPages"
+Write-Output "- Public comparison pages: $publicComparisonPages"
 Write-Output "- Public query pages: $publicQueryPages"
 Write-Output "- Public synthesis pages: $publicSynthesisPages"
 Write-Output "- Private images: $privateImageCount"
 Write-Output "- Private videos: $privateVideoCount"
+Write-Output "- Reader context present: $(Test-Path $readerContextPath)"
+Write-Output "- Contributions ledger present: $(Test-Path $contributionsPath)"
+Write-Output "- Catalog status: $catalogStatus"
 Write-Output ""
 Write-Output "## Recent Public Log Entries"
 
@@ -70,4 +88,3 @@ if ($recentPrivate) {
 } else {
     Write-Output "- No private log entries found."
 }
-

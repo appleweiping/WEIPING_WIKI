@@ -32,6 +32,7 @@ exclude_names = {
 
 pages = []
 name_to_paths = defaultdict(list)
+page_types = {}
 for root, _, files in os.walk(wiki_dir):
     if "_templates" in root.split(os.sep):
         continue
@@ -43,6 +44,19 @@ for root, _, files in os.walk(wiki_dir):
         pages.append((stem, path))
         name_to_paths[stem].append(path)
 
+type_map = {
+    "entities": "entity",
+    "concepts": "concept",
+    "topics": "topic",
+    "sources": "source",
+    "analyses": "analysis",
+    "comparisons": "comparison",
+    "queries": "query",
+    "synthesis": "synthesis",
+    "sessions": "synthesis",
+    "timelines": "timeline",
+}
+
 def read_text(path):
     try:
         return open(path, "r", encoding="utf-8").read()
@@ -52,11 +66,37 @@ def read_text(path):
 inbound = Counter()
 broken = set()
 private_leaks = set()
+missing_counterpoints = set()
+missing_attribution = set()
 
 for stem, path in pages:
     text = read_text(path)
+    page_type = None
+    match = re.search(r"(?ms)^---\n.*?^type:\s*([A-Za-z0-9_-]+)\s*$.*?^---\n", text)
+    if match:
+        page_type = match.group(1).strip().lower()
+    else:
+        page_type = type_map.get(os.path.basename(os.path.dirname(path)), "overview")
+    page_types[stem] = page_type
+
     if "raw/private-" in text or "wiki-private/" in text:
         private_leaks.add(os.path.relpath(path, wiki_root))
+
+    if page_type in {"concept", "topic", "comparison", "analysis", "synthesis"}:
+        if stem not in exclude_names and not re.search(r"(?im)^##\s+Counterpoints and Gaps\s*$", text):
+            missing_counterpoints.add(os.path.relpath(path, wiki_root))
+
+    if page_type in {"concept", "topic", "comparison", "analysis", "query", "synthesis"}:
+        has_sources = (
+            re.search(r"(?im)^source_pages:\s*$", text)
+            or re.search(r"(?im)^source_files:\s*$", text)
+            or re.search(r"(?im)^source_pages:\s+\S", text)
+            or re.search(r"(?im)^source_files:\s+\S", text)
+            or re.search(r"(?im)^##\s+Sources\s*$", text)
+            or re.search(r"\[\[20\d{2}-\d{2}-\d{2}-", text)
+        )
+        if stem not in exclude_names and not has_sources:
+            missing_attribution.add(os.path.relpath(path, wiki_root))
 
     for target in re.findall(r"\[\[([^\]]+)\]\]", text):
         target = target.split("|", 1)[0].strip()
@@ -81,8 +121,15 @@ index_targets = {
 missing_from_index = sorted(
     os.path.relpath(path, wiki_root)
     for stem, path in pages
-    if stem != "index" and stem not in index_targets
+    if stem not in {"index", "knowledge-graph"} and stem not in index_targets
 )
+
+catalog_path = os.path.join(wiki_dir, "catalog.json")
+if not os.path.exists(catalog_path):
+    catalog_status = "missing"
+else:
+    latest_page = max(os.path.getmtime(path) for _, path in pages) if pages else 0
+    catalog_status = "stale" if latest_page > os.path.getmtime(catalog_path) else "fresh"
 
 topic_dir = os.path.join(wiki_dir, "topics")
 comparison_dir = os.path.join(wiki_dir, "comparisons")
@@ -124,12 +171,32 @@ else:
     print("- none")
 print("")
 
+print("--- missing counterpoints sections ---")
+if missing_counterpoints:
+    for item in sorted(missing_counterpoints):
+        print(f"- {item}")
+else:
+    print("- none")
+print("")
+
+print("--- missing source attribution ---")
+if missing_attribution:
+    for item in sorted(missing_attribution):
+        print(f"- {item}")
+else:
+    print("- none")
+print("")
+
 print("--- public/private boundary leaks ---")
 if private_leaks:
     for item in sorted(private_leaks):
         print(f"- {item}")
 else:
     print("- none")
+print("")
+
+print("--- catalog status ---")
+print(f"- {catalog_status}")
 print("")
 
 print("--- section gaps ---")

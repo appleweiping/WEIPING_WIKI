@@ -81,6 +81,12 @@ The operating system is aligned, but some sections are still intentionally empty
 
 Those are content gaps, not system gaps.
 
+## Counterpoints and Gaps
+
+- functional alignment with the reference repository does not guarantee the same design priorities are right for Vipin's long-term use
+- graph generation and tooling completeness can distract from the more important problem of maintaining trustworthy synthesis pages
+- the serious test is repeated real ingest and query work, not one-time feature parity
+
 ## Related
 
 - [[home]]

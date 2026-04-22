@@ -45,6 +45,12 @@ Within `wiki/`, the first stable sections are:
 - High-value outputs from future conversations should be saved back into the wiki.
 - The structure should remain lightweight until usage patterns become clearer.
 
+## Counterpoints and Gaps
+
+- the original bootstrap favored simplicity over scale, so it did not yet solve cataloged search, layered context, or source-type-aware ingest
+- a lightweight structure can become underspecified once the wiki spans multiple domains and hundreds of pages
+- bootstrapping a serious system requires later hardening, not just continued note accumulation
+
 ## Next Recommended Steps
 
 1. Ingest one real source into `raw/inbox/`.

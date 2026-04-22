@@ -18,12 +18,14 @@ This page describes the current operating shape of `vipin wiki`.
 - Public wiki: `wiki/`
 - Private local-only wiki: maintained in a separate local-only layer
 - Raw sources: `raw/`
-- Operating layer: `AGENTS.md`, `.wiki-schema.md`, `WORKFLOWS.md`, and `scripts/`
+- Reader layer: `reader-context.md`
+- Operating layer: `AGENTS.md`, `.wiki-schema.md`, `WORKFLOWS.md`, `CONTRIBUTIONS.md`, and `scripts/`
 
 ## Active Public Domains
 
 - [[llm-wiki]]
 - [[llm-based-recommendation]]
+- [[personal-knowledge-systems]]
 - [[2026-04-21-llm-rec-research-map]]
 
 ## Section Entrypoints
@@ -38,6 +40,6 @@ This page describes the current operating shape of `vipin wiki`.
 
 ## Notes
 
-- Public graph generation only scans `wiki/`.
+- Search and context assembly now treat the wiki as both human-readable markdown and machine-readable catalog data.
 - Private holdings stay outside public indexes and public logs.
 - Collection-style ingest is now a first-class workflow alongside one-by-one ingest.

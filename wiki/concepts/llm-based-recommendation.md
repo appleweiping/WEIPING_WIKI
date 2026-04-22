@@ -64,6 +64,12 @@ The current local paper collections suggest especially strong coverage in:
 - How should uncertainty be represented in LLM-driven recommendation pipelines?
 - Which papers are core baselines versus peripheral reading?
 
+## Counterpoints and Gaps
+
+- the current local collections show breadth, but not yet a settled hierarchy of which papers truly anchor Vipin's own work
+- large language models can improve reasoning or explanation quality while still worsening latency, controllability, or reproducibility
+- some apparent progress in `LLM-based recommendation` may collapse once systems are compared under stronger evaluation, smaller budgets, or stricter uncertainty handling
+
 ## Related
 
 - [[vipin]]
@@ -71,4 +77,3 @@ The current local paper collections suggest especially strong coverage in:
 - [[2026-04-21-nr-baseline-paper-set]]
 - [[2026-04-21-recommendation-paper-library]]
 - [[2026-04-21-llm-rec-research-map]]
-

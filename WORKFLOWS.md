@@ -14,12 +14,14 @@
   Answers from `wiki/index.md` and maintained pages first.
 - `digest`
   Produces a durable synthesis, comparison, timeline, or memo from multiple maintained pages.
+- `search`
+  Searches a machine-readable wiki catalog rather than only scanning raw markdown by hand.
+- `context`
+  Builds layered context packs so future sessions can load just enough repository state.
 - `lint`
   Checks broken links, orphan pages, index coverage, and public/private leaks.
 - `status`
   Summarizes scale, recent activity, and public/private health without exposing private details.
-- `graph`
-  Generates machine-readable and human-readable graph outputs for public pages.
 - `delete`
   Scans references before deleting a durable page so indexes and graphs stay clean.
 - `crystallize`
@@ -28,11 +30,26 @@
 ## Canonical Flow
 
 1. Read `wiki/index.md` and recent `wiki/log.md` entries.
-2. Route the source through `scripts/source-registry.sh` when relevant.
-3. Create or update the source page.
-4. Propagate durable changes into entities, concepts, topics, comparisons, and synthesis pages.
-5. Update `wiki/index.md`, section homes, and `wiki/log.md`.
-6. Run lint or graph generation when the change is structural.
+2. Load the reader-specific layer from `reader-context.md` when the task involves interpretation, prioritization, or presentation choices.
+3. Use L0/L1/L2/L3 context packs when the session needs scalable navigation instead of reading the entire wiki at once.
+4. Route the source through `scripts/source-registry.sh` when relevant.
+5. Create or update the source page.
+6. Propagate durable changes into entities, concepts, topics, comparisons, and synthesis pages.
+7. Update `wiki/index.md`, section homes, and `wiki/log.md`.
+8. Produce two outputs when possible:
+   the direct answer for the user and the durable wiki updates that keep the knowledge base compounding.
+9. Run lint, catalog rebuild, or optional graph generation when the change is structural.
+
+## Context Layers
+
+- `L0`
+  Reader context, purpose, overview, and recent log headings.
+- `L1`
+  Stable navigation documents such as `wiki/index.md`.
+- `L2`
+  Search results and candidate pages relevant to a specific question.
+- `L3`
+  Full page contents loaded only when a task truly needs them.
 
 ## Public / Private Policy
 
@@ -40,6 +57,16 @@
 - Sensitive local-only pages live under `wiki-private/`.
 - Sensitive raw sources live under `raw/private-*`.
 - Public scripts may report private counts or presence, but must not emit sensitive paths or content into public markdown.
+
+## Divergence Check
+
+For claims that matter, the system should preserve the best counterarguments instead of only reinforcing the dominant line of evidence.
+
+Preferred practice:
+
+- concept, topic, comparison, analysis, and synthesis pages should include a `## Counterpoints and Gaps` section when the subject is debatable or incomplete
+- if a topic is becoming one-sided, the agent should explicitly look for missing objections, limitations, or contrary data
+- absence of contrary evidence is not itself confirmation
 
 ## Durable Destinations
 

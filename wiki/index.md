@@ -17,7 +17,6 @@ This is the main catalog of the wiki.
 - [[home]] - Top-level overview of the knowledge base and workflow.
 - [[overview]] - Structural map of the repository layers, sections, and active public domains.
 - [[log]] - Chronological record of ingests, analyses, queries, and maintenance actions.
-- [[knowledge-graph]] - Generated public wiki-link graph for structural inspection.
 
 ## Entities
 
@@ -31,6 +30,7 @@ This is the main catalog of the wiki.
 ## Sources
 
 - [[2026-04-21-llm-wiki-pattern]] - Seed source note based on the user-provided idea brief describing the LLM wiki pattern.
+- [[2026-04-22-karpathy-llm-wiki-zh-compilation]] - User-provided Chinese compilation of the Karpathy article plus selected community commentary.
 - [[2026-04-21-nh-baseline-paper-set]] - External local paper set with 21 PDFs from the `NH` baseline folder under `Uncertainty-LLM4Rec`.
 - [[2026-04-21-nr-baseline-paper-set]] - External local paper set with 14 PDFs from the `NR` baseline folder under `Uncertainty-LLM4Rec`.
 - [[2026-04-21-recommendation-paper-library]] - Larger external local library of LLM-and-recommendation papers, with PDFs plus topic/project subfolders.
@@ -45,6 +45,7 @@ This is the main catalog of the wiki.
 
 - [[synthesis-home]] - Entry page for the `wiki/synthesis/` section.
 - [[README|synthesis sessions]] - Session-level synthesis notes and crystallized checkpoints.
+- [[2026-04-22-karpathy-upgrade-session]] - Session note recording the upgrade from a toy-like bootstrap toward a reader-aware, catalog-backed knowledge operating system.
 
 ## Timelines
 
@@ -57,7 +58,9 @@ This is the main catalog of the wiki.
 ## Topics
 
 - [[topics-home]] - Entry page for durable subject clusters.
+- [[personal-knowledge-systems]] - Topic map for long-lived systems that accumulate, structure, and revisit knowledge.
 
 ## Comparisons
 
 - [[comparisons-home]] - Entry page for side-by-side evaluations and tradeoff notes.
+- [[llm-wiki-vs-rag]] - Comparison between persistent wiki compilation and query-time retrieval.

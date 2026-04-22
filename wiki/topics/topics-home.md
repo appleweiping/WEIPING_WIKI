@@ -20,5 +20,5 @@ This section holds durable subject clusters that are broader than a single conce
 
 ## Current State
 
-- No dedicated topic pages yet.
-- Candidate first topics include `uncertainty-in-llm-recommendation` and `personal-knowledge-systems`.
+- One durable topic page now exists: [[personal-knowledge-systems]].
+- Candidate next topics include `uncertainty-in-llm-recommendation` and a dedicated topic for `llm-based-recommendation`.

@@ -81,3 +81,24 @@ tags:
   - Added workflow documentation, source routing tables, adapter-state checks, cache helpers, compatibility inspection, delete scanning, and a session-start hook.
   - Added bash-native status, lint, graph-data, and graph-html generation so the repo now supports the same major operating surfaces as the reference system.
   - Verified the public/private boundary and generated `wiki/graph-data.json` plus `wiki/knowledge-graph.html`.
+
+## [2026-04-22 10:20] analysis | integrate karpathy article extensions
+
+- Pages created:
+  - [[2026-04-22-karpathy-llm-wiki-zh-compilation]]
+  - [[personal-knowledge-systems]]
+  - [[llm-wiki-vs-rag]]
+  - [[2026-04-22-karpathy-upgrade-session]]
+- Pages updated:
+  - [[home]]
+  - [[overview]]
+  - [[index]]
+  - [[log]]
+  - [[llm-wiki]]
+- Sources used:
+  - user-provided Chinese compilation of Karpathy's article and selected comments
+  - reviewed public repos and references around the Karpathy workflow
+- Notes:
+  - Added a first-class reader layer, structured contributions record, machine-readable catalog generation, scored search, and layered context packing.
+  - Expanded the source registry for meeting transcripts and voice-note workflows.
+  - Added divergence-check language so the wiki preserves counterarguments and missing evidence instead of only reinforcing the dominant view.

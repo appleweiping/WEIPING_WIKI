@@ -20,5 +20,5 @@ This section stores structured side-by-side evaluations.
 
 ## Current State
 
-- No comparison pages yet.
+- One durable comparison page now exists: [[llm-wiki-vs-rag]].
 - The operating system upgrade makes this a first-class durable output type.

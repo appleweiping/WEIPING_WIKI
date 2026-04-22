@@ -18,3 +18,7 @@ This folder stores dated synthesis increments, working memos, and crystallized s
 - preserve progress during a long research thread
 - checkpoint a developing thesis before it is stable enough for a long-lived synthesis page
 - capture structured outputs produced during `digest` or `crystallize`
+
+## Current Sessions
+
+- [[2026-04-22-karpathy-upgrade-session]]
