@@ -56,6 +56,8 @@ This is the main catalog of the wiki.
 - [[queries-home]] - Entry page for durable saved answers.
 - [[2026-04-22-how-to-reduce-github-submit-prompts]] - Workflow note on why GitHub updates may require approval prompts and how to reduce the friction.
 - [[2026-04-22-what-is-dbm]] - Short explanation of the `dBm` formula, its `1 mW` reference, and common power conversion rules.
+- [[2026-04-22-what-is-spectroscopy]] - Short explanation of the term `spectroscopy` in a wave optics course context.
+- [[2026-04-22-how-are-k-omega-and-v-derived]] - Step-by-step derivation of `k = 2pi/lambda`, `omega = 2pi f`, and `v = omega/k = f lambda`.
 
 ## Topics
 

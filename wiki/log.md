@@ -156,3 +156,19 @@ tags:
   - direct explanation of the `dBm = 10 log10(P / 1 mW)` definition
 - Notes:
   - Preserved the explanation of `dBm` as a reusable query note with worked examples and common rules of thumb.
+
+## [2026-04-22 11:12] query | optics course terminology and wave derivation
+
+- Pages created:
+  - [[2026-04-22-what-is-spectroscopy]]
+  - [[2026-04-22-how-are-k-omega-and-v-derived]]
+- Pages updated:
+  - [[queries-home]]
+  - [[index]]
+  - [[log]]
+- Sources used:
+  - user-provided optics course outline image mentioning `Spectroscopy`
+  - user-provided board image deriving wave relations from phase invariance
+- Notes:
+  - Preserved a reusable explanation of `spectroscopy` in the wave optics context.
+  - Preserved a step-by-step derivation of the relations among `k`, `omega`, `lambda`, `T`, `f`, and `v`.
