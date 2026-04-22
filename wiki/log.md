@@ -129,3 +129,16 @@ tags:
 - Notes:
   - Added concrete guidance on where to look in permission dialogs and which narrow command prefixes are reasonable to persist.
   - Added a warning against overly broad `powershell` or `python` approvals.
+
+## [2026-04-22 10:58] analysis | preserve substantive q-and-a by default
+
+- Pages updated:
+  - `AGENTS.md`
+  - `WORKFLOWS.md`
+  - `.wiki-schema.md`
+  - [[log]]
+- Sources used:
+  - user instruction in chat to always organize high-value Q&A into the appropriate wiki destination
+- Notes:
+  - Promoted Q&A preservation from an informal habit to a repository-level default rule.
+  - Clarified that reusable answers should be filed into queries, analyses, comparisons, concepts, or topics based on fit.

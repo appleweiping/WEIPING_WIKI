@@ -40,6 +40,20 @@
    the direct answer for the user and the durable wiki updates that keep the knowledge base compounding.
 9. Run lint, catalog rebuild, or optional graph generation when the change is structural.
 
+## Q&A Preservation Rule
+
+Substantive question/answer exchanges should normally be preserved without needing a separate reminder from the user.
+
+Preferred routing:
+
+- direct reusable answer -> `wiki/queries/`
+- multi-source memo -> `wiki/analyses/`
+- tradeoff answer -> `wiki/comparisons/`
+- durable subject improvement -> update `wiki/concepts/` or `wiki/topics/`
+
+Chat is the transient surface.
+The wiki is the durable memory.
+
 ## Context Layers
 
 - `L0`

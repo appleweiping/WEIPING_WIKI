@@ -29,6 +29,7 @@ The agent is responsible for:
 - creating new pages when needed
 - maintaining cross-links
 - recording work in the index and log
+- preserving high-value question/answer exchanges as durable wiki content instead of leaving them only in chat history
 
 ## Repository Structure
 
@@ -154,10 +155,17 @@ When asked a substantive question:
 1. Read `wiki/index.md` first.
 2. Open the most relevant pages.
 3. Synthesize an answer grounded in the maintained wiki.
-4. If the answer is valuable long-term, ask whether it should be filed or directly file it when the user's intent is clearly archival.
-5. If filed, create a page under `wiki/queries/` or `wiki/analyses/`, then update index and log.
+4. Default to preserving the answer when it is reusable, operationally important, or likely to be asked again.
+5. File it into the most appropriate durable destination:
+   - `wiki/queries/` for direct reusable answers
+   - `wiki/analyses/` for multi-page synthesis or memos
+   - `wiki/comparisons/` for tradeoff-oriented answers
+   - `wiki/topics/` or `wiki/concepts/` when the answer materially improves a durable subject page
+6. Update index and log after filing.
 
 Default to the public wiki unless the user explicitly asks to use private material.
+
+Do not rely on the user to remind you to preserve valuable Q&A.
 
 ## Lint Workflow
 
