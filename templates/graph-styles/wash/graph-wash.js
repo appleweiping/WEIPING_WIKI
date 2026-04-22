@@ -55,6 +55,91 @@
     }
   };
 
+  function setText(id, value) {
+    const el = document.getElementById(id);
+    if (el) el.textContent = value;
+  }
+
+  function setAttr(id, name, value) {
+    const el = document.getElementById(id);
+    if (el) el.setAttribute(name, value);
+  }
+
+  function applyUiCopy() {
+    document.title = `Knowledge Graph · ${DATA.meta.wiki_title || "Wiki"}`;
+    setAttr("search", "placeholder", "Search nodes...");
+    setAttr("canvas", "aria-label", "Knowledge graph");
+    setAttr("insights-panel", "aria-label", "Graph insights");
+    setText("insights-meta", "0 items");
+    setAttr("btn-refit", "aria-label", "Re-layout");
+    setAttr("btn-refit", "data-tip", "Re-run the graph layout");
+    setAttr("btn-fit", "aria-label", "Fit to view");
+    setAttr("btn-fit", "data-tip", "Fit graph to view");
+    setAttr("btn-tweaks", "aria-label", "Visual settings");
+    setAttr("btn-tweaks", "data-tip", "Visual settings");
+    setAttr("zoom-in", "title", "Zoom in");
+    setAttr("zoom-out", "title", "Zoom out");
+    setAttr("dr-close", "title", "Close");
+    setAttr("minimap-toggle", "aria-label", "Toggle minimap");
+    setAttr("minimap-toggle", "data-tip", "Toggle minimap");
+    setText("dr-degree", "0 links");
+    setText("foot-filter", "EXTRACTED+INFERRED");
+
+    const searchHint = document.querySelector(".search__hint");
+    if (searchHint) searchHint.textContent = "/";
+
+    const iconTexts = document.querySelectorAll(".iconbtn__text");
+    if (iconTexts[0]) iconTexts[0].textContent = "Relayout";
+    if (iconTexts[1]) iconTexts[1].textContent = "Center";
+    if (iconTexts[2]) iconTexts[2].textContent = "Style";
+
+    const legendTitle = document.querySelector(".legend__title");
+    if (legendTitle) legendTitle.textContent = "Legend";
+    const legendRows = document.querySelectorAll(".legend__row");
+    if (legendRows[0]) legendRows[0].innerHTML = `<span class="legend__card" style="color: var(--node-entity)"></span><span class="legend__glyph" style="color: var(--node-entity)">◇</span>Entity`;
+    if (legendRows[1]) legendRows[1].innerHTML = `<span class="legend__card" style="color: var(--node-topic)"></span><span class="legend__glyph" style="color: var(--node-topic)">✦</span>Topic`;
+    if (legendRows[2]) legendRows[2].innerHTML = `<span class="legend__card" style="color: var(--node-source)"></span><span class="legend__glyph" style="color: var(--node-source)">§</span>Source`;
+
+    const minimapLabel = document.querySelector(".minimap__label");
+    if (minimapLabel) minimapLabel.textContent = "Minimap";
+
+    const footerStats = document.querySelector(".footer__stats");
+    if (footerStats) {
+      footerStats.innerHTML = `<b id="foot-shown">0</b>/<b id="foot-total">0</b> nodes · <b id="foot-communities">0</b> communities · filters <b id="foot-filter">EXTRACTED+INFERRED</b>`;
+    }
+
+    const drawerNeighborHeading = document.querySelector("#dr-neighbors h4");
+    if (drawerNeighborHeading) drawerNeighborHeading.textContent = "Neighbors";
+
+    const tweaksTitle = document.querySelector(".tweaks__title");
+    if (tweaksTitle) tweaksTitle.textContent = "Visual Settings";
+    const tweakLabels = document.querySelectorAll(".tweaks__label");
+    if (tweakLabels[0]) tweakLabels[0].textContent = "Theme";
+    if (tweakLabels[1]) tweakLabels[1].textContent = "Node Shape";
+    if (tweakLabels[2]) tweakLabels[2].textContent = "Node Size";
+    if (tweakLabels[3]) tweakLabels[3].textContent = "Community Layer";
+
+    const tweakGroups = {
+      "seg-variant": ["Wash", "Paper", "Vellum", "Blueprint"],
+      "seg-nodestyle": ["Card", "Organic"],
+      "seg-size": ["Uniform", "By Degree", "By Type"],
+      "seg-bubble": ["Wash", "Hull", "Color", "Off"]
+    };
+    Object.entries(tweakGroups).forEach(([id, labels]) => {
+      const group = document.getElementById(id);
+      if (!group) return;
+      group.querySelectorAll("button").forEach((btn, idx) => {
+        if (labels[idx]) btn.textContent = labels[idx];
+      });
+    });
+
+    const tweaksHint = document.querySelector(".tweaks__hint");
+    if (tweaksHint) tweaksHint.textContent = "Changes apply instantly and persist after refresh.";
+
+    const loadingText = document.querySelector(".loading > div:last-child");
+    if (loadingText) loadingText.textContent = "Arranging nodes...";
+  }
+
   // ---------- tokens (variants) ----------
   const VARIANTS = {
     wash: {
@@ -975,6 +1060,11 @@
     })[n.type] || n.type;
 
     document.getElementById("dr-title").textContent = n.label || n.id;
+    document.getElementById("dr-kicker").textContent = ({
+      entity: "Entity",
+      topic: "Topic",
+      source: "Source"
+    })[n.type] || n.type;
 
     const commEl = document.getElementById("dr-community");
     if (n.community != null) {
@@ -987,6 +1077,8 @@
 
     // body
     const body = document.getElementById("dr-body");
+    document.getElementById("dr-degree").textContent = `${n.degree} links`;
+    if (n.community != null) commEl.textContent = `Community · ${n.community}`;
     const raw = (n.content || "").replace(/\[\[([^\]]+)\]\]/g, (_, inner) => {
       const parts = inner.split("|");
       const target = parts[0].trim();
@@ -1481,6 +1573,7 @@
   // ---------- Boot ----------
   applyVariant(state.tweaks.variant);
   prepareData();
+  applyUiCopy();
   document.getElementById("wiki-title").textContent = DATA.meta.wiki_title;
   setupZoom();
   renderEdges();
