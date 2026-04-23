@@ -342,3 +342,17 @@ tags:
 - Notes:
   - Recorded the rule that broad local permissions do not authorize edits outside the current project by default.
   - Added a durable cross-project safety rule: project-external changes require explicit user request or confirmation first.
+
+## [2026-04-23 11:49] query | equal e and b energy contribution
+
+- Pages created:
+  - [[2026-04-23-do-e-and-b-contribute-equally-to-light-energy]]
+- Pages updated:
+  - [[queries-home]]
+  - [[index]]
+  - [[log]]
+- Sources used:
+  - chat question about which field dominates light energy transport
+- Notes:
+  - Preserved the result that the electric and magnetic field contributions are equal for a vacuum electromagnetic wave.
+  - Connected the answer to the standard energy-density formula and the vacuum relation `E = cB`.

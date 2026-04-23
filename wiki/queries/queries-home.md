@@ -29,3 +29,4 @@ Store durable answers to important questions here.
 - [[2026-04-23-what-causes-the-color-of-the-sky]]
 - [[2026-04-23-why-is-e-equals-cb]]
 - [[2026-04-23-what-does-codex-full-access-mean]]
+- [[2026-04-23-do-e-and-b-contribute-equally-to-light-energy]]
