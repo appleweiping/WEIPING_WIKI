@@ -325,3 +325,20 @@ tags:
 - Notes:
   - Preserved the derivation that `E = cB` follows from the plane-wave relation `k × E = ωB` and the vacuum wave speed relation `ω/k = c`.
   - Clarified that the statement is a magnitude relation for vacuum electromagnetic waves, more precisely `E0 = cB0`.
+
+## [2026-04-23 11:40] query | codex full access boundary rule
+
+- Pages created:
+  - [[2026-04-23-what-does-codex-full-access-mean]]
+- Pages updated:
+  - `AGENTS.md`
+  - `.wiki-schema.md`
+  - `WORKFLOWS.md`
+  - [[queries-home]]
+  - [[index]]
+  - [[log]]
+- Sources used:
+  - chat discussion about Codex full access and project boundaries
+- Notes:
+  - Recorded the rule that broad local permissions do not authorize edits outside the current project by default.
+  - Added a durable cross-project safety rule: project-external changes require explicit user request or confirmation first.

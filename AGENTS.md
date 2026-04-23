@@ -48,6 +48,15 @@ The agent is responsible for:
 - `AGENTS.md`
   - The operating schema for all future sessions.
 
+## Filesystem Boundary Rule
+
+- Treat the current project or explicitly named repository as the default write boundary.
+- Do not modify files outside the current project unless:
+  - the user explicitly asks for it, or
+  - the agent first asks for confirmation because the cross-project change is materially useful.
+- When the user grants broader local access, interpret that as permission to help across repositories when asked, not as permission to freely edit unrelated files.
+- Prefer the narrowest practical change scope.
+
 ## Wiki Structure
 
 - `wiki/home.md`

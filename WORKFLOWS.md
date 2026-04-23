@@ -72,6 +72,13 @@ The wiki is the durable memory.
 - Sensitive raw sources live under `raw/private-*`.
 - Public scripts may report private counts or presence, but must not emit sensitive paths or content into public markdown.
 
+## Cross-Project Edit Policy
+
+- default to editing only the current repository or the repository the user explicitly named
+- if a task appears to require touching another project, pause and confirm unless the user already asked for that cross-project work
+- do not treat broad local filesystem access as standing permission to modify unrelated files
+- when in doubt, keep changes local and ask before expanding scope
+
 ## Divergence Check
 
 For claims that matter, the system should preserve the best counterarguments instead of only reinforcing the dominant line of evidence.

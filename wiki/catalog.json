@@ -1,7 +1,7 @@
 {
   "meta": {
     "root": "D:\\Research\\vipin's knowledgebase",
-    "page_count": 40
+    "page_count": 41
   },
   "pages": [
     {
@@ -427,6 +427,7 @@
         "2026-04-22-what-to-pay-attention-to-in-5eid0-project-course",
         "2026-04-22-what-to-pay-attention-to-in-security-self-study-guide",
         "2026-04-23-what-causes-the-color-of-the-sky",
+        "2026-04-23-what-does-codex-full-access-mean",
         "2026-04-23-why-is-e-equals-cb",
         "README",
         "comparisons-home",
@@ -461,13 +462,14 @@
         "2026-04-22-what-to-pay-attention-to-in-5eid0-project-course",
         "2026-04-22-what-to-pay-attention-to-in-security-self-study-guide",
         "2026-04-23-what-causes-the-color-of-the-sky",
+        "2026-04-23-what-does-codex-full-access-mean",
         "2026-04-23-why-is-e-equals-cb",
         "home",
         "log",
         "overview"
       ],
       "has_counterpoints": false,
-      "word_count": 784,
+      "word_count": 813,
       "source_pages": [],
       "source_files": [],
       "body_preview": "# Index This is the main catalog of the wiki. ## Overview - [[home]] - Top-level overview of the knowledge base and workflow. - [[overview]] - Structural map of the repository layers, sections, and active public domains. - [[log]] - Chronological record of ingests, analyses, quer"
@@ -501,7 +503,8 @@
         "[2026-04-22 12:16] query | teammate inputs for venus basestation",
         "[2026-04-22 21:58] query | independent venus basestation baseline",
         "[2026-04-23 11:24] query | color of the sky optics explanation",
-        "[2026-04-23 11:31] query | why e equals cb"
+        "[2026-04-23 11:31] query | why e equals cb",
+        "[2026-04-23 11:40] query | codex full access boundary rule"
       ],
       "links": [
         "2026-04-21-llm-rec-research-map",
@@ -528,6 +531,7 @@
         "2026-04-22-what-to-pay-attention-to-in-5eid0-project-course",
         "2026-04-22-what-to-pay-attention-to-in-security-self-study-guide",
         "2026-04-23-what-causes-the-color-of-the-sky",
+        "2026-04-23-what-does-codex-full-access-mean",
         "2026-04-23-why-is-e-equals-cb",
         "README",
         "comparisons-home",
@@ -562,13 +566,14 @@
         "2026-04-22-what-to-pay-attention-to-in-5eid0-project-course",
         "2026-04-22-what-to-pay-attention-to-in-security-self-study-guide",
         "2026-04-23-what-causes-the-color-of-the-sky",
+        "2026-04-23-what-does-codex-full-access-mean",
         "2026-04-23-why-is-e-equals-cb",
         "home",
         "index",
         "log"
       ],
       "has_counterpoints": false,
-      "word_count": 1739,
+      "word_count": 1820,
       "source_pages": [],
       "source_files": [],
       "body_preview": "# Log ## [2026-04-21 17:36] bootstrap | initialize vipin wiki - Pages created: - [[home]] - [[index]] - [[log]] - [[vipin]] - [[llm-wiki]] - [[2026-04-21-llm-wiki-pattern]] - [[2026-04-21-vipin-wiki-bootstrap]] - Sources used: - user-provided idea brief in chat describing the `LL"
@@ -844,6 +849,7 @@
         "queries-home"
       ],
       "backlinks": [
+        "2026-04-23-what-does-codex-full-access-mean",
         "index",
         "log",
         "queries-home"
@@ -1226,6 +1232,46 @@
       "body_preview": "# What Causes The Color Of The Sky ## Question How should the optics quiz question about the \"color\" of the sky be understood? ## Short Answer The main mechanism is the interaction of the **electric field** of light with **electrons** in air molecules. So the correct option is: -"
     },
     {
+      "id": "2026-04-23-what-does-codex-full-access-mean",
+      "title": "What Does Codex Full Access Mean",
+      "type": "query",
+      "path": "wiki/queries/2026-04-23-what-does-codex-full-access-mean.md",
+      "tags": [
+        "query",
+        "codex",
+        "permissions",
+        "safety"
+      ],
+      "headings": [
+        "What Does Codex Full Access Mean",
+        "Question",
+        "Short Answer",
+        "Why The Warning Exists",
+        "Practical Interpretation",
+        "Repository Rule",
+        "Counterpoints and Gaps",
+        "Related"
+      ],
+      "links": [
+        "2026-04-22-how-to-reduce-github-submit-prompts",
+        "index",
+        "log",
+        "queries-home"
+      ],
+      "backlinks": [
+        "index",
+        "log",
+        "queries-home"
+      ],
+      "has_counterpoints": true,
+      "word_count": 294,
+      "source_pages": [],
+      "source_files": [
+        "chat"
+      ],
+      "body_preview": "# What Does Codex Full Access Mean ## Question What does `Codex full access` mean, why is it warned about, and what boundary should apply in practice? ## Short Answer `Full access` means the agent may be able to read, write, and run commands across a much wider part of the local "
+    },
+    {
       "id": "2026-04-23-why-is-e-equals-cb",
       "title": "Why Is E Equals cB",
       "type": "query",
@@ -1292,6 +1338,7 @@
         "2026-04-22-what-to-pay-attention-to-in-5eid0-project-course",
         "2026-04-22-what-to-pay-attention-to-in-security-self-study-guide",
         "2026-04-23-what-causes-the-color-of-the-sky",
+        "2026-04-23-what-does-codex-full-access-mean",
         "2026-04-23-why-is-e-equals-cb"
       ],
       "backlinks": [
@@ -1310,13 +1357,14 @@
         "2026-04-22-what-to-pay-attention-to-in-5eid0-project-course",
         "2026-04-22-what-to-pay-attention-to-in-security-self-study-guide",
         "2026-04-23-what-causes-the-color-of-the-sky",
+        "2026-04-23-what-does-codex-full-access-mean",
         "2026-04-23-why-is-e-equals-cb",
         "index",
         "log",
         "overview"
       ],
       "has_counterpoints": false,
-      "word_count": 150,
+      "word_count": 159,
       "source_pages": [],
       "source_files": [],
       "body_preview": "# Queries Home Store durable answers to important questions here. ## Current Queries - [[2026-04-22-how-to-reduce-github-submit-prompts]] - [[2026-04-22-what-is-dbm]] - [[2026-04-22-what-is-spectroscopy]] - [[2026-04-22-how-are-k-omega-and-v-derived]] - [[2026-04-22-what-to-pay-a"
