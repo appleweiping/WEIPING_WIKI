@@ -297,3 +297,17 @@ tags:
 - Notes:
   - Recorded that most of the basestation software can already be completed and tested independently of teammates.
   - Captured the current prototype boundary: parser, replay, state model, status tracking, SVG export, and tests are already in place; final MQTT and payload details remain the main team-dependent inputs.
+
+## [2026-04-23 11:24] query | color of the sky optics explanation
+
+- Pages created:
+  - [[2026-04-23-what-causes-the-color-of-the-sky]]
+- Pages updated:
+  - [[queries-home]]
+  - [[index]]
+  - [[log]]
+- Sources used:
+  - chat-provided screenshot of an optics quiz slide
+- Notes:
+  - Preserved the explanation that the sky's color is mainly tied to the electric field of light interacting with electrons in air molecules.
+  - Linked the short answer to the scattering intuition behind the quiz question.

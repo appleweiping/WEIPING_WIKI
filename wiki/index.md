@@ -68,6 +68,7 @@ This is the main catalog of the wiki.
 - [[2026-04-22-what-language-for-5eid0-computer-software-ui]] - Recommendation to start the 5EID0 base-station UI in Python with MQTT support and simple map visualization.
 - [[2026-04-22-what-do-i-need-from-teammates-for-venus-basestation]] - Interface checklist describing what Vipin needs from teammates to build the base-station software in parallel.
 - [[2026-04-22-what-can-i-finish-independently-for-venus-basestation]] - Clear boundary between what Vipin can already complete in the basestation now and what still depends on teammates.
+- [[2026-04-23-what-causes-the-color-of-the-sky]] - Optics explanation that the sky's color mainly comes from the electric field of light interacting with electrons and producing scattering.
 
 ## Topics
 

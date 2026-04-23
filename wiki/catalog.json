@@ -1,7 +1,7 @@
 {
   "meta": {
     "root": "D:\\Research\\vipin's knowledgebase",
-    "page_count": 38
+    "page_count": 39
   },
   "pages": [
     {
@@ -426,6 +426,7 @@
         "2026-04-22-what-language-for-5eid0-computer-software-ui",
         "2026-04-22-what-to-pay-attention-to-in-5eid0-project-course",
         "2026-04-22-what-to-pay-attention-to-in-security-self-study-guide",
+        "2026-04-23-what-causes-the-color-of-the-sky",
         "README",
         "comparisons-home",
         "home",
@@ -458,12 +459,13 @@
         "2026-04-22-what-language-for-5eid0-computer-software-ui",
         "2026-04-22-what-to-pay-attention-to-in-5eid0-project-course",
         "2026-04-22-what-to-pay-attention-to-in-security-self-study-guide",
+        "2026-04-23-what-causes-the-color-of-the-sky",
         "home",
         "log",
         "overview"
       ],
       "has_counterpoints": false,
-      "word_count": 726,
+      "word_count": 757,
       "source_pages": [],
       "source_files": [],
       "body_preview": "# Index This is the main catalog of the wiki. ## Overview - [[home]] - Top-level overview of the knowledge base and workflow. - [[overview]] - Structural map of the repository layers, sections, and active public domains. - [[log]] - Chronological record of ingests, analyses, quer"
@@ -495,7 +497,8 @@
         "[2026-04-22 11:55] query | language choice for 5eid0 computer software ui",
         "[2026-04-22 12:08] analysis | initialize venus basestation repository",
         "[2026-04-22 12:16] query | teammate inputs for venus basestation",
-        "[2026-04-22 21:58] query | independent venus basestation baseline"
+        "[2026-04-22 21:58] query | independent venus basestation baseline",
+        "[2026-04-23 11:24] query | color of the sky optics explanation"
       ],
       "links": [
         "2026-04-21-llm-rec-research-map",
@@ -521,6 +524,7 @@
         "2026-04-22-what-language-for-5eid0-computer-software-ui",
         "2026-04-22-what-to-pay-attention-to-in-5eid0-project-course",
         "2026-04-22-what-to-pay-attention-to-in-security-self-study-guide",
+        "2026-04-23-what-causes-the-color-of-the-sky",
         "README",
         "comparisons-home",
         "home",
@@ -553,12 +557,13 @@
         "2026-04-22-what-language-for-5eid0-computer-software-ui",
         "2026-04-22-what-to-pay-attention-to-in-5eid0-project-course",
         "2026-04-22-what-to-pay-attention-to-in-security-self-study-guide",
+        "2026-04-23-what-causes-the-color-of-the-sky",
         "home",
         "index",
         "log"
       ],
       "has_counterpoints": false,
-      "word_count": 1586,
+      "word_count": 1662,
       "source_pages": [],
       "source_files": [],
       "body_preview": "# Log ## [2026-04-21 17:36] bootstrap | initialize vipin wiki - Pages created: - [[home]] - [[index]] - [[log]] - [[vipin]] - [[llm-wiki]] - [[2026-04-21-llm-wiki-pattern]] - [[2026-04-21-vipin-wiki-bootstrap]] - Sources used: - user-provided idea brief in chat describing the `LL"
@@ -1010,6 +1015,7 @@
         "queries-home"
       ],
       "backlinks": [
+        "2026-04-23-what-causes-the-color-of-the-sky",
         "index",
         "log",
         "queries-home"
@@ -1172,6 +1178,47 @@
       "body_preview": "# What To Pay Attention To In Security Self-Study Guide ## Question What are the main points to pay attention to in this self-study guide? ## Most Important Points ### 1. Do not study passively The guide explicitly says not to just read the book linearly. The intended flow is: - "
     },
     {
+      "id": "2026-04-23-what-causes-the-color-of-the-sky",
+      "title": "What Causes The Color Of The Sky",
+      "type": "query",
+      "path": "wiki/queries/2026-04-23-what-causes-the-color-of-the-sky.md",
+      "tags": [
+        "query",
+        "optics",
+        "scattering",
+        "electromagnetism"
+      ],
+      "headings": [
+        "What Causes The Color Of The Sky",
+        "Question",
+        "Short Answer",
+        "Why This Is The Right Interpretation",
+        "Why The Other Options Are Not The Main Explanation",
+        "Physical Intuition",
+        "Related Concept",
+        "Counterpoints and Gaps",
+        "Related"
+      ],
+      "links": [
+        "2026-04-22-what-is-spectroscopy",
+        "index",
+        "log",
+        "queries-home"
+      ],
+      "backlinks": [
+        "index",
+        "log",
+        "queries-home"
+      ],
+      "has_counterpoints": true,
+      "word_count": 264,
+      "source_pages": [],
+      "source_files": [
+        "chat"
+      ],
+      "body_preview": "# What Causes The Color Of The Sky ## Question How should the optics quiz question about the \"color\" of the sky be understood? ## Short Answer The main mechanism is the interaction of the **electric field** of light with **electrons** in air molecules. So the correct option is: -"
+    },
+    {
       "id": "queries-home",
       "title": "Queries Home",
       "type": "query",
@@ -1195,7 +1242,8 @@
         "2026-04-22-what-is-spectroscopy",
         "2026-04-22-what-language-for-5eid0-computer-software-ui",
         "2026-04-22-what-to-pay-attention-to-in-5eid0-project-course",
-        "2026-04-22-what-to-pay-attention-to-in-security-self-study-guide"
+        "2026-04-22-what-to-pay-attention-to-in-security-self-study-guide",
+        "2026-04-23-what-causes-the-color-of-the-sky"
       ],
       "backlinks": [
         "2026-04-22-5eid0-venus-project-course-materials",
@@ -1212,12 +1260,13 @@
         "2026-04-22-what-language-for-5eid0-computer-software-ui",
         "2026-04-22-what-to-pay-attention-to-in-5eid0-project-course",
         "2026-04-22-what-to-pay-attention-to-in-security-self-study-guide",
+        "2026-04-23-what-causes-the-color-of-the-sky",
         "index",
         "log",
         "overview"
       ],
       "has_counterpoints": false,
-      "word_count": 132,
+      "word_count": 142,
       "source_pages": [],
       "source_files": [],
       "body_preview": "# Queries Home Store durable answers to important questions here. ## Current Queries - [[2026-04-22-how-to-reduce-github-submit-prompts]] - [[2026-04-22-what-is-dbm]] - [[2026-04-22-what-is-spectroscopy]] - [[2026-04-22-how-are-k-omega-and-v-derived]] - [[2026-04-22-what-to-pay-a"
