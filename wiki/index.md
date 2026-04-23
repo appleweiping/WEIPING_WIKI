@@ -69,6 +69,7 @@ This is the main catalog of the wiki.
 - [[2026-04-22-what-do-i-need-from-teammates-for-venus-basestation]] - Interface checklist describing what Vipin needs from teammates to build the base-station software in parallel.
 - [[2026-04-22-what-can-i-finish-independently-for-venus-basestation]] - Clear boundary between what Vipin can already complete in the basestation now and what still depends on teammates.
 - [[2026-04-23-what-causes-the-color-of-the-sky]] - Optics explanation that the sky's color mainly comes from the electric field of light interacting with electrons and producing scattering.
+- [[2026-04-23-why-is-e-equals-cb]] - Explanation that `E = cB` in a vacuum electromagnetic wave follows from `k × E = ωB` together with `ω/k = c`.
 
 ## Topics
 

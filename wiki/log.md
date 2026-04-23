@@ -311,3 +311,17 @@ tags:
 - Notes:
   - Preserved the explanation that the sky's color is mainly tied to the electric field of light interacting with electrons in air molecules.
   - Linked the short answer to the scattering intuition behind the quiz question.
+
+## [2026-04-23 11:31] query | why e equals cb
+
+- Pages created:
+  - [[2026-04-23-why-is-e-equals-cb]]
+- Pages updated:
+  - [[queries-home]]
+  - [[index]]
+  - [[log]]
+- Sources used:
+  - chat explanation based on vacuum plane-wave relations
+- Notes:
+  - Preserved the derivation that `E = cB` follows from the plane-wave relation `k × E = ωB` and the vacuum wave speed relation `ω/k = c`.
+  - Clarified that the statement is a magnitude relation for vacuum electromagnetic waves, more precisely `E0 = cB0`.

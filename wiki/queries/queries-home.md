@@ -27,3 +27,4 @@ Store durable answers to important questions here.
 - [[2026-04-22-what-do-i-need-from-teammates-for-venus-basestation]]
 - [[2026-04-22-what-can-i-finish-independently-for-venus-basestation]]
 - [[2026-04-23-what-causes-the-color-of-the-sky]]
+- [[2026-04-23-why-is-e-equals-cb]]

@@ -1,7 +1,7 @@
 {
   "meta": {
     "root": "D:\\Research\\vipin's knowledgebase",
-    "page_count": 39
+    "page_count": 40
   },
   "pages": [
     {
@@ -427,6 +427,7 @@
         "2026-04-22-what-to-pay-attention-to-in-5eid0-project-course",
         "2026-04-22-what-to-pay-attention-to-in-security-self-study-guide",
         "2026-04-23-what-causes-the-color-of-the-sky",
+        "2026-04-23-why-is-e-equals-cb",
         "README",
         "comparisons-home",
         "home",
@@ -460,12 +461,13 @@
         "2026-04-22-what-to-pay-attention-to-in-5eid0-project-course",
         "2026-04-22-what-to-pay-attention-to-in-security-self-study-guide",
         "2026-04-23-what-causes-the-color-of-the-sky",
+        "2026-04-23-why-is-e-equals-cb",
         "home",
         "log",
         "overview"
       ],
       "has_counterpoints": false,
-      "word_count": 757,
+      "word_count": 784,
       "source_pages": [],
       "source_files": [],
       "body_preview": "# Index This is the main catalog of the wiki. ## Overview - [[home]] - Top-level overview of the knowledge base and workflow. - [[overview]] - Structural map of the repository layers, sections, and active public domains. - [[log]] - Chronological record of ingests, analyses, quer"
@@ -498,7 +500,8 @@
         "[2026-04-22 12:08] analysis | initialize venus basestation repository",
         "[2026-04-22 12:16] query | teammate inputs for venus basestation",
         "[2026-04-22 21:58] query | independent venus basestation baseline",
-        "[2026-04-23 11:24] query | color of the sky optics explanation"
+        "[2026-04-23 11:24] query | color of the sky optics explanation",
+        "[2026-04-23 11:31] query | why e equals cb"
       ],
       "links": [
         "2026-04-21-llm-rec-research-map",
@@ -525,6 +528,7 @@
         "2026-04-22-what-to-pay-attention-to-in-5eid0-project-course",
         "2026-04-22-what-to-pay-attention-to-in-security-self-study-guide",
         "2026-04-23-what-causes-the-color-of-the-sky",
+        "2026-04-23-why-is-e-equals-cb",
         "README",
         "comparisons-home",
         "home",
@@ -558,12 +562,13 @@
         "2026-04-22-what-to-pay-attention-to-in-5eid0-project-course",
         "2026-04-22-what-to-pay-attention-to-in-security-self-study-guide",
         "2026-04-23-what-causes-the-color-of-the-sky",
+        "2026-04-23-why-is-e-equals-cb",
         "home",
         "index",
         "log"
       ],
       "has_counterpoints": false,
-      "word_count": 1662,
+      "word_count": 1739,
       "source_pages": [],
       "source_files": [],
       "body_preview": "# Log ## [2026-04-21 17:36] bootstrap | initialize vipin wiki - Pages created: - [[home]] - [[index]] - [[log]] - [[vipin]] - [[llm-wiki]] - [[2026-04-21-llm-wiki-pattern]] - [[2026-04-21-vipin-wiki-bootstrap]] - Sources used: - user-provided idea brief in chat describing the `LL"
@@ -746,6 +751,7 @@
         "queries-home"
       ],
       "backlinks": [
+        "2026-04-23-why-is-e-equals-cb",
         "index",
         "log",
         "queries-home"
@@ -1206,6 +1212,7 @@
         "queries-home"
       ],
       "backlinks": [
+        "2026-04-23-why-is-e-equals-cb",
         "index",
         "log",
         "queries-home"
@@ -1217,6 +1224,47 @@
         "chat"
       ],
       "body_preview": "# What Causes The Color Of The Sky ## Question How should the optics quiz question about the \"color\" of the sky be understood? ## Short Answer The main mechanism is the interaction of the **electric field** of light with **electrons** in air molecules. So the correct option is: -"
+    },
+    {
+      "id": "2026-04-23-why-is-e-equals-cb",
+      "title": "Why Is E Equals cB",
+      "type": "query",
+      "path": "wiki/queries/2026-04-23-why-is-e-equals-cb.md",
+      "tags": [
+        "query",
+        "optics",
+        "electromagnetism",
+        "waves"
+      ],
+      "headings": [
+        "Why Is E Equals cB",
+        "Question",
+        "Short Answer",
+        "Main Idea",
+        "Why The Units Still Make Sense",
+        "Physical Intuition",
+        "Counterpoints and Gaps",
+        "Related"
+      ],
+      "links": [
+        "2026-04-22-how-are-k-omega-and-v-derived",
+        "2026-04-23-what-causes-the-color-of-the-sky",
+        "index",
+        "log",
+        "queries-home"
+      ],
+      "backlinks": [
+        "index",
+        "log",
+        "queries-home"
+      ],
+      "has_counterpoints": true,
+      "word_count": 276,
+      "source_pages": [],
+      "source_files": [
+        "chat"
+      ],
+      "body_preview": "# Why Is E Equals cB ## Question Why does a vacuum electromagnetic wave satisfy `E = cB`? ## Short Answer For a plane electromagnetic wave in vacuum, \\[ \\vec k \\times \\vec E = \\omega \\vec B \\] and because `E` is perpendicular to `k`, the magnitudes satisfy \\[ kE = \\omega B \\] so "
     },
     {
       "id": "queries-home",
@@ -1243,7 +1291,8 @@
         "2026-04-22-what-language-for-5eid0-computer-software-ui",
         "2026-04-22-what-to-pay-attention-to-in-5eid0-project-course",
         "2026-04-22-what-to-pay-attention-to-in-security-self-study-guide",
-        "2026-04-23-what-causes-the-color-of-the-sky"
+        "2026-04-23-what-causes-the-color-of-the-sky",
+        "2026-04-23-why-is-e-equals-cb"
       ],
       "backlinks": [
         "2026-04-22-5eid0-venus-project-course-materials",
@@ -1261,12 +1310,13 @@
         "2026-04-22-what-to-pay-attention-to-in-5eid0-project-course",
         "2026-04-22-what-to-pay-attention-to-in-security-self-study-guide",
         "2026-04-23-what-causes-the-color-of-the-sky",
+        "2026-04-23-why-is-e-equals-cb",
         "index",
         "log",
         "overview"
       ],
       "has_counterpoints": false,
-      "word_count": 142,
+      "word_count": 150,
       "source_pages": [],
       "source_files": [],
       "body_preview": "# Queries Home Store durable answers to important questions here. ## Current Queries - [[2026-04-22-how-to-reduce-github-submit-prompts]] - [[2026-04-22-what-is-dbm]] - [[2026-04-22-what-is-spectroscopy]] - [[2026-04-22-how-are-k-omega-and-v-derived]] - [[2026-04-22-what-to-pay-a"
