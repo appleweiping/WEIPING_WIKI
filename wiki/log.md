@@ -356,3 +356,18 @@ tags:
 - Notes:
   - Preserved the result that the electric and magnetic field contributions are equal for a vacuum electromagnetic wave.
   - Connected the answer to the standard energy-density formula and the vacuum relation `E = cB`.
+
+## [2026-04-27 11:02] query | chinese ask for basestation interface info
+
+- Pages created:
+  - [[2026-04-27-how-to-ask-teammates-for-basestation-interface-info]]
+- Pages updated:
+  - [[queries-home]]
+  - [[index]]
+  - [[log]]
+- Sources used:
+  - [[2026-04-22-what-do-i-need-from-teammates-for-venus-basestation]]
+  - chat request for a Chinese message to teammates
+- Notes:
+  - Preserved a practical Chinese message template for asking teammates for MQTT topics, JSON samples, coordinate definitions, robot IDs, duplicate-handling rules, and status messages.
+  - Included both a fuller and a shorter version for group-chat use.

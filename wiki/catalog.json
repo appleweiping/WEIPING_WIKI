@@ -1,7 +1,7 @@
 {
   "meta": {
     "root": "D:\\Research\\vipin's knowledgebase",
-    "page_count": 41
+    "page_count": 43
   },
   "pages": [
     {
@@ -426,9 +426,11 @@
         "2026-04-22-what-language-for-5eid0-computer-software-ui",
         "2026-04-22-what-to-pay-attention-to-in-5eid0-project-course",
         "2026-04-22-what-to-pay-attention-to-in-security-self-study-guide",
+        "2026-04-23-do-e-and-b-contribute-equally-to-light-energy",
         "2026-04-23-what-causes-the-color-of-the-sky",
         "2026-04-23-what-does-codex-full-access-mean",
         "2026-04-23-why-is-e-equals-cb",
+        "2026-04-27-how-to-ask-teammates-for-basestation-interface-info",
         "README",
         "comparisons-home",
         "home",
@@ -461,15 +463,17 @@
         "2026-04-22-what-language-for-5eid0-computer-software-ui",
         "2026-04-22-what-to-pay-attention-to-in-5eid0-project-course",
         "2026-04-22-what-to-pay-attention-to-in-security-self-study-guide",
+        "2026-04-23-do-e-and-b-contribute-equally-to-light-energy",
         "2026-04-23-what-causes-the-color-of-the-sky",
         "2026-04-23-what-does-codex-full-access-mean",
         "2026-04-23-why-is-e-equals-cb",
+        "2026-04-27-how-to-ask-teammates-for-basestation-interface-info",
         "home",
         "log",
         "overview"
       ],
       "has_counterpoints": false,
-      "word_count": 813,
+      "word_count": 870,
       "source_pages": [],
       "source_files": [],
       "body_preview": "# Index This is the main catalog of the wiki. ## Overview - [[home]] - Top-level overview of the knowledge base and workflow. - [[overview]] - Structural map of the repository layers, sections, and active public domains. - [[log]] - Chronological record of ingests, analyses, quer"
@@ -504,7 +508,9 @@
         "[2026-04-22 21:58] query | independent venus basestation baseline",
         "[2026-04-23 11:24] query | color of the sky optics explanation",
         "[2026-04-23 11:31] query | why e equals cb",
-        "[2026-04-23 11:40] query | codex full access boundary rule"
+        "[2026-04-23 11:40] query | codex full access boundary rule",
+        "[2026-04-23 11:49] query | equal e and b energy contribution",
+        "[2026-04-27 11:02] query | chinese ask for basestation interface info"
       ],
       "links": [
         "2026-04-21-llm-rec-research-map",
@@ -530,9 +536,11 @@
         "2026-04-22-what-language-for-5eid0-computer-software-ui",
         "2026-04-22-what-to-pay-attention-to-in-5eid0-project-course",
         "2026-04-22-what-to-pay-attention-to-in-security-self-study-guide",
+        "2026-04-23-do-e-and-b-contribute-equally-to-light-energy",
         "2026-04-23-what-causes-the-color-of-the-sky",
         "2026-04-23-what-does-codex-full-access-mean",
         "2026-04-23-why-is-e-equals-cb",
+        "2026-04-27-how-to-ask-teammates-for-basestation-interface-info",
         "README",
         "comparisons-home",
         "home",
@@ -565,15 +573,17 @@
         "2026-04-22-what-language-for-5eid0-computer-software-ui",
         "2026-04-22-what-to-pay-attention-to-in-5eid0-project-course",
         "2026-04-22-what-to-pay-attention-to-in-security-self-study-guide",
+        "2026-04-23-do-e-and-b-contribute-equally-to-light-energy",
         "2026-04-23-what-causes-the-color-of-the-sky",
         "2026-04-23-what-does-codex-full-access-mean",
         "2026-04-23-why-is-e-equals-cb",
+        "2026-04-27-how-to-ask-teammates-for-basestation-interface-info",
         "home",
         "index",
         "log"
       ],
       "has_counterpoints": false,
-      "word_count": 1820,
+      "word_count": 1986,
       "source_pages": [],
       "source_files": [],
       "body_preview": "# Log ## [2026-04-21 17:36] bootstrap | initialize vipin wiki - Pages created: - [[home]] - [[index]] - [[log]] - [[vipin]] - [[llm-wiki]] - [[2026-04-21-llm-wiki-pattern]] - [[2026-04-21-vipin-wiki-bootstrap]] - Sources used: - user-provided idea brief in chat describing the `LL"
@@ -662,6 +672,7 @@
         "2026-04-22-what-can-i-finish-independently-for-venus-basestation",
         "2026-04-22-what-do-i-need-from-teammates-for-venus-basestation",
         "2026-04-22-what-language-for-5eid0-computer-software-ui",
+        "2026-04-27-how-to-ask-teammates-for-basestation-interface-info",
         "index",
         "log",
         "queries-home"
@@ -946,6 +957,7 @@
       ],
       "backlinks": [
         "2026-04-22-what-can-i-finish-independently-for-venus-basestation",
+        "2026-04-27-how-to-ask-teammates-for-basestation-interface-info",
         "index",
         "log",
         "queries-home"
@@ -1190,6 +1202,46 @@
       "body_preview": "# What To Pay Attention To In Security Self-Study Guide ## Question What are the main points to pay attention to in this self-study guide? ## Most Important Points ### 1. Do not study passively The guide explicitly says not to just read the book linearly. The intended flow is: - "
     },
     {
+      "id": "2026-04-23-do-e-and-b-contribute-equally-to-light-energy",
+      "title": "Do E And B Contribute Equally To Light Energy",
+      "type": "query",
+      "path": "wiki/queries/2026-04-23-do-e-and-b-contribute-equally-to-light-energy.md",
+      "tags": [
+        "query",
+        "optics",
+        "electromagnetism",
+        "energy"
+      ],
+      "headings": [
+        "Do E And B Contribute Equally To Light Energy",
+        "Question",
+        "Short Answer",
+        "Why",
+        "Conclusion",
+        "Counterpoints and Gaps",
+        "Related"
+      ],
+      "links": [
+        "2026-04-23-what-causes-the-color-of-the-sky",
+        "2026-04-23-why-is-e-equals-cb",
+        "index",
+        "log",
+        "queries-home"
+      ],
+      "backlinks": [
+        "index",
+        "log",
+        "queries-home"
+      ],
+      "has_counterpoints": true,
+      "word_count": 193,
+      "source_pages": [],
+      "source_files": [
+        "chat"
+      ],
+      "body_preview": "# Do E And B Contribute Equally To Light Energy ## Question For light, is energy transport dominated by the electric field, the magnetic field, or both equally? ## Short Answer For a vacuum electromagnetic wave, the correct answer is: - `both fields contribute equally` ## Why The"
+    },
+    {
       "id": "2026-04-23-what-causes-the-color-of-the-sky",
       "title": "What Causes The Color Of The Sky",
       "type": "query",
@@ -1218,6 +1270,7 @@
         "queries-home"
       ],
       "backlinks": [
+        "2026-04-23-do-e-and-b-contribute-equally-to-light-energy",
         "2026-04-23-why-is-e-equals-cb",
         "index",
         "log",
@@ -1300,6 +1353,7 @@
         "queries-home"
       ],
       "backlinks": [
+        "2026-04-23-do-e-and-b-contribute-equally-to-light-energy",
         "index",
         "log",
         "queries-home"
@@ -1311,6 +1365,48 @@
         "chat"
       ],
       "body_preview": "# Why Is E Equals cB ## Question Why does a vacuum electromagnetic wave satisfy `E = cB`? ## Short Answer For a plane electromagnetic wave in vacuum, \\[ \\vec k \\times \\vec E = \\omega \\vec B \\] and because `E` is perpendicular to `k`, the magnitudes satisfy \\[ kE = \\omega B \\] so "
+    },
+    {
+      "id": "2026-04-27-how-to-ask-teammates-for-basestation-interface-info",
+      "title": "How To Ask Teammates For Basestation Interface Info",
+      "type": "query",
+      "path": "wiki/queries/2026-04-27-how-to-ask-teammates-for-basestation-interface-info.md",
+      "tags": [
+        "query",
+        "5eid0",
+        "teamwork",
+        "communication",
+        "mqtt"
+      ],
+      "headings": [
+        "How To Ask Teammates For Basestation Interface Info",
+        "Question",
+        "Recommended Chinese Ask",
+        "Shorter Version",
+        "Why This Framing Works",
+        "Counterpoints and Gaps",
+        "Related"
+      ],
+      "links": [
+        "2026-04-22-computer-software-ui-role-plan-for-5eid0",
+        "2026-04-22-what-do-i-need-from-teammates-for-venus-basestation",
+        "index",
+        "log",
+        "queries-home"
+      ],
+      "backlinks": [
+        "index",
+        "log",
+        "queries-home"
+      ],
+      "has_counterpoints": true,
+      "word_count": 227,
+      "source_pages": [
+        "2026-04-22-what-do-i-need-from-teammates-for-venus-basestation",
+        "2026-04-22-computer-software-ui-role-plan-for-5eid0"
+      ],
+      "source_files": [],
+      "body_preview": "# How To Ask Teammates For Basestation Interface Info ## Question How should Vipin ask teammates, in Chinese, for the concrete interface information needed to connect the `venus-basestation` project to the robot side? ## Recommended Chinese Ask ```text 我这边已经把 basestation/UI 的基础部分"
     },
     {
       "id": "queries-home",
@@ -1337,9 +1433,11 @@
         "2026-04-22-what-language-for-5eid0-computer-software-ui",
         "2026-04-22-what-to-pay-attention-to-in-5eid0-project-course",
         "2026-04-22-what-to-pay-attention-to-in-security-self-study-guide",
+        "2026-04-23-do-e-and-b-contribute-equally-to-light-energy",
         "2026-04-23-what-causes-the-color-of-the-sky",
         "2026-04-23-what-does-codex-full-access-mean",
-        "2026-04-23-why-is-e-equals-cb"
+        "2026-04-23-why-is-e-equals-cb",
+        "2026-04-27-how-to-ask-teammates-for-basestation-interface-info"
       ],
       "backlinks": [
         "2026-04-22-5eid0-venus-project-course-materials",
@@ -1356,15 +1454,17 @@
         "2026-04-22-what-language-for-5eid0-computer-software-ui",
         "2026-04-22-what-to-pay-attention-to-in-5eid0-project-course",
         "2026-04-22-what-to-pay-attention-to-in-security-self-study-guide",
+        "2026-04-23-do-e-and-b-contribute-equally-to-light-energy",
         "2026-04-23-what-causes-the-color-of-the-sky",
         "2026-04-23-what-does-codex-full-access-mean",
         "2026-04-23-why-is-e-equals-cb",
+        "2026-04-27-how-to-ask-teammates-for-basestation-interface-info",
         "index",
         "log",
         "overview"
       ],
       "has_counterpoints": false,
-      "word_count": 159,
+      "word_count": 182,
       "source_pages": [],
       "source_files": [],
       "body_preview": "# Queries Home Store durable answers to important questions here. ## Current Queries - [[2026-04-22-how-to-reduce-github-submit-prompts]] - [[2026-04-22-what-is-dbm]] - [[2026-04-22-what-is-spectroscopy]] - [[2026-04-22-how-are-k-omega-and-v-derived]] - [[2026-04-22-what-to-pay-a"

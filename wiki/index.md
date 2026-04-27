@@ -72,6 +72,7 @@ This is the main catalog of the wiki.
 - [[2026-04-23-why-is-e-equals-cb]] - Explanation that `E = cB` in a vacuum electromagnetic wave follows from `k × E = ωB` together with `ω/k = c`.
 - [[2026-04-23-what-does-codex-full-access-mean]] - Explanation of what broader Codex filesystem access means and the rule that project-external edits require explicit request or confirmation.
 - [[2026-04-23-do-e-and-b-contribute-equally-to-light-energy]] - Explanation that vacuum light energy is shared equally between the electric and magnetic field contributions.
+- [[2026-04-27-how-to-ask-teammates-for-basestation-interface-info]] - Reusable Chinese message template for asking teammates for MQTT topics, payload samples, coordinate definitions, and other basestation integration details.
 
 ## Topics
 
