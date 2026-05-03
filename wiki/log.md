@@ -371,3 +371,17 @@ tags:
 - Notes:
   - Preserved a practical Chinese message template for asking teammates for MQTT topics, JSON samples, coordinate definitions, robot IDs, duplicate-handling rules, and status messages.
   - Included both a fuller and a shorter version for group-chat use.
+
+## [2026-05-03 10:12] query | spectrum to time-domain conversion
+
+- Pages created:
+  - [[2026-05-03-how-to-convert-this-spectrum-to-time-domain]]
+- Pages updated:
+  - [[queries-home]]
+  - [[index]]
+  - [[log]]
+- Sources used:
+  - chat-provided spectrum image from a sampling question
+- Notes:
+  - Preserved the derivation that a DC line at `0 Hz` plus symmetric lines at `\pm 100 Hz` corresponds to `x(t) = -3 + 2\cos(2\pi 100 t)`.
+  - Recorded the interpretation of the DC offset, cosine amplitude, and oscillation range in the time domain.

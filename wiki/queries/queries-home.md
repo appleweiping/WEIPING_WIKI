@@ -31,3 +31,4 @@ Store durable answers to important questions here.
 - [[2026-04-23-what-does-codex-full-access-mean]]
 - [[2026-04-23-do-e-and-b-contribute-equally-to-light-energy]]
 - [[2026-04-27-how-to-ask-teammates-for-basestation-interface-info]]
+- [[2026-05-03-how-to-convert-this-spectrum-to-time-domain]]
