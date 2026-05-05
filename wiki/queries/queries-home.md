@@ -37,3 +37,4 @@ Store durable answers to important questions here.
 - [[2026-05-05-how-to-understand-quantization-and-bit-rate]]
 - [[2026-05-05-why-pe-is-not-proportional-to-input-snr]]
 - [[2026-05-05-how-to-write-venus-project-problem-statement]]
+- [[2026-05-05-how-to-solve-oauth-rt-rbac-security-quiz]]

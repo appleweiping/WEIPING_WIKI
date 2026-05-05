@@ -445,3 +445,20 @@ tags:
 - Notes:
   - Preserved concise English problem statement options for the Venus group report.
   - Framed the project around autonomous exploration, hazard avoidance, sample detection, environmental measurement, reliable communication, and base-station mapping.
+
+## [2026-05-05 23:07] query | oauth rt rbac security quiz reasoning
+
+- Pages created:
+  - [[2026-05-05-how-to-solve-oauth-rt-rbac-security-quiz]]
+- Pages updated:
+  - [[queries-home]]
+  - [[index]]
+  - [[log]]
+- Sources used:
+  - [[2026-04-22-security-course-self-study-guide]]
+  - chat screenshots of five security quiz questions
+  - NIST SP 800-63B page on authenticator assurance levels
+  - RFC 6749 OAuth 2.0 authorization framework
+- Notes:
+  - Preserved a reasoning guide for questions about AAL1 versus AAL2, OAuth delegation into an RT role, replay risk in an encrypted-password protocol, and hierarchical RBAC permission inheritance.
+  - Included a caution to use the note as a study aid if the quiz is a graded individual component.
