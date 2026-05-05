@@ -428,3 +428,20 @@ tags:
 - Notes:
   - Clarified that `P_e` is normally a decreasing function of input SNR, not directly proportional to it.
   - Connected the interpretation to the slide's output-SNR formula, where larger `P_e` lowers `(S/N)_out`.
+
+## [2026-05-05 21:31] query | venus project problem statement
+
+- Pages created:
+  - [[2026-05-05-how-to-write-venus-project-problem-statement]]
+- Pages updated:
+  - [[queries-home]]
+  - [[index]]
+  - [[log]]
+- Sources used:
+  - [[2026-04-22-5eid0-venus-project-course-materials]]
+  - [[2026-04-22-computer-software-ui-role-plan-for-5eid0]]
+  - [[2026-04-22-what-can-i-finish-independently-for-venus-basestation]]
+  - chat question with report problem-statement prompt image
+- Notes:
+  - Preserved concise English problem statement options for the Venus group report.
+  - Framed the project around autonomous exploration, hazard avoidance, sample detection, environmental measurement, reliable communication, and base-station mapping.
