@@ -3,7 +3,7 @@ title: Queries Home
 type: query
 status: active
 created: 2026-04-21
-updated: 2026-04-22
+updated: 2026-05-05
 tags:
   - query
 ---
@@ -32,3 +32,6 @@ Store durable answers to important questions here.
 - [[2026-04-23-do-e-and-b-contribute-equally-to-light-energy]]
 - [[2026-04-27-how-to-ask-teammates-for-basestation-interface-info]]
 - [[2026-05-03-how-to-convert-this-spectrum-to-time-domain]]
+- [[2026-05-03-how-to-understand-flat-top-sampling-questions]]
+- [[2026-05-03-what-is-an-adc-and-why-10-bit-means-1024-levels]]
+- [[2026-05-05-how-to-understand-quantization-and-bit-rate]]

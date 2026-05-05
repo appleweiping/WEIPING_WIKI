@@ -385,3 +385,32 @@ tags:
 - Notes:
   - Preserved the derivation that a DC line at `0 Hz` plus symmetric lines at `\pm 100 Hz` corresponds to `x(t) = -3 + 2\cos(2\pi 100 t)`.
   - Recorded the interpretation of the DC offset, cosine amplitude, and oscillation range in the time domain.
+
+## [2026-05-03 10:24] query | flat-top sampling and adc basics
+
+- Pages created:
+  - [[2026-05-03-how-to-understand-flat-top-sampling-questions]]
+  - [[2026-05-03-what-is-an-adc-and-why-10-bit-means-1024-levels]]
+- Pages updated:
+  - [[queries-home]]
+  - [[index]]
+  - [[log]]
+- Sources used:
+  - chat discussion about flat-top sampling and ADC quantization levels
+- Notes:
+  - Preserved a practical explanation of how to identify flat-top sampling questions and why the hold effect causes amplitude distortion.
+  - Preserved the ADC explanation and the rule that an `N`-bit ADC has `2^N` quantization levels, so 10 bits gives `1024`.
+
+## [2026-05-05 14:18] query | quantization and bit rate
+
+- Pages created:
+  - [[2026-05-05-how-to-understand-quantization-and-bit-rate]]
+- Pages updated:
+  - [[queries-home]]
+  - [[index]]
+  - [[log]]
+- Sources used:
+  - chat-provided quantization slide image
+- Notes:
+  - Preserved the relationship between quantization levels, bits per sample, sampling frequency, bit rate, and bit period.
+  - Clarified that `R = n/T` should be read as bits per sample divided by sampling period, while bit period is `T_b = 1/R`.

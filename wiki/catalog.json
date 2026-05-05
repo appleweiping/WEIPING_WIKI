@@ -1,7 +1,7 @@
 {
   "meta": {
     "root": "D:\\Research\\vipin's knowledgebase",
-    "page_count": 43
+    "page_count": 47
   },
   "pages": [
     {
@@ -431,6 +431,10 @@
         "2026-04-23-what-does-codex-full-access-mean",
         "2026-04-23-why-is-e-equals-cb",
         "2026-04-27-how-to-ask-teammates-for-basestation-interface-info",
+        "2026-05-03-how-to-convert-this-spectrum-to-time-domain",
+        "2026-05-03-how-to-understand-flat-top-sampling-questions",
+        "2026-05-03-what-is-an-adc-and-why-10-bit-means-1024-levels",
+        "2026-05-05-how-to-understand-quantization-and-bit-rate",
         "README",
         "comparisons-home",
         "home",
@@ -468,12 +472,16 @@
         "2026-04-23-what-does-codex-full-access-mean",
         "2026-04-23-why-is-e-equals-cb",
         "2026-04-27-how-to-ask-teammates-for-basestation-interface-info",
+        "2026-05-03-how-to-convert-this-spectrum-to-time-domain",
+        "2026-05-03-how-to-understand-flat-top-sampling-questions",
+        "2026-05-03-what-is-an-adc-and-why-10-bit-means-1024-levels",
+        "2026-05-05-how-to-understand-quantization-and-bit-rate",
         "home",
         "log",
         "overview"
       ],
       "has_counterpoints": false,
-      "word_count": 870,
+      "word_count": 987,
       "source_pages": [],
       "source_files": [],
       "body_preview": "# Index This is the main catalog of the wiki. ## Overview - [[home]] - Top-level overview of the knowledge base and workflow. - [[overview]] - Structural map of the repository layers, sections, and active public domains. - [[log]] - Chronological record of ingests, analyses, quer"
@@ -510,7 +518,10 @@
         "[2026-04-23 11:31] query | why e equals cb",
         "[2026-04-23 11:40] query | codex full access boundary rule",
         "[2026-04-23 11:49] query | equal e and b energy contribution",
-        "[2026-04-27 11:02] query | chinese ask for basestation interface info"
+        "[2026-04-27 11:02] query | chinese ask for basestation interface info",
+        "[2026-05-03 10:12] query | spectrum to time-domain conversion",
+        "[2026-05-03 10:24] query | flat-top sampling and adc basics",
+        "[2026-05-05 14:18] query | quantization and bit rate"
       ],
       "links": [
         "2026-04-21-llm-rec-research-map",
@@ -541,6 +552,10 @@
         "2026-04-23-what-does-codex-full-access-mean",
         "2026-04-23-why-is-e-equals-cb",
         "2026-04-27-how-to-ask-teammates-for-basestation-interface-info",
+        "2026-05-03-how-to-convert-this-spectrum-to-time-domain",
+        "2026-05-03-how-to-understand-flat-top-sampling-questions",
+        "2026-05-03-what-is-an-adc-and-why-10-bit-means-1024-levels",
+        "2026-05-05-how-to-understand-quantization-and-bit-rate",
         "README",
         "comparisons-home",
         "home",
@@ -578,12 +593,16 @@
         "2026-04-23-what-does-codex-full-access-mean",
         "2026-04-23-why-is-e-equals-cb",
         "2026-04-27-how-to-ask-teammates-for-basestation-interface-info",
+        "2026-05-03-how-to-convert-this-spectrum-to-time-domain",
+        "2026-05-03-how-to-understand-flat-top-sampling-questions",
+        "2026-05-03-what-is-an-adc-and-why-10-bit-means-1024-levels",
+        "2026-05-05-how-to-understand-quantization-and-bit-rate",
         "home",
         "index",
         "log"
       ],
       "has_counterpoints": false,
-      "word_count": 1986,
+      "word_count": 2245,
       "source_pages": [],
       "source_files": [],
       "body_preview": "# Log ## [2026-04-21 17:36] bootstrap | initialize vipin wiki - Pages created: - [[home]] - [[index]] - [[log]] - [[vipin]] - [[llm-wiki]] - [[2026-04-21-llm-wiki-pattern]] - [[2026-04-21-vipin-wiki-bootstrap]] - Sources used: - user-provided idea brief in chat describing the `LL"
@@ -768,6 +787,7 @@
       ],
       "backlinks": [
         "2026-04-23-why-is-e-equals-cb",
+        "2026-05-03-how-to-convert-this-spectrum-to-time-domain",
         "index",
         "log",
         "queries-home"
@@ -1409,6 +1429,181 @@
       "body_preview": "# How To Ask Teammates For Basestation Interface Info ## Question How should Vipin ask teammates, in Chinese, for the concrete interface information needed to connect the `venus-basestation` project to the robot side? ## Recommended Chinese Ask ```text 我这边已经把 basestation/UI 的基础部分"
     },
     {
+      "id": "2026-05-03-how-to-convert-this-spectrum-to-time-domain",
+      "title": "How To Convert This Spectrum To Time Domain",
+      "type": "query",
+      "path": "wiki/queries/2026-05-03-how-to-convert-this-spectrum-to-time-domain.md",
+      "tags": [
+        "query",
+        "signals",
+        "sampling",
+        "frequency-domain",
+        "time-domain"
+      ],
+      "headings": [
+        "How To Convert This Spectrum To Time Domain",
+        "Question",
+        "Short Answer",
+        "Why",
+        "1. The `f = 0` component",
+        "2. The symmetric lines at `\\pm 100 Hz`",
+        "3. Combine both parts",
+        "Time-Domain Interpretation",
+        "Counterpoints and Gaps",
+        "Related"
+      ],
+      "links": [
+        "2026-04-22-how-are-k-omega-and-v-derived",
+        "index",
+        "log",
+        "queries-home"
+      ],
+      "backlinks": [
+        "2026-05-03-how-to-understand-flat-top-sampling-questions",
+        "index",
+        "log",
+        "queries-home"
+      ],
+      "has_counterpoints": true,
+      "word_count": 235,
+      "source_pages": [],
+      "source_files": [
+        "chat"
+      ],
+      "body_preview": "# How To Convert This Spectrum To Time Domain ## Question Given a spectrum with: - amplitude `+1` at `f = -100 Hz` - amplitude `-3` at `f = 0 Hz` - amplitude `+1` at `f = +100 Hz` what is the corresponding signal in the time domain? ## Short Answer \\[ x(t) = -3 + 2\\cos(2\\pi 100 t"
+    },
+    {
+      "id": "2026-05-03-how-to-understand-flat-top-sampling-questions",
+      "title": "How To Understand Flat Top Sampling Questions",
+      "type": "query",
+      "path": "wiki/queries/2026-05-03-how-to-understand-flat-top-sampling-questions.md",
+      "tags": [
+        "query",
+        "sampling",
+        "signals",
+        "adc"
+      ],
+      "headings": [
+        "How To Understand Flat Top Sampling Questions",
+        "Question",
+        "Short Answer",
+        "Main Identification Rule",
+        "Why",
+        "Main Effect Compared With Ideal Impulse Sampling",
+        "Useful Comparison",
+        "Ideal impulse sampling",
+        "Natural sampling",
+        "Flat-top sampling",
+        "Quick Exam Rule",
+        "Counterpoints and Gaps",
+        "Related"
+      ],
+      "links": [
+        "2026-05-03-how-to-convert-this-spectrum-to-time-domain",
+        "index",
+        "log",
+        "queries-home"
+      ],
+      "backlinks": [
+        "2026-05-03-what-is-an-adc-and-why-10-bit-means-1024-levels",
+        "2026-05-05-how-to-understand-quantization-and-bit-rate",
+        "index",
+        "log",
+        "queries-home"
+      ],
+      "has_counterpoints": true,
+      "word_count": 307,
+      "source_pages": [],
+      "source_files": [
+        "chat"
+      ],
+      "body_preview": "# How To Understand Flat Top Sampling Questions ## Question How should multiple-choice questions about `flat-top sampling` be understood and solved? ## Short Answer Two key points define flat-top sampling: 1. the sampled pulse top stays constant during the sampling interval 2. co"
+    },
+    {
+      "id": "2026-05-03-what-is-an-adc-and-why-10-bit-means-1024-levels",
+      "title": "What Is An ADC And Why 10 Bit Means 1024 Levels",
+      "type": "query",
+      "path": "wiki/queries/2026-05-03-what-is-an-adc-and-why-10-bit-means-1024-levels.md",
+      "tags": [
+        "query",
+        "adc",
+        "quantization",
+        "signals"
+      ],
+      "headings": [
+        "What Is An ADC And Why 10 Bit Means 1024 Levels",
+        "Question",
+        "Short Answer",
+        "What An ADC Does",
+        "Why 10 Bits Gives 1024 Levels",
+        "General Rule",
+        "Counterpoints and Gaps",
+        "Related"
+      ],
+      "links": [
+        "2026-05-03-how-to-understand-flat-top-sampling-questions",
+        "index",
+        "log",
+        "queries-home"
+      ],
+      "backlinks": [
+        "2026-05-05-how-to-understand-quantization-and-bit-rate",
+        "index",
+        "log",
+        "queries-home"
+      ],
+      "has_counterpoints": true,
+      "word_count": 198,
+      "source_pages": [],
+      "source_files": [
+        "chat"
+      ],
+      "body_preview": "# What Is An ADC And Why 10 Bit Means 1024 Levels ## Question What is an ADC, and why does a 10-bit ADC have `1024` quantization levels? ## Short Answer `ADC` stands for: - `Analog-to-Digital Converter` It converts an analog signal into digital form. If an ADC uses `N` bits per s"
+    },
+    {
+      "id": "2026-05-05-how-to-understand-quantization-and-bit-rate",
+      "title": "How To Understand Quantization And Bit Rate",
+      "type": "query",
+      "path": "wiki/queries/2026-05-05-how-to-understand-quantization-and-bit-rate.md",
+      "tags": [
+        "query",
+        "adc",
+        "quantization",
+        "sampling",
+        "signals"
+      ],
+      "headings": [
+        "How To Understand Quantization And Bit Rate",
+        "Question",
+        "Short Answer",
+        "How To Read The Figure",
+        "Meaning Of The Symbols",
+        "Important Distinction",
+        "Answer To The Slide Question",
+        "Example",
+        "Related"
+      ],
+      "links": [
+        "2026-05-03-how-to-understand-flat-top-sampling-questions",
+        "2026-05-03-what-is-an-adc-and-why-10-bit-means-1024-levels",
+        "index",
+        "log",
+        "queries-home"
+      ],
+      "backlinks": [
+        "index",
+        "log",
+        "queries-home"
+      ],
+      "has_counterpoints": false,
+      "word_count": 392,
+      "source_pages": [],
+      "source_files": [
+        "chat"
+      ],
+      "body_preview": "# How To Understand Quantization And Bit Rate ## Question How should the quantization slide be understood, especially the relations `M = 2^n` and `R = n/T = n f_s`? ## Short Answer Quantization maps each sampled analog amplitude to one of a finite number of discrete amplitude lev"
+    },
+    {
       "id": "queries-home",
       "title": "Queries Home",
       "type": "query",
@@ -1437,7 +1632,11 @@
         "2026-04-23-what-causes-the-color-of-the-sky",
         "2026-04-23-what-does-codex-full-access-mean",
         "2026-04-23-why-is-e-equals-cb",
-        "2026-04-27-how-to-ask-teammates-for-basestation-interface-info"
+        "2026-04-27-how-to-ask-teammates-for-basestation-interface-info",
+        "2026-05-03-how-to-convert-this-spectrum-to-time-domain",
+        "2026-05-03-how-to-understand-flat-top-sampling-questions",
+        "2026-05-03-what-is-an-adc-and-why-10-bit-means-1024-levels",
+        "2026-05-05-how-to-understand-quantization-and-bit-rate"
       ],
       "backlinks": [
         "2026-04-22-5eid0-venus-project-course-materials",
@@ -1459,12 +1658,16 @@
         "2026-04-23-what-does-codex-full-access-mean",
         "2026-04-23-why-is-e-equals-cb",
         "2026-04-27-how-to-ask-teammates-for-basestation-interface-info",
+        "2026-05-03-how-to-convert-this-spectrum-to-time-domain",
+        "2026-05-03-how-to-understand-flat-top-sampling-questions",
+        "2026-05-03-what-is-an-adc-and-why-10-bit-means-1024-levels",
+        "2026-05-05-how-to-understand-quantization-and-bit-rate",
         "index",
         "log",
         "overview"
       ],
       "has_counterpoints": false,
-      "word_count": 182,
+      "word_count": 227,
       "source_pages": [],
       "source_files": [],
       "body_preview": "# Queries Home Store durable answers to important questions here. ## Current Queries - [[2026-04-22-how-to-reduce-github-submit-prompts]] - [[2026-04-22-what-is-dbm]] - [[2026-04-22-what-is-spectroscopy]] - [[2026-04-22-how-are-k-omega-and-v-derived]] - [[2026-04-22-what-to-pay-a"

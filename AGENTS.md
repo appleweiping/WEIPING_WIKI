@@ -176,6 +176,12 @@ Default to the public wiki unless the user explicitly asks to use private materi
 
 Do not rely on the user to remind you to preserve valuable Q&A.
 
+## Commit Policy
+
+- After creating or updating durable wiki content, stage and commit the related changes before ending the turn.
+- Keep commits scoped to the saved wiki work and its required index/log updates.
+- Do not stage unrelated local changes unless the user explicitly asks for them.
+
 ## Lint Workflow
 
 When asked to health-check the wiki, look for:

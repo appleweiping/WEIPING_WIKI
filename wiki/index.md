@@ -3,7 +3,7 @@ title: Index
 type: index
 status: active
 created: 2026-04-21
-updated: 2026-04-22
+updated: 2026-05-05
 tags:
   - index
 ---
@@ -74,6 +74,9 @@ This is the main catalog of the wiki.
 - [[2026-04-23-do-e-and-b-contribute-equally-to-light-energy]] - Explanation that vacuum light energy is shared equally between the electric and magnetic field contributions.
 - [[2026-04-27-how-to-ask-teammates-for-basestation-interface-info]] - Reusable Chinese message template for asking teammates for MQTT topics, payload samples, coordinate definitions, and other basestation integration details.
 - [[2026-05-03-how-to-convert-this-spectrum-to-time-domain]] - Step-by-step explanation of how a spectrum with lines at `-100 Hz`, `0 Hz`, and `+100 Hz` maps to a time-domain cosine plus DC offset.
+- [[2026-05-03-how-to-understand-flat-top-sampling-questions]] - Practical explanation of how to identify flat-top sampling and its main hold-effect amplitude distortion.
+- [[2026-05-03-what-is-an-adc-and-why-10-bit-means-1024-levels]] - Explanation of what an ADC is and why a 10-bit ADC has `1024` quantization levels.
+- [[2026-05-05-how-to-understand-quantization-and-bit-rate]] - Explanation of quantization levels, bits per sample, sampling frequency, bitrate, and bit period.
 
 ## Topics
 
