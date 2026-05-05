@@ -35,3 +35,4 @@ Store durable answers to important questions here.
 - [[2026-05-03-how-to-understand-flat-top-sampling-questions]]
 - [[2026-05-03-what-is-an-adc-and-why-10-bit-means-1024-levels]]
 - [[2026-05-05-how-to-understand-quantization-and-bit-rate]]
+- [[2026-05-05-why-pe-is-not-proportional-to-input-snr]]

@@ -414,3 +414,17 @@ tags:
 - Notes:
   - Preserved the relationship between quantization levels, bits per sample, sampling frequency, bit rate, and bit period.
   - Clarified that `R = n/T` should be read as bits per sample divided by sampling period, while bit period is `T_b = 1/R`.
+
+## [2026-05-05 14:37] query | probability of error and input snr
+
+- Pages created:
+  - [[2026-05-05-why-pe-is-not-proportional-to-input-snr]]
+- Pages updated:
+  - [[queries-home]]
+  - [[index]]
+  - [[log]]
+- Sources used:
+  - chat-provided SNR and probability-of-error slide image
+- Notes:
+  - Clarified that `P_e` is normally a decreasing function of input SNR, not directly proportional to it.
+  - Connected the interpretation to the slide's output-SNR formula, where larger `P_e` lowers `(S/N)_out`.

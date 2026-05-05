@@ -77,6 +77,7 @@ This is the main catalog of the wiki.
 - [[2026-05-03-how-to-understand-flat-top-sampling-questions]] - Practical explanation of how to identify flat-top sampling and its main hold-effect amplitude distortion.
 - [[2026-05-03-what-is-an-adc-and-why-10-bit-means-1024-levels]] - Explanation of what an ADC is and why a 10-bit ADC has `1024` quantization levels.
 - [[2026-05-05-how-to-understand-quantization-and-bit-rate]] - Explanation of quantization levels, bits per sample, sampling frequency, bitrate, and bit period.
+- [[2026-05-05-why-pe-is-not-proportional-to-input-snr]] - Clarification that error probability depends on input SNR but normally decreases as input SNR increases.
 
 ## Topics
 

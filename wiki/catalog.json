@@ -1,7 +1,7 @@
 {
   "meta": {
     "root": "D:\\Research\\vipin's knowledgebase",
-    "page_count": 47
+    "page_count": 48
   },
   "pages": [
     {
@@ -435,6 +435,7 @@
         "2026-05-03-how-to-understand-flat-top-sampling-questions",
         "2026-05-03-what-is-an-adc-and-why-10-bit-means-1024-levels",
         "2026-05-05-how-to-understand-quantization-and-bit-rate",
+        "2026-05-05-why-pe-is-not-proportional-to-input-snr",
         "README",
         "comparisons-home",
         "home",
@@ -476,12 +477,13 @@
         "2026-05-03-how-to-understand-flat-top-sampling-questions",
         "2026-05-03-what-is-an-adc-and-why-10-bit-means-1024-levels",
         "2026-05-05-how-to-understand-quantization-and-bit-rate",
+        "2026-05-05-why-pe-is-not-proportional-to-input-snr",
         "home",
         "log",
         "overview"
       ],
       "has_counterpoints": false,
-      "word_count": 987,
+      "word_count": 1013,
       "source_pages": [],
       "source_files": [],
       "body_preview": "# Index This is the main catalog of the wiki. ## Overview - [[home]] - Top-level overview of the knowledge base and workflow. - [[overview]] - Structural map of the repository layers, sections, and active public domains. - [[log]] - Chronological record of ingests, analyses, quer"
@@ -521,7 +523,8 @@
         "[2026-04-27 11:02] query | chinese ask for basestation interface info",
         "[2026-05-03 10:12] query | spectrum to time-domain conversion",
         "[2026-05-03 10:24] query | flat-top sampling and adc basics",
-        "[2026-05-05 14:18] query | quantization and bit rate"
+        "[2026-05-05 14:18] query | quantization and bit rate",
+        "[2026-05-05 14:37] query | probability of error and input snr"
       ],
       "links": [
         "2026-04-21-llm-rec-research-map",
@@ -556,6 +559,7 @@
         "2026-05-03-how-to-understand-flat-top-sampling-questions",
         "2026-05-03-what-is-an-adc-and-why-10-bit-means-1024-levels",
         "2026-05-05-how-to-understand-quantization-and-bit-rate",
+        "2026-05-05-why-pe-is-not-proportional-to-input-snr",
         "README",
         "comparisons-home",
         "home",
@@ -597,12 +601,13 @@
         "2026-05-03-how-to-understand-flat-top-sampling-questions",
         "2026-05-03-what-is-an-adc-and-why-10-bit-means-1024-levels",
         "2026-05-05-how-to-understand-quantization-and-bit-rate",
+        "2026-05-05-why-pe-is-not-proportional-to-input-snr",
         "home",
         "index",
         "log"
       ],
       "has_counterpoints": false,
-      "word_count": 2245,
+      "word_count": 2321,
       "source_pages": [],
       "source_files": [],
       "body_preview": "# Log ## [2026-04-21 17:36] bootstrap | initialize vipin wiki - Pages created: - [[home]] - [[index]] - [[log]] - [[vipin]] - [[llm-wiki]] - [[2026-04-21-llm-wiki-pattern]] - [[2026-04-21-vipin-wiki-bootstrap]] - Sources used: - user-provided idea brief in chat describing the `LL"
@@ -1548,6 +1553,7 @@
       ],
       "backlinks": [
         "2026-05-05-how-to-understand-quantization-and-bit-rate",
+        "2026-05-05-why-pe-is-not-proportional-to-input-snr",
         "index",
         "log",
         "queries-home"
@@ -1591,6 +1597,7 @@
         "queries-home"
       ],
       "backlinks": [
+        "2026-05-05-why-pe-is-not-proportional-to-input-snr",
         "index",
         "log",
         "queries-home"
@@ -1602,6 +1609,48 @@
         "chat"
       ],
       "body_preview": "# How To Understand Quantization And Bit Rate ## Question How should the quantization slide be understood, especially the relations `M = 2^n` and `R = n/T = n f_s`? ## Short Answer Quantization maps each sampled analog amplitude to one of a finite number of discrete amplitude lev"
+    },
+    {
+      "id": "2026-05-05-why-pe-is-not-proportional-to-input-snr",
+      "title": "Why Pe Is Not Proportional To Input SNR",
+      "type": "query",
+      "path": "wiki/queries/2026-05-05-why-pe-is-not-proportional-to-input-snr.md",
+      "tags": [
+        "query",
+        "signals",
+        "snr",
+        "probability-of-error",
+        "pcm"
+      ],
+      "headings": [
+        "Why Pe Is Not Proportional To Input SNR",
+        "Question",
+        "Short Answer",
+        "Why Higher SNR Lowers Error Probability",
+        "More Accurate Relationship",
+        "How This Connects To The Slide Formula",
+        "Practical Exam Interpretation",
+        "Related"
+      ],
+      "links": [
+        "2026-05-03-what-is-an-adc-and-why-10-bit-means-1024-levels",
+        "2026-05-05-how-to-understand-quantization-and-bit-rate",
+        "index",
+        "log",
+        "queries-home"
+      ],
+      "backlinks": [
+        "index",
+        "log",
+        "queries-home"
+      ],
+      "has_counterpoints": false,
+      "word_count": 406,
+      "source_pages": [],
+      "source_files": [
+        "chat"
+      ],
+      "body_preview": "# Why Pe Is Not Proportional To Input SNR ## Question Why does the slide seem to say `P_e` is proportional to `(S/N)_in`? ## Short Answer Strictly, `P_e` should not be directly proportional to `(S/N)_in`. If `(S/N)_in` means input signal-to-noise ratio, then higher input SNR norm"
     },
     {
       "id": "queries-home",
@@ -1636,7 +1685,8 @@
         "2026-05-03-how-to-convert-this-spectrum-to-time-domain",
         "2026-05-03-how-to-understand-flat-top-sampling-questions",
         "2026-05-03-what-is-an-adc-and-why-10-bit-means-1024-levels",
-        "2026-05-05-how-to-understand-quantization-and-bit-rate"
+        "2026-05-05-how-to-understand-quantization-and-bit-rate",
+        "2026-05-05-why-pe-is-not-proportional-to-input-snr"
       ],
       "backlinks": [
         "2026-04-22-5eid0-venus-project-course-materials",
@@ -1662,12 +1712,13 @@
         "2026-05-03-how-to-understand-flat-top-sampling-questions",
         "2026-05-03-what-is-an-adc-and-why-10-bit-means-1024-levels",
         "2026-05-05-how-to-understand-quantization-and-bit-rate",
+        "2026-05-05-why-pe-is-not-proportional-to-input-snr",
         "index",
         "log",
         "overview"
       ],
       "has_counterpoints": false,
-      "word_count": 227,
+      "word_count": 238,
       "source_pages": [],
       "source_files": [],
       "body_preview": "# Queries Home Store durable answers to important questions here. ## Current Queries - [[2026-04-22-how-to-reduce-github-submit-prompts]] - [[2026-04-22-what-is-dbm]] - [[2026-04-22-what-is-spectroscopy]] - [[2026-04-22-how-are-k-omega-and-v-derived]] - [[2026-04-22-what-to-pay-a"
