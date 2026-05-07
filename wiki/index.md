@@ -80,6 +80,7 @@ This is the main catalog of the wiki.
 - [[2026-05-05-why-pe-is-not-proportional-to-input-snr]] - Clarification that error probability depends on input SNR but normally decreases as input SNR increases.
 - [[2026-05-05-how-to-write-venus-project-problem-statement]] - Reusable English problem statement options for the 5EID0 Venus project group report.
 - [[2026-05-05-how-to-solve-oauth-rt-rbac-security-quiz]] - Reasoning guide for a security quiz on AAL, OAuth delegation, RT rules, replay attacks, and hierarchical RBAC.
+- [[2026-05-07-what-does-depicts-mean]] - Short vocabulary note explaining `depicts` as shows, describes, portrays, or represents.
 
 ## Topics
 
