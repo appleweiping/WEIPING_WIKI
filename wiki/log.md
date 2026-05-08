@@ -553,3 +553,22 @@ tags:
 - Notes:
   - Added guidance that residence hall students can use the official meal-plan-change route to change meal plans.
   - Clarified that extra Dining Dollars can be added later, so upgrading mainly matters for the extra guest meal swipes.
+
+## [2026-05-08 10:15] query | choose umn apartment vs residence hall for private bedroom
+
+- Pages created:
+  - [[2026-05-08-how-to-choose-umn-apartment-vs-residence-hall-for-private-bedroom]]
+- Pages updated:
+  - [[queries-home]]
+  - [[university-housing]]
+  - [[index]]
+  - [[log]]
+- Sources used:
+  - UMN Housing & Residential Life 2026-2027 rates page
+  - UMN building pages for Keeler, Yudof, Wilkins, Centennial, Sanford, and Territorial
+  - UMN Dining & Meal Plans page
+  - M Food Co. meal plan page
+  - chat screenshot of UMN housing portal apartment preference selection
+- Notes:
+  - Preserved the recommendation to choose apartment as the first preference when the goal is low cost plus a private sleeping room.
+  - Distinguished private bedrooms in shared apartments from more expensive solo apartments and residence hall singles.

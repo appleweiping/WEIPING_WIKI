@@ -22,6 +22,7 @@ This topic tracks practical knowledge about university housing contracts, deadli
 
 - [[2026-05-08-university-of-minnesota-housing-contract-2026-2027]] - University of Minnesota Housing & Residential Life contract terms for residence halls and apartment complexes in 2026-2027.
 - [[2026-05-08-which-umn-meal-plan-to-choose]] - Practical decision note for choosing between `Unlimited` and `Unlimited Plus` meal plans.
+- [[2026-05-08-how-to-choose-umn-apartment-vs-residence-hall-for-private-bedroom]] - Practical room-preference strategy for getting a lower-cost private sleeping room.
 
 ## Practical Takeaways
 
@@ -31,6 +32,7 @@ This topic tracks practical knowledge about university housing contracts, deadli
 - EXTRACTED: Confirming an assignment or receiving keys can shift the process from cancellation to contract release.
 - EXTRACTED: Break housing rules differ by building type; apartments tend to remain open, while some residence halls may close or charge extra.
 - EXTRACTED: For current UMN residence hall meal-plan selection, `Unlimited` and `Unlimited Plus` both provide unlimited dining-hall meals; the practical difference is extra Dining Dollars and guest meal swipes.
+- INFERRED: For a lower-cost private sleeping room, shared apartments with private bedrooms are often better targets than residence hall singles because residence halls require meal plans.
 
 ## Key Dates From Current UMN Source
 
