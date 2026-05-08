@@ -65,8 +65,20 @@ Pick `Unlimited Plus` if:
 
 For a cautious first choice, choose `Unlimited`. It already includes unlimited meals, `$150` Dining Dollars, and 3 guest swipes. Extra Dining Dollars can be added later, so starting smaller preserves flexibility.
 
+## Can Unlimited Be Changed To Unlimited Plus Later?
+
+Likely yes for residence hall students, but use the official change page or housing account rather than assuming the dropdown is final.
+
+- EXTRACTED: UMN Housing's move-in checklist says residence hall students wishing to change between residence hall meal plans can do so at `housing.umn.edu/mealplanchange`.
+- EXTRACTED: UMN Housing says additional Dining Dollars can be added at any point in `$25` increments through Dine On Campus.
+- INFERRED: If the only concern is needing more Dining Dollars, choosing `Unlimited` first is flexible because Dining Dollars can be added later.
+- INFERRED: Upgrading to `Unlimited Plus` matters most if Vipin specifically wants the extra guest meal swipes, because guest swipes are tied to the plan and do not roll over.
+
+Practical rule: start with `Unlimited`; upgrade only if the official meal-plan-change page allows it and the extra guest swipes are useful. If only extra spending balance is needed, just add Dining Dollars later.
+
 ## Sources
 
 - Chat screenshot from meal-plan selection page.
 - UMN Housing & Residential Life dining page, checked 2026-05-08: `https://housing.umn.edu/live/dining`.
+- UMN Housing & Residential Life move-in checklist, checked 2026-05-08: `https://housing.umn.edu/residents/moving-breaks/movein/checklist`.
 - [[2026-05-08-university-of-minnesota-housing-contract-2026-2027]]

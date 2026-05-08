@@ -540,3 +540,16 @@ tags:
 - Notes:
   - Preserved a practical recommendation to choose `Unlimited` by default unless the extra `$150` Dining Dollars and 3 guest meal swipes in `Unlimited Plus` will definitely be used.
   - Clarified that both options have unlimited dining-hall meals, while Dining Dollars can be added later and expire at the end of the academic year.
+
+## [2026-05-08 10:15] query | can unlimited be upgraded to unlimited plus later
+
+- Pages updated:
+  - [[2026-05-08-which-umn-meal-plan-to-choose]]
+  - [[log]]
+- Sources used:
+  - UMN Housing & Residential Life dining page
+  - UMN Housing & Residential Life move-in checklist
+  - follow-up chat question about upgrading from `Unlimited` to `Unlimited Plus`
+- Notes:
+  - Added guidance that residence hall students can use the official meal-plan-change route to change meal plans.
+  - Clarified that extra Dining Dollars can be added later, so upgrading mainly matters for the extra guest meal swipes.
