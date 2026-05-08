@@ -523,3 +523,20 @@ tags:
   - Ingested the University of Minnesota Housing & Residential Life 2026-2027 contract terms.
   - Extracted key dates, fees, eligibility rules, cancellation/release conditions, break-period rules, checkout penalties, and resident/university responsibilities.
   - Marked the listed Spring Break 2026 dates as ambiguous because they appear inconsistent with the 2026-2027 contract year.
+
+## [2026-05-08 10:15] query | which umn meal plan to choose
+
+- Pages created:
+  - [[2026-05-08-which-umn-meal-plan-to-choose]]
+- Pages updated:
+  - [[queries-home]]
+  - [[university-housing]]
+  - [[index]]
+  - [[log]]
+- Sources used:
+  - chat screenshot of UMN meal-plan selection
+  - UMN Housing & Residential Life dining page
+  - [[2026-05-08-university-of-minnesota-housing-contract-2026-2027]]
+- Notes:
+  - Preserved a practical recommendation to choose `Unlimited` by default unless the extra `$150` Dining Dollars and 3 guest meal swipes in `Unlimited Plus` will definitely be used.
+  - Clarified that both options have unlimited dining-hall meals, while Dining Dollars can be added later and expire at the end of the academic year.

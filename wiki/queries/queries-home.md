@@ -3,7 +3,7 @@ title: Queries Home
 type: query
 status: active
 created: 2026-04-21
-updated: 2026-05-05
+updated: 2026-05-08
 tags:
   - query
 ---
@@ -40,3 +40,4 @@ Store durable answers to important questions here.
 - [[2026-05-05-how-to-solve-oauth-rt-rbac-security-quiz]]
 - [[2026-05-07-what-does-depicts-mean]]
 - [[2026-05-08-how-to-integrate-venus-basestation-with-team-gitlab]]
+- [[2026-05-08-which-umn-meal-plan-to-choose]]

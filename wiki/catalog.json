@@ -1,7 +1,7 @@
 {
   "meta": {
     "root": "D:\\Research\\vipin's knowledgebase",
-    "page_count": 55
+    "page_count": 56
   },
   "pages": [
     {
@@ -474,6 +474,7 @@
         "2026-05-07-what-does-depicts-mean",
         "2026-05-08-how-to-integrate-venus-basestation-with-team-gitlab",
         "2026-05-08-university-of-minnesota-housing-contract-2026-2027",
+        "2026-05-08-which-umn-meal-plan-to-choose",
         "README",
         "comparisons-home",
         "home",
@@ -527,7 +528,7 @@
         "overview"
       ],
       "has_counterpoints": false,
-      "word_count": 1169,
+      "word_count": 1192,
       "source_pages": [],
       "source_files": [],
       "body_preview": "# Index This is the main catalog of the wiki. ## Overview - [[home]] - Top-level overview of the knowledge base and workflow. - [[overview]] - Structural map of the repository layers, sections, and active public domains. - [[log]] - Chronological record of ingests, analyses, quer"
@@ -574,7 +575,8 @@
         "[2026-05-05 23:21] query | expanded security quiz explanation",
         "[2026-05-07 14:29] query | depicts vocabulary note",
         "[2026-05-08 09:17] query | integrate venus basestation with team gitlab",
-        "[2026-05-08 10:03] ingest | university of minnesota housing contract 2026-2027"
+        "[2026-05-08 10:03] ingest | university of minnesota housing contract 2026-2027",
+        "[2026-05-08 10:15] query | which umn meal plan to choose"
       ],
       "links": [
         "2026-04-21-llm-rec-research-map",
@@ -615,6 +617,7 @@
         "2026-05-07-what-does-depicts-mean",
         "2026-05-08-how-to-integrate-venus-basestation-with-team-gitlab",
         "2026-05-08-university-of-minnesota-housing-contract-2026-2027",
+        "2026-05-08-which-umn-meal-plan-to-choose",
         "README",
         "comparisons-home",
         "home",
@@ -668,7 +671,7 @@
         "log"
       ],
       "has_counterpoints": false,
-      "word_count": 2878,
+      "word_count": 2987,
       "source_pages": [],
       "source_files": [],
       "body_preview": "# Log ## [2026-04-21 17:36] bootstrap | initialize vipin wiki - Pages created: - [[home]] - [[index]] - [[log]] - [[vipin]] - [[llm-wiki]] - [[2026-04-21-llm-wiki-pattern]] - [[2026-04-21-vipin-wiki-bootstrap]] - Sources used: - user-provided idea brief in chat describing the `LL"
@@ -1900,6 +1903,45 @@
       "body_preview": "# How To Integrate Venus Basestation With Team GitLab ## Question The Venus team now uses TU/e GitLab for the shared project. Vipin previously developed the base-station UI project on GitHub. How should he move or connect his work without disturbing teammates' modules? ## Current"
     },
     {
+      "id": "2026-05-08-which-umn-meal-plan-to-choose",
+      "title": "Which UMN Meal Plan To Choose",
+      "type": "query",
+      "path": "wiki/queries/2026-05-08-which-umn-meal-plan-to-choose.md",
+      "tags": [
+        "query",
+        "university-housing",
+        "meal-plan",
+        "university-of-minnesota"
+      ],
+      "headings": [
+        "Which UMN Meal Plan To Choose",
+        "Question",
+        "Short Answer",
+        "Difference",
+        "Reasoning",
+        "Decision Rule",
+        "Practical Recommendation",
+        "Sources"
+      ],
+      "links": [
+        "2026-05-08-university-of-minnesota-housing-contract-2026-2027"
+      ],
+      "backlinks": [
+        "index",
+        "log",
+        "queries-home",
+        "university-housing"
+      ],
+      "has_counterpoints": false,
+      "word_count": 388,
+      "source_pages": [
+        "2026-05-08-university-of-minnesota-housing-contract-2026-2027",
+        "university-housing"
+      ],
+      "source_files": [],
+      "body_preview": "# Which UMN Meal Plan To Choose ## Question Which University of Minnesota residence hall meal plan should Vipin choose between `Unlimited` and `Unlimited Plus`, and what is the difference? ## Short Answer Choose `Unlimited` by default unless Vipin is confident he will spend at le"
+    },
+    {
       "id": "queries-home",
       "title": "Queries Home",
       "type": "query",
@@ -1937,7 +1979,8 @@
         "2026-05-05-how-to-write-venus-project-problem-statement",
         "2026-05-05-why-pe-is-not-proportional-to-input-snr",
         "2026-05-07-what-does-depicts-mean",
-        "2026-05-08-how-to-integrate-venus-basestation-with-team-gitlab"
+        "2026-05-08-how-to-integrate-venus-basestation-with-team-gitlab",
+        "2026-05-08-which-umn-meal-plan-to-choose"
       ],
       "backlinks": [
         "2026-04-22-5eid0-venus-project-course-materials",
@@ -1973,7 +2016,7 @@
         "overview"
       ],
       "has_counterpoints": false,
-      "word_count": 277,
+      "word_count": 286,
       "source_pages": [],
       "source_files": [],
       "body_preview": "# Queries Home Store durable answers to important questions here. ## Current Queries - [[2026-04-22-how-to-reduce-github-submit-prompts]] - [[2026-04-22-what-is-dbm]] - [[2026-04-22-what-is-spectroscopy]] - [[2026-04-22-how-are-k-omega-and-v-derived]] - [[2026-04-22-what-to-pay-a"
@@ -2300,6 +2343,7 @@
         "university-of-minnesota"
       ],
       "backlinks": [
+        "2026-05-08-which-umn-meal-plan-to-choose",
         "index",
         "log",
         "university-housing",
@@ -2518,6 +2562,7 @@
       ],
       "links": [
         "2026-05-08-university-of-minnesota-housing-contract-2026-2027",
+        "2026-05-08-which-umn-meal-plan-to-choose",
         "university-of-minnesota"
       ],
       "backlinks": [
@@ -2528,7 +2573,7 @@
         "university-of-minnesota"
       ],
       "has_counterpoints": true,
-      "word_count": 381,
+      "word_count": 432,
       "source_pages": [
         "2026-05-08-university-of-minnesota-housing-contract-2026-2027"
       ],

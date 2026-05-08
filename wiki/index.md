@@ -84,6 +84,7 @@ This is the main catalog of the wiki.
 - [[2026-05-05-how-to-solve-oauth-rt-rbac-security-quiz]] - Reasoning guide for a security quiz on AAL, OAuth delegation, RT rules, replay attacks, and hierarchical RBAC.
 - [[2026-05-07-what-does-depicts-mean]] - Short vocabulary note explaining `depicts` as shows, describes, portrays, or represents.
 - [[2026-05-08-how-to-integrate-venus-basestation-with-team-gitlab]] - Git workflow plan for moving Vipin's Venus basestation/UI work into the team GitLab repository on a dedicated branch.
+- [[2026-05-08-which-umn-meal-plan-to-choose]] - Practical recommendation for choosing between UMN `Unlimited` and `Unlimited Plus` residence hall meal plans.
 
 ## Topics
 
