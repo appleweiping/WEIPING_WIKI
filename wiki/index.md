@@ -3,7 +3,7 @@ title: Index
 type: index
 status: active
 created: 2026-04-21
-updated: 2026-05-05
+updated: 2026-05-08
 tags:
   - index
 ---
@@ -21,6 +21,7 @@ This is the main catalog of the wiki.
 ## Entities
 
 - [[vipin]] - Central person page for the owner/subject of this knowledge base.
+- [[university-of-minnesota]] - Issuer entity for University of Minnesota housing contract materials.
 
 ## Concepts
 
@@ -36,6 +37,7 @@ This is the main catalog of the wiki.
 - [[2026-04-21-nh-baseline-paper-set]] - External local paper set with 21 PDFs from the `NH` baseline folder under `Uncertainty-LLM4Rec`.
 - [[2026-04-21-nr-baseline-paper-set]] - External local paper set with 14 PDFs from the `NR` baseline folder under `Uncertainty-LLM4Rec`.
 - [[2026-04-21-recommendation-paper-library]] - Larger external local library of LLM-and-recommendation papers, with PDFs plus topic/project subfolders.
+- [[2026-05-08-university-of-minnesota-housing-contract-2026-2027]] - University of Minnesota Housing & Residential Life contract terms, key dates, fees, cancellation/release rules, and resident obligations for 2026-2027.
 
 ## Analyses
 
@@ -87,6 +89,7 @@ This is the main catalog of the wiki.
 
 - [[topics-home]] - Entry page for durable subject clusters.
 - [[personal-knowledge-systems]] - Topic map for long-lived systems that accumulate, structure, and revisit knowledge.
+- [[university-housing]] - Topic map for university housing deadlines, fees, cancellation/release rules, and contract obligations.
 
 ## Comparisons
 

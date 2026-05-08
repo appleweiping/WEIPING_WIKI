@@ -3,7 +3,7 @@ title: Topics Home
 type: topic
 status: active
 created: 2026-04-21
-updated: 2026-04-21
+updated: 2026-05-08
 tags:
   - topics
 ---
@@ -20,5 +20,7 @@ This section holds durable subject clusters that are broader than a single conce
 
 ## Current State
 
-- One durable topic page now exists: [[personal-knowledge-systems]].
+- Durable topic pages:
+  - [[personal-knowledge-systems]]
+  - [[university-housing]]
 - Candidate next topics include `uncertainty-in-llm-recommendation` and a dedicated topic for `llm-based-recommendation`.

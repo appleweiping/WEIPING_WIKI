@@ -1,7 +1,7 @@
 {
   "meta": {
     "root": "D:\\Research\\vipin's knowledgebase",
-    "page_count": 48
+    "page_count": 55
   },
   "pages": [
     {
@@ -299,6 +299,39 @@
       "body_preview": "# LLM Wiki An `LLM Wiki` is a knowledge-management pattern in which an LLM continuously compiles raw source material into a persistent, structured, interlinked markdown wiki. ## Core Idea The key shift is from query-time rediscovery to persistent synthesis. Instead of retrieving "
     },
     {
+      "id": "university-of-minnesota",
+      "title": "University of Minnesota",
+      "type": "entity",
+      "path": "wiki/entities/university-of-minnesota.md",
+      "tags": [
+        "entity",
+        "university"
+      ],
+      "headings": [
+        "University of Minnesota",
+        "Role In The Wiki",
+        "Related Pages",
+        "Current Claims"
+      ],
+      "links": [
+        "2026-05-08-university-of-minnesota-housing-contract-2026-2027",
+        "university-housing"
+      ],
+      "backlinks": [
+        "2026-05-08-university-of-minnesota-housing-contract-2026-2027",
+        "index",
+        "log",
+        "university-housing"
+      ],
+      "has_counterpoints": false,
+      "word_count": 84,
+      "source_pages": [
+        "2026-05-08-university-of-minnesota-housing-contract-2026-2027"
+      ],
+      "source_files": [],
+      "body_preview": "# University of Minnesota ## Role In The Wiki The University of Minnesota appears as the issuer of the 2026-2027 Housing & Residential Life contract for residence halls and apartment complexes. ## Related Pages - [[university-housing]] - [[2026-05-08-university-of-minnesota-housi"
+    },
+    {
       "id": "vipin",
       "title": "Vipin",
       "type": "entity",
@@ -434,8 +467,13 @@
         "2026-05-03-how-to-convert-this-spectrum-to-time-domain",
         "2026-05-03-how-to-understand-flat-top-sampling-questions",
         "2026-05-03-what-is-an-adc-and-why-10-bit-means-1024-levels",
+        "2026-05-05-how-to-solve-oauth-rt-rbac-security-quiz",
         "2026-05-05-how-to-understand-quantization-and-bit-rate",
+        "2026-05-05-how-to-write-venus-project-problem-statement",
         "2026-05-05-why-pe-is-not-proportional-to-input-snr",
+        "2026-05-07-what-does-depicts-mean",
+        "2026-05-08-how-to-integrate-venus-basestation-with-team-gitlab",
+        "2026-05-08-university-of-minnesota-housing-contract-2026-2027",
         "README",
         "comparisons-home",
         "home",
@@ -449,6 +487,8 @@
         "synthesis-home",
         "timelines-home",
         "topics-home",
+        "university-housing",
+        "university-of-minnesota",
         "vipin"
       ],
       "backlinks": [
@@ -476,14 +516,18 @@
         "2026-05-03-how-to-convert-this-spectrum-to-time-domain",
         "2026-05-03-how-to-understand-flat-top-sampling-questions",
         "2026-05-03-what-is-an-adc-and-why-10-bit-means-1024-levels",
+        "2026-05-05-how-to-solve-oauth-rt-rbac-security-quiz",
         "2026-05-05-how-to-understand-quantization-and-bit-rate",
+        "2026-05-05-how-to-write-venus-project-problem-statement",
         "2026-05-05-why-pe-is-not-proportional-to-input-snr",
+        "2026-05-07-what-does-depicts-mean",
+        "2026-05-08-how-to-integrate-venus-basestation-with-team-gitlab",
         "home",
         "log",
         "overview"
       ],
       "has_counterpoints": false,
-      "word_count": 1013,
+      "word_count": 1169,
       "source_pages": [],
       "source_files": [],
       "body_preview": "# Index This is the main catalog of the wiki. ## Overview - [[home]] - Top-level overview of the knowledge base and workflow. - [[overview]] - Structural map of the repository layers, sections, and active public domains. - [[log]] - Chronological record of ingests, analyses, quer"
@@ -524,7 +568,13 @@
         "[2026-05-03 10:12] query | spectrum to time-domain conversion",
         "[2026-05-03 10:24] query | flat-top sampling and adc basics",
         "[2026-05-05 14:18] query | quantization and bit rate",
-        "[2026-05-05 14:37] query | probability of error and input snr"
+        "[2026-05-05 14:37] query | probability of error and input snr",
+        "[2026-05-05 21:31] query | venus project problem statement",
+        "[2026-05-05 23:07] query | oauth rt rbac security quiz reasoning",
+        "[2026-05-05 23:21] query | expanded security quiz explanation",
+        "[2026-05-07 14:29] query | depicts vocabulary note",
+        "[2026-05-08 09:17] query | integrate venus basestation with team gitlab",
+        "[2026-05-08 10:03] ingest | university of minnesota housing contract 2026-2027"
       ],
       "links": [
         "2026-04-21-llm-rec-research-map",
@@ -558,8 +608,13 @@
         "2026-05-03-how-to-convert-this-spectrum-to-time-domain",
         "2026-05-03-how-to-understand-flat-top-sampling-questions",
         "2026-05-03-what-is-an-adc-and-why-10-bit-means-1024-levels",
+        "2026-05-05-how-to-solve-oauth-rt-rbac-security-quiz",
         "2026-05-05-how-to-understand-quantization-and-bit-rate",
+        "2026-05-05-how-to-write-venus-project-problem-statement",
         "2026-05-05-why-pe-is-not-proportional-to-input-snr",
+        "2026-05-07-what-does-depicts-mean",
+        "2026-05-08-how-to-integrate-venus-basestation-with-team-gitlab",
+        "2026-05-08-university-of-minnesota-housing-contract-2026-2027",
         "README",
         "comparisons-home",
         "home",
@@ -573,6 +628,8 @@
         "personal-knowledge-systems",
         "queries-home",
         "topics-home",
+        "university-housing",
+        "university-of-minnesota",
         "vipin"
       ],
       "backlinks": [
@@ -600,14 +657,18 @@
         "2026-05-03-how-to-convert-this-spectrum-to-time-domain",
         "2026-05-03-how-to-understand-flat-top-sampling-questions",
         "2026-05-03-what-is-an-adc-and-why-10-bit-means-1024-levels",
+        "2026-05-05-how-to-solve-oauth-rt-rbac-security-quiz",
         "2026-05-05-how-to-understand-quantization-and-bit-rate",
+        "2026-05-05-how-to-write-venus-project-problem-statement",
         "2026-05-05-why-pe-is-not-proportional-to-input-snr",
+        "2026-05-07-what-does-depicts-mean",
+        "2026-05-08-how-to-integrate-venus-basestation-with-team-gitlab",
         "home",
         "index",
         "log"
       ],
       "has_counterpoints": false,
-      "word_count": 2321,
+      "word_count": 2878,
       "source_pages": [],
       "source_files": [],
       "body_preview": "# Log ## [2026-04-21 17:36] bootstrap | initialize vipin wiki - Pages created: - [[home]] - [[index]] - [[log]] - [[vipin]] - [[llm-wiki]] - [[2026-04-21-llm-wiki-pattern]] - [[2026-04-21-vipin-wiki-bootstrap]] - Sources used: - user-provided idea brief in chat describing the `LL"
@@ -697,6 +758,8 @@
         "2026-04-22-what-do-i-need-from-teammates-for-venus-basestation",
         "2026-04-22-what-language-for-5eid0-computer-software-ui",
         "2026-04-27-how-to-ask-teammates-for-basestation-interface-info",
+        "2026-05-05-how-to-write-venus-project-problem-statement",
+        "2026-05-08-how-to-integrate-venus-basestation-with-team-gitlab",
         "index",
         "log",
         "queries-home"
@@ -931,6 +994,8 @@
       ],
       "backlinks": [
         "2026-04-22-computer-software-ui-role-plan-for-5eid0",
+        "2026-05-05-how-to-write-venus-project-problem-statement",
+        "2026-05-08-how-to-integrate-venus-basestation-with-team-gitlab",
         "index",
         "log",
         "queries-home"
@@ -1567,6 +1632,61 @@
       "body_preview": "# What Is An ADC And Why 10 Bit Means 1024 Levels ## Question What is an ADC, and why does a 10-bit ADC have `1024` quantization levels? ## Short Answer `ADC` stands for: - `Analog-to-Digital Converter` It converts an analog signal into digital form. If an ADC uses `N` bits per s"
     },
     {
+      "id": "2026-05-05-how-to-solve-oauth-rt-rbac-security-quiz",
+      "title": "How To Solve OAuth RT RBAC Security Quiz",
+      "type": "query",
+      "path": "wiki/queries/2026-05-05-how-to-solve-oauth-rt-rbac-security-quiz.md",
+      "tags": [
+        "query",
+        "security",
+        "oauth",
+        "rbac",
+        "rt",
+        "authentication"
+      ],
+      "headings": [
+        "How To Solve OAuth RT RBAC Security Quiz",
+        "Question",
+        "Study Note",
+        "Q1: NIST AAL In The OAuth Scenario",
+        "Q2: RT Rule For OAuth Delegation",
+        "Q3: Authentication Protocol With Encrypted Password",
+        "Q4: Permissions Of User B In Hierarchical RBAC",
+        "Q5: Add D With Open Z, Read/Write X, Delete But Not View Y",
+        "General Rules To Remember",
+        "Chinese Narrative Explanation",
+        "Q1: AAL Is About Authentication Strength",
+        "Q2: OAuth Token As Delegated Authorization",
+        "Q3: Encryption Is Not Freshness",
+        "Q4: Hierarchical RBAC Means Add Inherited Permissions",
+        "Q5: Avoid The Forbidden Permission",
+        "Mental Checklist",
+        "Related"
+      ],
+      "links": [
+        "2026-04-22-security-course-self-study-guide",
+        "index",
+        "log",
+        "queries-home"
+      ],
+      "backlinks": [
+        "index",
+        "log",
+        "queries-home"
+      ],
+      "has_counterpoints": false,
+      "word_count": 1205,
+      "source_pages": [
+        "2026-04-22-security-course-self-study-guide"
+      ],
+      "source_files": [
+        "chat screenshots",
+        "https://pages.nist.gov/800-63-4/sp800-63b.html",
+        "https://www.rfc-editor.org/rfc/rfc6749"
+      ],
+      "body_preview": "# How To Solve OAuth RT RBAC Security Quiz ## Question How should Vipin reason through a five-question security quiz covering NIST authenticator assurance levels, OAuth authorization, RT rules, replay attacks, and hierarchical RBAC? ## Study Note If the quiz is a graded individua"
+    },
+    {
       "id": "2026-05-05-how-to-understand-quantization-and-bit-rate",
       "title": "How To Understand Quantization And Bit Rate",
       "type": "query",
@@ -1611,6 +1731,49 @@
       "body_preview": "# How To Understand Quantization And Bit Rate ## Question How should the quantization slide be understood, especially the relations `M = 2^n` and `R = n/T = n f_s`? ## Short Answer Quantization maps each sampled analog amplitude to one of a finite number of discrete amplitude lev"
     },
     {
+      "id": "2026-05-05-how-to-write-venus-project-problem-statement",
+      "title": "How To Write Venus Project Problem Statement",
+      "type": "query",
+      "path": "wiki/queries/2026-05-05-how-to-write-venus-project-problem-statement.md",
+      "tags": [
+        "query",
+        "5eid0",
+        "venus-project",
+        "report-writing"
+      ],
+      "headings": [
+        "How To Write Venus Project Problem Statement",
+        "Question",
+        "Recommended Problem Statement",
+        "Slightly More Report-Like Version",
+        "Question-Form Version",
+        "Why This Works",
+        "Related"
+      ],
+      "links": [
+        "2026-04-22-5eid0-venus-project-course-materials",
+        "2026-04-22-computer-software-ui-role-plan-for-5eid0",
+        "2026-04-22-what-can-i-finish-independently-for-venus-basestation",
+        "index",
+        "log",
+        "queries-home"
+      ],
+      "backlinks": [
+        "index",
+        "log",
+        "queries-home"
+      ],
+      "has_counterpoints": false,
+      "word_count": 265,
+      "source_pages": [
+        "2026-04-22-5eid0-venus-project-course-materials",
+        "2026-04-22-computer-software-ui-role-plan-for-5eid0",
+        "2026-04-22-what-can-i-finish-independently-for-venus-basestation"
+      ],
+      "source_files": [],
+      "body_preview": "# How To Write Venus Project Problem Statement ## Question How should Vipin write a concise problem statement for the group report starting point of the Venus project? ## Recommended Problem Statement ```text The Venus exploration mission requires an autonomous two-robot system t"
+    },
+    {
       "id": "2026-05-05-why-pe-is-not-proportional-to-input-snr",
       "title": "Why Pe Is Not Proportional To Input SNR",
       "type": "query",
@@ -1653,6 +1816,90 @@
       "body_preview": "# Why Pe Is Not Proportional To Input SNR ## Question Why does the slide seem to say `P_e` is proportional to `(S/N)_in`? ## Short Answer Strictly, `P_e` should not be directly proportional to `(S/N)_in`. If `(S/N)_in` means input signal-to-noise ratio, then higher input SNR norm"
     },
     {
+      "id": "2026-05-07-what-does-depicts-mean",
+      "title": "What Does Depicts Mean",
+      "type": "query",
+      "path": "wiki/queries/2026-05-07-what-does-depicts-mean.md",
+      "tags": [
+        "query",
+        "english",
+        "vocabulary"
+      ],
+      "headings": [
+        "What Does Depicts Mean",
+        "Question",
+        "Short Answer",
+        "Grammar",
+        "Common Pattern",
+        "Related"
+      ],
+      "links": [
+        "index",
+        "log",
+        "queries-home"
+      ],
+      "backlinks": [
+        "index",
+        "log",
+        "queries-home"
+      ],
+      "has_counterpoints": false,
+      "word_count": 103,
+      "source_pages": [],
+      "source_files": [
+        "chat"
+      ],
+      "body_preview": "# What Does Depicts Mean ## Question What does `depicts` mean? ## Short Answer `Depicts` means: - depicts = shows - depicts = describes - depicts = portrays - depicts = represents In Chinese: - `depicts` = 描绘 - `depicts` = 描述 - `depicts` = 展示 - `depicts` = 表现出 ## Grammar `Depicts"
+    },
+    {
+      "id": "2026-05-08-how-to-integrate-venus-basestation-with-team-gitlab",
+      "title": "How To Integrate Venus Basestation With Team GitLab",
+      "type": "query",
+      "path": "wiki/queries/2026-05-08-how-to-integrate-venus-basestation-with-team-gitlab.md",
+      "tags": [
+        "query",
+        "5eid0",
+        "venus-project",
+        "git",
+        "gitlab",
+        "github",
+        "computer-software",
+        "ui"
+      ],
+      "headings": [
+        "How To Integrate Venus Basestation With Team GitLab",
+        "Question",
+        "Current Local Context",
+        "Recommended Strategy",
+        "Clean Repository Model",
+        "Why This Is Safer",
+        "Suggested Branch Name",
+        "Related"
+      ],
+      "links": [
+        "2026-04-22-computer-software-ui-role-plan-for-5eid0",
+        "2026-04-22-what-can-i-finish-independently-for-venus-basestation",
+        "index",
+        "log",
+        "queries-home"
+      ],
+      "backlinks": [
+        "index",
+        "log",
+        "queries-home"
+      ],
+      "has_counterpoints": false,
+      "word_count": 352,
+      "source_pages": [
+        "2026-04-22-computer-software-ui-role-plan-for-5eid0",
+        "2026-04-22-what-can-i-finish-independently-for-venus-basestation"
+      ],
+      "source_files": [
+        "chat"
+      ],
+      "body_preview": "# How To Integrate Venus Basestation With Team GitLab ## Question The Venus team now uses TU/e GitLab for the shared project. Vipin previously developed the base-station UI project on GitHub. How should he move or connect his work without disturbing teammates' modules? ## Current"
+    },
+    {
       "id": "queries-home",
       "title": "Queries Home",
       "type": "query",
@@ -1685,8 +1932,12 @@
         "2026-05-03-how-to-convert-this-spectrum-to-time-domain",
         "2026-05-03-how-to-understand-flat-top-sampling-questions",
         "2026-05-03-what-is-an-adc-and-why-10-bit-means-1024-levels",
+        "2026-05-05-how-to-solve-oauth-rt-rbac-security-quiz",
         "2026-05-05-how-to-understand-quantization-and-bit-rate",
-        "2026-05-05-why-pe-is-not-proportional-to-input-snr"
+        "2026-05-05-how-to-write-venus-project-problem-statement",
+        "2026-05-05-why-pe-is-not-proportional-to-input-snr",
+        "2026-05-07-what-does-depicts-mean",
+        "2026-05-08-how-to-integrate-venus-basestation-with-team-gitlab"
       ],
       "backlinks": [
         "2026-04-22-5eid0-venus-project-course-materials",
@@ -1711,14 +1962,18 @@
         "2026-05-03-how-to-convert-this-spectrum-to-time-domain",
         "2026-05-03-how-to-understand-flat-top-sampling-questions",
         "2026-05-03-what-is-an-adc-and-why-10-bit-means-1024-levels",
+        "2026-05-05-how-to-solve-oauth-rt-rbac-security-quiz",
         "2026-05-05-how-to-understand-quantization-and-bit-rate",
+        "2026-05-05-how-to-write-venus-project-problem-statement",
         "2026-05-05-why-pe-is-not-proportional-to-input-snr",
+        "2026-05-07-what-does-depicts-mean",
+        "2026-05-08-how-to-integrate-venus-basestation-with-team-gitlab",
         "index",
         "log",
         "overview"
       ],
       "has_counterpoints": false,
-      "word_count": 238,
+      "word_count": 277,
       "source_pages": [],
       "source_files": [],
       "body_preview": "# Queries Home Store durable answers to important questions here. ## Current Queries - [[2026-04-22-how-to-reduce-github-submit-prompts]] - [[2026-04-22-what-is-dbm]] - [[2026-04-22-what-is-spectroscopy]] - [[2026-04-22-how-are-k-omega-and-v-derived]] - [[2026-04-22-what-to-pay-a"
@@ -1920,6 +2175,7 @@
         "2026-04-22-how-to-position-yourself-for-embedded-software-in-5eid0",
         "2026-04-22-what-language-for-5eid0-computer-software-ui",
         "2026-04-22-what-to-pay-attention-to-in-5eid0-project-course",
+        "2026-05-05-how-to-write-venus-project-problem-statement",
         "index",
         "log"
       ],
@@ -2003,6 +2259,7 @@
       ],
       "backlinks": [
         "2026-04-22-what-to-pay-attention-to-in-security-self-study-guide",
+        "2026-05-05-how-to-solve-oauth-rt-rbac-security-quiz",
         "index",
         "log"
       ],
@@ -2013,6 +2270,50 @@
         "chat"
       ],
       "body_preview": "# Security Course Self-Study Guide ## Provenance - origin: chat - note: user-provided course self-study guide for a security course, including expectations for weekly study, AI use, information trustworthiness, and week-one suggested activities ## Core Messages - self-study shoul"
+    },
+    {
+      "id": "2026-05-08-university-of-minnesota-housing-contract-2026-2027",
+      "title": "University of Minnesota Housing Contract 2026-2027",
+      "type": "source",
+      "path": "wiki/sources/2026-05-08-university-of-minnesota-housing-contract-2026-2027.md",
+      "tags": [
+        "source",
+        "housing",
+        "university-of-minnesota",
+        "contract"
+      ],
+      "headings": [
+        "University of Minnesota Housing Contract 2026-2027",
+        "Provenance",
+        "Source Scope",
+        "Key Extracted Facts",
+        "Contract Periods",
+        "Break Periods",
+        "Cancellation, Release, And Refund Rules",
+        "Resident Risk And Responsibility Points",
+        "University Rights And Obligations",
+        "Links",
+        "Open Questions"
+      ],
+      "links": [
+        "university-housing",
+        "university-of-minnesota"
+      ],
+      "backlinks": [
+        "index",
+        "log",
+        "university-housing",
+        "university-of-minnesota"
+      ],
+      "has_counterpoints": false,
+      "word_count": 1351,
+      "source_pages": [
+        "GetPdf.pdf"
+      ],
+      "source_files": [
+        "raw/pdfs/2026-05-08-university-of-minnesota-housing-contract-2026-2027.pdf"
+      ],
+      "body_preview": "# University of Minnesota Housing Contract 2026-2027 ## Provenance - Source: local PDF provided by the user as `C:/Users/admin/Downloads/GetPdf.pdf`. - Stored raw copy: `raw/pdfs/2026-05-08-university-of-minnesota-housing-contract-2026-2027.pdf`. - PDF metadata title: `HRL Housin"
     },
     {
       "id": "2026-04-22-karpathy-upgrade-session",
@@ -2181,7 +2482,8 @@
         "Current State"
       ],
       "links": [
-        "personal-knowledge-systems"
+        "personal-knowledge-systems",
+        "university-housing"
       ],
       "backlinks": [
         "index",
@@ -2189,10 +2491,49 @@
         "overview"
       ],
       "has_counterpoints": false,
-      "word_count": 69,
+      "word_count": 68,
       "source_pages": [],
       "source_files": [],
       "body_preview": "# Topics This section holds durable subject clusters that are broader than a single concept page. ## Intended Use - map a research area with multiple concepts and sources - group recurring questions that span multiple pages - provide a stable landing page for long-running domains"
+    },
+    {
+      "id": "university-housing",
+      "title": "University Housing",
+      "type": "topic",
+      "path": "wiki/topics/university-housing.md",
+      "tags": [
+        "topic",
+        "housing",
+        "university"
+      ],
+      "headings": [
+        "University Housing",
+        "Scope",
+        "Current Source Base",
+        "Practical Takeaways",
+        "Key Dates From Current UMN Source",
+        "Watch Items",
+        "Counterpoints and Gaps",
+        "Related Pages"
+      ],
+      "links": [
+        "2026-05-08-university-of-minnesota-housing-contract-2026-2027",
+        "university-of-minnesota"
+      ],
+      "backlinks": [
+        "2026-05-08-university-of-minnesota-housing-contract-2026-2027",
+        "index",
+        "log",
+        "topics-home",
+        "university-of-minnesota"
+      ],
+      "has_counterpoints": true,
+      "word_count": 381,
+      "source_pages": [
+        "2026-05-08-university-of-minnesota-housing-contract-2026-2027"
+      ],
+      "source_files": [],
+      "body_preview": "# University Housing ## Scope This topic tracks practical knowledge about university housing contracts, deadlines, fees, eligibility, cancellation, release, and move-out obligations. ## Current Source Base - [[2026-05-08-university-of-minnesota-housing-contract-2026-2027]] - Univ"
     }
   ]
 }

@@ -505,3 +505,21 @@ tags:
 - Notes:
   - Preserved a safe workflow for integrating Vipin's GitHub basestation/UI work into the team's GitLab repository.
   - Recommended a dedicated `computer-software-ui-module` branch and a scoped folder to avoid disturbing teammates' modules.
+
+## [2026-05-08 10:03] ingest | university of minnesota housing contract 2026-2027
+
+- Pages created:
+  - [[2026-05-08-university-of-minnesota-housing-contract-2026-2027]]
+  - [[university-housing]]
+  - [[university-of-minnesota]]
+- Pages updated:
+  - [[topics-home]]
+  - [[index]]
+  - [[log]]
+- Sources used:
+  - `C:/Users/admin/Downloads/GetPdf.pdf`
+  - `raw/pdfs/2026-05-08-university-of-minnesota-housing-contract-2026-2027.pdf`
+- Notes:
+  - Ingested the University of Minnesota Housing & Residential Life 2026-2027 contract terms.
+  - Extracted key dates, fees, eligibility rules, cancellation/release conditions, break-period rules, checkout penalties, and resident/university responsibilities.
+  - Marked the listed Spring Break 2026 dates as ambiguous because they appear inconsistent with the 2026-2027 contract year.
