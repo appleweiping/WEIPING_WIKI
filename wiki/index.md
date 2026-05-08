@@ -81,6 +81,7 @@ This is the main catalog of the wiki.
 - [[2026-05-05-how-to-write-venus-project-problem-statement]] - Reusable English problem statement options for the 5EID0 Venus project group report.
 - [[2026-05-05-how-to-solve-oauth-rt-rbac-security-quiz]] - Reasoning guide for a security quiz on AAL, OAuth delegation, RT rules, replay attacks, and hierarchical RBAC.
 - [[2026-05-07-what-does-depicts-mean]] - Short vocabulary note explaining `depicts` as shows, describes, portrays, or represents.
+- [[2026-05-08-how-to-integrate-venus-basestation-with-team-gitlab]] - Git workflow plan for moving Vipin's Venus basestation/UI work into the team GitLab repository on a dedicated branch.
 
 ## Topics
 

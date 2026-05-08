@@ -488,3 +488,20 @@ tags:
 - Notes:
   - Preserved a short English vocabulary note explaining `depicts` as shows, describes, portrays, or represents.
   - Added Chinese meanings and example sentence patterns.
+
+## [2026-05-08 09:17] query | integrate venus basestation with team gitlab
+
+- Pages created:
+  - [[2026-05-08-how-to-integrate-venus-basestation-with-team-gitlab]]
+- Pages updated:
+  - [[queries-home]]
+  - [[index]]
+  - [[log]]
+- Sources used:
+  - [[2026-04-22-computer-software-ui-role-plan-for-5eid0]]
+  - [[2026-04-22-what-can-i-finish-independently-for-venus-basestation]]
+  - chat screenshots of the TU/e GitLab `Venus Team 28` project
+  - local git metadata from `D:/Undergraduate_project_netherlands/Venus basestation`
+- Notes:
+  - Preserved a safe workflow for integrating Vipin's GitHub basestation/UI work into the team's GitLab repository.
+  - Recommended a dedicated `computer-software-ui-module` branch and a scoped folder to avoid disturbing teammates' modules.
