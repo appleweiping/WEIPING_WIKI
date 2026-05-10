@@ -10,6 +10,20 @@ tags:
 
 # Log
 
+## [2026-05-10 22:57] analysis | deletion approval boundary
+
+- Pages updated:
+  - [[log]]
+- Operating documents updated:
+  - `AGENTS.md`
+  - `WORKFLOWS.md`
+  - `.wiki-schema.md`
+- Sources used:
+  - user clarification in chat: deletion means removing garbage/useless information; useful old information should be retained; ask for approval before deleting information.
+- Notes:
+  - Tightened active maintenance policy so agents may identify and propose deletion candidates, but must obtain explicit user approval before deleting any information.
+  - Clarified that useful old information should be preserved through annotation, archiving, or merging rather than removed.
+
 ## [2026-05-10 22:50] analysis | active maintenance crud policy
 
 - Pages updated:

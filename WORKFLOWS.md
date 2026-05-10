@@ -25,7 +25,7 @@
 - `delete`
   Scans references before deleting a durable page so indexes and graphs stay clean.
 - `maintain`
-  Performs periodic CRUD cleanup: add missing durable pages, update stale ones, merge duplicates, and delete misleading or low-value pages.
+  Performs periodic CRUD cleanup: add missing durable pages, update stale ones, merge duplicates, and prepare deletion proposals for genuinely useless or harmful pages.
 - `crystallize`
   Saves a high-value chat outcome back into the wiki as a durable page.
 - `site`
@@ -93,18 +93,20 @@ The wiki is the durable memory.
 
 ## Active Maintenance / CRUD
 
-The wiki should be maintained aggressively when evidence supports it. Do not preserve content just because it already exists.
+The wiki should be maintained actively when evidence supports it. Do not preserve garbage content just because it already exists, but do preserve useful old information.
 
 Periodic maintenance should:
 
 - create missing durable homes for repeated topics, sources, or project concepts
 - update pages whose claims, status, or framing have drifted
 - merge pages that split one idea without adding retrieval value
-- delete stale, misleading, unsafe, superseded, or low-signal pages
-- clean backlinks, section homes, `wiki/index.md`, and site-facing references after deletion or merge
+- archive or annotate useful old information instead of deleting it
+- identify stale, misleading, unsafe, superseded, or low-signal pages that may be garbage
+- ask the user for explicit approval before deleting any information
+- after approved deletion or merge, clean backlinks, section homes, `wiki/index.md`, and site-facing references
 - log the maintenance and commit scoped changes after lint/catalog validation
 
-For ambiguous deletions, prefer a short deprecation note or merge target only when it improves retrieval. Otherwise delete cleanly.
+Deletion proposals must state what would be removed, why it is not useful, what useful context is preserved elsewhere, and what references will be cleaned. For ambiguous cases, prefer a short deprecation note, archive marker, or merge target.
 
 ## Site Publishing
 

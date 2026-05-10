@@ -96,9 +96,11 @@ Treat the wiki as a maintained knowledge system, not an append-only archive. Per
 - Read and compare related pages before major maintenance so changes are based on the maintained graph, not isolated impressions.
 - Update or rewrite pages when stronger sources, better framing, or changed project reality makes the current version weaker.
 - Merge duplicate or near-duplicate pages instead of preserving unnecessary fragmentation.
-- Delete low-value, stale, misleading, superseded, or unsafe public content when cleanup is better than preservation.
-- Do not be conservative about deletion or rewriting merely because content already exists; be evidence-disciplined, not accumulation-biased.
-- Before deleting public pages, remove or retarget incoming links, index entries, section homes, and website-facing references.
+- Preserve useful old information even when it is no longer current; archive, annotate, or move it when that keeps context valuable.
+- Identify garbage, misleading, unsafe, duplicate, or genuinely useless content that may deserve deletion, but do not execute deletion without the user's explicit approval.
+- Do not be conservative about proposing cleanup merely because content already exists; be evidence-disciplined, not accumulation-biased.
+- Before proposing deletion, explain what would be removed, why it is low-value or harmful, what useful information will be preserved elsewhere, and which links/index entries would be retargeted.
+- After the user approves deleting public pages, remove or retarget incoming links, index entries, section homes, and website-facing references.
 - Record meaningful maintenance in `wiki/log.md`, and commit scoped maintenance changes after validation.
 
 ## Wiki Structure
@@ -263,11 +265,11 @@ When asked to health-check the wiki, look for:
 - concepts/entities that are mentioned often but lack dedicated pages
 - missing source attribution
 - overly large pages that should split
-- duplicate, low-value, misleading, or superseded pages that should be merged, rewritten, or deleted
+- duplicate, low-value, misleading, or superseded pages that should be merged, rewritten, archived, or proposed for deletion
 - gaps that suggest useful future sources
 - public pages that mention `raw/private-*` or `wiki-private/`
 
-Record meaningful lint results in `wiki/analyses/` and add a `lint` entry to the log. When the fix is clear and low-risk, perform the maintenance instead of only reporting it.
+Record meaningful lint results in `wiki/analyses/` and add a `lint` entry to the log. When the fix is clear and low-risk, perform non-destructive maintenance instead of only reporting it. Any actual deletion of information requires explicit user approval first.
 
 Operational scripts may be used when helpful:
 
