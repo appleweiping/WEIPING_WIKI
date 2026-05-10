@@ -22,19 +22,54 @@ concurrency:
 jobs:
   build:
     runs-on: ubuntu-latest
+    outputs:
+      pages_enabled: ${{ steps.detect-pages.outputs.enabled }}
     steps:
       - name: Checkout wiki
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
+
+      - name: Validate wiki catalog and lint gates
+        run: |
+          python scripts/wiki-catalog.py --root .
+          python - <<'PY'
+          import sys
+          from pathlib import Path
+
+          sys.path.insert(0, "scripts")
+          from wiki_core import lint_wiki
+
+          report = lint_wiki(Path(".").resolve())
+          fatal_keys = [
+              "broken_links",
+              "ambiguous_links",
+              "missing_from_index",
+              "private_leaks",
+          ]
+          failed = False
+          for key in fatal_keys:
+              items = report.get(key, [])
+              if items:
+                  failed = True
+                  print(f"::error title={key}::{len(items)} issue(s)")
+                  for item in items:
+                      print(f"- {item}")
+          if report.get("catalog_status") != "fresh":
+              failed = True
+              print(f"::error title=catalog_status::{report.get('catalog_status')}")
+          if failed:
+              raise SystemExit(1)
+          print("Wiki validation passed.")
+          PY
 
       - name: Checkout Quartz
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
         with:
           repository: jackyzha0/quartz
           ref: v4
           path: .quartz-build
 
       - name: Setup Node
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@v5
         with:
           node-version: 22
           cache: npm
@@ -63,15 +98,41 @@ jobs:
             exit 1
           fi
 
+      - name: Detect Pages configuration
+        id: detect-pages
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          status="$(curl -L -sS -o /tmp/pages.json -w "%{http_code}" \
+            -H "Accept: application/vnd.github+json" \
+            -H "Authorization: Bearer ${GH_TOKEN}" \
+            -H "X-GitHub-Api-Version: 2022-11-28" \
+            "https://api.github.com/repos/${GITHUB_REPOSITORY}/pages")"
+
+          if [ "$status" = "200" ]; then
+            echo "enabled=true" >> "$GITHUB_OUTPUT"
+            echo "GitHub Pages is enabled; deployment will run."
+          elif [ "$status" = "404" ]; then
+            echo "enabled=false" >> "$GITHUB_OUTPUT"
+            echo "::notice::GitHub Pages is not enabled for this repository. Build validation passed, deployment will be skipped."
+          else
+            echo "Could not determine GitHub Pages status. API status: $status" >&2
+            cat /tmp/pages.json >&2
+            exit 1
+          fi
+
       - name: Setup Pages
-        uses: actions/configure-pages@v5
+        if: steps.detect-pages.outputs.enabled == 'true'
+        uses: actions/configure-pages@v6
 
       - name: Upload Pages artifact
-        uses: actions/upload-pages-artifact@v3
+        if: steps.detect-pages.outputs.enabled == 'true'
+        uses: actions/upload-pages-artifact@v4
         with:
           path: .quartz-build/public
 
   deploy:
+    if: needs.build.outputs.pages_enabled == 'true'
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
@@ -80,4 +141,4 @@ jobs:
     steps:
       - name: Deploy to GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@v4
+        uses: actions/deploy-pages@v5
