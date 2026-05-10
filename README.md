@@ -39,6 +39,7 @@ For normal questions, the agent should answer quickly from the maintained wiki f
 - Fast answer lane: `wiki/index.md` -> `wiki/catalog.json` -> top relevant maintained pages.
 - Durable ingest lane: update or create wiki pages, rebuild catalog, lint, update log/index, commit, and push.
 - Large tasks: use multi-agent collaboration by default when available, with clear exploration, implementation, and verification roles.
+- Missing dependencies: download the narrowest required tool into `.wiki-tmp/` when needed, verify it, and keep generated artifacts out of Git.
 
 ## Supported Workflows
 

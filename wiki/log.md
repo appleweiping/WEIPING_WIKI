@@ -591,3 +591,13 @@ tags:
   - Refactored script behavior around a shared parser/index core for catalog, search, context, status, and lint.
   - Added a Quartz publishing adapter for the public wiki layer with private/raw exclusion checks.
   - Recorded multi-agent collaboration as the default for large content or architecture tasks.
+
+## [2026-05-10 22:01] analysis | project-local missing dependency policy
+
+- Pages updated:
+  - [[log]]
+- Sources used:
+  - follow-up chat instruction granting permission to download genuinely missing dependencies
+- Notes:
+  - Added a repository rule to download only the narrowest required missing dependency into project-local temporary storage when needed.
+  - Updated the Quartz build path so a missing local `npm` no longer blocks the website build.

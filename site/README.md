@@ -14,6 +14,8 @@ From the repository root:
 
 The script clones Quartz v4 into `.wiki-tmp/quartz`, syncs public Markdown, copies the site configuration, and builds `public/`.
 
+If local `node` or `npm` is missing, the PowerShell build script downloads an official Node 22 Windows x64 toolchain into `.wiki-tmp/node` and uses it only for this project.
+
 ## GitHub Pages
 
 The workflow in `.github/workflows/deploy.yml` builds the same public-only site and deploys the `public/` artifact with GitHub Pages.

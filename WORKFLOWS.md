@@ -87,6 +87,7 @@ The wiki is the durable memory.
 - Prefer narrow, observable commands over one large opaque script.
 - Treat validation outputs as gates before commits and pushes.
 - Use multi-agent collaboration by default for large content, architecture, and website tasks when the environment supports it.
+- If a required dependency is truly missing, fetch the narrowest needed tool into `.wiki-tmp/` or another project-local cache and continue after verification.
 
 ## Site Publishing
 

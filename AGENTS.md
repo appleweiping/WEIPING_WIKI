@@ -42,6 +42,15 @@ For substantive questions, default to a two-lane workflow:
 
 Do not make the user wait for a full ingest when a grounded short answer can be given from existing maintained pages.
 
+## Missing Dependency Policy
+
+If a required tool or dependency is genuinely missing, download or install the narrowest needed dependency into the project-local temporary area when practical, then continue the task.
+
+- Prefer project-local or cache-local installs such as `.wiki-tmp/` over global system changes.
+- Verify downloaded tools before relying on them.
+- Do not download broad toolchains speculatively; only fetch what the current task actually needs.
+- Keep downloaded build artifacts out of Git unless they are deliberate source files.
+
 ## Repository Structure
 
 - `raw/`
