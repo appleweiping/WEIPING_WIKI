@@ -15,6 +15,8 @@ cssclasses:
 
 This is a working knowledge dashboard for fast answers, slow ingest, research ideation, and project memory.
 
+**Language:** English · [中文](./zh/) · [日本語](./ja/)
+
 > [!tip] Start here
 > Press `Ctrl+K` or `/` to search the whole public wiki. Use the graph and backlinks to move through related pages instead of reading the catalog from top to bottom.
 

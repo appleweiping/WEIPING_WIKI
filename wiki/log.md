@@ -10,6 +10,23 @@ tags:
 
 # Log
 
+## [2026-05-10 23:36] analysis | multilingual public homepage options
+
+- Pages created:
+  - [[home-zh]]
+  - [[home-ja]]
+- Pages updated:
+  - [[home]]
+  - [[index]]
+  - [[log]]
+- Site files updated:
+  - `site/sync-content.mjs`
+- Sources used:
+  - user instruction in chat to add Chinese and Japanese options to the public website.
+- Notes:
+  - Added Chinese and Japanese dashboard pages that mirror the practical homepage structure.
+  - Updated the site sync adapter so English remains `/`, Chinese is generated at `/zh/`, and Japanese is generated at `/ja/`.
+
 ## [2026-05-10 23:20] analysis | richer public site and abstract research trigger
 
 - Pages updated:

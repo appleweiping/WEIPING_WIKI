@@ -15,6 +15,8 @@ This is the main catalog of the wiki.
 ## Overview
 
 - [[home]] - Top-level overview of the knowledge base and workflow.
+- [[home-zh]] - Chinese homepage for the public wiki dashboard.
+- [[home-ja]] - Japanese homepage for the public wiki dashboard.
 - [[overview]] - Structural map of the repository layers, sections, and active public domains.
 - [[log]] - Chronological record of ingests, analyses, queries, and maintenance actions.
 - Website publishing layer - `site/` builds the public `wiki/` layer with Quartz and GitHub Pages while excluding private/raw materials.

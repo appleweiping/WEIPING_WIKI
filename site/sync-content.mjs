@@ -8,7 +8,7 @@ const sourceRoot = path.join(repoRoot, "wiki")
 const destRoot = path.resolve(process.argv[2] ?? path.join(repoRoot, ".wiki-tmp", "quartz", "content"))
 
 const skippedDirs = new Set(["_templates"])
-const skippedFiles = new Set(["home.md", "index.md", "knowledge-graph.md"])
+const skippedFiles = new Set(["home.md", "home-zh.md", "home-ja.md", "index.md", "knowledge-graph.md"])
 
 function rewriteSiteLinks(markdown) {
   return markdown
@@ -41,10 +41,10 @@ async function copyMarkdownTree(source, dest) {
   }
 }
 
-function asSiteHome(markdown) {
+function asSiteHome(markdown, alias) {
   return rewriteSiteLinks(markdown)
     .replace(/aliases:\s*\n(?:\s+- .+\n)*/m, "")
-    .replace(/^---\n/, "---\naliases:\n  - home\n")
+    .replace(/^---\n/, `---\naliases:\n  - ${alias}\n`)
 }
 
 function asSiteCatalog(markdown) {
@@ -59,9 +59,15 @@ await rm(destRoot, { recursive: true, force: true })
 await copyMarkdownTree(sourceRoot, destRoot)
 
 const homeMarkdown = await readFile(path.join(sourceRoot, "home.md"), "utf8")
+const homeZhMarkdown = await readFile(path.join(sourceRoot, "home-zh.md"), "utf8")
+const homeJaMarkdown = await readFile(path.join(sourceRoot, "home-ja.md"), "utf8")
 const catalogMarkdown = await readFile(path.join(sourceRoot, "index.md"), "utf8")
-await writeFile(path.join(destRoot, "index.md"), asSiteHome(homeMarkdown))
+await writeFile(path.join(destRoot, "index.md"), asSiteHome(homeMarkdown, "home"))
+await mkdir(path.join(destRoot, "zh"), { recursive: true })
+await mkdir(path.join(destRoot, "ja"), { recursive: true })
+await writeFile(path.join(destRoot, "zh", "index.md"), asSiteHome(homeZhMarkdown, "home-zh"))
+await writeFile(path.join(destRoot, "ja", "index.md"), asSiteHome(homeJaMarkdown, "home-ja"))
 await writeFile(path.join(destRoot, "catalog.md"), asSiteCatalog(catalogMarkdown))
 
 console.log(`Synced public markdown from ${sourceRoot} to ${destRoot}`)
-console.log("Mapped wiki/home.md to the site root and preserved wiki/index.md as catalog.md")
+console.log("Mapped wiki/home.md to the site root, generated zh/ja home pages, and preserved wiki/index.md as catalog.md")
