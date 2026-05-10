@@ -6,6 +6,13 @@ Desktop.ini
 .wiki-cache.json
 .llm-wiki-path
 .wiki-tmp/
+node_modules/
+public/
+.quartz-cache/
+.quartz/
+.quartz-build/
+__pycache__/
+*.pyc
 
 # High-sensitivity local materials must never be published
 raw/private*/
