@@ -88,6 +88,19 @@ Local project names, folder names, and internal layouts may change. For known lo
 - Prefer stable identifiers such as git remotes, README titles, package metadata, deployment targets, and course codes over exact folder spelling.
 - For external project edits, inspect current git status first and never stage unrelated changes.
 
+## Active Maintenance / CRUD Policy
+
+Treat the wiki as a maintained knowledge system, not an append-only archive. Periodically perform real create, read, update, and delete passes when scale, drift, duplication, or stale claims make them useful.
+
+- Add pages when a durable concept, project, source, or answer deserves its own stable home.
+- Read and compare related pages before major maintenance so changes are based on the maintained graph, not isolated impressions.
+- Update or rewrite pages when stronger sources, better framing, or changed project reality makes the current version weaker.
+- Merge duplicate or near-duplicate pages instead of preserving unnecessary fragmentation.
+- Delete low-value, stale, misleading, superseded, or unsafe public content when cleanup is better than preservation.
+- Do not be conservative about deletion or rewriting merely because content already exists; be evidence-disciplined, not accumulation-biased.
+- Before deleting public pages, remove or retarget incoming links, index entries, section homes, and website-facing references.
+- Record meaningful maintenance in `wiki/log.md`, and commit scoped maintenance changes after validation.
+
 ## Wiki Structure
 
 - `wiki/home.md`
@@ -250,10 +263,11 @@ When asked to health-check the wiki, look for:
 - concepts/entities that are mentioned often but lack dedicated pages
 - missing source attribution
 - overly large pages that should split
+- duplicate, low-value, misleading, or superseded pages that should be merged, rewritten, or deleted
 - gaps that suggest useful future sources
 - public pages that mention `raw/private-*` or `wiki-private/`
 
-Record meaningful lint results in `wiki/analyses/` and add a `lint` entry to the log.
+Record meaningful lint results in `wiki/analyses/` and add a `lint` entry to the log. When the fix is clear and low-risk, perform the maintenance instead of only reporting it.
 
 Operational scripts may be used when helpful:
 

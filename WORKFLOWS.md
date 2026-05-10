@@ -24,6 +24,8 @@
   Summarizes scale, recent activity, and public/private health without exposing private details.
 - `delete`
   Scans references before deleting a durable page so indexes and graphs stay clean.
+- `maintain`
+  Performs periodic CRUD cleanup: add missing durable pages, update stale ones, merge duplicates, and delete misleading or low-value pages.
 - `crystallize`
   Saves a high-value chat outcome back into the wiki as a durable page.
 - `site`
@@ -88,6 +90,21 @@ The wiki is the durable memory.
 - Treat validation outputs as gates before commits and pushes.
 - Use multi-agent collaboration by default for large content, architecture, and website tasks when the environment supports it.
 - If a required dependency is truly missing, fetch the narrowest needed tool into `.wiki-tmp/` or another project-local cache and continue after verification.
+
+## Active Maintenance / CRUD
+
+The wiki should be maintained aggressively when evidence supports it. Do not preserve content just because it already exists.
+
+Periodic maintenance should:
+
+- create missing durable homes for repeated topics, sources, or project concepts
+- update pages whose claims, status, or framing have drifted
+- merge pages that split one idea without adding retrieval value
+- delete stale, misleading, unsafe, superseded, or low-signal pages
+- clean backlinks, section homes, `wiki/index.md`, and site-facing references after deletion or merge
+- log the maintenance and commit scoped changes after lint/catalog validation
+
+For ambiguous deletions, prefer a short deprecation note or merge target only when it improves retrieval. Otherwise delete cleanly.
 
 ## Site Publishing
 

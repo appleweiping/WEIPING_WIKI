@@ -10,6 +10,19 @@ tags:
 
 # Log
 
+## [2026-05-10 22:50] analysis | active maintenance crud policy
+
+- Pages updated:
+  - [[log]]
+- Operating documents updated:
+  - `AGENTS.md`
+  - `WORKFLOWS.md`
+  - `.wiki-schema.md`
+- Sources used:
+  - user instruction in chat: periodically perform create/read/update/delete maintenance and delete or rewrite when warranted.
+- Notes:
+  - Added an explicit non-conservative maintenance rule: the wiki should merge, rewrite, and delete stale, duplicate, misleading, unsafe, or low-value public content when evidence supports cleanup.
+
 ## [2026-04-21 17:36] bootstrap | initialize vipin wiki
 
 - Pages created:
