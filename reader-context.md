@@ -26,6 +26,7 @@ It exists so the knowledge base is not only about sources, but also about how Vi
 - highlight tradeoffs, contradictions, and missing evidence
 - avoid losing useful analysis inside chat history
 - maintain a clear public/private boundary at all times
+- answer quickly from content-nature maps, then inspect live local projects only when current structure or edits matter
 
 ## Reader-Specific Preferences
 
@@ -33,6 +34,8 @@ It exists so the knowledge base is not only about sources, but also about how Vi
 - research notes should separate facts, inferences, and open questions
 - important answers should usually be crystallized into the wiki
 - when a topic is controversial, preserve the best counterarguments instead of flattening them
+- research ideation should be ambitious and original, not constrained to stitching together existing project parts
+- when useful, recommend substantial project reframing or redesign instead of only local improvements
 
 ## Anti-Patterns
 
@@ -40,6 +43,9 @@ It exists so the knowledge base is not only about sources, but also about how Vi
 - polished prose with weak sourcing
 - cross-links added without real semantic value
 - graph-first design work that distracts from ingest, synthesis, and retrieval
+- "paper idea by collage": combining existing modules without a new mechanism, claim, or experiment
+- over-respecting the current project frame when a stronger research direction requires changing it
+- treating old folder names or stale wiki paths as guaranteed current truth
 
 ## Long-Horizon Questions
 

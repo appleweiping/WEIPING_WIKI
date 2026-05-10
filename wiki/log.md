@@ -601,3 +601,50 @@ tags:
 - Notes:
   - Added a repository rule to download only the narrowest required missing dependency into project-local temporary storage when needed.
   - Updated the Quartz build path so a missing local `npm` no longer blocks the website build.
+
+## [2026-05-10 22:14] analysis | research project roots and ideation policy
+
+- Pages created:
+  - [[2026-05-10-research-project-roots]]
+  - [[analog-agent]]
+  - [[uncertainty]]
+  - [[truce-rec]]
+  - [[tgl-rec]]
+  - [[donebench]]
+  - [[uncertaintyprotein-ai4s]]
+  - [[protein-optimization-feedback-shift]]
+  - [[research-projects]]
+  - [[research-ideation-policy]]
+  - [[2026-05-10-vipin-research-project-map]]
+- Pages updated:
+  - [[home]]
+  - [[index]]
+  - [[log]]
+- Sources used:
+  - read-only inspection of `D:/Research/Agent-AI4EDA`, `D:/Research/Uncertainty`, `D:/Research/TRUCE-Rec`, `D:/Research/TGL-Rec`, `D:/Research/DoneBench`, and `D:/Research/UncertaintyProtein-AI4S`
+  - user instruction to preserve `UncertaintyProtein-AI4S` explicitly and enforce ambitious, non-stitching research ideation
+- Notes:
+  - Preserved the main active research projects as durable wiki entities without modifying external project repositories.
+  - Added `UncertaintyProtein-AI4S` as an exact-name project entry linked to the protein feedback-shift conceptual page.
+  - Recorded a research ideation policy: no shallow stitching, force novelty, and allow radical project reframing while preserving evidence discipline.
+
+## [2026-05-10 22:33] analysis | d drive portfolio and undergraduate roots
+
+- Pages created:
+  - [[2026-05-10-d-drive-portfolio-and-undergraduate-roots]]
+  - [[local-project-roots]]
+  - [[weipingyan-portfolio]]
+  - [[academic-portfolio]]
+  - [[undergraduate-projects-netherlands]]
+  - [[undergraduate-study-netherlands]]
+- Pages updated:
+  - [[home]]
+  - [[index]]
+  - [[log]]
+- Sources used:
+  - read-only inspection of `D:/Academic_portfolio`, `D:/WeipingYan_portfolio`, `D:/Undergraduate_project_netherlands`, and `D:/Undergraduate_study_netherlands`
+  - user clarification that adding these roots means adding content nature, not copying folders into the wiki
+- Notes:
+  - Added public-safe content-nature routing for portfolio and undergraduate archives.
+  - Recorded dynamic discovery rules because local names and internal structures may change.
+  - Marked academic/application, private memory-site, course-material, credential, and personal-document boundaries as sensitive/cautious.

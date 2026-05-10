@@ -14,7 +14,8 @@ WIKI_EXCLUDE_DIRS = {"_templates"}
 WIKI_EXCLUDE_STEMS = {"knowledge-graph"}
 LINK_RE = re.compile(r"\[\[([^\]]+)\]\]")
 FRONTMATTER_RE = re.compile(r"^---\r?\n(.*?)\r?\n---\r?\n", re.DOTALL)
-TOKEN_RE = re.compile(r"[A-Za-z0-9_+\-/]+")
+TOKEN_RE = re.compile(r"[\w+\-/]+", re.UNICODE)
+CJK_RE = re.compile(r"[\u3400-\u9fff]")
 LINT_EXCLUDE_NAMES = {
     "home",
     "overview",
@@ -255,7 +256,15 @@ def catalog_freshness(root: Path) -> str:
 
 
 def tokenize(text: str) -> list[str]:
-    return [token.lower() for token in TOKEN_RE.findall(text)]
+    tokens: list[str] = []
+    for raw_token in TOKEN_RE.findall(text):
+        token = raw_token.lower()
+        tokens.append(token)
+        if CJK_RE.search(token):
+            cjk_chars = [char for char in token if CJK_RE.match(char)]
+            tokens.extend(cjk_chars)
+            tokens.extend("".join(cjk_chars[index : index + 2]) for index in range(len(cjk_chars) - 1))
+    return tokens
 
 
 def _score_page(page: dict, query_tokens: list[str], doc_freq: Counter, total_docs: int) -> float:

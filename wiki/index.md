@@ -23,11 +23,23 @@ This is the main catalog of the wiki.
 
 - [[vipin]] - Central person page for the owner/subject of this knowledge base.
 - [[university-of-minnesota]] - Issuer entity for University of Minnesota housing contract materials.
+- [[analog-agent]] - AI4EDA layered analog circuit design agent project.
+- [[uncertainty]] - Current main project for task-grounded calibrated uncertainty in LLM-based recommendation.
+- [[truce-rec]] - Uncertainty-aware generative recommendation project with strict evidence labels and official-baseline gates.
+- [[tgl-rec]] - Temporal graph-to-language recommendation project focused on next-need transitions.
+- [[donebench]] - Specification-grounding benchmark for tool-using agents.
+- [[uncertaintyprotein-ai4s]] - Exact local project-name entry for the AI4S protein optimization feedback-shift project.
+- [[protein-optimization-feedback-shift]] - Conceptual project page for uncertainty-aware closed-loop protein sequence optimization.
+- [[weipingyan-portfolio]] - Local portfolio workspace containing public site/profile repos and a private memory site.
+- [[academic-portfolio]] - Sensitive academic/application archive.
+- [[undergraduate-projects-netherlands]] - Undergraduate project archive for Netherlands/TU/e coursework projects.
+- [[undergraduate-study-netherlands]] - Undergraduate study archive organized by course/domain.
 
 ## Concepts
 
 - [[llm-wiki]] - Persistent wiki pattern in which an LLM compiles knowledge into maintained markdown pages.
 - [[llm-based-recommendation]] - Research area focused on using large language models within recommender systems and recommendation workflows.
+- [[research-ideation-policy]] - Rule for ambitious科研讨论: no shallow stitching, force novelty, and allow radical reframing.
 
 ## Sources
 
@@ -39,12 +51,15 @@ This is the main catalog of the wiki.
 - [[2026-04-21-nr-baseline-paper-set]] - External local paper set with 14 PDFs from the `NR` baseline folder under `Uncertainty-LLM4Rec`.
 - [[2026-04-21-recommendation-paper-library]] - Larger external local library of LLM-and-recommendation papers, with PDFs plus topic/project subfolders.
 - [[2026-05-08-university-of-minnesota-housing-contract-2026-2027]] - University of Minnesota Housing & Residential Life contract terms, key dates, fees, cancellation/release rules, and resident obligations for 2026-2027.
+- [[2026-05-10-research-project-roots]] - Read-only survey of Vipin's main local research project roots under `D:/Research`.
+- [[2026-05-10-d-drive-portfolio-and-undergraduate-roots]] - Public-safe content-nature inventory for D-drive portfolio, undergraduate project, and study roots.
 
 ## Analyses
 
 - [[2026-04-21-vipin-wiki-bootstrap]] - Initial implementation memo describing how this repository instantiates the LLM wiki idea.
 - [[2026-04-21-llm-rec-research-map]] - First-pass map of the LLM-for-recommendation literature represented in the current local paper collections.
 - [[2026-04-22-llm-wiki-skill-alignment]] - System alignment memo describing how this repository now matches the reference `llm-wiki-skill` operating model.
+- [[2026-05-10-vipin-research-project-map]] - Cross-project map of Vipin's active research portfolio and claim boundaries.
 
 ## Synthesis
 
@@ -93,6 +108,8 @@ This is the main catalog of the wiki.
 - [[topics-home]] - Entry page for durable subject clusters.
 - [[personal-knowledge-systems]] - Topic map for long-lived systems that accumulate, structure, and revisit knowledge.
 - [[university-housing]] - Topic map for university housing deadlines, fees, cancellation/release rules, and contract obligations.
+- [[research-projects]] - Topic map of Vipin's active research projects and cross-cutting evidence rules.
+- [[local-project-roots]] - Topic map for local D-drive project/archive roots, discovery rules, and safety boundaries.
 
 ## Comparisons
 

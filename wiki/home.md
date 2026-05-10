@@ -27,7 +27,10 @@ Its purpose is not just to store documents, but to compile them into an evolving
 
 ## Active Research And Knowledge Areas
 
+- [[local-project-roots]]
 - [[llm-based-recommendation]]
+- [[research-projects]]
+- [[research-ideation-policy]]
 - [[personal-knowledge-systems]]
 - [[llm-wiki]]
 - [[university-housing]]
@@ -47,6 +50,7 @@ Its purpose is not just to store documents, but to compile them into an evolving
 - Which recommendation papers deserve stable concept pages instead of source-only notes?
 - Which repeated course/project questions should become topic pages?
 - What website views make this knowledge base easier to revisit weekly?
+- Which current research projects should be radically reframed rather than incrementally polished?
 
 ## System Files
 

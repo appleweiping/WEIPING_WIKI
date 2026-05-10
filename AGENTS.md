@@ -80,6 +80,14 @@ If a required tool or dependency is genuinely missing, download or install the n
 - When the user grants broader local access, interpret that as permission to help across repositories when asked, not as permission to freely edit unrelated files.
 - Prefer the narrowest practical change scope.
 
+## Dynamic Local Project Rule
+
+Local project names, folder names, and internal layouts may change. For known local roots, use the wiki for quick routing and high-level context, but rescan the live target before making claims that depend on current files or before editing anything.
+
+- "Add to wiki" means preserve content nature, purpose, discovery rules, and safety boundaries; it does not mean copying whole folders into `wiki/`.
+- Prefer stable identifiers such as git remotes, README titles, package metadata, deployment targets, and course codes over exact folder spelling.
+- For external project edits, inspect current git status first and never stage unrelated changes.
+
 ## Wiki Structure
 
 - `wiki/home.md`
@@ -213,6 +221,17 @@ Recommended roles:
 
 Agents must have disjoint write scopes when multiple workers edit in parallel.
 The coordinator must integrate results and avoid staging unrelated local changes.
+
+## Research Ideation Policy
+
+When the user asks for research ideas, paper positioning, method design, or project strategy:
+
+- Do not merely stitch together existing projects, baselines, papers, or modules.
+- Treat existing repositories as context, not a cage.
+- Prefer original problem reframing, sharper claims, new experimental axes, and stronger mechanisms over incremental feature mixing.
+- Be willing to recommend major changes to a project's thesis, method, protocol, or architecture when the evidence suggests the current framing is weak.
+- Preserve evidence discipline: radical ideas still need falsifiable claims, baselines, ablations, failure modes, and reviewer-grade objections.
+- Separate speculative invention from extracted project facts.
 
 ## Commit Policy
 

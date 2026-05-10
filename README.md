@@ -40,6 +40,7 @@ For normal questions, the agent should answer quickly from the maintained wiki f
 - Durable ingest lane: update or create wiki pages, rebuild catalog, lint, update log/index, commit, and push.
 - Large tasks: use multi-agent collaboration by default when available, with clear exploration, implementation, and verification roles.
 - Missing dependencies: download the narrowest required tool into `.wiki-tmp/` when needed, verify it, and keep generated artifacts out of Git.
+- Local projects: wiki pages record content nature and routing hints, while actual edits or current-state answers require live rescanning because paths and internals may change.
 
 ## Supported Workflows
 
