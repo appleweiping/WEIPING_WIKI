@@ -110,7 +110,6 @@ The repository is intentionally structured so that private files stay local whil
 
 ## Optional Artifacts
 
-- `wiki/graph-data.json` and `wiki/knowledge-graph.html` can still be generated, but graph output is secondary to ingest quality, search quality, and durable retrieval.
 - The public website is built from `wiki/` through `site/` and GitHub Pages. It intentionally excludes private wiki layers and raw source folders.
 
 

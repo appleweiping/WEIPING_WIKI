@@ -92,6 +92,7 @@ if (-not (Test-Path $quartzPath)) {
 & $nodeCmd (Join-Path $rootPath "site\sync-content.mjs") $contentPath
 Copy-Item -LiteralPath (Join-Path $rootPath "site\quartz.config.ts") -Destination (Join-Path $quartzPath "quartz.config.ts") -Force
 Copy-Item -LiteralPath (Join-Path $rootPath "site\quartz.layout.ts") -Destination (Join-Path $quartzPath "quartz.layout.ts") -Force
+Copy-Item -LiteralPath (Join-Path $rootPath "site\custom.scss") -Destination (Join-Path $quartzPath "quartz\styles\custom.scss") -Force
 
 Push-Location $quartzPath
 try {

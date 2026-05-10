@@ -34,3 +34,4 @@ Language: English
 3. Prefer synthesis over duplication.
 4. Protect private materials by default.
 5. Turn repeated questions into durable pages and tools.
+6. For abstract project or research questions, search broadly across strong external examples before giving confident recommendations, while using them for inspiration rather than copying.

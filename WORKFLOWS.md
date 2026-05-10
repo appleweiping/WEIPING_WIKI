@@ -43,6 +43,12 @@ Questions use a fast-answer-first contract:
 
 This keeps conversations responsive while preserving the compounding wiki behavior.
 
+## Abstract Project / Research Queries
+
+When a request is phrased abstractly, such as "how should this project work", "what architecture should I use", "what research direction is promising", or "how do people usually solve this", treat it as a prior-art and inspiration task.
+
+Use the maintained wiki first for local context, then search broadly across mainstream GitHub repositories, official project pages, benchmark repos, and strong top-conference paper/project pages. Compare several examples rather than anchoring on one. Return synthesized lessons, reusable patterns, and cautions, not copied artifacts.
+
 ## Canonical Flow
 
 1. Read `wiki/index.md` and recent `wiki/log.md` entries.

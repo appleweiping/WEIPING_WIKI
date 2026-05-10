@@ -1,0 +1,93 @@
+@use "./base.scss";
+
+.dashboard article {
+  --dashboard-border: color-mix(in srgb, var(--lightgray) 72%, transparent);
+  --dashboard-panel: color-mix(in srgb, var(--light) 90%, var(--highlight));
+  --dashboard-accent: color-mix(in srgb, var(--secondary) 84%, var(--tertiary));
+}
+
+.dashboard article > h1 {
+  font-size: 2.45rem;
+  line-height: 1.05;
+  margin-bottom: 0.45rem;
+}
+
+.dashboard article > h1 + p {
+  max-width: 48rem;
+  color: var(--darkgray);
+  font-size: 1.08rem;
+}
+
+.dashboard article blockquote {
+  border: 1px solid var(--dashboard-border);
+  border-left: 4px solid var(--dashboard-accent);
+  border-radius: 8px;
+  background: var(--dashboard-panel);
+}
+
+.dashboard article table {
+  display: table;
+  width: 100%;
+  margin: 1rem 0 1.5rem;
+  border-collapse: separate;
+  border-spacing: 0;
+  overflow: hidden;
+  border: 1px solid var(--dashboard-border);
+  border-radius: 8px;
+  background: var(--light);
+}
+
+.dashboard article thead {
+  background: color-mix(in srgb, var(--secondary) 12%, var(--light));
+}
+
+.dashboard article th,
+.dashboard article td {
+  padding: 0.78rem 0.88rem;
+  vertical-align: top;
+}
+
+.dashboard article tr:nth-child(even) td {
+  background: color-mix(in srgb, var(--lightgray) 23%, transparent);
+}
+
+.dashboard article h2 {
+  margin-top: 2.1rem;
+  padding-top: 0.8rem;
+  border-top: 1px solid var(--dashboard-border);
+}
+
+.dashboard article h2 + ul {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+  gap: 0.7rem;
+  padding-left: 0;
+}
+
+.dashboard article h2 + ul > li {
+  list-style: none;
+  min-height: 4.2rem;
+  padding: 0.78rem 0.9rem;
+  border: 1px solid var(--dashboard-border);
+  border-radius: 8px;
+  background: var(--dashboard-panel);
+}
+
+.dashboard article h2 + ul > li a {
+  font-weight: 700;
+}
+
+.dashboard article code {
+  white-space: nowrap;
+}
+
+@media (max-width: 700px) {
+  .dashboard article > h1 {
+    font-size: 2rem;
+  }
+
+  .dashboard article table {
+    display: block;
+    overflow-x: auto;
+  }
+}

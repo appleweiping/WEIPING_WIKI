@@ -243,6 +243,8 @@ When the user asks for research ideas, paper positioning, method design, or proj
 
 - Do not merely stitch together existing projects, baselines, papers, or modules.
 - Treat existing repositories as context, not a cage.
+- When the user uses abstract or general terms about projects or research direction, broaden the search before answering: inspect multiple relevant mainstream GitHub projects, top-conference papers, official project pages, benchmark repos, and strong implementation patterns for inspiration.
+- Do not copy designs, text, code, or claims from those references; extract transferable mechanisms, evaluation ideas, interaction patterns, and failure lessons, then synthesize an original direction.
 - Prefer original problem reframing, sharper claims, new experimental axes, and stronger mechanisms over incremental feature mixing.
 - Be willing to recommend major changes to a project's thesis, method, protocol, or architecture when the evidence suggests the current framing is weak.
 - Preserve evidence discipline: radical ideas still need falsifiable claims, baselines, ablations, failure modes, and reviewer-grade objections.

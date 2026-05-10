@@ -35,6 +35,8 @@ It exists so the knowledge base is not only about sources, but also about how Vi
 - important answers should usually be crystallized into the wiki
 - when a topic is controversial, preserve the best counterarguments instead of flattening them
 - research ideation should be ambitious and original, not constrained to stitching together existing project parts
+- when project or research terms are abstract, prefer broad prior-art scanning across mainstream GitHub projects and top paper/project pages before settling on advice
+- synthesize external examples into original mechanisms, tradeoffs, and implementation lessons rather than copying their artifacts
 - when useful, recommend substantial project reframing or redesign instead of only local improvements
 
 ## Anti-Patterns

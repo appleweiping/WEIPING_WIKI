@@ -20,6 +20,7 @@ fi
 node "$ROOT/site/sync-content.mjs" "$CONTENT_DIR"
 cp "$ROOT/site/quartz.config.ts" "$QUARTZ_DIR/quartz.config.ts"
 cp "$ROOT/site/quartz.layout.ts" "$QUARTZ_DIR/quartz.layout.ts"
+cp "$ROOT/site/custom.scss" "$QUARTZ_DIR/quartz/styles/custom.scss"
 
 (
   cd "$QUARTZ_DIR"

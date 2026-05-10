@@ -10,6 +10,27 @@ tags:
 
 # Log
 
+## [2026-05-10 23:20] analysis | richer public site and abstract research trigger
+
+- Pages updated:
+  - [[home]]
+  - [[research-ideation-policy]]
+  - [[log]]
+- Operating documents updated:
+  - `AGENTS.md`
+  - `README.md`
+  - `site/`
+  - `scripts/build-site.ps1`
+  - `scripts/build-site.sh`
+  - `.github/workflows/deploy.yml`
+- Sources used:
+  - user instruction in chat: homepage should not look like README/catalog, remove the graph artifact note from README, and make abstract/general project or research prompts trigger broad external inspiration search.
+  - Quartz feature documentation for Obsidian-style publishing, search, backlinks, and graph navigation.
+- Notes:
+  - Mapped `wiki/home.md` to the public site root and preserved the wiki catalog as a separate `catalog` page.
+  - Rebuilt the homepage as a practical command center around fast answers, research routing, local project routing, active questions, Quartz search, backlinks, and graph navigation.
+  - Added the rule that broad/general research prompts should trigger deep reference gathering from mainstream GitHub projects and top-conference paper/project ecosystems without copying.
+
 ## [2026-05-10 22:57] analysis | deletion approval boundary
 
 - Pages updated:

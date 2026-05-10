@@ -86,6 +86,7 @@ jobs:
         run: |
           cp site/quartz.config.ts .quartz-build/quartz.config.ts
           cp site/quartz.layout.ts .quartz-build/quartz.layout.ts
+          cp site/custom.scss .quartz-build/quartz/styles/custom.scss
 
       - name: Build Quartz
         run: npx quartz build -d content -o public
