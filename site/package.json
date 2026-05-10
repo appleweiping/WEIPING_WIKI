@@ -1,0 +1,9 @@
+{
+  "private": true,
+  "name": "vipin-wiki-site",
+  "description": "Quartz publishing adapter for the public vipin wiki markdown layer.",
+  "scripts": {
+    "sync": "node sync-content.mjs ../.wiki-tmp/quartz/content",
+    "build": "powershell -ExecutionPolicy Bypass -File ../scripts/build-site.ps1"
+  }
+}

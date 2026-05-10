@@ -31,6 +31,17 @@ The agent is responsible for:
 - recording work in the index and log
 - preserving high-value question/answer exchanges as durable wiki content instead of leaving them only in chat history
 
+## Default Operating Priority
+
+For substantive questions, default to a two-lane workflow:
+
+1. **Answer lane first.**
+   Use `wiki/index.md`, `wiki/catalog.json`, `scripts/wiki-search.py`, and the smallest relevant maintained pages to answer quickly.
+2. **Durable lane second.**
+   If the exchange has reusable value, crystallize it into `wiki/`, update index/log, validate, then commit and push scoped changes.
+
+Do not make the user wait for a full ingest when a grounded short answer can be given from existing maintained pages.
+
 ## Repository Structure
 
 - `raw/`
@@ -45,6 +56,9 @@ The agent is responsible for:
   - Never expose this layer through public wiki pages, public index entries, or public Git content.
 - `scripts/`
   - Operational scripts for status, lint, and graph support.
+- `site/`
+  - Quartz publishing adapter for the public `wiki/` layer.
+  - It is a website build layer, not a second source of truth.
 - `AGENTS.md`
   - The operating schema for all future sessions.
 
@@ -162,23 +176,39 @@ During ingest, prefer updating existing pages over creating duplicates.
 When asked a substantive question:
 
 1. Read `wiki/index.md` first.
-2. Open the most relevant pages.
-3. Synthesize an answer grounded in the maintained wiki.
-4. Default to preserving the answer when it is reusable, operationally important, or likely to be asked again.
-5. File it into the most appropriate durable destination:
+2. Use `scripts/wiki-search.py` or `scripts/wiki-context.py query` when the index is not enough.
+3. Open only the smallest set of top relevant maintained pages needed for a grounded answer.
+4. Give a quick answer before doing slower ingest or broad synthesis.
+5. Default to preserving the answer when it is reusable, operationally important, or likely to be asked again.
+6. File it into the most appropriate durable destination:
    - `wiki/queries/` for direct reusable answers
    - `wiki/analyses/` for multi-page synthesis or memos
    - `wiki/comparisons/` for tradeoff-oriented answers
    - `wiki/topics/` or `wiki/concepts/` when the answer materially improves a durable subject page
-6. Update index and log after filing.
+7. Update index and log after filing.
 
 Default to the public wiki unless the user explicitly asks to use private material.
 
 Do not rely on the user to remind you to preserve valuable Q&A.
 
+## Large Task / Multi-Agent Policy
+
+For large content work, architecture changes, batch ingest, website work, or broad lint/repair passes, use multi-agent collaboration by default when available.
+
+Recommended roles:
+
+- coordinator: owns scope, integration, final validation, and commit boundaries
+- explorer: reads the repo or source set and reports facts without editing
+- ingester/worker: performs a bounded write task with clear file ownership
+- verifier: checks lint, public/private boundaries, generated outputs, and likely regressions
+
+Agents must have disjoint write scopes when multiple workers edit in parallel.
+The coordinator must integrate results and avoid staging unrelated local changes.
+
 ## Commit Policy
 
 - After creating or updating durable wiki content, stage and commit the related changes before ending the turn.
+- After structural, script, or website changes, make scoped commits by concern when practical and push to GitHub by default.
 - Keep commits scoped to the saved wiki work and its required index/log updates.
 - Do not stage unrelated local changes unless the user explicitly asks for them.
 

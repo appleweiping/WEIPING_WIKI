@@ -8,6 +8,7 @@ It combines:
 - a private local-only layer for sensitive materials
 - a reader-specific context layer that shapes how knowledge is selected and synthesized
 - an operating schema that tells an agent how to ingest, synthesize, lint, search, and grow the repository over time
+- a Quartz publishing adapter that turns the public wiki into a browsable website
 
 ## Core Files
 
@@ -29,6 +30,15 @@ It combines:
 - `wiki-private/`: local-only private knowledge layer
 - `reader-context.md`: reader-specific personalization layer
 - `scripts/`: operational scripts for routing, validation, cacheing, search, context packing, status, and linting
+- `site/`: public website publishing adapter for Quartz
+
+## Operating Contract
+
+For normal questions, the agent should answer quickly from the maintained wiki first, then preserve reusable knowledge after the answer.
+
+- Fast answer lane: `wiki/index.md` -> `wiki/catalog.json` -> top relevant maintained pages.
+- Durable ingest lane: update or create wiki pages, rebuild catalog, lint, update log/index, commit, and push.
+- Large tasks: use multi-agent collaboration by default when available, with clear exploration, implementation, and verification roles.
 
 ## Supported Workflows
 
@@ -52,6 +62,7 @@ It combines:
 ./scripts/wiki-catalog.ps1
 ./scripts/wiki-search.ps1 "llm recommendation"
 ./scripts/wiki-context.ps1 l0
+./scripts/build-site.ps1
 ```
 
 ```bash
@@ -60,8 +71,9 @@ bash scripts/source-registry.sh validate
 bash scripts/wiki-compat.sh inspect .
 bash scripts/lint-runner.sh .
 python scripts/wiki-catalog.py --root .
-bash scripts/wiki-search.py "llm recommendation" --root .
-bash scripts/wiki-context.py l0 --root .
+python scripts/wiki-search.py "llm recommendation" --root .
+python scripts/wiki-context.py l0 --root .
+bash scripts/build-site.sh
 ```
 
 ## Validation Rule
@@ -97,5 +109,6 @@ The repository is intentionally structured so that private files stay local whil
 ## Optional Artifacts
 
 - `wiki/graph-data.json` and `wiki/knowledge-graph.html` can still be generated, but graph output is secondary to ingest quality, search quality, and durable retrieval.
+- The public website is built from `wiki/` through `site/` and GitHub Pages. It intentionally excludes private wiki layers and raw source folders.
 
 

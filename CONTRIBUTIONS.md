@@ -30,6 +30,15 @@ This file records external ideas that materially influenced the design of `vipin
 - Structured search and machine-readable catalog
   - inspired by comments about scale limits of plain index-only navigation
   - implemented via `scripts/wiki-catalog.py` and `scripts/wiki-search.py`
+- Quartz publishing layer
+  - informed by Quartz support for Obsidian-style Markdown, backlinks, graph navigation, and full-text search
+  - implemented through `site/` as a publishing adapter for the public `wiki/` layer
+- Harness-style operating discipline
+  - adapted as staged delivery, explicit validation gates, scoped commits, and clear component boundaries
+  - implemented in `WORKFLOWS.md`, `AGENTS.md`, and the shared script core
+- Agent/context routing
+  - informed by agentic context management and prompt-caching principles
+  - implemented as a fast-answer-first route that loads only index, catalog, search hits, and selected pages before optional durable ingest
 
 ## Related Repositories Reviewed
 

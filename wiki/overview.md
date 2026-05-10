@@ -3,7 +3,7 @@ title: Overview
 type: overview
 status: active
 created: 2026-04-21
-updated: 2026-04-22
+updated: 2026-05-10
 tags:
   - overview
   - structure
@@ -20,6 +20,7 @@ This page describes the current operating shape of `vipin wiki`.
 - Raw sources: `raw/`
 - Reader layer: `reader-context.md`
 - Operating layer: `AGENTS.md`, `.wiki-schema.md`, `WORKFLOWS.md`, `CONTRIBUTIONS.md`, and `scripts/`
+- Public website layer: `site/` publishes the public `wiki/` layer through Quartz and GitHub Pages.
 
 ## Active Public Domains
 
@@ -40,6 +41,8 @@ This page describes the current operating shape of `vipin wiki`.
 
 ## Notes
 
-- Search and context assembly now treat the wiki as both human-readable markdown and machine-readable catalog data.
+- Search and context assembly now use a shared parser/index core so catalog, search, context, status, and lint share one interpretation of pages.
+- The default query loop is fast answer first, durable ingest second.
 - Private holdings stay outside public indexes and public logs.
 - Collection-style ingest is now a first-class workflow alongside one-by-one ingest.
+- Generated graph artifacts remain optional because Quartz provides website search, backlinks, and graph navigation.

@@ -3,7 +3,7 @@ title: Index
 type: index
 status: active
 created: 2026-04-21
-updated: 2026-05-08
+updated: 2026-05-10
 tags:
   - index
 ---
@@ -17,6 +17,7 @@ This is the main catalog of the wiki.
 - [[home]] - Top-level overview of the knowledge base and workflow.
 - [[overview]] - Structural map of the repository layers, sections, and active public domains.
 - [[log]] - Chronological record of ingests, analyses, queries, and maintenance actions.
+- Website publishing layer - `site/` builds the public `wiki/` layer with Quartz and GitHub Pages while excluding private/raw materials.
 
 ## Entities
 

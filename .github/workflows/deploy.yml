@@ -1,0 +1,83 @@
+name: Deploy Quartz site
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - "wiki/**"
+      - "site/**"
+      - ".github/workflows/deploy.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout wiki
+        uses: actions/checkout@v4
+
+      - name: Checkout Quartz
+        uses: actions/checkout@v4
+        with:
+          repository: jackyzha0/quartz
+          ref: v4
+          path: .quartz-build
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: .quartz-build/package-lock.json
+
+      - name: Install Quartz dependencies
+        run: npm ci
+        working-directory: .quartz-build
+
+      - name: Sync public wiki content
+        run: node site/sync-content.mjs .quartz-build/content
+
+      - name: Apply site configuration
+        run: |
+          cp site/quartz.config.ts .quartz-build/quartz.config.ts
+          cp site/quartz.layout.ts .quartz-build/quartz.layout.ts
+
+      - name: Build Quartz
+        run: npx quartz build -d content -o public
+        working-directory: .quartz-build
+
+      - name: Check public/private boundary
+        run: |
+          if grep -R -n -E "wiki-private|raw/private" .quartz-build/public; then
+            echo "Public site contains private/raw path references." >&2
+            exit 1
+          fi
+
+      - name: Setup Pages
+        uses: actions/configure-pages@v5
+
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: .quartz-build/public
+
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

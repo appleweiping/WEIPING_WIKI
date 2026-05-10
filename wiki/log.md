@@ -572,3 +572,22 @@ tags:
 - Notes:
   - Preserved the recommendation to choose apartment as the first preference when the goal is low cost plus a private sleeping room.
   - Distinguished private bedrooms in shared apartments from more expensive solo apartments and residence hall singles.
+
+## [2026-05-10 21:50] analysis | harness-style rebuild and quartz site foundation
+
+- Pages updated:
+  - [[home]]
+  - [[overview]]
+  - [[index]]
+  - [[log]]
+- Sources used:
+  - user-provided rebuild plan in chat
+  - local repository architecture and scripts
+  - Quartz documentation for Obsidian-style publishing, search, graph, and GitHub Pages
+  - Harness platform concepts for staged delivery vocabulary
+  - OpenAI agent/context guidance for lightweight context routing
+- Notes:
+  - Added a fast-answer-first, durable-ingest-second operating contract.
+  - Refactored script behavior around a shared parser/index core for catalog, search, context, status, and lint.
+  - Added a Quartz publishing adapter for the public wiki layer with private/raw exclusion checks.
+  - Recorded multi-agent collaboration as the default for large content or architecture tasks.

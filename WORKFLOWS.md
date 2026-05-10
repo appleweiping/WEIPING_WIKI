@@ -26,6 +26,20 @@
   Scans references before deleting a durable page so indexes and graphs stay clean.
 - `crystallize`
   Saves a high-value chat outcome back into the wiki as a durable page.
+- `site`
+  Publishes the public `wiki/` layer as a Quartz website without treating generated pages as source material.
+
+## Default Query Contract
+
+Questions use a fast-answer-first contract:
+
+1. Load the lightweight route: `wiki/index.md`, `wiki/catalog.json`, and recent log context.
+2. Search with `scripts/wiki-search.py` or `scripts/wiki-context.py query` when needed.
+3. Open only the top maintained pages needed for a grounded answer.
+4. Answer the user before running slower ingest, batch synthesis, graph generation, or broad lint.
+5. Crystallize reusable answers after the quick answer, then update `wiki/index.md` and `wiki/log.md`.
+
+This keeps conversations responsive while preserving the compounding wiki behavior.
 
 ## Canonical Flow
 
@@ -39,6 +53,7 @@
 8. Produce two outputs when possible:
    the direct answer for the user and the durable wiki updates that keep the knowledge base compounding.
 9. Run lint, catalog rebuild, or optional graph generation when the change is structural.
+10. Commit scoped changes and push to GitHub by default after durable wiki, script, or site updates.
 
 ## Q&A Preservation Rule
 
@@ -61,9 +76,25 @@ The wiki is the durable memory.
 - `L1`
   Stable navigation documents such as `wiki/index.md`.
 - `L2`
-  Search results and candidate pages relevant to a specific question.
+  Full-text search results and candidate pages relevant to a specific question.
 - `L3`
   Full page contents loaded only when a task truly needs them.
+
+## Harness-Style Architecture Rules
+
+- Keep content, retrieval, ingest, validation, and publishing as separate stages.
+- Use shared parser/index code for catalog, search, context, status, and lint.
+- Prefer narrow, observable commands over one large opaque script.
+- Treat validation outputs as gates before commits and pushes.
+- Use multi-agent collaboration by default for large content, architecture, and website tasks when the environment supports it.
+
+## Site Publishing
+
+- `site/` contains the Quartz publishing adapter.
+- `wiki/` remains the canonical public content source.
+- `raw/`, `wiki-private/`, `raw/private-*`, generated graph assets, and non-Markdown files are not part of the first public site build.
+- Local build: `./scripts/build-site.ps1` on Windows or `bash scripts/build-site.sh` where Bash/npm are available.
+- GitHub Pages build: `.github/workflows/deploy.yml`.
 
 ## Public / Private Policy
 
