@@ -1,0 +1,4 @@
+interface:
+  display_name: "Vipin Wiki"
+  short_description: "Maintain the vipin wiki knowledge base."
+  default_prompt: "Use $vipin-wiki to answer from, ingest into, or maintain this project knowledge base."

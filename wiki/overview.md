@@ -3,7 +3,7 @@ title: Overview
 type: overview
 status: active
 created: 2026-04-21
-updated: 2026-05-10
+updated: 2026-05-13
 tags:
   - overview
   - structure
@@ -19,7 +19,7 @@ This page describes the current operating shape of `vipin wiki`.
 - Private local-only wiki: maintained in a separate local-only layer
 - Raw sources: `raw/`
 - Reader layer: `reader-context.md`
-- Operating layer: `AGENTS.md`, `.wiki-schema.md`, `WORKFLOWS.md`, `CONTRIBUTIONS.md`, and `scripts/`
+- Operating layer: `AGENTS.md`, `.wiki-schema.md`, `WORKFLOWS.md`, `CONTRIBUTIONS.md`, `.codex/skills/vipin-wiki/`, and `scripts/`
 - Public website layer: `site/` publishes the public `wiki/` layer through Quartz and GitHub Pages.
 
 ## Active Public Domains
@@ -46,3 +46,4 @@ This page describes the current operating shape of `vipin wiki`.
 - Private holdings stay outside public indexes and public logs.
 - Collection-style ingest is now a first-class workflow alongside one-by-one ingest.
 - Generated graph artifacts remain optional because Quartz provides website search, backlinks, and graph navigation.
+- A project-local Codex skill now routes future agents through the wiki's query, ingest, crystallization, maintenance, and public/private safety workflows.

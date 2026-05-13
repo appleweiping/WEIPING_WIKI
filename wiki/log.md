@@ -3,12 +3,27 @@ title: Log
 type: log
 status: active
 created: 2026-04-21
-updated: 2026-04-22
+updated: 2026-05-13
 tags:
   - log
 ---
 
 # Log
+
+## [2026-05-13 11:00] bootstrap | project-local vipin wiki skill
+
+- Pages updated:
+  - [[overview]]
+  - [[log]]
+- Sources used:
+  - `AGENTS.md`
+  - `.wiki-schema.md`
+  - `purpose.md`
+  - `WORKFLOWS.md`
+  - `skill-creator` skill instructions
+- Notes:
+  - Added `.codex/skills/vipin-wiki/` as a project-local Codex skill for routing wiki query, ingest, crystallization, maintenance, and safety workflows.
+  - Validated the skill package with the `skill-creator` validator.
 
 ## [2026-05-10 23:36] analysis | multilingual public homepage options
 
