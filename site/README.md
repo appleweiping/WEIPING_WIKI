@@ -19,3 +19,11 @@ If local `node` or `npm` is missing, the PowerShell build script downloads an of
 ## GitHub Pages
 
 The workflow in `.github/workflows/deploy.yml` builds the same public-only site and deploys the `public/` artifact with GitHub Pages.
+
+GitHub Pages should stay configured to deploy from GitHub Actions, not from a branch root. If Pages is pointed at the repository root, GitHub will render `README.md` as the website home and bypass the Quartz frontend.
+
+Stability guards:
+
+- `.github/workflows/deploy.yml` verifies the built artifact contains the Quartz root page before deployment.
+- `.github/workflows/deploy.yml` verifies the deployed URL after deployment.
+- `.github/workflows/pages-health.yml` checks the live site daily and fails if the public URL turns back into a README-style GitHub Markdown page.

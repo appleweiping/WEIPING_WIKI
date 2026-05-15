@@ -1,0 +1,39 @@
+name: Pages health check
+
+on:
+  schedule:
+    - cron: "17 4 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: pages-health
+  cancel-in-progress: true
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Verify public site is Quartz
+        run: |
+          url="https://appleweiping.github.io/vipin-wiki/"
+          curl -LfsS "${url}?health-check=${GITHUB_RUN_ID}" -o /tmp/site.html
+
+          grep -q 'id="quartz-root"' /tmp/site.html
+          grep -q 'Command Center' /tmp/site.html
+          grep -q 'postscript.js' /tmp/site.html
+          grep -q 'contentIndex.json' /tmp/site.html
+
+          if grep -q 'markdown-body' /tmp/site.html; then
+            echo "Site is being served as GitHub Markdown/README instead of Quartz." >&2
+            exit 1
+          fi
+
+          if grep -q 'Operating Contract' /tmp/site.html; then
+            echo "Site root appears to be README.md instead of wiki/home.md." >&2
+            exit 1
+          fi
+
+          echo "Pages health check passed: ${url} is serving the Quartz wiki home."
