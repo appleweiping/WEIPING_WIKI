@@ -22,8 +22,6 @@ concurrency:
 jobs:
   build:
     runs-on: ubuntu-latest
-    outputs:
-      pages_enabled: ${{ steps.detect-pages.outputs.enabled }}
     steps:
       - name: Checkout wiki
         uses: actions/checkout@v5
@@ -92,6 +90,16 @@ jobs:
         run: npx quartz build -d content -o public
         working-directory: .quartz-build
 
+      - name: Verify Quartz artifact
+        run: |
+          test -f .quartz-build/public/index.html
+          grep -q 'id="quartz-root"' .quartz-build/public/index.html
+          grep -q 'Command Center' .quartz-build/public/index.html
+          if grep -q 'Operating Contract' .quartz-build/public/index.html; then
+            echo "Built artifact looks like the repository README, not the Quartz wiki home." >&2
+            exit 1
+          fi
+
       - name: Check public/private boundary
         run: |
           if grep -R -n -E "wiki-private|raw/private" .quartz-build/public; then
@@ -99,41 +107,15 @@ jobs:
             exit 1
           fi
 
-      - name: Detect Pages configuration
-        id: detect-pages
-        env:
-          GH_TOKEN: ${{ github.token }}
-        run: |
-          status="$(curl -L -sS -o /tmp/pages.json -w "%{http_code}" \
-            -H "Accept: application/vnd.github+json" \
-            -H "Authorization: Bearer ${GH_TOKEN}" \
-            -H "X-GitHub-Api-Version: 2022-11-28" \
-            "https://api.github.com/repos/${GITHUB_REPOSITORY}/pages")"
-
-          if [ "$status" = "200" ]; then
-            echo "enabled=true" >> "$GITHUB_OUTPUT"
-            echo "GitHub Pages is enabled; deployment will run."
-          elif [ "$status" = "404" ]; then
-            echo "enabled=false" >> "$GITHUB_OUTPUT"
-            echo "::notice::GitHub Pages is not enabled for this repository. Build validation passed, deployment will be skipped."
-          else
-            echo "Could not determine GitHub Pages status. API status: $status" >&2
-            cat /tmp/pages.json >&2
-            exit 1
-          fi
-
       - name: Setup Pages
-        if: steps.detect-pages.outputs.enabled == 'true'
         uses: actions/configure-pages@v6
 
       - name: Upload Pages artifact
-        if: steps.detect-pages.outputs.enabled == 'true'
         uses: actions/upload-pages-artifact@v4
         with:
           path: .quartz-build/public
 
   deploy:
-    if: needs.build.outputs.pages_enabled == 'true'
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
@@ -143,3 +125,19 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v5
+
+      - name: Verify deployed site
+        run: |
+          url="${{ steps.deployment.outputs.page_url }}"
+          for i in {1..12}; do
+            curl -LfsS "${url}?deploy-check=${GITHUB_RUN_ID}-${i}" -o /tmp/site.html || true
+            if grep -q 'id="quartz-root"' /tmp/site.html && grep -q 'Command Center' /tmp/site.html; then
+              echo "Verified Quartz wiki home at ${url}"
+              exit 0
+            fi
+            sleep 10
+          done
+          echo "Deployed site did not serve the Quartz wiki home." >&2
+          echo "First headings seen:" >&2
+          grep -oE '<h[12][^>]*>[^<]+' /tmp/site.html | head -10 >&2 || true
+          exit 1
