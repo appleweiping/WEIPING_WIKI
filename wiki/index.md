@@ -3,7 +3,7 @@ title: Index
 type: index
 status: active
 created: 2026-04-21
-updated: 2026-05-10
+updated: 2026-05-15
 tags:
   - index
 ---
@@ -36,6 +36,7 @@ This is the main catalog of the wiki.
 - [[academic-portfolio]] - Sensitive academic/application archive.
 - [[undergraduate-projects-netherlands]] - Undergraduate project archive for Netherlands/TU/e coursework projects.
 - [[undergraduate-study-netherlands]] - Undergraduate study archive organized by course/domain.
+- [[qmq-app]] - Saved tool reference for US visa appointment slot monitoring / "qiang mei qian" workflows.
 
 ## Concepts
 
@@ -55,6 +56,7 @@ This is the main catalog of the wiki.
 - [[2026-05-08-university-of-minnesota-housing-contract-2026-2027]] - University of Minnesota Housing & Residential Life contract terms, key dates, fees, cancellation/release rules, and resident obligations for 2026-2027.
 - [[2026-05-10-research-project-roots]] - Read-only survey of Vipin's main local research project roots under `D:/Research`.
 - [[2026-05-10-d-drive-portfolio-and-undergraduate-roots]] - Public-safe content-nature inventory for D-drive portfolio, undergraduate project, and study roots.
+- [[2026-05-15-qmq-app-us-visa-slot-service]] - User-provided and publicly checked pointer to QMQ App, a US visa CGI appointment slot service.
 
 ## Analyses
 
@@ -112,6 +114,7 @@ This is the main catalog of the wiki.
 - [[university-housing]] - Topic map for university housing deadlines, fees, cancellation/release rules, and contract obligations.
 - [[research-projects]] - Topic map of Vipin's active research projects and cross-cutting evidence rules.
 - [[local-project-roots]] - Topic map for local D-drive project/archive roots, discovery rules, and safety boundaries.
+- [[us-visa-appointments]] - Practical notes and safety boundaries for US visa appointment scheduling and slot-monitoring tools.
 
 ## Comparisons
 

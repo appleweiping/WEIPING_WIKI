@@ -727,4 +727,21 @@ tags:
 - Notes:
   - Added public-safe content-nature routing for portfolio and undergraduate archives.
   - Recorded dynamic discovery rules because local names and internal structures may change.
-  - Marked academic/application, private memory-site, course-material, credential, and personal-document boundaries as sensitive/cautious.
+- Marked academic/application, private memory-site, course-material, credential, and personal-document boundaries as sensitive/cautious.
+
+## [2026-05-15 03:17] ingest | qmq app us visa appointment slot service
+
+- Pages created:
+  - [[2026-05-15-qmq-app-us-visa-slot-service]]
+  - [[qmq-app]]
+  - [[us-visa-appointments]]
+- Pages updated:
+  - [[index]]
+  - [[log]]
+- Sources used:
+  - user-provided chat note: `https://qmq.app/` is for grabbing US visa appointments
+  - public pages at `https://qmq.app/` and `https://qmq.app/order`
+- Notes:
+  - Saved QMQ App as a retrievable tool reference for US visa appointment slot monitoring.
+  - Marked service reliability, policy compliance, and account-safety implications as unverified.
+  - Added a public-wiki safety boundary against storing CGI credentials, passwords, security-question answers, or personal order details.
