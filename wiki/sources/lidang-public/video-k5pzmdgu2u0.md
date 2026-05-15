@@ -22,7 +22,8 @@ source_pages:
 - Canonical URL: https://www.youtube.com/watch?v=k5pzmDgU2u0
 - Source confidence: `official-rss`
 - Public handling: `public-metadata-summary-only`
-- Content hash: `5e03d327e98776cfbe6c911e233cf3909bab264f70f1400faeda54ff638fd6a4`
+- Semantic hash: `5e03d327e98776cfbe6c911e233cf3909bab264f70f1400faeda54ff638fd6a4`
+- Raw HTML path: ``
 - Published: 2026-05-01T19:36:06+00:00
 - First seen: 2026-05-16
 - Last changed: 2026-05-16

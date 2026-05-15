@@ -22,7 +22,8 @@ source_pages:
 - Canonical URL: https://www.youtube.com/watch?v=UoOT_pXLxVY
 - Source confidence: `official-rss`
 - Public handling: `public-metadata-summary-only`
-- Content hash: `732124c139ba1a1939ec5bb999f608947e5cc362562168e54dae148a8597d0e2`
+- Semantic hash: `732124c139ba1a1939ec5bb999f608947e5cc362562168e54dae148a8597d0e2`
+- Raw HTML path: ``
 - Published: 2026-03-29T03:08:07+00:00
 - First seen: 2026-05-16
 - Last changed: 2026-05-16

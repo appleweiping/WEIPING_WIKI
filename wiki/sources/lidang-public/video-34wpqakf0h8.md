@@ -22,7 +22,8 @@ source_pages:
 - Canonical URL: https://www.youtube.com/watch?v=34wpQakf0h8
 - Source confidence: `official-rss`
 - Public handling: `public-metadata-summary-only`
-- Content hash: `e5215be35af686d92bbb23340393b34adcebd735540f39f97e253ff69cdeecca`
+- Semantic hash: `e5215be35af686d92bbb23340393b34adcebd735540f39f97e253ff69cdeecca`
+- Raw HTML path: ``
 - Published: 2026-04-03T16:13:52+00:00
 - First seen: 2026-05-16
 - Last changed: 2026-05-16

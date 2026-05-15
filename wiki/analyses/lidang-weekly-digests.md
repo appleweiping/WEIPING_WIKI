@@ -17,6 +17,10 @@ source_pages:
 
 This page indexes weekly digest batches for the Lidang public ideas corpus.
 
+## Digest Rule
+
+Weekly digests aggregate only new stable IDs, changed semantic items, and newly promoted high-signal items. Raw HTML snapshot changes alone should not create duplicate weekly entries or churn public summaries.
+
 ## Current Digests
 
 - [[sources/lidang-public/2026-w20-digest|2026-w20 digest]] - 16 captured entries, 3 high-signal single pages.

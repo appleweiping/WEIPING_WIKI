@@ -31,6 +31,10 @@ This hub tracks Lidang's public idea stream as a high-frequency corpus. The syst
 
 ## Maintenance Rules For Future Agents
 
+- Treat HTML as a first-class raw source format for X/profile probes; store reachable snapshots under `raw/lidang-public/html/`.
+- Use `semantic_hash` rather than raw full HTML hash for wiki churn decisions.
+- Never create a second item for a stable ID that already exists in `raw/lidang-public/manifest.json`.
+- Continue backfill attempts for older reachable YouTube/X items, but add them only when their stable IDs are absent.
 - Do not flood `wiki/index.md` with every short post.
 - Keep X mirror text out of public pages unless a license-safe source exists.
 - Record failed mirror probes because failures are operationally useful.
@@ -46,5 +50,5 @@ This hub tracks Lidang's public idea stream as a high-frequency corpus. The syst
 ## Counterpoints And Gaps
 
 - The current corpus is not a complete X archive.
-- YouTube RSS only exposes recent videos, so historical video backfill remains a separate task.
+- YouTube RSS only exposes recent videos, so historical video backfill remains dependent on optional tooling or future source access.
 - Short-form public statements can be context-dependent and should not be over-interpreted without source review.
