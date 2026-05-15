@@ -3,12 +3,30 @@ title: Log
 type: log
 status: active
 created: 2026-04-21
-updated: 2026-05-13
+updated: 2026-05-15
 tags:
   - log
 ---
 
 # Log
+
+## [2026-05-15 19:10] ingest | terraria local save files
+
+- Pages created:
+  - [[2026-05-15-terraria-local-save-files]]
+  - [[terraria-save-archive]]
+- Pages updated:
+  - [[local-project-roots]]
+  - [[index]]
+  - [[log]]
+- Sources used:
+  - read-only discovery of `C:/Users/admin/Documents/My Games/Terraria`
+  - backup and inventory output under `D:/Terraria_doc`
+- Notes:
+  - Found 193 Terraria-related save files totaling about 165.37 MB.
+  - Backed them up to `D:/Terraria_doc/Terraria_saves`.
+  - Created `D:/Terraria_doc/inventory/terraria-file-analysis.md` and `D:/Terraria_doc/inventory/terraria-file-inventory.csv` for later per-file sorting.
+  - Kept binary save files outside `wiki/` and recorded only routing, counts, file-type meanings, and backup/inventory locations.
 
 ## [2026-05-13 11:00] bootstrap | project-local vipin wiki skill
 

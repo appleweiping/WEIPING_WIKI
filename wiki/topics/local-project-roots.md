@@ -10,6 +10,7 @@ tags:
 source_pages:
   - 2026-05-10-d-drive-portfolio-and-undergraduate-roots
   - 2026-05-15-d-drive-healthcare-and-skill-roots
+  - 2026-05-15-terraria-local-save-files
 ---
 
 # Local Project Roots
@@ -27,6 +28,7 @@ This topic records the content nature of local project and archive roots that Vi
 - [[research-projects]] - Research project roots under `D:/Research`.
 - [[healthcare-projects]] - Healthcare project routing under `D:/Healthcare`, currently centered on [[medora]].
 - [[agent-skill-repositories]] - Skill repository routing under `D:/Skill`, including local skill stores, person-skill generators, and skill optimizers.
+- [[terraria-save-archive]] - Local Terraria save archive discovered under the Windows Documents game-save directory and backed up to `D:/Terraria_doc`.
 
 ## Operating Rule
 
@@ -40,10 +42,12 @@ This topic records the content nature of local project and archive roots that Vi
 - The current inventory is intentionally shallow and public-safe.
 - Sensitive archives need private-only handling if deeper detail becomes useful.
 - Healthcare roots need especially conservative handling because project code and local storage can sit close to medical records or test health data.
+- Game-save archives should keep binary save files outside `wiki/`; record routing, file-type interpretation, and inventory locations instead.
 - Some paths are renamed/case-varied relative to user phrasing, so exact path recall should not replace live discovery.
 
 ## Related
 
 - [[2026-05-10-d-drive-portfolio-and-undergraduate-roots]]
 - [[2026-05-15-d-drive-healthcare-and-skill-roots]]
+- [[2026-05-15-terraria-local-save-files]]
 - [[research-projects]]
