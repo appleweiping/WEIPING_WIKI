@@ -770,3 +770,17 @@ tags:
   - Added Medora as a healthcare project root with strict public/private handling rules.
   - Added the D-drive skill repositories as retrievable local project pages.
   - Preserved branch/remotes and high-level content nature without copying source folders or sensitive local data into the wiki.
+
+## [2026-05-15 19:11] ingest | lu kan profile chat note
+
+- Pages created:
+  - [[2026-05-15-lu-kan-profile-chat]]
+  - [[lu-kan]]
+- Pages updated:
+  - [[index]]
+  - [[log]]
+- Sources used:
+  - user-provided professional profile text in chat on 2026-05-15
+- Notes:
+  - Added Lu Kan as a person entity spanning architecture, exhibition design, cultural-tourism planning, rural revitalization, and AIGC industry workflows.
+  - Preserved roles, career history, representative projects, and awards as source-extracted but unverified claims.

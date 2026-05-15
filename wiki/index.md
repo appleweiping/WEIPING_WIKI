@@ -43,6 +43,7 @@ This is the main catalog of the wiki.
 - [[darwin-skill]] - Local skill optimizer inspired by autoresearch-style evaluation loops.
 - [[mattpocock-skills]] - Local mirror/fork of composable engineering and productivity agent skills.
 - [[nuwa-skill]] - Local repository for research-driven person-perspective skill creation.
+- [[lu-kan]] - Architect, exhibition designer, curator, and AIGC workflow practitioner profile from user-provided chat material.
 
 ## Concepts
 
@@ -64,6 +65,7 @@ This is the main catalog of the wiki.
 - [[2026-05-10-d-drive-portfolio-and-undergraduate-roots]] - Public-safe content-nature inventory for D-drive portfolio, undergraduate project, and study roots.
 - [[2026-05-15-qmq-app-us-visa-slot-service]] - User-provided and publicly checked pointer to QMQ App, a US visa CGI appointment slot service.
 - [[2026-05-15-d-drive-healthcare-and-skill-roots]] - Public-safe routing ingest for `D:/Healthcare/Medora` and the five `D:/Skill` repositories.
+- [[2026-05-15-lu-kan-profile-chat]] - User-provided professional profile for 陆侃 / Lu Kan across architecture, exhibition design, cultural tourism, rural revitalization, and AIGC workflows.
 
 ## Analyses
 
