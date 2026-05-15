@@ -24,6 +24,9 @@ This is the main catalog of the wiki.
 ## Entities
 
 
+
+
+- [[lidang]] - Public idea-stream corpus for Lidang / lidangzzz, focused on YouTube, X, path engineering, AI coding, and practical heuristics.
 - [[andrej-karpathy]] - Public AI researcher/educator corpus focused on GitHub projects, writing, videos, and reusable technical heuristics.
 - [[vipin]] - Central person page for the owner/subject of this knowledge base.
 - [[university-of-minnesota]] - Issuer entity for University of Minnesota housing contract materials.
@@ -52,12 +55,15 @@ This is the main catalog of the wiki.
 
 - [[llm-wiki]] - Persistent wiki pattern in which an LLM compiles knowledge into maintained markdown pages.
 - [[llm-based-recommendation]] - Research area focused on using large language models within recommender systems and recommendation workflows.
-- [[research-ideation-policy]] - Rule for ambitious科研讨论: no shallow stitching, force novelty, and allow radical reframing.
+- [[research-ideation-policy]] - Rule for ambitious绉戠爺璁ㄨ: no shallow stitching, force novelty, and allow radical reframing.
 
 ## Sources
 
 
 
+
+
+- [[2026-05-16-lidang-public-corpus]] - Batch ingest of Lidang YouTube RSS, canonical X profile, and auxiliary mirror probes.
 - [[2026-05-15-karpathy-public-corpus]] - Batch ingest of Karpathy's GitHub repositories, official homepage, blog RSS, YouTube feed, gists, and curated status links.
 - [[2026-05-15-openai-cookbook]] - Batch ingest of the official OpenAI Cookbook developers index and MIT-licensed GitHub source mirror.
 - [[2026-04-21-llm-wiki-pattern]] - Seed source note based on the user-provided idea brief describing the LLM wiki pattern.
@@ -73,13 +79,19 @@ This is the main catalog of the wiki.
 - [[2026-05-15-qmq-app-us-visa-slot-service]] - User-provided and publicly checked pointer to QMQ App, a US visa CGI appointment slot service.
 - [[2026-05-15-d-drive-healthcare-and-skill-roots]] - Public-safe routing ingest for `D:/Healthcare/Medora` and the five `D:/Skill` repositories.
 - [[2026-05-15-terraria-local-save-files]] - Local Terraria save-file discovery, backup location, file-type summary, and inventory pointers.
-- [[2026-05-15-lu-kan-profile-chat]] - User-provided professional profile for 陆侃 / Lu Kan across architecture, exhibition design, cultural tourism, rural revitalization, and AIGC workflows.
+- [[2026-05-15-lu-kan-profile-chat]] - User-provided professional profile for 闄嗕緝 / Lu Kan across architecture, exhibition design, cultural tourism, rural revitalization, and AIGC workflows.
 
 ## Analyses
 
 
 
 
+
+
+
+
+- [[lidang-weekly-digests]] - Index of weekly digest batches and high-signal Lidang public idea pages.
+- [[lidang-idea-taxonomy]] - Category map for Lidang public ideas across AI coding, career, immigration, startup, education, governance, and heuristics.
 - [[karpathy-idea-map]] - Synthesis map of Karpathy's reusable technical heuristics and public idea surfaces.
 - [[karpathy-project-taxonomy]] - Category map of Karpathy public corpus items by implementation and idea domain.
 - [[openai-cookbook-taxonomy]] - Category map of mirrored OpenAI Cookbook examples and articles.
@@ -114,7 +126,7 @@ This is the main catalog of the wiki.
 - [[2026-04-22-what-do-i-need-from-teammates-for-venus-basestation]] - Interface checklist describing what Vipin needs from teammates to build the base-station software in parallel.
 - [[2026-04-22-what-can-i-finish-independently-for-venus-basestation]] - Clear boundary between what Vipin can already complete in the basestation now and what still depends on teammates.
 - [[2026-04-23-what-causes-the-color-of-the-sky]] - Optics explanation that the sky's color mainly comes from the electric field of light interacting with electrons and producing scattering.
-- [[2026-04-23-why-is-e-equals-cb]] - Explanation that `E = cB` in a vacuum electromagnetic wave follows from `k × E = ωB` together with `ω/k = c`.
+- [[2026-04-23-why-is-e-equals-cb]] - Explanation that `E = cB` in a vacuum electromagnetic wave follows from `k 脳 E = 蠅B` together with `蠅/k = c`.
 - [[2026-04-23-what-does-codex-full-access-mean]] - Explanation of what broader Codex filesystem access means and the rule that project-external edits require explicit request or confirmation.
 - [[2026-04-23-do-e-and-b-contribute-equally-to-light-energy]] - Explanation that vacuum light energy is shared equally between the electric and magnetic field contributions.
 - [[2026-04-27-how-to-ask-teammates-for-basestation-interface-info]] - Reusable Chinese message template for asking teammates for MQTT topics, payload samples, coordinate definitions, and other basestation integration details.
@@ -133,6 +145,17 @@ This is the main catalog of the wiki.
 
 
 
+
+
+
+### Lidang Public Ideas Corpus
+
+- Weekly digests
+  - [[sources/lidang-public/2026-w20-digest|2026-w20 digest]]
+- High-signal single items
+  - [[sources/lidang-public/video-k5pzmdgu2u0|立党直播022 深入解析manus事件、阿里林俊阳离职等时事热点]]
+  - [[sources/lidang-public/video-34wpqakf0h8|一小时长聊：AI正在摧毁科技互联网行业，让程序员大批量失业？为什么程序员危机感空前强烈？为什么中国大学计算机专业教育质量太差？大学还有存在的意义吗？]]
+  - [[sources/lidang-public/video-uoot-pxlxvy|立党讲座27：我为什么推荐了整整10年的Georgia Tech online CS master（佐治亚理工在线CS硕士）？7000美元的在线硕士可以转码成功吗？有哪些优势和劣势？如何读好这类项目？]]
 ### Karpathy Public Corpus
 
 - Browser / JavaScript ML experiments
@@ -574,6 +597,9 @@ This is the main catalog of the wiki.
 
 
 
+
+
+- [[lidang-public-ideas]] - Hub for high-frequency Lidang public ideas with weekly digests, taxonomy, and source-confidence boundaries.
 - [[karpathy-public-work]] - Hub for Karpathy's public projects, posts, videos, gists, and curated idea links.
 - [[openai-cookbook]] - Mirrored OpenAI Cookbook implementation library with categorized examples, articles, source hashes, and weekly refresh workflow.
 - [[topics-home]] - Entry page for durable subject clusters.
