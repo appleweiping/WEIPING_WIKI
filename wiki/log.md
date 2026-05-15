@@ -745,3 +745,28 @@ tags:
   - Saved QMQ App as a retrievable tool reference for US visa appointment slot monitoring.
   - Marked service reliability, policy compliance, and account-safety implications as unverified.
   - Added a public-wiki safety boundary against storing CGI credentials, passwords, security-question answers, or personal order details.
+
+## [2026-05-15 03:27] ingest | d drive healthcare and skill roots
+
+- Pages created:
+  - [[2026-05-15-d-drive-healthcare-and-skill-roots]]
+  - [[medora]]
+  - [[anbeime-skill]]
+  - [[colleague-skill]]
+  - [[darwin-skill]]
+  - [[mattpocock-skills]]
+  - [[nuwa-skill]]
+  - [[healthcare-projects]]
+  - [[agent-skill-repositories]]
+- Pages updated:
+  - [[local-project-roots]]
+  - [[index]]
+  - [[log]]
+- Sources used:
+  - read-only inspection of `D:/Healthcare/Medora`
+  - read-only inspection of `D:/Skill/anbeime-skill`, `D:/Skill/colleague-skill`, `D:/Skill/darwin-skill`, `D:/Skill/mattpocock-skills`, and `D:/Skill/nuwa-skill`
+  - selected README, package metadata, and `SKILL.md` files from those roots
+- Notes:
+  - Added Medora as a healthcare project root with strict public/private handling rules.
+  - Added the D-drive skill repositories as retrievable local project pages.
+  - Preserved branch/remotes and high-level content nature without copying source folders or sensitive local data into the wiki.

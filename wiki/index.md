@@ -37,6 +37,12 @@ This is the main catalog of the wiki.
 - [[undergraduate-projects-netherlands]] - Undergraduate project archive for Netherlands/TU/e coursework projects.
 - [[undergraduate-study-netherlands]] - Undergraduate study archive organized by course/domain.
 - [[qmq-app]] - Saved tool reference for US visa appointment slot monitoring / "qiang mei qian" workflows.
+- [[medora]] - Local healthcare project for AI-native personal health records and healthcare workflows.
+- [[anbeime-skill]] - Local skill-store and skill-library repository under `D:/Skill`.
+- [[colleague-skill]] - Local `dot-skill` repository for distilling people/context into reusable skills.
+- [[darwin-skill]] - Local skill optimizer inspired by autoresearch-style evaluation loops.
+- [[mattpocock-skills]] - Local mirror/fork of composable engineering and productivity agent skills.
+- [[nuwa-skill]] - Local repository for research-driven person-perspective skill creation.
 
 ## Concepts
 
@@ -57,6 +63,7 @@ This is the main catalog of the wiki.
 - [[2026-05-10-research-project-roots]] - Read-only survey of Vipin's main local research project roots under `D:/Research`.
 - [[2026-05-10-d-drive-portfolio-and-undergraduate-roots]] - Public-safe content-nature inventory for D-drive portfolio, undergraduate project, and study roots.
 - [[2026-05-15-qmq-app-us-visa-slot-service]] - User-provided and publicly checked pointer to QMQ App, a US visa CGI appointment slot service.
+- [[2026-05-15-d-drive-healthcare-and-skill-roots]] - Public-safe routing ingest for `D:/Healthcare/Medora` and the five `D:/Skill` repositories.
 
 ## Analyses
 
@@ -115,6 +122,8 @@ This is the main catalog of the wiki.
 - [[research-projects]] - Topic map of Vipin's active research projects and cross-cutting evidence rules.
 - [[local-project-roots]] - Topic map for local D-drive project/archive roots, discovery rules, and safety boundaries.
 - [[us-visa-appointments]] - Practical notes and safety boundaries for US visa appointment scheduling and slot-monitoring tools.
+- [[healthcare-projects]] - Local healthcare project routing and public/private safety boundaries.
+- [[agent-skill-repositories]] - Local skill repository routing for skill stores, generators, optimizers, and engineering skill sets.
 
 ## Comparisons
 
