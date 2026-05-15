@@ -802,3 +802,18 @@ tags:
 - Notes:
   - Added Lu Kan as a person entity spanning architecture, exhibition design, cultural-tourism planning, rural revitalization, and AIGC industry workflows.
   - Preserved roles, career history, representative projects, and awards as source-extracted but unverified claims.
+## [2026-05-15 23:01] ingest | openai cookbook mirror
+
+- Pages created or updated:
+  - [[openai-cookbook]]
+  - [[2026-05-15-openai-cookbook]]
+  - [[openai-cookbook-taxonomy]]
+  - `wiki/sources/openai-cookbook/`
+- Sources used:
+  - https://developers.openai.com/cookbook
+  - https://github.com/openai/openai-cookbook
+- Notes:
+  - Mirrored 235 Cookbook article/example pages.
+  - New manifest entries this run: 0.
+  - Changed source hashes this run: 0.
+  - Manifest stored at `raw/openai-cookbook/manifest.json`.
