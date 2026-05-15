@@ -817,3 +817,27 @@ tags:
   - New manifest entries this run: 0.
   - Changed source hashes this run: 0.
   - Manifest stored at `raw/openai-cookbook/manifest.json`.
+## [2026-05-15 23:52] ingest | karpathy public corpus
+
+- Pages created or updated:
+  - [[andrej-karpathy]]
+  - [[karpathy-public-work]]
+  - [[2026-05-15-karpathy-public-corpus]]
+  - [[karpathy-project-taxonomy]]
+  - [[karpathy-idea-map]]
+  - `wiki/sources/karpathy-public/`
+- Sources used:
+  - https://api.github.com/users/karpathy
+  - https://api.github.com/users/karpathy/repos?per_page=100&sort=updated
+  - https://api.github.com/users/karpathy/gists?per_page=100
+  - https://karpathy.ai/
+  - https://karpathy.github.io/feed.xml
+  - https://www.youtube.com/feeds/videos.xml?channel_id=UCXUPKJO5MZQN11PqgIvyuvQ
+  - https://karpathy.ai/tweets.html
+- Notes:
+  - Ingested 172 public corpus entries, including 63 GitHub repositories.
+  - New entries this run: 172.
+  - Changed entries this run: 0.
+  - Removed entries this run: 0.
+  - Crawl errors recorded after retry/fix: 0.
+  - Manifest stored at `raw/karpathy-public/manifest.json`.

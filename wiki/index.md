@@ -3,7 +3,7 @@ title: Index
 type: index
 status: active
 created: 2026-04-21
-updated: 2026-05-15
+updated: 2026-05-16
 tags:
   - index
 ---
@@ -23,6 +23,8 @@ This is the main catalog of the wiki.
 
 ## Entities
 
+
+- [[andrej-karpathy]] - Public AI researcher/educator corpus focused on GitHub projects, writing, videos, and reusable technical heuristics.
 - [[vipin]] - Central person page for the owner/subject of this knowledge base.
 - [[university-of-minnesota]] - Issuer entity for University of Minnesota housing contract materials.
 - [[analog-agent]] - AI4EDA layered analog circuit design agent project.
@@ -55,6 +57,8 @@ This is the main catalog of the wiki.
 ## Sources
 
 
+
+- [[2026-05-15-karpathy-public-corpus]] - Batch ingest of Karpathy's GitHub repositories, official homepage, blog RSS, YouTube feed, gists, and curated status links.
 - [[2026-05-15-openai-cookbook]] - Batch ingest of the official OpenAI Cookbook developers index and MIT-licensed GitHub source mirror.
 - [[2026-04-21-llm-wiki-pattern]] - Seed source note based on the user-provided idea brief describing the LLM wiki pattern.
 - [[2026-04-22-karpathy-llm-wiki-zh-compilation]] - User-provided Chinese compilation of the Karpathy article plus selected community commentary.
@@ -74,6 +78,10 @@ This is the main catalog of the wiki.
 ## Analyses
 
 
+
+
+- [[karpathy-idea-map]] - Synthesis map of Karpathy's reusable technical heuristics and public idea surfaces.
+- [[karpathy-project-taxonomy]] - Category map of Karpathy public corpus items by implementation and idea domain.
 - [[openai-cookbook-taxonomy]] - Category map of mirrored OpenAI Cookbook examples and articles.
 - [[2026-04-21-vipin-wiki-bootstrap]] - Initial implementation memo describing how this repository instantiates the LLM wiki idea.
 - [[2026-04-21-llm-rec-research-map]] - First-pass map of the LLM-for-recommendation literature represented in the current local paper collections.
@@ -123,6 +131,193 @@ This is the main catalog of the wiki.
 - [[2026-05-08-how-to-choose-umn-apartment-vs-residence-hall-for-private-bedroom]] - Practical UMN room-preference strategy for balancing low cost with a private sleeping room.
 
 
+
+
+### Karpathy Public Corpus
+
+- Browser / JavaScript ML experiments
+  - [[sources/karpathy-public/github-calorie|calorie]]
+  - [[sources/karpathy-public/github-tsnejs|tsnejs]]
+- LLM education / from-scratch pedagogy
+  - [[sources/karpathy-public/github-cryptos|cryptos]]
+- LLM training and inference systems
+  - [[sources/karpathy-public/github-build-nanogpt|build-nanogpt]]
+  - [[sources/karpathy-public/github-cpython|cpython]]
+  - [[sources/karpathy-public/github-examples|examples]]
+  - [[sources/karpathy-public/github-hn-time-capsule|hn-time-capsule]]
+  - [[sources/karpathy-public/github-karpathy-github-io|karpathy.github.io]]
+  - [[sources/karpathy-public/github-llama2-c|llama2.c]]
+  - [[sources/karpathy-public/github-llm-c|llm.c]]
+  - [[sources/karpathy-public/github-llm101n|LLM101n]]
+  - [[sources/karpathy-public/github-minbpe|minbpe]]
+  - [[sources/karpathy-public/github-mingpt|minGPT]]
+  - [[sources/karpathy-public/github-nanochat|nanochat]]
+  - [[sources/karpathy-public/github-nanogpt|nanoGPT]]
+  - [[sources/karpathy-public/github-ng-video-lecture|ng-video-lecture]]
+  - [[sources/karpathy-public/github-randomfun|randomfun]]
+  - [[sources/karpathy-public/github-reader3|reader3]]
+  - [[sources/karpathy-public/github-rendergit|rendergit]]
+  - [[sources/karpathy-public/github-transformers|transformers]]
+- Minimal implementations
+  - [[sources/karpathy-public/gist-587454dc0146a6ae21fc|An efficient, batched LSTM.]]
+  - [[sources/karpathy-public/gist-f3ee599538ff78e1bbe9|Batched L2 Normalization Layer for Torch nn package]]
+  - [[sources/karpathy-public/gist-7bae8033dcf5ca2630ba|Efficient LSTM cell in Torch]]
+  - [[sources/karpathy-public/gist-1dd0294ef9567971c1e4348a90d69285|Git Commit Message AI]]
+  - [[sources/karpathy-public/gist-88701557e59199f16045|Google slides in present form shows the next slide, but it is tiny and very difficult to see. This CSS hacks it so that the next slide is large.]]
+  - [[sources/karpathy-public/gist-00103b0037c5aaea32fe1da1af553355|hacky stablediffusion code for generating videos]]
+  - [[sources/karpathy-public/gist-fb64880bf1f99d58d6c759c966616922|HELLO.md , written by Claude Opus 4.6 when asked to be free in a directory on my computer]]
+  - [[sources/karpathy-public/gist-442a6bf555914893e9891c11519de94f|llm-wiki]]
+  - [[sources/karpathy-public/gist-8627fe009c40f57531cb18360106ce95|microgpt]]
+  - [[sources/karpathy-public/gist-d4dee566867f8291f086|Minimal character-level language model with a Vanilla Recurrent Neural Network, in Python/numpy]]
+  - [[sources/karpathy-public/gist-77fbb6a8dac5395f1b73e7a89300318d|Natural Evolution Strategies (NES) toy example that optimizes a quadratic function]]
+  - [[sources/karpathy-public/gist-e5d58e83d9fb6ce0827f0f66b253e6fe|pytorch strangeness]]
+  - [[sources/karpathy-public/gist-a4166c7fe253700972fcbc77e4ea32c5|Training a Neural Network ATARI Pong agent with Policy Gradients from raw pixels]]
+  - [[sources/karpathy-public/github-deep-vector-quantization|deep-vector-quantization]]
+  - [[sources/karpathy-public/github-eigenlibsvm|EigenLibSVM]]
+  - [[sources/karpathy-public/github-find-birds|find-birds]]
+  - [[sources/karpathy-public/github-gitstats|gitstats]]
+  - [[sources/karpathy-public/github-karpathy|karpathy]]
+  - [[sources/karpathy-public/github-lifejs|lifejs]]
+  - [[sources/karpathy-public/github-matlabwrapper|MatlabWrapper]]
+  - [[sources/karpathy-public/github-notpygamejs|notpygamejs]]
+  - [[sources/karpathy-public/github-optim|optim]]
+  - [[sources/karpathy-public/github-pytorch-made|pytorch-made]]
+  - [[sources/karpathy-public/github-pytorch-normalizing-flows|pytorch-normalizing-flows]]
+  - [[sources/karpathy-public/github-random-forest-matlab|Random-Forest-Matlab]]
+  - [[sources/karpathy-public/github-scholaroctopus|scholaroctopus]]
+  - [[sources/karpathy-public/github-sqlitedict|sqlitedict]]
+  - [[sources/karpathy-public/github-twoolpy|twoolpy]]
+- Neural network fundamentals
+  - [[sources/karpathy-public/github-char-rnn|char-rnn]]
+  - [[sources/karpathy-public/github-convnetjs|convnetjs]]
+  - [[sources/karpathy-public/github-lecun1989-repro|lecun1989-repro]]
+  - [[sources/karpathy-public/github-makemore|makemore]]
+  - [[sources/karpathy-public/github-micrograd|micrograd]]
+  - [[sources/karpathy-public/github-neuraltalk|neuraltalk]]
+  - [[sources/karpathy-public/github-neuraltalk2|neuraltalk2]]
+  - [[sources/karpathy-public/github-nn-zero-to-hero|nn-zero-to-hero]]
+  - [[sources/karpathy-public/github-recurrentjs|recurrentjs]]
+- Personal heuristics / AI philosophy / learning advice
+  - [[sources/karpathy-public/blog-karpathy-github-io-2018-01-20-medium|(started posting on Medium instead)]]
+  - [[sources/karpathy-public/blog-karpathy-github-io-2021-06-21-blockchain|A from-scratch tour of Bitcoin in Python]]
+  - [[sources/karpathy-public/blog-karpathy-github-io-2019-04-25-recipe|A Recipe for Training Neural Networks]]
+  - [[sources/karpathy-public/blog-karpathy-github-io-2016-09-07-phd|A Survival Guide to a PhD]]
+  - [[sources/karpathy-public/blog-karpathy-github-io-2020-06-11-biohacking-lite|Biohacking Lite]]
+  - [[sources/karpathy-public/blog-karpathy-github-io-2022-03-14-lecun1989|Deep Neural Nets: 33 years ago and 33 years from now]]
+  - [[sources/karpathy-public/blog-karpathy-github-io-2016-05-31-rl|Deep Reinforcement Learning: Pong from Pixels]]
+  - [[sources/karpathy-public/blog-karpathy-github-io-2026-02-12-microgpt|microgpt]]
+  - [[sources/karpathy-public/blog-karpathy-github-io-2015-11-14-ai|Short Story on AI: A Cognitive Discontinuity.]]
+  - [[sources/karpathy-public/blog-karpathy-github-io-2021-03-27-forward-pass|Short Story on AI: Forward Pass]]
+  - [[sources/karpathy-public/tweet-1013244313327681536|Curated Karpathy status 1013244313327681536]]
+  - [[sources/karpathy-public/tweet-1018544870112165888|Curated Karpathy status 1018544870112165888]]
+  - [[sources/karpathy-public/tweet-1031266180240093184|Curated Karpathy status 1031266180240093184]]
+  - [[sources/karpathy-public/tweet-1076927879995285504|Curated Karpathy status 1076927879995285504]]
+  - [[sources/karpathy-public/tweet-1080700888266637314|Curated Karpathy status 1080700888266637314]]
+  - [[sources/karpathy-public/tweet-1084641729288884224|Curated Karpathy status 1084641729288884224]]
+  - [[sources/karpathy-public/tweet-1106605823000666112|Curated Karpathy status 1106605823000666112]]
+  - [[sources/karpathy-public/tweet-1127792584380706816|Curated Karpathy status 1127792584380706816]]
+  - [[sources/karpathy-public/tweet-1133605485477634048|Curated Karpathy status 1133605485477634048]]
+  - [[sources/karpathy-public/tweet-1158225988943089664|Curated Karpathy status 1158225988943089664]]
+  - [[sources/karpathy-public/tweet-1206064174129930240|Curated Karpathy status 1206064174129930240]]
+  - [[sources/karpathy-public/tweet-1231378194948706306|Curated Karpathy status 1231378194948706306]]
+  - [[sources/karpathy-public/tweet-1236737502200791041|Curated Karpathy status 1236737502200791041]]
+  - [[sources/karpathy-public/tweet-1274472300390150144|Curated Karpathy status 1274472300390150144]]
+  - [[sources/karpathy-public/tweet-1279130562913951744|Curated Karpathy status 1279130562913951744]]
+  - [[sources/karpathy-public/tweet-1282524334498541568|Curated Karpathy status 1282524334498541568]]
+  - [[sources/karpathy-public/tweet-1284660899198820352|Curated Karpathy status 1284660899198820352]]
+  - [[sources/karpathy-public/tweet-1292239731707666432|Curated Karpathy status 1292239731707666432]]
+  - [[sources/karpathy-public/tweet-1297718122913308673|Curated Karpathy status 1297718122913308673]]
+  - [[sources/karpathy-public/tweet-1311884485676294151|Curated Karpathy status 1311884485676294151]]
+  - [[sources/karpathy-public/tweet-1320541466112843777|Curated Karpathy status 1320541466112843777]]
+  - [[sources/karpathy-public/tweet-1325154823856033793|Curated Karpathy status 1325154823856033793]]
+  - [[sources/karpathy-public/tweet-1328547710966743040|Curated Karpathy status 1328547710966743040]]
+  - [[sources/karpathy-public/tweet-1331834386057105409|Curated Karpathy status 1331834386057105409]]
+  - [[sources/karpathy-public/tweet-1338274248037597185|Curated Karpathy status 1338274248037597185]]
+  - [[sources/karpathy-public/tweet-1342194661381836800|Curated Karpathy status 1342194661381836800]]
+  - [[sources/karpathy-public/tweet-1350503355299205120|Curated Karpathy status 1350503355299205120]]
+  - [[sources/karpathy-public/tweet-1358483726447988736|Curated Karpathy status 1358483726447988736]]
+  - [[sources/karpathy-public/tweet-1365784221780828162|Curated Karpathy status 1365784221780828162]]
+  - [[sources/karpathy-public/tweet-1389712138982158339|Curated Karpathy status 1389712138982158339]]
+  - [[sources/karpathy-public/tweet-1398374159340634114|Curated Karpathy status 1398374159340634114]]
+  - [[sources/karpathy-public/tweet-1401267972044328961|Curated Karpathy status 1401267972044328961]]
+  - [[sources/karpathy-public/tweet-1429478697946402816|Curated Karpathy status 1429478697946402816]]
+  - [[sources/karpathy-public/tweet-1435827240286109702|Curated Karpathy status 1435827240286109702]]
+  - [[sources/karpathy-public/tweet-1439676583690715140|Curated Karpathy status 1439676583690715140]]
+  - [[sources/karpathy-public/tweet-1442957114415063046|Curated Karpathy status 1442957114415063046]]
+  - [[sources/karpathy-public/tweet-1467180759932801024|Curated Karpathy status 1467180759932801024]]
+  - [[sources/karpathy-public/tweet-1468370605229547522|Curated Karpathy status 1468370605229547522]]
+  - [[sources/karpathy-public/tweet-1470285570924417024|Curated Karpathy status 1470285570924417024]]
+  - [[sources/karpathy-public/tweet-1486215976559398915|Curated Karpathy status 1486215976559398915]]
+  - [[sources/karpathy-public/tweet-1497652099701620738|Curated Karpathy status 1497652099701620738]]
+  - [[sources/karpathy-public/tweet-1504975036037406722|Curated Karpathy status 1504975036037406722]]
+  - [[sources/karpathy-public/tweet-1513420766146084865|Curated Karpathy status 1513420766146084865]]
+  - [[sources/karpathy-public/tweet-1515357035780616192|Curated Karpathy status 1515357035780616192]]
+  - [[sources/karpathy-public/tweet-1515361631366266886|Curated Karpathy status 1515361631366266886]]
+  - [[sources/karpathy-public/tweet-1528453604515778560|Curated Karpathy status 1528453604515778560]]
+  - [[sources/karpathy-public/tweet-1532894698439774208|Curated Karpathy status 1532894698439774208]]
+  - [[sources/karpathy-public/tweet-1550903910633680897|Curated Karpathy status 1550903910633680897]]
+  - [[sources/karpathy-public/tweet-1558569874447671296|Curated Karpathy status 1558569874447671296]]
+  - [[sources/karpathy-public/tweet-1558863432023126020|Curated Karpathy status 1558863432023126020]]
+  - [[sources/karpathy-public/tweet-1564698516164730880|Curated Karpathy status 1564698516164730880]]
+  - [[sources/karpathy-public/tweet-1574906895453675521|Curated Karpathy status 1574906895453675521]]
+  - [[sources/karpathy-public/tweet-1582807367988654081|Curated Karpathy status 1582807367988654081]]
+  - [[sources/karpathy-public/tweet-1590604672557252609|Curated Karpathy status 1590604672557252609]]
+  - [[sources/karpathy-public/tweet-1593091486148489216|Curated Karpathy status 1593091486148489216]]
+  - [[sources/karpathy-public/tweet-1593417987687473152|Curated Karpathy status 1593417987687473152]]
+  - [[sources/karpathy-public/tweet-1599152286672248832|Curated Karpathy status 1599152286672248832]]
+  - [[sources/karpathy-public/tweet-1599852921541128194|Curated Karpathy status 1599852921541128194]]
+  - [[sources/karpathy-public/tweet-1600012576825360384|Curated Karpathy status 1600012576825360384]]
+  - [[sources/karpathy-public/tweet-518489390050340864|Curated Karpathy status 518489390050340864]]
+  - [[sources/karpathy-public/tweet-543115142561804288|Curated Karpathy status 543115142561804288]]
+  - [[sources/karpathy-public/tweet-784212363062816768|Curated Karpathy status 784212363062816768]]
+  - [[sources/karpathy-public/tweet-801621764144971776|Curated Karpathy status 801621764144971776]]
+  - [[sources/karpathy-public/tweet-828022882215174144|Curated Karpathy status 828022882215174144]]
+  - [[sources/karpathy-public/tweet-868178954032513024|Curated Karpathy status 868178954032513024]]
+  - [[sources/karpathy-public/tweet-893576281375219712|Curated Karpathy status 893576281375219712]]
+  - [[sources/karpathy-public/tweet-904807765931024384|Curated Karpathy status 904807765931024384]]
+  - [[sources/karpathy-public/tweet-919396251849728001|Curated Karpathy status 919396251849728001]]
+  - [[sources/karpathy-public/tweet-961307010246492160|Curated Karpathy status 961307010246492160]]
+  - [[sources/karpathy-public/tweet-986454492534128640|Curated Karpathy status 986454492534128640]]
+  - [[sources/karpathy-public/website-karpathy-ai|Karpathy personal homepage]]
+- Research automation / agentic science
+  - [[sources/karpathy-public/github-autoresearch|autoresearch]]
+  - [[sources/karpathy-public/github-jobs|jobs]]
+  - [[sources/karpathy-public/github-llm-council|llm-council]]
+  - [[sources/karpathy-public/github-reinforcejs|reinforcejs]]
+  - [[sources/karpathy-public/github-scriptsbots|scriptsbots]]
+  - [[sources/karpathy-public/github-tf-agent|tf-agent]]
+- Research tooling and paper workflows
+  - [[sources/karpathy-public/github-arxiv-sanity-lite|arxiv-sanity-lite]]
+  - [[sources/karpathy-public/github-arxiv-sanity-preserver|arxiv-sanity-preserver]]
+  - [[sources/karpathy-public/github-covid-sanity|covid-sanity]]
+  - [[sources/karpathy-public/github-nipspreview|nipspreview]]
+  - [[sources/karpathy-public/github-paper-notes|paper-notes]]
+  - [[sources/karpathy-public/github-researchlei|researchlei]]
+  - [[sources/karpathy-public/github-researchpooler|researchpooler]]
+- Talks, courses, and videos
+  - [[sources/karpathy-public/video-1hr-talk-intro-to-large-language-models|1hr Talk Intro to Large Language Models]]
+  - [[sources/karpathy-public/video-building-makemore-part-2-mlp|Building makemore Part 2: MLP]]
+  - [[sources/karpathy-public/video-building-makemore-part-3-activations-gradients-batchnorm|Building makemore Part 3: Activations & Gradients, BatchNorm]]
+  - [[sources/karpathy-public/video-building-makemore-part-4-becoming-a-backprop-ninja|Building makemore Part 4: Becoming a Backprop Ninja]]
+  - [[sources/karpathy-public/video-building-makemore-part-5-building-a-wavenet|Building makemore Part 5: Building a WaveNet]]
+  - [[sources/karpathy-public/video-deep-dive-into-llms-like-chatgpt|Deep Dive into LLMs like ChatGPT]]
+  - [[sources/karpathy-public/video-how-i-use-llms|How I use LLMs]]
+  - [[sources/karpathy-public/video-let-s-build-gpt-from-scratch-in-code-spelled-out|Let's build GPT: from scratch, in code, spelled out.]]
+  - [[sources/karpathy-public/video-let-s-build-the-gpt-tokenizer|Let's build the GPT Tokenizer]]
+  - [[sources/karpathy-public/video-let-s-reproduce-gpt-2-124m|Let's reproduce GPT-2 (124M)]]
+  - [[sources/karpathy-public/video-stable-diffusion-dreams-of-psychedelic-faces|Stable diffusion dreams of psychedelic faces]]
+  - [[sources/karpathy-public/video-stable-diffusion-dreams-of-steampunk-brains|Stable diffusion dreams of steampunk brains]]
+  - [[sources/karpathy-public/video-stable-diffusion-dreams-of-tattoos|Stable diffusion dreams of tattoos]]
+  - [[sources/karpathy-public/video-the-spelled-out-intro-to-language-modeling-building-makemore|The spelled-out intro to language modeling: building makemore]]
+  - [[sources/karpathy-public/video-the-spelled-out-intro-to-neural-networks-and-backpropagation-building-micrograd|The spelled-out intro to neural networks and backpropagation: building micrograd]]
+- Tokenization and language modeling
+  - [[sources/karpathy-public/github-rustbpe|rustbpe]]
+- Vision / multimodal / captioning
+  - [[sources/karpathy-public/github-forestjs|forestjs]]
+  - [[sources/karpathy-public/github-nn|nn]]
+  - [[sources/karpathy-public/github-simple-amt|simple-amt]]
+  - [[sources/karpathy-public/github-svmjs|svmjs]]
+  - [[sources/karpathy-public/github-ulogme|ulogme]]
 ### OpenAI Cookbook Mirror
 
 - Agents SDK / agent workflows
@@ -378,6 +573,8 @@ This is the main catalog of the wiki.
 ## Topics
 
 
+
+- [[karpathy-public-work]] - Hub for Karpathy's public projects, posts, videos, gists, and curated idea links.
 - [[openai-cookbook]] - Mirrored OpenAI Cookbook implementation library with categorized examples, articles, source hashes, and weekly refresh workflow.
 - [[topics-home]] - Entry page for durable subject clusters.
 - [[personal-knowledge-systems]] - Topic map for long-lived systems that accumulate, structure, and revisit knowledge.

@@ -1,0 +1,57 @@
+---
+title: "Stable diffusion dreams of tattoos"
+type: source
+status: active
+created: 2026-05-15
+updated: 2026-05-15
+tags:
+  - karpathy
+  - lecture
+  - video
+  - youtube
+source_pages:
+  - https://www.youtube.com/feeds/videos.xml?channel_id=UCXUPKJO5MZQN11PqgIvyuvQ
+  - https://www.youtube.com/watch?v=sM9bozW295Q
+---
+
+# Stable diffusion dreams of tattoos
+
+## Source
+
+- Source kind: `youtube-video`
+- URL: https://www.youtube.com/watch?v=sM9bozW295Q
+- Discovery source: https://www.youtube.com/feeds/videos.xml?channel_id=UCXUPKJO5MZQN11PqgIvyuvQ
+- License: `YouTube-standard`
+- Distribution policy: `public-metadata-summary-only`
+- Public mirror status: `summary-only`
+- Content hash: `1870d3c210fa26401d22d9a9f08e0e6d7d97fdb7645e932a97c289183e0b9d11`
+- First seen: 2026-05-15
+- Last changed: 2026-05-15
+
+## Classification
+
+- Primary category: Talks, courses, and videos
+- Corpus source note: [[2026-05-15-karpathy-public-corpus]]
+- Project taxonomy: [[karpathy-project-taxonomy]]
+- Idea map: [[karpathy-idea-map]]
+- Topic hub: [[karpathy-public-work]]
+
+## Summary
+
+YouTube video from Karpathy's public channel: Stable diffusion dreams of tattoos.
+
+## What This Teaches
+
+- Use as a lecture-style source for Karpathy's from-scratch explanations and AI system intuition.
+- Pair with linked GitHub repos when a lecture has an accompanying codebase.
+
+## Why It Matters
+
+These videos are among the clearest public sources for Karpathy's pedagogy and implementation taste.
+
+
+## Public Handling Notes
+
+- EXTRACTED: This page records public metadata and a source-grounded summary.
+- INFERRED: Full local preservation, when available, is for private/local use unless a license or explicit source policy makes public redistribution safe.
+- Do not treat this page as permission to republish unlicensed source text or code wholesale.
