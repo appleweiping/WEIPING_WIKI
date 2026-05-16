@@ -1,0 +1,200 @@
+{
+    "schema":  "frontend-frameworks-public-registry-v1",
+    "updated_at":  "2026-05-16",
+    "public_handling":  "Curated official framework-related repositories only; public wiki pages contain metadata, summaries, links, hashes, categories, release summaries, and license notes, not full unlicensed source mirrors.",
+    "frameworks":  [
+                       {
+                           "slug":  "react",
+                           "name":  "React",
+                           "category":  "ui-framework",
+                           "homepage":  "https://react.dev",
+                           "repos":  [
+                                         "facebook/react",
+                                         "reactjs/react.dev"
+                                     ],
+                           "keywords":  [
+                                            "react",
+                                            "jsx",
+                                            "fiber",
+                                            "server components"
+                                        ]
+                       },
+                       {
+                           "slug":  "vue",
+                           "name":  "Vue",
+                           "category":  "ui-framework",
+                           "homepage":  "https://vuejs.org",
+                           "repos":  [
+                                         "vuejs/core",
+                                         "vuejs/docs",
+                                         "vuejs/router",
+                                         "vuejs/pinia",
+                                         "vuejs/devtools"
+                                     ],
+                           "keywords":  [
+                                            "vue",
+                                            "pinia",
+                                            "router",
+                                            "devtools"
+                                        ]
+                       },
+                       {
+                           "slug":  "angular",
+                           "name":  "Angular",
+                           "category":  "ui-framework",
+                           "homepage":  "https://angular.dev",
+                           "repos":  [
+                                         "angular/angular",
+                                         "angular/angular-cli",
+                                         "angular/components"
+                                     ],
+                           "keywords":  [
+                                            "angular",
+                                            "material",
+                                            "cli",
+                                            "components"
+                                        ]
+                       },
+                       {
+                           "slug":  "svelte",
+                           "name":  "Svelte",
+                           "category":  "compiler-runtime",
+                           "homepage":  "https://svelte.dev",
+                           "repos":  [
+                                         "sveltejs/svelte",
+                                         "sveltejs/kit",
+                                         "sveltejs/svelte.dev"
+                                     ],
+                           "keywords":  [
+                                            "svelte",
+                                            "sveltekit",
+                                            "compiler"
+                                        ]
+                       },
+                       {
+                           "slug":  "solid",
+                           "name":  "Solid",
+                           "category":  "ui-framework",
+                           "homepage":  "https://www.solidjs.com",
+                           "repos":  [
+                                         "solidjs/solid",
+                                         "solidjs/solid-start",
+                                         "solidjs/solid-docs"
+                                     ],
+                           "keywords":  [
+                                            "solid",
+                                            "fine-grained",
+                                            "signals"
+                                        ]
+                       },
+                       {
+                           "slug":  "qwik",
+                           "name":  "Qwik",
+                           "category":  "compiler-runtime",
+                           "homepage":  "https://qwik.dev",
+                           "repos":  [
+                                         "QwikDev/qwik",
+                                         "BuilderIO/qwik"
+                                     ],
+                           "keywords":  [
+                                            "qwik",
+                                            "resumable",
+                                            "builderio"
+                                        ]
+                       },
+                       {
+                           "slug":  "astro",
+                           "name":  "Astro",
+                           "category":  "meta-framework",
+                           "homepage":  "https://astro.build",
+                           "repos":  [
+                                         "withastro/astro",
+                                         "withastro/docs",
+                                         "withastro/starlight"
+                                     ],
+                           "keywords":  [
+                                            "astro",
+                                            "islands",
+                                            "content",
+                                            "starlight"
+                                        ]
+                       },
+                       {
+                           "slug":  "nextjs",
+                           "name":  "Next.js",
+                           "category":  "meta-framework",
+                           "homepage":  "https://nextjs.org",
+                           "repos":  [
+                                         "vercel/next.js"
+                                     ],
+                           "keywords":  [
+                                            "next",
+                                            "nextjs",
+                                            "app router",
+                                            "server components"
+                                        ]
+                       },
+                       {
+                           "slug":  "nuxt",
+                           "name":  "Nuxt",
+                           "category":  "meta-framework",
+                           "homepage":  "https://nuxt.com",
+                           "repos":  [
+                                         "nuxt/nuxt",
+                                         "nuxt/ui",
+                                         "nuxt/content",
+                                         "nuxt/image"
+                                     ],
+                           "keywords":  [
+                                            "nuxt",
+                                            "vue",
+                                            "content",
+                                            "image"
+                                        ]
+                       },
+                       {
+                           "slug":  "sveltekit",
+                           "name":  "SvelteKit",
+                           "category":  "meta-framework",
+                           "homepage":  "https://svelte.dev/docs/kit",
+                           "repos":  [
+                                         "sveltejs/kit"
+                                     ],
+                           "keywords":  [
+                                            "sveltekit",
+                                            "routing",
+                                            "adapter"
+                                        ]
+                       },
+                       {
+                           "slug":  "remix-react-router",
+                           "name":  "Remix / React Router",
+                           "category":  "meta-framework",
+                           "homepage":  "https://reactrouter.com",
+                           "repos":  [
+                                         "remix-run/react-router",
+                                         "remix-run/remix"
+                                     ],
+                           "keywords":  [
+                                            "remix",
+                                            "react router",
+                                            "routing",
+                                            "data router"
+                                        ]
+                       },
+                       {
+                           "slug":  "tanstack-start",
+                           "name":  "TanStack Start",
+                           "category":  "meta-framework",
+                           "homepage":  "https://tanstack.com/start",
+                           "repos":  [
+                                         "TanStack/router"
+                                     ],
+                           "keywords":  [
+                                            "tanstack",
+                                            "start",
+                                            "router"
+                                        ]
+                       }
+                   ]
+}

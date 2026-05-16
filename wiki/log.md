@@ -9,6 +9,24 @@ tags:
 ---
 
 # Log
+## [2026-05-16 15:49] ingest | frontend frameworks public corpus
+
+- Pages created or updated:
+  - [[frontend-frameworks-public]]
+  - [[2026-05-16-frontend-frameworks-public-corpus]]
+  - [[frontend-framework-taxonomy]]
+  - [[frontend-framework-idea-map]]
+  - `wiki/entities/frontend-frameworks/`
+  - `wiki/sources/frontend-frameworks/`
+- Sources used:
+  - GitHub repository, language, tree, and release APIs for the curated registry in `raw/frontend-frameworks-public/registry.json`
+- Notes:
+  - Captured 12 frameworks, 28 official repositories, 69 release records, and 103 candidate repositories.
+  - New entries this run: 0.
+  - Changed semantic entries this run: 1.
+  - Removed entries this run: 0.
+  - Crawl errors recorded: 0.
+
 ## [2026-05-16 00:56] ingest | lidang public ideas corpus
 
 - Pages created or updated:

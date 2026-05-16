@@ -69,6 +69,8 @@ This is the main catalog of the wiki.
 
 
 
+
+- [[2026-05-16-frontend-frameworks-public-corpus]] - Batch ingest of frontend framework GitHub repositories, release summaries, language profiles, and candidate discovery.
 - [[2026-05-16-yao-shunyu-public-corpora]] - Batch ingest of the ysymyth and alfredyao public corpora.
 - [[2026-05-16-qq-doc-pvz-fusion-mobile-pc]] - Tencent Docs source note for Plants vs. Zombies Fusion Edition mobile and PC; metadata visible, body permission-gated.
 - [[2026-05-16-lidang-public-corpus]] - Batch ingest of Lidang YouTube RSS, canonical X profile, auxiliary mirror probes, HTML snapshots, and dedupe/backfill rules.
@@ -103,6 +105,10 @@ This is the main catalog of the wiki.
 
 
 
+
+
+- [[frontend-framework-idea-map]] - Idea and release map for captured frontend frameworks.
+- [[frontend-framework-taxonomy]] - Category map of captured frontend framework repositories by ecosystem role.
 - [[public-corpus-ingest-workflow]] - Reusable workflow for complete public-person corpus ingests with automation and safe public indexing.
 - [[shunyu-yao-paper-map]] - Paper, thesis, talk, and scholarly pointer map for the two Shunyu Yao corpora.
 - [[shunyu-yao-project-taxonomy]] - Project and repository taxonomy across the two Shunyu Yao corpora.
@@ -710,6 +716,8 @@ This is the main catalog of the wiki.
 
 
 
+
+- [[frontend-frameworks-public]] - Curated public corpus for mainstream and innovative frontend frameworks, official GitHub repositories, releases, languages, and idea maps.
 - [[shunyu-yao-public-corpora]] - Hub that keeps the two Shunyu Yao public corpora separate and searchable.
 - [[pvz-fusion-edition]] - Routing topic for Plants vs. Zombies Fusion Edition mobile and PC setup sources.
 - [[lidang-public-ideas]] - Hub for high-frequency Lidang public ideas with weekly digests, taxonomy, and source-confidence boundaries.
@@ -729,3 +737,125 @@ This is the main catalog of the wiki.
 
 - [[comparisons-home]] - Entry page for side-by-side evaluations and tradeoff notes.
 - [[llm-wiki-vs-rag]] - Comparison between persistent wiki compilation and query-time retrieval.
+
+<!-- frontend-frameworks-public:index:start -->
+## Frontend Framework Corpus Generated Pages
+
+### Framework Entities
+
+- [[entities/frontend-frameworks/angular|Angular]] - Framework entity page for curated repos, latest captured releases, and navigation.
+- [[entities/frontend-frameworks/astro|Astro]] - Framework entity page for curated repos, latest captured releases, and navigation.
+- [[entities/frontend-frameworks/nextjs|Next.js]] - Framework entity page for curated repos, latest captured releases, and navigation.
+- [[entities/frontend-frameworks/nuxt|Nuxt]] - Framework entity page for curated repos, latest captured releases, and navigation.
+- [[entities/frontend-frameworks/qwik|Qwik]] - Framework entity page for curated repos, latest captured releases, and navigation.
+- [[entities/frontend-frameworks/react|React]] - Framework entity page for curated repos, latest captured releases, and navigation.
+- [[entities/frontend-frameworks/remix-react-router|Remix / React Router]] - Framework entity page for curated repos, latest captured releases, and navigation.
+- [[entities/frontend-frameworks/solid|Solid]] - Framework entity page for curated repos, latest captured releases, and navigation.
+- [[entities/frontend-frameworks/svelte|Svelte]] - Framework entity page for curated repos, latest captured releases, and navigation.
+- [[entities/frontend-frameworks/sveltekit|SvelteKit]] - Framework entity page for curated repos, latest captured releases, and navigation.
+- [[entities/frontend-frameworks/tanstack-start|TanStack Start]] - Framework entity page for curated repos, latest captured releases, and navigation.
+- [[entities/frontend-frameworks/vue|Vue]] - Framework entity page for curated repos, latest captured releases, and navigation.
+
+### Repository Sources
+
+- [[sources/frontend-frameworks/angular-angular|angular/angular]] - GitHub repo source page for Angular, language profile, release pointer, hashes, and metadata.
+- [[sources/frontend-frameworks/angular-angular-cli|angular/angular-cli]] - GitHub repo source page for Angular, language profile, release pointer, hashes, and metadata.
+- [[sources/frontend-frameworks/angular-components|angular/components]] - GitHub repo source page for Angular, language profile, release pointer, hashes, and metadata.
+- [[sources/frontend-frameworks/facebook-react|facebook/react]] - GitHub repo source page for React, language profile, release pointer, hashes, and metadata.
+- [[sources/frontend-frameworks/nuxt-content|nuxt/content]] - GitHub repo source page for Nuxt, language profile, release pointer, hashes, and metadata.
+- [[sources/frontend-frameworks/nuxt-image|nuxt/image]] - GitHub repo source page for Nuxt, language profile, release pointer, hashes, and metadata.
+- [[sources/frontend-frameworks/nuxt-nuxt|nuxt/nuxt]] - GitHub repo source page for Nuxt, language profile, release pointer, hashes, and metadata.
+- [[sources/frontend-frameworks/nuxt-ui|nuxt/ui]] - GitHub repo source page for Nuxt, language profile, release pointer, hashes, and metadata.
+- [[sources/frontend-frameworks/qwikdev-qwik|QwikDev/qwik]] - GitHub repo source page for Qwik, language profile, release pointer, hashes, and metadata.
+- [[sources/frontend-frameworks/reactjs-react-dev|reactjs/react.dev]] - GitHub repo source page for React, language profile, release pointer, hashes, and metadata.
+- [[sources/frontend-frameworks/remix-run-react-router|remix-run/react-router]] - GitHub repo source page for Remix / React Router, language profile, release pointer, hashes, and metadata.
+- [[sources/frontend-frameworks/remix-run-remix|remix-run/remix]] - GitHub repo source page for Remix / React Router, language profile, release pointer, hashes, and metadata.
+- [[sources/frontend-frameworks/solidjs-solid|solidjs/solid]] - GitHub repo source page for Solid, language profile, release pointer, hashes, and metadata.
+- [[sources/frontend-frameworks/solidjs-solid-docs|solidjs/solid-docs]] - GitHub repo source page for Solid, language profile, release pointer, hashes, and metadata.
+- [[sources/frontend-frameworks/solidjs-solid-start|solidjs/solid-start]] - GitHub repo source page for Solid, language profile, release pointer, hashes, and metadata.
+- [[sources/frontend-frameworks/sveltejs-kit|sveltejs/kit]] - GitHub repo source page for Svelte, SvelteKit, language profile, release pointer, hashes, and metadata.
+- [[sources/frontend-frameworks/sveltejs-svelte|sveltejs/svelte]] - GitHub repo source page for Svelte, language profile, release pointer, hashes, and metadata.
+- [[sources/frontend-frameworks/sveltejs-svelte-dev|sveltejs/svelte.dev]] - GitHub repo source page for Svelte, language profile, release pointer, hashes, and metadata.
+- [[sources/frontend-frameworks/tanstack-router|TanStack/router]] - GitHub repo source page for TanStack Start, language profile, release pointer, hashes, and metadata.
+- [[sources/frontend-frameworks/vercel-next-js|vercel/next.js]] - GitHub repo source page for Next.js, language profile, release pointer, hashes, and metadata.
+- [[sources/frontend-frameworks/vuejs-core|vuejs/core]] - GitHub repo source page for Vue, language profile, release pointer, hashes, and metadata.
+- [[sources/frontend-frameworks/vuejs-devtools|vuejs/devtools]] - GitHub repo source page for Vue, language profile, release pointer, hashes, and metadata.
+- [[sources/frontend-frameworks/vuejs-docs|vuejs/docs]] - GitHub repo source page for Vue, language profile, release pointer, hashes, and metadata.
+- [[sources/frontend-frameworks/vuejs-pinia|vuejs/pinia]] - GitHub repo source page for Vue, language profile, release pointer, hashes, and metadata.
+- [[sources/frontend-frameworks/vuejs-router|vuejs/router]] - GitHub repo source page for Vue, language profile, release pointer, hashes, and metadata.
+- [[sources/frontend-frameworks/withastro-astro|withastro/astro]] - GitHub repo source page for Astro, language profile, release pointer, hashes, and metadata.
+- [[sources/frontend-frameworks/withastro-docs|withastro/docs]] - GitHub repo source page for Astro, language profile, release pointer, hashes, and metadata.
+- [[sources/frontend-frameworks/withastro-starlight|withastro/starlight]] - GitHub repo source page for Astro, language profile, release pointer, hashes, and metadata.
+
+### Release Sources
+
+- [[sources/frontend-frameworks/releases/angular-angular-v20-3-21|angular/angular v20.3.21]] - Captured GitHub release summary and body hash.
+- [[sources/frontend-frameworks/releases/angular-angular-v21-2-13|angular/angular v21.2.13]] - Captured GitHub release summary and body hash.
+- [[sources/frontend-frameworks/releases/angular-angular-v22-0-0-rc-0|angular/angular v22.0.0-rc.0]] - Captured GitHub release summary and body hash.
+- [[sources/frontend-frameworks/releases/angular-angular-cli-v20-3-26|angular/angular-cli v20.3.26]] - Captured GitHub release summary and body hash.
+- [[sources/frontend-frameworks/releases/angular-angular-cli-v21-2-11|angular/angular-cli v21.2.11]] - Captured GitHub release summary and body hash.
+- [[sources/frontend-frameworks/releases/angular-angular-cli-v22-0-0-rc-0|angular/angular-cli v22.0.0-rc.0]] - Captured GitHub release summary and body hash.
+- [[sources/frontend-frameworks/releases/angular-components-v21-2-11|angular/components v21.2.11]] - Captured GitHub release summary and body hash.
+- [[sources/frontend-frameworks/releases/angular-components-v22-0-0-next-8|angular/components v22.0.0-next.8]] - Captured GitHub release summary and body hash.
+- [[sources/frontend-frameworks/releases/angular-components-v22-0-0-rc-0|angular/components v22.0.0-rc.0]] - Captured GitHub release summary and body hash.
+- [[sources/frontend-frameworks/releases/facebook-react-v19-0-6|facebook/react v19.0.6]] - Captured GitHub release summary and body hash.
+- [[sources/frontend-frameworks/releases/facebook-react-v19-1-7|facebook/react v19.1.7]] - Captured GitHub release summary and body hash.
+- [[sources/frontend-frameworks/releases/facebook-react-v19-2-6|facebook/react v19.2.6]] - Captured GitHub release summary and body hash.
+- [[sources/frontend-frameworks/releases/nuxt-content-v3-11-2|nuxt/content v3.11.2]] - Captured GitHub release summary and body hash.
+- [[sources/frontend-frameworks/releases/nuxt-content-v3-12-0|nuxt/content v3.12.0]] - Captured GitHub release summary and body hash.
+- [[sources/frontend-frameworks/releases/nuxt-content-v3-13-0|nuxt/content v3.13.0]] - Captured GitHub release summary and body hash.
+- [[sources/frontend-frameworks/releases/nuxt-image-v1-11-0|nuxt/image v1.11.0]] - Captured GitHub release summary and body hash.
+- [[sources/frontend-frameworks/releases/nuxt-image-v2-0-0|nuxt/image v2.0.0]] - Captured GitHub release summary and body hash.
+- [[sources/frontend-frameworks/releases/nuxt-image-v2-0-0-alpha-1|nuxt/image v2.0.0-alpha.1]] - Captured GitHub release summary and body hash.
+- [[sources/frontend-frameworks/releases/nuxt-nuxt-v3-21-5|nuxt/nuxt v3.21.5]] - Captured GitHub release summary and body hash.
+- [[sources/frontend-frameworks/releases/nuxt-nuxt-v4-4-3|nuxt/nuxt v4.4.3]] - Captured GitHub release summary and body hash.
+- [[sources/frontend-frameworks/releases/nuxt-nuxt-v4-4-5|nuxt/nuxt v4.4.5]] - Captured GitHub release summary and body hash.
+- [[sources/frontend-frameworks/releases/nuxt-ui-v4-6-1|nuxt/ui v4.6.1]] - Captured GitHub release summary and body hash.
+- [[sources/frontend-frameworks/releases/nuxt-ui-v4-7-0|nuxt/ui v4.7.0]] - Captured GitHub release summary and body hash.
+- [[sources/frontend-frameworks/releases/nuxt-ui-v4-7-1|nuxt/ui v4.7.1]] - Captured GitHub release summary and body hash.
+- [[sources/frontend-frameworks/releases/qwikdev-qwik-qwik-dev-optimizer-2-1-0-beta-4|QwikDev/qwik @qwik.dev/optimizer@2.1.0-beta.4]] - Captured GitHub release summary and body hash.
+- [[sources/frontend-frameworks/releases/qwikdev-qwik-qwik-dev-react-2-0-0-beta-35|QwikDev/qwik @qwik.dev/react@2.0.0-beta.35]] - Captured GitHub release summary and body hash.
+- [[sources/frontend-frameworks/releases/qwikdev-qwik-qwik-dev-router-2-0-0-beta-35|QwikDev/qwik @qwik.dev/router@2.0.0-beta.35]] - Captured GitHub release summary and body hash.
+- [[sources/frontend-frameworks/releases/remix-run-react-router-react-router-7-14-2|remix-run/react-router react-router@7.14.2]] - Captured GitHub release summary and body hash.
+- [[sources/frontend-frameworks/releases/remix-run-react-router-react-router-7-15-0|remix-run/react-router react-router@7.15.0]] - Captured GitHub release summary and body hash.
+- [[sources/frontend-frameworks/releases/remix-run-react-router-react-router-7-15-1|remix-run/react-router react-router@7.15.1]] - Captured GitHub release summary and body hash.
+- [[sources/frontend-frameworks/releases/remix-run-remix-static-middleware-0-4-8|remix-run/remix static-middleware@0.4.8]] - Captured GitHub release summary and body hash.
+- [[sources/frontend-frameworks/releases/remix-run-remix-test-0-3-0|remix-run/remix test@0.3.0]] - Captured GitHub release summary and body hash.
+- [[sources/frontend-frameworks/releases/remix-run-remix-ui-0-1-1|remix-run/remix ui@0.1.1]] - Captured GitHub release summary and body hash.
+- [[sources/frontend-frameworks/releases/solidjs-solid-v1-8-0|solidjs/solid v1.8.0]] - Captured GitHub release summary and body hash.
+- [[sources/frontend-frameworks/releases/solidjs-solid-v1-9-0|solidjs/solid v1.9.0]] - Captured GitHub release summary and body hash.
+- [[sources/frontend-frameworks/releases/solidjs-solid-v2-0-0-beta-0|solidjs/solid v2.0.0-beta.0]] - Captured GitHub release summary and body hash.
+- [[sources/frontend-frameworks/releases/solidjs-solid-start-solidjs-start-1-3-0|solidjs/solid-start @solidjs/start@1.3.0]] - Captured GitHub release summary and body hash.
+- [[sources/frontend-frameworks/releases/solidjs-solid-start-solidjs-start-1-3-1|solidjs/solid-start @solidjs/start@1.3.1]] - Captured GitHub release summary and body hash.
+- [[sources/frontend-frameworks/releases/solidjs-solid-start-solidjs-start-1-3-2|solidjs/solid-start @solidjs/start@1.3.2]] - Captured GitHub release summary and body hash.
+- [[sources/frontend-frameworks/releases/sveltejs-kit-sveltejs-kit-2-59-1|sveltejs/kit @sveltejs/kit@2.59.1]] - Captured GitHub release summary and body hash.
+- [[sources/frontend-frameworks/releases/sveltejs-kit-sveltejs-kit-2-60-0|sveltejs/kit @sveltejs/kit@2.60.0]] - Captured GitHub release summary and body hash.
+- [[sources/frontend-frameworks/releases/sveltejs-kit-sveltejs-kit-2-60-1|sveltejs/kit @sveltejs/kit@2.60.1]] - Captured GitHub release summary and body hash.
+- [[sources/frontend-frameworks/releases/sveltejs-svelte-svelte-5-55-5|sveltejs/svelte svelte@5.55.5]] - Captured GitHub release summary and body hash.
+- [[sources/frontend-frameworks/releases/sveltejs-svelte-svelte-5-55-6|sveltejs/svelte svelte@5.55.6]] - Captured GitHub release summary and body hash.
+- [[sources/frontend-frameworks/releases/sveltejs-svelte-svelte-5-55-7|sveltejs/svelte svelte@5.55.7]] - Captured GitHub release summary and body hash.
+- [[sources/frontend-frameworks/releases/tanstack-router-tanstack-start-plugin-core-1-170-2|TanStack/router @tanstack/start-plugin-core@1.170.2]] - Captured GitHub release summary and body hash.
+- [[sources/frontend-frameworks/releases/tanstack-router-tanstack-vue-start-1-168-2|TanStack/router @tanstack/vue-start@1.168.2]] - Captured GitHub release summary and body hash.
+- [[sources/frontend-frameworks/releases/tanstack-router-release-2026-05-16-0506|TanStack/router release-2026-05-16-0506]] - Captured GitHub release summary and body hash.
+- [[sources/frontend-frameworks/releases/vercel-next-js-v16-3-0-canary-19|vercel/next.js v16.3.0-canary.19]] - Captured GitHub release summary and body hash.
+- [[sources/frontend-frameworks/releases/vercel-next-js-v16-3-0-canary-20|vercel/next.js v16.3.0-canary.20]] - Captured GitHub release summary and body hash.
+- [[sources/frontend-frameworks/releases/vercel-next-js-v16-3-0-canary-21|vercel/next.js v16.3.0-canary.21]] - Captured GitHub release summary and body hash.
+- [[sources/frontend-frameworks/releases/vuejs-core-v3-5-34|vuejs/core v3.5.34]] - Captured GitHub release summary and body hash.
+- [[sources/frontend-frameworks/releases/vuejs-core-v3-6-0-beta-11|vuejs/core v3.6.0-beta.11]] - Captured GitHub release summary and body hash.
+- [[sources/frontend-frameworks/releases/vuejs-core-v3-6-0-beta-12|vuejs/core v3.6.0-beta.12]] - Captured GitHub release summary and body hash.
+- [[sources/frontend-frameworks/releases/vuejs-devtools-v8-1-0|vuejs/devtools v8.1.0]] - Captured GitHub release summary and body hash.
+- [[sources/frontend-frameworks/releases/vuejs-devtools-v8-1-1|vuejs/devtools v8.1.1]] - Captured GitHub release summary and body hash.
+- [[sources/frontend-frameworks/releases/vuejs-devtools-v8-1-2|vuejs/devtools v8.1.2]] - Captured GitHub release summary and body hash.
+- [[sources/frontend-frameworks/releases/vuejs-pinia-v3-0-2|vuejs/pinia v3.0.2]] - Captured GitHub release summary and body hash.
+- [[sources/frontend-frameworks/releases/vuejs-pinia-v3-0-3|vuejs/pinia v3.0.3]] - Captured GitHub release summary and body hash.
+- [[sources/frontend-frameworks/releases/vuejs-pinia-v3-0-4|vuejs/pinia v3.0.4]] - Captured GitHub release summary and body hash.
+- [[sources/frontend-frameworks/releases/vuejs-router-v5-0-5|vuejs/router v5.0.5]] - Captured GitHub release summary and body hash.
+- [[sources/frontend-frameworks/releases/vuejs-router-v5-0-6|vuejs/router v5.0.6]] - Captured GitHub release summary and body hash.
+- [[sources/frontend-frameworks/releases/vuejs-router-v5-0-7|vuejs/router v5.0.7]] - Captured GitHub release summary and body hash.
+- [[sources/frontend-frameworks/releases/withastro-astro-astrojs-mdx-5-0-6|withastro/astro @astrojs/mdx@5.0.6]] - Captured GitHub release summary and body hash.
+- [[sources/frontend-frameworks/releases/withastro-astro-astro-6-3-2|withastro/astro astro@6.3.2]] - Captured GitHub release summary and body hash.
+- [[sources/frontend-frameworks/releases/withastro-astro-astro-6-3-3|withastro/astro astro@6.3.3]] - Captured GitHub release summary and body hash.
+- [[sources/frontend-frameworks/releases/withastro-starlight-astrojs-starlight-0-39-0|withastro/starlight @astrojs/starlight@0.39.0]] - Captured GitHub release summary and body hash.
+- [[sources/frontend-frameworks/releases/withastro-starlight-astrojs-starlight-0-39-1|withastro/starlight @astrojs/starlight@0.39.1]] - Captured GitHub release summary and body hash.
+- [[sources/frontend-frameworks/releases/withastro-starlight-astrojs-starlight-0-39-2|withastro/starlight @astrojs/starlight@0.39.2]] - Captured GitHub release summary and body hash.
+<!-- frontend-frameworks-public:index:end -->
