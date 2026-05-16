@@ -106,3 +106,15 @@ tags:
   - Configured the local user environment so the ingest can use `GITHUB_TOKEN`.
   - Updated the ingest script to read `GITHUB_TOKEN` or `GH_TOKEN` from process, user, or machine environment before falling back to unauthenticated access.
   - Re-ran the corpus ingest with authenticated GitHub API access; repository metadata now resolves with `github-api` confidence and no crawl errors.
+
+## [2026-05-16 02:54] ingest | tencent docs pvz fusion edition
+
+- Pages created or updated:
+  - [[2026-05-16-qq-doc-pvz-fusion-mobile-pc]]
+  - [[pvz-fusion-edition]]
+- Sources used:
+  - https://docs.qq.com/doc/DSk9tUnNKTGdFVFBJ
+- Notes:
+  - Captured public Tencent Docs metadata for `关于植物大战僵尸融合版（手机加PC端）`.
+  - Browser rendering showed the document body is permission-gated and asks for login.
+  - Recorded follow-up rules for authorized export or logged-in capture before summarizing installation/download details.

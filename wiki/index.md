@@ -70,6 +70,7 @@ This is the main catalog of the wiki.
 
 
 - [[2026-05-16-yao-shunyu-public-corpora]] - Batch ingest of the ysymyth and alfredyao public corpora.
+- [[2026-05-16-qq-doc-pvz-fusion-mobile-pc]] - Tencent Docs source note for Plants vs. Zombies Fusion Edition mobile and PC; metadata visible, body permission-gated.
 - [[2026-05-16-lidang-public-corpus]] - Batch ingest of Lidang YouTube RSS, canonical X profile, auxiliary mirror probes, HTML snapshots, and dedupe/backfill rules.
 - [[2026-05-16-lidang-public-corpus]] - Batch ingest of Lidang YouTube RSS, canonical X profile, and auxiliary mirror probes.
 - [[2026-05-15-karpathy-public-corpus]] - Batch ingest of Karpathy's GitHub repositories, official homepage, blog RSS, YouTube feed, gists, and curated status links.
@@ -708,6 +709,7 @@ This is the main catalog of the wiki.
 
 
 - [[shunyu-yao-public-corpora]] - Hub that keeps the two Shunyu Yao public corpora separate and searchable.
+- [[pvz-fusion-edition]] - Routing topic for Plants vs. Zombies Fusion Edition mobile and PC setup sources.
 - [[lidang-public-ideas]] - Hub for high-frequency Lidang public ideas with weekly digests, taxonomy, and source-confidence boundaries.
 - [[karpathy-public-work]] - Hub for Karpathy's public projects, posts, videos, gists, and curated idea links.
 - [[openai-cookbook]] - Mirrored OpenAI Cookbook implementation library with categorized examples, articles, source hashes, and weekly refresh workflow.
