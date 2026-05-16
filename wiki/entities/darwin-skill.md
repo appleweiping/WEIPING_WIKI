@@ -3,13 +3,14 @@ title: Darwin Skill
 type: entity
 status: active
 created: 2026-05-15
-updated: 2026-05-15
+updated: 2026-05-16
 tags:
   - entity
   - agent-skills
   - local-project
 source_pages:
   - 2026-05-15-d-drive-healthcare-and-skill-roots
+  - 2026-05-16-skill-source-repository-trace
 ---
 
 # Darwin Skill
@@ -21,6 +22,9 @@ source_pages:
 ## Current Claims
 
 - EXTRACTED: The repository tracks `https://github.com/appleweiping/darwin-skill.git` on branch `master`.
+- EXTRACTED: The original upstream repository is `https://github.com/alchaincyf/darwin-skill.git`.
+- EXTRACTED: At the 2026-05-16 trace, local HEAD matched upstream `HEAD` at `2056abfccd924d68ae6baa9193cafff0f666260b`.
+- EXTRACTED: Public GitHub metadata described `alchaincyf/darwin-skill` as an autoresearch-inspired autonomous skill optimization system.
 - EXTRACTED: The English README describes the project as "Optimize your Agent Skills the way you train models."
 - EXTRACTED: The core loop is evaluate, improve, test, human confirm, keep or revert, repeat.
 - EXTRACTED: The project is inspired by Karpathy's `autoresearch` and maps autonomous experiment loops onto `SKILL.md` optimization.
@@ -31,6 +35,7 @@ source_pages:
 
 - Local root: `D:/Skill/darwin-skill`.
 - Git remote: `https://github.com/appleweiping/darwin-skill.git`.
+- Original upstream: `https://github.com/alchaincyf/darwin-skill`.
 - Branch at inspection: `master`.
 - Use for: skill review, skill scoring, skill optimization, result-card generation, and skill-quality experiments.
 

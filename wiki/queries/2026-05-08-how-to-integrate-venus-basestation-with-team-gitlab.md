@@ -3,7 +3,7 @@ title: How To Integrate Venus Basestation With Team GitLab
 type: query
 status: active
 created: 2026-05-08
-updated: 2026-05-08
+updated: 2026-05-16
 tags:
   - query
   - 5eid0
@@ -16,6 +16,7 @@ tags:
 source_pages:
   - 2026-04-22-computer-software-ui-role-plan-for-5eid0
   - 2026-04-22-what-can-i-finish-independently-for-venus-basestation
+  - 2026-05-16-venus-team-project-github-archive
 source_files:
   - chat
 ---
@@ -43,7 +44,15 @@ The Venus team now uses TU/e GitLab for the shared project. Vipin previously dev
   - `examples/sample_messages.jsonl`
   - `tests/`
   - `tools/`
-  - Python dependency files and README
+- Python dependency files and README
+
+## 2026-05-16 Archive Update
+
+- EXTRACTED: The GitHub repository was reorganized as a public archive mirror that now includes both the Team 28 project context and Vipin's UI module.
+- EXTRACTED: The original UI module now lives under `user-interface-module/`.
+- EXTRACTED: The Team 28 GitLab `main` snapshot now lives under `team-project/`, with source-focused module branch snapshots under `team-project/module-branches/`.
+- EXTRACTED: The UI module validation after migration passed with `28` tests.
+- INFERRED: For collaboration, GitLab remains the team source of truth; for portfolio/context, GitHub now shows the complete project shape.
 
 ## Recommended Strategy
 
@@ -97,6 +106,7 @@ base-station-software
 ## Related
 
 - [[2026-04-22-computer-software-ui-role-plan-for-5eid0]]
+- [[2026-05-16-venus-team-project-github-archive]]
 - [[2026-04-22-what-can-i-finish-independently-for-venus-basestation]]
 - [[queries-home]]
 - [[index]]

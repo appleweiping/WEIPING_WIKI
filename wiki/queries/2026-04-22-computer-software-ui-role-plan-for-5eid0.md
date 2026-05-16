@@ -3,7 +3,7 @@ title: Computer Software UI Role Plan For 5EID0
 type: query
 status: active
 created: 2026-04-22
-updated: 2026-04-22
+updated: 2026-05-16
 tags:
   - query
   - computer-software
@@ -13,6 +13,7 @@ tags:
 source_pages:
   - 2026-04-22-5eid0-venus-project-course-materials
   - 2026-04-22-computer-software-vs-embedded-software-in-5eid0
+  - 2026-05-16-venus-team-project-github-archive
 ---
 
 # Computer Software UI Role Plan For 5EID0
@@ -25,7 +26,9 @@ Vipin decided to take the `computer software and user interface` role for the 5E
 
 - GitHub: [appleweiping/venus-basestation](https://github.com/appleweiping/venus-basestation)
 - Local path: `D:/Undergraduate_project_netherlands/Venus basestation`
-- Current prototype status: Python base-station scaffold plus simulated data, JSONL replay, message parsing, map state, MQTT wrapper, status tracking, SVG snapshot export, optional matplotlib dashboard support, examples, and tests.
+- Archive shape: `team-project/` contains the Team 28 GitLab main-branch snapshot, `team-project/module-branches/` contains source-focused snapshots of module branches, and `user-interface-module/` contains Vipin's computer software/UI module.
+- Current UI module status: Python base-station scaffold plus simulated data, JSONL replay, message parsing, map state, MQTT wrapper, status tracking, SVG snapshot export, Tkinter/dashboard support, examples, and tests.
+- Validation: the UI module test suite passed after the archive migration with `28 passed`.
 
 ## Why This Role Can Be Good
 
@@ -151,6 +154,7 @@ For the final report and individual reflection, collect:
 
 - [[2026-04-22-5eid0-venus-project-course-materials]]
 - [[2026-04-22-computer-software-vs-embedded-software-in-5eid0]]
+- [[2026-05-16-venus-team-project-github-archive]]
 - [[2026-04-22-what-language-for-5eid0-computer-software-ui]]
 - [[2026-04-22-what-can-i-finish-independently-for-venus-basestation]]
 - [[2026-04-22-what-to-pay-attention-to-in-5eid0-project-course]]

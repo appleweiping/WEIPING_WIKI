@@ -182,3 +182,38 @@ tags:
   - Added the future rule that missing task-specific tooling should be installed into the D: drive project-local temporary/cache area rather than producing a degraded deliverable.
   - Installed `yt-dlp.exe` under `.wiki-tmp/tools/yt-dlp/` for media lookup and used it to identify the official `晴れの日（晴天）` playable URL.
   - Split the ambiguous `晴天` memory into two song entries: a likely Jay Chou Japanese-cover branch and the Accusefive / Dean Fujioka branch.
+
+## [2026-05-16 18:05] ingest | skill source repository trace
+
+- Pages created or updated:
+  - [[2026-05-16-skill-source-repository-trace]]
+  - [[agent-skill-repositories]]
+  - [[anbeime-skill]]
+  - [[colleague-skill]]
+  - [[darwin-skill]]
+  - [[mattpocock-skills]]
+  - [[nuwa-skill]]
+  - [[index]]
+- Sources used:
+  - Local git remotes and status under `D:/Skill`
+  - Public GitHub API metadata for original upstream repositories
+- Notes:
+  - Classified the migrated local folders as a `skill` corpus rather than generic local projects.
+  - Recorded `origin` as Vipin's fork/mirror and `upstream` as the original public source when configured.
+  - Preserved current local HEADs, upstream relation, and non-git skill-adjacent folder boundaries.
+
+## [2026-05-16 18:06] ingest | venus team project github archive
+
+- Pages created or updated:
+  - [[2026-05-16-venus-team-project-github-archive]]
+  - [[undergraduate-projects-netherlands]]
+  - [[2026-04-22-computer-software-ui-role-plan-for-5eid0]]
+  - [[2026-05-08-how-to-integrate-venus-basestation-with-team-gitlab]]
+  - [[index]]
+- Sources used:
+  - `D:/Undergraduate_project_netherlands/Venus basestation`
+  - `D:/Undergraduate_project_netherlands/venus-team-28-gitlab`
+- Notes:
+  - Recorded the GitHub archive migration that separates the complete Team 28 project snapshot from Vipin's `user-interface-module`.
+  - Preserved the public-safety boundary: omit credentials, virtual environments, caches, personal deployment config, and generated Doxygen HTML.
+  - Recorded post-migration UI validation: `28` tests passed.

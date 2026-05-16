@@ -3,13 +3,14 @@ title: Agent Skill Repositories
 type: topic
 status: active
 created: 2026-05-15
-updated: 2026-05-15
+updated: 2026-05-16
 tags:
   - topic
   - agent-skills
   - local-projects
 source_pages:
   - 2026-05-15-d-drive-healthcare-and-skill-roots
+  - 2026-05-16-skill-source-repository-trace
 ---
 
 # Agent Skill Repositories
@@ -21,20 +22,22 @@ This topic tracks local repositories under `D:/Skill` that collect, generate, in
 ## Current Source Base
 
 - [[2026-05-15-d-drive-healthcare-and-skill-roots]] - Read-only public-safe survey of the D-drive skill roots.
+- [[2026-05-16-skill-source-repository-trace]] - Upstream/origin trace for migrated local skill repositories.
 
 ## Current Roots
 
 | Page | Local root | Main purpose |
 | --- | --- | --- |
-| [[anbeime-skill]] | `D:/Skill/anbeime-skill` | Skill store / skill-library crawler and local collected skill inventory. |
-| [[colleague-skill]] | `D:/Skill/colleague-skill` | `dot-skill` meta-skill for distilling people/context into reusable skills. |
-| [[darwin-skill]] | `D:/Skill/darwin-skill` | Autonomous skill optimizer and scoring loop. |
-| [[mattpocock-skills]] | `D:/Skill/mattpocock-skills` | Small composable engineering and productivity skills. |
-| [[nuwa-skill]] | `D:/Skill/nuwa-skill` | Research-driven person-perspective skill creation. |
+| [[anbeime-skill]] | `D:/Skill/anbeime-skill` | Fork of `anbeime/skill`; skill store / skill-library crawler and local collected skill inventory. |
+| [[colleague-skill]] | `D:/Skill/colleague-skill` | Fork of `titanwings/colleague-skill`; `dot-skill` meta-skill for distilling people/context into reusable skills. |
+| [[darwin-skill]] | `D:/Skill/darwin-skill` | Fork of `alchaincyf/darwin-skill`; autonomous skill optimizer and scoring loop. |
+| [[mattpocock-skills]] | `D:/Skill/mattpocock-skills` | Fork of `mattpocock/skills`; small composable engineering and productivity skills. |
+| [[nuwa-skill]] | `D:/Skill/nuwa-skill` | Fork of `alchaincyf/nuwa-skill`; research-driven person-perspective skill creation. |
 
 ## Practical Takeaways
 
-- EXTRACTED: All five inspected roots are git repositories with clean working trees at inspection time.
+- EXTRACTED: All five primary inspected roots are git repositories with upstream remotes that point to their original public repositories.
+- EXTRACTED: `nuwa-skill` had only an untracked `scripts/__pycache__/` cache at the 2026-05-16 trace; treat it as unrelated local cache.
 - INFERRED: Use [[anbeime-skill]] for broad skill discovery and inventory.
 - INFERRED: Use [[colleague-skill]] or [[nuwa-skill]] when the goal is to build a skill that represents a person, relationship, or perspective.
 - INFERRED: Use [[darwin-skill]] when the goal is to review or optimize an existing `SKILL.md`.
@@ -45,12 +48,15 @@ This topic tracks local repositories under `D:/Skill` that collect, generate, in
 - Rescan the live repository before claiming current branch, cleanliness, file count, or installability.
 - Do not assume local forks exactly match upstream projects.
 - If installing or modifying skills from these repos, inspect each repo's own instructions first.
+- Treat `origin` as Vipin's fork/mirror and `upstream` as the original source repository when present.
+- Classify this corpus as `skill`, not as generic local projects, because the durable unit is reusable agent behavior encoded in `SKILL.md` and related tooling.
 
 ## Counterpoints And Gaps
 
 - This page records repository-level routing only.
 - Individual skills inside these repositories were not validated for correctness, safety, dependency availability, or host compatibility.
 - Some repositories contain generated assets, demos, or examples that may not be needed for normal skill use.
+- `D:/Skill` also contains non-git/generated project folders such as video prompt packages and local MCP experiments; these should be ingested separately if they become durable skills.
 
 ## Related Pages
 

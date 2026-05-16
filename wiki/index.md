@@ -91,8 +91,10 @@ This is the main catalog of the wiki.
 - [[2026-05-08-university-of-minnesota-housing-contract-2026-2027]] - University of Minnesota Housing & Residential Life contract terms, key dates, fees, cancellation/release rules, and resident obligations for 2026-2027.
 - [[2026-05-10-research-project-roots]] - Read-only survey of Vipin's main local research project roots under `D:/Research`.
 - [[2026-05-10-d-drive-portfolio-and-undergraduate-roots]] - Public-safe content-nature inventory for D-drive portfolio, undergraduate project, and study roots.
+- [[2026-05-16-venus-team-project-github-archive]] - Migration note for the Venus Team 28 GitHub archive, including GitLab project snapshot, branch snapshots, UI module location, exclusions, and validation.
 - [[2026-05-15-qmq-app-us-visa-slot-service]] - User-provided and publicly checked pointer to QMQ App, a US visa CGI appointment slot service.
 - [[2026-05-15-d-drive-healthcare-and-skill-roots]] - Public-safe routing ingest for `D:/Healthcare/Medora` and the five `D:/Skill` repositories.
+- [[2026-05-16-skill-source-repository-trace]] - Upstream/origin trace for local D-drive skill repositories and their original public sources.
 - [[2026-05-15-terraria-local-save-files]] - Local Terraria save-file discovery, backup location, file-type summary, and inventory pointers.
 - [[2026-05-15-lu-kan-profile-chat]] - User-provided professional profile for 闄嗕緝 / Lu Kan across architecture, exhibition design, cultural tourism, rural revitalization, and AIGC workflows.
 - [[sources/songs/qingtian-jay-chou-japanese-cover]] - Candidate song entry for the Japanese-cover `晴天` remembered with `小柔Channel`.
