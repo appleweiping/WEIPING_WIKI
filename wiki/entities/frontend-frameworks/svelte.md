@@ -5,9 +5,9 @@ status: active
 created: 2026-05-16
 updated: 2026-05-16
 tags:
-  - compiler-runtime
   - frontend-frameworks
   - svelte
+  - ui-runtime
 source_pages:
   - https://svelte.dev
 ---
@@ -16,15 +16,38 @@ source_pages:
 
 ## Role
 
-- EXTRACTED: Registry category: `compiler-runtime`.
+- EXTRACTED: Registry category: `ui-runtime`.
 - EXTRACTED: Homepage: https://svelte.dev
+- EXTRACTED: Docs URL: https://svelte.dev/docs
+- EXTRACTED: Demo/showcase URL: https://svelte.dev/playground
+- EXTRACTED: Project shell score: `5`.
 - EXTRACTED: Curated official repositories captured in this corpus: 3.
+- INFERRED: This is usually a dependency substrate, not a complete project shell; pick a paired app/docs framework when starting a new project.
+
+## Reuse Profile
+
+Compiler/runtime substrate; SvelteKit is the project shell layer for apps.
+
+## Recommended Use Cases
+
+- compiled UI runtime
+- Svelte component model
+- SvelteKit substrate
+
+## Starter Or Template Clues
+
+- packages/
+- sites/
+
+## Agent Reuse Notes
+
+Use SvelteKit, not raw Svelte alone, when the goal is a reusable app shell.
 
 ## Repositories
 
-- [[sources/frontend-frameworks/sveltejs-kit|sveltejs/kit]] - compiler-runtime, JavaScript, stars 20503, latest release `@sveltejs/kit@2.60.1`
-- [[sources/frontend-frameworks/sveltejs-svelte|sveltejs/svelte]] - compiler-runtime, JavaScript, stars 86573, latest release `svelte@5.55.7`
-- [[sources/frontend-frameworks/sveltejs-svelte-dev|sveltejs/svelte.dev]] - docs, Svelte, stars 295, latest release ``
+- [[sources/frontend-frameworks/sveltejs-kit|sveltejs/kit]] - app-framework, JavaScript, stars 20503, latest release `@sveltejs/kit@2.60.1`
+- [[sources/frontend-frameworks/sveltejs-svelte|sveltejs/svelte]] - ui-runtime, JavaScript, stars 86573, latest release `svelte@5.55.7`
+- [[sources/frontend-frameworks/sveltejs-svelte-dev|sveltejs/svelte.dev]] - ui-runtime, Svelte, stars 295, latest release ``
 
 ## Recent Captured Releases
 
@@ -38,5 +61,5 @@ source_pages:
 ## Navigation
 
 - [[frontend-frameworks-public]]
-- [[frontend-framework-taxonomy]]
-- [[frontend-framework-idea-map]]
+- [[frontend-project-shell-taxonomy]]
+- [[frontend-framework-reuse-map]]

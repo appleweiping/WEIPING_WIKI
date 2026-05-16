@@ -5,8 +5,8 @@ status: active
 created: 2026-05-16
 updated: 2026-05-16
 tags:
+  - app-framework
   - frontend-frameworks
-  - meta-framework
   - release
   - remix-react-router
 source_pages:
@@ -30,6 +30,7 @@ source_pages:
 ## Release Ideas
 
 - Add `FakeTimers#advanceAsync(ms)` to `t.useFakeTimers()`. Like `advance`, it walks pending timers in time order and fires them, but yields to microtasks between each firing so promise continuations (and any timers they s...
+- Accept arrays for `glob.{test,browser,e2e,exclude}`, `project`, `type`, and `coverage.{include,exclude}` config fields
 - `type`'s default is now `["server", "browser", "e2e"]` instead of `"server,browser,e2e"`.
 - Load Playwright only when browser or E2E tests run, allowing test help and server-only test runs without Playwright installed. Browser and E2E test runs now report a clearer error when Playwright is missing.
 - Run server and E2E test files in forked child processes by default, add `pool: 'threads'`/`--pool threads` to preserve the previous worker-thread behavior, and clean up leaked test worker resources after results are repo...
@@ -42,3 +43,8 @@ Minor Changes - Add FakeTimers advanceAsync(ms) to t.useFakeTimers() . Like adva
 
 - EXTRACTED: This page records release metadata and a concise idea summary.
 - INFERRED: The full release body is not mirrored publicly; use the canonical GitHub URL for complete text.
+
+## Navigation
+
+- [[frontend-frameworks-public]]
+- [[frontend-framework-reuse-map]]

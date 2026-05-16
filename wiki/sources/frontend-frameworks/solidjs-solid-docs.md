@@ -5,10 +5,10 @@ status: active
 created: 2026-05-16
 updated: 2026-05-16
 tags:
-  - docs
   - frontend-frameworks
   - MDX
   - solid
+  - ui-runtime
 source_pages:
   - https://github.com/solidjs/solid-docs
 ---
@@ -19,8 +19,11 @@ source_pages:
 
 - Source kind: `github-repository`
 - Canonical URL: https://github.com/solidjs/solid-docs
+- Documentation URL: https://docs.solidjs.com
+- Demo/showcase URL: https://playground.solidjs.com
 - Framework: [[entities/frontend-frameworks/solid|Solid]]
-- Ecosystem role: `docs`
+- Ecosystem role: `ui-runtime`
+- Project shell score: `6`
 - Source confidence: `github-api`
 - Public handling: `public-summary-local-archive-only`
 - Semantic hash: `74bb3e814ed2447586156d26620f010ae8c85a65753c5eae42296217fffe7df7`
@@ -28,6 +31,26 @@ source_pages:
 ## Summary
 
 Official documentation for the Solid ecosystem Welcome to Solid's documentation! This is the repo for $1. This repo contains all the source code that we use to build our docs. $1](https://gitpod.io/ https://github.com/solidjs/solid-docs-next) $1](https://codesandbox.io/p/github/solidjs/solid-docs-next/) $1](https://stackblitz.com/github/solidjs/solid-docs-next) What is Solid? Solid is a JavaScript framework used for building high-performance user-interfaces. Using a reactive approach and component-based architecture, we want to empower developers in creating efficient and scalable web applications. Thank you for being here! You can...
+
+## Reuse Profile
+
+Fine-grained UI runtime plus SolidStart app shell signals; useful for highly reactive apps.
+
+## When To Reuse
+
+- fine-grained reactive UI
+- Solid app
+- signals-first UI
+
+## Starter Or Template Clues
+
+- packages/
+- examples/
+
+## Agent Reuse Notes
+
+Use SolidStart/templates for project shell decisions; raw Solid is runtime substrate.
+- INFERRED: Treat this repo as a runtime/dependency substrate; do not start from it alone when the goal is a full project shell.
 
 ## Repository Snapshot
 
@@ -81,8 +104,8 @@ Official documentation for the Solid ecosystem Welcome to Solid's documentation!
 ## Navigation
 
 - [[frontend-frameworks-public]]
-- [[frontend-framework-taxonomy]]
-- [[frontend-framework-idea-map]]
+- [[frontend-project-shell-taxonomy]]
+- [[frontend-framework-reuse-map]]
 
 ## Public Handling Notes
 

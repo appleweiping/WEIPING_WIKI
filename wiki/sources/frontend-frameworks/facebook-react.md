@@ -8,7 +8,7 @@ tags:
   - frontend-frameworks
   - JavaScript
   - react
-  - ui-framework
+  - ui-runtime
 source_pages:
   - https://github.com/facebook/react
 ---
@@ -19,8 +19,11 @@ source_pages:
 
 - Source kind: `github-repository`
 - Canonical URL: https://github.com/facebook/react
+- Documentation URL: https://react.dev
+- Demo/showcase URL: https://react.dev
 - Framework: [[entities/frontend-frameworks/react|React]]
-- Ecosystem role: `ui-framework`
+- Ecosystem role: `ui-runtime`
+- Project shell score: `4`
 - Source confidence: `github-api`
 - Public handling: `public-summary-plus-license-aware-metadata`
 - Semantic hash: `284b629895a5546ef327e1e9f5631411855aa5fb77f56842202b419a635b4b37`
@@ -29,11 +32,31 @@ source_pages:
 
 The library for web and native user interfaces. $1 &middot; $1](https://github.com/facebook/react/blob/main/LICENSE) $1](https://www.npmjs.com/package/react) $1](https://github.com/facebook/react/actions/workflows/runtime build and test.yml) $1](https://github.com/facebook/react/actions/workflows/compiler typescript.yml) $1](https://legacy.reactjs.org/docs/how-to-contribute.html your-first-pull-request) React is a JavaScript library for building user interfaces. Declarative: React makes it painless to create interactive UIs. Design simple views for each state in your application, and React will efficiently update and render just the...
 
+## Reuse Profile
+
+UI runtime/dependency substrate; usually pair with Next.js, Remix, Docusaurus, Nextra, or Fumadocs for a project shell.
+
+## When To Reuse
+
+- component runtime
+- UI substrate
+- library ecosystem base
+
+## Starter Or Template Clues
+
+- fixtures/
+- compiler/
+
+## Agent Reuse Notes
+
+Do not treat as a complete project shell; choose a React-based framework when starting an app/docs site.
+- INFERRED: Treat this repo as a runtime/dependency substrate; do not start from it alone when the goal is a full project shell.
+
 ## Repository Snapshot
 
 - Default branch: `main`
 - HEAD SHA: `b91823e21434ac665450e67ddc6f816710255938`
-- Stars at crawl: 245050
+- Stars at crawl: 245053
 - Forks at crawl: 51049
 - Open issues at crawl: 1305
 - Primary language: `JavaScript`
@@ -80,8 +103,8 @@ The library for web and native user interfaces. $1 &middot; $1](https://github.c
 ## Navigation
 
 - [[frontend-frameworks-public]]
-- [[frontend-framework-taxonomy]]
-- [[frontend-framework-idea-map]]
+- [[frontend-project-shell-taxonomy]]
+- [[frontend-framework-reuse-map]]
 
 ## Public Handling Notes
 

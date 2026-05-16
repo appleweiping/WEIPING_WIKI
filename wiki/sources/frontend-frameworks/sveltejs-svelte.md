@@ -5,10 +5,10 @@ status: active
 created: 2026-05-16
 updated: 2026-05-16
 tags:
-  - compiler-runtime
   - frontend-frameworks
   - JavaScript
   - svelte
+  - ui-runtime
 source_pages:
   - https://github.com/sveltejs/svelte
 ---
@@ -19,8 +19,11 @@ source_pages:
 
 - Source kind: `github-repository`
 - Canonical URL: https://github.com/sveltejs/svelte
+- Documentation URL: https://svelte.dev/docs
+- Demo/showcase URL: https://svelte.dev/playground
 - Framework: [[entities/frontend-frameworks/svelte|Svelte]]
-- Ecosystem role: `compiler-runtime`
+- Ecosystem role: `ui-runtime`
+- Project shell score: `5`
 - Source confidence: `github-api`
 - Public handling: `public-summary-plus-license-aware-metadata`
 - Semantic hash: `983830791dc1cfa84ad165bcc9b05351747be78b454697248ddb19981e8180cd`
@@ -28,6 +31,26 @@ source_pages:
 ## Summary
 
 web development for the rest of us $1](LICENSE.md) $1](https://svelte.dev/chat) What is Svelte? Svelte is a new way to build web applications. It's a compiler that takes your declarative components and converts them into efficient JavaScript that surgically updates the DOM. Learn more at the $1, or stop by the $1. Supporting Svelte Svelte is an MIT-licensed open source project with its ongoing development made possible entirely by fantastic volunteers. If you'd like to support their efforts, please consider: - $1. Funds donated via Open Collective will be used for compensating expenses related to Svelte's development such as hosting...
+
+## Reuse Profile
+
+Compiler/runtime substrate; SvelteKit is the project shell layer for apps.
+
+## When To Reuse
+
+- compiled UI runtime
+- Svelte component model
+- SvelteKit substrate
+
+## Starter Or Template Clues
+
+- packages/
+- sites/
+
+## Agent Reuse Notes
+
+Use SvelteKit, not raw Svelte alone, when the goal is a reusable app shell.
+- INFERRED: Treat this repo as a runtime/dependency substrate; do not start from it alone when the goal is a full project shell.
 
 ## Repository Snapshot
 
@@ -76,8 +99,8 @@ web development for the rest of us $1](LICENSE.md) $1](https://svelte.dev/chat) 
 ## Navigation
 
 - [[frontend-frameworks-public]]
-- [[frontend-framework-taxonomy]]
-- [[frontend-framework-idea-map]]
+- [[frontend-project-shell-taxonomy]]
+- [[frontend-framework-reuse-map]]
 
 ## Public Handling Notes
 

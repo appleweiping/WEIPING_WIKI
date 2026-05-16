@@ -5,10 +5,10 @@ status: active
 created: 2026-05-16
 updated: 2026-05-16
 tags:
-  - compiler-runtime
   - frontend-frameworks
   - release
   - svelte
+  - ui-runtime
 source_pages:
   - https://github.com/sveltejs/svelte/releases/tag/svelte%405.55.6
 ---
@@ -43,3 +43,8 @@ Patch Changes - fix: leave stale promises to wait for a later resolution, instea
 
 - EXTRACTED: This page records release metadata and a concise idea summary.
 - INFERRED: The full release body is not mirrored publicly; use the canonical GitHub URL for complete text.
+
+## Navigation
+
+- [[frontend-frameworks-public]]
+- [[frontend-framework-reuse-map]]

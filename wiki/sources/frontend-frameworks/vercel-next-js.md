@@ -5,9 +5,9 @@ status: active
 created: 2026-05-16
 updated: 2026-05-16
 tags:
+  - app-framework
   - frontend-frameworks
   - JavaScript
-  - meta-framework
   - nextjs
 source_pages:
   - https://github.com/vercel/next.js
@@ -19,8 +19,11 @@ source_pages:
 
 - Source kind: `github-repository`
 - Canonical URL: https://github.com/vercel/next.js
+- Documentation URL: https://nextjs.org/docs
+- Demo/showcase URL: https://nextjs.org/showcase
 - Framework: [[entities/frontend-frameworks/nextjs|Next.js]]
-- Ecosystem role: `meta-framework`
+- Ecosystem role: `app-framework`
+- Project shell score: `10`
 - Source confidence: `github-api`
 - Public handling: `public-summary-plus-license-aware-metadata`
 - Semantic hash: `a2d7517d63f225af3bc7626f2137f9a3e2b65b812b98f685e14a0907990093f0`
@@ -29,13 +32,34 @@ source_pages:
 
 The React Framework packages/next/README.md
 
+## Reuse Profile
+
+React full-stack app shell with routing, server rendering, API/server actions, and deployment conventions.
+
+## When To Reuse
+
+- full-stack React app
+- SaaS
+- dashboard
+- commerce
+- server-rendered app
+
+## Starter Or Template Clues
+
+- examples/
+
+## Agent Reuse Notes
+
+Use when a new app needs a mainstream React framework with routing, server components, and deployment path.
+- INFERRED: Treat this repo as a reusable shell/layer candidate; inspect docs, examples, and release notes before transplanting patterns.
+
 ## Repository Snapshot
 
 - Default branch: `canary`
 - HEAD SHA: `ec0279c7a9416cd2b8182167d4e526d2688ae21a`
 - Stars at crawl: 139494
-- Forks at crawl: 31072
-- Open issues at crawl: 3948
+- Forks at crawl: 31071
+- Open issues at crawl: 3949
 - Primary language: `JavaScript`
 - License: `MIT`
 - README path: `readme.md`
@@ -90,8 +114,8 @@ The React Framework packages/next/README.md
 ## Navigation
 
 - [[frontend-frameworks-public]]
-- [[frontend-framework-taxonomy]]
-- [[frontend-framework-idea-map]]
+- [[frontend-project-shell-taxonomy]]
+- [[frontend-framework-reuse-map]]
 
 ## Public Handling Notes
 

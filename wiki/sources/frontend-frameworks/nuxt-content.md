@@ -5,7 +5,7 @@ status: active
 created: 2026-05-16
 updated: 2026-05-16
 tags:
-  - content
+  - app-framework
   - frontend-frameworks
   - nuxt
   - TypeScript
@@ -19,8 +19,11 @@ source_pages:
 
 - Source kind: `github-repository`
 - Canonical URL: https://github.com/nuxt/content
+- Documentation URL: https://nuxt.com/docs
+- Demo/showcase URL: https://nuxt.com/templates
 - Framework: [[entities/frontend-frameworks/nuxt|Nuxt]]
-- Ecosystem role: `content`
+- Ecosystem role: `app-framework`
+- Project shell score: `10`
 - Source confidence: `github-api`
 - Public handling: `public-summary-plus-license-aware-metadata`
 - Semantic hash: `00852b55f30b3751359e324b6a89865a9143c6438dfd027bb9c63b7256956588`
@@ -28,6 +31,27 @@ source_pages:
 ## Summary
 
 The file-based CMS for your Nuxt application, powered by Markdown and Vue components. $1](https://content.nuxt.com) Nuxt Content [![npm version][npm-version-src&#93;&#93;[npm-version-href] [![npm downloads][npm-downloads-src&#93;&#93;[npm-downloads-href] [![License][license-src&#93;&#93;[license-href] [![Nuxt][nuxt-src&#93;&#93;[nuxt-href] [![Volta][volta-src&#93;&#93;[volta-href] Nuxt Content reads the content/ directory in your project, parses .md , .yml , .csv or .json files and creates a powerful data layer for your application. Bonus, use Vue components in Markdown with the $1. - $1 - $1 - $1 Features - $1 support - Work in serverless and edge environments (Cloudflar...
+
+## Reuse Profile
+
+Vue full-stack app shell with routing, server engine, content module, UI module, and image pipeline.
+
+## When To Reuse
+
+- Vue full-stack app
+- content app
+- dashboard
+- documentation with Nuxt Content
+
+## Starter Or Template Clues
+
+- examples/
+- packages/
+
+## Agent Reuse Notes
+
+Use when the desired shell is Vue-first with strong batteries for content, UI, and deployment.
+- INFERRED: Treat this repo as a reusable shell/layer candidate; inspect docs, examples, and release notes before transplanting patterns.
 
 ## Repository Snapshot
 
@@ -78,8 +102,8 @@ The file-based CMS for your Nuxt application, powered by Markdown and Vue compon
 ## Navigation
 
 - [[frontend-frameworks-public]]
-- [[frontend-framework-taxonomy]]
-- [[frontend-framework-idea-map]]
+- [[frontend-project-shell-taxonomy]]
+- [[frontend-framework-reuse-map]]
 
 ## Public Handling Notes
 

@@ -7,8 +7,8 @@ updated: 2026-05-16
 tags:
   - astro
   - frontend-frameworks
-  - meta-framework
   - release
+  - site-framework
 source_pages:
   - https://github.com/withastro/astro/releases/tag/astro%406.3.3
 ---
@@ -39,3 +39,8 @@ Patch Changes - $1 $1 Thanks $1! - Fixes a reflected XSS vulnerability where slo
 
 - EXTRACTED: This page records release metadata and a concise idea summary.
 - INFERRED: The full release body is not mirrored publicly; use the canonical GitHub URL for complete text.
+
+## Navigation
+
+- [[frontend-frameworks-public]]
+- [[frontend-framework-reuse-map]]

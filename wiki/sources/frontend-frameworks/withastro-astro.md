@@ -7,7 +7,7 @@ updated: 2026-05-16
 tags:
   - astro
   - frontend-frameworks
-  - meta-framework
+  - site-framework
   - TypeScript
 source_pages:
   - https://github.com/withastro/astro
@@ -19,8 +19,11 @@ source_pages:
 
 - Source kind: `github-repository`
 - Canonical URL: https://github.com/withastro/astro
+- Documentation URL: https://docs.astro.build
+- Demo/showcase URL: https://astro.build/themes/
 - Framework: [[entities/frontend-frameworks/astro|Astro]]
-- Ecosystem role: `meta-framework`
+- Ecosystem role: `site-framework`
+- Project shell score: `9`
 - Source confidence: `github-api`
 - Public handling: `public-summary-local-archive-only`
 - Semantic hash: `75784593ff8264221aced5fd4edc65b524dab8dc8afe62de47ffefbb1c0b0e54`
@@ -29,12 +32,34 @@ source_pages:
 
 The web framework for content-driven websites. ⭐️ Star to support our work! !$1 Astro is a website build tool for the modern web &mdash; powerful developer experience meets lightweight output. $1](https://github.com/withastro/astro/actions/workflows/ci.yml) $1](https://github.com/withastro/astro/blob/main/LICENSE) $1](https://badge.fury.io/js/astro) Install The recommended way to install the latest version of Astro is by running the command below: You can also install Astro manually by running this command instead: Looking for help? Start with our $1 guide. Looking for quick examples? $1 right in your browser. Documentation Visit ou...
 
+## Reuse Profile
+
+Content-driven web framework for sites, blogs, docs, and partial-hydration interactive pages.
+
+## When To Reuse
+
+- content site
+- marketing site
+- docs site
+- blog
+- islands architecture
+
+## Starter Or Template Clues
+
+- examples/
+- packages/create-astro/
+
+## Agent Reuse Notes
+
+Use when the project is content-first but needs selective interactive islands.
+- INFERRED: Treat this repo as a reusable shell/layer candidate; inspect docs, examples, and release notes before transplanting patterns.
+
 ## Repository Snapshot
 
 - Default branch: `main`
 - HEAD SHA: `b6ee23d339311c356ad25781f62454aee289e47b`
-- Stars at crawl: 59328
-- Forks at crawl: 3449
+- Stars at crawl: 59329
+- Forks at crawl: 3450
 - Open issues at crawl: 210
 - Primary language: `TypeScript`
 - License: `NOASSERTION`
@@ -87,8 +112,8 @@ The web framework for content-driven websites. ⭐️ Star to support our work! 
 ## Navigation
 
 - [[frontend-frameworks-public]]
-- [[frontend-framework-taxonomy]]
-- [[frontend-framework-idea-map]]
+- [[frontend-project-shell-taxonomy]]
+- [[frontend-framework-reuse-map]]
 
 ## Public Handling Notes
 

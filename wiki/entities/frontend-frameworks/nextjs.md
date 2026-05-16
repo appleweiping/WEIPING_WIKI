@@ -5,8 +5,8 @@ status: active
 created: 2026-05-16
 updated: 2026-05-16
 tags:
+  - app-framework
   - frontend-frameworks
-  - meta-framework
   - nextjs
 source_pages:
   - https://nextjs.org
@@ -16,13 +16,37 @@ source_pages:
 
 ## Role
 
-- EXTRACTED: Registry category: `meta-framework`.
+- EXTRACTED: Registry category: `app-framework`.
 - EXTRACTED: Homepage: https://nextjs.org
+- EXTRACTED: Docs URL: https://nextjs.org/docs
+- EXTRACTED: Demo/showcase URL: https://nextjs.org/showcase
+- EXTRACTED: Project shell score: `10`.
 - EXTRACTED: Curated official repositories captured in this corpus: 1.
+- INFERRED: This can be evaluated as a reusable project shell or major project layer.
+
+## Reuse Profile
+
+React full-stack app shell with routing, server rendering, API/server actions, and deployment conventions.
+
+## Recommended Use Cases
+
+- full-stack React app
+- SaaS
+- dashboard
+- commerce
+- server-rendered app
+
+## Starter Or Template Clues
+
+- examples/
+
+## Agent Reuse Notes
+
+Use when a new app needs a mainstream React framework with routing, server components, and deployment path.
 
 ## Repositories
 
-- [[sources/frontend-frameworks/vercel-next-js|vercel/next.js]] - meta-framework, JavaScript, stars 139494, latest release `v16.3.0-canary.21`
+- [[sources/frontend-frameworks/vercel-next-js|vercel/next.js]] - app-framework, JavaScript, stars 139494, latest release `v16.3.0-canary.21`
 
 ## Recent Captured Releases
 
@@ -33,5 +57,5 @@ source_pages:
 ## Navigation
 
 - [[frontend-frameworks-public]]
-- [[frontend-framework-taxonomy]]
-- [[frontend-framework-idea-map]]
+- [[frontend-project-shell-taxonomy]]
+- [[frontend-framework-reuse-map]]

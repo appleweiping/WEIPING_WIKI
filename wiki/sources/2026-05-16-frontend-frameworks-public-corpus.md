@@ -22,23 +22,29 @@ tags:
 ## Snapshot
 
 - Mode: $Mode
-- Frameworks: 12
-- Official repositories captured: 28
-- Releases captured: 69
-- Candidate repositories recorded: 103
+- Frameworks: 20
+- Official repositories captured: 36
+- Releases captured: 93
+- Candidate repositories recorded: 166
 - New entries this run: 0
-- Changed semantic entries this run: 1
+- Changed semantic entries this run: 0
 - Removed entries this run: 0
 - Crawl errors recorded: 0
 
+## Corpus Interpretation
+
+- EXTRACTED: This corpus is now organized around reusable frontend project shells: knowledge-site frameworks, documentation frameworks, app frameworks, build tooling, and UI/runtime substrates.
+- INFERRED: UI runtime entries such as React and Vue are important dependency layers but are not usually complete project shells by themselves.
+- EXTRACTED: The current `vipin wiki` public site build uses Quartz v4 through the local `site/` adapter and temporary Quartz checkout flow.
+
 ## Public Handling
 
-- EXTRACTED: Public pages record GitHub metadata, summaries, release idea bullets, hashes, and canonical links.
+- EXTRACTED: Public pages record GitHub metadata, summaries, reuse notes, release idea bullets, hashes, docs/demo links, and canonical links.
 - INFERRED: Full source code and long release bodies remain outside the public wiki unless a future license-aware mirror policy is added.
 - AMBIGUOUS: Candidate repositories require human registry review before promotion.
 
 ## Related
 
 - [[frontend-frameworks-public]]
-- [[frontend-framework-taxonomy]]
-- [[frontend-framework-idea-map]]
+- [[frontend-project-shell-taxonomy]]
+- [[frontend-framework-reuse-map]]

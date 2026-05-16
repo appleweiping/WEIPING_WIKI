@@ -6,9 +6,9 @@ created: 2026-05-16
 updated: 2026-05-16
 tags:
   - angular
+  - app-framework
   - frontend-frameworks
   - release
-  - ui-framework
 source_pages:
   - https://github.com/angular/angular/releases/tag/v22.0.0-rc.0
 ---
@@ -39,3 +39,8 @@ compiler Commit Description -- -- $1](https://github.com/angular/angular/commit/
 
 - EXTRACTED: This page records release metadata and a concise idea summary.
 - INFERRED: The full release body is not mirrored publicly; use the canonical GitHub URL for complete text.
+
+## Navigation
+
+- [[frontend-frameworks-public]]
+- [[frontend-framework-reuse-map]]

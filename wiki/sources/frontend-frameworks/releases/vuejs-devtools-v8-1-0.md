@@ -5,9 +5,9 @@ status: active
 created: 2026-05-16
 updated: 2026-05-16
 tags:
-  - docs
   - frontend-frameworks
   - release
+  - ui-runtime
   - vue
 source_pages:
   - https://github.com/vuejs/devtools/releases/tag/v8.1.0
@@ -39,3 +39,8 @@ No significant changes $1
 
 - EXTRACTED: This page records release metadata and a concise idea summary.
 - INFERRED: The full release body is not mirrored publicly; use the canonical GitHub URL for complete text.
+
+## Navigation
+
+- [[frontend-frameworks-public]]
+- [[frontend-framework-reuse-map]]

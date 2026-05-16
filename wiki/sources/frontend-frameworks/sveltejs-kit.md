@@ -5,10 +5,10 @@ status: active
 created: 2026-05-16
 updated: 2026-05-16
 tags:
-  - compiler-runtime
+  - app-framework
   - frontend-frameworks
   - JavaScript
-  - svelte
+  - sveltekit
 source_pages:
   - https://github.com/sveltejs/kit
 ---
@@ -19,8 +19,11 @@ source_pages:
 
 - Source kind: `github-repository`
 - Canonical URL: https://github.com/sveltejs/kit
-- Framework: [[entities/frontend-frameworks/svelte|Svelte]], [[entities/frontend-frameworks/sveltekit|SvelteKit]]
-- Ecosystem role: `compiler-runtime`
+- Documentation URL: https://svelte.dev/docs/kit
+- Demo/showcase URL: https://svelte.dev
+- Framework: [[entities/frontend-frameworks/sveltekit|SvelteKit]], [[entities/frontend-frameworks/svelte|Svelte]]
+- Ecosystem role: `app-framework`
+- Project shell score: `9`
 - Source confidence: `github-api`
 - Public handling: `public-summary-plus-license-aware-metadata`
 - Semantic hash: `bb60d4120b6894e0e1699f1956fd4a37cc13f6459750a11b880f3b10ee168ad4`
@@ -29,13 +32,34 @@ source_pages:
 
 web development, streamlined $1](https://svelte.dev/chat) SvelteKit Web development, streamlined. Read the $1 to get started. Packages Package Changelog --------------------------------------------------------------------------- ------------------------------------------------------------- $1 $1 $1 $1 $1 $1 $1 $1 $1 $1 $1 $1 $1 $1 $1 $1 $1 $1 $1 $1 $1 are maintained by the community. Bug reporting Please make sure the issue you're reporting involves SvelteKit. Many issues related to how a project builds originate from $1, which is used to build a SvelteKit project. You can create a new Vite project with npm create vite@latest for cl...
 
+## Reuse Profile
+
+Svelte app shell with file routing, load functions, adapters, and deploy-target abstraction.
+
+## When To Reuse
+
+- Svelte app
+- small full-stack app
+- fast interactive frontend
+- adapter-driven deployment
+
+## Starter Or Template Clues
+
+- packages/create-svelte/
+- documentation/docs/
+
+## Agent Reuse Notes
+
+Use when the app should be Svelte-native and deployment-adapter friendly.
+- INFERRED: Treat this repo as a reusable shell/layer candidate; inspect docs, examples, and release notes before transplanting patterns.
+
 ## Repository Snapshot
 
 - Default branch: `main`
 - HEAD SHA: `0395c3e8ee3a7ec20b269e73e4c68dc5f6405c0e`
 - Stars at crawl: 20503
 - Forks at crawl: 2253
-- Open issues at crawl: 1051
+- Open issues at crawl: 1052
 - Primary language: `JavaScript`
 - License: `MIT`
 - README path: `README.md`
@@ -74,8 +98,8 @@ web development, streamlined $1](https://svelte.dev/chat) SvelteKit Web developm
 ## Navigation
 
 - [[frontend-frameworks-public]]
-- [[frontend-framework-taxonomy]]
-- [[frontend-framework-idea-map]]
+- [[frontend-project-shell-taxonomy]]
+- [[frontend-framework-reuse-map]]
 
 ## Public Handling Notes
 

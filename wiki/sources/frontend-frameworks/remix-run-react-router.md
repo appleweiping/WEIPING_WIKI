@@ -5,9 +5,9 @@ status: active
 created: 2026-05-16
 updated: 2026-05-16
 tags:
+  - app-framework
   - frontend-frameworks
   - remix-react-router
-  - router
   - TypeScript
 source_pages:
   - https://github.com/remix-run/react-router
@@ -19,8 +19,11 @@ source_pages:
 
 - Source kind: `github-repository`
 - Canonical URL: https://github.com/remix-run/react-router
+- Documentation URL: https://reactrouter.com
+- Demo/showcase URL: https://remix.run
 - Framework: [[entities/frontend-frameworks/remix-react-router|Remix / React Router]]
-- Ecosystem role: `router`
+- Ecosystem role: `app-framework`
+- Project shell score: `9`
 - Source confidence: `github-api`
 - Public handling: `public-summary-plus-license-aware-metadata`
 - Semantic hash: `cb2095206656ce12061248636fe1f387d78d8ea4923e45b0df885ca16b1eacc0`
@@ -28,6 +31,26 @@ source_pages:
 ## Summary
 
 Declarative routing for React [![npm package][npm-badge&#93;&#93;[npm] [![build][build-badge&#93;&#93;[build] [npm-badge]: https://img.shields.io/npm/v/react-router-dom.svg [npm]: https://www.npmjs.org/package/react-router-dom [build-badge]: https://img.shields.io/github/actions/workflow/status/remix-run/react-router/test.yml?branch=dev&style=square [build]: https://github.com/remix-run/react-router/actions/workflows/test.yml React Router is a multi-strategy router for React bridging the gap from React 18 to React 19. You can use it maximally as a React framework or minimally as a library with your own architecture. - $1 - $1 - $1 - $1 - $1 Package...
+
+## Reuse Profile
+
+React routing/data framework for app shells with nested routing, loaders/actions, and Remix stack heritage.
+
+## When To Reuse
+
+- routing-heavy React app
+- nested data app
+- web app with progressive enhancement
+
+## Starter Or Template Clues
+
+- examples/
+- templates/
+
+## Agent Reuse Notes
+
+Use when app architecture should center on routing, data loading, mutations, and nested layouts.
+- INFERRED: Treat this repo as a reusable shell/layer candidate; inspect docs, examples, and release notes before transplanting patterns.
 
 ## Repository Snapshot
 
@@ -75,8 +98,8 @@ Declarative routing for React [![npm package][npm-badge&#93;&#93;[npm] [![build]
 ## Navigation
 
 - [[frontend-frameworks-public]]
-- [[frontend-framework-taxonomy]]
-- [[frontend-framework-idea-map]]
+- [[frontend-project-shell-taxonomy]]
+- [[frontend-framework-reuse-map]]
 
 ## Public Handling Notes
 

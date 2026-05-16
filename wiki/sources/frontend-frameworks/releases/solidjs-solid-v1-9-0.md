@@ -8,7 +8,7 @@ tags:
   - frontend-frameworks
   - release
   - solid
-  - ui-framework
+  - ui-runtime
 source_pages:
   - https://github.com/solidjs/solid/releases/tag/v1.9.0
 ---
@@ -39,3 +39,8 @@ This release like the last is focusing on small quality of life improvements and
 
 - EXTRACTED: This page records release metadata and a concise idea summary.
 - INFERRED: The full release body is not mirrored publicly; use the canonical GitHub URL for complete text.
+
+## Navigation
+
+- [[frontend-frameworks-public]]
+- [[frontend-framework-reuse-map]]

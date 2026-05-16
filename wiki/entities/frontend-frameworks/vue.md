@@ -6,7 +6,7 @@ created: 2026-05-16
 updated: 2026-05-16
 tags:
   - frontend-frameworks
-  - ui-framework
+  - ui-runtime
   - vue
 source_pages:
   - https://vuejs.org
@@ -16,17 +16,40 @@ source_pages:
 
 ## Role
 
-- EXTRACTED: Registry category: `ui-framework`.
+- EXTRACTED: Registry category: `ui-runtime`.
 - EXTRACTED: Homepage: https://vuejs.org
+- EXTRACTED: Docs URL: https://vuejs.org/guide/
+- EXTRACTED: Demo/showcase URL: https://play.vuejs.org
+- EXTRACTED: Project shell score: `4`.
 - EXTRACTED: Curated official repositories captured in this corpus: 5.
+- INFERRED: This is usually a dependency substrate, not a complete project shell; pick a paired app/docs framework when starting a new project.
+
+## Reuse Profile
+
+UI runtime/dependency substrate; usually pair with Nuxt or VitePress for a full project shell.
+
+## Recommended Use Cases
+
+- Vue component runtime
+- state/router ecosystem
+- dependency substrate
+
+## Starter Or Template Clues
+
+- packages/
+- src/
+
+## Agent Reuse Notes
+
+Do not treat as a complete app shell by itself; use Nuxt or VitePress when a project scaffold is needed.
 
 ## Repositories
 
-- [[sources/frontend-frameworks/vuejs-core|vuejs/core]] - ui-framework, TypeScript, stars 53671, latest release `v3.6.0-beta.12`
-- [[sources/frontend-frameworks/vuejs-devtools|vuejs/devtools]] - docs, TypeScript, stars 2828, latest release `v8.1.2`
-- [[sources/frontend-frameworks/vuejs-docs|vuejs/docs]] - docs, Vue, stars 3220, latest release ``
-- [[sources/frontend-frameworks/vuejs-pinia|vuejs/pinia]] - state-management, TypeScript, stars 14581, latest release `v3.0.4`
-- [[sources/frontend-frameworks/vuejs-router|vuejs/router]] - router, TypeScript, stars 4610, latest release `v5.0.7`
+- [[sources/frontend-frameworks/vuejs-core|vuejs/core]] - ui-runtime, TypeScript, stars 53669, latest release `v3.6.0-beta.12`
+- [[sources/frontend-frameworks/vuejs-devtools|vuejs/devtools]] - ui-runtime, TypeScript, stars 2827, latest release `v8.1.2`
+- [[sources/frontend-frameworks/vuejs-docs|vuejs/docs]] - ui-runtime, Vue, stars 3220, latest release ``
+- [[sources/frontend-frameworks/vuejs-pinia|vuejs/pinia]] - ui-runtime, TypeScript, stars 14581, latest release `v3.0.4`
+- [[sources/frontend-frameworks/vuejs-router|vuejs/router]] - ui-runtime, TypeScript, stars 4610, latest release `v5.0.7`
 
 ## Recent Captured Releases
 
@@ -44,5 +67,5 @@ source_pages:
 ## Navigation
 
 - [[frontend-frameworks-public]]
-- [[frontend-framework-taxonomy]]
-- [[frontend-framework-idea-map]]
+- [[frontend-project-shell-taxonomy]]
+- [[frontend-framework-reuse-map]]

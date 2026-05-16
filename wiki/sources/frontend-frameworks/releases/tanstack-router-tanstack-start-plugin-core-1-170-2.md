@@ -5,9 +5,9 @@ status: active
 created: 2026-05-16
 updated: 2026-05-16
 tags:
+  - app-framework
   - frontend-frameworks
   - release
-  - router
   - tanstack-start
 source_pages:
   - https://github.com/TanStack/router/releases/tag/%40tanstack/start-plugin-core%401.170.2
@@ -41,3 +41,8 @@ Patch Changes - Updated dependencies \$1]: - @tanstack/router-generator@1.167.2 
 
 - EXTRACTED: This page records release metadata and a concise idea summary.
 - INFERRED: The full release body is not mirrored publicly; use the canonical GitHub URL for complete text.
+
+## Navigation
+
+- [[frontend-frameworks-public]]
+- [[frontend-framework-reuse-map]]

@@ -7,7 +7,7 @@ updated: 2026-05-16
 tags:
   - frontend-frameworks
   - release
-  - router
+  - ui-runtime
   - vue
 source_pages:
   - https://github.com/vuejs/router/releases/tag/v5.0.5
@@ -42,3 +42,8 @@ source_pages:
 
 - EXTRACTED: This page records release metadata and a concise idea summary.
 - INFERRED: The full release body is not mirrored publicly; use the canonical GitHub URL for complete text.
+
+## Navigation
+
+- [[frontend-frameworks-public]]
+- [[frontend-framework-reuse-map]]

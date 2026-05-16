@@ -5,8 +5,8 @@ status: active
 created: 2026-05-16
 updated: 2026-05-16
 tags:
+  - app-framework
   - frontend-frameworks
-  - meta-framework
   - sveltekit
 source_pages:
   - https://svelte.dev/docs/kit
@@ -16,13 +16,37 @@ source_pages:
 
 ## Role
 
-- EXTRACTED: Registry category: `meta-framework`.
+- EXTRACTED: Registry category: `app-framework`.
 - EXTRACTED: Homepage: https://svelte.dev/docs/kit
+- EXTRACTED: Docs URL: https://svelte.dev/docs/kit
+- EXTRACTED: Demo/showcase URL: https://svelte.dev
+- EXTRACTED: Project shell score: `9`.
 - EXTRACTED: Curated official repositories captured in this corpus: 1.
+- INFERRED: This can be evaluated as a reusable project shell or major project layer.
+
+## Reuse Profile
+
+Svelte app shell with file routing, load functions, adapters, and deploy-target abstraction.
+
+## Recommended Use Cases
+
+- Svelte app
+- small full-stack app
+- fast interactive frontend
+- adapter-driven deployment
+
+## Starter Or Template Clues
+
+- packages/create-svelte/
+- documentation/docs/
+
+## Agent Reuse Notes
+
+Use when the app should be Svelte-native and deployment-adapter friendly.
 
 ## Repositories
 
-- [[sources/frontend-frameworks/sveltejs-kit|sveltejs/kit]] - compiler-runtime, JavaScript, stars 20503, latest release `@sveltejs/kit@2.60.1`
+- [[sources/frontend-frameworks/sveltejs-kit|sveltejs/kit]] - app-framework, JavaScript, stars 20503, latest release `@sveltejs/kit@2.60.1`
 
 ## Recent Captured Releases
 
@@ -33,5 +57,5 @@ source_pages:
 ## Navigation
 
 - [[frontend-frameworks-public]]
-- [[frontend-framework-taxonomy]]
-- [[frontend-framework-idea-map]]
+- [[frontend-project-shell-taxonomy]]
+- [[frontend-framework-reuse-map]]

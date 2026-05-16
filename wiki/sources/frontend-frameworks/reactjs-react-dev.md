@@ -5,10 +5,10 @@ status: active
 created: 2026-05-16
 updated: 2026-05-16
 tags:
-  - docs
   - frontend-frameworks
   - JavaScript
   - react
+  - ui-runtime
 source_pages:
   - https://github.com/reactjs/react.dev
 ---
@@ -19,8 +19,11 @@ source_pages:
 
 - Source kind: `github-repository`
 - Canonical URL: https://github.com/reactjs/react.dev
+- Documentation URL: https://react.dev
+- Demo/showcase URL: https://react.dev
 - Framework: [[entities/frontend-frameworks/react|React]]
-- Ecosystem role: `docs`
+- Ecosystem role: `ui-runtime`
+- Project shell score: `4`
 - Source confidence: `github-api`
 - Public handling: `public-summary-plus-license-aware-metadata`
 - Semantic hash: `2b448bd307e18ba5d1dfec886ad7232ab5f4cfafaa83a2eb551a289bb5b8c4b5`
@@ -29,13 +32,33 @@ source_pages:
 
 The React documentation website react.dev This repo contains the source code and documentation powering $1. Getting started Prerequisites 1. Git 1. Node: any version starting with v16.8.0 or greater 1. Yarn: See $1 1. A fork of the repo (for any contributions) 1. A clone of the $1 on your local machine Installation 1. cd react.dev to go into the project root 3. yarn to install the website's npm dependencies Running locally 1. yarn dev to start the development server (powered by $1) 1. open http://localhost:3000 to open the site in your favorite browser Contributing Guidelines The documentation is divided into several sections with a...
 
+## Reuse Profile
+
+UI runtime/dependency substrate; usually pair with Next.js, Remix, Docusaurus, Nextra, or Fumadocs for a project shell.
+
+## When To Reuse
+
+- component runtime
+- UI substrate
+- library ecosystem base
+
+## Starter Or Template Clues
+
+- fixtures/
+- compiler/
+
+## Agent Reuse Notes
+
+Do not treat as a complete project shell; choose a React-based framework when starting an app/docs site.
+- INFERRED: Treat this repo as a runtime/dependency substrate; do not start from it alone when the goal is a full project shell.
+
 ## Repository Snapshot
 
 - Default branch: `main`
 - HEAD SHA: `47e64bf7ad81aab8bacfa791a37816ee869135eb`
 - Stars at crawl: 11750
 - Forks at crawl: 7890
-- Open issues at crawl: 1513
+- Open issues at crawl: 1514
 - Primary language: `JavaScript`
 - License: `CC-BY-4.0`
 - README path: `README.md`
@@ -77,8 +100,8 @@ The React documentation website react.dev This repo contains the source code and
 ## Navigation
 
 - [[frontend-frameworks-public]]
-- [[frontend-framework-taxonomy]]
-- [[frontend-framework-idea-map]]
+- [[frontend-project-shell-taxonomy]]
+- [[frontend-framework-reuse-map]]
 
 ## Public Handling Notes
 

@@ -8,7 +8,7 @@ tags:
   - frontend-frameworks
   - release
   - solid
-  - ui-framework
+  - ui-runtime
 source_pages:
   - https://github.com/solidjs/solid-start/releases/tag/%40solidjs/start%401.3.0
 ---
@@ -39,3 +39,8 @@ source_pages:
 
 - EXTRACTED: This page records release metadata and a concise idea summary.
 - INFERRED: The full release body is not mirrored publicly; use the canonical GitHub URL for complete text.
+
+## Navigation
+
+- [[frontend-frameworks-public]]
+- [[frontend-framework-reuse-map]]

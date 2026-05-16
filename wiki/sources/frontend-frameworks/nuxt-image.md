@@ -5,8 +5,8 @@ status: active
 created: 2026-05-16
 updated: 2026-05-16
 tags:
+  - app-framework
   - frontend-frameworks
-  - image
   - nuxt
   - TypeScript
 source_pages:
@@ -19,8 +19,11 @@ source_pages:
 
 - Source kind: `github-repository`
 - Canonical URL: https://github.com/nuxt/image
+- Documentation URL: https://nuxt.com/docs
+- Demo/showcase URL: https://nuxt.com/templates
 - Framework: [[entities/frontend-frameworks/nuxt|Nuxt]]
-- Ecosystem role: `image`
+- Ecosystem role: `app-framework`
+- Project shell score: `10`
 - Source confidence: `github-api`
 - Public handling: `public-summary-plus-license-aware-metadata`
 - Semantic hash: `42978ac6cbb82d46e10624c98d64ac3727a00595ea0318270d610cc5d527109f`
@@ -29,11 +32,32 @@ source_pages:
 
 Plug-and-play image optimization for Nuxt applications. $1](https://image.nuxt.com) [![npm version][npm-version-src&#93;&#93;[npm-version-href] [![npm downloads][npm-downloads-src&#93;&#93;[npm-downloads-href] [![License][license-src&#93;&#93;[license-href] [![Nuxt][nuxt-src&#93;&#93;[nuxt-href] [![Volta][volta-src&#93;&#93;[volta-href] $1](https://nuxt.care/?search=image) Nuxt Image Plug-and-play image optimization for Nuxt apps. Resize and transform your images using built-in optimizer or your favorite images CDN. - $1 - $1 Features - drop-in replacement for the native element - drop-in replacement for the native element. - Built-in image resizer and transformer with $1...
 
+## Reuse Profile
+
+Vue full-stack app shell with routing, server engine, content module, UI module, and image pipeline.
+
+## When To Reuse
+
+- Vue full-stack app
+- content app
+- dashboard
+- documentation with Nuxt Content
+
+## Starter Or Template Clues
+
+- examples/
+- packages/
+
+## Agent Reuse Notes
+
+Use when the desired shell is Vue-first with strong batteries for content, UI, and deployment.
+- INFERRED: Treat this repo as a reusable shell/layer candidate; inspect docs, examples, and release notes before transplanting patterns.
+
 ## Repository Snapshot
 
 - Default branch: `main`
 - HEAD SHA: `b2d241a884ef7bfccce391032c1cda5a148b5b08`
-- Stars at crawl: 1527
+- Stars at crawl: 1526
 - Forks at crawl: 324
 - Open issues at crawl: 273
 - Primary language: `TypeScript`
@@ -75,8 +99,8 @@ Plug-and-play image optimization for Nuxt applications. $1](https://image.nuxt.c
 ## Navigation
 
 - [[frontend-frameworks-public]]
-- [[frontend-framework-taxonomy]]
-- [[frontend-framework-idea-map]]
+- [[frontend-project-shell-taxonomy]]
+- [[frontend-framework-reuse-map]]
 
 ## Public Handling Notes
 

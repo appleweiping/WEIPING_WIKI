@@ -1,21 +1,22 @@
 ---
-title: Frontend Framework Idea Map
+title: Frontend Framework Reuse Map
 type: analysis
 status: active
 created: 2026-05-16
 updated: 2026-05-16
 tags:
   - frontend-frameworks
-  - idea-map
+  - project-shells
+  - reuse-map
   - releases
 source_pages:
   - raw/frontend-frameworks-public/registry.json
   - raw/frontend-frameworks-public/manifest.json
 ---
 
-# Frontend Framework Idea Map
+# Frontend Framework Reuse Map
 
-This page explains what each captured framework project is trying to do and preserves high-signal release ideas for retrieval.
+This page explains what each captured frontend project framework is trying to provide, when to reuse it, and which release ideas matter for future project migration.
 
 ## Angular
 
@@ -49,6 +50,30 @@ This page explains what each captured framework project is trying to do and pres
 - [[sources/frontend-frameworks/releases/withastro-starlight-astrojs-starlight-0-39-2|@astrojs/starlight@0.39.2]]: [#3890](https://github.com/withastro/starlight/pull/3890) [`2d05e18`](https://github.com/withastro/starlight/commit/2d05e1802ac81f1db1220fc7a2c775e0c0bba9bc) Thanks [@tats-u](https://github.com/tats-u)! - Fixes CSS selec...
 - [[sources/frontend-frameworks/releases/withastro-starlight-astrojs-starlight-0-39-1|@astrojs/starlight@0.39.1]]: [#3885](https://github.com/withastro/starlight/pull/3885) [`010eed1`](https://github.com/withastro/starlight/commit/010eed1d73d88481a116546caa800385f409ce28) Thanks [@ArmandPhilippot](https://github.com/ArmandPhilippot)!...; [#3887](https://github.com/withastro/starlight/pull/3887) [`b3c6990`](https://github.com/withastro/starlight/commit/b3c699042cf0a0f69f6637772275afb4418c6ebf) Thanks [@delucis](https://github.com/delucis)! - Adds 13 new i...
 
+## Docusaurus
+
+### Repository Ideas
+
+- [[sources/frontend-frameworks/facebook-docusaurus|facebook/docusaurus]]: Easy to maintain open source documentation websites. Docusaurus Introduction Docusaurus is a project for building, deploying, and maintaining open source project websites easily. Short on time? Check out our $1! Tip : use $1 to test Docusaurus immediately in a playground. - Simple to Start Docusaurus is built in a way so that it can $1 in as little time as possible. We've built Docusaurus to handle the website build process so you can focus on your project. - Localizable Docusaurus ships with $1 via CrowdIn. Empower and grow your international community by translating your documentation. - Customizable While Docusaurus ships with th...
+
+### Release Ideas
+
+- [[sources/frontend-frameworks/releases/facebook-docusaurus-v3-10-1|v3.10.1]]: [#11981](https://github.com/facebook/docusaurus/pull/11981) fix(bundler): fix v3 webpackbar bug due to webpack breaking change ([@slorber](https://github.com/slorber))
+- [[sources/frontend-frameworks/releases/facebook-docusaurus-v3-10-0|v3.10.0]]: [#11896](https://github.com/facebook/docusaurus/pull/11896) feat(core): add `future.v4.mdx1CompatDisabledByDefault` flag ([@slorber](https://github.com/slorber)); [#11797](https://github.com/facebook/docusaurus/pull/11797) feat(core): promote `siteConfig.storage` to stable + add `future.v4.siteStorageNamespacing` flag [Claude] ([@slorber](https://github.com/slorber))
+- [[sources/frontend-frameworks/releases/facebook-docusaurus-v3-9-2|v3.9.2]]: `docusaurus-plugin-content-docs`; [#11490](https://github.com/facebook/docusaurus/pull/11490) fix(docs): add support for missing `sidebar_key` front matter attribute ([@slorber](https://github.com/slorber))
+
+## Fumadocs
+
+### Repository Ideas
+
+- [[sources/frontend-frameworks/fuma-nama-fumadocs|fuma-nama/fumadocs]]: The beautiful & flexible React.js docs framework. !$1 The framework for building documentation websites in any React.js frameworks. Officially Supported: - Next.js - Vite: Tanstack Start, Waku, React Router 📘 Learn More: $1. Compatibility All packages are ESM only . Sticker !$1 Welcome to print it out :D Contributions Make sure to read the $1 before submitting a pull request.
+
+### Release Ideas
+
+- [[sources/frontend-frameworks/releases/fuma-nama-fumadocs-fumadocs-sanity-0-0-4|@fumadocs/sanity@0.0.4]]: 1fb6a61: Support custom base directory for content sources
+- [[sources/frontend-frameworks/releases/fuma-nama-fumadocs-fumadocs-mdx-15-0-5|fumadocs-mdx@15.0.5]]: 1fb6a61: Support custom base directory for content sources
+- [[sources/frontend-frameworks/releases/fuma-nama-fumadocs-fumadocs-local-md-0-2-2|@fumadocs/local-md@0.2.2]]: 1fb6a61: Support custom base directory for content sources
+
 ## Next.js
 
 ### Repository Ideas
@@ -60,6 +85,30 @@ This page explains what each captured framework project is trying to do and pres
 - [[sources/frontend-frameworks/releases/vercel-next-js-v16-3-0-canary-21|v16.3.0-canary.21]]: Redesign dev overlay: cleaner shell + instant fix-card guidance: #93755
 - [[sources/frontend-frameworks/releases/vercel-next-js-v16-3-0-canary-20|v16.3.0-canary.20]]: [turbopack] fix feature usage telemetry: #93100; Extend instant error overlay to metadata, viewport, and sync IO errors: #93287
 - [[sources/frontend-frameworks/releases/vercel-next-js-v16-3-0-canary-19|v16.3.0-canary.19]]: Misc Changes - Proof of concept: task eviction after snapshot for turbo-tasks-backend: 91790 Credits Huge thanks to @lukesandberg for helping!
+
+## Nextra
+
+### Repository Ideas
+
+- [[sources/frontend-frameworks/shuding-nextra|shuding/nextra]]: Simple, powerful and flexible site generation framework with everything you love from Next.js. Nextra Simple, powerful and flexible site generation framework with everything you love from Next.js. Documentation https://nextra.site Development Installation The Nextra repository uses $1 and $1. 1. Run corepack enable to enable Corepack. If the command above fails, run npm install -g corepack@latest to install the latest version of $1. 2. Run pnpm install to install the project's dependencies. Build nextra Watch mode: pnpm --filter nextra dev Build nextra-theme-docs Development You can also debug them together with a website locally. F...
+
+### Release Ideas
+
+- [[sources/frontend-frameworks/releases/shuding-nextra-nextra-theme-docs-4-6-1|nextra-theme-docs@4.6.1]]: fix compatibility with Next.js 16; nextra@4.6.1
+- [[sources/frontend-frameworks/releases/shuding-nextra-nextra-4-6-1|nextra@4.6.1]]: fix compatibility with Next.js 16
+- [[sources/frontend-frameworks/releases/shuding-nextra-nextra-theme-blog-4-6-1|nextra-theme-blog@4.6.1]]: fix compatibility with Next.js 16; nextra@4.6.1
+
+## Nitro
+
+### Repository Ideas
+
+- [[sources/frontend-frameworks/nitrojs-nitro|nitrojs/nitro]]: Next Generation Server Toolkit. Create web servers with everything you need and deploy them wherever you prefer. $1](https://deepwiki.com/nitrojs/nitro) Nitro [!NOTE] You’re viewing the v3 branch. For the current stable release, see $1. Nitro extends your Vite app with a production-ready server , designed to run anywhere . Add server routes, deploy across multiple platforms, and enjoy a zero-config experience. 📘 Docs: $1 Contributing See Check out the $1 to get started. License Released under the $1.
+
+### Release Ideas
+
+- [[sources/frontend-frameworks/releases/nitrojs-nitro-v3-0-260429-beta|v3.0.260429-beta]]: Improve jsdocs ([#4199](https://github.com/nitrojs/nitro/pull/4199)); Ofer Shapira (@ofershap)
+- [[sources/frontend-frameworks/releases/nitrojs-nitro-v2-13-4|v2.13.4]]: Add version meta ([#4194](https://github.com/nitrojs/nitro/pull/4194))
+- [[sources/frontend-frameworks/releases/nitrojs-nitro-v3-0-260415-beta|v3.0.260415-beta]]: **vercel:** Allow overriding function config per route ([#4124](https://github.com/nitrojs/nitro/pull/4124)); Add version meta to Nitro instance ([#4193](https://github.com/nitrojs/nitro/pull/4193))
 
 ## Nuxt
 
@@ -77,6 +126,18 @@ This page explains what each captured framework project is trying to do and pres
 - [[sources/frontend-frameworks/releases/nuxt-nuxt-v4-4-3|v4.4.3]]: **nitro:** Directly import nuxt package version ([#34567](https://github.com/nuxt/nuxt/pull/34567)); **vite,webpack:** Use vfs for manifest + vite node server ([#34666](https://github.com/nuxt/nuxt/pull/34666))
 - [[sources/frontend-frameworks/releases/nuxt-ui-v4-7-1|v4.7.1]]: **ChatMessage:** make actions slot accessible on touch devices ([f5a3349](https://github.com/nuxt/ui/commit/f5a33496926faa582bac10428ec560cb17757e4c)); **Drawer:** handle RTL mode ([#6396](https://github.com/nuxt/ui/issues/6396)) ([2e3fed2](https://github.com/nuxt/ui/commit/2e3fed2f002e5321621a923c2af425c0ab69fc81))
 - [[sources/frontend-frameworks/releases/nuxt-ui-v4-7-0|v4.7.0]]: **AuthForm:** add `separator` slot ([#6305](https://github.com/nuxt/ui/issues/6305)) ([81c7ddb](https://github.com/nuxt/ui/commit/81c7ddb6d47dade3f7f2415a2a9714e949133344)); **Card:** add `title` and `description` props ([3cf7d75](https://github.com/nuxt/ui/commit/3cf7d7550918c6d29a6dcaffd10d50305f90c4cd)), closes [#6001](https://github.com/nuxt/ui/issues/6001)
+
+## Quartz
+
+### Repository Ideas
+
+- [[sources/frontend-frameworks/jackyzha0-quartz|jackyzha0/quartz]]: 🌱 a fast, batteries-included static-site generator that transforms Markdown content into fully functional websites Quartz v4 “[One] who works with the door open gets all kinds of interruptions, but [they] also occasionally gets clues as to what the world is and what might be important.” — Richard Hamming Quartz is a set of tools that helps you publish your $1 and notes as a website for free. 🔗 Read the documentation and get started: https://quartz.jzhao.xyz/ $1 Sponsors
+
+### Release Ideas
+
+- [[sources/frontend-frameworks/releases/jackyzha0-quartz-v4-0-8|v4.0.8]]: [Comprehensive and type-safe configuration](https://quartz.jzhao.xyz/configuration); [Easily customizable layout](https://quartz.jzhao.xyz/layout)
+- [[sources/frontend-frameworks/releases/jackyzha0-quartz-v3-3|v3.3]]: Semantic Search using Operand! A personally long-awaited personal feature, learn how to set it up [here](https://quartz.jzhao.xyz/notes/search) or [here](https://docs.operand.ai/guides/quartz); SPA Routing (https://github.com/jackyzha0/quartz/pull/118)
+- [[sources/frontend-frameworks/releases/jackyzha0-quartz-v3-2|v3.2]]: Performance Improvements (fcd5d2807d2bab68c6776e031e85d65fe88a6f7a, https://github.com/jackyzha0/quartz/pull/62); Images no longer need to be root prefixed (54a68e6e5c020fa1e4eacf7942eb37974f332887)
 
 ## Qwik
 
@@ -116,7 +177,7 @@ This page explains what each captured framework project is trying to do and pres
 - [[sources/frontend-frameworks/releases/remix-run-react-router-react-router-7-15-0|react-router@7.15.0]]: See the changelog for release notes: https://github.com/remix-run/react-router/blob/main/CHANGELOG.md v7150
 - [[sources/frontend-frameworks/releases/remix-run-remix-static-middleware-0-4-8|static-middleware@0.4.8]]: [`fetch-router@0.18.2`](https://github.com/remix-run/remix/releases/tag/fetch-router@0.18.2)
 - [[sources/frontend-frameworks/releases/remix-run-remix-ui-0-1-1|ui@0.1.1]]: Improved runtime rendering performance by reducing child normalization, keyed reconciliation, mixin lifecycle, scheduler phase, and host insertion overhead.; Stripped `<!DOCTYPE>` markup from server and client frame responses before rendering frame content.
-- [[sources/frontend-frameworks/releases/remix-run-remix-test-0-3-0|test@0.3.0]]: Add `FakeTimers#advanceAsync(ms)` to `t.useFakeTimers()`. Like `advance`, it walks pending timers in time order and fires them, but yields to microtasks between each firing so promise continuations (and any timers they s...; `type`'s default is now `["server", "browser", "e2e"]` instead of `"server,browser,e2e"`.
+- [[sources/frontend-frameworks/releases/remix-run-remix-test-0-3-0|test@0.3.0]]: Add `FakeTimers#advanceAsync(ms)` to `t.useFakeTimers()`. Like `advance`, it walks pending timers in time order and fires them, but yields to microtasks between each firing so promise continuations (and any timers they s...; Accept arrays for `glob.{test,browser,e2e,exclude}`, `project`, `type`, and `coverage.{include,exclude}` config fields
 
 ## Solid
 
@@ -133,6 +194,18 @@ This page explains what each captured framework project is trying to do and pres
 - [[sources/frontend-frameworks/releases/solidjs-solid-start-solidjs-start-1-3-2|@solidjs/start@1.3.2]]: e534ea8: Fix a regression introduced in SolidStart v1.3.0 that could cause an infinite loop when a server function returns unexpected response (for example, S3/XML error responses).
 - [[sources/frontend-frameworks/releases/solidjs-solid-start-solidjs-start-1-3-1|@solidjs/start@1.3.1]]: 5249fdd: fix client-side serialization typo
 - [[sources/frontend-frameworks/releases/solidjs-solid-v1-9-0|v1.9.0]]: This release like the last is focusing on small quality of life improvements and adjustments that will help us move towards 2.0. So while not the most exciting release to everyone it provides some really important featur...
+
+## Starlight
+
+### Repository Ideas
+
+- [[sources/frontend-frameworks/withastro-starlight|withastro/starlight]]: 🌟 Build beautiful, accessible, high-performance documentation websites with Astro packages/starlight/README.md
+
+### Release Ideas
+
+- [[sources/frontend-frameworks/releases/withastro-starlight-astrojs-starlight-0-39-2|@astrojs/starlight@0.39.2]]: [#3890](https://github.com/withastro/starlight/pull/3890) [`2d05e18`](https://github.com/withastro/starlight/commit/2d05e1802ac81f1db1220fc7a2c775e0c0bba9bc) Thanks [@tats-u](https://github.com/tats-u)! - Fixes CSS selec...
+- [[sources/frontend-frameworks/releases/withastro-starlight-astrojs-starlight-0-39-1|@astrojs/starlight@0.39.1]]: [#3885](https://github.com/withastro/starlight/pull/3885) [`010eed1`](https://github.com/withastro/starlight/commit/010eed1d73d88481a116546caa800385f409ce28) Thanks [@ArmandPhilippot](https://github.com/ArmandPhilippot)!...; [#3887](https://github.com/withastro/starlight/pull/3887) [`b3c6990`](https://github.com/withastro/starlight/commit/b3c699042cf0a0f69f6637772275afb4418c6ebf) Thanks [@delucis](https://github.com/delucis)! - Adds 13 new i...
+- [[sources/frontend-frameworks/releases/withastro-starlight-astrojs-starlight-0-39-0|@astrojs/starlight@0.39.0]]: [#3618](https://github.com/withastro/starlight/pull/3618) [`dcf6d09`](https://github.com/withastro/starlight/commit/dcf6d094bbcfa1f83e45742901f4178df07c2156) Thanks [@HiDeoo](https://github.com/HiDeoo)! - **⚠️ BREAKING C...; [#3618](https://github.com/withastro/starlight/pull/3618) [`dcf6d09`](https://github.com/withastro/starlight/commit/dcf6d094bbcfa1f83e45742901f4178df07c2156) Thanks [@HiDeoo](https://github.com/HiDeoo)! - **⚠️ BREAKING C...
 
 ## Svelte
 
@@ -171,8 +244,35 @@ This page explains what each captured framework project is trying to do and pres
 ### Release Ideas
 
 - [[sources/frontend-frameworks/releases/tanstack-router-release-2026-05-16-0506|release-2026-05-16-0506]]: start: add inline CSS runtime controls and asset URL templates (#7380) (2387a2eea0) by @schiller-manuel; Fix literal underscore paths under pathless layouts (#7408) (742941e2f1) by @schiller-manuel
-- [[sources/frontend-frameworks/releases/tanstack-router-tanstack-vue-start-1-168-2|@tanstack/vue-start@1.168.2]]: Patch Changes - Updated dependencies \[]: - @tanstack/start-plugin-core@1.170.2
+- [[sources/frontend-frameworks/releases/tanstack-router-tanstack-vue-start-1-168-2|@tanstack/vue-start@1.168.2]]: @tanstack/start-plugin-core@1.170.2
 - [[sources/frontend-frameworks/releases/tanstack-router-tanstack-start-plugin-core-1-170-2|@tanstack/start-plugin-core@1.170.2]]: Updated dependencies \&#91;&#91;`742941e`](https://github.com/TanStack/router/commit/742941e2f1bf069c950d0a4985b2cd733639509e)]:; @tanstack/router-generator@1.167.2
+
+## Vite
+
+### Repository Ideas
+
+- [[sources/frontend-frameworks/vitejs-vite|vitejs/vite]]: Next generation frontend tooling. It's fast! Vite ⚡ Next Generation Frontend Tooling - 💡 Instant Server Start - ⚡️ Lightning Fast HMR - 🛠️ Rich Features - 📦 Optimized Build - 🔩 Universal Plugin Interface - 🔑 Fully Typed APIs Vite (French word for "quick", pronounced $1, like "veet") is a build tool that aims to provide a faster and leaner development experience for modern web projects. It consists of two major parts: - A dev server that provides $1 over $1, for example extremely fast $1. - A build command that bundles your code with $1, pre-configured to output highly optimized static assets for production. In addition, Vite is...
+- [[sources/frontend-frameworks/vitejs-vite-plugin-react|vitejs/vite-plugin-react]]: The all-in-one Vite plugin for React projects. Vite Plugin React See $1 and $1 Vite Plugin RSC See $1 Packages Package Version (click for changelogs) ----------------------------------------------------- :----------------------------------------------------------------------------------------------------------------------------------------- $1 $1](packages/plugin-react/CHANGELOG.md) $1 $1](packages/plugin-react-swc/CHANGELOG.md) $1 $1](packages/plugin-rsc/CHANGELOG.md) License $1.
+
+### Release Ideas
+
+- [[sources/frontend-frameworks/releases/vitejs-vite-plugin-react-plugin-react-swc-4-3-1|plugin-react-swc@4.3.1]]: Avoid esbuild warnings with Vite 8 $1 Fixes $1.
+- [[sources/frontend-frameworks/releases/vitejs-vite-plugin-react-plugin-react-6-0-2|plugin-react@6.0.2]]: Allow all options in reactCompilerPreset ($1) This is a type only change. Only compilationMode and target options were available for reactCompilerPreset .
+- [[sources/frontend-frameworks/releases/vitejs-vite-plugin-legacy-8-0-2|plugin-legacy@8.0.2]]: Please refer to $1 for details.
+- [[sources/frontend-frameworks/releases/vitejs-vite-v8-0-13|v8.0.13]]: Please refer to $1 for details.
+- [[sources/frontend-frameworks/releases/vitejs-vite-v8-0-12|v8.0.12]]: Please refer to $1 for details.
+
+## VitePress
+
+### Repository Ideas
+
+- [[sources/frontend-frameworks/vuejs-vitepress|vuejs/vitepress]]: Vite & Vue powered static site generator. VitePress 📝💨 $1](https://github.com/vuejs/vitepress/actions/workflows/test.yml) $1](https://www.npmjs.com/package/vitepress/v/next) $1](https://nightly.akryum.dev/vuejs/vitepress) $1](https://chat.vuejs.org) --- VitePress is a Vue-powered static site generator and a spiritual successor to $1, built on top of $1. Documentation To check out docs, visit $1. Changelog Detailed changes for each release are documented in the $1. Contribution Please make sure to read the $1 before making a pull request. License $1 Copyright (c) 2019-present, Yuxi (Evan) You Special Thanks This project would not b...
+
+### Release Ideas
+
+- [[sources/frontend-frameworks/releases/vuejs-vitepress-v2-0-0-alpha-17|v2.0.0-alpha.17]]: Please refer to $1 for details.
+- [[sources/frontend-frameworks/releases/vuejs-vitepress-v2-0-0-alpha-16|v2.0.0-alpha.16]]: Please refer to $1 for details.
+- [[sources/frontend-frameworks/releases/vuejs-vitepress-v2-0-0-alpha-15|v2.0.0-alpha.15]]: Fixes a theme regression in v2-alpha.14. Please refer to $1 for details.
 
 ## Vue
 
@@ -195,9 +295,9 @@ This page explains what each captured framework project is trying to do and pres
 ## Related
 
 - [[frontend-frameworks-public]]
-- [[frontend-framework-taxonomy]]
+- [[frontend-project-shell-taxonomy]]
 
 ## Counterpoints And Gaps
 
 - AMBIGUOUS: Release idea bullets are extracted summaries from GitHub release bodies and may omit lower-signal fixes or package-specific context.
-- INFERRED: Repository summaries come from README/changelog snippets and metadata; use canonical GitHub links for full current project intent.
+- INFERRED: Repository summaries come from README/changelog snippets and metadata; use canonical GitHub links for full current project intent before migrating patterns.

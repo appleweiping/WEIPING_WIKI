@@ -5,8 +5,8 @@ status: active
 created: 2026-05-16
 updated: 2026-05-16
 tags:
+  - app-framework
   - frontend-frameworks
-  - meta-framework
   - remix-react-router
 source_pages:
   - https://reactrouter.com
@@ -16,14 +16,37 @@ source_pages:
 
 ## Role
 
-- EXTRACTED: Registry category: `meta-framework`.
+- EXTRACTED: Registry category: `app-framework`.
 - EXTRACTED: Homepage: https://reactrouter.com
+- EXTRACTED: Docs URL: https://reactrouter.com
+- EXTRACTED: Demo/showcase URL: https://remix.run
+- EXTRACTED: Project shell score: `9`.
 - EXTRACTED: Curated official repositories captured in this corpus: 2.
+- INFERRED: This can be evaluated as a reusable project shell or major project layer.
+
+## Reuse Profile
+
+React routing/data framework for app shells with nested routing, loaders/actions, and Remix stack heritage.
+
+## Recommended Use Cases
+
+- routing-heavy React app
+- nested data app
+- web app with progressive enhancement
+
+## Starter Or Template Clues
+
+- examples/
+- templates/
+
+## Agent Reuse Notes
+
+Use when app architecture should center on routing, data loading, mutations, and nested layouts.
 
 ## Repositories
 
-- [[sources/frontend-frameworks/remix-run-react-router|remix-run/react-router]] - router, TypeScript, stars 56416, latest release `react-router@7.15.1`
-- [[sources/frontend-frameworks/remix-run-remix|remix-run/remix]] - meta-framework, TypeScript, stars 32974, latest release `static-middleware@0.4.8`
+- [[sources/frontend-frameworks/remix-run-react-router|remix-run/react-router]] - app-framework, TypeScript, stars 56416, latest release `react-router@7.15.1`
+- [[sources/frontend-frameworks/remix-run-remix|remix-run/remix]] - app-framework, TypeScript, stars 32974, latest release `static-middleware@0.4.8`
 
 ## Recent Captured Releases
 
@@ -37,5 +60,5 @@ source_pages:
 ## Navigation
 
 - [[frontend-frameworks-public]]
-- [[frontend-framework-taxonomy]]
-- [[frontend-framework-idea-map]]
+- [[frontend-project-shell-taxonomy]]
+- [[frontend-framework-reuse-map]]

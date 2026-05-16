@@ -5,8 +5,8 @@ status: active
 created: 2026-05-16
 updated: 2026-05-16
 tags:
+  - app-framework
   - frontend-frameworks
-  - router
   - tanstack-start
   - TypeScript
 source_pages:
@@ -19,20 +19,42 @@ source_pages:
 
 - Source kind: `github-repository`
 - Canonical URL: https://github.com/TanStack/router
+- Documentation URL: https://tanstack.com/start/latest
+- Demo/showcase URL: https://tanstack.com/start
 - Framework: [[entities/frontend-frameworks/tanstack-start|TanStack Start]]
-- Ecosystem role: `router`
+- Ecosystem role: `app-framework`
+- Project shell score: `8`
 - Source confidence: `github-api`
 - Public handling: `public-summary-plus-license-aware-metadata`
-- Semantic hash: `e5d74935dd7fb7eb03a305ed0ec14c34ebc129d001436a41e5ee024cb91c72cc`
+- Semantic hash: `c6a61eafe11c820f2376c6ab1f03d5242de801ac45ac7fbdd2b48bdf5c16a07e`
 
 ## Summary
 
 🤖 A client-first, server-capable, fully type-safe router and full-stack framework for the web (React and more). TanStack Router A modern router designed for type safety, data‑driven navigation, and seamless developer experience. - End‑to-end type safety (routes, params, loaders) - Schema‑driven search params with validation - Built‑in caching, prefetching & invalidation - Nested layouts, transitions & error boundaries $1 TanStack Start A full‑stack framework built on Router, designed for server rendering, streaming, and production‑ready deployments. - Full‑document SSR & streaming - Server functions & end‑to‑end type safety - Deplo...
 
+## Reuse Profile
+
+TanStack Router-centered app shell with typed routing and emerging full-stack Start packages.
+
+## When To Reuse
+
+- typed-router app
+- TanStack ecosystem app
+- experimental full-stack React app
+
+## Starter Or Template Clues
+
+- examples/
+
+## Agent Reuse Notes
+
+Use when typed routing and TanStack ecosystem integration matter more than framework maturity.
+- INFERRED: Treat this repo as a reusable shell/layer candidate; inspect docs, examples, and release notes before transplanting patterns.
+
 ## Repository Snapshot
 
 - Default branch: `main`
-- HEAD SHA: `b3f2ab809e0fee12cd2a015a5256b8c451736d34`
+- HEAD SHA: `d533f87976704098a40b48f160b37c28c8182806`
 - Stars at crawl: 14422
 - Forks at crawl: 1681
 - Open issues at crawl: 586
@@ -46,7 +68,7 @@ source_pages:
 
 ## Language Profile
 
-- TypeScript: 12549507
+- TypeScript: 12554052
 - JavaScript: 132706
 - CSS: 66881
 - Vue: 19648
@@ -58,7 +80,7 @@ source_pages:
 - `.tsx`: 4437
 - `.ts`: 2221
 - `.json`: 1051
-- `.md`: 496
+- `.md`: 497
 - `.png`: 276
 - `.css`: 265
 - `.gitignore`: 228
@@ -90,8 +112,8 @@ source_pages:
 ## Navigation
 
 - [[frontend-frameworks-public]]
-- [[frontend-framework-taxonomy]]
-- [[frontend-framework-idea-map]]
+- [[frontend-project-shell-taxonomy]]
+- [[frontend-framework-reuse-map]]
 
 ## Public Handling Notes
 

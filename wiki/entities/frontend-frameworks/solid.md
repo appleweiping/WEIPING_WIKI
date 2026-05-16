@@ -7,7 +7,7 @@ updated: 2026-05-16
 tags:
   - frontend-frameworks
   - solid
-  - ui-framework
+  - ui-runtime
 source_pages:
   - https://www.solidjs.com
 ---
@@ -16,15 +16,38 @@ source_pages:
 
 ## Role
 
-- EXTRACTED: Registry category: `ui-framework`.
+- EXTRACTED: Registry category: `ui-runtime`.
 - EXTRACTED: Homepage: https://www.solidjs.com
+- EXTRACTED: Docs URL: https://docs.solidjs.com
+- EXTRACTED: Demo/showcase URL: https://playground.solidjs.com
+- EXTRACTED: Project shell score: `6`.
 - EXTRACTED: Curated official repositories captured in this corpus: 3.
+- INFERRED: This is usually a dependency substrate, not a complete project shell; pick a paired app/docs framework when starting a new project.
+
+## Reuse Profile
+
+Fine-grained UI runtime plus SolidStart app shell signals; useful for highly reactive apps.
+
+## Recommended Use Cases
+
+- fine-grained reactive UI
+- Solid app
+- signals-first UI
+
+## Starter Or Template Clues
+
+- packages/
+- examples/
+
+## Agent Reuse Notes
+
+Use SolidStart/templates for project shell decisions; raw Solid is runtime substrate.
 
 ## Repositories
 
-- [[sources/frontend-frameworks/solidjs-solid|solidjs/solid]] - ui-framework, TypeScript, stars 35521, latest release `v2.0.0-beta.0`
-- [[sources/frontend-frameworks/solidjs-solid-docs|solidjs/solid-docs]] - docs, MDX, stars 284, latest release ``
-- [[sources/frontend-frameworks/solidjs-solid-start|solidjs/solid-start]] - ui-framework, TypeScript, stars 5860, latest release `@solidjs/start@1.3.0`
+- [[sources/frontend-frameworks/solidjs-solid|solidjs/solid]] - ui-runtime, TypeScript, stars 35521, latest release `v2.0.0-beta.0`
+- [[sources/frontend-frameworks/solidjs-solid-docs|solidjs/solid-docs]] - ui-runtime, MDX, stars 284, latest release ``
+- [[sources/frontend-frameworks/solidjs-solid-start|solidjs/solid-start]] - ui-runtime, TypeScript, stars 5860, latest release `@solidjs/start@1.3.0`
 
 ## Recent Captured Releases
 
@@ -38,5 +61,5 @@ source_pages:
 ## Navigation
 
 - [[frontend-frameworks-public]]
-- [[frontend-framework-taxonomy]]
-- [[frontend-framework-idea-map]]
+- [[frontend-project-shell-taxonomy]]
+- [[frontend-framework-reuse-map]]

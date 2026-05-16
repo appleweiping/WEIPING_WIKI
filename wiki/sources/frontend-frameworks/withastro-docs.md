@@ -6,9 +6,9 @@ created: 2026-05-16
 updated: 2026-05-16
 tags:
   - astro
-  - docs
   - frontend-frameworks
   - MDX
+  - site-framework
 source_pages:
   - https://github.com/withastro/docs
 ---
@@ -19,8 +19,11 @@ source_pages:
 
 - Source kind: `github-repository`
 - Canonical URL: https://github.com/withastro/docs
+- Documentation URL: https://docs.astro.build
+- Demo/showcase URL: https://astro.build/themes/
 - Framework: [[entities/frontend-frameworks/astro|Astro]]
-- Ecosystem role: `docs`
+- Ecosystem role: `site-framework`
+- Project shell score: `9`
 - Source confidence: `github-api`
 - Public handling: `public-summary-plus-license-aware-metadata`
 - Semantic hash: `7b3ea0d9f701468f5ea55ea339a43700df81ef909105a47b76b834ecc0b9c823`
@@ -28,6 +31,28 @@ source_pages:
 ## Summary
 
 Astro documentation Astro Docs To all who come to this happy place: welcome. This is the repo for $1. This repo contains all the source code we use to build our docs site. $1](https://codesandbox.io/p/github/withastro/docs) $1](https://pr.new/github.com/withastro/docs) We are Astro Astro is an all-in-one web framework for building fast, content-focused websites. We want everyone to be successful building sites, and that means helping everyone understand how Astro works. You are Awesome You can also help make the docs awesome. Your feedback is welcome. Your writing, editing, translating, designing, and developing skills are welcome....
+
+## Reuse Profile
+
+Content-driven web framework for sites, blogs, docs, and partial-hydration interactive pages.
+
+## When To Reuse
+
+- content site
+- marketing site
+- docs site
+- blog
+- islands architecture
+
+## Starter Or Template Clues
+
+- examples/
+- packages/create-astro/
+
+## Agent Reuse Notes
+
+Use when the project is content-first but needs selective interactive islands.
+- INFERRED: Treat this repo as a reusable shell/layer candidate; inspect docs, examples, and release notes before transplanting patterns.
 
 ## Repository Snapshot
 
@@ -77,8 +102,8 @@ Astro documentation Astro Docs To all who come to this happy place: welcome. Thi
 ## Navigation
 
 - [[frontend-frameworks-public]]
-- [[frontend-framework-taxonomy]]
-- [[frontend-framework-idea-map]]
+- [[frontend-project-shell-taxonomy]]
+- [[frontend-framework-reuse-map]]
 
 ## Public Handling Notes
 

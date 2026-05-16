@@ -5,7 +5,7 @@ status: active
 created: 2026-05-16
 updated: 2026-05-16
 tags:
-  - compiler-runtime
+  - app-framework
   - frontend-frameworks
   - qwik
   - TypeScript
@@ -19,8 +19,11 @@ source_pages:
 
 - Source kind: `github-repository`
 - Canonical URL: https://github.com/QwikDev/qwik
+- Documentation URL: https://qwik.dev/docs/
+- Demo/showcase URL: https://qwik.dev/examples/
 - Framework: [[entities/frontend-frameworks/qwik|Qwik]]
-- Ecosystem role: `compiler-runtime`
+- Ecosystem role: `app-framework`
+- Project shell score: `8`
 - Source confidence: `github-api`
 - Public handling: `public-summary-plus-license-aware-metadata`
 - Semantic hash: `2c7bc8c3d9ccf7cc7be04b33a96053318715a0b04e978774544e62a9f2a8d86b`
@@ -28,6 +31,27 @@ source_pages:
 ## Summary
 
 Instant-loading web apps, without effort Instant-loading web apps, without effort Qwik offers the fastest possible page load times - regardless of the complexity of your website. Qwik is so fast because it allows fully interactive sites to load with almost no JavaScript and $1. As users interact with the site, only the necessary parts of the site load on-demand. This $1 is what makes Qwik so quick. Getting Started - Understand the difference between $1 applications. - Learn about Qwik's high level $1. Resources - $1 - $1 - $1 - $1 - $1 - $1 - $1 Community - Ping us at $1 - Join our $1 community - Join all the $1 Development - See $1...
+
+## Reuse Profile
+
+Resumability-focused app framework/runtime for highly lazy-loaded interactive sites.
+
+## When To Reuse
+
+- resumable app
+- performance-sensitive site
+- edge-friendly interactive site
+
+## Starter Or Template Clues
+
+- packages/create-qwik/
+- starters/
+- examples/
+
+## Agent Reuse Notes
+
+Use when startup performance and resumability are central design goals.
+- INFERRED: Treat this repo as a reusable shell/layer candidate; inspect docs, examples, and release notes before transplanting patterns.
 
 ## Repository Snapshot
 
@@ -80,8 +104,8 @@ Instant-loading web apps, without effort Instant-loading web apps, without effor
 ## Navigation
 
 - [[frontend-frameworks-public]]
-- [[frontend-framework-taxonomy]]
-- [[frontend-framework-idea-map]]
+- [[frontend-project-shell-taxonomy]]
+- [[frontend-framework-reuse-map]]
 
 ## Public Handling Notes
 

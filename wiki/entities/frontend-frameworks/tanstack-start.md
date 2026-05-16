@@ -5,8 +5,8 @@ status: active
 created: 2026-05-16
 updated: 2026-05-16
 tags:
+  - app-framework
   - frontend-frameworks
-  - meta-framework
   - tanstack-start
 source_pages:
   - https://tanstack.com/start
@@ -16,13 +16,35 @@ source_pages:
 
 ## Role
 
-- EXTRACTED: Registry category: `meta-framework`.
+- EXTRACTED: Registry category: `app-framework`.
 - EXTRACTED: Homepage: https://tanstack.com/start
+- EXTRACTED: Docs URL: https://tanstack.com/start/latest
+- EXTRACTED: Demo/showcase URL: https://tanstack.com/start
+- EXTRACTED: Project shell score: `8`.
 - EXTRACTED: Curated official repositories captured in this corpus: 1.
+- INFERRED: This can be evaluated as a reusable project shell or major project layer.
+
+## Reuse Profile
+
+TanStack Router-centered app shell with typed routing and emerging full-stack Start packages.
+
+## Recommended Use Cases
+
+- typed-router app
+- TanStack ecosystem app
+- experimental full-stack React app
+
+## Starter Or Template Clues
+
+- examples/
+
+## Agent Reuse Notes
+
+Use when typed routing and TanStack ecosystem integration matter more than framework maturity.
 
 ## Repositories
 
-- [[sources/frontend-frameworks/tanstack-router|TanStack/router]] - router, TypeScript, stars 14422, latest release `release-2026-05-16-0506`
+- [[sources/frontend-frameworks/tanstack-router|TanStack/router]] - app-framework, TypeScript, stars 14422, latest release `release-2026-05-16-0506`
 
 ## Recent Captured Releases
 
@@ -33,5 +55,5 @@ source_pages:
 ## Navigation
 
 - [[frontend-frameworks-public]]
-- [[frontend-framework-taxonomy]]
-- [[frontend-framework-idea-map]]
+- [[frontend-project-shell-taxonomy]]
+- [[frontend-framework-reuse-map]]

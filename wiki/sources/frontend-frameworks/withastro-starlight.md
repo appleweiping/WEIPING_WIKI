@@ -5,9 +5,9 @@ status: active
 created: 2026-05-16
 updated: 2026-05-16
 tags:
-  - astro
+  - docs-framework
   - frontend-frameworks
-  - meta-framework
+  - starlight
   - TypeScript
 source_pages:
   - https://github.com/withastro/starlight
@@ -19,8 +19,11 @@ source_pages:
 
 - Source kind: `github-repository`
 - Canonical URL: https://github.com/withastro/starlight
-- Framework: [[entities/frontend-frameworks/astro|Astro]]
-- Ecosystem role: `meta-framework`
+- Documentation URL: https://starlight.astro.build/getting-started/
+- Demo/showcase URL: https://starlight.astro.build
+- Framework: [[entities/frontend-frameworks/starlight|Starlight]], [[entities/frontend-frameworks/astro|Astro]]
+- Ecosystem role: `docs-framework`
+- Project shell score: `9`
 - Source confidence: `github-api`
 - Public handling: `public-summary-plus-license-aware-metadata`
 - Semantic hash: `2106bcf0e792ac63a352c08b0ff4efac4441885b16a2cf58efb8c23424017b07`
@@ -28,6 +31,27 @@ source_pages:
 ## Summary
 
 🌟 Build beautiful, accessible, high-performance documentation websites with Astro packages/starlight/README.md
+
+## Reuse Profile
+
+Astro-powered documentation framework with accessible docs UX and content collections.
+
+## When To Reuse
+
+- Astro docs
+- content-heavy docs
+- accessible documentation
+- static docs
+
+## Starter Or Template Clues
+
+- docs/
+- examples/
+
+## Agent Reuse Notes
+
+Use when docs should be static, fast, accessible, and integrated with Astro content patterns.
+- INFERRED: Treat this repo as a reusable shell/layer candidate; inspect docs, examples, and release notes before transplanting patterns.
 
 ## Repository Snapshot
 
@@ -80,8 +104,8 @@ source_pages:
 ## Navigation
 
 - [[frontend-frameworks-public]]
-- [[frontend-framework-taxonomy]]
-- [[frontend-framework-idea-map]]
+- [[frontend-project-shell-taxonomy]]
+- [[frontend-framework-reuse-map]]
 
 ## Public Handling Notes
 

@@ -8,7 +8,7 @@ tags:
   - frontend-frameworks
   - solid
   - TypeScript
-  - ui-framework
+  - ui-runtime
 source_pages:
   - https://github.com/solidjs/solid-start
 ---
@@ -19,8 +19,11 @@ source_pages:
 
 - Source kind: `github-repository`
 - Canonical URL: https://github.com/solidjs/solid-start
+- Documentation URL: https://docs.solidjs.com
+- Demo/showcase URL: https://playground.solidjs.com
 - Framework: [[entities/frontend-frameworks/solid|Solid]]
-- Ecosystem role: `ui-framework`
+- Ecosystem role: `ui-runtime`
+- Project shell score: `6`
 - Source confidence: `github-api`
 - Public handling: `public-summary-plus-license-aware-metadata`
 - Semantic hash: `c1407148d2fd634cd445a4b5156575aee121fa8ac0f3554949c6652637556751`
@@ -28,6 +31,26 @@ source_pages:
 ## Summary
 
 SolidStart, the Solid app framework $1](https://github.com/solidjs) $1](https://npmjs.com/package/@solidjs/start) $1](https://npmjs.com/package/@solidjs/start) $1](https://github.com/solidjs/solid-start) $1](https://discord.com/invite/solidjs) $1](https://reddit.com/r/solidjs) - For building apps with SolidStart, check the $1 and our $1 - For contributing to codebase, check $1 - For creating a new template, please head over to $1 [!IMPORTANT] This is the branch for the SolidStart 2.0.0-alpha that is currently under heavy development. Current SolidStart is maintained at $1. Prerequisites - Node.js : Use the version specified in .nvmr...
+
+## Reuse Profile
+
+Fine-grained UI runtime plus SolidStart app shell signals; useful for highly reactive apps.
+
+## When To Reuse
+
+- fine-grained reactive UI
+- Solid app
+- signals-first UI
+
+## Starter Or Template Clues
+
+- packages/
+- examples/
+
+## Agent Reuse Notes
+
+Use SolidStart/templates for project shell decisions; raw Solid is runtime substrate.
+- INFERRED: Treat this repo as a runtime/dependency substrate; do not start from it alone when the goal is a full project shell.
 
 ## Repository Snapshot
 
@@ -81,8 +104,8 @@ SolidStart, the Solid app framework $1](https://github.com/solidjs) $1](https://
 ## Navigation
 
 - [[frontend-frameworks-public]]
-- [[frontend-framework-taxonomy]]
-- [[frontend-framework-idea-map]]
+- [[frontend-project-shell-taxonomy]]
+- [[frontend-framework-reuse-map]]
 
 ## Public Handling Notes
 

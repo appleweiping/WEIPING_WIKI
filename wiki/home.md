@@ -41,7 +41,8 @@ This is a working knowledge dashboard for fast answers, slow ingest, research id
 
 ## Knowledge Shortcuts
 
-- [[frontend-frameworks-public]] - Curated public corpus for mainstream and innovative frontend frameworks, GitHub repos, releases, and idea maps.
+- [[frontend-frameworks-public]] - Curated public corpus for reusable frontend project shells, docs/wiki frameworks, app frameworks, build tooling, and release ideas.
+
 
 | I want to... | Open |
 | --- | --- |

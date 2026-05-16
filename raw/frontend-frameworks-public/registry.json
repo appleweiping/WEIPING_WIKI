@@ -1,13 +1,469 @@
 {
-    "schema":  "frontend-frameworks-public-registry-v1",
+    "schema":  "frontend-project-frameworks-public-registry-v2",
     "updated_at":  "2026-05-16",
-    "public_handling":  "Curated official framework-related repositories only; public wiki pages contain metadata, summaries, links, hashes, categories, release summaries, and license notes, not full unlicensed source mirrors.",
+    "public_handling":  "Curated official project-shell, docs-site, app-framework, build-tooling, and dependency-substrate repositories only; public wiki pages contain metadata, reuse notes, links, hashes, categories, release summaries, and license notes, not full unlicensed source mirrors.",
     "frameworks":  [
+                       {
+                           "slug":  "quartz",
+                           "name":  "Quartz",
+                           "category":  "knowledge-site-framework",
+                           "homepage":  "https://quartz.jzhao.xyz",
+                           "docs_url":  "https://quartz.jzhao.xyz",
+                           "official_demo_url":  "https://quartz.jzhao.xyz",
+                           "repos":  [
+                                         "jackyzha0/quartz"
+                                     ],
+                           "keywords":  [
+                                            "quartz",
+                                            "markdown",
+                                            "digital garden",
+                                            "knowledge",
+                                            "wiki",
+                                            "docs",
+                                            "site generator"
+                                        ],
+                           "reuse_profile":  "Markdown-first knowledge site shell with search, graph, backlinks, theming, and static publishing.",
+                           "project_shell_score":  10,
+                           "recommended_use_cases":  [
+                                                         "personal wiki",
+                                                         "research knowledge base",
+                                                         "digital garden",
+                                                         "public markdown site"
+                                                     ],
+                           "starter_or_template_paths":  [
+                                                             "content/",
+                                                             "quartz.config.ts",
+                                                             "quartz.layout.ts"
+                                                         ],
+                           "agent_reuse_notes":  "Use when a project needs a navigable markdown knowledge site like vipin wiki; copy the build adapter pattern rather than mirroring content."
+                       },
+                       {
+                           "slug":  "docusaurus",
+                           "name":  "Docusaurus",
+                           "category":  "docs-framework",
+                           "homepage":  "https://docusaurus.io",
+                           "docs_url":  "https://docusaurus.io/docs",
+                           "official_demo_url":  "https://docusaurus.io/showcase",
+                           "repos":  [
+                                         "facebook/docusaurus"
+                                     ],
+                           "keywords":  [
+                                            "docusaurus",
+                                            "docs",
+                                            "documentation",
+                                            "blog",
+                                            "site",
+                                            "static site generator"
+                                        ],
+                           "reuse_profile":  "React-based documentation site framework with docs, blog, versioning, i18n, plugins, and themes.",
+                           "project_shell_score":  10,
+                           "recommended_use_cases":  [
+                                                         "product docs",
+                                                         "open-source docs",
+                                                         "versioned docs",
+                                                         "blog plus docs"
+                                                     ],
+                           "starter_or_template_paths":  [
+                                                             "website/",
+                                                             "packages/create-docusaurus/"
+                                                         ],
+                           "agent_reuse_notes":  "Use when project docs need versioning, sidebars, plugin ecosystem, and a mature React site shell."
+                       },
+                       {
+                           "slug":  "vitepress",
+                           "name":  "VitePress",
+                           "category":  "docs-framework",
+                           "homepage":  "https://vitepress.dev",
+                           "docs_url":  "https://vitepress.dev/guide/getting-started",
+                           "official_demo_url":  "https://vitepress.dev",
+                           "repos":  [
+                                         "vuejs/vitepress"
+                                     ],
+                           "keywords":  [
+                                            "vitepress",
+                                            "vite",
+                                            "vue",
+                                            "docs",
+                                            "markdown",
+                                            "static site generator"
+                                        ],
+                           "reuse_profile":  "Vite + Vue powered static documentation framework with markdown routing and fast local dev.",
+                           "project_shell_score":  9,
+                           "recommended_use_cases":  [
+                                                         "fast docs",
+                                                         "Vue ecosystem docs",
+                                                         "small public sites",
+                                                         "markdown docs"
+                                                     ],
+                           "starter_or_template_paths":  [
+                                                             "docs/",
+                                                             ".vitepress/"
+                                                         ],
+                           "agent_reuse_notes":  "Use when a project wants a lightweight docs shell with Vite speed and Vue customization."
+                       },
+                       {
+                           "slug":  "nextra",
+                           "name":  "Nextra",
+                           "category":  "docs-framework",
+                           "homepage":  "https://nextra.site",
+                           "docs_url":  "https://nextra.site/docs",
+                           "official_demo_url":  "https://nextra.site",
+                           "repos":  [
+                                         "shuding/nextra"
+                                     ],
+                           "keywords":  [
+                                            "nextra",
+                                            "next",
+                                            "docs",
+                                            "mdx",
+                                            "site generation",
+                                            "documentation"
+                                        ],
+                           "reuse_profile":  "Next.js-based MDX docs/site framework with themes and file-system content routing.",
+                           "project_shell_score":  9,
+                           "recommended_use_cases":  [
+                                                         "Next.js docs",
+                                                         "MDX documentation",
+                                                         "developer landing docs",
+                                                         "content site"
+                                                     ],
+                           "starter_or_template_paths":  [
+                                                             "examples/",
+                                                             "docs/"
+                                                         ],
+                           "agent_reuse_notes":  "Use when the desired shell is docs-first but should stay inside the Next.js ecosystem."
+                       },
+                       {
+                           "slug":  "fumadocs",
+                           "name":  "Fumadocs",
+                           "category":  "docs-framework",
+                           "homepage":  "https://fumadocs.dev",
+                           "docs_url":  "https://fumadocs.dev/docs",
+                           "official_demo_url":  "https://fumadocs.dev",
+                           "repos":  [
+                                         "fuma-nama/fumadocs"
+                                     ],
+                           "keywords":  [
+                                            "fumadocs",
+                                            "docs",
+                                            "documentation",
+                                            "next",
+                                            "mdx",
+                                            "ui",
+                                            "source"
+                                        ],
+                           "reuse_profile":  "Flexible React/Next docs framework with UI components, source adapters, and modern docs UX.",
+                           "project_shell_score":  9,
+                           "recommended_use_cases":  [
+                                                         "polished docs UX",
+                                                         "Next.js docs",
+                                                         "API docs",
+                                                         "AI/tooling docs"
+                                                     ],
+                           "starter_or_template_paths":  [
+                                                             "examples/",
+                                                             "apps/docs/"
+                                                         ],
+                           "agent_reuse_notes":  "Use when a project wants a modern docs shell with reusable UI patterns and source adapters."
+                       },
+                       {
+                           "slug":  "starlight",
+                           "name":  "Starlight",
+                           "category":  "docs-framework",
+                           "homepage":  "https://starlight.astro.build",
+                           "docs_url":  "https://starlight.astro.build/getting-started/",
+                           "official_demo_url":  "https://starlight.astro.build",
+                           "repos":  [
+                                         "withastro/starlight"
+                                     ],
+                           "keywords":  [
+                                            "starlight",
+                                            "astro",
+                                            "docs",
+                                            "documentation",
+                                            "accessible",
+                                            "content"
+                                        ],
+                           "reuse_profile":  "Astro-powered documentation framework with accessible docs UX and content collections.",
+                           "project_shell_score":  9,
+                           "recommended_use_cases":  [
+                                                         "Astro docs",
+                                                         "content-heavy docs",
+                                                         "accessible documentation",
+                                                         "static docs"
+                                                     ],
+                           "starter_or_template_paths":  [
+                                                             "docs/",
+                                                             "examples/"
+                                                         ],
+                           "agent_reuse_notes":  "Use when docs should be static, fast, accessible, and integrated with Astro content patterns."
+                       },
+                       {
+                           "slug":  "astro",
+                           "name":  "Astro",
+                           "category":  "site-framework",
+                           "homepage":  "https://astro.build",
+                           "docs_url":  "https://docs.astro.build",
+                           "official_demo_url":  "https://astro.build/themes/",
+                           "repos":  [
+                                         "withastro/astro",
+                                         "withastro/docs",
+                                         "withastro/starlight"
+                                     ],
+                           "keywords":  [
+                                            "astro",
+                                            "islands",
+                                            "content",
+                                            "starlight",
+                                            "static site",
+                                            "markdown"
+                                        ],
+                           "reuse_profile":  "Content-driven web framework for sites, blogs, docs, and partial-hydration interactive pages.",
+                           "project_shell_score":  9,
+                           "recommended_use_cases":  [
+                                                         "content site",
+                                                         "marketing site",
+                                                         "docs site",
+                                                         "blog",
+                                                         "islands architecture"
+                                                     ],
+                           "starter_or_template_paths":  [
+                                                             "examples/",
+                                                             "packages/create-astro/"
+                                                         ],
+                           "agent_reuse_notes":  "Use when the project is content-first but needs selective interactive islands."
+                       },
+                       {
+                           "slug":  "nextjs",
+                           "name":  "Next.js",
+                           "category":  "app-framework",
+                           "homepage":  "https://nextjs.org",
+                           "docs_url":  "https://nextjs.org/docs",
+                           "official_demo_url":  "https://nextjs.org/showcase",
+                           "repos":  [
+                                         "vercel/next.js"
+                                     ],
+                           "keywords":  [
+                                            "next",
+                                            "nextjs",
+                                            "app router",
+                                            "server components",
+                                            "starter",
+                                            "template"
+                                        ],
+                           "reuse_profile":  "React full-stack app shell with routing, server rendering, API/server actions, and deployment conventions.",
+                           "project_shell_score":  10,
+                           "recommended_use_cases":  [
+                                                         "full-stack React app",
+                                                         "SaaS",
+                                                         "dashboard",
+                                                         "commerce",
+                                                         "server-rendered app"
+                                                     ],
+                           "starter_or_template_paths":  [
+                                                             "examples/"
+                                                         ],
+                           "agent_reuse_notes":  "Use when a new app needs a mainstream React framework with routing, server components, and deployment path."
+                       },
+                       {
+                           "slug":  "nuxt",
+                           "name":  "Nuxt",
+                           "category":  "app-framework",
+                           "homepage":  "https://nuxt.com",
+                           "docs_url":  "https://nuxt.com/docs",
+                           "official_demo_url":  "https://nuxt.com/templates",
+                           "repos":  [
+                                         "nuxt/nuxt",
+                                         "nuxt/ui",
+                                         "nuxt/content",
+                                         "nuxt/image"
+                                     ],
+                           "keywords":  [
+                                            "nuxt",
+                                            "vue",
+                                            "content",
+                                            "image",
+                                            "template",
+                                            "starter",
+                                            "app framework"
+                                        ],
+                           "reuse_profile":  "Vue full-stack app shell with routing, server engine, content module, UI module, and image pipeline.",
+                           "project_shell_score":  10,
+                           "recommended_use_cases":  [
+                                                         "Vue full-stack app",
+                                                         "content app",
+                                                         "dashboard",
+                                                         "documentation with Nuxt Content"
+                                                     ],
+                           "starter_or_template_paths":  [
+                                                             "examples/",
+                                                             "packages/"
+                                                         ],
+                           "agent_reuse_notes":  "Use when the desired shell is Vue-first with strong batteries for content, UI, and deployment."
+                       },
+                       {
+                           "slug":  "sveltekit",
+                           "name":  "SvelteKit",
+                           "category":  "app-framework",
+                           "homepage":  "https://svelte.dev/docs/kit",
+                           "docs_url":  "https://svelte.dev/docs/kit",
+                           "official_demo_url":  "https://svelte.dev",
+                           "repos":  [
+                                         "sveltejs/kit"
+                                     ],
+                           "keywords":  [
+                                            "sveltekit",
+                                            "routing",
+                                            "adapter",
+                                            "app framework",
+                                            "starter"
+                                        ],
+                           "reuse_profile":  "Svelte app shell with file routing, load functions, adapters, and deploy-target abstraction.",
+                           "project_shell_score":  9,
+                           "recommended_use_cases":  [
+                                                         "Svelte app",
+                                                         "small full-stack app",
+                                                         "fast interactive frontend",
+                                                         "adapter-driven deployment"
+                                                     ],
+                           "starter_or_template_paths":  [
+                                                             "packages/create-svelte/",
+                                                             "documentation/docs/"
+                                                         ],
+                           "agent_reuse_notes":  "Use when the app should be Svelte-native and deployment-adapter friendly."
+                       },
+                       {
+                           "slug":  "remix-react-router",
+                           "name":  "Remix / React Router",
+                           "category":  "app-framework",
+                           "homepage":  "https://reactrouter.com",
+                           "docs_url":  "https://reactrouter.com",
+                           "official_demo_url":  "https://remix.run",
+                           "repos":  [
+                                         "remix-run/react-router",
+                                         "remix-run/remix"
+                                     ],
+                           "keywords":  [
+                                            "remix",
+                                            "react router",
+                                            "routing",
+                                            "data router",
+                                            "starter",
+                                            "stack"
+                                        ],
+                           "reuse_profile":  "React routing/data framework for app shells with nested routing, loaders/actions, and Remix stack heritage.",
+                           "project_shell_score":  9,
+                           "recommended_use_cases":  [
+                                                         "routing-heavy React app",
+                                                         "nested data app",
+                                                         "web app with progressive enhancement"
+                                                     ],
+                           "starter_or_template_paths":  [
+                                                             "examples/",
+                                                             "templates/"
+                                                         ],
+                           "agent_reuse_notes":  "Use when app architecture should center on routing, data loading, mutations, and nested layouts."
+                       },
+                       {
+                           "slug":  "tanstack-start",
+                           "name":  "TanStack Start",
+                           "category":  "app-framework",
+                           "homepage":  "https://tanstack.com/start",
+                           "docs_url":  "https://tanstack.com/start/latest",
+                           "official_demo_url":  "https://tanstack.com/start",
+                           "repos":  [
+                                         "TanStack/router"
+                                     ],
+                           "keywords":  [
+                                            "tanstack",
+                                            "start",
+                                            "router",
+                                            "app framework",
+                                            "starter"
+                                        ],
+                           "reuse_profile":  "TanStack Router-centered app shell with typed routing and emerging full-stack Start packages.",
+                           "project_shell_score":  8,
+                           "recommended_use_cases":  [
+                                                         "typed-router app",
+                                                         "TanStack ecosystem app",
+                                                         "experimental full-stack React app"
+                                                     ],
+                           "starter_or_template_paths":  [
+                                                             "examples/"
+                                                         ],
+                           "agent_reuse_notes":  "Use when typed routing and TanStack ecosystem integration matter more than framework maturity."
+                       },
+                       {
+                           "slug":  "vite",
+                           "name":  "Vite",
+                           "category":  "build-tooling",
+                           "homepage":  "https://vite.dev",
+                           "docs_url":  "https://vite.dev/guide/",
+                           "official_demo_url":  "https://vite.dev",
+                           "repos":  [
+                                         "vitejs/vite",
+                                         "vitejs/vite-plugin-react"
+                                     ],
+                           "keywords":  [
+                                            "vite",
+                                            "starter",
+                                            "template",
+                                            "build tool",
+                                            "dev server",
+                                            "plugin"
+                                        ],
+                           "reuse_profile":  "Frontend build/dev-server foundation and starter scaffolding layer used by many modern frameworks.",
+                           "project_shell_score":  7,
+                           "recommended_use_cases":  [
+                                                         "custom SPA shell",
+                                                         "library playground",
+                                                         "framework starter",
+                                                         "fast dev server"
+                                                     ],
+                           "starter_or_template_paths":  [
+                                                             "packages/create-vite/",
+                                                             "packages/plugin-react/"
+                                                         ],
+                           "agent_reuse_notes":  "Use when the project needs a minimal custom frontend shell rather than a full app framework."
+                       },
+                       {
+                           "slug":  "nitro",
+                           "name":  "Nitro",
+                           "category":  "build-tooling",
+                           "homepage":  "https://nitro.build",
+                           "docs_url":  "https://nitro.build/guide",
+                           "official_demo_url":  "https://nitro.build",
+                           "repos":  [
+                                         "nitrojs/nitro"
+                                     ],
+                           "keywords":  [
+                                            "nitro",
+                                            "server toolkit",
+                                            "deployment",
+                                            "server",
+                                            "unjs",
+                                            "preset"
+                                        ],
+                           "reuse_profile":  "Server toolkit/deployment substrate used by Nuxt and useful for portable server endpoints.",
+                           "project_shell_score":  6,
+                           "recommended_use_cases":  [
+                                                         "server runtime layer",
+                                                         "portable API server",
+                                                         "deployment adapter research"
+                                                     ],
+                           "starter_or_template_paths":  [
+                                                             "examples/",
+                                                             "playground/"
+                                                         ],
+                           "agent_reuse_notes":  "Use as backend/deployment substrate inspiration, not as a visible frontend shell by itself."
+                       },
                        {
                            "slug":  "react",
                            "name":  "React",
-                           "category":  "ui-framework",
+                           "category":  "ui-runtime",
                            "homepage":  "https://react.dev",
+                           "docs_url":  "https://react.dev",
+                           "official_demo_url":  "https://react.dev",
                            "repos":  [
                                          "facebook/react",
                                          "reactjs/react.dev"
@@ -17,13 +473,27 @@
                                             "jsx",
                                             "fiber",
                                             "server components"
-                                        ]
+                                        ],
+                           "reuse_profile":  "UI runtime/dependency substrate; usually pair with Next.js, Remix, Docusaurus, Nextra, or Fumadocs for a project shell.",
+                           "project_shell_score":  4,
+                           "recommended_use_cases":  [
+                                                         "component runtime",
+                                                         "UI substrate",
+                                                         "library ecosystem base"
+                                                     ],
+                           "starter_or_template_paths":  [
+                                                             "fixtures/",
+                                                             "compiler/"
+                                                         ],
+                           "agent_reuse_notes":  "Do not treat as a complete project shell; choose a React-based framework when starting an app/docs site."
                        },
                        {
                            "slug":  "vue",
                            "name":  "Vue",
-                           "category":  "ui-framework",
+                           "category":  "ui-runtime",
                            "homepage":  "https://vuejs.org",
+                           "docs_url":  "https://vuejs.org/guide/",
+                           "official_demo_url":  "https://play.vuejs.org",
                            "repos":  [
                                          "vuejs/core",
                                          "vuejs/docs",
@@ -36,13 +506,27 @@
                                             "pinia",
                                             "router",
                                             "devtools"
-                                        ]
+                                        ],
+                           "reuse_profile":  "UI runtime/dependency substrate; usually pair with Nuxt or VitePress for a full project shell.",
+                           "project_shell_score":  4,
+                           "recommended_use_cases":  [
+                                                         "Vue component runtime",
+                                                         "state/router ecosystem",
+                                                         "dependency substrate"
+                                                     ],
+                           "starter_or_template_paths":  [
+                                                             "packages/",
+                                                             "src/"
+                                                         ],
+                           "agent_reuse_notes":  "Do not treat as a complete app shell by itself; use Nuxt or VitePress when a project scaffold is needed."
                        },
                        {
                            "slug":  "angular",
                            "name":  "Angular",
-                           "category":  "ui-framework",
+                           "category":  "app-framework",
                            "homepage":  "https://angular.dev",
+                           "docs_url":  "https://angular.dev/overview",
+                           "official_demo_url":  "https://angular.dev",
                            "repos":  [
                                          "angular/angular",
                                          "angular/angular-cli",
@@ -52,14 +536,30 @@
                                             "angular",
                                             "material",
                                             "cli",
-                                            "components"
-                                        ]
+                                            "components",
+                                            "app framework"
+                                        ],
+                           "reuse_profile":  "Opinionated TypeScript application framework with CLI, routing, components, and Material ecosystem.",
+                           "project_shell_score":  8,
+                           "recommended_use_cases":  [
+                                                         "enterprise app",
+                                                         "TypeScript app",
+                                                         "opinionated frontend shell",
+                                                         "component-system app"
+                                                     ],
+                           "starter_or_template_paths":  [
+                                                             "packages/angular/cli",
+                                                             "src/material/"
+                                                         ],
+                           "agent_reuse_notes":  "Use when project wants a batteries-included, TypeScript-heavy, opinionated app framework."
                        },
                        {
                            "slug":  "svelte",
                            "name":  "Svelte",
-                           "category":  "compiler-runtime",
+                           "category":  "ui-runtime",
                            "homepage":  "https://svelte.dev",
+                           "docs_url":  "https://svelte.dev/docs",
+                           "official_demo_url":  "https://svelte.dev/playground",
                            "repos":  [
                                          "sveltejs/svelte",
                                          "sveltejs/kit",
@@ -69,13 +569,27 @@
                                             "svelte",
                                             "sveltekit",
                                             "compiler"
-                                        ]
+                                        ],
+                           "reuse_profile":  "Compiler/runtime substrate; SvelteKit is the project shell layer for apps.",
+                           "project_shell_score":  5,
+                           "recommended_use_cases":  [
+                                                         "compiled UI runtime",
+                                                         "Svelte component model",
+                                                         "SvelteKit substrate"
+                                                     ],
+                           "starter_or_template_paths":  [
+                                                             "packages/",
+                                                             "sites/"
+                                                         ],
+                           "agent_reuse_notes":  "Use SvelteKit, not raw Svelte alone, when the goal is a reusable app shell."
                        },
                        {
                            "slug":  "solid",
                            "name":  "Solid",
-                           "category":  "ui-framework",
+                           "category":  "ui-runtime",
                            "homepage":  "https://www.solidjs.com",
+                           "docs_url":  "https://docs.solidjs.com",
+                           "official_demo_url":  "https://playground.solidjs.com",
                            "repos":  [
                                          "solidjs/solid",
                                          "solidjs/solid-start",
@@ -84,14 +598,29 @@
                            "keywords":  [
                                             "solid",
                                             "fine-grained",
-                                            "signals"
-                                        ]
+                                            "signals",
+                                            "solidstart"
+                                        ],
+                           "reuse_profile":  "Fine-grained UI runtime plus SolidStart app shell signals; useful for highly reactive apps.",
+                           "project_shell_score":  6,
+                           "recommended_use_cases":  [
+                                                         "fine-grained reactive UI",
+                                                         "Solid app",
+                                                         "signals-first UI"
+                                                     ],
+                           "starter_or_template_paths":  [
+                                                             "packages/",
+                                                             "examples/"
+                                                         ],
+                           "agent_reuse_notes":  "Use SolidStart/templates for project shell decisions; raw Solid is runtime substrate."
                        },
                        {
                            "slug":  "qwik",
                            "name":  "Qwik",
-                           "category":  "compiler-runtime",
+                           "category":  "app-framework",
                            "homepage":  "https://qwik.dev",
+                           "docs_url":  "https://qwik.dev/docs/",
+                           "official_demo_url":  "https://qwik.dev/examples/",
                            "repos":  [
                                          "QwikDev/qwik",
                                          "BuilderIO/qwik"
@@ -99,102 +628,23 @@
                            "keywords":  [
                                             "qwik",
                                             "resumable",
-                                            "builderio"
-                                        ]
-                       },
-                       {
-                           "slug":  "astro",
-                           "name":  "Astro",
-                           "category":  "meta-framework",
-                           "homepage":  "https://astro.build",
-                           "repos":  [
-                                         "withastro/astro",
-                                         "withastro/docs",
-                                         "withastro/starlight"
-                                     ],
-                           "keywords":  [
-                                            "astro",
-                                            "islands",
-                                            "content",
-                                            "starlight"
-                                        ]
-                       },
-                       {
-                           "slug":  "nextjs",
-                           "name":  "Next.js",
-                           "category":  "meta-framework",
-                           "homepage":  "https://nextjs.org",
-                           "repos":  [
-                                         "vercel/next.js"
-                                     ],
-                           "keywords":  [
-                                            "next",
-                                            "nextjs",
-                                            "app router",
-                                            "server components"
-                                        ]
-                       },
-                       {
-                           "slug":  "nuxt",
-                           "name":  "Nuxt",
-                           "category":  "meta-framework",
-                           "homepage":  "https://nuxt.com",
-                           "repos":  [
-                                         "nuxt/nuxt",
-                                         "nuxt/ui",
-                                         "nuxt/content",
-                                         "nuxt/image"
-                                     ],
-                           "keywords":  [
-                                            "nuxt",
-                                            "vue",
-                                            "content",
-                                            "image"
-                                        ]
-                       },
-                       {
-                           "slug":  "sveltekit",
-                           "name":  "SvelteKit",
-                           "category":  "meta-framework",
-                           "homepage":  "https://svelte.dev/docs/kit",
-                           "repos":  [
-                                         "sveltejs/kit"
-                                     ],
-                           "keywords":  [
-                                            "sveltekit",
-                                            "routing",
-                                            "adapter"
-                                        ]
-                       },
-                       {
-                           "slug":  "remix-react-router",
-                           "name":  "Remix / React Router",
-                           "category":  "meta-framework",
-                           "homepage":  "https://reactrouter.com",
-                           "repos":  [
-                                         "remix-run/react-router",
-                                         "remix-run/remix"
-                                     ],
-                           "keywords":  [
-                                            "remix",
-                                            "react router",
-                                            "routing",
-                                            "data router"
-                                        ]
-                       },
-                       {
-                           "slug":  "tanstack-start",
-                           "name":  "TanStack Start",
-                           "category":  "meta-framework",
-                           "homepage":  "https://tanstack.com/start",
-                           "repos":  [
-                                         "TanStack/router"
-                                     ],
-                           "keywords":  [
-                                            "tanstack",
-                                            "start",
-                                            "router"
-                                        ]
+                                            "builderio",
+                                            "starter",
+                                            "app framework"
+                                        ],
+                           "reuse_profile":  "Resumability-focused app framework/runtime for highly lazy-loaded interactive sites.",
+                           "project_shell_score":  8,
+                           "recommended_use_cases":  [
+                                                         "resumable app",
+                                                         "performance-sensitive site",
+                                                         "edge-friendly interactive site"
+                                                     ],
+                           "starter_or_template_paths":  [
+                                                             "packages/create-qwik/",
+                                                             "starters/",
+                                                             "examples/"
+                                                         ],
+                           "agent_reuse_notes":  "Use when startup performance and resumability are central design goals."
                        }
                    ]
 }

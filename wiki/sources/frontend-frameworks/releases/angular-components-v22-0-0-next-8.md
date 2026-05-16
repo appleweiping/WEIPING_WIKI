@@ -6,7 +6,7 @@ created: 2026-05-16
 updated: 2026-05-16
 tags:
   - angular
-  - component-system
+  - app-framework
   - frontend-frameworks
   - release
 source_pages:
@@ -30,10 +30,10 @@ source_pages:
 ## Release Ideas
 
 - `CDK_DESCRIBEDBY_ID_PREFIX` has been removed.
+- The `injector` parameter of the `ConfigurableFocusTrap` and `FocusTrap` constructors is now required.
+- The boolean parameter of `ConfigurableFocusTrapFactory.create` has been replaced with a config object.
 - The legacy combobox and autocomplete implementations have been removed. Use the new standalone combobox instead.
 - feat(aria/combobox): promote simple-combobox to stable un-prefixed combobox
-- Establishes full documentation extraction parity with the `json_api` Bazel rule target.
-- Re-routes dev-app navigation links and migrates public API golden records.
 
 ## Summary
 
@@ -43,3 +43,8 @@ aria Commit Description -- -- $1](https://github.com/angular/components/commit/e
 
 - EXTRACTED: This page records release metadata and a concise idea summary.
 - INFERRED: The full release body is not mirrored publicly; use the canonical GitHub URL for complete text.
+
+## Navigation
+
+- [[frontend-frameworks-public]]
+- [[frontend-framework-reuse-map]]

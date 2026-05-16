@@ -5,8 +5,8 @@ status: active
 created: 2026-05-16
 updated: 2026-05-16
 tags:
+  - app-framework
   - frontend-frameworks
-  - meta-framework
   - nuxt
 source_pages:
   - https://nuxt.com
@@ -16,16 +16,40 @@ source_pages:
 
 ## Role
 
-- EXTRACTED: Registry category: `meta-framework`.
+- EXTRACTED: Registry category: `app-framework`.
 - EXTRACTED: Homepage: https://nuxt.com
+- EXTRACTED: Docs URL: https://nuxt.com/docs
+- EXTRACTED: Demo/showcase URL: https://nuxt.com/templates
+- EXTRACTED: Project shell score: `10`.
 - EXTRACTED: Curated official repositories captured in this corpus: 4.
+- INFERRED: This can be evaluated as a reusable project shell or major project layer.
+
+## Reuse Profile
+
+Vue full-stack app shell with routing, server engine, content module, UI module, and image pipeline.
+
+## Recommended Use Cases
+
+- Vue full-stack app
+- content app
+- dashboard
+- documentation with Nuxt Content
+
+## Starter Or Template Clues
+
+- examples/
+- packages/
+
+## Agent Reuse Notes
+
+Use when the desired shell is Vue-first with strong batteries for content, UI, and deployment.
 
 ## Repositories
 
-- [[sources/frontend-frameworks/nuxt-content|nuxt/content]] - content, TypeScript, stars 3637, latest release `v3.13.0`
-- [[sources/frontend-frameworks/nuxt-image|nuxt/image]] - image, TypeScript, stars 1527, latest release `v2.0.0`
-- [[sources/frontend-frameworks/nuxt-nuxt|nuxt/nuxt]] - meta-framework, TypeScript, stars 60225, latest release `v4.4.5`
-- [[sources/frontend-frameworks/nuxt-ui|nuxt/ui]] - component-system, Vue, stars 6579, latest release `v4.7.1`
+- [[sources/frontend-frameworks/nuxt-content|nuxt/content]] - app-framework, TypeScript, stars 3637, latest release `v3.13.0`
+- [[sources/frontend-frameworks/nuxt-image|nuxt/image]] - app-framework, TypeScript, stars 1526, latest release `v2.0.0`
+- [[sources/frontend-frameworks/nuxt-nuxt|nuxt/nuxt]] - app-framework, TypeScript, stars 60225, latest release `v4.4.5`
+- [[sources/frontend-frameworks/nuxt-ui|nuxt/ui]] - app-framework, Vue, stars 6579, latest release `v4.7.1`
 
 ## Recent Captured Releases
 
@@ -43,5 +67,5 @@ source_pages:
 ## Navigation
 
 - [[frontend-frameworks-public]]
-- [[frontend-framework-taxonomy]]
-- [[frontend-framework-idea-map]]
+- [[frontend-project-shell-taxonomy]]
+- [[frontend-framework-reuse-map]]

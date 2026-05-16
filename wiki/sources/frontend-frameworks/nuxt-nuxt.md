@@ -5,8 +5,8 @@ status: active
 created: 2026-05-16
 updated: 2026-05-16
 tags:
+  - app-framework
   - frontend-frameworks
-  - meta-framework
   - nuxt
   - TypeScript
 source_pages:
@@ -19,8 +19,11 @@ source_pages:
 
 - Source kind: `github-repository`
 - Canonical URL: https://github.com/nuxt/nuxt
+- Documentation URL: https://nuxt.com/docs
+- Demo/showcase URL: https://nuxt.com/templates
 - Framework: [[entities/frontend-frameworks/nuxt|Nuxt]]
-- Ecosystem role: `meta-framework`
+- Ecosystem role: `app-framework`
+- Project shell score: `10`
 - Source confidence: `github-api`
 - Public handling: `public-summary-plus-license-aware-metadata`
 - Semantic hash: `fa29cec212eeda247280a799298f2cd736247bf52cff481b59206b69a24e7355`
@@ -28,6 +31,27 @@ source_pages:
 ## Summary
 
 The Full-Stack Vue Framework. Nuxt Nuxt is a free and open-source framework with an intuitive and extendable way to create type-safe, performant and production-grade full-stack web applications and websites with Vue.js. It provides a number of features that make it easy to build fast, SEO-friendly, and scalable web applications, including: - Server-side rendering, static site generation, hybrid rendering and edge-side rendering - Automatic routing with code-splitting and pre-fetching - Data fetching and state management - Search engine optimization and defining meta tags - Auto imports of components, composables and utils - TypeScri...
+
+## Reuse Profile
+
+Vue full-stack app shell with routing, server engine, content module, UI module, and image pipeline.
+
+## When To Reuse
+
+- Vue full-stack app
+- content app
+- dashboard
+- documentation with Nuxt Content
+
+## Starter Or Template Clues
+
+- examples/
+- packages/
+
+## Agent Reuse Notes
+
+Use when the desired shell is Vue-first with strong batteries for content, UI, and deployment.
+- INFERRED: Treat this repo as a reusable shell/layer candidate; inspect docs, examples, and release notes before transplanting patterns.
 
 ## Repository Snapshot
 
@@ -87,8 +111,8 @@ The Full-Stack Vue Framework. Nuxt Nuxt is a free and open-source framework with
 ## Navigation
 
 - [[frontend-frameworks-public]]
-- [[frontend-framework-taxonomy]]
-- [[frontend-framework-idea-map]]
+- [[frontend-project-shell-taxonomy]]
+- [[frontend-framework-reuse-map]]
 
 ## Public Handling Notes
 

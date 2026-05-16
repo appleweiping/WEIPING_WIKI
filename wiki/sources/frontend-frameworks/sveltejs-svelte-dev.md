@@ -5,9 +5,9 @@ status: active
 created: 2026-05-16
 updated: 2026-05-16
 tags:
-  - docs
   - frontend-frameworks
   - Svelte
+  - ui-runtime
 source_pages:
   - https://github.com/sveltejs/svelte.dev
 ---
@@ -18,8 +18,11 @@ source_pages:
 
 - Source kind: `github-repository`
 - Canonical URL: https://github.com/sveltejs/svelte.dev
+- Documentation URL: https://svelte.dev/docs
+- Demo/showcase URL: https://svelte.dev/playground
 - Framework: [[entities/frontend-frameworks/svelte|Svelte]]
-- Ecosystem role: `docs`
+- Ecosystem role: `ui-runtime`
+- Project shell score: `5`
 - Source confidence: `github-api`
 - Public handling: `public-summary-local-archive-only`
 - Semantic hash: `58a5572e24b67ae7b91624fdcb576d80bd7d07cb9e8f6733d867aa2007efba4f`
@@ -27,6 +30,26 @@ source_pages:
 ## Summary
 
 The Svelte omnisite svelte.dev This is the repository behind $1, the official Svelte site, and the related packages that it relies on. Documentation PRs If you're creating a documentation PR, make sure you're targeting the right repository. More specifically, changes to content within apps/svelte.dev/content/docs are synced from other repositories, and documentation changes within those folder should therefore be made in those repositories: - docs/svelte - https://github.com/sveltejs/svelte - docs/kit - https://github.com/sveltejs/kit - docs/cli - https://github.com/sveltejs/cli - docs/ai - https://github.com/sveltejs/ai-tools The t...
+
+## Reuse Profile
+
+Compiler/runtime substrate; SvelteKit is the project shell layer for apps.
+
+## When To Reuse
+
+- compiled UI runtime
+- Svelte component model
+- SvelteKit substrate
+
+## Starter Or Template Clues
+
+- packages/
+- sites/
+
+## Agent Reuse Notes
+
+Use SvelteKit, not raw Svelte alone, when the goal is a reusable app shell.
+- INFERRED: Treat this repo as a runtime/dependency substrate; do not start from it alone when the goal is a full project shell.
 
 ## Repository Snapshot
 
@@ -73,8 +96,8 @@ The Svelte omnisite svelte.dev This is the repository behind $1, the official Sv
 ## Navigation
 
 - [[frontend-frameworks-public]]
-- [[frontend-framework-taxonomy]]
-- [[frontend-framework-idea-map]]
+- [[frontend-project-shell-taxonomy]]
+- [[frontend-framework-reuse-map]]
 
 ## Public Handling Notes
 

@@ -8,7 +8,7 @@ tags:
   - frontend-frameworks
   - release
   - solid
-  - ui-framework
+  - ui-runtime
 source_pages:
   - https://github.com/solidjs/solid/releases/tag/v1.8.0
 ---
@@ -39,3 +39,8 @@ In Norse mythology, Bifröst (/ˈbɪvrɒst/), is a burning rainbow bridge that r
 
 - EXTRACTED: This page records release metadata and a concise idea summary.
 - INFERRED: The full release body is not mirrored publicly; use the canonical GitHub URL for complete text.
+
+## Navigation
+
+- [[frontend-frameworks-public]]
+- [[frontend-framework-reuse-map]]

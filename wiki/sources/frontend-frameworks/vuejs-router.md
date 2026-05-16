@@ -6,8 +6,8 @@ created: 2026-05-16
 updated: 2026-05-16
 tags:
   - frontend-frameworks
-  - router
   - TypeScript
+  - ui-runtime
   - vue
 source_pages:
   - https://github.com/vuejs/router
@@ -19,8 +19,11 @@ source_pages:
 
 - Source kind: `github-repository`
 - Canonical URL: https://github.com/vuejs/router
+- Documentation URL: https://vuejs.org/guide/
+- Demo/showcase URL: https://play.vuejs.org
 - Framework: [[entities/frontend-frameworks/vue|Vue]]
-- Ecosystem role: `router`
+- Ecosystem role: `ui-runtime`
+- Project shell score: `4`
 - Source confidence: `github-api`
 - Public handling: `public-summary-plus-license-aware-metadata`
 - Semantic hash: `a793eca863eab5c9b63fcb87eb934b138485c7d0547431451dbe960e9543232e`
@@ -28,6 +31,26 @@ source_pages:
 ## Summary
 
 🚦 The official router for Vue.js vue-router $1](https://npmx.dev/package/vue-router) $1](https://github.com/vuejs/router/actions/workflows/test.yml) $1](https://codecov.io/gh/vuejs/router) - This is the repository for Vue Router 4 (for Vue 3) - For Vue Router 3 (for Vue 2) see $1. To see what versions are currently supported, please refer to the $1. Supporting Vue Router Vue Router is part of the Vue Ecosystem and is an MIT-licensed open source project with its ongoing development made possible entirely by the support of Sponsors. If you would like to become a sponsor, please consider: - $1 - $1 Gold Sponsors Silver Sponsors Bronze...
+
+## Reuse Profile
+
+UI runtime/dependency substrate; usually pair with Nuxt or VitePress for a full project shell.
+
+## When To Reuse
+
+- Vue component runtime
+- state/router ecosystem
+- dependency substrate
+
+## Starter Or Template Clues
+
+- packages/
+- src/
+
+## Agent Reuse Notes
+
+Do not treat as a complete app shell by itself; use Nuxt or VitePress when a project scaffold is needed.
+- INFERRED: Treat this repo as a runtime/dependency substrate; do not start from it alone when the goal is a full project shell.
 
 ## Repository Snapshot
 
@@ -76,8 +99,8 @@ source_pages:
 ## Navigation
 
 - [[frontend-frameworks-public]]
-- [[frontend-framework-taxonomy]]
-- [[frontend-framework-idea-map]]
+- [[frontend-project-shell-taxonomy]]
+- [[frontend-framework-reuse-map]]
 
 ## Public Handling Notes
 

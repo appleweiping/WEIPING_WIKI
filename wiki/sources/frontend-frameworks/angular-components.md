@@ -6,7 +6,7 @@ created: 2026-05-16
 updated: 2026-05-16
 tags:
   - angular
-  - component-system
+  - app-framework
   - frontend-frameworks
   - TypeScript
 source_pages:
@@ -19,8 +19,11 @@ source_pages:
 
 - Source kind: `github-repository`
 - Canonical URL: https://github.com/angular/components
+- Documentation URL: https://angular.dev/overview
+- Demo/showcase URL: https://angular.dev
 - Framework: [[entities/frontend-frameworks/angular|Angular]]
-- Ecosystem role: `component-system`
+- Ecosystem role: `app-framework`
+- Project shell score: `8`
 - Source confidence: `github-api`
 - Public handling: `public-summary-plus-license-aware-metadata`
 - Semantic hash: `bf4d4cd8698b7040be4868a133451b02892052712d7d09570d5205e1e5dd9680`
@@ -28,6 +31,27 @@ source_pages:
 ## Summary
 
 Component infrastructure and Material Design components for Angular Official components for Angular $1](https://www.npmjs.com/package/@angular/cdk) $1](https://circleci.com/gh/angular/components) $1](https://gitter.im/angular/material2?utm source=badge&utm medium=badge&utm campaign=pr-badge) The Angular team builds and maintains both common UI components and tools to help you build your own custom components. The team maintains several npm packages. Package Description Docs ------------------------- ------------------------------------------------------------------------------------- ----------------- @angular/aria Collection of hea...
+
+## Reuse Profile
+
+Opinionated TypeScript application framework with CLI, routing, components, and Material ecosystem.
+
+## When To Reuse
+
+- enterprise app
+- TypeScript app
+- opinionated frontend shell
+- component-system app
+
+## Starter Or Template Clues
+
+- packages/angular/cli
+- src/material/
+
+## Agent Reuse Notes
+
+Use when project wants a batteries-included, TypeScript-heavy, opinionated app framework.
+- INFERRED: Treat this repo as a reusable shell/layer candidate; inspect docs, examples, and release notes before transplanting patterns.
 
 ## Repository Snapshot
 
@@ -79,8 +103,8 @@ Component infrastructure and Material Design components for Angular Official com
 ## Navigation
 
 - [[frontend-frameworks-public]]
-- [[frontend-framework-taxonomy]]
-- [[frontend-framework-idea-map]]
+- [[frontend-project-shell-taxonomy]]
+- [[frontend-framework-reuse-map]]
 
 ## Public Handling Notes
 

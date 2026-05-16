@@ -5,10 +5,10 @@ status: active
 created: 2026-05-16
 updated: 2026-05-16
 tags:
-  - astro
+  - docs-framework
   - frontend-frameworks
-  - meta-framework
   - release
+  - starlight
 source_pages:
   - https://github.com/withastro/starlight/releases/tag/%40astrojs/starlight%400.39.1
 ---
@@ -20,7 +20,7 @@ source_pages:
 - Source kind: `github-release`
 - Canonical URL: https://github.com/withastro/starlight/releases/tag/%40astrojs/starlight%400.39.1
 - Repository: [[sources/frontend-frameworks/withastro-starlight|withastro/starlight]]
-- Framework: [[entities/frontend-frameworks/astro|Astro]]
+- Framework: [[entities/frontend-frameworks/starlight|Starlight]], [[entities/frontend-frameworks/astro|Astro]]
 - Published: 2026-05-07T18:08:34Z
 - Prerelease: `False`
 - Author: `astrobot-houston`
@@ -40,3 +40,8 @@ Patch Changes - $1 $1 Thanks $1! - Fixes the version mentioned in an error messa
 
 - EXTRACTED: This page records release metadata and a concise idea summary.
 - INFERRED: The full release body is not mirrored publicly; use the canonical GitHub URL for complete text.
+
+## Navigation
+
+- [[frontend-frameworks-public]]
+- [[frontend-framework-reuse-map]]

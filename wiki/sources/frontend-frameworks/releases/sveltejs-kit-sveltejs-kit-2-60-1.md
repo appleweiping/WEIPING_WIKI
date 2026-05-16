@@ -5,10 +5,10 @@ status: active
 created: 2026-05-16
 updated: 2026-05-16
 tags:
-  - compiler-runtime
+  - app-framework
   - frontend-frameworks
   - release
-  - svelte
+  - sveltekit
 source_pages:
   - https://github.com/sveltejs/kit/releases/tag/%40sveltejs/kit%402.60.1
 ---
@@ -20,7 +20,7 @@ source_pages:
 - Source kind: `github-release`
 - Canonical URL: https://github.com/sveltejs/kit/releases/tag/%40sveltejs/kit%402.60.1
 - Repository: [[sources/frontend-frameworks/sveltejs-kit|sveltejs/kit]]
-- Framework: [[entities/frontend-frameworks/svelte|Svelte]], [[entities/frontend-frameworks/sveltekit|SvelteKit]]
+- Framework: [[entities/frontend-frameworks/sveltekit|SvelteKit]], [[entities/frontend-frameworks/svelte|Svelte]]
 - Published: 2026-05-14T20:11:09Z
 - Prerelease: `False`
 - Author: `github-actions[bot]`
@@ -40,3 +40,8 @@ Patch Changes - chore: bump svelte and devalue ($1) - fix: prevent query.batch c
 
 - EXTRACTED: This page records release metadata and a concise idea summary.
 - INFERRED: The full release body is not mirrored publicly; use the canonical GitHub URL for complete text.
+
+## Navigation
+
+- [[frontend-frameworks-public]]
+- [[frontend-framework-reuse-map]]

@@ -7,7 +7,7 @@ updated: 2026-05-16
 tags:
   - astro
   - frontend-frameworks
-  - meta-framework
+  - site-framework
 source_pages:
   - https://astro.build
 ---
@@ -16,15 +16,40 @@ source_pages:
 
 ## Role
 
-- EXTRACTED: Registry category: `meta-framework`.
+- EXTRACTED: Registry category: `site-framework`.
 - EXTRACTED: Homepage: https://astro.build
+- EXTRACTED: Docs URL: https://docs.astro.build
+- EXTRACTED: Demo/showcase URL: https://astro.build/themes/
+- EXTRACTED: Project shell score: `9`.
 - EXTRACTED: Curated official repositories captured in this corpus: 3.
+- INFERRED: This can be evaluated as a reusable project shell or major project layer.
+
+## Reuse Profile
+
+Content-driven web framework for sites, blogs, docs, and partial-hydration interactive pages.
+
+## Recommended Use Cases
+
+- content site
+- marketing site
+- docs site
+- blog
+- islands architecture
+
+## Starter Or Template Clues
+
+- examples/
+- packages/create-astro/
+
+## Agent Reuse Notes
+
+Use when the project is content-first but needs selective interactive islands.
 
 ## Repositories
 
-- [[sources/frontend-frameworks/withastro-astro|withastro/astro]] - meta-framework, TypeScript, stars 59328, latest release `@astrojs/mdx@5.0.6`
-- [[sources/frontend-frameworks/withastro-docs|withastro/docs]] - docs, MDX, stars 1625, latest release ``
-- [[sources/frontend-frameworks/withastro-starlight|withastro/starlight]] - meta-framework, TypeScript, stars 8489, latest release `@astrojs/starlight@0.39.2`
+- [[sources/frontend-frameworks/withastro-astro|withastro/astro]] - site-framework, TypeScript, stars 59329, latest release `@astrojs/mdx@5.0.6`
+- [[sources/frontend-frameworks/withastro-docs|withastro/docs]] - site-framework, MDX, stars 1625, latest release ``
+- [[sources/frontend-frameworks/withastro-starlight|withastro/starlight]] - docs-framework, TypeScript, stars 8489, latest release `@astrojs/starlight@0.39.2`
 
 ## Recent Captured Releases
 
@@ -38,5 +63,5 @@ source_pages:
 ## Navigation
 
 - [[frontend-frameworks-public]]
-- [[frontend-framework-taxonomy]]
-- [[frontend-framework-idea-map]]
+- [[frontend-project-shell-taxonomy]]
+- [[frontend-framework-reuse-map]]

@@ -6,8 +6,8 @@ created: 2026-05-16
 updated: 2026-05-16
 tags:
   - angular
+  - app-framework
   - frontend-frameworks
-  - starter-or-examples
   - TypeScript
 source_pages:
   - https://github.com/angular/angular-cli
@@ -19,8 +19,11 @@ source_pages:
 
 - Source kind: `github-repository`
 - Canonical URL: https://github.com/angular/angular-cli
+- Documentation URL: https://angular.dev/overview
+- Demo/showcase URL: https://angular.dev
 - Framework: [[entities/frontend-frameworks/angular|Angular]]
-- Ecosystem role: `starter-or-examples`
+- Ecosystem role: `app-framework`
+- Project shell score: `8`
 - Source confidence: `github-api`
 - Public handling: `public-summary-plus-license-aware-metadata`
 - Semantic hash: `504627701b9dd88d17a7dc9408eeda3393fd00efc7ee6e87bbd7ae9ebec02d0f`
@@ -28,6 +31,27 @@ source_pages:
 ## Summary
 
 CLI tool for Angular Angular CLI - The CLI tool for Angular. The Angular CLI is a command-line interface tool that you use to initialize, develop, scaffold, and maintain Angular applications directly from a command shell. angular.dev/tools/cli Contributing Guidelines · Submit an Issue · Blog Documentation Get started with Angular CLI, learn the fundamentals and explore advanced topics on our documentation website. - [Getting started][quickstart] - [CLI][cli] - [Workspace and project file structure][filestructure] - [Workspace configuration][workspaceconfig] - [Schematics][schematics] Development Setup Prerequisites - Install [Node.j...
+
+## Reuse Profile
+
+Opinionated TypeScript application framework with CLI, routing, components, and Material ecosystem.
+
+## When To Reuse
+
+- enterprise app
+- TypeScript app
+- opinionated frontend shell
+- component-system app
+
+## Starter Or Template Clues
+
+- packages/angular/cli
+- src/material/
+
+## Agent Reuse Notes
+
+Use when project wants a batteries-included, TypeScript-heavy, opinionated app framework.
+- INFERRED: Treat this repo as a reusable shell/layer candidate; inspect docs, examples, and release notes before transplanting patterns.
 
 ## Repository Snapshot
 
@@ -80,8 +104,8 @@ CLI tool for Angular Angular CLI - The CLI tool for Angular. The Angular CLI is 
 ## Navigation
 
 - [[frontend-frameworks-public]]
-- [[frontend-framework-taxonomy]]
-- [[frontend-framework-idea-map]]
+- [[frontend-project-shell-taxonomy]]
+- [[frontend-framework-reuse-map]]
 
 ## Public Handling Notes
 

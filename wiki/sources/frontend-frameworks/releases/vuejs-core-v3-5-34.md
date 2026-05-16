@@ -7,7 +7,7 @@ updated: 2026-05-16
 tags:
   - frontend-frameworks
   - release
-  - ui-framework
+  - ui-runtime
   - vue
 source_pages:
   - https://github.com/vuejs/core/releases/tag/v3.5.34
@@ -39,3 +39,8 @@ For stable releases, please refer to $1 for details. For pre-releases, please re
 
 - EXTRACTED: This page records release metadata and a concise idea summary.
 - INFERRED: The full release body is not mirrored publicly; use the canonical GitHub URL for complete text.
+
+## Navigation
+
+- [[frontend-frameworks-public]]
+- [[frontend-framework-reuse-map]]

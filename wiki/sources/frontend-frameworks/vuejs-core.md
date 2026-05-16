@@ -7,7 +7,7 @@ updated: 2026-05-16
 tags:
   - frontend-frameworks
   - TypeScript
-  - ui-framework
+  - ui-runtime
   - vue
 source_pages:
   - https://github.com/vuejs/core
@@ -19,8 +19,11 @@ source_pages:
 
 - Source kind: `github-repository`
 - Canonical URL: https://github.com/vuejs/core
+- Documentation URL: https://vuejs.org/guide/
+- Demo/showcase URL: https://play.vuejs.org
 - Framework: [[entities/frontend-frameworks/vue|Vue]]
-- Ecosystem role: `ui-framework`
+- Ecosystem role: `ui-runtime`
+- Project shell score: `4`
 - Source confidence: `github-api`
 - Public handling: `public-summary-plus-license-aware-metadata`
 - Semantic hash: `ea17b0dca9d9639bbe889381a6e248c42f071df8d5e280718ff56ffcc289008d`
@@ -29,11 +32,31 @@ source_pages:
 
 🖖 Vue.js is a progressive, incrementally-adoptable JavaScript framework for building UI on the web. vuejs/core $1](https://www.npmjs.com/package/vue) $1](https://github.com/vuejs/core/actions/workflows/ci.yml) $1](https://www.npmjs.com/package/vue) Getting Started Please follow the documentation at $1! Sponsors Vue.js is an MIT-licensed open source project with its ongoing development made possible entirely by the support of these awesome $1. If you'd like to join them, please consider $1. Special Sponsor Questions For questions and support please use $1 or $1. The issue list of this repo is exclusively for bug reports and feature...
 
+## Reuse Profile
+
+UI runtime/dependency substrate; usually pair with Nuxt or VitePress for a full project shell.
+
+## When To Reuse
+
+- Vue component runtime
+- state/router ecosystem
+- dependency substrate
+
+## Starter Or Template Clues
+
+- packages/
+- src/
+
+## Agent Reuse Notes
+
+Do not treat as a complete app shell by itself; use Nuxt or VitePress when a project scaffold is needed.
+- INFERRED: Treat this repo as a runtime/dependency substrate; do not start from it alone when the goal is a full project shell.
+
 ## Repository Snapshot
 
 - Default branch: `main`
 - HEAD SHA: `1ce598eb0ac7bed5bdc14857244424520498d29d`
-- Stars at crawl: 53671
+- Stars at crawl: 53669
 - Forks at crawl: 9110
 - Open issues at crawl: 983
 - Primary language: `TypeScript`
@@ -75,8 +98,8 @@ source_pages:
 ## Navigation
 
 - [[frontend-frameworks-public]]
-- [[frontend-framework-taxonomy]]
-- [[frontend-framework-idea-map]]
+- [[frontend-project-shell-taxonomy]]
+- [[frontend-framework-reuse-map]]
 
 ## Public Handling Notes
 

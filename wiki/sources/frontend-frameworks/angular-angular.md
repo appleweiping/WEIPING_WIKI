@@ -6,9 +6,9 @@ created: 2026-05-16
 updated: 2026-05-16
 tags:
   - angular
+  - app-framework
   - frontend-frameworks
   - TypeScript
-  - ui-framework
 source_pages:
   - https://github.com/angular/angular
 ---
@@ -19,8 +19,11 @@ source_pages:
 
 - Source kind: `github-repository`
 - Canonical URL: https://github.com/angular/angular
+- Documentation URL: https://angular.dev/overview
+- Demo/showcase URL: https://angular.dev
 - Framework: [[entities/frontend-frameworks/angular|Angular]]
-- Ecosystem role: `ui-framework`
+- Ecosystem role: `app-framework`
+- Project shell score: `8`
 - Source confidence: `github-api`
 - Public handling: `public-summary-plus-license-aware-metadata`
 - Semantic hash: `a1721a241793b961f6777fd81aa2c1585b884c7134fe2432b72d66e262dfaa1b`
@@ -28,6 +31,27 @@ source_pages:
 ## Summary
 
 Deliver web apps with confidence 🚀 Angular - The modern web developer's platform Angular is a development platform for building mobile and desktop web applications using TypeScript/JavaScript and other languages. angular.dev Contributing Guidelines · Submit an Issue · Blog Documentation Get started with Angular, learn the fundamentals and explore advanced topics on our documentation website. - [Getting Started][quickstart] - [Architecture][architecture] - [Components and Templates][componentstemplates] - [Forms][forms] - [API][api] Advanced - [Angular Elements][angularelements] - [Server Side Rendering][ssr] - [Schematics][schemati...
+
+## Reuse Profile
+
+Opinionated TypeScript application framework with CLI, routing, components, and Material ecosystem.
+
+## When To Reuse
+
+- enterprise app
+- TypeScript app
+- opinionated frontend shell
+- component-system app
+
+## Starter Or Template Clues
+
+- packages/angular/cli
+- src/material/
+
+## Agent Reuse Notes
+
+Use when project wants a batteries-included, TypeScript-heavy, opinionated app framework.
+- INFERRED: Treat this repo as a reusable shell/layer candidate; inspect docs, examples, and release notes before transplanting patterns.
 
 ## Repository Snapshot
 
@@ -83,8 +107,8 @@ Deliver web apps with confidence 🚀 Angular - The modern web developer's platf
 ## Navigation
 
 - [[frontend-frameworks-public]]
-- [[frontend-framework-taxonomy]]
-- [[frontend-framework-idea-map]]
+- [[frontend-project-shell-taxonomy]]
+- [[frontend-framework-reuse-map]]
 
 ## Public Handling Notes
 

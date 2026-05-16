@@ -5,7 +5,7 @@ status: active
 created: 2026-05-16
 updated: 2026-05-16
 tags:
-  - component-system
+  - app-framework
   - frontend-frameworks
   - nuxt
   - Vue
@@ -19,8 +19,11 @@ source_pages:
 
 - Source kind: `github-repository`
 - Canonical URL: https://github.com/nuxt/ui
+- Documentation URL: https://nuxt.com/docs
+- Demo/showcase URL: https://nuxt.com/templates
 - Framework: [[entities/frontend-frameworks/nuxt|Nuxt]]
-- Ecosystem role: `component-system`
+- Ecosystem role: `app-framework`
+- Project shell score: `10`
 - Source confidence: `github-api`
 - Public handling: `public-summary-plus-license-aware-metadata`
 - Semantic hash: `bb7afea30a5cdf3597fef62168f0f3f35140616c4677242b33eb909d8338a4b1`
@@ -28,6 +31,27 @@ source_pages:
 ## Summary
 
 The Intuitive Vue UI Library powered by Reka UI & Tailwind CSS. Nuxt UI [![npm version][npm-version-src&#93;&#93;[npm-version-href] [![npm downloads][npm-downloads-src&#93;&#93;[npm-downloads-href] [![License][license-src&#93;&#93;[license-href] [![Nuxt][nuxt-src&#93;&#93;[nuxt-href] Nuxt UI harnesses the combined strengths of $1, $1, and $1 to offer developers an unparalleled set of tools for creating sophisticated, accessible, and highly performant user interfaces. [!NOTE] You are on the v4 branch, check out the $1 for Nuxt UI v3 or $1 for Nuxt UI v2. Documentation Visit https://ui.nuxt.com to explore the documentation. Templates Kickstart your project with one...
+
+## Reuse Profile
+
+Vue full-stack app shell with routing, server engine, content module, UI module, and image pipeline.
+
+## When To Reuse
+
+- Vue full-stack app
+- content app
+- dashboard
+- documentation with Nuxt Content
+
+## Starter Or Template Clues
+
+- examples/
+- packages/
+
+## Agent Reuse Notes
+
+Use when the desired shell is Vue-first with strong batteries for content, UI, and deployment.
+- INFERRED: Treat this repo as a reusable shell/layer candidate; inspect docs, examples, and release notes before transplanting patterns.
 
 ## Repository Snapshot
 
@@ -81,8 +105,8 @@ The Intuitive Vue UI Library powered by Reka UI & Tailwind CSS. Nuxt UI [![npm v
 ## Navigation
 
 - [[frontend-frameworks-public]]
-- [[frontend-framework-taxonomy]]
-- [[frontend-framework-idea-map]]
+- [[frontend-project-shell-taxonomy]]
+- [[frontend-framework-reuse-map]]
 
 ## Public Handling Notes
 

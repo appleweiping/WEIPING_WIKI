@@ -5,8 +5,8 @@ status: active
 created: 2026-05-16
 updated: 2026-05-16
 tags:
-  - docs
   - frontend-frameworks
+  - ui-runtime
   - Vue
 source_pages:
   - https://github.com/vuejs/docs
@@ -18,8 +18,11 @@ source_pages:
 
 - Source kind: `github-repository`
 - Canonical URL: https://github.com/vuejs/docs
+- Documentation URL: https://vuejs.org/guide/
+- Demo/showcase URL: https://play.vuejs.org
 - Framework: [[entities/frontend-frameworks/vue|Vue]]
-- Ecosystem role: `docs`
+- Ecosystem role: `ui-runtime`
+- Project shell score: `4`
 - Source confidence: `github-api`
 - Public handling: `public-summary-local-archive-only`
 - Semantic hash: `63bb16ab6328459d45bb6f8ccdc8248761371e3c936c1c2bdc64e728eb2c1db6`
@@ -27,6 +30,26 @@ source_pages:
 ## Summary
 
 📄 Documentation for Vue 3 vuejs.org Contributing This site is built with $1 and depends on $1. Site content is written in Markdown format located in src . For simple edits, you can directly edit the file on GitHub and generate a Pull Request. For local development, $1 is preferred as package manager: This project requires Node.js to be v20 or higher. And it is recommended to enable corepack: Working on the content - See VitePress docs on supported $1 and the ability to $1. - See the $1 for our rules and recommendations on writing and maintaining documentation content. Working on the theme If changes need to be made for the theme, c...
+
+## Reuse Profile
+
+UI runtime/dependency substrate; usually pair with Nuxt or VitePress for a full project shell.
+
+## When To Reuse
+
+- Vue component runtime
+- state/router ecosystem
+- dependency substrate
+
+## Starter Or Template Clues
+
+- packages/
+- src/
+
+## Agent Reuse Notes
+
+Do not treat as a complete app shell by itself; use Nuxt or VitePress when a project scaffold is needed.
+- INFERRED: Treat this repo as a runtime/dependency substrate; do not start from it alone when the goal is a full project shell.
 
 ## Repository Snapshot
 
@@ -76,8 +99,8 @@ source_pages:
 ## Navigation
 
 - [[frontend-frameworks-public]]
-- [[frontend-framework-taxonomy]]
-- [[frontend-framework-idea-map]]
+- [[frontend-project-shell-taxonomy]]
+- [[frontend-framework-reuse-map]]
 
 ## Public Handling Notes
 

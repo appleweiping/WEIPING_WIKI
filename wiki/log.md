@@ -14,8 +14,8 @@ tags:
 - Pages created or updated:
   - [[frontend-frameworks-public]]
   - [[2026-05-16-frontend-frameworks-public-corpus]]
-  - [[frontend-framework-taxonomy]]
-  - [[frontend-framework-idea-map]]
+  - [[frontend-project-shell-taxonomy]]
+  - [[frontend-framework-reuse-map]]
   - `wiki/entities/frontend-frameworks/`
   - `wiki/sources/frontend-frameworks/`
 - Sources used:
