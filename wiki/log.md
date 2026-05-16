@@ -367,3 +367,16 @@ tags:
 - Notes:
   - Selected `353` high-quality user/automation prompts and rejected `1424` noisy or unsafe candidates.
   - Preserved full selected prompt text only after filtering out short, garbled, code/log-like, duplicate, and secret-like material.
+
+## [2026-05-16 20:25] ingest | canvas outage and syllabus transfer-credit blocker
+
+- Pages created or updated:
+  - [[canvas-lms]]
+  - [[2026-05-16-canvas-hack-recovery-note]]
+  - [[university-of-minnesota]]
+  - [[index]]
+- Sources used:
+  - User-provided chat note
+- Notes:
+  - Recorded that Canvas was recently hacked/unavailable and is expected to recover on 2026-05-18.
+  - Added the practical blocker: the user cannot retrieve course syllabi from Canvas, which blocks UMN transfer-credit review because UMN needs school syllabi.

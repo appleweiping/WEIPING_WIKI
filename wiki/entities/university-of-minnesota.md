@@ -9,6 +9,7 @@ tags:
   - university
 source_pages:
   - 2026-05-08-university-of-minnesota-housing-contract-2026-2027
+  - 2026-05-16-canvas-hack-recovery-note
 ---
 
 # University of Minnesota
@@ -21,8 +22,12 @@ The University of Minnesota appears as the issuer of the 2026-2027 Housing & Res
 
 - [[university-housing]]
 - [[2026-05-08-university-of-minnesota-housing-contract-2026-2027]]
+- [[canvas-lms]]
+- [[2026-05-16-canvas-hack-recovery-note]]
 
 ## Current Claims
 
 - EXTRACTED: Housing & Residential Life issues housing contract terms for University of Minnesota residence halls and apartment complexes.
 - EXTRACTED: The 2026-2027 housing contract states that submitting an application-contract creates a legally binding contract with the University of Minnesota.
+- EXTRACTED: The user said UMN transfer-credit review requires school syllabi.
+- EXTRACTED: The user said a Canvas outage/hack temporarily prevents retrieving those syllabi.

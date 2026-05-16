@@ -23,6 +23,8 @@ This is the main catalog of the wiki.
 
 ## Entities
 
+- [[canvas-lms]] - Canvas coursework LMS note; current user-provided outage/hack status blocks syllabus retrieval for UMN transfer-credit review.
+
 
 
 
@@ -63,6 +65,8 @@ This is the main catalog of the wiki.
 - [[song-page-capture-rule]] - Rule that every liked song should get a dedicated clickable, playable song page when possible.
 
 ## Sources
+
+- [[2026-05-16-canvas-hack-recovery-note]] - User-provided Canvas outage/hack note; expected recovery 2026-05-18 and blocks syllabus retrieval for UMN transfer-credit review.
 
 - [[sources/weekly-research-digests/2026-w20-ai4s-protein]] - 2026-W20 AI4S protein/biology research pick.
 
