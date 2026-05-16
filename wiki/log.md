@@ -118,3 +118,16 @@ tags:
   - Captured public Tencent Docs metadata for `关于植物大战僵尸融合版（手机加PC端）`.
   - Browser rendering showed the document body is permission-gated and asks for login.
   - Recorded follow-up rules for authorized export or logged-in capture before summarizing installation/download details.
+
+## [2026-05-16 03:16] ingest | pvz fusion authorized visual extraction
+
+- Pages created or updated:
+  - [[2026-05-16-qq-doc-pvz-fusion-mobile-pc]]
+  - [[pvz-fusion-edition]]
+- Sources used:
+  - User-opened authorized Tencent Docs browser view
+  - Local screenshots of the visible document body
+- Notes:
+  - Added visible link labels for mobile, PC, no-MOD PC, game body, and advanced plant MOD/plugin entries.
+  - Extracted the PC MOD workflow around `BepInEx\plugins`, game root layout, and `.zip` plant packages.
+  - Left exact target URLs and checksum/provenance verification as follow-up items because Tencent Docs normal copy did not expose the body links.
