@@ -51,6 +51,22 @@ tags:
   - Removed entries this run: 0.
   - Crawl errors recorded: 3.
   - Manifest stored at `raw/lidang-public/manifest.json`.
+## [2026-05-16 13:18] query | lidang sp500 and nasdaq100 clue
+
+- Pages created or updated:
+  - [[2026-05-16-what-indexes-did-lidang-recommend]]
+  - [[sources/lidang-public/x-status-2041009459175026831-sp500-nasdaq100]]
+  - [[lidang]]
+  - [[lidang-public-ideas]]
+  - [[index]]
+- Sources used:
+  - https://x.com/lidangzzz
+  - https://x.com/lidangzzz/status/2041009459175026831
+  - `raw/lidang-public/html/2026-05-16/x-com-lidangzzz.html`
+- Notes:
+  - Preserved the answer that `SP500/纳100` means S&P 500 and Nasdaq-100.
+  - Recorded the source-confidence boundary: profile HTML plus non-authoritative web/mirror snippets, not financial advice.
+
 ## [2026-05-16 01:25] ingest | lidang html snapshots and dedupe rules
 
 - Pages created or updated:

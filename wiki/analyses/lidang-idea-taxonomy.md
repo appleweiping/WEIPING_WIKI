@@ -34,6 +34,7 @@ This page groups the current Lidang public corpus by idea domain. It is designed
 
 ## Everyday heuristics / judgment frames
 
+- [[sources/lidang-public/x-status-2041009459175026831-sp500-nasdaq100|x-status:2041009459175026831]] - x-status-manual-search, confidence `profile-html-plus-search-result`, topic `S&P 500 / Nasdaq-100 source identification`
 - [大学制度 即将崩溃](https://www.youtube.com/watch?v=Ma4PdPBj_mg) - youtube-video, confidence `official-rss`, score 3, semantic `cff0746bbb662012eb5a0d418efce240cc849bee63f73f565bdb308f62d7b3bd`
 - [立党臭骂北大数学博士：数学是死路一条！转行具身智能更是死路一条！](https://www.youtube.com/watch?v=jbuo8YMX5e8) - youtube-video, confidence `official-rss`, score 3, semantic `c89112ae92e1bc7992ea3eba629460ade34739255e95f521230e51b79818c2f5`
 - [立党直播014 房地产与高考咨询](https://www.youtube.com/watch?v=WTTqwVNqAGs) - youtube-video, confidence `official-rss`, score 3, semantic `db2b242ad1f93ef0ed50d14328bc0397593342b18b5fc9524da66e0c7b4f78a3`

@@ -20,11 +20,13 @@ This hub tracks Lidang's public idea stream as a high-frequency corpus. The syst
 ## Current Corpus Shape
 
 - `x-profile-probe`: 1
+- `x-status-manual-search`: 1
 - `youtube-video`: 15
 
 ## Core Use
 
 - Use [[lidang-idea-taxonomy]] to navigate topics.
+- Use [[2026-05-16-what-indexes-did-lidang-recommend]] for the SP500 / Nasdaq-100 clarification.
 - Use [[lidang-weekly-digests]] for chronological batches.
 - Use high-signal single-item pages only when an item is substantial enough to justify durable retrieval.
 - Use source confidence labels before citing any X-derived item.

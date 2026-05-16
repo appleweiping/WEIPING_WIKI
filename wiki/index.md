@@ -72,6 +72,7 @@ This is the main catalog of the wiki.
 - [[2026-05-16-yao-shunyu-public-corpora]] - Batch ingest of the ysymyth and alfredyao public corpora.
 - [[2026-05-16-qq-doc-pvz-fusion-mobile-pc]] - Tencent Docs source note for Plants vs. Zombies Fusion Edition mobile and PC; metadata visible, body permission-gated.
 - [[2026-05-16-lidang-public-corpus]] - Batch ingest of Lidang YouTube RSS, canonical X profile, auxiliary mirror probes, HTML snapshots, and dedupe/backfill rules.
+- [[sources/lidang-public/x-status-2041009459175026831-sp500-nasdaq100]] - Manual evidence note for Lidang's `买SP500/纳100` profile/status clue.
 - [[2026-05-16-lidang-public-corpus]] - Batch ingest of Lidang YouTube RSS, canonical X profile, and auxiliary mirror probes.
 - [[2026-05-15-karpathy-public-corpus]] - Batch ingest of Karpathy's GitHub repositories, official homepage, blog RSS, YouTube feed, gists, and curated status links.
 - [[2026-05-15-openai-cookbook]] - Batch ingest of the official OpenAI Cookbook developers index and MIT-licensed GitHub source mirror.
@@ -156,6 +157,7 @@ This is the main catalog of the wiki.
 - [[2026-05-08-how-to-integrate-venus-basestation-with-team-gitlab]] - Git workflow plan for moving Vipin's Venus basestation/UI work into the team GitLab repository on a dedicated branch.
 - [[2026-05-08-which-umn-meal-plan-to-choose]] - Practical recommendation for choosing between UMN `Unlimited` and `Unlimited Plus` residence hall meal plans.
 - [[2026-05-08-how-to-choose-umn-apartment-vs-residence-hall-for-private-bedroom]] - Practical UMN room-preference strategy for balancing low cost with a private sleeping room.
+- [[2026-05-16-what-indexes-did-lidang-recommend]] - Clarifies that Lidang's `SP500/纳100` phrase means S&P 500 and Nasdaq-100, not S&P 100.
 
 
 

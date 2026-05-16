@@ -1,0 +1,18 @@
+{
+    "schema":  "lidang-public-manual-evidence-v1",
+    "captured_at":  "2026-05-16T12:59:02.2531972+02:00",
+    "id":  "x-status:2041009459175026831",
+    "dedupe_key":  "x-status:2041009459175026831",
+    "source_kind":  "x-status-manual-search",
+    "canonical_url":  "https://x.com/lidangzzz/status/2041009459175026831",
+    "mirror_url":  "https://www6.twstalker.com/lidangzzz/status/2041009459175026831",
+    "profile_url":  "https://x.com/lidangzzz",
+    "observed_claim":  "Search results and the captured X profile label associate Lidang/lidangzzz with buying SP500 and ди100.",
+    "normalized_terms":  [
+                             "S\u0026P 500 / SP500",
+                             "NASDAQ-100 / дик╧╢О©к100 / ди100"
+                         ],
+    "confidence":  "profile-html-plus-search-result; mirror non-authoritative; status text not fully redistributed",
+    "public_handling":  "metadata-summary-only; do not mirror full third-party text",
+    "related_raw_html":  "raw/lidang-public/html/2026-05-16/x-com-lidangzzz.html"
+}

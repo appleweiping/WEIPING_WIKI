@@ -25,6 +25,7 @@ Lidang / `lidangzzz` is tracked here as a high-frequency public source of path-e
 - EXTRACTED: YouTube RSS title at crawl: `立党 lidang`.
 - EXTRACTED: YouTube RSS currently exposed 15 recent videos.
 - EXTRACTED: Canonical X profile URL used by this corpus: https://x.com/lidangzzz.
+- EXTRACTED: The captured X profile label includes `买SP500/纳100`; see [[sources/lidang-public/x-status-2041009459175026831-sp500-nasdaq100]].
 - EXTRACTED: Reachable profile or mirror HTML snapshots are stored under `raw/lidang-public/html/` for future extraction.
 - AMBIGUOUS: Stable public access to full X history was not available through the probed sources during this crawl.
 
@@ -38,5 +39,6 @@ Lidang / `lidangzzz` is tracked here as a high-frequency public source of path-e
 
 - [[lidang-public-ideas]]
 - [[2026-05-16-lidang-public-corpus]]
+- [[2026-05-16-what-indexes-did-lidang-recommend]]
 - [[lidang-idea-taxonomy]]
 - [[lidang-weekly-digests]]
