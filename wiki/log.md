@@ -380,3 +380,17 @@ tags:
 - Notes:
   - Recorded that Canvas was recently hacked/unavailable and is expected to recover on 2026-05-18.
   - Added the practical blocker: the user cannot retrieve course syllabi from Canvas, which blocks UMN transfer-credit review because UMN needs school syllabi.
+## [2026-05-17 00:50] analysis | HTML PPT skill and deck workflow
+
+- Pages created or updated:
+  - [[html-ppt-agent-workflow]]
+  - [[2026-05-17-html-ppt-skill-and-deck-session]]
+  - [[html-ppt-template-workflow-results]]
+  - [[index]]
+- Sources used:
+  - Chat/session record from the `frontend-slides` and `beautiful-html-templates` setup/testing work
+  - Local files under `.codex/skills/frontend-slides/`, `skill/llm4ppt(html)/`, and `D:/ppt/`
+- Notes:
+  - Recorded the D-drive project-local `frontend-slides` installation, local template-library integration, and default template-backed generation rule.
+  - Preserved the two validated deck outputs separately: `life-did-not-spare-you` and `beauty-love`.
+  - Recorded only minimal neutral metadata for the Beauty-Love image pack and avoided public visual-detail expansion.
