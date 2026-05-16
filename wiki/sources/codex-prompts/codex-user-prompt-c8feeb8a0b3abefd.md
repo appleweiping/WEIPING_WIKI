@@ -1,0 +1,57 @@
+---
+title: 我想利用harness engineering 的全套思路（自己去搜寻里面包含什么概念），重新构建这个项目，内容idea只做部分保留，给你大的权限删去已有...
+type: source
+status: active
+created: 2026-05-16
+updated: 2026-05-16
+tags:
+  - source
+  - codex-prompts
+  - research-workflow
+source_pages:
+  - codex-prompt-corpus
+---
+
+# 我想利用harness engineering 的全套思路（自己去搜寻里面包含什么概念），重新构建这个项目，内容idea只做部分保留，给你大的权限删去已有...
+
+## Metadata
+
+- Stable ID: `codex-user-prompt:c8feeb8a0b3abefd`
+- Source kind: `codex-session-user`
+- Category: `research-workflow`
+- Timestamp: `2026-05-11T10:49:02.605Z`
+- Semantic hash: `c8feeb8a0b3abefd5e31141cedce8165c75d23450854dfaf252a5d5c93e4ef13`
+- Public handling: selected full-text prompt with secret filtering.
+
+## Prompt Text
+
+```text
+我想利用harness engineering 的全套思路（自己去搜寻里面包含什么概念），重新构建这个项目，内容idea只做部分保留，给你大的权限删去已有的工作内容以及模块或者是实验（如果不合理或者不现实或者命名不够好），但是架构需要做调整，不要非得拘泥于已有框架去缝补，因为如果现在的这个想法偏toy或者比较差，做的再努力也还是差，同时请你记住要多agent协作和计划模式，以后碰到大内容大任务时强制，要降低项目的耦合程度。在不影响质量的情况下（这个你也要自己去查资料网上）。以后记住默认修改好后提交到github，也可分批次commit，根据不同的内容。我也建议你搜寻一下网上关于这种项目类型的一些设计的idea，目前还是太单薄了，你要参考一下其他更能让使用者高兴用起来舒服的一些想法，而不只是我上述说的。我希望你能在科研上过分激进，而非保守，我们需要强制创新，禁止缝合A+B（或者A+B+C,这种缝合拼接多个别人的idea的这种想法）,这种绝对抄袭缝合的内容。我希望能在agent这边加一句，每次碰到复杂任务都要用多agent协作工作，工作开始时默认阅读几个重要文档（这个要你自行决定和搜索你觉得重要的文档，一般是对agent理解项目路线，清楚任务规划，清楚具体细节，和执行规则）。每次工作完后除了报告也要提供下一步的方案和计划在结束时。要比对自己的项目的严谨度，创新度，技术深度，该有的部分是否完整等，同其他顶会论文比（自行搜索，但不要只搜索仅仅几个），清楚任务什么时候结束，清楚任务路线，一定要记住什么时候可以结束项目和实验，而不是一直下一步（这个就需要你跟其他顶会论文相比较，同时你要找一个顶会级别的reviewer挑刺，直到确实好了，你就可以跟我说已经基本结束项目和实验阶段，可以进行写作了）。我的意思是让你在做这个项目的时候用harness engineering的思维去做，而不是让你把harness engineering用到这个项目的idea里本身。而且你的baseline目前也比较单薄，没有比较新的25年，26年出的那些顶会论文项目baseline，baseline一般至少要有8个，这些你不要口头说，而是做好报告加搭好该有的框架，能直接上服务器跑的那种程度。我们现在做的实在是toy，并没有啥自己的想法，只是在比较别人什么时候赢，几乎没什么贡献，也跟llm不搭边，没有训练小模型，没有观察阶段，没有llm4protein的那种思维。这些我都需要
+
+我认为从观察（观察阶段基本就是多个全域，至于几个你需要参考其他人的顶会论文项目（或者最好就是观察的数量和后面train的数量一样））（观察即可用qwen3 8B作为调用，能够发现我们在base（也就是只有qwen3 8B）调用下发现的现象和观察）我们发现了痛点或者说可以矫正，然后到baseline我们都是得重新做成一个formal（baseline的其他配置跟其他baseline相同）版本的。那你告诉我，他们目前代码和方法设计部分跟baseline相比是否欠缺，最好派个reviewer审核一下，能不能在有创新性的情况下优化和升级，不必过分拘泥于当前的苟且，而是要深，细化，复杂，并且要效果好。要reviewer和实作的agent这么反复的对接，细细讨论，最终才能做好。可以参考最新的顶会论文里面的项目的方法流程，但只能作为借鉴，实际自己的内容决不能是缝合或者抄袭的。多agent协作，并且最好把这句话加进去（要参考或者调研时，可以仔细精读理解学长推荐论文项目或者其他顶会论文项目，但只能作为借鉴，实际自己的内容决不能是缝合或者抄袭的。）。做完了之后也要在相关文档上的milestone加上这两个，也是最重要的两个部分的内容,因为是我们自己的，必要时做增删改查。结束时可以做到直接上服务器跑指令的那种完成度。observation也可最先从调用普通deepseek的api开始，然后再是上服务器用小模型去观察，发现确实有这个现象，然后我们就lora finetune（我不知道相关术语，反正你看别的论文是怎么弄的）这个模型，然后也要在别人的baseline上看到他仍然有我们发现的这个痛点，然后后面通过训练对比其他baseline，证实确实比别人的要好。deepseek要并行，qwen3 8B也要考虑调用并行，怎么快怎么来，但不影响实验，项目质量。
+
+还有一些学长的建议：关于如何比较baseline是公平的，其实不同paper的定义不同，只要看起来你的标准是统一的就可以，我可以举几个例子
+1. 直接按照原本的代码跑，它里面用的什么backbone就用什么backbone，参数也不变，就只把输入的接口变成你自己比较的数据集。2. 数据集和比较的某个工作统一，直接用那个工作里面report的所有baseline的效果。3. 适配llm backbone，比如说你打算用qwen3.5 8B做finetune，那不管别人backbone本来用的是llama还是gemma之类的，你都把他们那个改成qwen3.5，用默认参数跑你的数据集。4. 前面都是不去给baseline调参，但你自己会给自己调参。因为用在不同数据集，或者相同数据集不同划分之类的上面，同样参数模型会有一些变化，所以得给baseline也调参
+一般比较常见的就这几种
+关于lora的问题，这个得看你比较的工作是否用了lora，因为你full finetune的效果大概率是比lora要高几个点的。这种情况下主要看你用的机器能不能负担，lora其实在8B上的推荐也并不会比full finetune快很多，所以机器可以负担的话就看你的选择了。有的工作的核心共享是包括lora的，所以这种工作你没法删，但如果你用full fineture report你自己的工作和这种工作比，你觉得是公平还是不公平呢？
+我自己使用的配置一般是，全部full finetune或者全部lora，统一backbone到某个模型比如qwen3.5 8B，直接用baseline默认参数，但我自己的调参去比较
+在experimental setting那里写清楚，get source code from their official implementation, using backbone Qwen3.5 8B, with their optimal (default) hyparameters, (under lora). 就可以了
+一般没有reviewer会质疑
+因为不少工作都是这么做的，这其实是一个默认的公平做法了
+但也有追求更公平的，比如说都给调到最优去比
+但我个人认为一般不需要非得这么做，毕竟给他们调参也太费时间了
+这个也是我说工程化思维和研究思维不同的一点，因为你去做工程，你比较一个其他厂商的东西，只report别人default的参数，然后有了些许提升，大家真用你这个产品肯定不买账，你看多少被吐槽过的打榜performance了。但学界和业界这点就很不同，大家都心照不宣的把这种看似公平实际上不公平的比较作为约定俗成
+确实偶尔会有reviewer挑刺，问这个问题，但这种一般就是为了拒你来的，你即使给baseline finetune了去比，他也会找其它离谱的理由，比如说lack of novelty拒绝你
+
+这块需要按照学长的最优思路去执行
+```
+
+## Reuse Notes
+
+- EXTRACTED: This is a selected Codex prompt or automation prompt from the local Codex corpus.
+- INFERRED: Future agents can reuse its structure, constraints, and acceptance criteria when creating similar Codex workflows.
+
+## Related
+
+- [[codex-prompt-corpus]]
+- [[codex-prompt-taxonomy]]

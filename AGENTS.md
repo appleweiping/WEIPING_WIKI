@@ -52,6 +52,16 @@ If a required tool or dependency is genuinely missing, download or install the n
 - Do not download broad toolchains speculatively; only fetch what the current task actually needs.
 - Keep downloaded build artifacts out of Git unless they are deliberate source files.
 
+## Codex Prompt Corpus And Automation Memory
+
+When ingesting local Codex prompts, treat user-authored prompts and automation prompts as a durable `codex-prompts-public` corpus, but preserve only clean, substantive, reusable prompts.
+
+- Exclude short prompts, duplicate prompts, garbled/mojibake text, code/log/traceback/server dumps, pasted source files, secret-like material, and private/sensitive material.
+- Public prompt pages may include full selected prompt text only after filtering and safety checks.
+- Use stable IDs such as `codex-user-prompt:<hash>` and `codex-automation-prompt:<automation_id>`, plus `dedupe_key` and `semantic_hash`.
+- Automation models should remain `gpt-5.5` unless the user explicitly changes them.
+- Local crawl/update automations should not be scheduled very early in the morning; prefer noon or afternoon because the user's computer may not be on early.
+
 ## Repository Structure
 
 - `raw/`

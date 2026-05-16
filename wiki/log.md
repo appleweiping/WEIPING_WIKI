@@ -217,3 +217,153 @@ tags:
   - Recorded the GitHub archive migration that separates the complete Team 28 project snapshot from Vipin's `user-interface-module`.
   - Preserved the public-safety boundary: omit credentials, virtual environments, caches, personal deployment config, and generated Doxygen HTML.
   - Recorded post-migration UI validation: `28` tests passed.
+
+## [2026-05-16 19:51] ingest | weekly research inspiration digest
+
+- Pages created or updated:
+  - [[weekly-research-digests]]
+  - [[weekly-research-digest-2026-w20]]
+  - [[index]]
+- Sources used:
+  - arXiv API
+  - Semantic Scholar API
+  - GitHub repository search API
+- Notes:
+  - Captured one high-signal item each for AI, LLM, LLM4Rec, AI4EDA analog circuit design, and AI4S protein/biology.
+  - Stored abstracts/source summaries, links, plain-language core ideas, signal scores, and agent reuse notes.
+
+## [2026-05-16 19:52] ingest | codex prompt corpus
+
+- Pages created or updated:
+  - [[codex-prompt-corpus]]
+  - [[codex-prompt-taxonomy]]
+  - [[index]]
+- Sources used:
+  - Local Codex session JSONL files
+  - Local Codex automation TOML files
+- Notes:
+  - Selected `492` high-quality user/automation prompts and rejected `1285` noisy or unsafe candidates.
+  - Preserved full selected prompt text only after filtering out short, garbled, code/log-like, duplicate, and secret-like material.
+
+## [2026-05-16 19:53] ingest | weekly research inspiration digest
+
+- Pages created or updated:
+  - [[weekly-research-digests]]
+  - [[weekly-research-digest-2026-w20]]
+  - [[index]]
+- Sources used:
+  - arXiv API
+  - Semantic Scholar API
+  - GitHub repository search API
+- Notes:
+  - Captured one high-signal item each for AI, LLM, LLM4Rec, AI4EDA analog circuit design, and AI4S protein/biology.
+  - Stored abstracts/source summaries, links, plain-language core ideas, signal scores, and agent reuse notes.
+
+## [2026-05-16 19:55] ingest | weekly research inspiration digest
+
+- Pages created or updated:
+  - [[weekly-research-digests]]
+  - [[weekly-research-digest-2026-w20]]
+  - [[index]]
+- Sources used:
+  - arXiv API
+  - Semantic Scholar API
+  - GitHub repository search API
+- Notes:
+  - Captured one high-signal item each for AI, LLM, LLM4Rec, AI4EDA analog circuit design, and AI4S protein/biology.
+  - Stored abstracts/source summaries, links, plain-language core ideas, signal scores, and agent reuse notes.
+
+## [2026-05-16 19:57] ingest | weekly research inspiration digest
+
+- Pages created or updated:
+  - [[weekly-research-digests]]
+  - [[weekly-research-digest-2026-w20]]
+  - [[index]]
+- Sources used:
+  - arXiv API
+  - Semantic Scholar API
+  - GitHub repository search API
+- Notes:
+  - Captured one high-signal item each for AI, LLM, LLM4Rec, AI4EDA analog circuit design, and AI4S protein/biology.
+  - Stored abstracts/source summaries, links, plain-language core ideas, signal scores, and agent reuse notes.
+
+## [2026-05-16 20:00] ingest | weekly research inspiration digest
+
+- Pages created or updated:
+  - [[weekly-research-digests]]
+  - [[weekly-research-digest-2026-w20]]
+  - [[index]]
+- Sources used:
+  - arXiv API
+  - Semantic Scholar API
+  - GitHub repository search API
+- Notes:
+  - Captured one high-signal item each for AI, LLM, LLM4Rec, AI4EDA analog circuit design, and AI4S protein/biology.
+  - Stored abstracts/source summaries, links, plain-language core ideas, signal scores, and agent reuse notes.
+
+## [2026-05-16 20:03] ingest | codex prompt corpus
+
+- Pages created or updated:
+  - [[codex-prompt-corpus]]
+  - [[codex-prompt-taxonomy]]
+  - [[index]]
+- Sources used:
+  - Local Codex session JSONL files
+  - Local Codex automation TOML files
+- Notes:
+  - Selected `362` high-quality user/automation prompts and rejected `1415` noisy or unsafe candidates.
+  - Preserved full selected prompt text only after filtering out short, garbled, code/log-like, duplicate, and secret-like material.
+
+## [2026-05-16 20:07] ingest | codex prompt corpus
+
+- Pages created or updated:
+  - [[codex-prompt-corpus]]
+  - [[codex-prompt-taxonomy]]
+  - [[index]]
+- Sources used:
+  - Local Codex session JSONL files
+  - Local Codex automation TOML files
+- Notes:
+  - Selected `357` high-quality user/automation prompts and rejected `1420` noisy or unsafe candidates.
+  - Preserved full selected prompt text only after filtering out short, garbled, code/log-like, duplicate, and secret-like material.
+
+## [2026-05-16 20:11] ingest | weekly research inspiration digest
+
+- Pages created or updated:
+  - [[weekly-research-digests]]
+  - [[weekly-research-digest-2026-w20]]
+  - [[index]]
+- Sources used:
+  - arXiv API
+  - Semantic Scholar API
+  - GitHub repository search API
+- Notes:
+  - Captured one high-signal item each for AI, LLM, LLM4Rec, AI4EDA analog circuit design, and AI4S protein/biology.
+  - Stored abstracts/source summaries, links, plain-language core ideas, signal scores, and agent reuse notes.
+
+## [2026-05-16 20:14] ingest | weekly research inspiration digest
+
+- Pages created or updated:
+  - [[weekly-research-digests]]
+  - [[weekly-research-digest-2026-w20]]
+  - [[index]]
+- Sources used:
+  - arXiv API
+  - Semantic Scholar API
+  - GitHub repository search API
+- Notes:
+  - Captured one high-signal item each for AI, LLM, LLM4Rec, AI4EDA analog circuit design, and AI4S protein/biology.
+  - Stored abstracts/source summaries, links, plain-language core ideas, signal scores, and agent reuse notes.
+
+## [2026-05-16 20:16] ingest | codex prompt corpus
+
+- Pages created or updated:
+  - [[codex-prompt-corpus]]
+  - [[codex-prompt-taxonomy]]
+  - [[index]]
+- Sources used:
+  - Local Codex session JSONL files
+  - Local Codex automation TOML files
+- Notes:
+  - Selected `353` high-quality user/automation prompts and rejected `1424` noisy or unsafe candidates.
+  - Preserved full selected prompt text only after filtering out short, garbled, code/log-like, duplicate, and secret-like material.
