@@ -1,6 +1,6 @@
 {
     "schema":  "lidang-public-corpus-v2",
-    "generated_at":  "2026-05-16T01:26:07.6319561+02:00",
+    "generated_at":  "2026-05-16T12:50:29.1264484+02:00",
     "sources":  {
                     "youtube_feed":  "https://www.youtube.com/feeds/videos.xml?channel_id=UC4gzU_8MxRDiQrSFOiT79tQ",
                     "youtube_channel":  "https://www.youtube.com/@lidangzzz",
@@ -12,13 +12,13 @@
                                   ]
                 },
     "public_handling":  "Public wiki pages contain official URLs, source metadata, summaries, semantic hashes, confidence labels, mirror availability, and raw HTML provenance. Reachable X/profile HTML snapshots are cached under raw/lidang-public/html, while public wiki pages remain curated Markdown summaries.",
-    "mode":  "Digest",
+    "mode":  "Light",
     "entry_count":  16,
     "new_entries_this_run":  0,
-    "changed_entries_this_run":  0,
+    "changed_entries_this_run":  1,
     "removed_entries_this_run":  0,
     "backfill":  {
-                     "status":  "tool-unavailable",
+                     "status":  "not-run",
                      "tool":  "",
                      "items":  [
 
@@ -230,9 +230,9 @@
                                         ],
                         "title":  "立党直播014 房地产与高考咨询",
                         "published_at":  "2026-04-13T04:18:17+00:00",
-                        "captured_at":  "2026-05-16T00:57:40.1803639+02:00",
-                        "content_hash":  "db2b242ad1f93ef0ed50d14328bc0397593342b18b5fc9524da66e0c7b4f78a3",
-                        "semantic_hash":  "db2b242ad1f93ef0ed50d14328bc0397593342b18b5fc9524da66e0c7b4f78a3",
+                        "captured_at":  "2026-05-16T12:50:29.1264484+02:00",
+                        "content_hash":  "fcbea77313a5ca51ae55cfc1bd5b6c167db30c548c2a61ada68327b8c059d364",
+                        "semantic_hash":  "fcbea77313a5ca51ae55cfc1bd5b6c167db30c548c2a61ada68327b8c059d364",
                         "raw_html_path":  "",
                         "raw_html_hash":  "",
                         "source_confidence":  "official-rss",
