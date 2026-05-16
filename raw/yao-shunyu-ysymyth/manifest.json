@@ -1,0 +1,2266 @@
+{
+    "schema":  "shunyu-yao-public-corpus-v1",
+    "person_key":  "ysymyth",
+    "generated_at":  "2026-05-16T02:27:36.1620373+02:00",
+    "canonical_homepage":  "https://ysymyth.github.io/",
+    "github_login":  "ysymyth",
+    "public_handling":  "Public wiki pages contain metadata, summaries, links, hashes, and license notes. Unclear-license full PDFs, webpages, and source code are not mirrored wholesale.",
+    "identity_guard":  "Do not confuse with yao-shunyu-alfred, the physics-to-AI researcher at alfredyao.github.io.",
+    "entry_count":  56,
+    "new_entries_this_run":  0,
+    "changed_entries_this_run":  0,
+    "removed_entries_this_run":  0,
+    "errors":  [
+                   "GitHub user failed for ysymyth: 远程服务器返回错误: (403) 已禁止。",
+                   "GitHub repos failed for ysymyth: 远程服务器返回错误: (403) 已禁止。"
+               ],
+    "entries":  [
+                    {
+                        "id":  "post:index:ysymyth",
+                        "person_key":  "ysymyth",
+                        "source_kind":  "blog-index",
+                        "canonical_url":  "https://ysymyth.github.io/blog/",
+                        "title":  "Yao Shunyu / Shunyu Yao / ysymyth blog",
+                        "authors_or_owners":  [
+
+                                              ],
+                        "venue_or_context":  "",
+                        "published_or_updated":  "",
+                        "repo_path":  "",
+                        "license":  "NOASSERTION",
+                        "content_hash":  "35af5614edb2700ccf81a07b8efc657b532a1af449c87ccd20e0f14ce3be7900",
+                        "semantic_hash":  "35af5614edb2700ccf81a07b8efc657b532a1af449c87ccd20e0f14ce3be7900",
+                        "first_seen":  "2026-05-16",
+                        "last_seen":  "2026-05-16",
+                        "last_changed":  "2026-05-16",
+                        "category":  "Public essays / research philosophy",
+                        "tags":  [
+                                     "shunyu-yao",
+                                     "ysymyth",
+                                     "public-writing"
+                                 ],
+                        "summary":  "Shunyu Yao – 姚顺雨 -- Shunyu Yao -- 姚顺雨 About Blog Papers -- The Second Half tldr: We’re at AI’s halftime. Read More Ungrounded Meaning Thoughts on paper Provable Limitations of Acquiring Meaning from Ungrounded Form: What will Future Language Models Understand? and beyond. Read More Law 一直想写的一个主题拖了很久：法律。 Read More Back 今天一系列特定的环境刺激，变得很怀旧，把这个地方重新捡起来了。 Read More",
+                        "what_it_teaches":  "A public item in the Shunyu Yao corpora that should be interpreted with source provenance and identity separation.",
+                        "wiki_page":  "wiki/sources/shunyu-yao/ysymyth/post-yao-shunyu-shunyu-yao-ysymyth-blog-757bb4a238.md",
+                        "public_handling":  "public-metadata-summary-hash-link-only",
+                        "source_confidence":  "public-source",
+                        "crawl_errors":  [
+
+                                         ],
+                        "extra":  {
+                                      "blog":  "https://ysymyth.github.io/blog/"
+                                  }
+                    },
+                    {
+                        "id":  "homepage:ysymyth",
+                        "person_key":  "ysymyth",
+                        "source_kind":  "canonical-homepage",
+                        "canonical_url":  "https://ysymyth.github.io/",
+                        "title":  "Yao Shunyu / Shunyu Yao / ysymyth",
+                        "authors_or_owners":  [
+
+                                              ],
+                        "venue_or_context":  "",
+                        "published_or_updated":  "",
+                        "repo_path":  "",
+                        "license":  "NOASSERTION",
+                        "content_hash":  "d0a5736c346816be41add4bff36cf030b7cd433b6a2caf9421b5eb277bd795bb",
+                        "semantic_hash":  "d0a5736c346816be41add4bff36cf030b7cd433b6a2caf9421b5eb277bd795bb",
+                        "first_seen":  "2026-05-16",
+                        "last_seen":  "2026-05-16",
+                        "last_changed":  "2026-05-16",
+                        "category":  "Language agents / agent architectures",
+                        "tags":  [
+                                     "shunyu-yao",
+                                     "ysymyth",
+                                     "language-agents"
+                                 ],
+                        "summary":  "About – Shunyu Yao – 姚顺雨 -- Shunyu Yao -- 姚顺雨 About Blog Papers -- About I am a researcher at OpenAI. I study agents. Selected work Computer-Using Agent (CUA) OpenAI A universal agent/interface to interact with the digital world. product blogpost system card bibtex Deep Research OpenAI An agent that navigates and reasons over the Internet to research for you. product blogpost τ-bench: A Benchmark for Tool-Agent-User Interaction in Real-World Domains Shunyu Yao, Noah Shinn, Pedram Razavi, Karthik Narasimhan ICLR 202...",
+                        "what_it_teaches":  "How language models become agents through reasoning, acting, memory, tools, and interface design.",
+                        "wiki_page":  "wiki/sources/shunyu-yao/ysymyth/source-yao-shunyu-shunyu-yao-ysymyth-4d31275fc5.md",
+                        "public_handling":  "public-metadata-summary-hash-link-only",
+                        "source_confidence":  "public-source",
+                        "crawl_errors":  [
+
+                                         ],
+                        "extra":  {
+                                      "homepage":  "https://ysymyth.github.io/"
+                                  }
+                    },
+                    {
+                        "id":  "github:ysymyth/3D-SDN",
+                        "person_key":  "ysymyth",
+                        "source_kind":  "github-repository",
+                        "canonical_url":  "https://github.com/ysymyth/3D-SDN",
+                        "title":  "ysymyth/3D-SDN",
+                        "authors_or_owners":  [
+                                                  "ysymyth"
+                                              ],
+                        "venue_or_context":  "",
+                        "published_or_updated":  "",
+                        "repo_path":  "ysymyth/3D-SDN",
+                        "license":  "NOASSERTION",
+                        "content_hash":  "6ca9a1f4eb11b4e59b31e1548e0f17e503512f136d1469340532d67baf7cf0fd",
+                        "semantic_hash":  "6ca9a1f4eb11b4e59b31e1548e0f17e503512f136d1469340532d67baf7cf0fd",
+                        "first_seen":  "2026-05-16",
+                        "last_seen":  "2026-05-16",
+                        "last_changed":  "2026-05-16",
+                        "category":  "Language agents / agent architectures",
+                        "tags":  [
+                                     "shunyu-yao",
+                                     "ysymyth"
+                                 ],
+                        "summary":  "GitHub repository discovered for ysymyth/3D-SDN. README/full source is not mirrored publicly unless license-safe.",
+                        "what_it_teaches":  "How language models become agents through reasoning, acting, memory, tools, and interface design.",
+                        "wiki_page":  "wiki/sources/shunyu-yao/ysymyth/github-ysymyth-3d-sdn-eb281d5742.md",
+                        "public_handling":  "public-metadata-summary-hash-link-only",
+                        "source_confidence":  "github-html-fallback",
+                        "crawl_errors":  [
+
+                                         ],
+                        "extra":  {
+                                      "stars":  null,
+                                      "forks":  null,
+                                      "language":  "",
+                                      "topics":  [
+
+                                                 ],
+                                      "default_branch":  "",
+                                      "homepage":  ""
+                                  }
+                    },
+                    {
+                        "id":  "github:ysymyth/awesome-language-agents",
+                        "person_key":  "ysymyth",
+                        "source_kind":  "github-repository",
+                        "canonical_url":  "https://github.com/ysymyth/awesome-language-agents",
+                        "title":  "ysymyth/awesome-language-agents",
+                        "authors_or_owners":  [
+                                                  "ysymyth"
+                                              ],
+                        "venue_or_context":  "",
+                        "published_or_updated":  "",
+                        "repo_path":  "ysymyth/awesome-language-agents",
+                        "license":  "NOASSERTION",
+                        "content_hash":  "072d90b4362a1f1a791e259e39e231a0fd47b07d860ddcae02380662f99dce9e",
+                        "semantic_hash":  "072d90b4362a1f1a791e259e39e231a0fd47b07d860ddcae02380662f99dce9e",
+                        "first_seen":  "2026-05-16",
+                        "last_seen":  "2026-05-16",
+                        "last_changed":  "2026-05-16",
+                        "category":  "Language agents / agent architectures",
+                        "tags":  [
+                                     "shunyu-yao",
+                                     "ysymyth",
+                                     "language-agents"
+                                 ],
+                        "summary":  "GitHub repository discovered for ysymyth/awesome-language-agents. README/full source is not mirrored publicly unless license-safe.",
+                        "what_it_teaches":  "How language models become agents through reasoning, acting, memory, tools, and interface design.",
+                        "wiki_page":  "wiki/sources/shunyu-yao/ysymyth/github-ysymyth-awesome-language-agents-1268d38a31.md",
+                        "public_handling":  "public-metadata-summary-hash-link-only",
+                        "source_confidence":  "github-html-fallback",
+                        "crawl_errors":  [
+
+                                         ],
+                        "extra":  {
+                                      "stars":  null,
+                                      "forks":  null,
+                                      "language":  "",
+                                      "topics":  [
+
+                                                 ],
+                                      "default_branch":  "",
+                                      "homepage":  ""
+                                  }
+                    },
+                    {
+                        "id":  "github:ysymyth/ec-nl",
+                        "person_key":  "ysymyth",
+                        "source_kind":  "github-repository",
+                        "canonical_url":  "https://github.com/ysymyth/ec-nl",
+                        "title":  "ysymyth/ec-nl",
+                        "authors_or_owners":  [
+                                                  "ysymyth"
+                                              ],
+                        "venue_or_context":  "",
+                        "published_or_updated":  "",
+                        "repo_path":  "ysymyth/ec-nl",
+                        "license":  "NOASSERTION",
+                        "content_hash":  "8ce1d92c2c9530e05dfb7d617d4b760a1253bc15f6df0381437c615b17aa2a96",
+                        "semantic_hash":  "8ce1d92c2c9530e05dfb7d617d4b760a1253bc15f6df0381437c615b17aa2a96",
+                        "first_seen":  "2026-05-16",
+                        "last_seen":  "2026-05-16",
+                        "last_changed":  "2026-05-16",
+                        "category":  "Language agents / agent architectures",
+                        "tags":  [
+                                     "shunyu-yao",
+                                     "ysymyth"
+                                 ],
+                        "summary":  "GitHub repository discovered for ysymyth/ec-nl. README/full source is not mirrored publicly unless license-safe.",
+                        "what_it_teaches":  "How language models become agents through reasoning, acting, memory, tools, and interface design.",
+                        "wiki_page":  "wiki/sources/shunyu-yao/ysymyth/github-ysymyth-ec-nl-12607dc41f.md",
+                        "public_handling":  "public-metadata-summary-hash-link-only",
+                        "source_confidence":  "github-html-fallback",
+                        "crawl_errors":  [
+
+                                         ],
+                        "extra":  {
+                                      "stars":  null,
+                                      "forks":  null,
+                                      "language":  "",
+                                      "topics":  [
+
+                                                 ],
+                                      "default_branch":  "",
+                                      "homepage":  ""
+                                  }
+                    },
+                    {
+                        "id":  "github:ysymyth/ReAct",
+                        "person_key":  "ysymyth",
+                        "source_kind":  "github-repository",
+                        "canonical_url":  "https://github.com/ysymyth/ReAct",
+                        "title":  "ysymyth/ReAct",
+                        "authors_or_owners":  [
+                                                  "ysymyth"
+                                              ],
+                        "venue_or_context":  "",
+                        "published_or_updated":  "",
+                        "repo_path":  "ysymyth/ReAct",
+                        "license":  "NOASSERTION",
+                        "content_hash":  "e5ead78f16adab78ff2252d132e2fa1878be90af4716e7bd5d29cd8b528a9029",
+                        "semantic_hash":  "e5ead78f16adab78ff2252d132e2fa1878be90af4716e7bd5d29cd8b528a9029",
+                        "first_seen":  "2026-05-16",
+                        "last_seen":  "2026-05-16",
+                        "last_changed":  "2026-05-16",
+                        "category":  "Language agents / agent architectures",
+                        "tags":  [
+                                     "shunyu-yao",
+                                     "ysymyth",
+                                     "language-agents"
+                                 ],
+                        "summary":  "GitHub repository discovered for ysymyth/ReAct. README/full source is not mirrored publicly unless license-safe.",
+                        "what_it_teaches":  "How language models become agents through reasoning, acting, memory, tools, and interface design.",
+                        "wiki_page":  "wiki/sources/shunyu-yao/ysymyth/github-ysymyth-react-f1ef53ae0d.md",
+                        "public_handling":  "public-metadata-summary-hash-link-only",
+                        "source_confidence":  "github-html-fallback",
+                        "crawl_errors":  [
+
+                                         ],
+                        "extra":  {
+                                      "stars":  null,
+                                      "forks":  null,
+                                      "language":  "",
+                                      "topics":  [
+
+                                                 ],
+                                      "default_branch":  "",
+                                      "homepage":  ""
+                                  }
+                    },
+                    {
+                        "id":  "github:ysymyth/ysymyth.github.io",
+                        "person_key":  "ysymyth",
+                        "source_kind":  "github-repository",
+                        "canonical_url":  "https://github.com/ysymyth/ysymyth.github.io",
+                        "title":  "ysymyth/ysymyth.github.io",
+                        "authors_or_owners":  [
+                                                  "ysymyth"
+                                              ],
+                        "venue_or_context":  "",
+                        "published_or_updated":  "",
+                        "repo_path":  "ysymyth/ysymyth.github.io",
+                        "license":  "NOASSERTION",
+                        "content_hash":  "92fdf80de7a0a999b14bd363ce81093e4b5952b2888e0383071a7e79e7991568",
+                        "semantic_hash":  "92fdf80de7a0a999b14bd363ce81093e4b5952b2888e0383071a7e79e7991568",
+                        "first_seen":  "2026-05-16",
+                        "last_seen":  "2026-05-16",
+                        "last_changed":  "2026-05-16",
+                        "category":  "Language agents / agent architectures",
+                        "tags":  [
+                                     "shunyu-yao",
+                                     "ysymyth"
+                                 ],
+                        "summary":  "GitHub repository discovered for ysymyth/ysymyth.github.io. README/full source is not mirrored publicly unless license-safe.",
+                        "what_it_teaches":  "How language models become agents through reasoning, acting, memory, tools, and interface design.",
+                        "wiki_page":  "wiki/sources/shunyu-yao/ysymyth/github-ysymyth-ysymyth-github-io-9b92feb5ff.md",
+                        "public_handling":  "public-metadata-summary-hash-link-only",
+                        "source_confidence":  "github-html-fallback",
+                        "crawl_errors":  [
+
+                                         ],
+                        "extra":  {
+                                      "stars":  null,
+                                      "forks":  null,
+                                      "language":  "",
+                                      "topics":  [
+
+                                                 ],
+                                      "default_branch":  "",
+                                      "homepage":  ""
+                                  }
+                    },
+                    {
+                        "id":  "github:noahshinn024/reflexion",
+                        "person_key":  "ysymyth",
+                        "source_kind":  "linked-github-repository",
+                        "canonical_url":  "https://github.com/noahshinn024/reflexion",
+                        "title":  "noahshinn024/reflexion",
+                        "authors_or_owners":  [
+
+                                              ],
+                        "venue_or_context":  "",
+                        "published_or_updated":  "",
+                        "repo_path":  "",
+                        "license":  "NOASSERTION",
+                        "content_hash":  "85f3c7676b9e19e56dbe1e843d710514858c4b188290371f27d86867451b0798",
+                        "semantic_hash":  "85f3c7676b9e19e56dbe1e843d710514858c4b188290371f27d86867451b0798",
+                        "first_seen":  "2026-05-16",
+                        "last_seen":  "2026-05-16",
+                        "last_changed":  "2026-05-16",
+                        "category":  "Language agents / agent architectures",
+                        "tags":  [
+                                     "shunyu-yao",
+                                     "ysymyth"
+                                 ],
+                        "summary":  "Repository linked from the canonical homepage: repo.",
+                        "what_it_teaches":  "How language models become agents through reasoning, acting, memory, tools, and interface design.",
+                        "wiki_page":  "wiki/sources/shunyu-yao/ysymyth/github-noahshinn024-reflexion-b717fc386c.md",
+                        "public_handling":  "public-metadata-summary-hash-link-only",
+                        "source_confidence":  "public-source",
+                        "crawl_errors":  [
+
+                                         ],
+                        "extra":  {
+                                      "homepage_label":  "repo"
+                                  }
+                    },
+                    {
+                        "id":  "github:ysymyth/tree-of-thought-llm",
+                        "person_key":  "ysymyth",
+                        "source_kind":  "linked-github-repository",
+                        "canonical_url":  "https://github.com/ysymyth/tree-of-thought-llm",
+                        "title":  "ysymyth/tree-of-thought-llm",
+                        "authors_or_owners":  [
+
+                                              ],
+                        "venue_or_context":  "",
+                        "published_or_updated":  "",
+                        "repo_path":  "",
+                        "license":  "NOASSERTION",
+                        "content_hash":  "c5df9fba05dc9337ea9193772cda5d7ae760ea843e08a185a312187d8ea257f8",
+                        "semantic_hash":  "c5df9fba05dc9337ea9193772cda5d7ae760ea843e08a185a312187d8ea257f8",
+                        "first_seen":  "2026-05-16",
+                        "last_seen":  "2026-05-16",
+                        "last_changed":  "2026-05-16",
+                        "category":  "Public essays / research philosophy",
+                        "tags":  [
+                                     "shunyu-yao",
+                                     "ysymyth",
+                                     "public-writing"
+                                 ],
+                        "summary":  "Repository linked from the canonical homepage: repo.",
+                        "what_it_teaches":  "A public item in the Shunyu Yao corpora that should be interpreted with source provenance and identity separation.",
+                        "wiki_page":  "wiki/sources/shunyu-yao/ysymyth/github-ysymyth-tree-of-thought-llm-67f5684418.md",
+                        "public_handling":  "public-metadata-summary-hash-link-only",
+                        "source_confidence":  "public-source",
+                        "crawl_errors":  [
+
+                                         ],
+                        "extra":  {
+                                      "homepage_label":  "repo"
+                                  }
+                    },
+                    {
+                        "id":  "github:princeton-nlp/SWE-agent",
+                        "person_key":  "ysymyth",
+                        "source_kind":  "linked-github-repository",
+                        "canonical_url":  "https://github.com/princeton-nlp/SWE-agent",
+                        "title":  "princeton-nlp/SWE-agent",
+                        "authors_or_owners":  [
+
+                                              ],
+                        "venue_or_context":  "",
+                        "published_or_updated":  "",
+                        "repo_path":  "",
+                        "license":  "NOASSERTION",
+                        "content_hash":  "d9cfd8b7c24b5e42d199352afd1f9dc8afd57775bfe1bbbee018d7cc617605b1",
+                        "semantic_hash":  "d9cfd8b7c24b5e42d199352afd1f9dc8afd57775bfe1bbbee018d7cc617605b1",
+                        "first_seen":  "2026-05-16",
+                        "last_seen":  "2026-05-16",
+                        "last_changed":  "2026-05-16",
+                        "category":  "Software engineering agents and benchmarks",
+                        "tags":  [
+                                     "shunyu-yao",
+                                     "ysymyth",
+                                     "software-agents"
+                                 ],
+                        "summary":  "Repository linked from the canonical homepage: repo.",
+                        "what_it_teaches":  "How coding agents are benchmarked, scaffolded, and constrained against real repositories and issues.",
+                        "wiki_page":  "wiki/sources/shunyu-yao/ysymyth/github-princeton-nlp-swe-agent-08491f534b.md",
+                        "public_handling":  "public-metadata-summary-hash-link-only",
+                        "source_confidence":  "public-source",
+                        "crawl_errors":  [
+
+                                         ],
+                        "extra":  {
+                                      "homepage_label":  "repo"
+                                  }
+                    },
+                    {
+                        "id":  "github:princeton-nlp/SWE-bench",
+                        "person_key":  "ysymyth",
+                        "source_kind":  "linked-github-repository",
+                        "canonical_url":  "https://github.com/princeton-nlp/SWE-bench",
+                        "title":  "princeton-nlp/SWE-bench",
+                        "authors_or_owners":  [
+
+                                              ],
+                        "venue_or_context":  "",
+                        "published_or_updated":  "",
+                        "repo_path":  "",
+                        "license":  "NOASSERTION",
+                        "content_hash":  "1822e43d055f8afd22f5d219337ad7d41a1ee793bac0b6a52956c5127eaa3dfd",
+                        "semantic_hash":  "1822e43d055f8afd22f5d219337ad7d41a1ee793bac0b6a52956c5127eaa3dfd",
+                        "first_seen":  "2026-05-16",
+                        "last_seen":  "2026-05-16",
+                        "last_changed":  "2026-05-16",
+                        "category":  "Software engineering agents and benchmarks",
+                        "tags":  [
+                                     "shunyu-yao",
+                                     "ysymyth",
+                                     "software-agents"
+                                 ],
+                        "summary":  "Repository linked from the canonical homepage: repo.",
+                        "what_it_teaches":  "How coding agents are benchmarked, scaffolded, and constrained against real repositories and issues.",
+                        "wiki_page":  "wiki/sources/shunyu-yao/ysymyth/github-princeton-nlp-swe-bench-1946256bee.md",
+                        "public_handling":  "public-metadata-summary-hash-link-only",
+                        "source_confidence":  "public-source",
+                        "crawl_errors":  [
+
+                                         ],
+                        "extra":  {
+                                      "homepage_label":  "repo"
+                                  }
+                    },
+                    {
+                        "id":  "github:princeton-nlp/intercode",
+                        "person_key":  "ysymyth",
+                        "source_kind":  "linked-github-repository",
+                        "canonical_url":  "https://github.com/princeton-nlp/intercode",
+                        "title":  "princeton-nlp/intercode",
+                        "authors_or_owners":  [
+
+                                              ],
+                        "venue_or_context":  "",
+                        "published_or_updated":  "",
+                        "repo_path":  "",
+                        "license":  "NOASSERTION",
+                        "content_hash":  "2619ec7a8b2ea89cdcdad29122079462d10b2d8cdcc0485f7ace1c3787517e8b",
+                        "semantic_hash":  "2619ec7a8b2ea89cdcdad29122079462d10b2d8cdcc0485f7ace1c3787517e8b",
+                        "first_seen":  "2026-05-16",
+                        "last_seen":  "2026-05-16",
+                        "last_changed":  "2026-05-16",
+                        "category":  "Tool use / computer use / digital automation",
+                        "tags":  [
+                                     "shunyu-yao",
+                                     "ysymyth",
+                                     "tool-use"
+                                 ],
+                        "summary":  "Repository linked from the canonical homepage: repo.",
+                        "what_it_teaches":  "How to evaluate and build agents that interact with real software, web environments, and user-facing tasks.",
+                        "wiki_page":  "wiki/sources/shunyu-yao/ysymyth/github-princeton-nlp-intercode-b37c13ebf8.md",
+                        "public_handling":  "public-metadata-summary-hash-link-only",
+                        "source_confidence":  "public-source",
+                        "crawl_errors":  [
+
+                                         ],
+                        "extra":  {
+                                      "homepage_label":  "repo"
+                                  }
+                    },
+                    {
+                        "id":  "github:princeton-nlp/WebShop",
+                        "person_key":  "ysymyth",
+                        "source_kind":  "linked-github-repository",
+                        "canonical_url":  "https://github.com/princeton-nlp/WebShop",
+                        "title":  "princeton-nlp/WebShop",
+                        "authors_or_owners":  [
+
+                                              ],
+                        "venue_or_context":  "",
+                        "published_or_updated":  "",
+                        "repo_path":  "",
+                        "license":  "NOASSERTION",
+                        "content_hash":  "dbe8c54da0fc4b7de37af4a4d92205a3634c7125ccdc587feac889b555b7bdcf",
+                        "semantic_hash":  "dbe8c54da0fc4b7de37af4a4d92205a3634c7125ccdc587feac889b555b7bdcf",
+                        "first_seen":  "2026-05-16",
+                        "last_seen":  "2026-05-16",
+                        "last_changed":  "2026-05-16",
+                        "category":  "Tool use / computer use / digital automation",
+                        "tags":  [
+                                     "shunyu-yao",
+                                     "ysymyth",
+                                     "tool-use"
+                                 ],
+                        "summary":  "Repository linked from the canonical homepage: repo.",
+                        "what_it_teaches":  "How to evaluate and build agents that interact with real software, web environments, and user-facing tasks.",
+                        "wiki_page":  "wiki/sources/shunyu-yao/ysymyth/github-princeton-nlp-webshop-b9f46104e3.md",
+                        "public_handling":  "public-metadata-summary-hash-link-only",
+                        "source_confidence":  "public-source",
+                        "crawl_errors":  [
+
+                                         ],
+                        "extra":  {
+                                      "homepage_label":  "repo"
+                                  }
+                    },
+                    {
+                        "id":  "github:sierra-research/tau-bench",
+                        "person_key":  "ysymyth",
+                        "source_kind":  "linked-github-repository",
+                        "canonical_url":  "https://github.com/sierra-research/tau-bench",
+                        "title":  "sierra-research/tau-bench",
+                        "authors_or_owners":  [
+
+                                              ],
+                        "venue_or_context":  "",
+                        "published_or_updated":  "",
+                        "repo_path":  "",
+                        "license":  "NOASSERTION",
+                        "content_hash":  "10adf6c7bc86f5ef9e02bd3afd3f3a8beadd3381e1367ea2fc91506eee3416fd",
+                        "semantic_hash":  "10adf6c7bc86f5ef9e02bd3afd3f3a8beadd3381e1367ea2fc91506eee3416fd",
+                        "first_seen":  "2026-05-16",
+                        "last_seen":  "2026-05-16",
+                        "last_changed":  "2026-05-16",
+                        "category":  "Tool use / computer use / digital automation",
+                        "tags":  [
+                                     "shunyu-yao",
+                                     "ysymyth",
+                                     "tool-use"
+                                 ],
+                        "summary":  "Repository linked from the canonical homepage: repo.",
+                        "what_it_teaches":  "How to evaluate and build agents that interact with real software, web environments, and user-facing tasks.",
+                        "wiki_page":  "wiki/sources/shunyu-yao/ysymyth/github-sierra-research-tau-bench-4ddfbb35b4.md",
+                        "public_handling":  "public-metadata-summary-hash-link-only",
+                        "source_confidence":  "public-source",
+                        "crawl_errors":  [
+
+                                         ],
+                        "extra":  {
+                                      "homepage_label":  "repo"
+                                  }
+                    },
+                    {
+                        "id":  "paper:arxiv:2404.10952",
+                        "person_key":  "ysymyth",
+                        "source_kind":  "paper",
+                        "canonical_url":  "https://arxiv.org/abs/2404.10952",
+                        "title":  "Can Language Models Solve Olympiad Programming?",
+                        "authors_or_owners":  [
+                                                  "Quan Shi",
+                                                  "Michael Tang",
+                                                  "Karthik Narasimhan",
+                                                  "Shunyu Yao"
+                                              ],
+                        "venue_or_context":  "",
+                        "published_or_updated":  "2024-04-16T23:27:38Z",
+                        "repo_path":  "",
+                        "license":  "NOASSERTION",
+                        "content_hash":  "67724628408eb6129455346e5b425458902bc641637e59535521b2813c3d5e69",
+                        "semantic_hash":  "67724628408eb6129455346e5b425458902bc641637e59535521b2813c3d5e69",
+                        "first_seen":  "2026-05-16",
+                        "last_seen":  "2026-05-16",
+                        "last_changed":  "2026-05-16",
+                        "category":  "Evaluation / benchmark design",
+                        "tags":  [
+                                     "shunyu-yao",
+                                     "ysymyth",
+                                     "evaluation"
+                                 ],
+                        "summary":  "Computing olympiads contain some of the most challenging problems for humans, requiring complex algorithmic reasoning, puzzle solving, in addition to generating efficient code. However, it has been understudied as a domain to evaluate language models (LMs). In this paper, we introduce the USACO benchmark with 307 problems from the USA Computing Olympiad, along with high-quality unit tests, reference code, and official analyses for each problem. These resources enable us to construct and test a range of LM inference...",
+                        "what_it_teaches":  "How to turn agent behavior into measurable tasks, success criteria, and repeatable benchmark environments.",
+                        "wiki_page":  "wiki/sources/shunyu-yao/ysymyth/paper-can-language-models-solve-olympiad-programming-e41e722ab8.md",
+                        "public_handling":  "public-metadata-summary-hash-link-only",
+                        "source_confidence":  "arxiv-api-keyword-disambiguated",
+                        "crawl_errors":  [
+
+                                         ],
+                        "extra":  {
+                                      "arxiv":  "2404.10952",
+                                      "updated":  "2024-04-16T23:27:38Z"
+                                  }
+                    },
+                    {
+                        "id":  "paper:arxiv:2604.27043",
+                        "person_key":  "ysymyth",
+                        "source_kind":  "paper",
+                        "canonical_url":  "https://arxiv.org/abs/2604.27043",
+                        "title":  "CL-bench Life: Can Language Models Learn from Real-Life Context?",
+                        "authors_or_owners":  [
+                                                  "Shihan Dou",
+                                                  "Yujiong Shen",
+                                                  "Chenhao Huang",
+                                                  "Junjie Ye",
+                                                  "Jiayi Chen",
+                                                  "Junzhe Wang",
+                                                  "Qianyu He",
+                                                  "Shichun Liu",
+                                                  "Changze Lv",
+                                                  "Jiahang Lin",
+                                                  "Jiazheng Zhang",
+                                                  "Ming Zhang",
+                                                  "Shaofan Liu",
+                                                  "Tao Ji",
+                                                  "Zhangyue Yin",
+                                                  "Cheng Zhang",
+                                                  "Huaibing Xie",
+                                                  "Jianglu Hu",
+                                                  "Jingcheng Deng",
+                                                  "Lincheng Li",
+                                                  "Minda Hu",
+                                                  "Shaolei Wang",
+                                                  "Syrus Zhao",
+                                                  "Weichao Wang",
+                                                  "Yan Lei",
+                                                  "Yang Liu",
+                                                  "Yanling Xiao",
+                                                  "Yiting Liu",
+                                                  "Zenan Xu",
+                                                  "Zhen Guo",
+                                                  "Ziliang Zhao",
+                                                  "Pluto Zhou",
+                                                  "Tao Gui",
+                                                  "Qi Zhang",
+                                                  "Xuanjing Huang",
+                                                  "Yu-Gang Jiang",
+                                                  "Di Wang",
+                                                  "Shunyu Yao"
+                                              ],
+                        "venue_or_context":  "",
+                        "published_or_updated":  "2026-04-29T17:44:32Z",
+                        "repo_path":  "",
+                        "license":  "NOASSERTION",
+                        "content_hash":  "11e45f71017bef9479ee94f219c6f748e58425523a04ad2c37dc925a2a14d6cd",
+                        "semantic_hash":  "11e45f71017bef9479ee94f219c6f748e58425523a04ad2c37dc925a2a14d6cd",
+                        "first_seen":  "2026-05-16",
+                        "last_seen":  "2026-05-16",
+                        "last_changed":  "2026-05-16",
+                        "category":  "Evaluation / benchmark design",
+                        "tags":  [
+                                     "shunyu-yao",
+                                     "ysymyth",
+                                     "evaluation"
+                                 ],
+                        "summary":  "Today\u0027s AI assistants such as OpenClaw are designed to handle context effectively, making context learning an increasingly important capability for models. As these systems move beyond professional settings into everyday life, the nature of the contexts they must handle also shifts. Real-life contexts are often messy, fragmented, and deeply tied to personal and social experience, such as multi-party conversations, personal archives, and behavioral traces. Yet it remains unclear whether current frontier language mod...",
+                        "what_it_teaches":  "How to turn agent behavior into measurable tasks, success criteria, and repeatable benchmark environments.",
+                        "wiki_page":  "wiki/sources/shunyu-yao/ysymyth/paper-cl-bench-life-can-language-models-learn-from-real-life-context-0f629cbed0.md",
+                        "public_handling":  "public-metadata-summary-hash-link-only",
+                        "source_confidence":  "arxiv-api-keyword-disambiguated",
+                        "crawl_errors":  [
+
+                                         ],
+                        "extra":  {
+                                      "arxiv":  "2604.27043",
+                                      "updated":  "2026-04-29T17:44:32Z"
+                                  }
+                    },
+                    {
+                        "id":  "paper:arxiv:2602.03587",
+                        "person_key":  "ysymyth",
+                        "source_kind":  "paper",
+                        "canonical_url":  "https://arxiv.org/abs/2602.03587",
+                        "title":  "CL-bench: A Benchmark for Context Learning",
+                        "authors_or_owners":  [
+                                                  "Shihan Dou",
+                                                  "Ming Zhang",
+                                                  "Zhangyue Yin",
+                                                  "Chenhao Huang",
+                                                  "Yujiong Shen",
+                                                  "Junzhe Wang",
+                                                  "Jiayi Chen",
+                                                  "Yuchen Ni",
+                                                  "Junjie Ye",
+                                                  "Cheng Zhang",
+                                                  "Huaibing Xie",
+                                                  "Jianglu Hu",
+                                                  "Shaolei Wang",
+                                                  "Weichao Wang",
+                                                  "Yanling Xiao",
+                                                  "Yiting Liu",
+                                                  "Zenan Xu",
+                                                  "Zhen Guo",
+                                                  "Pluto Zhou",
+                                                  "Tao Gui",
+                                                  "Zuxuan Wu",
+                                                  "Xipeng Qiu",
+                                                  "Qi Zhang",
+                                                  "Xuanjing Huang",
+                                                  "Yu-Gang Jiang",
+                                                  "Di Wang",
+                                                  "Shunyu Yao"
+                                              ],
+                        "venue_or_context":  "",
+                        "published_or_updated":  "2026-02-03T14:37:47Z",
+                        "repo_path":  "",
+                        "license":  "NOASSERTION",
+                        "content_hash":  "5f5bd235f5ff4b401165a7013f4a70a63884b80bf4debcd0de3614dc4acb3403",
+                        "semantic_hash":  "5f5bd235f5ff4b401165a7013f4a70a63884b80bf4debcd0de3614dc4acb3403",
+                        "first_seen":  "2026-05-16",
+                        "last_seen":  "2026-05-16",
+                        "last_changed":  "2026-05-16",
+                        "category":  "Evaluation / benchmark design",
+                        "tags":  [
+                                     "shunyu-yao",
+                                     "ysymyth",
+                                     "evaluation"
+                                 ],
+                        "summary":  "Current language models (LMs) excel at reasoning over prompts using pre-trained knowledge. However, real-world tasks are far more complex and context-dependent: models must learn from task-specific context and leverage new knowledge beyond what is learned during pre-training to reason and resolve tasks. We term this capability context learning, a crucial ability that humans naturally possess but has been largely overlooked. To this end, we introduce CL-bench, a real-world benchmark consisting of 500 complex context...",
+                        "what_it_teaches":  "How to turn agent behavior into measurable tasks, success criteria, and repeatable benchmark environments.",
+                        "wiki_page":  "wiki/sources/shunyu-yao/ysymyth/paper-cl-bench-a-benchmark-for-context-learning-552c5b86f4.md",
+                        "public_handling":  "public-metadata-summary-hash-link-only",
+                        "source_confidence":  "arxiv-api-keyword-disambiguated",
+                        "crawl_errors":  [
+
+                                         ],
+                        "extra":  {
+                                      "arxiv":  "2602.03587",
+                                      "updated":  "2026-02-03T14:37:47Z"
+                                  }
+                    },
+                    {
+                        "id":  "paper:arxiv:2406.12045",
+                        "person_key":  "ysymyth",
+                        "source_kind":  "paper",
+                        "canonical_url":  "https://arxiv.org/abs/2406.12045",
+                        "title":  "$τ$-bench: A Benchmark for Tool-Agent-User Interaction in Real-World Domains",
+                        "authors_or_owners":  [
+                                                  "Shunyu Yao",
+                                                  "Noah Shinn",
+                                                  "Pedram Razavi",
+                                                  "Karthik Narasimhan"
+                                              ],
+                        "venue_or_context":  "",
+                        "published_or_updated":  "2024-06-17T19:33:08Z",
+                        "repo_path":  "",
+                        "license":  "NOASSERTION",
+                        "content_hash":  "4e98d407b2077213875f40fb43c3a4bb77a7c37be710d3119effff1d96b46b90",
+                        "semantic_hash":  "4e98d407b2077213875f40fb43c3a4bb77a7c37be710d3119effff1d96b46b90",
+                        "first_seen":  "2026-05-16",
+                        "last_seen":  "2026-05-16",
+                        "last_changed":  "2026-05-16",
+                        "category":  "Language agents / agent architectures",
+                        "tags":  [
+                                     "shunyu-yao",
+                                     "ysymyth",
+                                     "language-agents"
+                                 ],
+                        "summary":  "Existing benchmarks do not test language agents on their interaction with human users or ability to follow domain-specific rules, both of which are vital for deploying them in real world applications. We propose $τ$-bench, a benchmark emulating dynamic conversations between a user (simulated by language models) and a language agent provided with domain-specific API tools and policy guidelines. We employ an efficient and faithful evaluation process that compares the database state at the end of a conversation with t...",
+                        "what_it_teaches":  "How language models become agents through reasoning, acting, memory, tools, and interface design.",
+                        "wiki_page":  "wiki/sources/shunyu-yao/ysymyth/paper-bench-a-benchmark-for-tool-agent-user-interaction-in-real-world-domains-b95f346da4.md",
+                        "public_handling":  "public-metadata-summary-hash-link-only",
+                        "source_confidence":  "public-source",
+                        "crawl_errors":  [
+
+                                         ],
+                        "extra":  {
+                                      "discovered_from":  "https://ysymyth.github.io/",
+                                      "arxiv":  "2406.12045"
+                                  }
+                    },
+                    {
+                        "id":  "paper:arxiv:2309.02427",
+                        "person_key":  "ysymyth",
+                        "source_kind":  "paper",
+                        "canonical_url":  "https://arxiv.org/abs/2309.02427",
+                        "title":  "Cognitive Architectures for Language Agents",
+                        "authors_or_owners":  [
+                                                  "Theodore R. Sumers",
+                                                  "Shunyu Yao",
+                                                  "Karthik Narasimhan",
+                                                  "Thomas L. Griffiths"
+                                              ],
+                        "venue_or_context":  "",
+                        "published_or_updated":  "2023-09-05T17:56:20Z",
+                        "repo_path":  "",
+                        "license":  "NOASSERTION",
+                        "content_hash":  "21be0814779f8ec4af572a3417e9fda14a44ea5947a2a4b42837a0c3cf37de98",
+                        "semantic_hash":  "21be0814779f8ec4af572a3417e9fda14a44ea5947a2a4b42837a0c3cf37de98",
+                        "first_seen":  "2026-05-16",
+                        "last_seen":  "2026-05-16",
+                        "last_changed":  "2026-05-16",
+                        "category":  "Language agents / agent architectures",
+                        "tags":  [
+                                     "shunyu-yao",
+                                     "ysymyth",
+                                     "language-agents"
+                                 ],
+                        "summary":  "Recent efforts have augmented large language models (LLMs) with external resources (e.g., the Internet) or internal control flows (e.g., prompt chaining) for tasks requiring grounding or reasoning, leading to a new class of language agents. While these agents have achieved substantial empirical success, we lack a systematic framework to organize existing agents and plan future developments. In this paper, we draw on the rich history of cognitive science and symbolic artificial intelligence to propose Cognitive Arch...",
+                        "what_it_teaches":  "How language models become agents through reasoning, acting, memory, tools, and interface design.",
+                        "wiki_page":  "wiki/sources/shunyu-yao/ysymyth/paper-cognitive-architectures-for-language-agents-5c8d94fc93.md",
+                        "public_handling":  "public-metadata-summary-hash-link-only",
+                        "source_confidence":  "public-source",
+                        "crawl_errors":  [
+
+                                         ],
+                        "extra":  {
+                                      "discovered_from":  "https://ysymyth.github.io/",
+                                      "arxiv":  "2309.02427"
+                                  }
+                    },
+                    {
+                        "id":  "paper:arxiv:2506.06698",
+                        "person_key":  "ysymyth",
+                        "source_kind":  "paper",
+                        "canonical_url":  "https://arxiv.org/abs/2506.06698",
+                        "title":  "Contextual Experience Replay for Self-Improvement of Language Agents",
+                        "authors_or_owners":  [
+                                                  "Yitao Liu",
+                                                  "Chenglei Si",
+                                                  "Karthik Narasimhan",
+                                                  "Shunyu Yao"
+                                              ],
+                        "venue_or_context":  "",
+                        "published_or_updated":  "2025-06-07T07:47:35Z",
+                        "repo_path":  "",
+                        "license":  "NOASSERTION",
+                        "content_hash":  "97471e9efea886c3be4e4c602800c477d50d95417fa0ddd84bfe6833e5750043",
+                        "semantic_hash":  "97471e9efea886c3be4e4c602800c477d50d95417fa0ddd84bfe6833e5750043",
+                        "first_seen":  "2026-05-16",
+                        "last_seen":  "2026-05-16",
+                        "last_changed":  "2026-05-16",
+                        "category":  "Language agents / agent architectures",
+                        "tags":  [
+                                     "shunyu-yao",
+                                     "ysymyth",
+                                     "language-agents"
+                                 ],
+                        "summary":  "Large language model (LLM) agents have been applied to sequential decision-making tasks such as web navigation, but without any environment-specific experiences, they often fail in these complex tasks. Moreover, current LLM agents are not designed to continually learn from past experiences during inference time, which could be crucial for them to gain these environment-specific experiences. To address this, we propose Contextual Experience Replay (CER), a training-free framework to enable efficient self-improvement...",
+                        "what_it_teaches":  "How language models become agents through reasoning, acting, memory, tools, and interface design.",
+                        "wiki_page":  "wiki/sources/shunyu-yao/ysymyth/paper-contextual-experience-replay-for-self-improvement-of-language-agents-bb6fe994a0.md",
+                        "public_handling":  "public-metadata-summary-hash-link-only",
+                        "source_confidence":  "arxiv-api-keyword-disambiguated",
+                        "crawl_errors":  [
+
+                                         ],
+                        "extra":  {
+                                      "arxiv":  "2506.06698",
+                                      "updated":  "2025-06-07T07:47:35Z"
+                                  }
+                    },
+                    {
+                        "id":  "paper:arxiv:2604.07430",
+                        "person_key":  "ysymyth",
+                        "source_kind":  "paper",
+                        "canonical_url":  "https://arxiv.org/abs/2604.07430",
+                        "title":  "HY-Embodied-0.5: Embodied Foundation Models for Real-World Agents",
+                        "authors_or_owners":  [
+                                                  "Tencent Robotics X",
+                                                  "HY Vision Team",
+                                                  " :",
+                                                  "Xumin Yu",
+                                                  "Zuyan Liu",
+                                                  "Ziyi Wang",
+                                                  "He Zhang",
+                                                  "Yongming Rao",
+                                                  "Fangfu Liu",
+                                                  "Yani Zhang",
+                                                  "Ruowen Zhao",
+                                                  "Oran Wang",
+                                                  "Yves Liang",
+                                                  "Haitao Lin",
+                                                  "Minghui Wang",
+                                                  "Yubo Dong",
+                                                  "Kevin Cheng",
+                                                  "Bolin Ni",
+                                                  "Rui Huang",
+                                                  "Han Hu",
+                                                  "Zhengyou Zhang",
+                                                  " Linus",
+                                                  "Shunyu Yao"
+                                              ],
+                        "venue_or_context":  "",
+                        "published_or_updated":  "2026-04-08T17:59:48Z",
+                        "repo_path":  "",
+                        "license":  "NOASSERTION",
+                        "content_hash":  "bb665b716b21efb5076b6186b8104be2b17c2b266be3b3aeb6f414531e914d11",
+                        "semantic_hash":  "bb665b716b21efb5076b6186b8104be2b17c2b266be3b3aeb6f414531e914d11",
+                        "first_seen":  "2026-05-16",
+                        "last_seen":  "2026-05-16",
+                        "last_changed":  "2026-05-16",
+                        "category":  "Language agents / agent architectures",
+                        "tags":  [
+                                     "shunyu-yao",
+                                     "ysymyth",
+                                     "language-agents"
+                                 ],
+                        "summary":  "We introduce HY-Embodied-0.5, a family of foundation models specifically designed for real-world embodied agents. To bridge the gap between general Vision-Language Models (VLMs) and the demands of embodied agents, our models are developed to enhance the core capabilities required by embodied intelligence: spatial and temporal visual perception, alongside advanced embodied reasoning for prediction, interaction, and planning. The HY-Embodied-0.5 suite comprises two primary variants: an efficient model with 2B activat...",
+                        "what_it_teaches":  "How language models become agents through reasoning, acting, memory, tools, and interface design.",
+                        "wiki_page":  "wiki/sources/shunyu-yao/ysymyth/paper-hy-embodied-0-5-embodied-foundation-models-for-real-world-agents-c3a582b473.md",
+                        "public_handling":  "public-metadata-summary-hash-link-only",
+                        "source_confidence":  "arxiv-api-keyword-disambiguated",
+                        "crawl_errors":  [
+
+                                         ],
+                        "extra":  {
+                                      "arxiv":  "2604.07430",
+                                      "updated":  "2026-04-08T17:59:48Z"
+                                  }
+                    },
+                    {
+                        "id":  "paper:arxiv:2402.07456",
+                        "person_key":  "ysymyth",
+                        "source_kind":  "paper",
+                        "canonical_url":  "https://arxiv.org/abs/2402.07456",
+                        "title":  "OS-Copilot: Towards Generalist Computer Agents with Self-Improvement",
+                        "authors_or_owners":  [
+                                                  "Zhiyong Wu",
+                                                  "Chengcheng Han",
+                                                  "Zichen Ding",
+                                                  "Zhenmin Weng",
+                                                  "Zhoumianze Liu",
+                                                  "Shunyu Yao",
+                                                  "Tao Yu",
+                                                  "Lingpeng Kong"
+                                              ],
+                        "venue_or_context":  "",
+                        "published_or_updated":  "2024-02-12T07:29:22Z",
+                        "repo_path":  "",
+                        "license":  "NOASSERTION",
+                        "content_hash":  "23e237eb2b9a97e8f54beff8876d1c3bb6794527e69a5ac97e3199d2fca82a0a",
+                        "semantic_hash":  "23e237eb2b9a97e8f54beff8876d1c3bb6794527e69a5ac97e3199d2fca82a0a",
+                        "first_seen":  "2026-05-16",
+                        "last_seen":  "2026-05-16",
+                        "last_changed":  "2026-05-16",
+                        "category":  "Language agents / agent architectures",
+                        "tags":  [
+                                     "shunyu-yao",
+                                     "ysymyth",
+                                     "language-agents"
+                                 ],
+                        "summary":  "Autonomous interaction with the computer has been a longstanding challenge with great potential, and the recent proliferation of large language models (LLMs) has markedly accelerated progress in building digital agents. However, most of these agents are designed to interact with a narrow domain, such as a specific software or website. This narrow focus constrains their applicability for general computer tasks. To this end, we introduce OS-Copilot, a framework to build generalist agents capable of interfacing with c...",
+                        "what_it_teaches":  "How language models become agents through reasoning, acting, memory, tools, and interface design.",
+                        "wiki_page":  "wiki/sources/shunyu-yao/ysymyth/paper-os-copilot-towards-generalist-computer-agents-with-self-improvement-02de2d3def.md",
+                        "public_handling":  "public-metadata-summary-hash-link-only",
+                        "source_confidence":  "arxiv-api-keyword-disambiguated",
+                        "crawl_errors":  [
+
+                                         ],
+                        "extra":  {
+                                      "arxiv":  "2402.07456",
+                                      "updated":  "2024-02-15T09:30:48Z"
+                                  }
+                    },
+                    {
+                        "id":  "paper:arxiv:2210.03629",
+                        "person_key":  "ysymyth",
+                        "source_kind":  "paper",
+                        "canonical_url":  "https://arxiv.org/abs/2210.03629",
+                        "title":  "ReAct: Synergizing Reasoning and Acting in Language Models",
+                        "authors_or_owners":  [
+                                                  "Shunyu Yao",
+                                                  "Jeffrey Zhao",
+                                                  "Dian Yu",
+                                                  "Nan Du",
+                                                  "Izhak Shafran",
+                                                  "Karthik Narasimhan",
+                                                  "Yuan Cao"
+                                              ],
+                        "venue_or_context":  "",
+                        "published_or_updated":  "2022-10-06T01:00:32Z",
+                        "repo_path":  "",
+                        "license":  "NOASSERTION",
+                        "content_hash":  "c29aff9c7c0d81a00bc829001f0df2e25699fafe93baa58e587bfa27513a35c5",
+                        "semantic_hash":  "c29aff9c7c0d81a00bc829001f0df2e25699fafe93baa58e587bfa27513a35c5",
+                        "first_seen":  "2026-05-16",
+                        "last_seen":  "2026-05-16",
+                        "last_changed":  "2026-05-16",
+                        "category":  "Language agents / agent architectures",
+                        "tags":  [
+                                     "shunyu-yao",
+                                     "ysymyth",
+                                     "language-agents"
+                                 ],
+                        "summary":  "While large language models (LLMs) have demonstrated impressive capabilities across tasks in language understanding and interactive decision making, their abilities for reasoning (e.g. chain-of-thought prompting) and acting (e.g. action plan generation) have primarily been studied as separate topics. In this paper, we explore the use of LLMs to generate both reasoning traces and task-specific actions in an interleaved manner, allowing for greater synergy between the two: reasoning traces help the model induce, trac...",
+                        "what_it_teaches":  "How language models become agents through reasoning, acting, memory, tools, and interface design.",
+                        "wiki_page":  "wiki/sources/shunyu-yao/ysymyth/paper-react-synergizing-reasoning-and-acting-in-language-models-cd5a07f0ad.md",
+                        "public_handling":  "public-metadata-summary-hash-link-only",
+                        "source_confidence":  "public-source",
+                        "crawl_errors":  [
+
+                                         ],
+                        "extra":  {
+                                      "discovered_from":  "https://ysymyth.github.io/",
+                                      "arxiv":  "2210.03629"
+                                  }
+                    },
+                    {
+                        "id":  "paper:arxiv:2303.11366",
+                        "person_key":  "ysymyth",
+                        "source_kind":  "paper",
+                        "canonical_url":  "https://arxiv.org/abs/2303.11366",
+                        "title":  "Reflexion: Language Agents with Verbal Reinforcement Learning",
+                        "authors_or_owners":  [
+                                                  "Noah Shinn",
+                                                  "Federico Cassano",
+                                                  "Edward Berman",
+                                                  "Ashwin Gopinath",
+                                                  "Karthik Narasimhan",
+                                                  "Shunyu Yao"
+                                              ],
+                        "venue_or_context":  "",
+                        "published_or_updated":  "2023-03-20T18:08:50Z",
+                        "repo_path":  "",
+                        "license":  "NOASSERTION",
+                        "content_hash":  "28a7ce69da83e95cfa8f6da17af6faad59a17d1439eb3b22a40d76e7eff85ca8",
+                        "semantic_hash":  "28a7ce69da83e95cfa8f6da17af6faad59a17d1439eb3b22a40d76e7eff85ca8",
+                        "first_seen":  "2026-05-16",
+                        "last_seen":  "2026-05-16",
+                        "last_changed":  "2026-05-16",
+                        "category":  "Language agents / agent architectures",
+                        "tags":  [
+                                     "shunyu-yao",
+                                     "ysymyth",
+                                     "language-agents"
+                                 ],
+                        "summary":  "Large language models (LLMs) have been increasingly used to interact with external environments (e.g., games, compilers, APIs) as goal-driven agents. However, it remains challenging for these language agents to quickly and efficiently learn from trial-and-error as traditional reinforcement learning methods require extensive training samples and expensive model fine-tuning. We propose Reflexion, a novel framework to reinforce language agents not by updating weights, but instead through linguistic feedback. Concretel...",
+                        "what_it_teaches":  "How language models become agents through reasoning, acting, memory, tools, and interface design.",
+                        "wiki_page":  "wiki/sources/shunyu-yao/ysymyth/paper-reflexion-language-agents-with-verbal-reinforcement-learning-20cc9d63a6.md",
+                        "public_handling":  "public-metadata-summary-hash-link-only",
+                        "source_confidence":  "public-source",
+                        "crawl_errors":  [
+
+                                         ],
+                        "extra":  {
+                                      "discovered_from":  "https://ysymyth.github.io/",
+                                      "arxiv":  "2303.11366"
+                                  }
+                    },
+                    {
+                        "id":  "paper:arxiv:2305.10601",
+                        "person_key":  "ysymyth",
+                        "source_kind":  "paper",
+                        "canonical_url":  "https://arxiv.org/abs/2305.10601",
+                        "title":  "Tree of Thoughts: Deliberate Problem Solving with Large Language Models",
+                        "authors_or_owners":  [
+                                                  "Shunyu Yao",
+                                                  "Dian Yu",
+                                                  "Jeffrey Zhao",
+                                                  "Izhak Shafran",
+                                                  "Thomas L. Griffiths",
+                                                  "Yuan Cao",
+                                                  "Karthik Narasimhan"
+                                              ],
+                        "venue_or_context":  "",
+                        "published_or_updated":  "2023-05-17T23:16:17Z",
+                        "repo_path":  "",
+                        "license":  "NOASSERTION",
+                        "content_hash":  "aaea665f07c4037561c4606dd58387f4dbf4c721b0c78dbeee29bb7e44e736d0",
+                        "semantic_hash":  "aaea665f07c4037561c4606dd58387f4dbf4c721b0c78dbeee29bb7e44e736d0",
+                        "first_seen":  "2026-05-16",
+                        "last_seen":  "2026-05-16",
+                        "last_changed":  "2026-05-16",
+                        "category":  "Language agents / agent architectures",
+                        "tags":  [
+                                     "shunyu-yao",
+                                     "ysymyth",
+                                     "language-agents"
+                                 ],
+                        "summary":  "Language models are increasingly being deployed for general problem solving across a wide range of tasks, but are still confined to token-level, left-to-right decision-making processes during inference. This means they can fall short in tasks that require exploration, strategic lookahead, or where initial decisions play a pivotal role. To surmount these challenges, we introduce a new framework for language model inference, Tree of Thoughts (ToT), which generalizes over the popular Chain of Thought approach to promp...",
+                        "what_it_teaches":  "How language models become agents through reasoning, acting, memory, tools, and interface design.",
+                        "wiki_page":  "wiki/sources/shunyu-yao/ysymyth/paper-tree-of-thoughts-deliberate-problem-solving-with-large-language-models-4224462bfa.md",
+                        "public_handling":  "public-metadata-summary-hash-link-only",
+                        "source_confidence":  "public-source",
+                        "crawl_errors":  [
+
+                                         ],
+                        "extra":  {
+                                      "discovered_from":  "https://ysymyth.github.io/",
+                                      "arxiv":  "2305.10601"
+                                  }
+                    },
+                    {
+                        "id":  "paper:arxiv:2207.01206",
+                        "person_key":  "ysymyth",
+                        "source_kind":  "paper",
+                        "canonical_url":  "https://arxiv.org/abs/2207.01206",
+                        "title":  "WebShop: Towards Scalable Real-World Web Interaction with Grounded Language Agents",
+                        "authors_or_owners":  [
+                                                  "Shunyu Yao",
+                                                  "Howard Chen",
+                                                  "John Yang",
+                                                  "Karthik Narasimhan"
+                                              ],
+                        "venue_or_context":  "",
+                        "published_or_updated":  "2022-07-04T05:30:22Z",
+                        "repo_path":  "",
+                        "license":  "NOASSERTION",
+                        "content_hash":  "f81ba17f07d6cf167f4f2d938e6ed3b0d398161fc9fcde167c1d0321b9bd272f",
+                        "semantic_hash":  "f81ba17f07d6cf167f4f2d938e6ed3b0d398161fc9fcde167c1d0321b9bd272f",
+                        "first_seen":  "2026-05-16",
+                        "last_seen":  "2026-05-16",
+                        "last_changed":  "2026-05-16",
+                        "category":  "Language agents / agent architectures",
+                        "tags":  [
+                                     "shunyu-yao",
+                                     "ysymyth",
+                                     "language-agents"
+                                 ],
+                        "summary":  "Existing benchmarks for grounding language in interactive environments either lack real-world linguistic elements, or prove difficult to scale up due to substantial human involvement in the collection of data or feedback signals. To bridge this gap, we develop WebShop -- a simulated e-commerce website environment with $1.18$ million real-world products and $12,087$ crowd-sourced text instructions. Given a text instruction specifying a product requirement, an agent needs to navigate multiple types of webpages and is...",
+                        "what_it_teaches":  "How language models become agents through reasoning, acting, memory, tools, and interface design.",
+                        "wiki_page":  "wiki/sources/shunyu-yao/ysymyth/paper-webshop-towards-scalable-real-world-web-interaction-with-grounded-language-agents-9507f83da9.md",
+                        "public_handling":  "public-metadata-summary-hash-link-only",
+                        "source_confidence":  "public-source",
+                        "crawl_errors":  [
+
+                                         ],
+                        "extra":  {
+                                      "discovered_from":  "https://ysymyth.github.io/",
+                                      "arxiv":  "2207.01206"
+                                  }
+                    },
+                    {
+                        "id":  "paper:arxiv:2104.10809",
+                        "person_key":  "ysymyth",
+                        "source_kind":  "paper",
+                        "canonical_url":  "https://arxiv.org/abs/2104.10809",
+                        "title":  "Provable Limitations of Acquiring Meaning from Ungrounded Form: What Will Future Language Models Understand?",
+                        "authors_or_owners":  [
+                                                  "William Merrill",
+                                                  "Yoav Goldberg",
+                                                  "Roy Schwartz",
+                                                  "Noah A. Smith"
+                                              ],
+                        "venue_or_context":  "",
+                        "published_or_updated":  "2021-04-22T01:00:17Z",
+                        "repo_path":  "",
+                        "license":  "NOASSERTION",
+                        "content_hash":  "c2805a2ea2e2797907ad868100b3dccb1cf09ca5bdd914ef140bad726393e437",
+                        "semantic_hash":  "c2805a2ea2e2797907ad868100b3dccb1cf09ca5bdd914ef140bad726393e437",
+                        "first_seen":  "2026-05-16",
+                        "last_seen":  "2026-05-16",
+                        "last_changed":  "2026-05-16",
+                        "category":  "Reinforcement learning and reasoning",
+                        "tags":  [
+                                     "shunyu-yao",
+                                     "ysymyth",
+                                     "reinforcement-learning"
+                                 ],
+                        "summary":  "Language models trained on billions of tokens have recently led to unprecedented results on many NLP tasks. This success raises the question of whether, in principle, a system can ever understand\u0027\u0027 raw text without access to some form of grounding. We formally investigate the abilities of ungrounded systems to acquire meaning. Our analysis focuses on the role of assertions\u0027\u0027: textual contexts that provide indirect clues about the underlying semantics. We study whether assertions enable a system to emulate represent...",
+                        "what_it_teaches":  "How learning, planning, and feedback loops shape agent behavior and model capability.",
+                        "wiki_page":  "wiki/sources/shunyu-yao/ysymyth/paper-provable-limitations-of-acquiring-meaning-from-ungrounded-form-what-will-future-language-m-81e3494b0c.md",
+                        "public_handling":  "public-metadata-summary-hash-link-only",
+                        "source_confidence":  "public-source",
+                        "crawl_errors":  [
+
+                                         ],
+                        "extra":  {
+                                      "discovered_from":  "https://ysymyth.github.io/",
+                                      "arxiv":  "2104.10809"
+                                  }
+                    },
+                    {
+                        "id":  "paper:arxiv:2410.01792",
+                        "person_key":  "ysymyth",
+                        "source_kind":  "paper",
+                        "canonical_url":  "https://arxiv.org/abs/2410.01792",
+                        "title":  "When a language model is optimized for reasoning, does it still show embers of autoregression? An analysis of OpenAI o1",
+                        "authors_or_owners":  [
+                                                  "R. Thomas McCoy",
+                                                  "Shunyu Yao",
+                                                  "Dan Friedman",
+                                                  "Mathew D. Hardy",
+                                                  "Thomas L. Griffiths"
+                                              ],
+                        "venue_or_context":  "",
+                        "published_or_updated":  "2024-10-02T17:50:19Z",
+                        "repo_path":  "",
+                        "license":  "NOASSERTION",
+                        "content_hash":  "dbd7d95938575b8a699050a8979682b27af11be1987bf6d2dd6c32dc6ea7be37",
+                        "semantic_hash":  "dbd7d95938575b8a699050a8979682b27af11be1987bf6d2dd6c32dc6ea7be37",
+                        "first_seen":  "2026-05-16",
+                        "last_seen":  "2026-05-16",
+                        "last_changed":  "2026-05-16",
+                        "category":  "Reinforcement learning and reasoning",
+                        "tags":  [
+                                     "shunyu-yao",
+                                     "ysymyth",
+                                     "reinforcement-learning"
+                                 ],
+                        "summary":  "In \"Embers of Autoregression\" (McCoy et al., 2023), we showed that several large language models (LLMs) have some important limitations that are attributable to their origins in next-word prediction. Here we investigate whether these issues persist with o1, a new system from OpenAI that differs from previous LLMs in that it is optimized for reasoning. We find that o1 substantially outperforms previous LLMs in many cases, with particularly large improvements on rare variants of common tasks (e.g., forming acronyms f...",
+                        "what_it_teaches":  "How learning, planning, and feedback loops shape agent behavior and model capability.",
+                        "wiki_page":  "wiki/sources/shunyu-yao/ysymyth/paper-when-a-language-model-is-optimized-for-reasoning-does-it-still-show-embers-of-autoregressi-f86b72a0c3.md",
+                        "public_handling":  "public-metadata-summary-hash-link-only",
+                        "source_confidence":  "arxiv-api-keyword-disambiguated",
+                        "crawl_errors":  [
+
+                                         ],
+                        "extra":  {
+                                      "arxiv":  "2410.01792",
+                                      "updated":  "2024-10-04T03:57:33Z"
+                                  }
+                    },
+                    {
+                        "id":  "paper:arxiv:2306.14898",
+                        "person_key":  "ysymyth",
+                        "source_kind":  "paper",
+                        "canonical_url":  "https://arxiv.org/abs/2306.14898",
+                        "title":  "InterCode: Standardizing and Benchmarking Interactive Coding with Execution Feedback",
+                        "authors_or_owners":  [
+                                                  "John Yang",
+                                                  "Akshara Prabhakar",
+                                                  "Karthik Narasimhan",
+                                                  "Shunyu Yao"
+                                              ],
+                        "venue_or_context":  "",
+                        "published_or_updated":  "2023-06-26T17:59:50Z",
+                        "repo_path":  "",
+                        "license":  "NOASSERTION",
+                        "content_hash":  "ae4ad1717a363ab61dc457dd60dbf85aeeb985cd196fe7c642080268b4128a89",
+                        "semantic_hash":  "ae4ad1717a363ab61dc457dd60dbf85aeeb985cd196fe7c642080268b4128a89",
+                        "first_seen":  "2026-05-16",
+                        "last_seen":  "2026-05-16",
+                        "last_changed":  "2026-05-16",
+                        "category":  "Software engineering agents and benchmarks",
+                        "tags":  [
+                                     "shunyu-yao",
+                                     "ysymyth",
+                                     "software-agents"
+                                 ],
+                        "summary":  "Humans write code in a fundamentally interactive manner and rely on constant execution feedback to correct errors, resolve ambiguities, and decompose tasks. While LLMs have recently exhibited promising coding capabilities, current coding benchmarks mostly consider a static instruction-to-code sequence transduction process, which has the potential for error propagation and a disconnect between the generated code and its final execution environment. To address this gap, we introduce InterCode, a lightweight, flexible...",
+                        "what_it_teaches":  "How coding agents are benchmarked, scaffolded, and constrained against real repositories and issues.",
+                        "wiki_page":  "wiki/sources/shunyu-yao/ysymyth/paper-intercode-standardizing-and-benchmarking-interactive-coding-with-execution-feedback-35b4baa298.md",
+                        "public_handling":  "public-metadata-summary-hash-link-only",
+                        "source_confidence":  "public-source",
+                        "crawl_errors":  [
+
+                                         ],
+                        "extra":  {
+                                      "discovered_from":  "https://ysymyth.github.io/",
+                                      "arxiv":  "2306.14898"
+                                  }
+                    },
+                    {
+                        "id":  "paper:arxiv:2409.16867",
+                        "person_key":  "ysymyth",
+                        "source_kind":  "paper",
+                        "canonical_url":  "https://arxiv.org/abs/2409.16867",
+                        "title":  "Multi-objective Evolution of Heuristic Using Large Language Model",
+                        "authors_or_owners":  [
+                                                  "Shunyu Yao",
+                                                  "Fei Liu",
+                                                  "Xi Lin",
+                                                  "Zhichao Lu",
+                                                  "Zhenkun Wang",
+                                                  "Qingfu Zhang"
+                                              ],
+                        "venue_or_context":  "",
+                        "published_or_updated":  "2024-09-25T12:32:41Z",
+                        "repo_path":  "",
+                        "license":  "NOASSERTION",
+                        "content_hash":  "7665376b1d570898967ddfc49b88b27bcd675806b1ac6e7b8d75aa7ffa07c9aa",
+                        "semantic_hash":  "7665376b1d570898967ddfc49b88b27bcd675806b1ac6e7b8d75aa7ffa07c9aa",
+                        "first_seen":  "2026-05-16",
+                        "last_seen":  "2026-05-16",
+                        "last_changed":  "2026-05-16",
+                        "category":  "Software engineering agents and benchmarks",
+                        "tags":  [
+                                     "shunyu-yao",
+                                     "ysymyth",
+                                     "software-agents"
+                                 ],
+                        "summary":  "Heuristics are commonly used to tackle various search and optimization problems. Design heuristics usually require tedious manual crafting with domain knowledge. Recent works have incorporated Large Language Models (LLMs) into automatic heuristic search, leveraging their powerful language and coding capacity. However, existing research focuses on the optimal performance on the target problem as the sole objective, neglecting other criteria such as efficiency and scalability, which are vital in practice. To tackle t...",
+                        "what_it_teaches":  "How coding agents are benchmarked, scaffolded, and constrained against real repositories and issues.",
+                        "wiki_page":  "wiki/sources/shunyu-yao/ysymyth/paper-multi-objective-evolution-of-heuristic-using-large-language-model-02dd26ab48.md",
+                        "public_handling":  "public-metadata-summary-hash-link-only",
+                        "source_confidence":  "arxiv-api-keyword-disambiguated",
+                        "crawl_errors":  [
+
+                                         ],
+                        "extra":  {
+                                      "arxiv":  "2409.16867",
+                                      "updated":  "2025-02-04T05:06:39Z"
+                                  }
+                    },
+                    {
+                        "id":  "paper:arxiv:2403.08604",
+                        "person_key":  "ysymyth",
+                        "source_kind":  "paper",
+                        "canonical_url":  "https://arxiv.org/abs/2403.08604",
+                        "title":  "Prompting Large Language Models to Tackle the Full Software Development Lifecycle: A Case Study",
+                        "authors_or_owners":  [
+                                                  "Bowen Li",
+                                                  "Wenhan Wu",
+                                                  "Ziwei Tang",
+                                                  "Lin Shi",
+                                                  "John Yang",
+                                                  "Jinyang Li",
+                                                  "Shunyu Yao",
+                                                  "Chen Qian",
+                                                  "Binyuan Hui",
+                                                  "Qicheng Zhang",
+                                                  "Zhiyin Yu",
+                                                  "He Du",
+                                                  "Ping Yang",
+                                                  "Dahua Lin",
+                                                  "Chao Peng",
+                                                  "Kai Chen"
+                                              ],
+                        "venue_or_context":  "",
+                        "published_or_updated":  "2024-03-13T15:13:44Z",
+                        "repo_path":  "",
+                        "license":  "NOASSERTION",
+                        "content_hash":  "e4442c191ef9bcb65f262ace5887f23c35e7dfeeeadde6d0ea9b86c6385171f0",
+                        "semantic_hash":  "e4442c191ef9bcb65f262ace5887f23c35e7dfeeeadde6d0ea9b86c6385171f0",
+                        "first_seen":  "2026-05-16",
+                        "last_seen":  "2026-05-16",
+                        "last_changed":  "2026-05-16",
+                        "category":  "Software engineering agents and benchmarks",
+                        "tags":  [
+                                     "shunyu-yao",
+                                     "ysymyth",
+                                     "software-agents"
+                                 ],
+                        "summary":  "Recent advancements in large language models (LLMs) have significantly enhanced their coding capabilities. However, existing benchmarks predominantly focused on simplified or isolated aspects of coding, such as single-file code generation or repository issue debugging, falling short of measuring the full spectrum of challenges raised by real-world programming activities. In this case study, we explore the performance of LLMs across the entire software development lifecycle with DevEval, encompassing stages includin...",
+                        "what_it_teaches":  "How coding agents are benchmarked, scaffolded, and constrained against real repositories and issues.",
+                        "wiki_page":  "wiki/sources/shunyu-yao/ysymyth/paper-prompting-large-language-models-to-tackle-the-full-software-development-lifecycle-a-case-s-73c3f27b86.md",
+                        "public_handling":  "public-metadata-summary-hash-link-only",
+                        "source_confidence":  "arxiv-api-keyword-disambiguated",
+                        "crawl_errors":  [
+
+                                         ],
+                        "extra":  {
+                                      "arxiv":  "2403.08604",
+                                      "updated":  "2024-12-14T09:45:51Z"
+                                  }
+                    },
+                    {
+                        "id":  "paper:arxiv:2512.04868",
+                        "person_key":  "ysymyth",
+                        "source_kind":  "paper",
+                        "canonical_url":  "https://arxiv.org/abs/2512.04868",
+                        "title":  "SEAL: Self-Evolving Agentic Learning for Conversational Question Answering over Knowledge Graphs",
+                        "authors_or_owners":  [
+                                                  "Hao Wang",
+                                                  "Jialun Zhong",
+                                                  "Changcheng Wang",
+                                                  "Zhujun Nie",
+                                                  "Zheng Li",
+                                                  "Shunyu Yao",
+                                                  "Yanzeng Li",
+                                                  "Xinchi Li"
+                                              ],
+                        "venue_or_context":  "",
+                        "published_or_updated":  "2025-12-04T14:52:30Z",
+                        "repo_path":  "",
+                        "license":  "NOASSERTION",
+                        "content_hash":  "066152558d7b1bd3e5d8559990dc854c5860f98fd7734d43576fcea44c9e5dcb",
+                        "semantic_hash":  "066152558d7b1bd3e5d8559990dc854c5860f98fd7734d43576fcea44c9e5dcb",
+                        "first_seen":  "2026-05-16",
+                        "last_seen":  "2026-05-16",
+                        "last_changed":  "2026-05-16",
+                        "category":  "Software engineering agents and benchmarks",
+                        "tags":  [
+                                     "shunyu-yao",
+                                     "ysymyth",
+                                     "software-agents"
+                                 ],
+                        "summary":  "Knowledge-based conversational question answering (KBCQA) confronts persistent challenges in resolving coreference, modeling contextual dependencies, and executing complex logical reasoning. Existing approaches, whether end-to-end semantic parsing or stepwise agent-based reasoning, often suffer from structural inaccuracies and prohibitive computational costs, particularly when processing intricate queries over large knowledge graphs. To address these limitations, we introduce SEAL, a novel two-stage semantic parsin...",
+                        "what_it_teaches":  "How coding agents are benchmarked, scaffolded, and constrained against real repositories and issues.",
+                        "wiki_page":  "wiki/sources/shunyu-yao/ysymyth/paper-seal-self-evolving-agentic-learning-for-conversational-question-answering-over-knowledge-g-9a9cf5c6d8.md",
+                        "public_handling":  "public-metadata-summary-hash-link-only",
+                        "source_confidence":  "arxiv-api-keyword-disambiguated",
+                        "crawl_errors":  [
+
+                                         ],
+                        "extra":  {
+                                      "arxiv":  "2512.04868",
+                                      "updated":  "2025-12-04T14:52:30Z"
+                                  }
+                    },
+                    {
+                        "id":  "paper:arxiv:2405.15793",
+                        "person_key":  "ysymyth",
+                        "source_kind":  "paper",
+                        "canonical_url":  "https://arxiv.org/abs/2405.15793",
+                        "title":  "SWE-agent: Agent-Computer Interfaces Enable Automated Software Engineering",
+                        "authors_or_owners":  [
+                                                  "John Yang",
+                                                  "Carlos E. Jimenez",
+                                                  "Alexander Wettig",
+                                                  "Kilian Lieret",
+                                                  "Shunyu Yao",
+                                                  "Karthik Narasimhan",
+                                                  "Ofir Press"
+                                              ],
+                        "venue_or_context":  "",
+                        "published_or_updated":  "2024-05-06T17:41:33Z",
+                        "repo_path":  "",
+                        "license":  "NOASSERTION",
+                        "content_hash":  "cad79def02d3a48f160d0a97da7a3dd04cf40dbc2969e8f381003fed9a8421ed",
+                        "semantic_hash":  "cad79def02d3a48f160d0a97da7a3dd04cf40dbc2969e8f381003fed9a8421ed",
+                        "first_seen":  "2026-05-16",
+                        "last_seen":  "2026-05-16",
+                        "last_changed":  "2026-05-16",
+                        "category":  "Software engineering agents and benchmarks",
+                        "tags":  [
+                                     "shunyu-yao",
+                                     "ysymyth",
+                                     "software-agents"
+                                 ],
+                        "summary":  "Language model (LM) agents are increasingly being used to automate complicated tasks in digital environments. Just as humans benefit from powerful software applications, such as integrated development environments, for complex tasks like software engineering, we posit that LM agents represent a new category of end users with their own needs and abilities, and would benefit from specially-built interfaces to the software they use. We investigate how interface design affects the performance of language model agents....",
+                        "what_it_teaches":  "How coding agents are benchmarked, scaffolded, and constrained against real repositories and issues.",
+                        "wiki_page":  "wiki/sources/shunyu-yao/ysymyth/paper-swe-agent-agent-computer-interfaces-enable-automated-software-engineering-c8fb839775.md",
+                        "public_handling":  "public-metadata-summary-hash-link-only",
+                        "source_confidence":  "arxiv-api-keyword-disambiguated",
+                        "crawl_errors":  [
+
+                                         ],
+                        "extra":  {
+                                      "arxiv":  "2405.15793",
+                                      "updated":  "2024-11-11T20:01:15Z"
+                                  }
+                    },
+                    {
+                        "id":  "paper:arxiv:2310.06770",
+                        "person_key":  "ysymyth",
+                        "source_kind":  "paper",
+                        "canonical_url":  "https://arxiv.org/abs/2310.06770",
+                        "title":  "SWE-bench: Can Language Models Resolve Real-World GitHub Issues?",
+                        "authors_or_owners":  [
+                                                  "Carlos E. Jimenez",
+                                                  "John Yang",
+                                                  "Alexander Wettig",
+                                                  "Shunyu Yao",
+                                                  "Kexin Pei",
+                                                  "Ofir Press",
+                                                  "Karthik Narasimhan"
+                                              ],
+                        "venue_or_context":  "",
+                        "published_or_updated":  "2023-10-10T16:47:29Z",
+                        "repo_path":  "",
+                        "license":  "NOASSERTION",
+                        "content_hash":  "ef84db6f6505acff6015433055cd24bfc9b1d64b3200e7f81a859194b7ff3b99",
+                        "semantic_hash":  "ef84db6f6505acff6015433055cd24bfc9b1d64b3200e7f81a859194b7ff3b99",
+                        "first_seen":  "2026-05-16",
+                        "last_seen":  "2026-05-16",
+                        "last_changed":  "2026-05-16",
+                        "category":  "Software engineering agents and benchmarks",
+                        "tags":  [
+                                     "shunyu-yao",
+                                     "ysymyth",
+                                     "software-agents"
+                                 ],
+                        "summary":  "Language models have outpaced our ability to evaluate them effectively, but for their future development it is essential to study the frontier of their capabilities. We find real-world software engineering to be a rich, sustainable, and challenging testbed for evaluating the next generation of language models. To this end, we introduce SWE-bench, an evaluation framework consisting of $2,294$ software engineering problems drawn from real GitHub issues and corresponding pull requests across $12$ popular Python reposi...",
+                        "what_it_teaches":  "How coding agents are benchmarked, scaffolded, and constrained against real repositories and issues.",
+                        "wiki_page":  "wiki/sources/shunyu-yao/ysymyth/paper-swe-bench-can-language-models-resolve-real-world-github-issues-a548317afa.md",
+                        "public_handling":  "public-metadata-summary-hash-link-only",
+                        "source_confidence":  "public-source",
+                        "crawl_errors":  [
+
+                                         ],
+                        "extra":  {
+                                      "discovered_from":  "https://ysymyth.github.io/",
+                                      "arxiv":  "2310.06770"
+                                  }
+                    },
+                    {
+                        "id":  "paper:arxiv:2408.12599",
+                        "person_key":  "ysymyth",
+                        "source_kind":  "paper",
+                        "canonical_url":  "https://arxiv.org/abs/2408.12599",
+                        "title":  "Controllable Text Generation for Large Language Models: A Survey",
+                        "authors_or_owners":  [
+                                                  "Xun Liang",
+                                                  "Hanyu Wang",
+                                                  "Yezhaohui Wang",
+                                                  "Shichao Song",
+                                                  "Jiawei Yang",
+                                                  "Simin Niu",
+                                                  "Jie Hu",
+                                                  "Dan Liu",
+                                                  "Shunyu Yao",
+                                                  "Feiyu Xiong",
+                                                  "Zhiyu Li"
+                                              ],
+                        "venue_or_context":  "",
+                        "published_or_updated":  "2024-08-22T17:59:04Z",
+                        "repo_path":  "",
+                        "license":  "NOASSERTION",
+                        "content_hash":  "5f591214301ffecbe35a9faee19742c593c7a8dbdb321fe893202421b969fadb",
+                        "semantic_hash":  "5f591214301ffecbe35a9faee19742c593c7a8dbdb321fe893202421b969fadb",
+                        "first_seen":  "2026-05-16",
+                        "last_seen":  "2026-05-16",
+                        "last_changed":  "2026-05-16",
+                        "category":  "Tool use / computer use / digital automation",
+                        "tags":  [
+                                     "shunyu-yao",
+                                     "ysymyth",
+                                     "tool-use"
+                                 ],
+                        "summary":  "In Natural Language Processing (NLP), Large Language Models (LLMs) have demonstrated high text generation quality. However, in real-world applications, LLMs must meet increasingly complex requirements. Beyond avoiding misleading or inappropriate content, LLMs are also expected to cater to specific user needs, such as imitating particular writing styles or generating text with poetic richness. These varied demands have driven the development of Controllable Text Generation (CTG) techniques, which ensure that outputs...",
+                        "what_it_teaches":  "How to evaluate and build agents that interact with real software, web environments, and user-facing tasks.",
+                        "wiki_page":  "wiki/sources/shunyu-yao/ysymyth/paper-controllable-text-generation-for-large-language-models-a-survey-c39c583ae4.md",
+                        "public_handling":  "public-metadata-summary-hash-link-only",
+                        "source_confidence":  "arxiv-api-keyword-disambiguated",
+                        "crawl_errors":  [
+
+                                         ],
+                        "extra":  {
+                                      "arxiv":  "2408.12599",
+                                      "updated":  "2024-08-22T17:59:04Z"
+                                  }
+                    },
+                    {
+                        "id":  "paper:url:43debed1268807da",
+                        "person_key":  "ysymyth",
+                        "source_kind":  "paper-or-pdf",
+                        "canonical_url":  "https://cdn.openai.com/operator_system_card.pdf",
+                        "title":  "Computer-Using Agent system card",
+                        "authors_or_owners":  [
+
+                                              ],
+                        "venue_or_context":  "",
+                        "published_or_updated":  "",
+                        "repo_path":  "",
+                        "license":  "NOASSERTION",
+                        "content_hash":  "6dbeaa1d5c01a2899afdc7b18375cbbb330a445a8df1a676410f573de286e7d9",
+                        "semantic_hash":  "6dbeaa1d5c01a2899afdc7b18375cbbb330a445a8df1a676410f573de286e7d9",
+                        "first_seen":  "2026-05-16",
+                        "last_seen":  "2026-05-16",
+                        "last_changed":  "2026-05-16",
+                        "category":  "Language agents / agent architectures",
+                        "tags":  [
+                                     "shunyu-yao",
+                                     "ysymyth",
+                                     "language-agents"
+                                 ],
+                        "summary":  "PDF or paper link discovered from the canonical homepage. Full PDF is not mirrored publicly unless license-safe.",
+                        "what_it_teaches":  "How language models become agents through reasoning, acting, memory, tools, and interface design.",
+                        "wiki_page":  "wiki/sources/shunyu-yao/ysymyth/paper-computer-using-agent-system-card-2fd6f4ef95.md",
+                        "public_handling":  "public-metadata-summary-hash-link-only",
+                        "source_confidence":  "public-source",
+                        "crawl_errors":  [
+
+                                         ],
+                        "extra":  {
+                                      "discovered_from":  "https://ysymyth.github.io/"
+                                  }
+                    },
+                    {
+                        "id":  "paper:url:91e86ce70d2b8005",
+                        "person_key":  "ysymyth",
+                        "source_kind":  "paper-or-pdf",
+                        "canonical_url":  "https://ysymyth.github.io/papers/Dissertation-finalized.pdf",
+                        "title":  "paper Dissertation finalized",
+                        "authors_or_owners":  [
+
+                                              ],
+                        "venue_or_context":  "",
+                        "published_or_updated":  "",
+                        "repo_path":  "",
+                        "license":  "NOASSERTION",
+                        "content_hash":  "b1b95ae0670fbffee45e494040e016dab18fb9d6b1349e5bb022b145f09cf5d1",
+                        "semantic_hash":  "b1b95ae0670fbffee45e494040e016dab18fb9d6b1349e5bb022b145f09cf5d1",
+                        "first_seen":  "2026-05-16",
+                        "last_seen":  "2026-05-16",
+                        "last_changed":  "2026-05-16",
+                        "category":  "Language agents / agent architectures",
+                        "tags":  [
+                                     "shunyu-yao",
+                                     "ysymyth"
+                                 ],
+                        "summary":  "PDF or paper link discovered from the canonical homepage. Full PDF is not mirrored publicly unless license-safe.",
+                        "what_it_teaches":  "How language models become agents through reasoning, acting, memory, tools, and interface design.",
+                        "wiki_page":  "wiki/sources/shunyu-yao/ysymyth/paper-paper-dissertation-finalized-75bcb79851.md",
+                        "public_handling":  "public-metadata-summary-hash-link-only",
+                        "source_confidence":  "public-source",
+                        "crawl_errors":  [
+
+                                         ],
+                        "extra":  {
+                                      "discovered_from":  "https://ysymyth.github.io/"
+                                  }
+                    },
+                    {
+                        "id":  "paper:url:beadb38430573829",
+                        "person_key":  "ysymyth",
+                        "source_kind":  "paper-or-pdf",
+                        "canonical_url":  "https://ysymyth.github.io/papers/fpo.pdf",
+                        "title":  "paper fpo",
+                        "authors_or_owners":  [
+
+                                              ],
+                        "venue_or_context":  "",
+                        "published_or_updated":  "",
+                        "repo_path":  "",
+                        "license":  "NOASSERTION",
+                        "content_hash":  "2b20efa20f6cbe31fa53ec549d634c14061b7de7891441a07b25bcc867abcc97",
+                        "semantic_hash":  "2b20efa20f6cbe31fa53ec549d634c14061b7de7891441a07b25bcc867abcc97",
+                        "first_seen":  "2026-05-16",
+                        "last_seen":  "2026-05-16",
+                        "last_changed":  "2026-05-16",
+                        "category":  "Language agents / agent architectures",
+                        "tags":  [
+                                     "shunyu-yao",
+                                     "ysymyth"
+                                 ],
+                        "summary":  "PDF or paper link discovered from the canonical homepage. Full PDF is not mirrored publicly unless license-safe.",
+                        "what_it_teaches":  "How language models become agents through reasoning, acting, memory, tools, and interface design.",
+                        "wiki_page":  "wiki/sources/shunyu-yao/ysymyth/paper-paper-fpo-6c0080afce.md",
+                        "public_handling":  "public-metadata-summary-hash-link-only",
+                        "source_confidence":  "public-source",
+                        "crawl_errors":  [
+
+                                         ],
+                        "extra":  {
+                                      "discovered_from":  "https://ysymyth.github.io/"
+                                  }
+                    },
+                    {
+                        "id":  "paper:url:3234956359fc6186",
+                        "person_key":  "ysymyth",
+                        "source_kind":  "paper-or-pdf",
+                        "canonical_url":  "https://swe-agent.com/paper.pdf",
+                        "title":  "SWE-agent paper",
+                        "authors_or_owners":  [
+
+                                              ],
+                        "venue_or_context":  "",
+                        "published_or_updated":  "",
+                        "repo_path":  "",
+                        "license":  "NOASSERTION",
+                        "content_hash":  "1b46391f9102efb4a77416580ab6e7f381cefb89b606865f15ba35f00d792871",
+                        "semantic_hash":  "1b46391f9102efb4a77416580ab6e7f381cefb89b606865f15ba35f00d792871",
+                        "first_seen":  "2026-05-16",
+                        "last_seen":  "2026-05-16",
+                        "last_changed":  "2026-05-16",
+                        "category":  "Software engineering agents and benchmarks",
+                        "tags":  [
+                                     "shunyu-yao",
+                                     "ysymyth",
+                                     "software-agents"
+                                 ],
+                        "summary":  "PDF or paper link discovered from the canonical homepage. Full PDF is not mirrored publicly unless license-safe.",
+                        "what_it_teaches":  "How coding agents are benchmarked, scaffolded, and constrained against real repositories and issues.",
+                        "wiki_page":  "wiki/sources/shunyu-yao/ysymyth/paper-swe-agent-paper-0ba2f6628e.md",
+                        "public_handling":  "public-metadata-summary-hash-link-only",
+                        "source_confidence":  "public-source",
+                        "crawl_errors":  [
+
+                                         ],
+                        "extra":  {
+                                      "discovered_from":  "https://ysymyth.github.io/"
+                                  }
+                    },
+                    {
+                        "id":  "post:9632114dc37bb828",
+                        "person_key":  "ysymyth",
+                        "source_kind":  "post",
+                        "canonical_url":  "https://sierra.ai/blog/benchmarking-ai-agents",
+                        "title":  "post benchmarking ai agents",
+                        "authors_or_owners":  [
+
+                                              ],
+                        "venue_or_context":  "",
+                        "published_or_updated":  "",
+                        "repo_path":  "",
+                        "license":  "NOASSERTION",
+                        "content_hash":  "9a3225787785a5b17594e1dfdc2d5171421b53301b0e17bcba2b5f2f380a399c",
+                        "semantic_hash":  "9a3225787785a5b17594e1dfdc2d5171421b53301b0e17bcba2b5f2f380a399c",
+                        "first_seen":  "2026-05-16",
+                        "last_seen":  "2026-05-16",
+                        "last_changed":  "2026-05-16",
+                        "category":  "Language agents / agent architectures",
+                        "tags":  [
+                                     "shunyu-yao",
+                                     "ysymyth",
+                                     "language-agents"
+                                 ],
+                        "summary":  "Public project, release, blog, or supporting page linked from the canonical homepage.",
+                        "what_it_teaches":  "How language models become agents through reasoning, acting, memory, tools, and interface design.",
+                        "wiki_page":  "wiki/sources/shunyu-yao/ysymyth/post-post-benchmarking-ai-agents-0f8f7a7b58.md",
+                        "public_handling":  "public-metadata-summary-hash-link-only",
+                        "source_confidence":  "public-source",
+                        "crawl_errors":  [
+
+                                         ],
+                        "extra":  {
+                                      "discovered_from":  "https://ysymyth.github.io/"
+                                  }
+                    },
+                    {
+                        "id":  "project-or-public-release:157bb59a530ab7d3",
+                        "person_key":  "ysymyth",
+                        "source_kind":  "project-or-public-release",
+                        "canonical_url":  "http://cdn.openai.com/cua/cua2025.bib",
+                        "title":  "Computer-Using Agent BibTeX",
+                        "authors_or_owners":  [
+
+                                              ],
+                        "venue_or_context":  "",
+                        "published_or_updated":  "",
+                        "repo_path":  "",
+                        "license":  "NOASSERTION",
+                        "content_hash":  "9955ee91f4110f58d03bf865d1348fddefd74f0492d088376c48192d22ee7550",
+                        "semantic_hash":  "9955ee91f4110f58d03bf865d1348fddefd74f0492d088376c48192d22ee7550",
+                        "first_seen":  "2026-05-16",
+                        "last_seen":  "2026-05-16",
+                        "last_changed":  "2026-05-16",
+                        "category":  "Language agents / agent architectures",
+                        "tags":  [
+                                     "shunyu-yao",
+                                     "ysymyth",
+                                     "language-agents"
+                                 ],
+                        "summary":  "Public project, release, blog, or supporting page linked from the canonical homepage.",
+                        "what_it_teaches":  "How language models become agents through reasoning, acting, memory, tools, and interface design.",
+                        "wiki_page":  "wiki/sources/shunyu-yao/ysymyth/project-computer-using-agent-bibtex-fcec7386c9.md",
+                        "public_handling":  "public-metadata-summary-hash-link-only",
+                        "source_confidence":  "public-source",
+                        "crawl_errors":  [
+
+                                         ],
+                        "extra":  {
+                                      "discovered_from":  "https://ysymyth.github.io/"
+                                  }
+                    },
+                    {
+                        "id":  "project-or-public-release:7bcecf59e56dbf93",
+                        "person_key":  "ysymyth",
+                        "source_kind":  "project-or-public-release",
+                        "canonical_url":  "https://openai.com/index/computer-using-agent/",
+                        "title":  "Computer-Using Agent blogpost",
+                        "authors_or_owners":  [
+
+                                              ],
+                        "venue_or_context":  "",
+                        "published_or_updated":  "",
+                        "repo_path":  "",
+                        "license":  "NOASSERTION",
+                        "content_hash":  "9cc3585cf2f589f571eaf90129c0eba88466c92715aae2e2c37459353eb62833",
+                        "semantic_hash":  "9cc3585cf2f589f571eaf90129c0eba88466c92715aae2e2c37459353eb62833",
+                        "first_seen":  "2026-05-16",
+                        "last_seen":  "2026-05-16",
+                        "last_changed":  "2026-05-16",
+                        "category":  "Language agents / agent architectures",
+                        "tags":  [
+                                     "shunyu-yao",
+                                     "ysymyth",
+                                     "language-agents"
+                                 ],
+                        "summary":  "Public project, release, blog, or supporting page linked from the canonical homepage.",
+                        "what_it_teaches":  "How language models become agents through reasoning, acting, memory, tools, and interface design.",
+                        "wiki_page":  "wiki/sources/shunyu-yao/ysymyth/project-computer-using-agent-blogpost-1a49ded0de.md",
+                        "public_handling":  "public-metadata-summary-hash-link-only",
+                        "source_confidence":  "public-source",
+                        "crawl_errors":  [
+
+                                         ],
+                        "extra":  {
+                                      "discovered_from":  "https://ysymyth.github.io/"
+                                  }
+                    },
+                    {
+                        "id":  "project-or-public-release:ab8e78912967abd9",
+                        "person_key":  "ysymyth",
+                        "source_kind":  "project-or-public-release",
+                        "canonical_url":  "https://operator.chatgpt.com/",
+                        "title":  "Computer-Using Agent product",
+                        "authors_or_owners":  [
+
+                                              ],
+                        "venue_or_context":  "",
+                        "published_or_updated":  "",
+                        "repo_path":  "",
+                        "license":  "NOASSERTION",
+                        "content_hash":  "ef6b8914adf9d9c00dc40b8d3eca754281a436020f17a92907041e53ca2257c8",
+                        "semantic_hash":  "ef6b8914adf9d9c00dc40b8d3eca754281a436020f17a92907041e53ca2257c8",
+                        "first_seen":  "2026-05-16",
+                        "last_seen":  "2026-05-16",
+                        "last_changed":  "2026-05-16",
+                        "category":  "Language agents / agent architectures",
+                        "tags":  [
+                                     "shunyu-yao",
+                                     "ysymyth",
+                                     "language-agents"
+                                 ],
+                        "summary":  "Public project, release, blog, or supporting page linked from the canonical homepage.",
+                        "what_it_teaches":  "How language models become agents through reasoning, acting, memory, tools, and interface design.",
+                        "wiki_page":  "wiki/sources/shunyu-yao/ysymyth/project-computer-using-agent-product-1693f5b69f.md",
+                        "public_handling":  "public-metadata-summary-hash-link-only",
+                        "source_confidence":  "public-source",
+                        "crawl_errors":  [
+
+                                         ],
+                        "extra":  {
+                                      "discovered_from":  "https://ysymyth.github.io/"
+                                  }
+                    },
+                    {
+                        "id":  "project-or-public-release:8fec3ef3a97d447c",
+                        "person_key":  "ysymyth",
+                        "source_kind":  "project-or-public-release",
+                        "canonical_url":  "https://openai.com/index/introducing-deep-research/",
+                        "title":  "Deep Research blogpost",
+                        "authors_or_owners":  [
+
+                                              ],
+                        "venue_or_context":  "",
+                        "published_or_updated":  "",
+                        "repo_path":  "",
+                        "license":  "NOASSERTION",
+                        "content_hash":  "c90ac5feee955c4dcb7b91ee37eea5aea09c920ad4714f4380feeba1562074e5",
+                        "semantic_hash":  "c90ac5feee955c4dcb7b91ee37eea5aea09c920ad4714f4380feeba1562074e5",
+                        "first_seen":  "2026-05-16",
+                        "last_seen":  "2026-05-16",
+                        "last_changed":  "2026-05-16",
+                        "category":  "Language agents / agent architectures",
+                        "tags":  [
+                                     "shunyu-yao",
+                                     "ysymyth",
+                                     "language-agents"
+                                 ],
+                        "summary":  "Public project, release, blog, or supporting page linked from the canonical homepage.",
+                        "what_it_teaches":  "How language models become agents through reasoning, acting, memory, tools, and interface design.",
+                        "wiki_page":  "wiki/sources/shunyu-yao/ysymyth/project-deep-research-blogpost-b7b0bac261.md",
+                        "public_handling":  "public-metadata-summary-hash-link-only",
+                        "source_confidence":  "public-source",
+                        "crawl_errors":  [
+
+                                         ],
+                        "extra":  {
+                                      "discovered_from":  "https://ysymyth.github.io/"
+                                  }
+                    },
+                    {
+                        "id":  "project-or-public-release:ee3b329fc5498d9b",
+                        "person_key":  "ysymyth",
+                        "source_kind":  "project-or-public-release",
+                        "canonical_url":  "https://ai.googleblog.com/2022/11/react-synergizing-reasoning-and-acting.html",
+                        "title":  "Google AI blogpost",
+                        "authors_or_owners":  [
+
+                                              ],
+                        "venue_or_context":  "",
+                        "published_or_updated":  "",
+                        "repo_path":  "",
+                        "license":  "NOASSERTION",
+                        "content_hash":  "58ec189cfe31c68cd91ea073f797148dabf8a7d3274dd96ad91373ec9bffe39d",
+                        "semantic_hash":  "58ec189cfe31c68cd91ea073f797148dabf8a7d3274dd96ad91373ec9bffe39d",
+                        "first_seen":  "2026-05-16",
+                        "last_seen":  "2026-05-16",
+                        "last_changed":  "2026-05-16",
+                        "category":  "Language agents / agent architectures",
+                        "tags":  [
+                                     "shunyu-yao",
+                                     "ysymyth",
+                                     "language-agents"
+                                 ],
+                        "summary":  "Public project, release, blog, or supporting page linked from the canonical homepage.",
+                        "what_it_teaches":  "How language models become agents through reasoning, acting, memory, tools, and interface design.",
+                        "wiki_page":  "wiki/sources/shunyu-yao/ysymyth/project-google-ai-blogpost-0cca27a626.md",
+                        "public_handling":  "public-metadata-summary-hash-link-only",
+                        "source_confidence":  "public-source",
+                        "crawl_errors":  [
+
+                                         ],
+                        "extra":  {
+                                      "discovered_from":  "https://ysymyth.github.io/"
+                                  }
+                    },
+                    {
+                        "id":  "project-or-public-release:9c9b04f70c57d7f6",
+                        "person_key":  "ysymyth",
+                        "source_kind":  "project-or-public-release",
+                        "canonical_url":  "https://react-lm.github.io/",
+                        "title":  "ReAct project",
+                        "authors_or_owners":  [
+
+                                              ],
+                        "venue_or_context":  "",
+                        "published_or_updated":  "",
+                        "repo_path":  "",
+                        "license":  "NOASSERTION",
+                        "content_hash":  "fbfe1570fb3047784c96c445ccab8c5bbf14e14f5549f88a4b8278b9a6b33c6f",
+                        "semantic_hash":  "fbfe1570fb3047784c96c445ccab8c5bbf14e14f5549f88a4b8278b9a6b33c6f",
+                        "first_seen":  "2026-05-16",
+                        "last_seen":  "2026-05-16",
+                        "last_changed":  "2026-05-16",
+                        "category":  "Language agents / agent architectures",
+                        "tags":  [
+                                     "shunyu-yao",
+                                     "ysymyth",
+                                     "language-agents"
+                                 ],
+                        "summary":  "Public project, release, blog, or supporting page linked from the canonical homepage.",
+                        "what_it_teaches":  "How language models become agents through reasoning, acting, memory, tools, and interface design.",
+                        "wiki_page":  "wiki/sources/shunyu-yao/ysymyth/project-react-project-8732e80a56.md",
+                        "public_handling":  "public-metadata-summary-hash-link-only",
+                        "source_confidence":  "public-source",
+                        "crawl_errors":  [
+
+                                         ],
+                        "extra":  {
+                                      "discovered_from":  "https://ysymyth.github.io/"
+                                  }
+                    },
+                    {
+                        "id":  "project-or-public-release:94df5c0e2e26bd5c",
+                        "person_key":  "ysymyth",
+                        "source_kind":  "project-or-public-release",
+                        "canonical_url":  "https://www.quantamagazine.org/machines-learn-better-if-we-teach-them-the-basics-20230201/",
+                        "title":  "Quanta Magazine",
+                        "authors_or_owners":  [
+
+                                              ],
+                        "venue_or_context":  "",
+                        "published_or_updated":  "",
+                        "repo_path":  "",
+                        "license":  "NOASSERTION",
+                        "content_hash":  "9f5fd8bec20a3267f8ddfe8fdef848bac5b5888deeab9deb6f6c2cac74639376",
+                        "semantic_hash":  "9f5fd8bec20a3267f8ddfe8fdef848bac5b5888deeab9deb6f6c2cac74639376",
+                        "first_seen":  "2026-05-16",
+                        "last_seen":  "2026-05-16",
+                        "last_changed":  "2026-05-16",
+                        "category":  "Public essays / research philosophy",
+                        "tags":  [
+                                     "shunyu-yao",
+                                     "ysymyth",
+                                     "public-writing"
+                                 ],
+                        "summary":  "Public project, release, blog, or supporting page linked from the canonical homepage.",
+                        "what_it_teaches":  "A public item in the Shunyu Yao corpora that should be interpreted with source provenance and identity separation.",
+                        "wiki_page":  "wiki/sources/shunyu-yao/ysymyth/project-quanta-magazine-b64a94908a.md",
+                        "public_handling":  "public-metadata-summary-hash-link-only",
+                        "source_confidence":  "public-source",
+                        "crawl_errors":  [
+
+                                         ],
+                        "extra":  {
+                                      "discovered_from":  "https://ysymyth.github.io/"
+                                  }
+                    },
+                    {
+                        "id":  "project-or-public-release:8f21a6b08b97bef6",
+                        "person_key":  "ysymyth",
+                        "source_kind":  "project-or-public-release",
+                        "canonical_url":  "http://www.swe-agent.com/",
+                        "title":  "SWE-agent project",
+                        "authors_or_owners":  [
+
+                                              ],
+                        "venue_or_context":  "",
+                        "published_or_updated":  "",
+                        "repo_path":  "",
+                        "license":  "NOASSERTION",
+                        "content_hash":  "2467409c98ee51ec82647c718cc1d0f97191b67fc344bf342d0692a7def797a5",
+                        "semantic_hash":  "2467409c98ee51ec82647c718cc1d0f97191b67fc344bf342d0692a7def797a5",
+                        "first_seen":  "2026-05-16",
+                        "last_seen":  "2026-05-16",
+                        "last_changed":  "2026-05-16",
+                        "category":  "Software engineering agents and benchmarks",
+                        "tags":  [
+                                     "shunyu-yao",
+                                     "ysymyth",
+                                     "software-agents"
+                                 ],
+                        "summary":  "Public project, release, blog, or supporting page linked from the canonical homepage.",
+                        "what_it_teaches":  "How coding agents are benchmarked, scaffolded, and constrained against real repositories and issues.",
+                        "wiki_page":  "wiki/sources/shunyu-yao/ysymyth/project-swe-agent-project-a62fd10cd3.md",
+                        "public_handling":  "public-metadata-summary-hash-link-only",
+                        "source_confidence":  "public-source",
+                        "crawl_errors":  [
+
+                                         ],
+                        "extra":  {
+                                      "discovered_from":  "https://ysymyth.github.io/"
+                                  }
+                    },
+                    {
+                        "id":  "project-or-public-release:86e00d44d5ce7048",
+                        "person_key":  "ysymyth",
+                        "source_kind":  "project-or-public-release",
+                        "canonical_url":  "http://www.swebench.com/",
+                        "title":  "SWE-bench project",
+                        "authors_or_owners":  [
+
+                                              ],
+                        "venue_or_context":  "",
+                        "published_or_updated":  "",
+                        "repo_path":  "",
+                        "license":  "NOASSERTION",
+                        "content_hash":  "f3aeaa2e195f279e7cae56682d807a625bc84f091d5e8ea170136499a6296354",
+                        "semantic_hash":  "f3aeaa2e195f279e7cae56682d807a625bc84f091d5e8ea170136499a6296354",
+                        "first_seen":  "2026-05-16",
+                        "last_seen":  "2026-05-16",
+                        "last_changed":  "2026-05-16",
+                        "category":  "Software engineering agents and benchmarks",
+                        "tags":  [
+                                     "shunyu-yao",
+                                     "ysymyth",
+                                     "software-agents"
+                                 ],
+                        "summary":  "Public project, release, blog, or supporting page linked from the canonical homepage.",
+                        "what_it_teaches":  "How coding agents are benchmarked, scaffolded, and constrained against real repositories and issues.",
+                        "wiki_page":  "wiki/sources/shunyu-yao/ysymyth/project-swe-bench-project-3552604bec.md",
+                        "public_handling":  "public-metadata-summary-hash-link-only",
+                        "source_confidence":  "public-source",
+                        "crawl_errors":  [
+
+                                         ],
+                        "extra":  {
+                                      "discovered_from":  "https://ysymyth.github.io/"
+                                  }
+                    },
+                    {
+                        "id":  "project-or-public-release:11ae8a871ad18217",
+                        "person_key":  "ysymyth",
+                        "source_kind":  "project-or-public-release",
+                        "canonical_url":  "https://intercode-benchmark.github.io/",
+                        "title":  "InterCode project",
+                        "authors_or_owners":  [
+
+                                              ],
+                        "venue_or_context":  "",
+                        "published_or_updated":  "",
+                        "repo_path":  "",
+                        "license":  "NOASSERTION",
+                        "content_hash":  "6524be5e4358f063b60646069b80d4978b56f3cab12d9c90eb3d8eae9f60e736",
+                        "semantic_hash":  "6524be5e4358f063b60646069b80d4978b56f3cab12d9c90eb3d8eae9f60e736",
+                        "first_seen":  "2026-05-16",
+                        "last_seen":  "2026-05-16",
+                        "last_changed":  "2026-05-16",
+                        "category":  "Tool use / computer use / digital automation",
+                        "tags":  [
+                                     "shunyu-yao",
+                                     "ysymyth",
+                                     "tool-use"
+                                 ],
+                        "summary":  "Public project, release, blog, or supporting page linked from the canonical homepage.",
+                        "what_it_teaches":  "How to evaluate and build agents that interact with real software, web environments, and user-facing tasks.",
+                        "wiki_page":  "wiki/sources/shunyu-yao/ysymyth/project-intercode-project-4b771a9762.md",
+                        "public_handling":  "public-metadata-summary-hash-link-only",
+                        "source_confidence":  "public-source",
+                        "crawl_errors":  [
+
+                                         ],
+                        "extra":  {
+                                      "discovered_from":  "https://ysymyth.github.io/"
+                                  }
+                    },
+                    {
+                        "id":  "project-or-public-release:d5300012430da332",
+                        "person_key":  "ysymyth",
+                        "source_kind":  "project-or-public-release",
+                        "canonical_url":  "https://webshop-pnlp.github.io/#demo",
+                        "title":  "WebShop demo",
+                        "authors_or_owners":  [
+
+                                              ],
+                        "venue_or_context":  "",
+                        "published_or_updated":  "",
+                        "repo_path":  "",
+                        "license":  "NOASSERTION",
+                        "content_hash":  "1b2a5db1c6c06c012292aa172d8888a99e62fda803b01fbeb331cefc146558ad",
+                        "semantic_hash":  "1b2a5db1c6c06c012292aa172d8888a99e62fda803b01fbeb331cefc146558ad",
+                        "first_seen":  "2026-05-16",
+                        "last_seen":  "2026-05-16",
+                        "last_changed":  "2026-05-16",
+                        "category":  "Tool use / computer use / digital automation",
+                        "tags":  [
+                                     "shunyu-yao",
+                                     "ysymyth",
+                                     "tool-use"
+                                 ],
+                        "summary":  "Public project, release, blog, or supporting page linked from the canonical homepage.",
+                        "what_it_teaches":  "How to evaluate and build agents that interact with real software, web environments, and user-facing tasks.",
+                        "wiki_page":  "wiki/sources/shunyu-yao/ysymyth/project-webshop-demo-a4cca767ea.md",
+                        "public_handling":  "public-metadata-summary-hash-link-only",
+                        "source_confidence":  "public-source",
+                        "crawl_errors":  [
+
+                                         ],
+                        "extra":  {
+                                      "discovered_from":  "https://ysymyth.github.io/"
+                                  }
+                    },
+                    {
+                        "id":  "project-or-public-release:1411639032473941",
+                        "person_key":  "ysymyth",
+                        "source_kind":  "project-or-public-release",
+                        "canonical_url":  "https://webshop-pnlp.github.io/",
+                        "title":  "WebShop project",
+                        "authors_or_owners":  [
+
+                                              ],
+                        "venue_or_context":  "",
+                        "published_or_updated":  "",
+                        "repo_path":  "",
+                        "license":  "NOASSERTION",
+                        "content_hash":  "dd60389a958c734e921bc98648cce42cf2fa4a1d13f918047d37a2f881026856",
+                        "semantic_hash":  "dd60389a958c734e921bc98648cce42cf2fa4a1d13f918047d37a2f881026856",
+                        "first_seen":  "2026-05-16",
+                        "last_seen":  "2026-05-16",
+                        "last_changed":  "2026-05-16",
+                        "category":  "Tool use / computer use / digital automation",
+                        "tags":  [
+                                     "shunyu-yao",
+                                     "ysymyth",
+                                     "tool-use"
+                                 ],
+                        "summary":  "Public project, release, blog, or supporting page linked from the canonical homepage.",
+                        "what_it_teaches":  "How to evaluate and build agents that interact with real software, web environments, and user-facing tasks.",
+                        "wiki_page":  "wiki/sources/shunyu-yao/ysymyth/project-webshop-project-c7c510091b.md",
+                        "public_handling":  "public-metadata-summary-hash-link-only",
+                        "source_confidence":  "public-source",
+                        "crawl_errors":  [
+
+                                         ],
+                        "extra":  {
+                                      "discovered_from":  "https://ysymyth.github.io/"
+                                  }
+                    },
+                    {
+                        "id":  "talk:163de277dbc2f517",
+                        "person_key":  "ysymyth",
+                        "source_kind":  "talk-or-slides",
+                        "canonical_url":  "https://www.youtube.com/watch?v=qmGu9okiICU",
+                        "title":  "On Formulating and Evaluating Language Agents",
+                        "authors_or_owners":  [
+
+                                              ],
+                        "venue_or_context":  "",
+                        "published_or_updated":  "",
+                        "repo_path":  "",
+                        "license":  "NOASSERTION",
+                        "content_hash":  "e919b3dccc37ce857b75b36b152a4703aba9f8fc873334c9fb0a69827b76360d",
+                        "semantic_hash":  "e919b3dccc37ce857b75b36b152a4703aba9f8fc873334c9fb0a69827b76360d",
+                        "first_seen":  "2026-05-16",
+                        "last_seen":  "2026-05-16",
+                        "last_changed":  "2026-05-16",
+                        "category":  "Language agents / agent architectures",
+                        "tags":  [
+                                     "shunyu-yao",
+                                     "ysymyth",
+                                     "language-agents"
+                                 ],
+                        "summary":  "Talk or slides linked from the canonical homepage.",
+                        "what_it_teaches":  "How language models become agents through reasoning, acting, memory, tools, and interface design.",
+                        "wiki_page":  "wiki/sources/shunyu-yao/ysymyth/talk-on-formulating-and-evaluating-language-agents-4ff1143230.md",
+                        "public_handling":  "public-metadata-summary-hash-link-only",
+                        "source_confidence":  "public-source",
+                        "crawl_errors":  [
+
+                                         ],
+                        "extra":  {
+                                      "discovered_from":  "https://ysymyth.github.io/"
+                                  }
+                    },
+                    {
+                        "id":  "talk:4a95529823abc2a1",
+                        "person_key":  "ysymyth",
+                        "source_kind":  "talk-or-slides",
+                        "canonical_url":  "https://www.youtube.com/watch?v=zwfE6J2BIR4",
+                        "title":  "talk watch",
+                        "authors_or_owners":  [
+
+                                              ],
+                        "venue_or_context":  "",
+                        "published_or_updated":  "",
+                        "repo_path":  "",
+                        "license":  "NOASSERTION",
+                        "content_hash":  "7bf0a973712224b983b82fe367a3fc8091dcf6947d2d77634a58fb2679dbbd64",
+                        "semantic_hash":  "7bf0a973712224b983b82fe367a3fc8091dcf6947d2d77634a58fb2679dbbd64",
+                        "first_seen":  "2026-05-16",
+                        "last_seen":  "2026-05-16",
+                        "last_changed":  "2026-05-16",
+                        "category":  "Language agents / agent architectures",
+                        "tags":  [
+                                     "shunyu-yao",
+                                     "ysymyth"
+                                 ],
+                        "summary":  "Talk or slides linked from the canonical homepage.",
+                        "what_it_teaches":  "How language models become agents through reasoning, acting, memory, tools, and interface design.",
+                        "wiki_page":  "wiki/sources/shunyu-yao/ysymyth/talk-talk-watch-4d9ca23b10.md",
+                        "public_handling":  "public-metadata-summary-hash-link-only",
+                        "source_confidence":  "public-source",
+                        "crawl_errors":  [
+
+                                         ],
+                        "extra":  {
+                                      "discovered_from":  "https://ysymyth.github.io/"
+                                  }
+                    },
+                    {
+                        "id":  "talk:5b0a94236aa088d9",
+                        "person_key":  "ysymyth",
+                        "source_kind":  "talk-or-slides",
+                        "canonical_url":  "https://www.bilibili.com/video/BV1ju4y1e7Em",
+                        "title":  "从语言模型到语言智能体",
+                        "authors_or_owners":  [
+
+                                              ],
+                        "venue_or_context":  "",
+                        "published_or_updated":  "",
+                        "repo_path":  "",
+                        "license":  "NOASSERTION",
+                        "content_hash":  "97f0f219e399e9a2434d5311bdf418a5a81d309442448c1aabe4ff26a3c0c3e9",
+                        "semantic_hash":  "97f0f219e399e9a2434d5311bdf418a5a81d309442448c1aabe4ff26a3c0c3e9",
+                        "first_seen":  "2026-05-16",
+                        "last_seen":  "2026-05-16",
+                        "last_changed":  "2026-05-16",
+                        "category":  "Language agents / agent architectures",
+                        "tags":  [
+                                     "shunyu-yao",
+                                     "ysymyth"
+                                 ],
+                        "summary":  "Talk or slides linked from the canonical homepage.",
+                        "what_it_teaches":  "How language models become agents through reasoning, acting, memory, tools, and interface design.",
+                        "wiki_page":  "wiki/sources/shunyu-yao/ysymyth/talk-item-0230a41f33.md",
+                        "public_handling":  "public-metadata-summary-hash-link-only",
+                        "source_confidence":  "public-source",
+                        "crawl_errors":  [
+
+                                         ],
+                        "extra":  {
+                                      "discovered_from":  "https://ysymyth.github.io/"
+                                  }
+                    },
+                    {
+                        "id":  "talk:39ee6401b7d20b6b",
+                        "person_key":  "ysymyth",
+                        "source_kind":  "talk-or-slides",
+                        "canonical_url":  "https://docs.google.com/presentation/d/1mlhFBRdzN3aXQ1kDCwxGFfnQdjnHr7Ou9DAhLk186Y0/edit?usp=sharing\u0026resourcekey=0-MVtkY5wr6GD-Dm80Cvsruw",
+                        "title":  "Re-thinking Reinforcement Learning in the Era of Large Language Models",
+                        "authors_or_owners":  [
+
+                                              ],
+                        "venue_or_context":  "",
+                        "published_or_updated":  "",
+                        "repo_path":  "",
+                        "license":  "NOASSERTION",
+                        "content_hash":  "615a85ab41dfbbb52a22c466d8dcd82f35e542d9e3322a48b365e69dd7b8b989",
+                        "semantic_hash":  "615a85ab41dfbbb52a22c466d8dcd82f35e542d9e3322a48b365e69dd7b8b989",
+                        "first_seen":  "2026-05-16",
+                        "last_seen":  "2026-05-16",
+                        "last_changed":  "2026-05-16",
+                        "category":  "Reinforcement learning and reasoning",
+                        "tags":  [
+                                     "shunyu-yao",
+                                     "ysymyth",
+                                     "reinforcement-learning"
+                                 ],
+                        "summary":  "Talk or slides linked from the canonical homepage.",
+                        "what_it_teaches":  "How learning, planning, and feedback loops shape agent behavior and model capability.",
+                        "wiki_page":  "wiki/sources/shunyu-yao/ysymyth/talk-re-thinking-reinforcement-learning-in-the-era-of-large-language-models-0ba99b11db.md",
+                        "public_handling":  "public-metadata-summary-hash-link-only",
+                        "source_confidence":  "public-source",
+                        "crawl_errors":  [
+
+                                         ],
+                        "extra":  {
+                                      "discovered_from":  "https://ysymyth.github.io/"
+                                  }
+                    }
+                ]
+}

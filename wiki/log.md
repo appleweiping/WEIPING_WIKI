@@ -73,3 +73,23 @@ tags:
   - Changed semantic entries this run: 0.
   - Removed entries this run: 0.
   - Crawl errors recorded: 4.
+## [2026-05-16 02:15] ingest | shunyu yao public corpora
+
+- Pages created or updated:
+  - [[yao-shunyu-ysymyth]]
+  - [[yao-shunyu-alfred]]
+  - [[shunyu-yao-public-corpora]]
+  - [[2026-05-16-yao-shunyu-public-corpora]]
+  - [[shunyu-yao-project-taxonomy]]
+  - [[shunyu-yao-paper-map]]
+  - [[public-corpus-ingest-workflow]]
+- Sources used:
+  - https://ysymyth.github.io/
+  - https://github.com/ysymyth
+  - https://alfredyao.github.io/
+  - https://github.com/alfredyao
+  - arXiv API metadata
+- Notes:
+  - Created separate public corpora for `ysymyth` and `alfredyao`.
+  - Stored manifests under `raw/yao-shunyu-ysymyth/` and `raw/yao-shunyu-alfred/`.
+  - Added reusable public-person corpus workflow guidance for future agents.

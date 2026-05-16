@@ -322,3 +322,13 @@ Keep index organization stable unless the wiki's scale clearly requires a redesi
 ## Purpose Alignment
 
 Before substantial ingest or synthesis work, consult `purpose.md` so that the wiki grows toward the user's real long-term goals instead of becoming a random archive.
+## Public Person Corpus Workflow
+
+When the user asks for a complete public corpus using phrases such as full GitHub, all projects, all public releases, all papers, or recurring updates, treat it as a durable public-corpus ingest request.
+
+- First disambiguate same-name people before crawling.
+- Create separate entity pages, manifests, raw directories, and source pages for distinct identities.
+- Use stable IDs and semantic hashes to prevent duplicate captures and noisy commits.
+- Use safe public indexing: metadata, summaries, links, hashes, categories, and license notes; do not publicly mirror unclear-license full PDFs, source code, or long webpage text.
+- Add/update automation so future agents rerun the ingest, validate, commit scoped changes, and push.
+- See [[public-corpus-ingest-workflow]] for the maintained wiki version of this workflow.

@@ -26,6 +26,10 @@ This is the main catalog of the wiki.
 
 
 
+
+
+- [[yao-shunyu-alfred]] - alfredyao public corpus for physics-to-AI, Google DeepMind/Anthropic, quantum physics, RL, and agentic coding.
+- [[yao-shunyu-ysymyth]] - ysymyth public corpus for language agents, OpenAI work, ReAct, ToT, SWE-agent, SWE-bench, tau-bench, CUA, and Deep Research.
 - [[lidang]] - Public idea-stream corpus for Lidang / lidangzzz, focused on YouTube, X, path engineering, AI coding, and practical heuristics.
 - [[andrej-karpathy]] - Public AI researcher/educator corpus focused on GitHub projects, writing, videos, and reusable technical heuristics.
 - [[vipin]] - Central person page for the owner/subject of this knowledge base.
@@ -64,6 +68,8 @@ This is the main catalog of the wiki.
 
 
 
+
+- [[2026-05-16-yao-shunyu-public-corpora]] - Batch ingest of the ysymyth and alfredyao public corpora.
 - [[2026-05-16-lidang-public-corpus]] - Batch ingest of Lidang YouTube RSS, canonical X profile, auxiliary mirror probes, HTML snapshots, and dedupe/backfill rules.
 - [[2026-05-16-lidang-public-corpus]] - Batch ingest of Lidang YouTube RSS, canonical X profile, and auxiliary mirror probes.
 - [[2026-05-15-karpathy-public-corpus]] - Batch ingest of Karpathy's GitHub repositories, official homepage, blog RSS, YouTube feed, gists, and curated status links.
@@ -92,6 +98,12 @@ This is the main catalog of the wiki.
 
 
 
+
+
+
+- [[public-corpus-ingest-workflow]] - Reusable workflow for complete public-person corpus ingests with automation and safe public indexing.
+- [[shunyu-yao-paper-map]] - Paper, thesis, talk, and scholarly pointer map for the two Shunyu Yao corpora.
+- [[shunyu-yao-project-taxonomy]] - Project and repository taxonomy across the two Shunyu Yao corpora.
 - [[lidang-weekly-digests]] - Index of weekly digest batches and high-signal Lidang public idea pages.
 - [[lidang-idea-taxonomy]] - Category map for Lidang public ideas across AI coding, career, immigration, startup, education, governance, and heuristics.
 - [[karpathy-idea-map]] - Synthesis map of Karpathy's reusable technical heuristics and public idea surfaces.
@@ -156,6 +168,87 @@ This is the main catalog of the wiki.
 
 
 
+
+
+
+### Shunyu Yao Public Corpora
+
+- Hubs
+  - [[shunyu-yao-public-corpora]]
+  - [[shunyu-yao-project-taxonomy]]
+  - [[shunyu-yao-paper-map]]
+- Items
+  - [[sources/shunyu-yao/alfredyao/source-dr-shunyu-yao-alfredyao-33fc1b72b7|Dr. Shunyu Yao / alfredyao]] - `alfredyao`, `canonical-homepage`
+  - [[sources/shunyu-yao/alfredyao/paper-shunyu-yao-cv-c053a20ad0|Shunyu Yao CV]] - `alfredyao`, `cv-pdf-metadata`
+  - [[sources/shunyu-yao/alfredyao/github-alfredyao-alfredyao-github-io-9b72e06034|alfredyao/alfredyao.github.io]] - `alfredyao`, `github-repository`
+  - [[sources/shunyu-yao/alfredyao/github-alfredyao-behavior-cloning-pytorch-0ef01a5d93|alfredyao/behavior_cloning_pytorch]] - `alfredyao`, `github-repository`
+  - [[sources/shunyu-yao/alfredyao/github-alfredyao-numpy-classifier-ed654a333b|alfredyao/Numpy_classifier]] - `alfredyao`, `github-repository`
+  - [[sources/shunyu-yao/alfredyao/github-alfredyao-pytorch-classifier-40136e6b3a|alfredyao/Pytorch_classifier]] - `alfredyao`, `github-repository`
+  - [[sources/shunyu-yao/alfredyao/github-alfredyao-quantum-chaos-diffusion-reaction-345a82ab29|alfredyao/Quantum_chaos_Diffusion_reaction]] - `alfredyao`, `github-repository`
+  - [[sources/shunyu-yao/alfredyao/github-alfredyao-ser-fine-tuning-2fda13722a|alfredyao/SER_fine_tuning]] - `alfredyao`, `github-repository`
+  - [[sources/shunyu-yao/alfredyao/paper-lamic-layout-aware-multi-image-composition-via-scalability-of-multimodal-diffusion-transfo-30603d59bd|LAMIC: Layout-Aware Multi-Image Composition via Scalability of Multimodal Diffusion Transformer]] - `alfredyao`, `paper`
+  - [[sources/shunyu-yao/alfredyao/paper-notes-on-solvable-models-of-many-body-quantum-chaos-71987866b8|Notes on solvable models of many-body quantum chaos]] - `alfredyao`, `paper`
+  - [[sources/shunyu-yao/alfredyao/paper-physics3d-learning-physical-properties-of-3d-gaussians-via-video-diffusion-f41709a00c|Physics3D: Learning Physical Properties of 3D Gaussians via Video Diffusion]] - `alfredyao`, `paper`
+  - [[sources/shunyu-yao/alfredyao/paper-quantum-energy-teleportation-versus-information-teleportation-afc2f6acf4|Quantum Energy Teleportation versus Information Teleportation]] - `alfredyao`, `paper`
+  - [[sources/shunyu-yao/alfredyao/paper-cv-00c65d5d10|CV]] - `alfredyao`, `paper-or-pdf`
+  - [[sources/shunyu-yao/alfredyao/post-post-2025-10-06-9999f89dc9|post 2025 10 06]] - `alfredyao`, `post`
+  - [[sources/shunyu-yao/alfredyao/post-post-2025-11-18-c37c3b8fbd|post 2025 11 18]] - `alfredyao`, `post`
+  - [[sources/shunyu-yao/ysymyth/post-yao-shunyu-shunyu-yao-ysymyth-blog-757bb4a238|Yao Shunyu / Shunyu Yao / ysymyth blog]] - `ysymyth`, `blog-index`
+  - [[sources/shunyu-yao/ysymyth/source-yao-shunyu-shunyu-yao-ysymyth-4d31275fc5|Yao Shunyu / Shunyu Yao / ysymyth]] - `ysymyth`, `canonical-homepage`
+  - [[sources/shunyu-yao/ysymyth/github-ysymyth-3d-sdn-eb281d5742|ysymyth/3D-SDN]] - `ysymyth`, `github-repository`
+  - [[sources/shunyu-yao/ysymyth/github-ysymyth-awesome-language-agents-1268d38a31|ysymyth/awesome-language-agents]] - `ysymyth`, `github-repository`
+  - [[sources/shunyu-yao/ysymyth/github-ysymyth-ec-nl-12607dc41f|ysymyth/ec-nl]] - `ysymyth`, `github-repository`
+  - [[sources/shunyu-yao/ysymyth/github-ysymyth-react-f1ef53ae0d|ysymyth/ReAct]] - `ysymyth`, `github-repository`
+  - [[sources/shunyu-yao/ysymyth/github-ysymyth-ysymyth-github-io-9b92feb5ff|ysymyth/ysymyth.github.io]] - `ysymyth`, `github-repository`
+  - [[sources/shunyu-yao/ysymyth/github-noahshinn024-reflexion-b717fc386c|noahshinn024/reflexion]] - `ysymyth`, `linked-github-repository`
+  - [[sources/shunyu-yao/ysymyth/github-princeton-nlp-intercode-b37c13ebf8|princeton-nlp/intercode]] - `ysymyth`, `linked-github-repository`
+  - [[sources/shunyu-yao/ysymyth/github-princeton-nlp-swe-agent-08491f534b|princeton-nlp/SWE-agent]] - `ysymyth`, `linked-github-repository`
+  - [[sources/shunyu-yao/ysymyth/github-princeton-nlp-swe-bench-1946256bee|princeton-nlp/SWE-bench]] - `ysymyth`, `linked-github-repository`
+  - [[sources/shunyu-yao/ysymyth/github-princeton-nlp-webshop-b9f46104e3|princeton-nlp/WebShop]] - `ysymyth`, `linked-github-repository`
+  - [[sources/shunyu-yao/ysymyth/github-sierra-research-tau-bench-4ddfbb35b4|sierra-research/tau-bench]] - `ysymyth`, `linked-github-repository`
+  - [[sources/shunyu-yao/ysymyth/github-ysymyth-tree-of-thought-llm-67f5684418|ysymyth/tree-of-thought-llm]] - `ysymyth`, `linked-github-repository`
+  - [[sources/shunyu-yao/ysymyth/paper-bench-a-benchmark-for-tool-agent-user-interaction-in-real-world-domains-b95f346da4|$τ$-bench: A Benchmark for Tool-Agent-User Interaction in Real-World Domains]] - `ysymyth`, `paper`
+  - [[sources/shunyu-yao/ysymyth/paper-can-language-models-solve-olympiad-programming-e41e722ab8|Can Language Models Solve Olympiad Programming?]] - `ysymyth`, `paper`
+  - [[sources/shunyu-yao/ysymyth/paper-cl-bench-life-can-language-models-learn-from-real-life-context-0f629cbed0|CL-bench Life: Can Language Models Learn from Real-Life Context?]] - `ysymyth`, `paper`
+  - [[sources/shunyu-yao/ysymyth/paper-cl-bench-a-benchmark-for-context-learning-552c5b86f4|CL-bench: A Benchmark for Context Learning]] - `ysymyth`, `paper`
+  - [[sources/shunyu-yao/ysymyth/paper-cognitive-architectures-for-language-agents-5c8d94fc93|Cognitive Architectures for Language Agents]] - `ysymyth`, `paper`
+  - [[sources/shunyu-yao/ysymyth/paper-contextual-experience-replay-for-self-improvement-of-language-agents-bb6fe994a0|Contextual Experience Replay for Self-Improvement of Language Agents]] - `ysymyth`, `paper`
+  - [[sources/shunyu-yao/ysymyth/paper-controllable-text-generation-for-large-language-models-a-survey-c39c583ae4|Controllable Text Generation for Large Language Models: A Survey]] - `ysymyth`, `paper`
+  - [[sources/shunyu-yao/ysymyth/paper-hy-embodied-0-5-embodied-foundation-models-for-real-world-agents-c3a582b473|HY-Embodied-0.5: Embodied Foundation Models for Real-World Agents]] - `ysymyth`, `paper`
+  - [[sources/shunyu-yao/ysymyth/paper-intercode-standardizing-and-benchmarking-interactive-coding-with-execution-feedback-35b4baa298|InterCode: Standardizing and Benchmarking Interactive Coding with Execution Feedback]] - `ysymyth`, `paper`
+  - [[sources/shunyu-yao/ysymyth/paper-multi-objective-evolution-of-heuristic-using-large-language-model-02dd26ab48|Multi-objective Evolution of Heuristic Using Large Language Model]] - `ysymyth`, `paper`
+  - [[sources/shunyu-yao/ysymyth/paper-os-copilot-towards-generalist-computer-agents-with-self-improvement-02de2d3def|OS-Copilot: Towards Generalist Computer Agents with Self-Improvement]] - `ysymyth`, `paper`
+  - [[sources/shunyu-yao/ysymyth/paper-prompting-large-language-models-to-tackle-the-full-software-development-lifecycle-a-case-s-73c3f27b86|Prompting Large Language Models to Tackle the Full Software Development Lifecycle: A Case Study]] - `ysymyth`, `paper`
+  - [[sources/shunyu-yao/ysymyth/paper-provable-limitations-of-acquiring-meaning-from-ungrounded-form-what-will-future-language-m-81e3494b0c|Provable Limitations of Acquiring Meaning from Ungrounded Form: What Will Future Language Models Understand?]] - `ysymyth`, `paper`
+  - [[sources/shunyu-yao/ysymyth/paper-react-synergizing-reasoning-and-acting-in-language-models-cd5a07f0ad|ReAct: Synergizing Reasoning and Acting in Language Models]] - `ysymyth`, `paper`
+  - [[sources/shunyu-yao/ysymyth/paper-reflexion-language-agents-with-verbal-reinforcement-learning-20cc9d63a6|Reflexion: Language Agents with Verbal Reinforcement Learning]] - `ysymyth`, `paper`
+  - [[sources/shunyu-yao/ysymyth/paper-seal-self-evolving-agentic-learning-for-conversational-question-answering-over-knowledge-g-9a9cf5c6d8|SEAL: Self-Evolving Agentic Learning for Conversational Question Answering over Knowledge Graphs]] - `ysymyth`, `paper`
+  - [[sources/shunyu-yao/ysymyth/paper-swe-agent-agent-computer-interfaces-enable-automated-software-engineering-c8fb839775|SWE-agent: Agent-Computer Interfaces Enable Automated Software Engineering]] - `ysymyth`, `paper`
+  - [[sources/shunyu-yao/ysymyth/paper-swe-bench-can-language-models-resolve-real-world-github-issues-a548317afa|SWE-bench: Can Language Models Resolve Real-World GitHub Issues?]] - `ysymyth`, `paper`
+  - [[sources/shunyu-yao/ysymyth/paper-tree-of-thoughts-deliberate-problem-solving-with-large-language-models-4224462bfa|Tree of Thoughts: Deliberate Problem Solving with Large Language Models]] - `ysymyth`, `paper`
+  - [[sources/shunyu-yao/ysymyth/paper-webshop-towards-scalable-real-world-web-interaction-with-grounded-language-agents-9507f83da9|WebShop: Towards Scalable Real-World Web Interaction with Grounded Language Agents]] - `ysymyth`, `paper`
+  - [[sources/shunyu-yao/ysymyth/paper-when-a-language-model-is-optimized-for-reasoning-does-it-still-show-embers-of-autoregressi-f86b72a0c3|When a language model is optimized for reasoning, does it still show embers of autoregression? An analysis of OpenAI o1]] - `ysymyth`, `paper`
+  - [[sources/shunyu-yao/ysymyth/paper-computer-using-agent-system-card-2fd6f4ef95|Computer-Using Agent system card]] - `ysymyth`, `paper-or-pdf`
+  - [[sources/shunyu-yao/ysymyth/paper-paper-dissertation-finalized-75bcb79851|paper Dissertation finalized]] - `ysymyth`, `paper-or-pdf`
+  - [[sources/shunyu-yao/ysymyth/paper-paper-fpo-6c0080afce|paper fpo]] - `ysymyth`, `paper-or-pdf`
+  - [[sources/shunyu-yao/ysymyth/paper-swe-agent-paper-0ba2f6628e|SWE-agent paper]] - `ysymyth`, `paper-or-pdf`
+  - [[sources/shunyu-yao/ysymyth/post-post-benchmarking-ai-agents-0f8f7a7b58|post benchmarking ai agents]] - `ysymyth`, `post`
+  - [[sources/shunyu-yao/ysymyth/project-computer-using-agent-bibtex-fcec7386c9|Computer-Using Agent BibTeX]] - `ysymyth`, `project-or-public-release`
+  - [[sources/shunyu-yao/ysymyth/project-computer-using-agent-blogpost-1a49ded0de|Computer-Using Agent blogpost]] - `ysymyth`, `project-or-public-release`
+  - [[sources/shunyu-yao/ysymyth/project-computer-using-agent-product-1693f5b69f|Computer-Using Agent product]] - `ysymyth`, `project-or-public-release`
+  - [[sources/shunyu-yao/ysymyth/project-deep-research-blogpost-b7b0bac261|Deep Research blogpost]] - `ysymyth`, `project-or-public-release`
+  - [[sources/shunyu-yao/ysymyth/project-google-ai-blogpost-0cca27a626|Google AI blogpost]] - `ysymyth`, `project-or-public-release`
+  - [[sources/shunyu-yao/ysymyth/project-intercode-project-4b771a9762|InterCode project]] - `ysymyth`, `project-or-public-release`
+  - [[sources/shunyu-yao/ysymyth/project-quanta-magazine-b64a94908a|Quanta Magazine]] - `ysymyth`, `project-or-public-release`
+  - [[sources/shunyu-yao/ysymyth/project-react-project-8732e80a56|ReAct project]] - `ysymyth`, `project-or-public-release`
+  - [[sources/shunyu-yao/ysymyth/project-swe-agent-project-a62fd10cd3|SWE-agent project]] - `ysymyth`, `project-or-public-release`
+  - [[sources/shunyu-yao/ysymyth/project-swe-bench-project-3552604bec|SWE-bench project]] - `ysymyth`, `project-or-public-release`
+  - [[sources/shunyu-yao/ysymyth/project-webshop-demo-a4cca767ea|WebShop demo]] - `ysymyth`, `project-or-public-release`
+  - [[sources/shunyu-yao/ysymyth/project-webshop-project-c7c510091b|WebShop project]] - `ysymyth`, `project-or-public-release`
+  - [[sources/shunyu-yao/ysymyth/talk-on-formulating-and-evaluating-language-agents-4ff1143230|On Formulating and Evaluating Language Agents]] - `ysymyth`, `talk-or-slides`
+  - [[sources/shunyu-yao/ysymyth/talk-re-thinking-reinforcement-learning-in-the-era-of-large-language-models-0ba99b11db|Re-thinking Reinforcement Learning in the Era of Large Language Models]] - `ysymyth`, `talk-or-slides`
+  - [[sources/shunyu-yao/ysymyth/talk-talk-watch-4d9ca23b10|talk watch]] - `ysymyth`, `talk-or-slides`
+  - [[sources/shunyu-yao/ysymyth/talk-item-0230a41f33|从语言模型到语言智能体]] - `ysymyth`, `talk-or-slides`
 ### Lidang Public Ideas Corpus
 
 - Weekly digests
@@ -607,6 +700,8 @@ This is the main catalog of the wiki.
 
 
 
+
+- [[shunyu-yao-public-corpora]] - Hub that keeps the two Shunyu Yao public corpora separate and searchable.
 - [[lidang-public-ideas]] - Hub for high-frequency Lidang public ideas with weekly digests, taxonomy, and source-confidence boundaries.
 - [[karpathy-public-work]] - Hub for Karpathy's public projects, posts, videos, gists, and curated idea links.
 - [[openai-cookbook]] - Mirrored OpenAI Cookbook implementation library with categorized examples, articles, source hashes, and weekly refresh workflow.

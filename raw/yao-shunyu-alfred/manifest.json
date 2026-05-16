@@ -1,0 +1,610 @@
+{
+    "schema":  "shunyu-yao-public-corpus-v1",
+    "person_key":  "alfredyao",
+    "generated_at":  "2026-05-16T02:27:36.1620373+02:00",
+    "canonical_homepage":  "https://alfredyao.github.io/",
+    "github_login":  "alfredyao",
+    "public_handling":  "Public wiki pages contain metadata, summaries, links, hashes, and license notes. Unclear-license full PDFs, webpages, and source code are not mirrored wholesale.",
+    "identity_guard":  "Do not confuse with yao-shunyu-ysymyth, the OpenAI language-agents researcher at ysymyth.github.io.",
+    "entry_count":  15,
+    "new_entries_this_run":  0,
+    "changed_entries_this_run":  0,
+    "removed_entries_this_run":  0,
+    "errors":  [
+                   "GitHub user failed for alfredyao: 远程服务器返回错误: (403) 已禁止。",
+                   "GitHub repos failed for alfredyao: 远程服务器返回错误: (403) 已禁止。"
+               ],
+    "entries":  [
+                    {
+                        "id":  "homepage:alfredyao",
+                        "person_key":  "alfredyao",
+                        "source_kind":  "canonical-homepage",
+                        "canonical_url":  "https://alfredyao.github.io/",
+                        "title":  "Dr. Shunyu Yao / alfredyao",
+                        "authors_or_owners":  [
+
+                                              ],
+                        "venue_or_context":  "",
+                        "published_or_updated":  "",
+                        "repo_path":  "",
+                        "license":  "NOASSERTION",
+                        "content_hash":  "75b2396626ee286f7b3d3582eb8aabba3a6a660ea0740ff24e28c91a669fb10f",
+                        "semantic_hash":  "75b2396626ee286f7b3d3582eb8aabba3a6a660ea0740ff24e28c91a669fb10f",
+                        "first_seen":  "2026-05-16",
+                        "last_seen":  "2026-05-16",
+                        "last_changed":  "2026-05-16",
+                        "category":  "Quantum chaos / quantum gravity",
+                        "tags":  [
+                                     "shunyu-yao",
+                                     "alfredyao",
+                                     "quantum-physics"
+                                 ],
+                        "summary":  "Dr. Shunyu Yao Physicist \u0026 AI Researcher SY. About Writing Journey Work CV LinkedIn Dr. Shunyu Yao Senior Staff Research Scientist @ Google DeepMind Theoretical Physicist turned AI Researcher. Quantum Physics and Artificial Intelligence . View Research Biography Shunyu Yao is currently a Senior Staff Research Scientist at Google DeepMind . Previously, he was a Research Scientist at Anthropic , where his work focused on the \"science of learning\" and improving model capabilities for the Claude family. Before his pivo...",
+                        "what_it_teaches":  "How quantum chaos and gravity concepts connect to information dynamics, scrambling, and theoretical physics.",
+                        "wiki_page":  "wiki/sources/shunyu-yao/alfredyao/source-dr-shunyu-yao-alfredyao-33fc1b72b7.md",
+                        "public_handling":  "public-metadata-summary-hash-link-only",
+                        "source_confidence":  "public-source",
+                        "crawl_errors":  [
+
+                                         ],
+                        "extra":  {
+                                      "homepage":  "https://alfredyao.github.io/"
+                                  }
+                    },
+                    {
+                        "id":  "paper-or-cv:alfredyao-cv",
+                        "person_key":  "alfredyao",
+                        "source_kind":  "cv-pdf-metadata",
+                        "canonical_url":  "https://alfredyao.github.io/Shunyu_Yao_CV.pdf",
+                        "title":  "Shunyu Yao CV",
+                        "authors_or_owners":  [
+
+                                              ],
+                        "venue_or_context":  "",
+                        "published_or_updated":  "",
+                        "repo_path":  "",
+                        "license":  "NOASSERTION",
+                        "content_hash":  "4893bfe882f77feb921aebbe082aa156b29a965073f6638c592b9aab6f2a1722",
+                        "semantic_hash":  "4893bfe882f77feb921aebbe082aa156b29a965073f6638c592b9aab6f2a1722",
+                        "first_seen":  "2026-05-16",
+                        "last_seen":  "2026-05-16",
+                        "last_changed":  "2026-05-16",
+                        "category":  "Reinforcement learning and reasoning",
+                        "tags":  [
+                                     "shunyu-yao",
+                                     "alfredyao",
+                                     "reinforcement-learning"
+                                 ],
+                        "summary":  "CV PDF linked from the canonical homepage; tracked as metadata and URL only, not mirrored as public full text.",
+                        "what_it_teaches":  "How learning, planning, and feedback loops shape agent behavior and model capability.",
+                        "wiki_page":  "wiki/sources/shunyu-yao/alfredyao/paper-shunyu-yao-cv-c053a20ad0.md",
+                        "public_handling":  "public-metadata-summary-hash-link-only",
+                        "source_confidence":  "public-source",
+                        "crawl_errors":  [
+
+                                         ],
+                        "extra":  {
+                                      "discovered_from":  "https://alfredyao.github.io/"
+                                  }
+                    },
+                    {
+                        "id":  "github:alfredyao/Quantum_chaos_Diffusion_reaction",
+                        "person_key":  "alfredyao",
+                        "source_kind":  "github-repository",
+                        "canonical_url":  "https://github.com/alfredyao/Quantum_chaos_Diffusion_reaction",
+                        "title":  "alfredyao/Quantum_chaos_Diffusion_reaction",
+                        "authors_or_owners":  [
+                                                  "alfredyao"
+                                              ],
+                        "venue_or_context":  "",
+                        "published_or_updated":  "",
+                        "repo_path":  "alfredyao/Quantum_chaos_Diffusion_reaction",
+                        "license":  "NOASSERTION",
+                        "content_hash":  "fc039c8c9cda9b47d0602c37edb5e4b2e20ced24ed2091e5a321ad58544b4af3",
+                        "semantic_hash":  "fc039c8c9cda9b47d0602c37edb5e4b2e20ced24ed2091e5a321ad58544b4af3",
+                        "first_seen":  "2026-05-16",
+                        "last_seen":  "2026-05-16",
+                        "last_changed":  "2026-05-16",
+                        "category":  "Language agents / agent architectures",
+                        "tags":  [
+                                     "shunyu-yao",
+                                     "alfredyao",
+                                     "language-agents"
+                                 ],
+                        "summary":  "GitHub repository discovered for alfredyao/Quantum_chaos_Diffusion_reaction. README/full source is not mirrored publicly unless license-safe.",
+                        "what_it_teaches":  "How language models become agents through reasoning, acting, memory, tools, and interface design.",
+                        "wiki_page":  "wiki/sources/shunyu-yao/alfredyao/github-alfredyao-quantum-chaos-diffusion-reaction-345a82ab29.md",
+                        "public_handling":  "public-metadata-summary-hash-link-only",
+                        "source_confidence":  "github-html-fallback",
+                        "crawl_errors":  [
+
+                                         ],
+                        "extra":  {
+                                      "stars":  null,
+                                      "forks":  null,
+                                      "language":  "",
+                                      "topics":  [
+
+                                                 ],
+                                      "default_branch":  "",
+                                      "homepage":  ""
+                                  }
+                    },
+                    {
+                        "id":  "github:alfredyao/alfredyao.github.io",
+                        "person_key":  "alfredyao",
+                        "source_kind":  "github-repository",
+                        "canonical_url":  "https://github.com/alfredyao/alfredyao.github.io",
+                        "title":  "alfredyao/alfredyao.github.io",
+                        "authors_or_owners":  [
+                                                  "alfredyao"
+                                              ],
+                        "venue_or_context":  "",
+                        "published_or_updated":  "",
+                        "repo_path":  "alfredyao/alfredyao.github.io",
+                        "license":  "NOASSERTION",
+                        "content_hash":  "a04196d7a2465d5da76c6c1c73d5c58fe9b95cff6a20af4dd8b8ca59141bc6bb",
+                        "semantic_hash":  "a04196d7a2465d5da76c6c1c73d5c58fe9b95cff6a20af4dd8b8ca59141bc6bb",
+                        "first_seen":  "2026-05-16",
+                        "last_seen":  "2026-05-16",
+                        "last_changed":  "2026-05-16",
+                        "category":  "Physics-to-AI research transition",
+                        "tags":  [
+                                     "shunyu-yao",
+                                     "alfredyao"
+                                 ],
+                        "summary":  "GitHub repository discovered for alfredyao/alfredyao.github.io. README/full source is not mirrored publicly unless license-safe.",
+                        "what_it_teaches":  "How a physics research background transfers into frontier AI, RL, and agentic coding work.",
+                        "wiki_page":  "wiki/sources/shunyu-yao/alfredyao/github-alfredyao-alfredyao-github-io-9b72e06034.md",
+                        "public_handling":  "public-metadata-summary-hash-link-only",
+                        "source_confidence":  "github-html-fallback",
+                        "crawl_errors":  [
+
+                                         ],
+                        "extra":  {
+                                      "stars":  null,
+                                      "forks":  null,
+                                      "language":  "",
+                                      "topics":  [
+
+                                                 ],
+                                      "default_branch":  "",
+                                      "homepage":  ""
+                                  }
+                    },
+                    {
+                        "id":  "github:alfredyao/behavior_cloning_pytorch",
+                        "person_key":  "alfredyao",
+                        "source_kind":  "github-repository",
+                        "canonical_url":  "https://github.com/alfredyao/behavior_cloning_pytorch",
+                        "title":  "alfredyao/behavior_cloning_pytorch",
+                        "authors_or_owners":  [
+                                                  "alfredyao"
+                                              ],
+                        "venue_or_context":  "",
+                        "published_or_updated":  "",
+                        "repo_path":  "alfredyao/behavior_cloning_pytorch",
+                        "license":  "NOASSERTION",
+                        "content_hash":  "cda2c22ccb196177bd0206d42209aca84e9cb8bd1cd84e054deede2721cb01e9",
+                        "semantic_hash":  "cda2c22ccb196177bd0206d42209aca84e9cb8bd1cd84e054deede2721cb01e9",
+                        "first_seen":  "2026-05-16",
+                        "last_seen":  "2026-05-16",
+                        "last_changed":  "2026-05-16",
+                        "category":  "Physics-to-AI research transition",
+                        "tags":  [
+                                     "shunyu-yao",
+                                     "alfredyao"
+                                 ],
+                        "summary":  "GitHub repository discovered for alfredyao/behavior_cloning_pytorch. README/full source is not mirrored publicly unless license-safe.",
+                        "what_it_teaches":  "How a physics research background transfers into frontier AI, RL, and agentic coding work.",
+                        "wiki_page":  "wiki/sources/shunyu-yao/alfredyao/github-alfredyao-behavior-cloning-pytorch-0ef01a5d93.md",
+                        "public_handling":  "public-metadata-summary-hash-link-only",
+                        "source_confidence":  "github-html-fallback",
+                        "crawl_errors":  [
+
+                                         ],
+                        "extra":  {
+                                      "stars":  null,
+                                      "forks":  null,
+                                      "language":  "",
+                                      "topics":  [
+
+                                                 ],
+                                      "default_branch":  "",
+                                      "homepage":  ""
+                                  }
+                    },
+                    {
+                        "id":  "github:alfredyao/Numpy_classifier",
+                        "person_key":  "alfredyao",
+                        "source_kind":  "github-repository",
+                        "canonical_url":  "https://github.com/alfredyao/Numpy_classifier",
+                        "title":  "alfredyao/Numpy_classifier",
+                        "authors_or_owners":  [
+                                                  "alfredyao"
+                                              ],
+                        "venue_or_context":  "",
+                        "published_or_updated":  "",
+                        "repo_path":  "alfredyao/Numpy_classifier",
+                        "license":  "NOASSERTION",
+                        "content_hash":  "f306f4af133a6fc3f478fe83f5521a1b0f940de73279840e199944587e3347a9",
+                        "semantic_hash":  "f306f4af133a6fc3f478fe83f5521a1b0f940de73279840e199944587e3347a9",
+                        "first_seen":  "2026-05-16",
+                        "last_seen":  "2026-05-16",
+                        "last_changed":  "2026-05-16",
+                        "category":  "Physics-to-AI research transition",
+                        "tags":  [
+                                     "shunyu-yao",
+                                     "alfredyao"
+                                 ],
+                        "summary":  "GitHub repository discovered for alfredyao/Numpy_classifier. README/full source is not mirrored publicly unless license-safe.",
+                        "what_it_teaches":  "How a physics research background transfers into frontier AI, RL, and agentic coding work.",
+                        "wiki_page":  "wiki/sources/shunyu-yao/alfredyao/github-alfredyao-numpy-classifier-ed654a333b.md",
+                        "public_handling":  "public-metadata-summary-hash-link-only",
+                        "source_confidence":  "github-html-fallback",
+                        "crawl_errors":  [
+
+                                         ],
+                        "extra":  {
+                                      "stars":  null,
+                                      "forks":  null,
+                                      "language":  "",
+                                      "topics":  [
+
+                                                 ],
+                                      "default_branch":  "",
+                                      "homepage":  ""
+                                  }
+                    },
+                    {
+                        "id":  "github:alfredyao/Pytorch_classifier",
+                        "person_key":  "alfredyao",
+                        "source_kind":  "github-repository",
+                        "canonical_url":  "https://github.com/alfredyao/Pytorch_classifier",
+                        "title":  "alfredyao/Pytorch_classifier",
+                        "authors_or_owners":  [
+                                                  "alfredyao"
+                                              ],
+                        "venue_or_context":  "",
+                        "published_or_updated":  "",
+                        "repo_path":  "alfredyao/Pytorch_classifier",
+                        "license":  "NOASSERTION",
+                        "content_hash":  "95e17f0cbe336c1e07e9c9426335f6f398e40549f559490a3bc13b9d4b45149b",
+                        "semantic_hash":  "95e17f0cbe336c1e07e9c9426335f6f398e40549f559490a3bc13b9d4b45149b",
+                        "first_seen":  "2026-05-16",
+                        "last_seen":  "2026-05-16",
+                        "last_changed":  "2026-05-16",
+                        "category":  "Physics-to-AI research transition",
+                        "tags":  [
+                                     "shunyu-yao",
+                                     "alfredyao"
+                                 ],
+                        "summary":  "GitHub repository discovered for alfredyao/Pytorch_classifier. README/full source is not mirrored publicly unless license-safe.",
+                        "what_it_teaches":  "How a physics research background transfers into frontier AI, RL, and agentic coding work.",
+                        "wiki_page":  "wiki/sources/shunyu-yao/alfredyao/github-alfredyao-pytorch-classifier-40136e6b3a.md",
+                        "public_handling":  "public-metadata-summary-hash-link-only",
+                        "source_confidence":  "github-html-fallback",
+                        "crawl_errors":  [
+
+                                         ],
+                        "extra":  {
+                                      "stars":  null,
+                                      "forks":  null,
+                                      "language":  "",
+                                      "topics":  [
+
+                                                 ],
+                                      "default_branch":  "",
+                                      "homepage":  ""
+                                  }
+                    },
+                    {
+                        "id":  "github:alfredyao/SER_fine_tuning",
+                        "person_key":  "alfredyao",
+                        "source_kind":  "github-repository",
+                        "canonical_url":  "https://github.com/alfredyao/SER_fine_tuning",
+                        "title":  "alfredyao/SER_fine_tuning",
+                        "authors_or_owners":  [
+                                                  "alfredyao"
+                                              ],
+                        "venue_or_context":  "",
+                        "published_or_updated":  "",
+                        "repo_path":  "alfredyao/SER_fine_tuning",
+                        "license":  "NOASSERTION",
+                        "content_hash":  "baa80b985e5b8c17a773ceebf41440f610a51d32e8da15f45ba113ca7ef35109",
+                        "semantic_hash":  "baa80b985e5b8c17a773ceebf41440f610a51d32e8da15f45ba113ca7ef35109",
+                        "first_seen":  "2026-05-16",
+                        "last_seen":  "2026-05-16",
+                        "last_changed":  "2026-05-16",
+                        "category":  "Physics-to-AI research transition",
+                        "tags":  [
+                                     "shunyu-yao",
+                                     "alfredyao"
+                                 ],
+                        "summary":  "GitHub repository discovered for alfredyao/SER_fine_tuning. README/full source is not mirrored publicly unless license-safe.",
+                        "what_it_teaches":  "How a physics research background transfers into frontier AI, RL, and agentic coding work.",
+                        "wiki_page":  "wiki/sources/shunyu-yao/alfredyao/github-alfredyao-ser-fine-tuning-2fda13722a.md",
+                        "public_handling":  "public-metadata-summary-hash-link-only",
+                        "source_confidence":  "github-html-fallback",
+                        "crawl_errors":  [
+
+                                         ],
+                        "extra":  {
+                                      "stars":  null,
+                                      "forks":  null,
+                                      "language":  "",
+                                      "topics":  [
+
+                                                 ],
+                                      "default_branch":  "",
+                                      "homepage":  ""
+                                  }
+                    },
+                    {
+                        "id":  "paper:arxiv:2408.11123",
+                        "person_key":  "alfredyao",
+                        "source_kind":  "paper",
+                        "canonical_url":  "https://arxiv.org/abs/2408.11123",
+                        "title":  "Notes on solvable models of many-body quantum chaos",
+                        "authors_or_owners":  [
+                                                  "Shunyu Yao"
+                                              ],
+                        "venue_or_context":  "",
+                        "published_or_updated":  "2024-08-20T18:24:52Z",
+                        "repo_path":  "",
+                        "license":  "NOASSERTION",
+                        "content_hash":  "72a77242300c3eb4f0c102476510da942654ec965709ae52d39bd68b63f57328",
+                        "semantic_hash":  "72a77242300c3eb4f0c102476510da942654ec965709ae52d39bd68b63f57328",
+                        "first_seen":  "2026-05-16",
+                        "last_seen":  "2026-05-16",
+                        "last_changed":  "2026-05-16",
+                        "category":  "Quantum chaos / quantum gravity",
+                        "tags":  [
+                                     "shunyu-yao",
+                                     "alfredyao",
+                                     "quantum-physics"
+                                 ],
+                        "summary":  "We study a class of many body chaotic models related to the Brownian Sachdev-Ye-Kitaev model. An emergent symmetry maps the quantum dynamics into a classical stochastic process. Thus we are able to study many dynamical properties at finite N on an arbitrary graph structure. A comprehensive study of operator size growth with or without spatial locality is presented. We will show universal behaviors emerge at large N limit, and compare them with field theory method. We also design simple stochastic processes as an in...",
+                        "what_it_teaches":  "How quantum chaos and gravity concepts connect to information dynamics, scrambling, and theoretical physics.",
+                        "wiki_page":  "wiki/sources/shunyu-yao/alfredyao/paper-notes-on-solvable-models-of-many-body-quantum-chaos-71987866b8.md",
+                        "public_handling":  "public-metadata-summary-hash-link-only",
+                        "source_confidence":  "arxiv-api-keyword-disambiguated",
+                        "crawl_errors":  [
+
+                                         ],
+                        "extra":  {
+                                      "arxiv":  "2408.11123",
+                                      "updated":  "2024-08-20T18:24:52Z"
+                                  }
+                    },
+                    {
+                        "id":  "paper:arxiv:2405.13886",
+                        "person_key":  "alfredyao",
+                        "source_kind":  "paper",
+                        "canonical_url":  "https://arxiv.org/abs/2405.13886",
+                        "title":  "Quantum Energy Teleportation versus Information Teleportation",
+                        "authors_or_owners":  [
+                                                  "Jinzhao Wang",
+                                                  "Shunyu Yao"
+                                              ],
+                        "venue_or_context":  "",
+                        "published_or_updated":  "2024-05-22T18:00:01Z",
+                        "repo_path":  "",
+                        "license":  "NOASSERTION",
+                        "content_hash":  "298ae4937eabbf1dd86759c0833bb283a629b71034d520addda1993d1344fcf6",
+                        "semantic_hash":  "298ae4937eabbf1dd86759c0833bb283a629b71034d520addda1993d1344fcf6",
+                        "first_seen":  "2026-05-16",
+                        "last_seen":  "2026-05-16",
+                        "last_changed":  "2026-05-16",
+                        "category":  "Quantum chaos / quantum gravity",
+                        "tags":  [
+                                     "shunyu-yao",
+                                     "alfredyao",
+                                     "quantum-physics"
+                                 ],
+                        "summary":  "Quantum energy teleportation (QET) is the phenomenon in which locally inaccessible energy is activated as extractable work through collaborative local operations and classical communication (LOCC) with an entangled partner. It closely resembles the more well-known quantum information teleportation (QIT) where quantum information can be sent through an entangled pair with LOCC. It is tempting to ask how QET is related to QIT. Here we report a first study of this connection. Despite the apparent similarity, we show t...",
+                        "what_it_teaches":  "How quantum chaos and gravity concepts connect to information dynamics, scrambling, and theoretical physics.",
+                        "wiki_page":  "wiki/sources/shunyu-yao/alfredyao/paper-quantum-energy-teleportation-versus-information-teleportation-afc2f6acf4.md",
+                        "public_handling":  "public-metadata-summary-hash-link-only",
+                        "source_confidence":  "arxiv-api-keyword-disambiguated",
+                        "crawl_errors":  [
+
+                                         ],
+                        "extra":  {
+                                      "arxiv":  "2405.13886",
+                                      "updated":  "2024-12-11T02:13:46Z"
+                                  }
+                    },
+                    {
+                        "id":  "paper:arxiv:2508.00477",
+                        "person_key":  "alfredyao",
+                        "source_kind":  "paper",
+                        "canonical_url":  "https://arxiv.org/abs/2508.00477",
+                        "title":  "LAMIC: Layout-Aware Multi-Image Composition via Scalability of Multimodal Diffusion Transformer",
+                        "authors_or_owners":  [
+                                                  "Yuzhuo Chen",
+                                                  "Zehua Ma",
+                                                  "Jianhua Wang",
+                                                  "Kai Kang",
+                                                  "Shunyu Yao",
+                                                  "Weiming Zhang"
+                                              ],
+                        "venue_or_context":  "",
+                        "published_or_updated":  "2025-08-01T09:51:54Z",
+                        "repo_path":  "",
+                        "license":  "NOASSERTION",
+                        "content_hash":  "367944518de20b4bb94f209fd11b11b51f47388f30faa4f128156a819b3e2260",
+                        "semantic_hash":  "367944518de20b4bb94f209fd11b11b51f47388f30faa4f128156a819b3e2260",
+                        "first_seen":  "2026-05-16",
+                        "last_seen":  "2026-05-16",
+                        "last_changed":  "2026-05-16",
+                        "category":  "Reinforcement learning and reasoning",
+                        "tags":  [
+                                     "shunyu-yao",
+                                     "alfredyao",
+                                     "reinforcement-learning"
+                                 ],
+                        "summary":  "In controllable image synthesis, generating coherent and consistent images from multiple references with spatial layout awareness remains an open challenge. We present LAMIC, a Layout-Aware Multi-Image Composition framework that, for the first time, extends single-reference diffusion models to multi-reference scenarios in a training-free manner. Built upon the MMDiT model, LAMIC introduces two plug-and-play attention mechanisms: 1) Group Isolation Attention (GIA) to enhance entity disentanglement; and 2) Region-Mod...",
+                        "what_it_teaches":  "How learning, planning, and feedback loops shape agent behavior and model capability.",
+                        "wiki_page":  "wiki/sources/shunyu-yao/alfredyao/paper-lamic-layout-aware-multi-image-composition-via-scalability-of-multimodal-diffusion-transfo-30603d59bd.md",
+                        "public_handling":  "public-metadata-summary-hash-link-only",
+                        "source_confidence":  "arxiv-api-keyword-disambiguated",
+                        "crawl_errors":  [
+
+                                         ],
+                        "extra":  {
+                                      "arxiv":  "2508.00477",
+                                      "updated":  "2025-12-23T14:27:42Z"
+                                  }
+                    },
+                    {
+                        "id":  "paper:arxiv:2406.04338",
+                        "person_key":  "alfredyao",
+                        "source_kind":  "paper",
+                        "canonical_url":  "https://arxiv.org/abs/2406.04338",
+                        "title":  "Physics3D: Learning Physical Properties of 3D Gaussians via Video Diffusion",
+                        "authors_or_owners":  [
+                                                  "Fangfu Liu",
+                                                  "Hanyang Wang",
+                                                  "Shunyu Yao",
+                                                  "Shengjun Zhang",
+                                                  "Jie Zhou",
+                                                  "Yueqi Duan"
+                                              ],
+                        "venue_or_context":  "",
+                        "published_or_updated":  "2024-06-06T17:59:47Z",
+                        "repo_path":  "",
+                        "license":  "NOASSERTION",
+                        "content_hash":  "b9cdf81fd45d3ee95c14b5a3ceacc8be4812a80ca89c35c5e9d32cfc04ba1b82",
+                        "semantic_hash":  "b9cdf81fd45d3ee95c14b5a3ceacc8be4812a80ca89c35c5e9d32cfc04ba1b82",
+                        "first_seen":  "2026-05-16",
+                        "last_seen":  "2026-05-16",
+                        "last_changed":  "2026-05-16",
+                        "category":  "Reinforcement learning and reasoning",
+                        "tags":  [
+                                     "shunyu-yao",
+                                     "alfredyao",
+                                     "reinforcement-learning"
+                                 ],
+                        "summary":  "In recent years, there has been rapid development in 3D generation models, opening up new possibilities for applications such as simulating the dynamic movements of 3D objects and customizing their behaviors. However, current 3D generative models tend to focus only on surface features such as color and shape, neglecting the inherent physical properties that govern the behavior of objects in the real world. To accurately simulate physics-aligned dynamics, it is essential to predict the physical properties of materia...",
+                        "what_it_teaches":  "How learning, planning, and feedback loops shape agent behavior and model capability.",
+                        "wiki_page":  "wiki/sources/shunyu-yao/alfredyao/paper-physics3d-learning-physical-properties-of-3d-gaussians-via-video-diffusion-f41709a00c.md",
+                        "public_handling":  "public-metadata-summary-hash-link-only",
+                        "source_confidence":  "arxiv-api-keyword-disambiguated",
+                        "crawl_errors":  [
+
+                                         ],
+                        "extra":  {
+                                      "arxiv":  "2406.04338",
+                                      "updated":  "2024-06-11T03:36:09Z"
+                                  }
+                    },
+                    {
+                        "id":  "paper:url:e8eaf682a6edeea9",
+                        "person_key":  "alfredyao",
+                        "source_kind":  "paper-or-pdf",
+                        "canonical_url":  "https://alfredyao.github.io/Shunyu_Yao_CV.pdf",
+                        "title":  "CV",
+                        "authors_or_owners":  [
+
+                                              ],
+                        "venue_or_context":  "",
+                        "published_or_updated":  "",
+                        "repo_path":  "",
+                        "license":  "NOASSERTION",
+                        "content_hash":  "068dc5fe5acd483a7bd4cdb24680e4e64dbbde27f47b0746c00a9c030cad0c53",
+                        "semantic_hash":  "068dc5fe5acd483a7bd4cdb24680e4e64dbbde27f47b0746c00a9c030cad0c53",
+                        "first_seen":  "2026-05-16",
+                        "last_seen":  "2026-05-16",
+                        "last_changed":  "2026-05-16",
+                        "category":  "Physics-to-AI research transition",
+                        "tags":  [
+                                     "shunyu-yao",
+                                     "alfredyao"
+                                 ],
+                        "summary":  "PDF or paper link discovered from the canonical homepage. Full PDF is not mirrored publicly unless license-safe.",
+                        "what_it_teaches":  "How a physics research background transfers into frontier AI, RL, and agentic coding work.",
+                        "wiki_page":  "wiki/sources/shunyu-yao/alfredyao/paper-cv-00c65d5d10.md",
+                        "public_handling":  "public-metadata-summary-hash-link-only",
+                        "source_confidence":  "public-source",
+                        "crawl_errors":  [
+
+                                         ],
+                        "extra":  {
+                                      "discovered_from":  "https://alfredyao.github.io/"
+                                  }
+                    },
+                    {
+                        "id":  "post:86ddc2e42c3346c4",
+                        "person_key":  "alfredyao",
+                        "source_kind":  "post",
+                        "canonical_url":  "https://alfredyao.github.io/posts/2025-10-06.html",
+                        "title":  "post 2025 10 06",
+                        "authors_or_owners":  [
+
+                                              ],
+                        "venue_or_context":  "",
+                        "published_or_updated":  "",
+                        "repo_path":  "",
+                        "license":  "NOASSERTION",
+                        "content_hash":  "351084b7d5aca5812db51007f2ddf3cffe4faf2b3321fde41b52a6af26d2c3a1",
+                        "semantic_hash":  "351084b7d5aca5812db51007f2ddf3cffe4faf2b3321fde41b52a6af26d2c3a1",
+                        "first_seen":  "2026-05-16",
+                        "last_seen":  "2026-05-16",
+                        "last_changed":  "2026-05-16",
+                        "category":  "Public essays / research philosophy",
+                        "tags":  [
+                                     "shunyu-yao",
+                                     "alfredyao",
+                                     "public-writing"
+                                 ],
+                        "summary":  "Public project, release, blog, or supporting page linked from the canonical homepage.",
+                        "what_it_teaches":  "A public item in the Shunyu Yao corpora that should be interpreted with source provenance and identity separation.",
+                        "wiki_page":  "wiki/sources/shunyu-yao/alfredyao/post-post-2025-10-06-9999f89dc9.md",
+                        "public_handling":  "public-metadata-summary-hash-link-only",
+                        "source_confidence":  "public-source",
+                        "crawl_errors":  [
+
+                                         ],
+                        "extra":  {
+                                      "discovered_from":  "https://alfredyao.github.io/"
+                                  }
+                    },
+                    {
+                        "id":  "post:82af75d5b210af58",
+                        "person_key":  "alfredyao",
+                        "source_kind":  "post",
+                        "canonical_url":  "https://alfredyao.github.io/posts/2025-11-18.html",
+                        "title":  "post 2025 11 18",
+                        "authors_or_owners":  [
+
+                                              ],
+                        "venue_or_context":  "",
+                        "published_or_updated":  "",
+                        "repo_path":  "",
+                        "license":  "NOASSERTION",
+                        "content_hash":  "24b67de44ec12f52699a99ac354f0a926cf331e62a6ef121c335c345375c8600",
+                        "semantic_hash":  "24b67de44ec12f52699a99ac354f0a926cf331e62a6ef121c335c345375c8600",
+                        "first_seen":  "2026-05-16",
+                        "last_seen":  "2026-05-16",
+                        "last_changed":  "2026-05-16",
+                        "category":  "Public essays / research philosophy",
+                        "tags":  [
+                                     "shunyu-yao",
+                                     "alfredyao",
+                                     "public-writing"
+                                 ],
+                        "summary":  "Public project, release, blog, or supporting page linked from the canonical homepage.",
+                        "what_it_teaches":  "A public item in the Shunyu Yao corpora that should be interpreted with source provenance and identity separation.",
+                        "wiki_page":  "wiki/sources/shunyu-yao/alfredyao/post-post-2025-11-18-c37c3b8fbd.md",
+                        "public_handling":  "public-metadata-summary-hash-link-only",
+                        "source_confidence":  "public-source",
+                        "crawl_errors":  [
+
+                                         ],
+                        "extra":  {
+                                      "discovered_from":  "https://alfredyao.github.io/"
+                                  }
+                    }
+                ]
+}
