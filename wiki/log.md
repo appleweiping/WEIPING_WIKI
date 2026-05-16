@@ -394,3 +394,20 @@ tags:
   - Recorded the D-drive project-local `frontend-slides` installation, local template-library integration, and default template-backed generation rule.
   - Preserved the two validated deck outputs separately: `life-did-not-spare-you` and `beauty-love`.
   - Recorded only minimal neutral metadata for the Beauty-Love image pack and avoided public visual-detail expansion.
+
+## [2026-05-17 01:49] ingest | PaperOrchestra skill pack
+
+- Pages created or updated:
+  - [[paper-orchestra]]
+  - [[2026-05-17-paper-orchestra-github]]
+  - [[agent-skill-repositories]]
+  - [[research-projects]]
+  - [[index]]
+- Sources used:
+  - `https://github.com/Ar9av/PaperOrchestra.git`
+  - Local mirror under `skill/paper-orchestra/`
+  - Installed project-local skills under `.codex/skills/`
+- Notes:
+  - Recorded PaperOrchestra's host-agent-pluggable multi-agent paper-writing pipeline, installed skills, deterministic helpers, and contribution boundaries.
+  - Installed 9 PaperOrchestra skills plus shared reference material under the D-drive project-local `.codex/skills/` path.
+  - Preserved the source repository under `skill/paper-orchestra/` after removing nested clone metadata.

@@ -3,7 +3,7 @@ title: Agent Skill Repositories
 type: topic
 status: active
 created: 2026-05-15
-updated: 2026-05-16
+updated: 2026-05-17
 tags:
   - topic
   - agent-skills
@@ -11,18 +11,20 @@ tags:
 source_pages:
   - 2026-05-15-d-drive-healthcare-and-skill-roots
   - 2026-05-16-skill-source-repository-trace
+  - 2026-05-17-paper-orchestra-github
 ---
 
 # Agent Skill Repositories
 
 ## Scope
 
-This topic tracks local repositories under `D:/Skill` that collect, generate, install, evaluate, or optimize agent skills.
+This topic tracks local repositories and project-local mirrors that collect, generate, install, evaluate, or optimize agent skills.
 
 ## Current Source Base
 
 - [[2026-05-15-d-drive-healthcare-and-skill-roots]] - Read-only public-safe survey of the D-drive skill roots.
 - [[2026-05-16-skill-source-repository-trace]] - Upstream/origin trace for migrated local skill repositories.
+- [[2026-05-17-paper-orchestra-github]] - GitHub source note and local installation record for the PaperOrchestra paper-writing skill pack.
 
 ## Current Roots
 
@@ -33,6 +35,7 @@ This topic tracks local repositories under `D:/Skill` that collect, generate, in
 | [[darwin-skill]] | `D:/Skill/darwin-skill` | Fork of `alchaincyf/darwin-skill`; autonomous skill optimizer and scoring loop. |
 | [[mattpocock-skills]] | `D:/Skill/mattpocock-skills` | Fork of `mattpocock/skills`; small composable engineering and productivity skills. |
 | [[nuwa-skill]] | `D:/Skill/nuwa-skill` | Fork of `alchaincyf/nuwa-skill`; research-driven person-perspective skill creation. |
+| [[paper-orchestra]] | `D:/Research/vipin's knowledgebase/skill/paper-orchestra` | Mirror of `Ar9av/PaperOrchestra`; multi-agent paper-writing skill pack installed into project-local `.codex/skills/`. |
 
 ## Practical Takeaways
 
@@ -42,6 +45,7 @@ This topic tracks local repositories under `D:/Skill` that collect, generate, in
 - INFERRED: Use [[colleague-skill]] or [[nuwa-skill]] when the goal is to build a skill that represents a person, relationship, or perspective.
 - INFERRED: Use [[darwin-skill]] when the goal is to review or optimize an existing `SKILL.md`.
 - INFERRED: Use [[mattpocock-skills]] when looking for disciplined engineering workflow patterns.
+- INFERRED: Use [[paper-orchestra]] when the goal is to transform research ideas, experiment logs, figures, citations, and templates into a structured LaTeX paper workflow.
 
 ## Operating Rules
 
@@ -50,6 +54,7 @@ This topic tracks local repositories under `D:/Skill` that collect, generate, in
 - If installing or modifying skills from these repos, inspect each repo's own instructions first.
 - Treat `origin` as Vipin's fork/mirror and `upstream` as the original source repository when present.
 - Classify this corpus as `skill`, not as generic local projects, because the durable unit is reusable agent behavior encoded in `SKILL.md` and related tooling.
+- For project-local `.codex/skills/` installs, keep a source mirror under `skill/` when practical so future agents can inspect upstream docs and reinstall without using the C drive.
 
 ## Counterpoints And Gaps
 
@@ -57,6 +62,7 @@ This topic tracks local repositories under `D:/Skill` that collect, generate, in
 - Individual skills inside these repositories were not validated for correctness, safety, dependency availability, or host compatibility.
 - Some repositories contain generated assets, demos, or examples that may not be needed for normal skill use.
 - `D:/Skill` also contains non-git/generated project folders such as video prompt packages and local MCP experiments; these should be ingested separately if they become durable skills.
+- `PaperOrchestra` is stored under this wiki repository rather than the separate `D:/Skill` root, so future current-state checks should inspect both `skill/paper-orchestra/` and `.codex/skills/`.
 
 ## Related Pages
 

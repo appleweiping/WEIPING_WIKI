@@ -54,6 +54,7 @@ This is the main catalog of the wiki.
 - [[darwin-skill]] - Local skill optimizer inspired by autoresearch-style evaluation loops.
 - [[mattpocock-skills]] - Local mirror/fork of composable engineering and productivity agent skills.
 - [[nuwa-skill]] - Local repository for research-driven person-perspective skill creation.
+- [[paper-orchestra]] - Project-local PaperOrchestra skill pack for multi-agent research-paper writing and installed Codex skills.
 - [[terraria-save-archive]] - Local Terraria save backup and inventory rooted at `D:/Terraria_doc`.
 - [[lu-kan]] - Architect, exhibition designer, curator, and AIGC workflow practitioner profile from user-provided chat material.
 
@@ -68,6 +69,7 @@ This is the main catalog of the wiki.
 ## Sources
 
 - [[2026-05-17-html-ppt-skill-and-deck-session]] - Chat/session source note for installing the D-drive HTML PPT skill/template setup and producing two validated decks.
+- [[2026-05-17-paper-orchestra-github]] - GitHub source note for `Ar9av/PaperOrchestra`, its paper-writing pipeline, local mirror, and installed skills.
 
 - [[2026-05-16-canvas-hack-recovery-note]] - User-provided Canvas outage/hack note; expected recovery 2026-05-18 and blocks syllabus retrieval for UMN transfer-credit review.
 
@@ -763,7 +765,7 @@ This is the main catalog of the wiki.
 - [[local-project-roots]] - Topic map for local D-drive project/archive roots, discovery rules, and safety boundaries.
 - [[us-visa-appointments]] - Practical notes and safety boundaries for US visa appointment scheduling and slot-monitoring tools.
 - [[healthcare-projects]] - Local healthcare project routing and public/private safety boundaries.
-- [[agent-skill-repositories]] - Local skill repository routing for skill stores, generators, optimizers, and engineering skill sets.
+- [[agent-skill-repositories]] - Local skill repository routing for skill stores, generators, optimizers, engineering skill sets, and project-local paper-writing skills.
 - [[terraria-save-archive]] - Local Terraria save archive, backup path, restore notes, and sorting heuristics.
 
 ## Comparisons

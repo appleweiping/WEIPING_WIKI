@@ -3,12 +3,13 @@ title: Research Projects
 type: topic
 status: active
 created: 2026-05-10
-updated: 2026-05-10
+updated: 2026-05-17
 tags:
   - topic
   - research
 source_pages:
   - 2026-05-10-research-project-roots
+  - 2026-05-17-paper-orchestra-github
 ---
 
 # Research Projects
@@ -24,6 +25,7 @@ This topic tracks Vipin's active research projects and their durable claim bound
 - Temporal recommendation evidence: [[tgl-rec]]
 - Agent benchmark / specification grounding: [[donebench]]
 - AI4S protein uncertainty: [[uncertaintyprotein-ai4s]], [[protein-optimization-feedback-shift]]
+- Paper writing and literature-mapping workflow support: [[paper-orchestra]]
 
 ## Cross-Cutting Themes
 
@@ -31,7 +33,8 @@ This topic tracks Vipin's active research projects and their durable claim bound
 - EXTRACTED: Recommendation projects converge on same-candidate score schemas and official-baseline governance.
 - EXTRACTED: AI4EDA and AI4S projects both study closed-loop decision systems where uncertainty must remain useful under distribution shift or expensive truth queries.
 - INFERRED: Vipin's research portfolio is increasingly about decision-relevant uncertainty, not uncertainty as a passive prediction metric.
-- INFERRED: For future科研想法, the wiki should support aggressive reframing and [[research-ideation-policy]], not only summarizing the current project state.
+- INFERRED: For future research ideation, the wiki should support aggressive reframing and [[research-ideation-policy]], not only summarizing the current project state.
+- INFERRED: [[paper-orchestra]] can support project write-ups by converting verified project material into outlines, literature reviews, figures, LaTeX sections, and refinement loops; it should not replace project-specific evidence checks.
 
 ## Counterpoints and Gaps
 
@@ -45,3 +48,4 @@ This topic tracks Vipin's active research projects and their durable claim bound
 - [[research-ideation-policy]]
 - [[llm-based-recommendation]]
 - [[personal-knowledge-systems]]
+- [[paper-orchestra]]
