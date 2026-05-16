@@ -93,3 +93,16 @@ tags:
   - Created separate public corpora for `ysymyth` and `alfredyao`.
   - Stored manifests under `raw/yao-shunyu-ysymyth/` and `raw/yao-shunyu-alfred/`.
   - Added reusable public-person corpus workflow guidance for future agents.
+
+## [2026-05-16 02:44] ingest | shunyu yao github token support
+
+- Pages created or updated:
+  - [[shunyu-yao-public-corpora]]
+  - [[2026-05-16-yao-shunyu-public-corpora]]
+- Sources used:
+  - GitHub API rate limit check
+  - `scripts/ingest-shunyu-yao-public.ps1`
+- Notes:
+  - Configured the local user environment so the ingest can use `GITHUB_TOKEN`.
+  - Updated the ingest script to read `GITHUB_TOKEN` or `GH_TOKEN` from process, user, or machine environment before falling back to unauthenticated access.
+  - Re-ran the corpus ingest with authenticated GitHub API access; repository metadata now resolves with `github-api` confidence and no crawl errors.

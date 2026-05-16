@@ -23,6 +23,7 @@ source_pages:
 - linked-github-repository: 7
 - paper: 25
 - paper-or-pdf: 5
+- person-profile: 2
 - post: 3
 - project-or-public-release: 12
 - talk-or-slides: 4
@@ -30,18 +31,18 @@ source_pages:
 ## Categories
 
 - Evaluation / benchmark design: 3
-- Language agents / agent architectures: 30
-- Physics-to-AI research transition: 6
+- Language agents / agent architectures: 31
+- Physics-to-AI research transition: 5
 - Public essays / research philosophy: 5
 - Quantum chaos / quantum gravity: 3
-- Reinforcement learning and reasoning: 6
-- Software engineering agents and benchmarks: 11
+- Reinforcement learning and reasoning: 7
+- Software engineering agents and benchmarks: 12
 - Tool use / computer use / digital automation: 7
 
 ## Repositories And Projects
 
 - [[sources/shunyu-yao/alfredyao/github-alfredyao-alfredyao-github-io-9b72e06034|alfredyao/alfredyao.github.io]] - `alfredyao`, Physics-to-AI research transition
-- [[sources/shunyu-yao/alfredyao/github-alfredyao-behavior-cloning-pytorch-0ef01a5d93|alfredyao/behavior_cloning_pytorch]] - `alfredyao`, Physics-to-AI research transition
+- [[sources/shunyu-yao/alfredyao/github-alfredyao-behavior-cloning-pytorch-0ef01a5d93|alfredyao/behavior_cloning_pytorch]] - `alfredyao`, Reinforcement learning and reasoning
 - [[sources/shunyu-yao/alfredyao/github-alfredyao-numpy-classifier-ed654a333b|alfredyao/Numpy_classifier]] - `alfredyao`, Physics-to-AI research transition
 - [[sources/shunyu-yao/alfredyao/github-alfredyao-pytorch-classifier-40136e6b3a|alfredyao/Pytorch_classifier]] - `alfredyao`, Physics-to-AI research transition
 - [[sources/shunyu-yao/alfredyao/github-alfredyao-quantum-chaos-diffusion-reaction-345a82ab29|alfredyao/Quantum_chaos_Diffusion_reaction]] - `alfredyao`, Language agents / agent architectures

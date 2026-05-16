@@ -21,7 +21,7 @@ source_pages:
 - Canonical URL: https://github.com/alfredyao/Quantum_chaos_Diffusion_reaction
 - License: `NOASSERTION`
 - Public handling: `public-metadata-summary-hash-link-only`
-- Semantic hash: `fc039c8c9cda9b47d0602c37edb5e4b2e20ced24ed2091e5a321ad58544b4af3`
+- Semantic hash: `5e55d24501cc6d5da22d7d06a6386665e686315367251ae70d545616d9e0d04d`
 - First seen: 2026-05-16
 - Last changed: 2026-05-16
 - Identity guard: Do not confuse with yao-shunyu-ysymyth, the OpenAI language-agents researcher at ysymyth.github.io.
@@ -35,7 +35,7 @@ source_pages:
 
 ## Summary
 
-GitHub repository discovered for alfredyao/Quantum_chaos_Diffusion_reaction. README/full source is not mirrored publicly unless license-safe.
+Official codes for simulation done in paper: (under construction)
 
 ## What This Teaches
 

@@ -26,8 +26,8 @@ This hub tracks two different public people who are both written as Shunyu Yao i
 
 ## Corpus Shape
 
-- alfredyao: 15
-- ysymyth: 56
+- alfredyao: 16
+- ysymyth: 57
 
 ## Source Kinds
 
@@ -38,6 +38,7 @@ This hub tracks two different public people who are both written as Shunyu Yao i
 - linked-github-repository: 7
 - paper: 25
 - paper-or-pdf: 5
+- person-profile: 2
 - post: 3
 - project-or-public-release: 12
 - talk-or-slides: 4
@@ -59,4 +60,4 @@ This hub tracks two different public people who are both written as Shunyu Yao i
 ## Counterpoints And Gaps
 
 - This hub is an index and routing surface, not a substitute for reading the item pages and source URLs.
-- GitHub API access can be rate-limited; the script uses the public GitHub HTML repository listing as a fallback when needed.
+- GitHub API access can be rate-limited; `scripts/ingest-shunyu-yao-public.ps1` uses `GITHUB_TOKEN` or `GH_TOKEN` when available, then falls back to the public GitHub HTML repository listing if API access still fails.

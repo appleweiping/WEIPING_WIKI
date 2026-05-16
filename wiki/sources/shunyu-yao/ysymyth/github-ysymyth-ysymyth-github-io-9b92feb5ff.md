@@ -18,9 +18,9 @@ source_pages:
 - Person key: `ysymyth`
 - Source kind: `github-repository`
 - Canonical URL: https://github.com/ysymyth/ysymyth.github.io
-- License: `NOASSERTION`
+- License: `MIT`
 - Public handling: `public-metadata-summary-hash-link-only`
-- Semantic hash: `92fdf80de7a0a999b14bd363ce81093e4b5952b2888e0383071a7e79e7991568`
+- Semantic hash: `e2afde2267ab782a4b56d21d9fa4b833ef45d6739e0411b0d87a194ba5504c33`
 - First seen: 2026-05-16
 - Last changed: 2026-05-16
 - Identity guard: Do not confuse with yao-shunyu-alfred, the physics-to-AI researcher at alfredyao.github.io.

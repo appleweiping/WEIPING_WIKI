@@ -19,9 +19,9 @@ source_pages:
 - Person key: `ysymyth`
 - Source kind: `github-repository`
 - Canonical URL: https://github.com/ysymyth/ReAct
-- License: `NOASSERTION`
+- License: `MIT`
 - Public handling: `public-metadata-summary-hash-link-only`
-- Semantic hash: `e5ead78f16adab78ff2252d132e2fa1878be90af4716e7bd5d29cd8b528a9029`
+- Semantic hash: `3f1cf48086e152f25efba8505d62ba03d0dcb1ba379c9cb321fa303ef0b0a528`
 - First seen: 2026-05-16
 - Last changed: 2026-05-16
 - Identity guard: Do not confuse with yao-shunyu-alfred, the physics-to-AI researcher at alfredyao.github.io.
@@ -35,7 +35,7 @@ source_pages:
 
 ## Summary
 
-GitHub repository discovered for ysymyth/ReAct. README/full source is not mirrored publicly unless license-safe.
+[ICLR 2023] ReAct: Synergizing Reasoning and Acting in Language Models
 
 ## What This Teaches
 

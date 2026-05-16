@@ -18,9 +18,9 @@ source_pages:
 - Person key: `ysymyth`
 - Source kind: `github-repository`
 - Canonical URL: https://github.com/ysymyth/ec-nl
-- License: `NOASSERTION`
+- License: `MIT`
 - Public handling: `public-metadata-summary-hash-link-only`
-- Semantic hash: `8ce1d92c2c9530e05dfb7d617d4b760a1253bc15f6df0381437c615b17aa2a96`
+- Semantic hash: `6f54c289135d2e3cd5eab2fa1457d1cb5c684d825bea57c7cacd4d1d347779c9`
 - First seen: 2026-05-16
 - Last changed: 2026-05-16
 - Identity guard: Do not confuse with yao-shunyu-alfred, the physics-to-AI researcher at alfredyao.github.io.
@@ -34,7 +34,7 @@ source_pages:
 
 ## Summary
 
-GitHub repository discovered for ysymyth/ec-nl. README/full source is not mirrored publicly unless license-safe.
+[ICLR 2022] Linking Emergent and Natural Languages via Corpus Transfer
 
 ## What This Teaches
 

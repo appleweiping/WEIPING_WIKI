@@ -25,11 +25,12 @@ source_pages:
 - alfredyao GitHub API: https://api.github.com/users/alfredyao
 - alfredyao CV pointer: https://alfredyao.github.io/Shunyu_Yao_CV.pdf
 - arXiv API query: author `Shunyu Yao` with identity/category filters.
+- GitHub API calls should use `GITHUB_TOKEN` or `GH_TOKEN` from the process, user, or machine environment; this raises the rate limit and keeps repository metadata source confidence at `github-api`.
 
 ## Snapshot
 
-- `ysymyth` entries: 56, new 0, changed 0, errors 2.
-- `alfredyao` entries: 15, new 0, changed 0, errors 2.
+- `ysymyth` entries: 57, new 0, changed 0, errors 0.
+- `alfredyao` entries: 16, new 0, changed 0, errors 0.
 
 ## Public Handling
 

@@ -20,7 +20,7 @@ source_pages:
 - Canonical URL: https://github.com/alfredyao/SER_fine_tuning
 - License: `NOASSERTION`
 - Public handling: `public-metadata-summary-hash-link-only`
-- Semantic hash: `baa80b985e5b8c17a773ceebf41440f610a51d32e8da15f45ba113ca7ef35109`
+- Semantic hash: `5571f624169bbe839015051e0126ac1ed302662cb0a4046fcd1c26f5cbdde04c`
 - First seen: 2026-05-16
 - Last changed: 2026-05-16
 - Identity guard: Do not confuse with yao-shunyu-ysymyth, the OpenAI language-agents researcher at ysymyth.github.io.
@@ -34,7 +34,7 @@ source_pages:
 
 ## Summary
 
-GitHub repository discovered for alfredyao/SER_fine_tuning. README/full source is not mirrored publicly unless license-safe.
+Code for fine tuning speech emotion recognition based on pretrained transformer(Wav2Vec2.0-xlsr53)
 
 ## What This Teaches
 

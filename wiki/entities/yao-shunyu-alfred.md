@@ -26,10 +26,10 @@ source_pages:
 ## Corpus Snapshot
 
 - Manifest: `raw/yao-shunyu-alfred/manifest.json`
-- Entries: 15
+- Entries: 16
 - New entries this run: 0
 - Changed entries this run: 0
-- Errors: 2
+- Errors: 0
 
 ## Research Shape
 

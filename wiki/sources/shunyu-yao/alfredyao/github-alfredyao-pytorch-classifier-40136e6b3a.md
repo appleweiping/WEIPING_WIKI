@@ -20,7 +20,7 @@ source_pages:
 - Canonical URL: https://github.com/alfredyao/Pytorch_classifier
 - License: `NOASSERTION`
 - Public handling: `public-metadata-summary-hash-link-only`
-- Semantic hash: `95e17f0cbe336c1e07e9c9426335f6f398e40549f559490a3bc13b9d4b45149b`
+- Semantic hash: `127ab1586ca477eb83957e040abd7856cbc178a32b5d69eae0457c97811d9e26`
 - First seen: 2026-05-16
 - Last changed: 2026-05-16
 - Identity guard: Do not confuse with yao-shunyu-ysymyth, the OpenAI language-agents researcher at ysymyth.github.io.
@@ -34,7 +34,7 @@ source_pages:
 
 ## Summary
 
-GitHub repository discovered for alfredyao/Pytorch_classifier. README/full source is not mirrored publicly unless license-safe.
+A pytorch realization of simple neural network classifier
 
 ## What This Teaches
 

@@ -14,6 +14,21 @@ $now = (Get-Date).ToString("yyyy-MM-dd HH:mm")
 $runStamp = (Get-Date).ToString("o")
 $utf8NoBom = New-Object System.Text.UTF8Encoding($false)
 $userAgent = "vipin-wiki-shunyu-yao-ingest"
+$githubToken = if ($env:GITHUB_TOKEN) {
+    $env:GITHUB_TOKEN
+} elseif ($env:GH_TOKEN) {
+    $env:GH_TOKEN
+} elseif ([Environment]::GetEnvironmentVariable("GITHUB_TOKEN", "User")) {
+    [Environment]::GetEnvironmentVariable("GITHUB_TOKEN", "User")
+} elseif ([Environment]::GetEnvironmentVariable("GH_TOKEN", "User")) {
+    [Environment]::GetEnvironmentVariable("GH_TOKEN", "User")
+} elseif ([Environment]::GetEnvironmentVariable("GITHUB_TOKEN", "Machine")) {
+    [Environment]::GetEnvironmentVariable("GITHUB_TOKEN", "Machine")
+} elseif ([Environment]::GetEnvironmentVariable("GH_TOKEN", "Machine")) {
+    [Environment]::GetEnvironmentVariable("GH_TOKEN", "Machine")
+} else {
+    ""
+}
 
 $people = @{
     ysymyth = [pscustomobject]@{
@@ -97,13 +112,25 @@ function Get-Sha256Text([string]$Text) {
     }
 }
 
-function Invoke-WebText([string]$Url) {
+function Get-WebHeaders([string]$Url, [hashtable]$Extra = $null) {
     $headers = @{ "User-Agent" = $userAgent }
+    if ($Extra) {
+        foreach ($key in $Extra.Keys) { $headers[$key] = $Extra[$key] }
+    }
+    if ($githubToken -and $Url -match '^https://(api\.)?github\.com/') {
+        $headers["Authorization"] = "Bearer $githubToken"
+        $headers["X-GitHub-Api-Version"] = "2022-11-28"
+    }
+    return $headers
+}
+
+function Invoke-WebText([string]$Url) {
+    $headers = Get-WebHeaders $Url
     return (Invoke-WebRequest -Uri $Url -Headers $headers -UseBasicParsing -TimeoutSec 90).Content
 }
 
 function Invoke-WebJson([string]$Url) {
-    $headers = @{ "User-Agent" = $userAgent }
+    $headers = Get-WebHeaders $Url
     return Invoke-RestMethod -Uri $Url -Headers $headers -TimeoutSec 90
 }
 
@@ -334,7 +361,7 @@ function Get-OldManifest([string]$Path) {
 function Get-GitHubRepos([string]$Login, [System.Collections.Generic.List[string]]$Errors) {
     try {
         $repos = Invoke-WebJson "https://api.github.com/users/$Login/repos?per_page=100&sort=updated"
-        if ($null -ne $repos.value) { return @($repos.value) }
+        if ($null -ne $repos.PSObject.Properties["value"]) { return @($repos.value) }
         return @($repos)
     }
     catch {
@@ -353,7 +380,7 @@ function Get-GitHubUser([string]$Login, [System.Collections.Generic.List[string]
 
 function Get-RepoReadmeSummary([object]$Repo) {
     try {
-        $headers = @{ "User-Agent" = $userAgent; "Accept" = "application/vnd.github.raw" }
+        $headers = Get-WebHeaders "https://api.github.com/repos/$($Repo.full_name)/readme" @{ "Accept" = "application/vnd.github.raw" }
         $readme = (Invoke-WebRequest -Uri "https://api.github.com/repos/$($Repo.full_name)/readme" -Headers $headers -UseBasicParsing -TimeoutSec 45).Content
         return Get-PlainSummary $readme 520
     }

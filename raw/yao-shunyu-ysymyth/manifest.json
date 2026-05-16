@@ -1,18 +1,17 @@
 {
     "schema":  "shunyu-yao-public-corpus-v1",
     "person_key":  "ysymyth",
-    "generated_at":  "2026-05-16T02:27:36.1620373+02:00",
+    "generated_at":  "2026-05-16T02:38:00.8528598+02:00",
     "canonical_homepage":  "https://ysymyth.github.io/",
     "github_login":  "ysymyth",
     "public_handling":  "Public wiki pages contain metadata, summaries, links, hashes, and license notes. Unclear-license full PDFs, webpages, and source code are not mirrored wholesale.",
     "identity_guard":  "Do not confuse with yao-shunyu-alfred, the physics-to-AI researcher at alfredyao.github.io.",
-    "entry_count":  56,
+    "entry_count":  57,
     "new_entries_this_run":  0,
     "changed_entries_this_run":  0,
     "removed_entries_this_run":  0,
     "errors":  [
-                   "GitHub user failed for ysymyth: 远程服务器返回错误: (403) 已禁止。",
-                   "GitHub repos failed for ysymyth: 远程服务器返回错误: (403) 已禁止。"
+
                ],
     "entries":  [
                     {
@@ -97,11 +96,11 @@
                                                   "ysymyth"
                                               ],
                         "venue_or_context":  "",
-                        "published_or_updated":  "",
+                        "published_or_updated":  "2024-11-03T03:55:34Z",
                         "repo_path":  "ysymyth/3D-SDN",
                         "license":  "NOASSERTION",
-                        "content_hash":  "6ca9a1f4eb11b4e59b31e1548e0f17e503512f136d1469340532d67baf7cf0fd",
-                        "semantic_hash":  "6ca9a1f4eb11b4e59b31e1548e0f17e503512f136d1469340532d67baf7cf0fd",
+                        "content_hash":  "b0a92dd17963191177b1a7a8edabe2883efddc5871a7c268fd9c62e59f12f13d",
+                        "semantic_hash":  "b0a92dd17963191177b1a7a8edabe2883efddc5871a7c268fd9c62e59f12f13d",
                         "first_seen":  "2026-05-16",
                         "last_seen":  "2026-05-16",
                         "last_changed":  "2026-05-16",
@@ -110,23 +109,29 @@
                                      "shunyu-yao",
                                      "ysymyth"
                                  ],
-                        "summary":  "GitHub repository discovered for ysymyth/3D-SDN. README/full source is not mirrored publicly unless license-safe.",
+                        "summary":  "[NeurIPS 2018] 3D-Aware Scene Manipulation via Inverse Graphics",
                         "what_it_teaches":  "How language models become agents through reasoning, acting, memory, tools, and interface design.",
                         "wiki_page":  "wiki/sources/shunyu-yao/ysymyth/github-ysymyth-3d-sdn-eb281d5742.md",
                         "public_handling":  "public-metadata-summary-hash-link-only",
-                        "source_confidence":  "github-html-fallback",
+                        "source_confidence":  "github-api",
                         "crawl_errors":  [
 
                                          ],
                         "extra":  {
-                                      "stars":  null,
-                                      "forks":  null,
-                                      "language":  "",
+                                      "stars":  265,
+                                      "forks":  40,
+                                      "language":  "Python",
                                       "topics":  [
-
+                                                     "3d-sdn",
+                                                     "3d-vision",
+                                                     "deep-learning",
+                                                     "disentangled-representations",
+                                                     "gans",
+                                                     "generative-adversarial-networks",
+                                                     "pytorch"
                                                  ],
-                                      "default_branch":  "",
-                                      "homepage":  ""
+                                      "default_branch":  "master",
+                                      "homepage":  "http://3dsdn.csail.mit.edu/"
                                   }
                     },
                     {
@@ -139,11 +144,11 @@
                                                   "ysymyth"
                                               ],
                         "venue_or_context":  "",
-                        "published_or_updated":  "",
+                        "published_or_updated":  "2026-05-15T16:53:24Z",
                         "repo_path":  "ysymyth/awesome-language-agents",
                         "license":  "NOASSERTION",
-                        "content_hash":  "072d90b4362a1f1a791e259e39e231a0fd47b07d860ddcae02380662f99dce9e",
-                        "semantic_hash":  "072d90b4362a1f1a791e259e39e231a0fd47b07d860ddcae02380662f99dce9e",
+                        "content_hash":  "4d812ddcca2084d3cc1102e620c85aa1437348f2b6f28a7dba8387e8571cf852",
+                        "semantic_hash":  "4d812ddcca2084d3cc1102e620c85aa1437348f2b6f28a7dba8387e8571cf852",
                         "first_seen":  "2026-05-16",
                         "last_seen":  "2026-05-16",
                         "last_changed":  "2026-05-16",
@@ -153,23 +158,28 @@
                                      "ysymyth",
                                      "language-agents"
                                  ],
-                        "summary":  "GitHub repository discovered for ysymyth/awesome-language-agents. README/full source is not mirrored publicly unless license-safe.",
+                        "summary":  "List of language agents based on paper \"Cognitive Architectures for Language Agents\"",
                         "what_it_teaches":  "How language models become agents through reasoning, acting, memory, tools, and interface design.",
                         "wiki_page":  "wiki/sources/shunyu-yao/ysymyth/github-ysymyth-awesome-language-agents-1268d38a31.md",
                         "public_handling":  "public-metadata-summary-hash-link-only",
-                        "source_confidence":  "github-html-fallback",
+                        "source_confidence":  "github-api",
                         "crawl_errors":  [
 
                                          ],
                         "extra":  {
-                                      "stars":  null,
-                                      "forks":  null,
-                                      "language":  "",
+                                      "stars":  1211,
+                                      "forks":  83,
+                                      "language":  "TeX",
                                       "topics":  [
-
+                                                     "artificial-intelligence",
+                                                     "awesome-list",
+                                                     "language-agent",
+                                                     "language-model",
+                                                     "llm",
+                                                     "natural-language-processing"
                                                  ],
-                                      "default_branch":  "",
-                                      "homepage":  ""
+                                      "default_branch":  "main",
+                                      "homepage":  "https://arxiv.org/abs/2309.02427"
                                   }
                     },
                     {
@@ -182,11 +192,11 @@
                                                   "ysymyth"
                                               ],
                         "venue_or_context":  "",
-                        "published_or_updated":  "",
+                        "published_or_updated":  "2026-02-27T19:11:51Z",
                         "repo_path":  "ysymyth/ec-nl",
-                        "license":  "NOASSERTION",
-                        "content_hash":  "8ce1d92c2c9530e05dfb7d617d4b760a1253bc15f6df0381437c615b17aa2a96",
-                        "semantic_hash":  "8ce1d92c2c9530e05dfb7d617d4b760a1253bc15f6df0381437c615b17aa2a96",
+                        "license":  "MIT",
+                        "content_hash":  "6f54c289135d2e3cd5eab2fa1457d1cb5c684d825bea57c7cacd4d1d347779c9",
+                        "semantic_hash":  "6f54c289135d2e3cd5eab2fa1457d1cb5c684d825bea57c7cacd4d1d347779c9",
                         "first_seen":  "2026-05-16",
                         "last_seen":  "2026-05-16",
                         "last_changed":  "2026-05-16",
@@ -195,22 +205,27 @@
                                      "shunyu-yao",
                                      "ysymyth"
                                  ],
-                        "summary":  "GitHub repository discovered for ysymyth/ec-nl. README/full source is not mirrored publicly unless license-safe.",
+                        "summary":  "[ICLR 2022] Linking Emergent and Natural Languages via Corpus Transfer",
                         "what_it_teaches":  "How language models become agents through reasoning, acting, memory, tools, and interface design.",
                         "wiki_page":  "wiki/sources/shunyu-yao/ysymyth/github-ysymyth-ec-nl-12607dc41f.md",
                         "public_handling":  "public-metadata-summary-hash-link-only",
-                        "source_confidence":  "github-html-fallback",
+                        "source_confidence":  "github-api",
                         "crawl_errors":  [
 
                                          ],
                         "extra":  {
-                                      "stars":  null,
-                                      "forks":  null,
-                                      "language":  "",
+                                      "stars":  33,
+                                      "forks":  7,
+                                      "language":  "Python",
                                       "topics":  [
-
+                                                     "emergent-communication",
+                                                     "iclr",
+                                                     "iclr2022",
+                                                     "language-model",
+                                                     "machine-learning",
+                                                     "natural-language-processing"
                                                  ],
-                                      "default_branch":  "",
+                                      "default_branch":  "master",
                                       "homepage":  ""
                                   }
                     },
@@ -224,11 +239,11 @@
                                                   "ysymyth"
                                               ],
                         "venue_or_context":  "",
-                        "published_or_updated":  "",
+                        "published_or_updated":  "2026-05-15T09:22:32Z",
                         "repo_path":  "ysymyth/ReAct",
-                        "license":  "NOASSERTION",
-                        "content_hash":  "e5ead78f16adab78ff2252d132e2fa1878be90af4716e7bd5d29cd8b528a9029",
-                        "semantic_hash":  "e5ead78f16adab78ff2252d132e2fa1878be90af4716e7bd5d29cd8b528a9029",
+                        "license":  "MIT",
+                        "content_hash":  "3f1cf48086e152f25efba8505d62ba03d0dcb1ba379c9cb321fa303ef0b0a528",
+                        "semantic_hash":  "3f1cf48086e152f25efba8505d62ba03d0dcb1ba379c9cb321fa303ef0b0a528",
                         "first_seen":  "2026-05-16",
                         "last_seen":  "2026-05-16",
                         "last_changed":  "2026-05-16",
@@ -238,22 +253,26 @@
                                      "ysymyth",
                                      "language-agents"
                                  ],
-                        "summary":  "GitHub repository discovered for ysymyth/ReAct. README/full source is not mirrored publicly unless license-safe.",
+                        "summary":  "[ICLR 2023] ReAct: Synergizing Reasoning and Acting in Language Models",
                         "what_it_teaches":  "How language models become agents through reasoning, acting, memory, tools, and interface design.",
                         "wiki_page":  "wiki/sources/shunyu-yao/ysymyth/github-ysymyth-react-f1ef53ae0d.md",
                         "public_handling":  "public-metadata-summary-hash-link-only",
-                        "source_confidence":  "github-html-fallback",
+                        "source_confidence":  "github-api",
                         "crawl_errors":  [
 
                                          ],
                         "extra":  {
-                                      "stars":  null,
-                                      "forks":  null,
-                                      "language":  "",
+                                      "stars":  3822,
+                                      "forks":  371,
+                                      "language":  "Jupyter Notebook",
                                       "topics":  [
-
+                                                     "decision-making",
+                                                     "large-language-models",
+                                                     "llm",
+                                                     "prompting",
+                                                     "reasoning"
                                                  ],
-                                      "default_branch":  "",
+                                      "default_branch":  "master",
                                       "homepage":  ""
                                   }
                     },
@@ -267,11 +286,11 @@
                                                   "ysymyth"
                                               ],
                         "venue_or_context":  "",
-                        "published_or_updated":  "",
+                        "published_or_updated":  "2026-03-09T06:12:37Z",
                         "repo_path":  "ysymyth/ysymyth.github.io",
-                        "license":  "NOASSERTION",
-                        "content_hash":  "92fdf80de7a0a999b14bd363ce81093e4b5952b2888e0383071a7e79e7991568",
-                        "semantic_hash":  "92fdf80de7a0a999b14bd363ce81093e4b5952b2888e0383071a7e79e7991568",
+                        "license":  "MIT",
+                        "content_hash":  "e2afde2267ab782a4b56d21d9fa4b833ef45d6739e0411b0d87a194ba5504c33",
+                        "semantic_hash":  "e2afde2267ab782a4b56d21d9fa4b833ef45d6739e0411b0d87a194ba5504c33",
                         "first_seen":  "2026-05-16",
                         "last_seen":  "2026-05-16",
                         "last_changed":  "2026-05-16",
@@ -284,19 +303,19 @@
                         "what_it_teaches":  "How language models become agents through reasoning, acting, memory, tools, and interface design.",
                         "wiki_page":  "wiki/sources/shunyu-yao/ysymyth/github-ysymyth-ysymyth-github-io-9b92feb5ff.md",
                         "public_handling":  "public-metadata-summary-hash-link-only",
-                        "source_confidence":  "github-html-fallback",
+                        "source_confidence":  "github-api",
                         "crawl_errors":  [
 
                                          ],
                         "extra":  {
-                                      "stars":  null,
-                                      "forks":  null,
-                                      "language":  "",
+                                      "stars":  18,
+                                      "forks":  13,
+                                      "language":  "SCSS",
                                       "topics":  [
 
                                                  ],
-                                      "default_branch":  "",
-                                      "homepage":  ""
+                                      "default_branch":  "master",
+                                      "homepage":  null
                                   }
                     },
                     {
@@ -1650,6 +1669,43 @@
                                          ],
                         "extra":  {
                                       "discovered_from":  "https://ysymyth.github.io/"
+                                  }
+                    },
+                    {
+                        "id":  "person:ysymyth",
+                        "person_key":  "ysymyth",
+                        "source_kind":  "person-profile",
+                        "canonical_url":  "https://ysymyth.github.io/",
+                        "title":  "Yao Shunyu / Shunyu Yao / ysymyth",
+                        "authors_or_owners":  [
+
+                                              ],
+                        "venue_or_context":  "",
+                        "published_or_updated":  "",
+                        "repo_path":  "",
+                        "license":  "NOASSERTION",
+                        "content_hash":  "a217ab1cafcd4070c59dda4f9d41cc7ec8e6efc2881d1e6a91ce0424794b468d",
+                        "semantic_hash":  "a217ab1cafcd4070c59dda4f9d41cc7ec8e6efc2881d1e6a91ce0424794b468d",
+                        "first_seen":  "2026-05-16",
+                        "last_seen":  "2026-05-16",
+                        "last_changed":  "2026-05-16",
+                        "category":  "Language agents / agent architectures",
+                        "tags":  [
+                                     "shunyu-yao",
+                                     "ysymyth",
+                                     "language-agents"
+                                 ],
+                        "summary":  "OpenAI researcher focused on language agents and digital automation.",
+                        "what_it_teaches":  "How language models become agents through reasoning, acting, memory, tools, and interface design.",
+                        "wiki_page":  "wiki/sources/shunyu-yao/ysymyth/source-yao-shunyu-shunyu-yao-ysymyth-96f02e315b.md",
+                        "public_handling":  "public-metadata-summary-hash-link-only",
+                        "source_confidence":  "public-source",
+                        "crawl_errors":  [
+
+                                         ],
+                        "extra":  {
+                                      "github":  "https://github.com/ysymyth",
+                                      "scholar":  "https://scholar.google.com/citations?user=qJBXk9cAAAAJ"
                                   }
                     },
                     {

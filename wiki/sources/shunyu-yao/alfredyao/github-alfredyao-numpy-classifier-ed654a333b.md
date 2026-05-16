@@ -20,7 +20,7 @@ source_pages:
 - Canonical URL: https://github.com/alfredyao/Numpy_classifier
 - License: `NOASSERTION`
 - Public handling: `public-metadata-summary-hash-link-only`
-- Semantic hash: `f306f4af133a6fc3f478fe83f5521a1b0f940de73279840e199944587e3347a9`
+- Semantic hash: `e5ae5fe7054e9bf7116633f013d01da0abf360a4f38630faaf91ee680a283465`
 - First seen: 2026-05-16
 - Last changed: 2026-05-16
 - Identity guard: Do not confuse with yao-shunyu-ysymyth, the OpenAI language-agents researcher at ysymyth.github.io.
@@ -34,7 +34,7 @@ source_pages:
 
 ## Summary
 
-GitHub repository discovered for alfredyao/Numpy_classifier. README/full source is not mirrored publicly unless license-safe.
+A simple machine learning model realized with only numpy(under construction)
 
 ## What This Teaches
 

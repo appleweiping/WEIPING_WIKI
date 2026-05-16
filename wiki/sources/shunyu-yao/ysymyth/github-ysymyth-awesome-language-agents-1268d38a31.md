@@ -21,7 +21,7 @@ source_pages:
 - Canonical URL: https://github.com/ysymyth/awesome-language-agents
 - License: `NOASSERTION`
 - Public handling: `public-metadata-summary-hash-link-only`
-- Semantic hash: `072d90b4362a1f1a791e259e39e231a0fd47b07d860ddcae02380662f99dce9e`
+- Semantic hash: `4d812ddcca2084d3cc1102e620c85aa1437348f2b6f28a7dba8387e8571cf852`
 - First seen: 2026-05-16
 - Last changed: 2026-05-16
 - Identity guard: Do not confuse with yao-shunyu-alfred, the physics-to-AI researcher at alfredyao.github.io.
@@ -35,7 +35,7 @@ source_pages:
 
 ## Summary
 
-GitHub repository discovered for ysymyth/awesome-language-agents. README/full source is not mirrored publicly unless license-safe.
+List of language agents based on paper "Cognitive Architectures for Language Agents"
 
 ## What This Teaches
 
