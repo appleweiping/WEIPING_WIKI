@@ -60,6 +60,7 @@ This is the main catalog of the wiki.
 - [[llm-wiki]] - Persistent wiki pattern in which an LLM compiles knowledge into maintained markdown pages.
 - [[llm-based-recommendation]] - Research area focused on using large language models within recommender systems and recommendation workflows.
 - [[research-ideation-policy]] - Rule for ambitious绉戠爺璁ㄨ: no shallow stitching, force novelty, and allow radical reframing.
+- [[song-page-capture-rule]] - Rule that every liked song should get a dedicated clickable, playable song page when possible.
 
 ## Sources
 
@@ -94,6 +95,8 @@ This is the main catalog of the wiki.
 - [[2026-05-15-d-drive-healthcare-and-skill-roots]] - Public-safe routing ingest for `D:/Healthcare/Medora` and the five `D:/Skill` repositories.
 - [[2026-05-15-terraria-local-save-files]] - Local Terraria save-file discovery, backup location, file-type summary, and inventory pointers.
 - [[2026-05-15-lu-kan-profile-chat]] - User-provided professional profile for 闄嗕緝 / Lu Kan across architecture, exhibition design, cultural tourism, rural revitalization, and AIGC workflows.
+- [[sources/songs/qingtian-jay-chou-japanese-cover]] - Candidate song entry for the Japanese-cover `晴天` remembered with `小柔Channel`.
+- [[sources/songs/hare-no-hi-seiten]] - Song entry for `晴れの日（晴天）`, including liked versions and playable-link TODOs.
 
 ## Analyses
 
@@ -731,6 +734,7 @@ This is the main catalog of the wiki.
 - [[openai-cookbook]] - Mirrored OpenAI Cookbook implementation library with categorized examples, articles, source hashes, and weekly refresh workflow.
 - [[topics-home]] - Entry page for durable subject clusters.
 - [[personal-knowledge-systems]] - Topic map for long-lived systems that accumulate, structure, and revisit knowledge.
+- [[personal-music-preferences]] - Personal song memory, including liked versions and future follow-up notes.
 - [[university-housing]] - Topic map for university housing deadlines, fees, cancellation/release rules, and contract obligations.
 - [[research-projects]] - Topic map of Vipin's active research projects and cross-cutting evidence rules.
 - [[local-project-roots]] - Topic map for local D-drive project/archive roots, discovery rules, and safety boundaries.

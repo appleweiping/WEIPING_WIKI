@@ -22,5 +22,6 @@ This section holds durable subject clusters that are broader than a single conce
 
 - Durable topic pages:
   - [[personal-knowledge-systems]]
+  - [[personal-music-preferences]]
   - [[university-housing]]
 - Candidate next topics include `uncertainty-in-llm-recommendation` and a dedicated topic for `llm-based-recommendation`.

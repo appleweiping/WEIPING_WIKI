@@ -46,6 +46,7 @@ Do not make the user wait for a full ingest when a grounded short answer can be 
 
 If a required tool or dependency is genuinely missing, download or install the narrowest needed dependency into the project-local temporary area when practical, then continue the task.
 
+- Prefer installing missing task-specific tools on the D: drive within the project or its local temporary/cache area; do not silently fall back to a degraded version of the deliverable just because a tool is missing.
 - Prefer project-local or cache-local installs such as `.wiki-tmp/` over global system changes.
 - Verify downloaded tools before relying on them.
 - Do not download broad toolchains speculatively; only fetch what the current task actually needs.

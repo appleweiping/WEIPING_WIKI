@@ -165,3 +165,20 @@ tags:
   - Added visible link labels for mobile, PC, no-MOD PC, game body, and advanced plant MOD/plugin entries.
   - Extracted the PC MOD workflow around `BepInEx\plugins`, game root layout, and `.zip` plant packages.
   - Left exact target URLs and checksum/provenance verification as follow-up items because Tencent Docs normal copy did not expose the body links.
+
+## [2026-05-16 03:29] query | personal music preference
+
+- Pages created or updated:
+  - [[personal-music-preferences]]
+  - [[topics-home]]
+  - [[index]]
+- Sources used:
+  - User chat note about liking `晴天`
+  - Public metadata for `告五人 Accusefive × 藤岡靛 Dean Fujioka` `晴れの日（晴天）`
+- Notes:
+  - Recorded that Vipin likes the `小柔Channel` version and also likes the original version.
+  - Preserved both title forms, `晴天` and `晴れの日（晴天）`, for later rediscovery.
+  - Added the future rule that each liked song should get a dedicated clickable song page with playable source links when available.
+  - Added the future rule that missing task-specific tooling should be installed into the D: drive project-local temporary/cache area rather than producing a degraded deliverable.
+  - Installed `yt-dlp.exe` under `.wiki-tmp/tools/yt-dlp/` for media lookup and used it to identify the official `晴れの日（晴天）` playable URL.
+  - Split the ambiguous `晴天` memory into two song entries: a likely Jay Chou Japanese-cover branch and the Accusefive / Dean Fujioka branch.
