@@ -64,6 +64,8 @@ Before use, ensure Chrome is running with `--remote-debugging-port=$PORT`.
 - EXTRACTED: `screenshot` wrote `.wiki-tmp/chrome-automation-example.png`.
 - EXTRACTED: A retest found the Windows binary is most reliable when global flags are placed after the command, for example `open https://example.com --cdp 9224 --session codex-retest`.
 - EXTRACTED: Saved screenshots work with `screenshot body <path>` or `screenshot --full <path>`; `screenshot <path>` can be parsed as a selector and fail.
+- EXTRACTED: On 2026-05-17, the D-drive `agent-browser` runtime completed a live Feishu shared Base form workflow through `feishu-bridge`: filled fields, handled stubborn select controls, passed required-field validation, clicked the one-time-submit confirmation, and verified final `提交成功` page text.
+- EXTRACTED: For this Feishu form, `snapshot -i`, DOM inspection, coordinate clicking, and `Escape` to close open dropdowns were all needed; a simple "click visible option" flow was not reliable enough.
 - AMBIGUOUS: Native Rust rebuild failed because MSVC `link.exe` was missing; this does not block the downloaded Windows binary.
 
 ## Safety Boundary
@@ -82,5 +84,7 @@ Before use, ensure Chrome is running with `--remote-debugging-port=$PORT`.
 ## Related Pages
 
 - [[2026-05-17-anbeime-frontend-design-and-chrome-automation]]
+- [[feishu-material-access-workflow]]
+- [[2026-05-17-feishu-form-fill-session]]
 - [[agent-skill-installation-workflow]]
 - [[agent-skill-repositories]]

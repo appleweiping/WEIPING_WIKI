@@ -59,7 +59,8 @@ Routing rule:
 - EXTRACTED: Browser-fill fallback was smoke-tested with `agent-browser 0.27.0` on a local HTML form: it opened the test page, found the textbox and button, filled `Beauty-Love Feishu test`, read the value back, and saved a screenshot.
 - EXTRACTED: API authentication is complete: `lark-cli config init --new`, `auth login --recommend`, and incremental `auth login --scope search:docs:read` were completed with user browser authorization.
 - EXTRACTED: API smoke tests cover verified auth, Drive search, Wiki node/document read, Docs create/fetch, and Base table-list read.
-- AMBIGUOUS: Real Feishu page fill was not attempted because no user-approved Feishu test form link was provided in this turn.
+- EXTRACTED: A real user-approved Feishu shared Base form was filled and submitted through browser automation on 2026-05-17; final page text reported `提交成功` and `你已达提交次数上限`.
+- EXTRACTED: The live form test exposed a Feishu select-control caveat: visible option text can be only a candidate list, not the true selected field value, so required-field validation must be checked after filling.
 - AMBIGUOUS: Future high-value Feishu links should still be treated case by case; do not copy private document contents into the public wiki without explicit user approval.
 ## Safety Boundary
 
@@ -71,5 +72,6 @@ Routing rule:
 
 - [[lark-cli]]
 - [[chrome-automation]]
+- [[feishu-material-access-workflow]]
 - [[agent-skill-installation-workflow]]
 - [[agent-skill-repositories]]

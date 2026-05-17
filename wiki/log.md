@@ -492,3 +492,20 @@ tags:
   - Completed app configuration, recommended OAuth, and incremental `search:docs:read` authorization.
   - Verified `auth status --verify`, `doctor`, Drive search, Wiki list/fetch, Docs create/fetch, and Base table-list read.
   - Recorded only neutral smoke-test metadata; private Feishu content remains out of the public wiki.
+## [2026-05-17 15:13] query | Feishu live form workflow
+
+- Pages created or updated:
+  - [[feishu-material-access-workflow]]
+  - [[2026-05-17-feishu-form-fill-session]]
+  - [[feishu-bridge]]
+  - [[chrome-automation]]
+  - [[2026-05-17-larksuite-cli-feishu-bridge]]
+  - [[index]]
+- Sources used:
+  - Current chat session and live Feishu shared Base form workflow
+  - Local `agent-browser` runtime under `.wiki-tmp/tools/agent-browser/`
+  - Existing `feishu-bridge`, `lark-cli`, and `chrome-automation` wiki pages
+- Notes:
+  - Recorded the API-first/browser-fallback Feishu material access system as a durable workflow.
+  - Recorded a successful live Feishu form submission while omitting personal identifiers and submitted private answer text from the public wiki.
+  - Preserved practical lessons about Feishu select controls, required-field validation, one-time-submit confirmation dialogs, and final success verification.

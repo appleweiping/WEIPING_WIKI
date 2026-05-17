@@ -68,7 +68,7 @@ Completed with user authorization:
 
 Remaining boundaries:
 
-- AMBIGUOUS: Real Feishu form filling should use a user-approved test form or explicit live-form instruction.
+- EXTRACTED: A later same-day user-approved live Feishu shared Base form was filled and submitted successfully through browser fallback; see [[2026-05-17-feishu-form-fill-session]].
 - AMBIGUOUS: Public wiki records should keep private Feishu document contents out unless the user explicitly asks to preserve them.
 ## Concrete Usage Pattern
 
@@ -108,10 +108,17 @@ $AB_BIN = "D:\Research\vipin's knowledgebase\.wiki-tmp\tools\agent-browser\bin\a
 & $AB_BIN fill @e3 "value" --cdp 9225 --session feishu-fill
 ```
 
+Live-form caveat:
+
+- EXTRACTED: Feishu select fields can show candidate options and selected values in the same DOM region. Required-field validation after clicking `提交` is a stronger signal than `innerText` alone.
+- EXTRACTED: One-time forms may show a final confirmation dialog before the actual submission. If the user has already explicitly approved submission, click the modal submit button and verify final success text.
+
 ## Related
 
 - [[feishu-bridge]]
 - [[lark-cli]]
 - [[chrome-automation]]
+- [[feishu-material-access-workflow]]
+- [[2026-05-17-feishu-form-fill-session]]
 - [[agent-skill-installation-workflow]]
 - [[agent-skill-repositories]]
