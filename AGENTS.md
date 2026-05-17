@@ -59,8 +59,8 @@ The user prefers agent collaboration to feel like working with capable partners,
   - Do not search `PATH` or local folders for a `deepseek` binary unless the user explicitly asks for a local CLI route.
   - Default `鲸鱼` to DeepSeek Pro. Use Flash only when the user explicitly asks for Flash or the task is clearly lightweight and speed-first.
   - For local filesystem or repository tasks, Codex may first gather a compact read-only snapshot, then hand that snapshot to DeepSeek for reasoning or summarization. Do not imply that DeepSeek directly accessed the local machine if it did not.
-- If DeepSeek is unavailable, say so plainly and ask whether to continue Codex-only instead of pretending the partner ran.
-- Treat `监视` as a one-time check unless the user explicitly asks for recurring monitoring or scheduled follow-up; recurring monitoring belongs in automation/reminder workflows.
+  - If DeepSeek is unavailable, say so plainly and ask whether to continue Codex-only instead of pretending the partner ran.
+  - Treat `监视` as a one-time check unless the user explicitly asks for recurring monitoring or scheduled follow-up; recurring monitoring belongs in automation/reminder workflows.
 
 ## Context Packing And Reference Intake
 
@@ -336,7 +336,8 @@ Forced thresholds:
 Partner prompt contract:
 
 - Before any `cc` family call, run a PixelCat preflight: check whether `127.0.0.1:8990` is listening. If it is not listening, launch the visible PixelCat management panel from `D:\cc\pixelcat-app.exe`, wait briefly, and re-check the port before retrying `cc`.
-- Every `cc` call must be non-interactive with `-p` and include `AUTHORIZATION`, `ROLE`, `MODEL`, `REPO`, `SCOPE`, `QUESTION`, `CONSTRAINTS`, `OUTPUT FORMAT`, and `ESCALATION SIGNALS`.
+- Every `cc` call must be non-interactive with `-p` and include a real context pack plus `AUTHORIZATION`, `ROLE`, `MODEL`, `REPO`, `SCOPE`, `QUESTION`, `CONSTRAINTS`, `OUTPUT FORMAT`, and `ESCALATION SIGNALS`.
+- For long or multi-line context packs, prefer piping the prompt into `D:\cc\cc.cmd -p --model ... --output-format text` through stdin. If the output is only a generic greeting/readiness line or otherwise does not answer the scoped question, treat the partner call as failed or unusable; retry with a better prompt path or state the limitation instead of counting it as a real review.
 - Constraints must state that the partner is read-only, must not edit files, must not run destructive commands, and must not handle credentials or live account actions.
 - Codex must independently verify partner claims against the live repository before editing, testing, staging, committing, or pushing.
 - If `cc` fails, hangs, returns unusable output, or PixelCat still cannot be started, Codex may continue without it, but must state the limitation when it materially affects risk or validation.

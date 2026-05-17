@@ -27,6 +27,8 @@ When Codex delegates work to another model or searches external sources, the inp
 - EXTRACTED: The partner prompt should clearly say what is happening, what has already been checked, what files or artifacts matter, and what output format is expected.
 - EXTRACTED: Codex should not imply that a partner saw context it did not actually receive.
 - EXTRACTED: If the partner is unavailable or the context is insufficient, Codex should state that plainly instead of pretending the delegation happened.
+- EXTRACTED: If a command-line partner returns only a generic greeting/readiness line or does not answer the scoped question, Codex should treat the handoff as failed or unusable rather than counting it as a real partner contribution.
+- EXTRACTED: For long `cc` / Claude Code context packs, piping the prompt through stdin is safer than passing the entire prompt as a single PowerShell argument in this local setup.
 
 ## External Reference Intake
 
@@ -40,6 +42,7 @@ When Codex delegates work to another model or searches external sources, the inp
 
 - Give partner models the minimum context needed to be accurate, but not so little that they have to guess the situation.
 - When delegating, include the current goal, the decision already made, the boundary of the task, and the exact result you want back.
+- Verify that the returned answer actually addresses the delegated question before summarizing it to the user or using it as evidence.
 - When researching references, prefer primary or canonical material and read deeply enough to understand the operating pattern, constraints, and failure modes.
 - If a task is inherently a creative or research synthesis problem, use external sources as evidence and inspiration, not as a template to paste together.
 

@@ -3,7 +3,7 @@ title: Local CC Partner Agent Workflow
 type: concept
 status: active
 created: 2026-05-17
-updated: 2026-05-17
+updated: 2026-05-18
 tags:
   - agent-workflow
   - coding
@@ -62,6 +62,19 @@ Do not ask the user to remember how to open PixelCat unless the executable is mi
 
 Codex must not treat partner output as authority. It is advisory evidence that Codex verifies against the live repository before acting.
 
+## Quick Routing Reference
+
+`AGENTS.md` remains the authoritative routing layer. Do not create a separate routing script or skill merely to restate these rules unless the user explicitly asks for an implementation project.
+
+| Trigger | Partner | Runtime | Notes |
+| --- | --- | --- | --- |
+| User explicitly asks for Opus | Opus | `D:\cc\cc.cmd` with `claude-opus-4-7` | Send a full context pack and keep the call read-only. |
+| User explicitly asks for Sonnet | Sonnet | `D:\cc\cc.cmd` with `claude-sonnet-4-6` | Use for quick scans, docs, and lower-risk second looks. |
+| User explicitly asks for DeepSeek / `鲸鱼` | DeepSeek Pro by default | configured DeepSeek route when available | Do not search for a local binary unless the user asks for a CLI route. For local files, Codex gathers a compact read-only snapshot first. |
+| Architecture, cross-module, security/privacy, hard debugging, high-risk final review | Opus | `D:\cc\cc.cmd` | Opus wins when Sonnet and Opus triggers both match. |
+| Low-risk diff scan, test-gap suggestion, documentation summary | Sonnet | `D:\cc\cc.cmd` | Escalate to Opus if Sonnet reports uncertainty, blockers, or architectural/security risk. |
+| Partner unavailable or context cannot be safely shared | Codex-only with limitation stated | current Codex session | Continue only when the missing partner does not materially change the risk profile. |
+
 ## Forced Thresholds
 
 Invoke `claude-opus-4-7` when the task includes any of:
@@ -110,6 +123,25 @@ ESCALATION SIGNALS: Say "ESCALATE TO OPUS" or "BLOCKER" when the issue exceeds t
 ```
 
 Avoid open-ended prompts such as "review everything." Scope the handoff to a specific concern.
+
+For long or multi-line context packs, prefer piping the prompt through stdin instead of passing the entire prompt as a PowerShell argument:
+
+```powershell
+$prompt = @'
+AUTHORIZATION: User-authorized local read-only review.
+ROLE: Opus Reviewer
+MODEL: claude-opus-4-7
+REPO: D:\Research\SomeRepo
+SCOPE: Current diff plus relevant repository instructions.
+QUESTION: Review this scoped change for blockers.
+CONSTRAINTS: Read-only. Do not edit files. Do not run destructive commands. Do not stage, commit, push, or handle credentials/live accounts.
+OUTPUT FORMAT: Findings first. If no blockers, say NO BLOCKERS and list residual risks.
+ESCALATION SIGNALS: Say BLOCKER for any issue that should stop commit.
+'@
+$prompt | D:\cc\cc.cmd -p --model claude-opus-4-7 --output-format text
+```
+
+If the output is only a generic readiness/greeting line or does not answer the scoped question, treat the handoff as failed or unusable. Do not count that as a real partner review.
 
 ## Command Templates
 
@@ -178,6 +210,7 @@ If the task is software or project work, give the partner enough of the real con
 - Do not delegate destructive commands, production changes, real account actions, payment actions, or credential handling.
 - User approval is still required for destructive operations or cross-repository edits, regardless of partner output.
 - If `cc` fails, hangs, returns unusable output, or the PixelCat panel/proxy is not running, fall back to Codex-only work and record the limitation when it materially affects risk or validation.
+- The limitation is material when the task would normally trigger Opus: architecture, security/privacy, cross-module changes, hard debugging, or high-risk final review.
 - When PixelCat is not running, try the PixelCat preflight launch procedure before falling back.
 
 ## Verified Status
@@ -188,6 +221,8 @@ If the task is software or project work, give the partner enough of the real con
 - EXTRACTED: `D:\cc\cc.cmd -p "Reply only OK" --model claude-sonnet-4-6 --output-format text` returned `OK`.
 - EXTRACTED: `D:\cc\cc.cmd -p "Reply only OK" --model claude-opus-4-7 --output-format text` returned `OK`.
 - EXTRACTED: `D:\cc\cc.cmd` successfully ran a read-only `claude-opus-4-7` diff-review partner prompt for a wiki update and reported `NO BLOCKERS`.
+- EXTRACTED: On 2026-05-18, piping a long context pack through stdin to `D:\cc\cc.cmd -p --model claude-opus-4-7 --output-format text` successfully produced a scoped Opus architecture review.
+- EXTRACTED: In the same session, passing a long prompt directly as a PowerShell argument returned only a generic readiness line; future agents should treat that shape of output as a failed handoff, not as partner input.
 
 ## Counterpoints And Gaps
 
@@ -201,3 +236,4 @@ If the task is software or project work, give the partner enough of the real con
 - [[agent-collaboration-tone-and-model-roles]]
 - [[durable-agent-rule-memory]]
 - [[agent-skill-installation-workflow]]
+- [[model-collaboration-context-and-reference-intake]]

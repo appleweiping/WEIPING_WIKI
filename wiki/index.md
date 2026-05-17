@@ -3,7 +3,7 @@ title: Index
 type: index
 status: active
 created: 2026-04-21
-updated: 2026-05-17
+updated: 2026-05-18
 tags:
   - index
 ---
@@ -149,6 +149,7 @@ This is the main catalog of the wiki.
 
 ## Analyses
 
+- [[2026-05-18-multi-agent-collaboration-architecture-review]] - Decision record for which Claude Code / DeepSeek collaboration improvements to adopt now, defer, or reject.
 - [[html-ppt-template-workflow-results]] - Results and future guardrails from the first `frontend-slides` plus `beautiful-html-templates` deck-generation tests.
 
 - [[weekly-research-digest-2026-w20]] - 2026-W20 weekly AI, LLM, LLM4Rec, AI4EDA, and AI4S inspiration digest.

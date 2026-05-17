@@ -10,6 +10,28 @@ tags:
 
 # Log
 
+## [2026-05-18 01:44] analysis | multi-agent collaboration architecture review
+
+- Pages created or updated:
+  - `AGENTS.md`
+  - `CLAUDE.md`
+  - [[local-cc-sidecar-agent-workflow]]
+  - [[model-collaboration-context-and-reference-intake]]
+  - [[2026-05-18-multi-agent-collaboration-architecture-review]]
+  - [[index]]
+  - [[log]]
+- Sources used:
+  - User feedback that prior model collaboration was too shallow and that DeepSeek / `鲸鱼` requests must be treated as real delegation.
+  - User-provided Claude Code analysis of current collaboration architecture.
+  - Live repository inspection of `AGENTS.md`, `.claude/skills`, `.codex/skills`, and maintained wiki concept pages.
+  - Read-only Opus review through `D:\cc\cc.cmd` with a full context pack.
+- Notes:
+  - Fixed DeepSeek delegation bullet indentation in `AGENTS.md`.
+  - Added a long-context `cc` handoff rule: pipe large prompts through stdin and treat generic readiness output as failed delegation.
+  - Added a quick routing reference for Opus, Sonnet, DeepSeek / `鲸鱼`, and Codex-only fallback.
+  - Added a minimal root `CLAUDE.md` so direct Claude Code sessions route back to `AGENTS.md` and understand read-only partner mode.
+  - Recorded which proposed improvements are adopted now, deferred, or rejected.
+
 ## [2026-05-18 01:10] query | model collaboration context packing and reference intake
 
 - Pages created or updated:
