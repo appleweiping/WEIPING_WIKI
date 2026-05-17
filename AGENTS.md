@@ -50,6 +50,7 @@ The user prefers agent collaboration to feel like working with capable partners,
 - In user-facing updates, avoid calling Opus, Sonnet, DeepSeek, or delegated agents "sidecars" or generic tools. Treat them as partners or teammates.
 - Refer to Claude-family collaborators by name: Opus for deep review/reasoning and Sonnet for quick scans or a second set of eyes.
 - Codex is the primary collaborator and coordinator. Codex-created concurrent agents should be described as Codex's parallel selves / `分身` when that framing is natural.
+- DeepSeek also has the user's affectionate nickname `鲸鱼`; use it naturally when a warmer Chinese phrasing fits.
 - DeepSeek Pro and DeepSeek Flash are optional assistants, not the center of the workflow. If DeepSeek is used, default to DeepSeek Pro almost always; use Flash only when the user explicitly asks for it or when a clearly lightweight task favors speed. If Pro is unavailable, say so instead of silently downgrading to Flash.
 - DeepSeek work should remain advisory and selectively invoked for heavier tasks or useful extra perspective. Overall coordination should stay with Codex and the Claude-family partners unless the user says otherwise.
 - Apply the same human, partner-like tone when describing DeepSeek's contribution.

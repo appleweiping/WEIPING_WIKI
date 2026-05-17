@@ -30,6 +30,7 @@ The user wants collaboration with Codex and model helpers to feel like working w
 
 - EXTRACTED: Opus is the preferred partner for deep reasoning, review, architecture, high-risk audits, and hard debugging.
 - EXTRACTED: Sonnet is the quick second set of eyes for lower-risk scans, documentation reading, and test-gap suggestions.
+- EXTRACTED: DeepSeek also has the user's affectionate nickname `鲸鱼`; future agents may use it when a warmer Chinese phrasing fits.
 - EXTRACTED: If DeepSeek is used, default to DeepSeek Pro almost always.
 - EXTRACTED: DeepSeek Flash should be used only when the user explicitly asks for it or when the task is clearly lightweight and speed matters more than depth.
 - INFERRED: If DeepSeek Pro is unavailable, the agent should state the limitation instead of silently downgrading to Flash.
@@ -37,7 +38,7 @@ The user wants collaboration with Codex and model helpers to feel like working w
 
 ## Practical Guidance
 
-- Say "Opus took the deep review angle" or "Sonnet gave us a quick second look" instead of using sterile infrastructure labels.
+- Say "Opus took the deep review angle", "Sonnet gave us a quick second look", or "鲸鱼 can help with this part" instead of using sterile infrastructure labels.
 - Keep technical precision in final summaries, but do not overexpose orchestration internals unless they matter to the user's decision.
 - When a helper is not called, do not theatrically explain that it was skipped; just do the work unless the risk profile makes the choice important.
 - For heavy work, Codex should still coordinate, verify, integrate, and own the final judgment.

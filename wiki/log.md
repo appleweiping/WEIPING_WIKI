@@ -624,3 +624,13 @@ tags:
 - Notes:
   - Added a durable rule to use warmer user-facing language and frame Opus, Sonnet, DeepSeek, and Codex-created agents as collaborators rather than impersonal tools.
   - Recorded that Codex remains the main coordinator, Codex-created concurrent agents can be described as Codex's `分身`, and DeepSeek should default to Pro when used.
+## [2026-05-17 20:52] query | DeepSeek nickname
+
+- Pages created or updated:
+  - `AGENTS.md`
+  - [[agent-collaboration-tone-and-model-roles]]
+  - [[log]]
+- Sources used:
+  - User note that DeepSeek also has the nickname `鲸鱼`.
+- Notes:
+  - Added `鲸鱼` as the warmer Chinese nickname future agents may use for DeepSeek when it fits the conversation.
