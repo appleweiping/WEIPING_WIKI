@@ -1,117 +1,185 @@
 # vipin wiki
 
-`vipin wiki` is a serious LLM-maintained knowledge base designed for long-term use.
+`vipin wiki` is a long-term, LLM-maintained knowledge base for research, project memory, and reusable agent workflows.
 
-It combines:
+It is designed to compound: conversations, sources, local project discoveries, public corpora, and operational lessons should become maintained Markdown knowledge instead of disappearing into chat history.
 
-- a public markdown wiki for durable, publishable knowledge
-- a private local-only layer for sensitive materials
-- a reader-specific context layer that shapes how knowledge is selected and synthesized
-- an operating schema that tells an agent how to ingest, synthesize, lint, search, and grow the repository over time
-- a Quartz publishing adapter that turns the public wiki into a browsable website
+## What This Is
 
-## Core Files
+- A public Markdown wiki for durable, publishable knowledge.
+- A private local layer for sensitive materials that must not leak into public pages, indexes, logs, commits, or the published site.
+- A source-backed research memory system for papers, projects, tools, skills, workflows, and reusable answers.
+- An operating environment for Codex-style agents: query first, preserve what matters, validate, commit, and push.
+- A Quartz-ready public website source, where `wiki/` remains the source of truth and `site/` is only the publishing adapter.
 
-- `AGENTS.md`
-- `.wiki-schema.md`
-- `WORKFLOWS.md`
-- `reader-context.md`
-- `CONTRIBUTIONS.md`
-- `purpose.md`
-- `wiki/home.md`
-- `wiki/index.md`
-- `wiki/log.md`
-- `wiki/overview.md`
+## What This Is Not
 
-## Layers
+- Not a loose notes folder.
+- Not an append-only archive.
+- Not a place to mirror private documents or unclear-license source material into public Git history.
+- Not a replacement for live rescanning of external projects before editing them.
+- Not a generic chatbot transcript dump; high-value exchanges should be crystallized into durable pages.
 
-- `raw/`: immutable or externally referenced source materials
-- `wiki/`: public knowledge layer
-- `wiki-private/`: local-only private knowledge layer
-- `reader-context.md`: reader-specific personalization layer
-- `scripts/`: operational scripts for routing, validation, cacheing, search, context packing, status, and linting
-- `site/`: public website publishing adapter for Quartz
+## Architecture
+
+| Layer | Purpose | Main entry points |
+| --- | --- | --- |
+| Raw sources | Immutable evidence, source pointers, local captures, and manifests | `raw/` |
+| Public wiki | Maintained, publishable knowledge graph | `wiki/home.md`, `wiki/index.md`, `wiki/overview.md`, `wiki/log.md` |
+| Private local layer | Sensitive local-only knowledge and materials | kept out of public indexes, logs, and site output |
+| Reader context | User-specific priorities for interpretation and synthesis | `reader-context.md`, `purpose.md` |
+| Operating contract | Rules for agents, schema, workflows, and contribution history | `AGENTS.md`, `.wiki-schema.md`, `WORKFLOWS.md`, `CONTRIBUTIONS.md` |
+| Tooling | Search, catalog, lint, context packing, ingest, status, and site build scripts | `scripts/` |
+| Publishing adapter | Quartz website build layer for the public wiki | `site/` |
+| Local runtime/cache | Temporary tools and generated operational artifacts | `.wiki-tmp/` |
+
+## Start Here
+
+For humans:
+
+1. Read `purpose.md` for why this wiki exists.
+2. Read `wiki/home.md` and `wiki/index.md` for navigation.
+3. Read `wiki/log.md` to understand recent maintenance and ingests.
+4. Use `scripts/wiki-search.ps1` or `scripts/wiki-search.py` when the index is not enough.
+
+For agents:
+
+1. Read `AGENTS.md`, `.wiki-schema.md`, and `purpose.md`.
+2. Check `git status --short --branch` before changing anything.
+3. Use `wiki/index.md`, `wiki/catalog.json`, and recent `wiki/log.md` entries as the lightweight route.
+4. Open only the smallest relevant maintained pages needed for the task.
+5. After durable changes, rebuild catalog, lint, check diff hygiene, commit scoped changes, and push.
 
 ## Operating Contract
 
-For normal questions, the agent should answer quickly from the maintained wiki first, then preserve reusable knowledge after the answer.
+Default behavior is two-lane:
 
-- Fast answer lane: `wiki/index.md` -> `wiki/catalog.json` -> top relevant maintained pages.
-- Durable ingest lane: update or create wiki pages, rebuild catalog, lint, update log/index, commit, and push.
-- Large tasks: use multi-agent collaboration by default when available, with clear exploration, implementation, and verification roles.
-- Missing dependencies: download the narrowest required tool into `.wiki-tmp/` when needed, verify it, and keep generated artifacts out of Git.
-- Local projects: wiki pages record content nature and routing hints, while actual edits or current-state answers require live rescanning because paths and internals may change.
-- README maintenance: periodically refresh this file when wiki structure, automation rules, major workflows, or validation expectations change; validate, commit, and push the scoped README/wiki updates.
+- Fast answer lane: answer from maintained wiki pages first.
+- Durable lane: preserve reusable knowledge in `wiki/`, update index/log/catalog when needed, validate, commit, and push.
 
-## Supported Workflows
+Important rules:
 
-- `init`: initialize or repair the knowledge base structure
-- `ingest`: digest one source into the wiki
-- `batch-ingest`: register and digest a whole folder or collection
-- `query`: answer from curated wiki pages
-- `digest`: write higher-order syntheses, comparisons, and reports
-- `lint`: check structure, link health, and public/private boundaries
-- `search`: search the machine-readable catalog instead of relying only on the handwritten index
-- `context`: assemble L0/L1/L2/L3 context packs for future agent sessions
-- `status`: summarize repository scale and recent activity
-- `delete`: scan references before removing durable pages
-- `crystallize`: save valuable conversations back into the wiki
-- `maintain`: refresh stale pages, including this README, when the maintained wiki has drifted
+- Prefer updating existing pages over creating duplicates.
+- Preserve source attribution and uncertainty.
+- Separate `EXTRACTED`, `INFERRED`, `AMBIGUOUS`, and `UNVERIFIED` claims when useful.
+- Keep public and private material separated.
+- Treat local project pages as routing/context; rescan live projects before making current-state claims or edits.
+- Install missing narrow dependencies into project-local D-drive/cache locations when practical, then verify them.
 
-## Useful Commands
+## Core Workflows
+
+| Workflow | Use when | Durable output |
+| --- | --- | --- |
+| `query` | The user asks a substantive question | A fast grounded answer, plus a saved query/analysis if reusable |
+| `ingest` | One source or chat-provided source should become wiki knowledge | Source note plus relevant entity/concept/topic updates |
+| `batch-ingest` | A folder, corpus, person, repo set, or paper set needs structured capture | Collection source note, manifests, maps, and dedupe rules |
+| `crystallize` | A valuable chat result should not remain only in chat | Query, analysis, concept, topic, or workflow page |
+| `maintain` | The wiki has drift, stale claims, duplicates, weak links, or outdated README/docs | Non-destructive CRUD maintenance plus log entry |
+| `lint` | Structure, links, index coverage, or public/private boundaries need checking | Lint report and fixes when safe |
+| `site` | The public wiki needs publishing | Quartz build through `site/`, without treating generated output as source truth |
+| `automation` | Local crawls or scheduled ingests update manifests/wiki pages | Validated, scoped commit and push of real automation outputs |
+
+## Common Commands
+
+PowerShell, preferred on this Windows workspace:
 
 ```powershell
-./scripts/wiki-status.ps1
-./scripts/wiki-lint.ps1
-./scripts/wiki-catalog.ps1
-./scripts/wiki-search.ps1 "llm recommendation"
-./scripts/wiki-context.ps1 l0
-./scripts/build-site.ps1
+.\scripts\wiki-status.ps1
+.\scripts\wiki-catalog.ps1
+.\scripts\wiki-lint.ps1
+.\scripts\wiki-search.ps1 "llm recommendation"
+.\scripts\wiki-context.ps1 l0
+.\scripts\build-site.ps1
 ```
 
+Python/Bash alternatives:
+
 ```bash
-bash scripts/wiki-status.sh
-bash scripts/source-registry.sh validate
-bash scripts/wiki-compat.sh inspect .
-bash scripts/lint-runner.sh .
 python scripts/wiki-catalog.py --root .
 python scripts/wiki-search.py "llm recommendation" --root .
 python scripts/wiki-context.py l0 --root .
+bash scripts/wiki-status.sh
+bash scripts/source-registry.sh validate
+bash scripts/wiki-compat.sh inspect .
 bash scripts/build-site.sh
 ```
 
-## Validation Rule
+## Quality Gates
 
-For non-trivial ingest, synthesis, and comparison work:
+Run the narrowest relevant validation before committing. For typical wiki maintenance:
 
-- the agent should preserve explicit source attribution
-- the agent should preserve counterarguments and data gaps when a topic is contested
-- the human remains the final validator for important claims
+```powershell
+.\scripts\wiki-catalog.ps1
+.\scripts\wiki-lint.ps1
+git diff --check
+```
 
-## Public / Private Safety
+Expected standards:
 
-Public Git history must not contain:
+- No broken wiki links.
+- No missing index entries for durable public pages.
+- No public/private boundary leaks.
+- No unrelated files staged.
+- No generated cache/tool/browser-profile artifacts committed.
+- No meaningless commits for false dirty states with no real content diff.
 
-- `raw/private-*`
-- `wiki-private/`
-- sensitive source references in public pages
+## Commit And Automation Discipline
 
-The repository is intentionally structured so that private files stay local while the public wiki can still be versioned on GitHub.
+After durable wiki, script, site, README, or automation-output changes:
 
-## Section Layout
+1. Inspect `git status --short --branch`.
+2. Inspect relevant diffs, not just filenames.
+3. Rebuild catalog when wiki content changed.
+4. Run lint and `git diff --check`.
+5. Stage only scoped files.
+6. Commit with a clear message.
+7. Push to GitHub by default.
 
-- `wiki/sources/` for source notes
-- `wiki/entities/` for people, organizations, projects, and products
-- `wiki/concepts/` for ideas and methods
-- `wiki/topics/` for durable subject clusters
-- `wiki/comparisons/` for side-by-side evaluations
-- `wiki/analyses/` for maps, memos, and synthesis outputs
-- `wiki/queries/` for saved answers
-- `wiki/synthesis/` and `wiki/synthesis/sessions/` for long-running synthesis work
-- `wiki/catalog.json` for machine-readable search and context assembly
+Automation outputs are official maintenance when they produce real changes. If a crawl or scheduled workflow updates raw manifests, source pages, analysis pages, catalog, index, or log, validate and commit those scoped outputs. If files are only falsely marked dirty because of line endings or index metadata, refresh/normalize the state and report that there was no substantive diff to commit.
 
-## Optional Artifacts
+## Public And Private Safety
 
-- The public website is built from `wiki/` through `site/` and GitHub Pages. It intentionally excludes private wiki layers and raw source folders.
+Public Git history and public wiki pages must not contain sensitive content.
 
+Use public pages for:
+
+- neutral metadata;
+- source summaries;
+- public URLs;
+- stable IDs and hashes;
+- workflow notes;
+- non-sensitive project memory;
+- public-safe analyses and queries.
+
+Do not publish:
+
+- secrets, tokens, credentials, or app keys;
+- private document contents;
+- sensitive personal identifiers;
+- private chats or high-sensitivity materials;
+- unclear-license full PDFs, long webpage text, or source-code mirrors unless explicitly permitted and appropriate.
+
+When in doubt, record minimal metadata and ask before expanding public detail.
+
+## Important Maintained Pages
+
+- `wiki/index.md` - main public catalog.
+- `wiki/overview.md` - structural overview of the wiki.
+- `wiki/log.md` - chronological maintenance and ingest log.
+- `wiki/concepts/readme-maintenance-workflow.md` - README refresh rule.
+- `wiki/analyses/public-corpus-ingest-workflow.md` - public corpus and automation discipline.
+- `wiki/concepts/agent-skill-installation-workflow.md` - skill installation as usable-tool workflow.
+- `wiki/concepts/feishu-material-access-workflow.md` - Feishu/Lark API-first, browser-fallback workflow.
+
+## README Maintenance
+
+This README is a living engineering entry point. Refresh it when:
+
+- wiki structure changes materially;
+- automation rules or commit discipline changes;
+- major workflows or local tooling are added;
+- validation expectations change;
+- new agents would otherwise start from stale guidance.
+
+README refreshes should stay concise, public-safe, and linked to maintained wiki pages rather than duplicating the full index. After refreshing, validate, commit, and push the scoped change.
 

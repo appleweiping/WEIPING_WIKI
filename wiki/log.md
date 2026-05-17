@@ -537,3 +537,15 @@ tags:
   - Added a durable README maintenance workflow.
   - Added future-agent rules to periodically refresh the root README when wiki structure, automation rules, workflows, or validation expectations drift.
   - Clarified that README refreshes should be validated, scoped, committed, and pushed by default.
+## [2026-05-17 15:45] query | engineering README refresh
+
+- Pages created or updated:
+  - `README.md`
+  - [[log]]
+- Sources used:
+  - User-approved README engineering refresh plan
+  - Existing `README.md`, `AGENTS.md`, `.wiki-schema.md`, `WORKFLOWS.md`, `purpose.md`, `wiki/index.md`, and `wiki/overview.md`
+- Notes:
+  - Rewrote the root README as a public entry point plus future-agent quick-start guide.
+  - Added architecture, start-here paths, core workflows, quality gates, automation commit discipline, public/private safety, maintained-page pointers, and README maintenance expectations.
+  - Kept detailed knowledge navigation in `wiki/index.md` rather than duplicating the full catalog.
