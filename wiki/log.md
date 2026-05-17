@@ -751,3 +751,16 @@ tags:
 - Notes:
   - Preserved a copy-paste prompt for asking Nuwa, with Opus as the deep review partner, to update the Lidang perspective skill.
   - Recorded that the existing `lidang-perspective` skill should be reused and deepened rather than duplicated.
+## [2026-05-18 00:07] query | VS Code black screen repair runbook
+
+- Pages created or updated:
+  - [[2026-05-18-vscode-black-screen-repair-runbook]]
+  - [[index]]
+  - [[log]]
+- Sources used:
+  - Live repair session for Microsoft VS Code black-screen behavior.
+  - Local VS Code paths and status output, including `Code.exe`, `argv.json`, `code.cmd --status`, logs, and backup directories.
+- Notes:
+  - Recorded the full diagnosis and repair sequence: process/path confirmation, cache and state cleanup, clean-profile tests, renderer status inspection, hardware-rendering configuration, winget repair failure, official user installer fallback, and final verification.
+  - Documented the Cursor misclassification and restoration so future agents verify the target executable before touching VS Code-family apps.
+  - Preserved a fast next-time runbook while avoiding public exposure of sensitive `settings.json` contents.
