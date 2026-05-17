@@ -411,3 +411,14 @@ tags:
   - Recorded PaperOrchestra's host-agent-pluggable multi-agent paper-writing pipeline, installed skills, deterministic helpers, and contribution boundaries.
   - Installed 9 PaperOrchestra skills plus shared reference material under the D-drive project-local `.codex/skills/` path.
   - Preserved the source repository under `skill/paper-orchestra/` after removing nested clone metadata.
+
+## [2026-05-17 01:59] query | PaperOrchestra usage pattern
+
+- Pages created or updated:
+  - [[paper-orchestra]]
+  - [[2026-05-17-paper-orchestra-github]]
+- Sources used:
+  - Local `paper-orchestra` skill files and host-integration docs under `skill/paper-orchestra/`
+  - User question asking whether concrete usage had been recorded
+- Notes:
+  - Added the official usage pattern: prepare `workspace/inputs/`, invoke `paper-orchestra` as the orchestrator, use `agent-research-aggregator` only when raw logs need structuring, and reserve individual sub-skills for targeted tasks.

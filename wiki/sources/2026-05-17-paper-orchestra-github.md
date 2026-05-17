@@ -69,6 +69,15 @@ The following folders were copied from `skill/paper-orchestra/skills/` into `.co
 
 `skills/shared/` was also copied into `.codex/skills/shared/` as shared reference material because some installed skills point to shared writing-quality, failure-mode, and handoff-schema checklists.
 
+## Official Invocation Summary
+
+- EXTRACTED: The normal user-facing invocation is to ask the host agent to run `paper-orchestra` on a workspace; users are not expected to manually call all 9 skills in sequence.
+- EXTRACTED: A valid workspace needs `workspace/inputs/idea.md`, `workspace/inputs/experimental_log.md`, `workspace/inputs/template.tex`, and `workspace/inputs/conference_guidelines.md`; `workspace/inputs/figures/` is optional.
+- EXTRACTED: The source repository provides `skills/paper-orchestra/scripts/init_workspace.py` to scaffold a workspace and `validate_inputs.py` to check required inputs.
+- EXTRACTED: If `idea.md` or `experimental_log.md` is missing but the user points to a project/log directory, the orchestrator can call `agent-research-aggregator` first to synthesize those inputs.
+- EXTRACTED: Official expected outputs include `workspace/outline.json`, generated figures and captions, `workspace/refs.bib`, `workspace/drafts/paper.tex`, `workspace/final/paper.tex`, `workspace/final/paper.pdf`, and `workspace/provenance.json`.
+- INFERRED: In this D-drive local setup, the practical pattern is to create the workspace under the relevant project directory or another explicit D-drive path, then invoke the installed `.codex/skills/paper-orchestra/SKILL.md` entry by natural language.
+
 ## Concrete Contributions
 
 - EXTRACTED: The repository packages the PaperOrchestra paper's appendix prompts, schemas, rubrics, halt rules, and validation flows as host-agent-executable skills.
