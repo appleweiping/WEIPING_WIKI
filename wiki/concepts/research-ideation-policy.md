@@ -23,7 +23,7 @@ Chinese shorthand: 禁止缝合，强制创新。This means avoiding collage-sty
 ## Principles
 
 - INFERRED: Ban shallow stitching. Do not propose ideas that merely paste together existing modules, baselines, or paper concepts without a new mechanism or claim.
-- INFERRED: When the user gives an abstract or general research/project prompt, broaden outward before answering. Look across multiple mainstream GitHub projects, top-conference papers, official project pages, benchmark repositories, and strong implementations for design experience.
+- INFERRED: When the user gives an abstract or general research/project prompt, broaden outward before answering. Look across multiple mainstream GitHub projects, top-conference papers, official project pages, benchmark repositories, and strong implementations for design experience, and read the relevant files or sections deeply enough to understand the operating pattern before adapting anything.
 - INFERRED: Use outside references as knowledge intake, not source material to copy. Extract mechanisms, evaluation patterns, interface ideas, and failure modes, then synthesize an original proposal.
 - INFERRED: Force novelty pressure. Prefer reframing the problem, changing the objective, inventing a sharper diagnostic, or proposing a new experimental axis.
 - INFERRED: Permit radical redesign. If the current project thesis is weak, recommend changing the thesis, method, protocol, or architecture.

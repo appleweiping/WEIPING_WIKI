@@ -10,6 +10,25 @@ tags:
 
 # Log
 
+## [2026-05-18 01:10] query | model collaboration context packing and reference intake
+
+- Pages created or updated:
+  - `AGENTS.md`
+  - [[agent-collaboration-tone-and-model-roles]]
+  - [[local-cc-sidecar-agent-workflow]]
+  - [[research-ideation-policy]]
+  - [[model-collaboration-context-and-reference-intake]]
+  - [[2026-05-18-user-feedback-model-collaboration-context-intake]]
+  - [[index]]
+  - [[log]]
+- Sources used:
+  - User report that prior cc-family collaboration felt like low-context prompting rather than real delegation.
+  - Existing local CC workflow, research ideation policy, and collaboration tone rules.
+- Notes:
+  - Added a durable rule that partner handoffs must carry the full relevant conversation state, fixed decisions, scoped artifacts, and explicit output format.
+  - Added a durable rule that software/project/web-reference work should read the whole relevant source material deeply enough to understand the operating pattern, not a toy README skim.
+  - Added a source note recording the user feedback so the rule has provenance.
+
 ## [2026-05-18 00:44] query | explicit DeepSeek delegation intent
 
 - Pages created or updated:

@@ -76,6 +76,7 @@ This is the main catalog of the wiki.
 - [[readme-maintenance-workflow]] - Rule for periodically refreshing the root README as wiki structure and automation workflows evolve.
 - [[durable-agent-rule-memory]] - Rule that user-requested future-agent memories must be persisted into AGENTS/wiki rather than left only in chat.
 - [[agent-collaboration-tone-and-model-roles]] - User-facing collaboration rule for warmer partner language, Codex parallel selves, Opus/Sonnet roles, and DeepSeek Pro/Flash preferences.
+- [[model-collaboration-context-and-reference-intake]] - Rule that partner handoffs and external reference searches must carry enough context and depth to be genuinely useful, not toy summaries.
 - [[local-cc-sidecar-agent-workflow]] - Strict three-role Codex + Claude Code partner workflow with PixelCat preflight: Codex coordinates/writes, Opus reviews deeply, and Sonnet scans low-risk diffs/docs.
 - [[agent-skill-installation-workflow]] - Durable rule for installing skills as usable tools: D-drive mirror, `.codex/skills` install, dependency setup, smoke tests, wiki docs, and scoped commit.
 - [[research-ideation-policy]] - Rule for ambitious research ideation: no shallow stitching, force novelty, and allow radical reframing.

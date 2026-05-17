@@ -59,8 +59,17 @@ The user prefers agent collaboration to feel like working with capable partners,
   - Do not search `PATH` or local folders for a `deepseek` binary unless the user explicitly asks for a local CLI route.
   - Default `鲸鱼` to DeepSeek Pro. Use Flash only when the user explicitly asks for Flash or the task is clearly lightweight and speed-first.
   - For local filesystem or repository tasks, Codex may first gather a compact read-only snapshot, then hand that snapshot to DeepSeek for reasoning or summarization. Do not imply that DeepSeek directly accessed the local machine if it did not.
-  - If DeepSeek is unavailable, say so plainly and ask whether to continue Codex-only instead of pretending the partner ran.
-  - Treat `监视` as a one-time check unless the user explicitly asks for recurring monitoring or scheduled follow-up; recurring monitoring belongs in automation/reminder workflows.
+- If DeepSeek is unavailable, say so plainly and ask whether to continue Codex-only instead of pretending the partner ran.
+- Treat `监视` as a one-time check unless the user explicitly asks for recurring monitoring or scheduled follow-up; recurring monitoring belongs in automation/reminder workflows.
+
+## Context Packing And Reference Intake
+
+- For complex Opus/Sonnet/DeepSeek handoffs, include the full relevant conversation state, the decisions already made, the files or artifacts involved, and the exact output format. A thin one-line prompt is not enough for hard problems.
+- For software, project, and web-reference work, default to reading the whole relevant file, repo section, or documentation set that is actually being used as evidence. Do not present a toy version based on README snippets or a few cherry-picked examples unless the user explicitly asked for a skim.
+- For implementation work, adapt the full operating pattern to this repository and then trim it to the local boundary. Do not stop after a partial copy of the pattern.
+- If the source is huge and the scope is intentionally narrowed, say exactly what slice was read and why.
+
+See [[model-collaboration-context-and-reference-intake|model collaboration context and reference intake]] for the maintained wiki version of this rule.
 
 ## Missing Dependency Policy
 
@@ -341,7 +350,7 @@ When the user asks for research ideas, paper positioning, method design, or proj
 
 - Do not merely stitch together existing projects, baselines, papers, or modules.
 - Treat existing repositories as context, not a cage.
-- When the user uses abstract or general terms about projects or research direction, broaden the search before answering: inspect multiple relevant mainstream GitHub projects, top-conference papers, official project pages, benchmark repos, and strong implementation patterns for inspiration.
+- When the user uses abstract or general terms about projects or research direction, broaden the search before answering: inspect multiple relevant mainstream GitHub projects, top-conference papers, official project pages, benchmark repos, and strong implementation patterns for inspiration, and read the relevant files or sections deeply enough to understand the operating pattern before adapting anything.
 - Do not copy designs, text, code, or claims from those references; extract transferable mechanisms, evaluation ideas, interaction patterns, and failure lessons, then synthesize an original direction.
 - Prefer original problem reframing, sharper claims, new experimental axes, and stronger mechanisms over incremental feature mixing.
 - Be willing to recommend major changes to a project's thesis, method, protocol, or architecture when the evidence suggests the current framing is weak.

@@ -159,6 +159,18 @@ Before Codex adopts a partner recommendation:
 
 The commit rationale must be Codex-verified. "A partner said so" is never sufficient.
 
+## Context Packing Rule
+
+When using Opus, Sonnet, or DeepSeek for a hard coding task, do not send a toy prompt. Include:
+
+- the actual goal
+- the decisions already fixed
+- the files or artifacts in scope
+- the question the partner must answer
+- the output shape you want back
+
+If the task is software or project work, give the partner enough of the real conversation and repository context to understand what changed and why before asking for judgment.
+
 ## Safety Gates
 
 - Opus and Sonnet are read-only partners by default.
