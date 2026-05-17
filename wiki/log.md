@@ -688,6 +688,23 @@ tags:
   - Installed and customized `email-assistant` for API-first Gmail/Google Workspace triage across `umn` and `vipinapple`.
   - Stored OAuth material under ignored `.wiki-tmp/email-assistant/auth/` paths and added send/delete/label confirmation gates.
   - Validated dependency install, skill frontmatter, JavaScript syntax, no-account behavior, missing-credentials behavior, and fail-closed send/label gates; live Gmail tests remain pending user OAuth.
+## [2026-05-17 22:38] ingest | WeChat Channels video publishing and LLM hex anime project
+
+- Pages created or updated:
+  - [[wechat-video-channel-publish-skill]]
+  - [[2026-05-17-wechat-video-channel-publish-skill]]
+  - [[2026-05-17-llm-hex-anime-video-project]]
+  - [[index]]
+  - [[log]]
+- Sources used:
+  - `https://github.com/JamesWuHK/wechat-video-channel-publish-skill`
+  - `D:/video creation/projects/llm-hex-anime/`
+  - Local installed skill files under `.codex/skills/wechat-video-channel-publish/`
+- Notes:
+  - Installed a dedicated 视频号 publishing skill after confirming the existing WeChat publisher only covered公众号 article/image-text flows.
+  - Patched the skill build command for Windows and validated dependency install, build, CLI help, and upload help without login or upload.
+  - Created a D-drive LLM ability-hexagon anime video project with model data, storyboard, prompt packs, generated radar/cover/subtitle assets, preview MP4, and a reviewed 视频号 upload command template.
+  - Recorded that `tencent upload`, including `--draft`, is a live-account action requiring explicit user confirmation.
 ## [2026-05-17 22:01] query | communication assistant skill
 
 - Pages created or updated:

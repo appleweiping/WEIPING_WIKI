@@ -56,6 +56,7 @@ This is the main catalog of the wiki.
 - [[nuwa-skill]] - Local repository for research-driven person-perspective skill creation.
 - [[paper-orchestra]] - Project-local PaperOrchestra skill pack for multi-agent research-paper writing and installed Codex skills.
 - [[content-creation-publisher]] - Project-local Anbeime content creation/publishing skill pack for web capture, Markdown formatting, illustration, and WeChat/X posting.
+- [[wechat-video-channel-publish-skill]] - Local Playwright CLI skill for WeChat Channels / 视频号 login, cookie check, video upload, covers, captions, scheduled publishing, and draft upload.
 - [[frontend-design]] - Project-local Anbeime frontend design skill for distinctive, production-grade interface aesthetics.
 - [[chrome-automation]] - Project-local Anbeime Chrome automation skill using agent-browser and real Chrome CDP control.
 - [[lark-cli]] - Official Lark/Feishu CLI runtime and installed lark-* skill set for Docs, Wiki, Drive, Base, Sheets, IM, and related API workflows.
@@ -86,6 +87,8 @@ This is the main catalog of the wiki.
 - [[2026-05-17-html-ppt-skill-and-deck-session]] - Chat/session source note for installing the D-drive HTML PPT skill/template setup and producing two validated decks.
 - [[2026-05-17-paper-orchestra-github]] - GitHub source note for `Ar9av/PaperOrchestra`, its paper-writing pipeline, local mirror, and installed skills.
 - [[2026-05-17-content-creation-publisher-skill]] - Source note for `anbeime/skill`'s content creation publisher skill, installed sub-skills, runtime notes, and usage patterns.
+- [[2026-05-17-wechat-video-channel-publish-skill]] - Source note for the JamesWuHK WeChat Channels / 视频号 Playwright publishing skill, local install, Windows build fix, smoke tests, and live-account safety boundaries.
+- [[2026-05-17-llm-hex-anime-video-project]] - Source note for the D-drive LLM ability-hexagon anime personification video project and its 视频号 publishing package.
 - [[2026-05-17-anbeime-frontend-design-and-chrome-automation]] - Source note for Anbeime frontend-design and chrome-automation skills, including local install paths and smoke-test results.
 - [[2026-05-17-larksuite-cli-feishu-bridge]] - Source note for official larksuite/cli, installed lark-* skills, local feishu-bridge, smoke tests, and OAuth-gated validation status.
 - [[2026-05-17-feishu-form-fill-session]] - Source note for the live Feishu shared Base form fill/submit session and browser-automation lessons.

@@ -1,0 +1,3 @@
+display_name: WeChat Video Publish
+short_description: Publish videos to 微信视频号 with cover, caption, and schedule support.
+default_prompt: Use $wechat-video-channel-publish to log in, validate cookies, and publish a 微信视频号 video safely.

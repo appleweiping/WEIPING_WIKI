@@ -1,0 +1,9 @@
+node dist/cli.js tencent upload \
+  --account my_account \
+  --file /absolute/path/to/video.mp4 \
+  --title "标题" \
+  --tags "标签1,标签2" \
+  --caption "正文描述" \
+  --cover /absolute/path/to/cover.jpg \
+  --pinned-comment "发布后补的一条评论" \
+  --schedule "2026-05-02 20:30"
