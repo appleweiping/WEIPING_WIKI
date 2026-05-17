@@ -52,6 +52,21 @@ If a required tool or dependency is genuinely missing, download or install the n
 - Do not download broad toolchains speculatively; only fetch what the current task actually needs.
 - Keep downloaded build artifacts out of Git unless they are deliberate source files.
 
+## Skill Installation Workflow
+
+When installing a skill, treat success as operational usability rather than file collection.
+
+- Mirror the source under `skill/<skill-name>/` on the D: drive and install the usable skill under `.codex/skills/<skill-name>/`.
+- If a skill pack contains independently useful sub-skills, install those sub-skills directly as well when it improves future triggering.
+- Read the upstream `SKILL.md`, references, and scripts before summarizing function or use.
+- Install or download narrow missing dependencies into `.wiki-tmp/` or another D-drive project-local cache when practical.
+- Re-run relevant tests after installation: guidance-only skills need discovery/content checks; executable skills need help/version and non-destructive smoke tests; browser skills need a real connection test when possible.
+- Never toyify a skill install by skipping required setup and then documenting the skill as if it were ready.
+- Record concrete usage, local paths, dependencies, test results, and limitations in the wiki.
+- Do not commit downloaded toolchains, browser profiles, caches, or generated runtime artifacts unless they are deliberate source files.
+
+See [[agent-skill-installation-workflow]] for the maintained public wiki version of this workflow.
+
 ## Codex Prompt Corpus And Automation Memory
 
 When ingesting local Codex prompts, treat user-authored prompts and automation prompts as a durable `codex-prompts-public` corpus, but preserve only clean, substantive, reusable prompts.

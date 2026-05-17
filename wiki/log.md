@@ -439,3 +439,25 @@ tags:
   - Recorded the skill's content capture, Markdown formatting, article illustration, WeChat publishing, and X/Twitter publishing modules.
   - Installed the aggregate `content-creation-publisher` skill plus 5 direct sub-skills: `baoyu-url-to-markdown`, `baoyu-format-markdown`, `article-illustrator`, `baoyu-post-to-wechat`, and `baoyu-post-to-x`.
   - Recorded concrete usage patterns, local Bun runtime notes, and the live-publishing confirmation boundary.
+
+## [2026-05-17 02:45] ingest | frontend design and chrome automation skills
+
+- Pages created or updated:
+  - [[frontend-design]]
+  - [[chrome-automation]]
+  - [[2026-05-17-anbeime-frontend-design-and-chrome-automation]]
+  - [[agent-skill-installation-workflow]]
+  - [[anbeime-skill]]
+  - [[agent-skill-repositories]]
+  - [[index]]
+  - `AGENTS.md`
+- Sources used:
+  - `https://github.com/anbeime/skill/tree/main/skills/frontend-design/frontend-design`
+  - `https://github.com/anbeime/skill/tree/main/skills/chrome-automation/chrome-automation`
+  - Local D-drive mirrors under `skill/frontend-design/` and `skill/chrome-automation/`
+  - Installed project-local skills under `.codex/skills/`
+- Notes:
+  - Installed both skills, documented concrete usage, and added a D-drive runtime override for `chrome-automation`.
+  - Installed/verified narrow runtime dependencies in `.wiki-tmp/`: Bun, Rust toolchain, and `agent-browser`.
+  - Re-ran real smoke tests: `agent-browser 0.27.0`, Chrome CDP open/get-title/get-url/screenshot on `https://example.com`.
+  - Added the durable anti-toyification workflow for future skill installs.

@@ -12,6 +12,7 @@ source_pages:
   - 2026-05-15-d-drive-healthcare-and-skill-roots
   - 2026-05-16-skill-source-repository-trace
   - 2026-05-17-content-creation-publisher-skill
+  - 2026-05-17-anbeime-frontend-design-and-chrome-automation
 ---
 
 # Anbeime Skill
@@ -29,6 +30,8 @@ source_pages:
 - EXTRACTED: The project summary describes an automatic skill-store update system with crawler, data management, scheduler, API integration, logging, command-line tooling, and Windows integration.
 - EXTRACTED: The repository contains many collected skill definitions, including a `skills/` tree and multiple `SKILL.md` files.
 - EXTRACTED: The upstream `skills/content-creation-publisher` subdirectory is a content collection, formatting, illustration, and publishing skill pack; it was installed project-locally as [[content-creation-publisher]].
+- EXTRACTED: The upstream `skills/frontend-design/frontend-design` subdirectory was installed project-locally as [[frontend-design]].
+- EXTRACTED: The upstream `skills/chrome-automation/chrome-automation` subdirectory was installed project-locally as [[chrome-automation]].
 - EXTRACTED: The inspected root includes data, docs, finance-skills, projects, public pages, scripts, skills, and templates.
 - INFERRED: This is the broadest skill-library/archive root under `D:/Skill`, useful for discovering or syncing many skill definitions.
 
@@ -40,9 +43,12 @@ source_pages:
 - Branch at inspection: `main`.
 - Use for: skill cataloging, skill-store data, crawler/sync scripts, and local collected skill inventory.
 - Installed local sub-skill from upstream: [[content-creation-publisher]].
+- Additional installed upstream sub-skills: [[frontend-design]], [[chrome-automation]].
 
 ## Related Pages
 
 - [[agent-skill-repositories]]
 - [[content-creation-publisher]]
+- [[frontend-design]]
+- [[chrome-automation]]
 - [[2026-05-15-d-drive-healthcare-and-skill-roots]]

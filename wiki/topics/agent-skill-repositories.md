@@ -13,6 +13,7 @@ source_pages:
   - 2026-05-16-skill-source-repository-trace
   - 2026-05-17-paper-orchestra-github
   - 2026-05-17-content-creation-publisher-skill
+  - 2026-05-17-anbeime-frontend-design-and-chrome-automation
 ---
 
 # Agent Skill Repositories
@@ -27,6 +28,7 @@ This topic tracks local repositories and project-local mirrors that collect, gen
 - [[2026-05-16-skill-source-repository-trace]] - Upstream/origin trace for migrated local skill repositories.
 - [[2026-05-17-paper-orchestra-github]] - GitHub source note and local installation record for the PaperOrchestra paper-writing skill pack.
 - [[2026-05-17-content-creation-publisher-skill]] - Source note and local installation record for the Anbeime content creation/publishing skill pack.
+- [[2026-05-17-anbeime-frontend-design-and-chrome-automation]] - Source note, installation record, and smoke-test record for Anbeime frontend design and Chrome automation skills.
 
 ## Current Roots
 
@@ -39,6 +41,8 @@ This topic tracks local repositories and project-local mirrors that collect, gen
 | [[nuwa-skill]] | `D:/Skill/nuwa-skill` | Fork of `alchaincyf/nuwa-skill`; research-driven person-perspective skill creation. |
 | [[paper-orchestra]] | `D:/Research/vipin's knowledgebase/skill/paper-orchestra` | Mirror of `Ar9av/PaperOrchestra`; multi-agent paper-writing skill pack installed into project-local `.codex/skills/`. |
 | [[content-creation-publisher]] | `D:/Research/vipin's knowledgebase/skill/content-creation-publisher` | Sub-skill mirror from `anbeime/skill`; content capture, Markdown formatting, illustration, and WeChat/X publishing workflow installed into `.codex/skills/`. |
+| [[frontend-design]] | `D:/Research/vipin's knowledgebase/skill/frontend-design` | Sub-skill mirror from `anbeime/skill`; distinctive production-grade frontend design guidance installed into `.codex/skills/`. |
+| [[chrome-automation]] | `D:/Research/vipin's knowledgebase/skill/chrome-automation` | Sub-skill mirror from `anbeime/skill`; real Chrome CDP automation via agent-browser installed into `.codex/skills/` and smoke-tested. |
 
 ## Practical Takeaways
 
@@ -50,6 +54,8 @@ This topic tracks local repositories and project-local mirrors that collect, gen
 - INFERRED: Use [[mattpocock-skills]] when looking for disciplined engineering workflow patterns.
 - INFERRED: Use [[paper-orchestra]] when the goal is to transform research ideas, experiment logs, figures, citations, and templates into a structured LaTeX paper workflow.
 - INFERRED: Use [[content-creation-publisher]] when the goal is to collect web content, format Markdown, add illustrations, or prepare/publish to WeChat and X.
+- INFERRED: Use [[frontend-design]] for distinctive frontend/interface design work.
+- INFERRED: Use [[chrome-automation]] when real visible Chrome automation is required.
 
 ## Operating Rules
 
@@ -59,6 +65,7 @@ This topic tracks local repositories and project-local mirrors that collect, gen
 - Treat `origin` as Vipin's fork/mirror and `upstream` as the original source repository when present.
 - Classify this corpus as `skill`, not as generic local projects, because the durable unit is reusable agent behavior encoded in `SKILL.md` and related tooling.
 - For project-local `.codex/skills/` installs, keep a source mirror under `skill/` when practical so future agents can inspect upstream docs and reinstall without using the C drive.
+- Follow [[agent-skill-installation-workflow]] for future skill installs; do not treat untested skill files as usable.
 
 ## Counterpoints And Gaps
 

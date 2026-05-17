@@ -56,6 +56,8 @@ This is the main catalog of the wiki.
 - [[nuwa-skill]] - Local repository for research-driven person-perspective skill creation.
 - [[paper-orchestra]] - Project-local PaperOrchestra skill pack for multi-agent research-paper writing and installed Codex skills.
 - [[content-creation-publisher]] - Project-local Anbeime content creation/publishing skill pack for web capture, Markdown formatting, illustration, and WeChat/X posting.
+- [[frontend-design]] - Project-local Anbeime frontend design skill for distinctive, production-grade interface aesthetics.
+- [[chrome-automation]] - Project-local Anbeime Chrome automation skill using agent-browser and real Chrome CDP control.
 - [[terraria-save-archive]] - Local Terraria save backup and inventory rooted at `D:/Terraria_doc`.
 - [[lu-kan]] - Architect, exhibition designer, curator, and AIGC workflow practitioner profile from user-provided chat material.
 
@@ -64,6 +66,7 @@ This is the main catalog of the wiki.
 - [[llm-wiki]] - Persistent wiki pattern in which an LLM compiles knowledge into maintained markdown pages.
 - [[llm-based-recommendation]] - Research area focused on using large language models within recommender systems and recommendation workflows.
 - [[html-ppt-agent-workflow]] - Local D-drive workflow for generating HTML PPT decks with `frontend-slides` and `beautiful-html-templates`.
+- [[agent-skill-installation-workflow]] - Durable rule for installing skills as usable tools: D-drive mirror, `.codex/skills` install, dependency setup, smoke tests, wiki docs, and scoped commit.
 - [[research-ideation-policy]] - Rule for ambitious绉戠爺璁ㄨ: no shallow stitching, force novelty, and allow radical reframing.
 - [[song-page-capture-rule]] - Rule that every liked song should get a dedicated clickable, playable song page when possible.
 
@@ -72,6 +75,7 @@ This is the main catalog of the wiki.
 - [[2026-05-17-html-ppt-skill-and-deck-session]] - Chat/session source note for installing the D-drive HTML PPT skill/template setup and producing two validated decks.
 - [[2026-05-17-paper-orchestra-github]] - GitHub source note for `Ar9av/PaperOrchestra`, its paper-writing pipeline, local mirror, and installed skills.
 - [[2026-05-17-content-creation-publisher-skill]] - Source note for `anbeime/skill`'s content creation publisher skill, installed sub-skills, runtime notes, and usage patterns.
+- [[2026-05-17-anbeime-frontend-design-and-chrome-automation]] - Source note for Anbeime frontend-design and chrome-automation skills, including local install paths and smoke-test results.
 
 - [[2026-05-16-canvas-hack-recovery-note]] - User-provided Canvas outage/hack note; expected recovery 2026-05-18 and blocks syllabus retrieval for UMN transfer-credit review.
 
