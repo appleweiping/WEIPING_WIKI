@@ -422,3 +422,20 @@ tags:
   - User question asking whether concrete usage had been recorded
 - Notes:
   - Added the official usage pattern: prepare `workspace/inputs/`, invoke `paper-orchestra` as the orchestrator, use `agent-research-aggregator` only when raw logs need structuring, and reserve individual sub-skills for targeted tasks.
+
+## [2026-05-17 02:24] ingest | content creation publisher skill
+
+- Pages created or updated:
+  - [[content-creation-publisher]]
+  - [[2026-05-17-content-creation-publisher-skill]]
+  - [[anbeime-skill]]
+  - [[agent-skill-repositories]]
+  - [[index]]
+- Sources used:
+  - `https://github.com/anbeime/skill/tree/main/skills/content-creation-publisher`
+  - Local mirror under `skill/content-creation-publisher/`
+  - Installed project-local skills under `.codex/skills/`
+- Notes:
+  - Recorded the skill's content capture, Markdown formatting, article illustration, WeChat publishing, and X/Twitter publishing modules.
+  - Installed the aggregate `content-creation-publisher` skill plus 5 direct sub-skills: `baoyu-url-to-markdown`, `baoyu-format-markdown`, `article-illustrator`, `baoyu-post-to-wechat`, and `baoyu-post-to-x`.
+  - Recorded concrete usage patterns, local Bun runtime notes, and the live-publishing confirmation boundary.

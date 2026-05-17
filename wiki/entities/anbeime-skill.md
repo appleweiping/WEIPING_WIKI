@@ -3,7 +3,7 @@ title: Anbeime Skill
 type: entity
 status: active
 created: 2026-05-15
-updated: 2026-05-16
+updated: 2026-05-17
 tags:
   - entity
   - agent-skills
@@ -11,6 +11,7 @@ tags:
 source_pages:
   - 2026-05-15-d-drive-healthcare-and-skill-roots
   - 2026-05-16-skill-source-repository-trace
+  - 2026-05-17-content-creation-publisher-skill
 ---
 
 # Anbeime Skill
@@ -27,6 +28,7 @@ source_pages:
 - EXTRACTED: Public GitHub metadata described `anbeime/skill` as a fast-updated skill store that crawls GitHub skill projects and organizes skills by category, update time, and stars.
 - EXTRACTED: The project summary describes an automatic skill-store update system with crawler, data management, scheduler, API integration, logging, command-line tooling, and Windows integration.
 - EXTRACTED: The repository contains many collected skill definitions, including a `skills/` tree and multiple `SKILL.md` files.
+- EXTRACTED: The upstream `skills/content-creation-publisher` subdirectory is a content collection, formatting, illustration, and publishing skill pack; it was installed project-locally as [[content-creation-publisher]].
 - EXTRACTED: The inspected root includes data, docs, finance-skills, projects, public pages, scripts, skills, and templates.
 - INFERRED: This is the broadest skill-library/archive root under `D:/Skill`, useful for discovering or syncing many skill definitions.
 
@@ -37,8 +39,10 @@ source_pages:
 - Original upstream: `https://github.com/anbeime/skill`.
 - Branch at inspection: `main`.
 - Use for: skill cataloging, skill-store data, crawler/sync scripts, and local collected skill inventory.
+- Installed local sub-skill from upstream: [[content-creation-publisher]].
 
 ## Related Pages
 
 - [[agent-skill-repositories]]
+- [[content-creation-publisher]]
 - [[2026-05-15-d-drive-healthcare-and-skill-roots]]
