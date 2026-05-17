@@ -522,3 +522,18 @@ tags:
   - Added a durable rule that wiki automation outputs are official maintenance results and must be validated, scoped, committed, and pushed by default.
   - Clarified that false dirty states with no content diff should be normalized and reported rather than committed as meaningless changes.
   - Checked the Lidang files that appeared modified; their object hashes matched the index and `git diff` showed no substantive content changes after refresh.
+## [2026-05-17 15:37] query | README maintenance workflow
+
+- Pages created or updated:
+  - [[readme-maintenance-workflow]]
+  - `README.md`
+  - `AGENTS.md`
+  - [[index]]
+  - [[log]]
+- Sources used:
+  - User instruction to add a wiki rule for periodically refreshing the README and committing the result.
+  - Existing repository README and wiki operating docs.
+- Notes:
+  - Added a durable README maintenance workflow.
+  - Added future-agent rules to periodically refresh the root README when wiki structure, automation rules, workflows, or validation expectations drift.
+  - Clarified that README refreshes should be validated, scoped, committed, and pushed by default.

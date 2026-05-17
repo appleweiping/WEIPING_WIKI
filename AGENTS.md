@@ -121,6 +121,7 @@ Treat the wiki as a maintained knowledge system, not an append-only archive. Per
 - Add pages when a durable concept, project, source, or answer deserves its own stable home.
 - Read and compare related pages before major maintenance so changes are based on the maintained graph, not isolated impressions.
 - Update or rewrite pages when stronger sources, better framing, or changed project reality makes the current version weaker.
+- Periodically refresh the repository `README.md` so it reflects the current wiki structure, major workflows, automation rules, public/private boundaries, and useful commands; after refreshing it, validate, commit, and push the scoped change.
 - Merge duplicate or near-duplicate pages instead of preserving unnecessary fragmentation.
 - Preserve useful old information even when it is no longer current; archive, annotate, or move it when that keeps context valuable.
 - Identify garbage, misleading, unsafe, duplicate, or genuinely useless content that may deserve deletion, but do not execute deletion without the user's explicit approval.
@@ -281,6 +282,7 @@ When the user asks for research ideas, paper positioning, method design, or proj
 - After creating or updating durable wiki content, stage and commit the related changes before ending the turn.
 - After structural, script, or website changes, make scoped commits by concern when practical and push to GitHub by default.
 - After wiki automations or scheduled/local crawl workflows create or update raw manifests, source pages, analysis pages, catalog files, logs, or indexes, validate the results, stage the scoped automation outputs, commit them, and push by default.
+- After periodic README refreshes, stage the README plus any required wiki/index/log/catalog updates, commit them as scoped maintenance, and push by default.
 - If automation leaves files marked modified but `git diff`/hash checks show no real content changes, refresh the index or normalize the false dirty state instead of creating a meaningless commit, and report that there was no substantive diff to commit.
 - Keep commits scoped to the saved wiki work and its required index/log updates.
 - Do not stage unrelated local changes unless the user explicitly asks for them.

@@ -69,6 +69,7 @@ This is the main catalog of the wiki.
 - [[llm-based-recommendation]] - Research area focused on using large language models within recommender systems and recommendation workflows.
 - [[html-ppt-agent-workflow]] - Local D-drive workflow for generating HTML PPT decks with `frontend-slides` and `beautiful-html-templates`.
 - [[feishu-material-access-workflow]] - API-first, browser-fallback workflow for connecting Feishu/Lark materials and shared forms to Codex.
+- [[readme-maintenance-workflow]] - Rule for periodically refreshing the root README as wiki structure and automation workflows evolve.
 - [[agent-skill-installation-workflow]] - Durable rule for installing skills as usable tools: D-drive mirror, `.codex/skills` install, dependency setup, smoke tests, wiki docs, and scoped commit.
 - [[research-ideation-policy]] - Rule for ambitious绉戠爺璁ㄨ: no shallow stitching, force novelty, and allow radical reframing.
 - [[song-page-capture-rule]] - Rule that every liked song should get a dedicated clickable, playable song page when possible.
