@@ -93,9 +93,14 @@ For Drive/Wiki/Base discovery:
 
 - EXTRACTED: `--version`, root `--help`, `docs --api-version v2 --help`, `wiki --help`, `drive --help`, `base --help`, `im --help`, `config init --help`, and `auth login --help` all executed successfully from the D-drive binary.
 - EXTRACTED: `auth login --help` confirms a `--no-wait` mode and a resumable `--device-code` flow.
-- EXTRACTED: `config init --help` confirms `config init --new` blocks until the user completes browser setup and should be run in the background by an agent.
-- AMBIGUOUS: Real document, Wiki, Base, and write tests have not run yet because the CLI is not configured/authenticated.
-
+- EXTRACTED: `config init --new` completed with user browser assistance and stored the Feishu CLI app config.
+- EXTRACTED: User OAuth completed for user `使用者419003`; `auth status --verify` returned `tokenStatus: valid` and `verified: true`.
+- EXTRACTED: `lark-cli doctor` returned `ok: true` after OAuth, including local and server token validation.
+- EXTRACTED: Drive search succeeded after incremental `search:docs:read` authorization; a short query found the test document by title.
+- EXTRACTED: Wiki read succeeded: `wiki +space-list`, `wiki +node-list`, and `docs +fetch` on the sample Wiki page all returned content.
+- EXTRACTED: Docs write/read succeeded: `docs +create --api-version v2` created `Codex Feishu Bridge Smoke Test 2026-05-17`, then `docs +fetch --api-version v2` returned the expected XML content.
+- EXTRACTED: Base read succeeded: `base +table-list` on a sample Base token returned eight table names.
+- AMBIGUOUS: Real user-provided private Feishu materials have not been ingested into the public wiki; only neutral smoke-test metadata is recorded.
 ## Safety Boundary
 
 - Treat OAuth URLs as opaque strings and forward them exactly when generated.

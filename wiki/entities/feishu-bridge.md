@@ -57,9 +57,10 @@ Routing rule:
 
 - EXTRACTED: `feishu-bridge` passed the local `skill-creator` `quick_validate.py` check after normalizing UTF-8 without BOM.
 - EXTRACTED: Browser-fill fallback was smoke-tested with `agent-browser 0.27.0` on a local HTML form: it opened the test page, found the textbox and button, filled `Beauty-Love Feishu test`, read the value back, and saved a screenshot.
+- EXTRACTED: API authentication is complete: `lark-cli config init --new`, `auth login --recommend`, and incremental `auth login --scope search:docs:read` were completed with user browser authorization.
+- EXTRACTED: API smoke tests cover verified auth, Drive search, Wiki node/document read, Docs create/fetch, and Base table-list read.
 - AMBIGUOUS: Real Feishu page fill was not attempted because no user-approved Feishu test form link was provided in this turn.
-- AMBIGUOUS: API read/write tests are blocked until `lark-cli config init --new` and `lark-cli auth login --recommend` are completed by the user.
-
+- AMBIGUOUS: Future high-value Feishu links should still be treated case by case; do not copy private document contents into the public wiki without explicit user approval.
 ## Safety Boundary
 
 - Do not write/delete/share/send in Feishu without clear user intent.

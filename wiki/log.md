@@ -478,3 +478,17 @@ tags:
   - Installed official Lark/Feishu CLI runtime and selected official `lark-*` skills for Docs, Wiki, Drive, Base, Sheets, IM, and related workflows.
   - Created `feishu-bridge` as the API-first/browser-fallback router for Feishu/Lark materials and forms.
   - Verified binary checksum, CLI version/help, selected skill validation, and browser-fill fallback; marked real Feishu read/write tests as pending OAuth and user-approved test resources.
+## [2026-05-17 14:09] query | Feishu bridge OAuth and live smoke tests
+
+- Pages created or updated:
+  - [[lark-cli]]
+  - [[feishu-bridge]]
+  - [[2026-05-17-larksuite-cli-feishu-bridge]]
+  - `wiki/catalog.json`
+- Sources used:
+  - User-assisted Feishu/Lark OAuth setup in the current session
+  - Local `lark-cli` runtime under `.wiki-tmp/tools/lark-cli/v1.0.32/`
+- Notes:
+  - Completed app configuration, recommended OAuth, and incremental `search:docs:read` authorization.
+  - Verified `auth status --verify`, `doctor`, Drive search, Wiki list/fetch, Docs create/fetch, and Base table-list read.
+  - Recorded only neutral smoke-test metadata; private Feishu content remains out of the public wiki.

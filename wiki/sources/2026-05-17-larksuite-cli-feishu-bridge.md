@@ -55,12 +55,21 @@ Passed:
 - EXTRACTED: Installed `feishu-bridge`, `lark-doc`, `lark-base`, `lark-wiki`, `lark-drive`, and `lark-im` passed `skill-creator` quick validation after local compatibility normalization.
 - EXTRACTED: Browser fallback smoke test used `agent-browser 0.27.0` on a local HTML form, identified a textbox/button, filled a value, read it back, and saved a screenshot.
 
-Blocked until user authorization or test resources:
+Completed with user authorization:
 
-- AMBIGUOUS: `lark-cli auth status` reported `not configured` and suggested `lark-cli config init --new`.
-- AMBIGUOUS: Real Feishu document fetch/export, Wiki node read, Base record read/write, and docs create/update tests require the user to complete Feishu/Lark OAuth setup and provide or approve test resources.
+- EXTRACTED: `config init --new` completed successfully and stored app config for `cli_aa83124b8938dcc4` with secret masked in CLI output.
+- EXTRACTED: `auth login --recommend` completed for user `使用者419003`; `auth status --verify` returned `tokenStatus: valid` and `verified: true`.
+- EXTRACTED: Incremental `auth login --scope search:docs:read` completed after `drive +search` reported the missing scope.
+- EXTRACTED: `doctor` returned `ok: true` after auth, including server token verification and Feishu endpoint checks.
+- EXTRACTED: `drive +search --query 'Codex Feishu Bridge'` found the smoke-test document.
+- EXTRACTED: `wiki +space-list` found the sample Wiki space; `wiki +node-list` found three nodes; `docs +fetch` read the `欢迎使用知识库` sample page.
+- EXTRACTED: `docs +create --api-version v2` created `Codex Feishu Bridge Smoke Test 2026-05-17`, and `docs +fetch --api-version v2` read back the expected content.
+- EXTRACTED: `base +table-list` on a sample Base token returned eight table names.
+
+Remaining boundaries:
+
 - AMBIGUOUS: Real Feishu form filling should use a user-approved test form or explicit live-form instruction.
-
+- AMBIGUOUS: Public wiki records should keep private Feishu document contents out unless the user explicitly asks to preserve them.
 ## Concrete Usage Pattern
 
 Read docs:
