@@ -9,6 +9,21 @@ tags:
 ---
 
 # Log
+
+## [2026-05-17 23:06] query | local cc usage environments
+
+- Pages created or updated:
+  - [[2026-05-17-where-can-local-cc-be-used]]
+  - [[queries-home]]
+  - [[index]]
+  - [[log]]
+- Sources used:
+  - User question with PixelCat management-panel screenshot.
+  - [[local-cc-sidecar-agent-workflow]]
+  - [[2026-05-17-opencode-cc-pixelcat-setup]]
+- Notes:
+  - Preserved the distinction between `cc` as a local command-line Claude Code entrypoint, PixelCat as the local proxy/control plane, VSCode/OpenCode/Codex as configurable local tool surfaces, and generic Claude web/app chat as a separate environment.
+  - Avoided recording screenshot-visible account, quota, balance, or API-key details in the public wiki.
 ## [2026-05-16 15:49] ingest | frontend frameworks public corpus
 
 - Pages created or updated:

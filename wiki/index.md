@@ -195,6 +195,7 @@ This is the main catalog of the wiki.
 ## Queries
 
 - [[queries-home]] - Entry page for durable saved answers.
+- [[2026-05-17-where-can-local-cc-be-used]] - Short answer on where Vipin's local `cc`/Claude Code setup can be used: terminal, Codex, VSCode/OpenCode, PixelCat-backed local tools, and why generic web/app chat is separate.
 - [[2026-05-17-how-to-ask-nuwa-to-distill-lidang]] - Copy-paste prompt for using Nuwa and Opus to update the Lidang perspective skill.
 - [[2026-04-22-how-to-reduce-github-submit-prompts]] - Workflow note on why GitHub updates may require approval prompts and how to reduce the friction.
 - [[2026-04-22-what-is-dbm]] - Short explanation of the `dBm` formula, its `1 mW` reference, and common power conversion rules.

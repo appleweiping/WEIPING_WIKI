@@ -3,7 +3,7 @@ title: Queries Home
 type: query
 status: active
 created: 2026-04-21
-updated: 2026-05-08
+updated: 2026-05-17
 tags:
   - query
 ---
@@ -14,6 +14,7 @@ Store durable answers to important questions here.
 
 ## Current Queries
 
+- [[2026-05-17-where-can-local-cc-be-used]]
 - [[2026-04-22-how-to-reduce-github-submit-prompts]]
 - [[2026-04-22-what-is-dbm]]
 - [[2026-04-22-what-is-spectroscopy]]
