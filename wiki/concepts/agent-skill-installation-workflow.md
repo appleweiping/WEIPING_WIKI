@@ -13,6 +13,7 @@ source_pages:
   - 2026-05-17-content-creation-publisher-skill
   - 2026-05-17-paper-orchestra-github
   - 2026-05-17-larksuite-cli-feishu-bridge
+  - 2026-05-17-readme-blueprint-generator-skill
 ---
 
 # Agent Skill Installation Workflow
@@ -57,6 +58,7 @@ When the user asks to install a skill from GitHub or another source:
 - [[frontend-design]]: guidance-only frontend aesthetic skill installed and documented.
 - [[chrome-automation]]: executable browser automation skill installed with D-drive agent-browser runtime and real CDP smoke test.
 - [[feishu-bridge]] and [[lark-cli]]: official Lark/Feishu CLI runtime installed on D drive, selected official lark-* skills installed, router skill added, command-level smoke tests passed, and OAuth-gated live-resource tests explicitly marked pending.
+- [[readme-blueprint-generator]]: GitHub `awesome-copilot` README specialist skill mirrored locally, installed under `.codex/skills`, enhanced for top-tier README rewrites, and used to refresh the project README.
 
 ## Counterpoints And Gaps
 

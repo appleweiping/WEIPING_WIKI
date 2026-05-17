@@ -60,6 +60,7 @@ This is the main catalog of the wiki.
 - [[chrome-automation]] - Project-local Anbeime Chrome automation skill using agent-browser and real Chrome CDP control.
 - [[lark-cli]] - Official Lark/Feishu CLI runtime and installed lark-* skill set for Docs, Wiki, Drive, Base, Sheets, IM, and related API workflows.
 - [[feishu-bridge]] - Project-local Feishu/Lark router skill that uses lark-cli for API access and chrome-automation for web-only links/forms.
+- [[readme-blueprint-generator]] - Project-local README specialist skill for high-quality README generation, critique, and rewrite workflows.
 - [[terraria-save-archive]] - Local Terraria save backup and inventory rooted at `D:/Terraria_doc`.
 - [[lu-kan]] - Architect, exhibition designer, curator, and AIGC workflow practitioner profile from user-provided chat material.
 
@@ -70,6 +71,7 @@ This is the main catalog of the wiki.
 - [[html-ppt-agent-workflow]] - Local D-drive workflow for generating HTML PPT decks with `frontend-slides` and `beautiful-html-templates`.
 - [[feishu-material-access-workflow]] - API-first, browser-fallback workflow for connecting Feishu/Lark materials and shared forms to Codex.
 - [[readme-maintenance-workflow]] - Rule for periodically refreshing the root README as wiki structure and automation workflows evolve.
+- [[durable-agent-rule-memory]] - Rule that user-requested future-agent memories must be persisted into AGENTS/wiki rather than left only in chat.
 - [[agent-skill-installation-workflow]] - Durable rule for installing skills as usable tools: D-drive mirror, `.codex/skills` install, dependency setup, smoke tests, wiki docs, and scoped commit.
 - [[research-ideation-policy]] - Rule for ambitious绉戠爺璁ㄨ: no shallow stitching, force novelty, and allow radical reframing.
 - [[song-page-capture-rule]] - Rule that every liked song should get a dedicated clickable, playable song page when possible.
@@ -82,6 +84,7 @@ This is the main catalog of the wiki.
 - [[2026-05-17-anbeime-frontend-design-and-chrome-automation]] - Source note for Anbeime frontend-design and chrome-automation skills, including local install paths and smoke-test results.
 - [[2026-05-17-larksuite-cli-feishu-bridge]] - Source note for official larksuite/cli, installed lark-* skills, local feishu-bridge, smoke tests, and OAuth-gated validation status.
 - [[2026-05-17-feishu-form-fill-session]] - Source note for the live Feishu shared Base form fill/submit session and browser-automation lessons.
+- [[2026-05-17-readme-blueprint-generator-skill]] - Source note for the GitHub `awesome-copilot` README specialist skill, local adaptation, install paths, and validation.
 
 - [[2026-05-16-canvas-hack-recovery-note]] - User-provided Canvas outage/hack note; expected recovery 2026-05-18 and blocks syllabus retrieval for UMN transfer-credit review.
 

@@ -67,6 +67,16 @@ When installing a skill, treat success as operational usability rather than file
 
 See [[agent-skill-installation-workflow]] for the maintained public wiki version of this workflow.
 
+## Durable Rule Memory
+
+When the user says future agents should remember a rule, do not leave it only in chat history.
+
+- Persist reusable operating rules into the durable rule layer: `AGENTS.md` for agent-critical behavior and the relevant wiki concept/workflow page for maintained context.
+- Update `wiki/log.md` after adding or changing durable rules.
+- Update `wiki/index.md` when a new public rule/workflow page is created.
+- Validate, commit, and push scoped durable-rule changes before ending the turn.
+- Prefer updating an existing rule page over creating a duplicate rule page.
+
 ## Codex Prompt Corpus And Automation Memory
 
 When ingesting local Codex prompts, treat user-authored prompts and automation prompts as a durable `codex-prompts-public` corpus, but preserve only clean, substantive, reusable prompts.
@@ -122,6 +132,7 @@ Treat the wiki as a maintained knowledge system, not an append-only archive. Per
 - Read and compare related pages before major maintenance so changes are based on the maintained graph, not isolated impressions.
 - Update or rewrite pages when stronger sources, better framing, or changed project reality makes the current version weaker.
 - Periodically refresh the repository `README.md` so it reflects the current wiki structure, major workflows, automation rules, public/private boundaries, and useful commands; after refreshing it, validate, commit, and push the scoped change.
+- For high-impact README rewrites or aesthetic/information-architecture critiques, first use a dedicated README/documentation skill when one is installed, then validate the result against the repository's authoritative operating docs.
 - Merge duplicate or near-duplicate pages instead of preserving unnecessary fragmentation.
 - Preserve useful old information even when it is no longer current; archive, annotate, or move it when that keeps context valuable.
 - Identify garbage, misleading, unsafe, duplicate, or genuinely useless content that may deserve deletion, but do not execute deletion without the user's explicit approval.

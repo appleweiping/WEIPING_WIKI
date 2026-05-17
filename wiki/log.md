@@ -549,3 +549,22 @@ tags:
   - Rewrote the root README as a public entry point plus future-agent quick-start guide.
   - Added architecture, start-here paths, core workflows, quality gates, automation commit discipline, public/private safety, maintained-page pointers, and README maintenance expectations.
   - Kept detailed knowledge navigation in `wiki/index.md` rather than duplicating the full catalog.
+## [2026-05-17 15:59] query | README specialist skill and durable rule memory
+
+- Pages created or updated:
+  - `README.md`
+  - `AGENTS.md`
+  - [[readme-blueprint-generator]]
+  - [[2026-05-17-readme-blueprint-generator-skill]]
+  - [[readme-maintenance-workflow]]
+  - [[agent-skill-installation-workflow]]
+  - [[durable-agent-rule-memory]]
+  - [[index]]
+- Sources used:
+  - User instruction to install a top-tier README skill and persist future-agent rule memory.
+  - `https://github.com/github/awesome-copilot`
+  - Local installed skill under `.codex/skills/readme-blueprint-generator/`
+- Notes:
+  - Installed and locally adapted the `readme-blueprint-generator` skill for high-quality README rewrites.
+  - Rewrote the root README using the specialist workflow with stronger first-impression hierarchy and maintainer quick-start structure.
+  - Added the durable rule that future-agent memory requests must be persisted into `AGENTS.md` and relevant wiki workflow pages, then validated, committed, and pushed.
