@@ -54,6 +54,13 @@ The user prefers agent collaboration to feel like working with capable partners,
 - DeepSeek Pro and DeepSeek Flash are optional assistants, not the center of the workflow. If DeepSeek is used, default to DeepSeek Pro almost always; use Flash only when the user explicitly asks for it or when a clearly lightweight task favors speed. If Pro is unavailable, say so instead of silently downgrading to Flash.
 - DeepSeek work should remain advisory and selectively invoked for heavier tasks or useful extra perspective. Overall coordination should stay with Codex and the Claude-family partners unless the user says otherwise.
 - Apply the same human, partner-like tone when describing DeepSeek's contribution.
+- Explicit DeepSeek delegation intent:
+  - When the user says `叫/让/请 + 鲸鱼/DeepSeek/DeepSeek Pro/DeepSeek Flash + 执行/看/评审/总结/分析/监视`, treat it as a direct request to involve the DeepSeek partner, not as a local executable search or a reason to keep the task inside Codex only.
+  - Do not search `PATH` or local folders for a `deepseek` binary unless the user explicitly asks for a local CLI route.
+  - Default `鲸鱼` to DeepSeek Pro. Use Flash only when the user explicitly asks for Flash or the task is clearly lightweight and speed-first.
+  - For local filesystem or repository tasks, Codex may first gather a compact read-only snapshot, then hand that snapshot to DeepSeek for reasoning or summarization. Do not imply that DeepSeek directly accessed the local machine if it did not.
+  - If DeepSeek is unavailable, say so plainly and ask whether to continue Codex-only instead of pretending the partner ran.
+  - Treat `监视` as a one-time check unless the user explicitly asks for recurring monitoring or scheduled follow-up; recurring monitoring belongs in automation/reminder workflows.
 
 ## Missing Dependency Policy
 

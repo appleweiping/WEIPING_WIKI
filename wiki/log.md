@@ -3,12 +3,26 @@ title: Log
 type: log
 status: active
 created: 2026-04-21
-updated: 2026-05-17
+updated: 2026-05-18
 tags:
   - log
 ---
 
 # Log
+
+## [2026-05-18 00:44] query | explicit DeepSeek delegation intent
+
+- Pages created or updated:
+  - `AGENTS.md`
+  - [[agent-collaboration-tone-and-model-roles]]
+  - [[log]]
+- Sources used:
+  - User report that a new chat misread "叫鲸鱼执行" as a local CLI discovery task.
+  - Existing collaboration tone and DeepSeek role rules.
+- Notes:
+  - Added a durable routing rule that `叫/让/请 + 鲸鱼/DeepSeek + 执行/看/评审/总结/分析/监视` is an explicit DeepSeek delegation request.
+  - Clarified that Codex should gather compact read-only local snapshots for filesystem tasks before handing them to DeepSeek, and must not claim DeepSeek directly accessed local files.
+  - Clarified that DeepSeek unavailability must be stated plainly instead of silently downgrading to Codex-only, and that `监视` defaults to a one-time check unless recurring automation is requested.
 
 ## [2026-05-17 23:06] query | local cc usage environments
 
