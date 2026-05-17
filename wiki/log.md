@@ -597,3 +597,17 @@ tags:
   - Upgraded the sidecar rule to a strict threshold-based three-role system: Codex Coordinator, Opus Reviewer, and Sonnet Scanner.
   - Added forced trigger thresholds, Sonnet-to-Opus escalation, lightweight exemptions, fixed handoff prompt contract, command templates, safety gates, and coordinator verification duties.
   - Explicitly kept OpenCode out of this coding multi-agent workflow while preserving it as an installed tool fact in the setup source note.
+## [2026-05-17 19:42] query | PixelCat preflight for cc family
+
+- Pages created or updated:
+  - `AGENTS.md`
+  - [[local-cc-sidecar-agent-workflow]]
+  - [[2026-05-17-opencode-cc-pixelcat-setup]]
+  - [[index]]
+- Sources used:
+  - User instruction and screenshot clarifying that the PixelCat management panel must be open for local `cc` family tools.
+  - Local check showing `127.0.0.1:8990` listening during the session.
+- Notes:
+  - Added a mandatory PixelCat preflight before `cc` sidecar calls.
+  - Future agents should check `127.0.0.1:8990`, launch `D:\cc\pixelcat-app.exe` when needed, wait briefly, and re-check before treating `cc` as unavailable.
+  - Recorded that public wiki pages must not expose screenshot-visible PixelCat account details, API keys, balances, quota, or usage data.

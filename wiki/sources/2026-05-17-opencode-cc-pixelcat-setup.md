@@ -37,6 +37,7 @@ Tutorial references:
 - EXTRACTED: `D:\cc\setup-env.ps1` was created to set the local PATH/runtime environment.
 - EXTRACTED: User PATH was updated to include `D:\cc`, `D:\cc\node`, `D:\cc\npm-global`, and `D:\cc\npm-global\node_modules\.bin`.
 - EXTRACTED: PixelCat local proxy was confirmed running via `D:\cc\pixelcat-app.exe` and listening on `127.0.0.1:8990`.
+- EXTRACTED: The user later clarified, with a PixelCat management-panel screenshot, that the PixelCat panel must be open for the local `cc` family tools to work.
 - EXTRACTED: OpenCode was configured to use the PixelCat-compatible local API endpoint and a default Claude Sonnet model.
 - EXTRACTED: VSCode had the PixelCat OpenCode extension and Claude Code extension installed.
 
@@ -48,6 +49,7 @@ Tutorial references:
 - EXTRACTED: `D:\cc\cc.cmd -p "Reply only OK" --model claude-sonnet-4-6 --output-format text` returned `OK`.
 - EXTRACTED: `D:\cc\cc.cmd -p "Reply only OK" --model claude-opus-4-7 --output-format text` returned `OK`.
 - EXTRACTED: `D:\cc\cc.cmd` successfully ran a read-only `claude-opus-4-7` diff-review sidecar prompt for the wiki update and reported `NO BLOCKERS`.
+- EXTRACTED: During the PixelCat preflight-rule update, `127.0.0.1:8990` was observed listening locally.
 
 ## Operational Meaning
 
@@ -74,4 +76,6 @@ See [[local-cc-sidecar-agent-workflow]] for the reusable workflow.
 - Do not copy private chat/video contents into public wiki pages.
 - Keep runtime packages, caches, and downloaded toolchains out of Git unless they are deliberate source files.
 - If the PixelCat panel/proxy is not running, `cc` and OpenCode may fail even when the entrypoints exist.
+- Future agents should try to launch `D:\cc\pixelcat-app.exe` and re-check `127.0.0.1:8990` before reporting that `cc` is unavailable.
 - The hardcoded D-drive path and local proxy port are operational notes, not portable configuration; update the workflow if the local runtime moves.
+- Do not publish screenshot-visible account details, API keys, balances, quota, or usage data from the PixelCat panel in public wiki pages.

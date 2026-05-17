@@ -295,10 +295,11 @@ Forced thresholds:
 
 Sidecar prompt contract:
 
+- Before any `cc` family call, run a PixelCat preflight: check whether `127.0.0.1:8990` is listening. If it is not listening, launch the visible PixelCat management panel from `D:\cc\pixelcat-app.exe`, wait briefly, and re-check the port before retrying `cc`.
 - Every `cc` call must be non-interactive with `-p` and include `AUTHORIZATION`, `ROLE`, `MODEL`, `REPO`, `SCOPE`, `QUESTION`, `CONSTRAINTS`, `OUTPUT FORMAT`, and `ESCALATION SIGNALS`.
 - Constraints must state that the sidecar is read-only, must not edit files, must not run destructive commands, and must not handle credentials or live account actions.
 - Codex must independently verify sidecar claims against the live repository before editing, testing, staging, committing, or pushing.
-- If `cc` fails, hangs, returns unusable output, or the PixelCat proxy is unavailable, Codex may continue without it, but must state the limitation when it materially affects risk or validation.
+- If `cc` fails, hangs, returns unusable output, or PixelCat still cannot be started, Codex may continue without it, but must state the limitation when it materially affects risk or validation.
 - OpenCode is not part of this multi-agent coding workflow.
 
 See [[local-cc-sidecar-agent-workflow]] for the maintained public wiki version of this workflow.

@@ -27,9 +27,30 @@ Codex acts as the supervisor and only writer. The sidecar models act as read-onl
 - EXTRACTED: Claude Code entrypoint: `D:\cc\cc.cmd`.
 - EXTRACTED: Node/npm runtime and global packages live under `D:\cc\`, not the C drive.
 - EXTRACTED: PixelCat provides the local model proxy on `127.0.0.1:8990`.
+- EXTRACTED: PixelCat management panel executable: `D:\cc\pixelcat-app.exe`.
 - EXTRACTED: Verified Claude Code version: `2.1.143`.
 
 OpenCode is installed and recorded in [[2026-05-17-opencode-cc-pixelcat-setup]], but it is not part of this multi-agent coding workflow.
+
+## PixelCat Preflight
+
+PixelCat is the required control plane for the local `cc` family setup. Before calling `D:\cc\cc.cmd`, Codex should make sure the PixelCat proxy is available.
+
+Check the local proxy:
+
+```powershell
+Get-NetTCPConnection -LocalAddress 127.0.0.1 -LocalPort 8990 -ErrorAction SilentlyContinue
+```
+
+If nothing is listening, launch the visible management panel:
+
+```powershell
+Start-Process -FilePath "D:\cc\pixelcat-app.exe"
+```
+
+Then wait briefly and re-check `127.0.0.1:8990`. If the proxy still does not come up, record the limitation and either retry later or continue Codex-only when the missing sidecar does not materially change the risk profile.
+
+Do not ask the user to remember how to open PixelCat unless the executable is missing or startup fails repeatedly.
 
 ## Role Contract
 
@@ -145,11 +166,13 @@ The commit rationale must be Codex-verified. "Sidecar said so" is never sufficie
 - Do not delegate destructive commands, production changes, real account actions, payment actions, or credential handling.
 - User approval is still required for destructive operations or cross-repository edits, regardless of sidecar output.
 - If `cc` fails, hangs, returns unusable output, or the PixelCat panel/proxy is not running, fall back to Codex-only work and record the limitation when it materially affects risk or validation.
+- When PixelCat is not running, try the PixelCat preflight launch procedure before falling back.
 
 ## Verified Status
 
 - EXTRACTED: `D:\cc\cc.cmd --version` returned `2.1.143 (Claude Code)`.
 - EXTRACTED: The PixelCat proxy was observed listening on `127.0.0.1:8990`.
+- EXTRACTED: The user confirmed that the PixelCat management panel must be open for the local `cc` family tools to work.
 - EXTRACTED: `D:\cc\cc.cmd -p "Reply only OK" --model claude-sonnet-4-6 --output-format text` returned `OK`.
 - EXTRACTED: `D:\cc\cc.cmd -p "Reply only OK" --model claude-opus-4-7 --output-format text` returned `OK`.
 - EXTRACTED: `D:\cc\cc.cmd` successfully ran a read-only `claude-opus-4-7` diff-review sidecar prompt for a wiki update and reported `NO BLOCKERS`.
