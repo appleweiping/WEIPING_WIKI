@@ -277,15 +277,29 @@ The coordinator must integrate results and avoid staging unrelated local changes
 
 ## Local CC / Claude Code Sidecar Policy
 
-For substantial coding tasks, architecture reviews, complex debugging, risky refactors, or independent verification, use the local Claude Code sidecar when it is available instead of forcing the user to open a terminal manually.
+For coding work, use the local Claude Code sidecar as a strict threshold-based multi-agent system when the task is non-trivial. Codex is the supervisor, integrator, and only writer; `cc` models are read-only specialists.
 
-- Preferred local entrypoint: `D:\cc\cc.cmd`.
-- Use non-interactive bounded prompts with `-p`, for example read-only review, implementation planning, targeted debugging, or final diff audit.
-- Prefer `claude-opus-4-7` for hard reasoning, design review, deep debugging, and reviewer passes; use faster models only when the task is routine.
-- Codex remains the coordinator and integrator: treat sidecar output as advisory, inspect the relevant files yourself, and verify before editing, testing, committing, or pushing.
-- Do not delegate destructive commands, credential handling, payment/account actions, or live production changes to the sidecar without explicit user approval.
-- Keep sidecar tasks scoped and role-specific; ask it to avoid file edits unless the user explicitly wants a separate implementation agent and the write scope is clear.
-- Record reusable prompt patterns, validation results, and limitations in the wiki so future agents can keep using the setup.
+| Agent | Model | Primary role | May edit files | May commit/push |
+| --- | --- | --- | --- | --- |
+| Codex Coordinator | current Codex session | orchestration, integration, file edits, tests, staging, commits, pushes, wiki memory | yes | yes |
+| Opus Reviewer | `claude-opus-4-7` via `D:\cc\cc.cmd` | deep code review, complex reasoning, architecture, security/privacy, high-risk design calls | no | no |
+| Sonnet Scanner | `claude-sonnet-4-6` via `D:\cc\cc.cmd` | quick diff scans, test suggestions, doc/README reading, routine second-pass checks | no | no |
+
+Forced thresholds:
+
+- Invoke Opus for architecture decisions, cross-module or multi-file refactors, API/schema/data migration work, security/privacy-sensitive changes, hard debugging after a first failed pass, and high-risk final diff audits.
+- Invoke Sonnet for quick scans of low-risk diffs, test-gap suggestions, documentation reading/summarization, and routine "second set of eyes" checks.
+- If Opus and Sonnet triggers both match, Opus wins.
+- Escalate from Sonnet to Opus when the Sonnet output reports uncertainty, a possible blocker, cross-module reasoning, architectural tradeoffs, or security/privacy risk.
+- Lightweight exemptions are allowed only for spelling fixes, one-line comments, tiny wiki/log/catalog corrections that do not alter operating rules, pure formatting inspection with no behavioral impact, or when the user explicitly asks not to use a sidecar.
+
+Sidecar prompt contract:
+
+- Every `cc` call must be non-interactive with `-p` and include `AUTHORIZATION`, `ROLE`, `MODEL`, `REPO`, `SCOPE`, `QUESTION`, `CONSTRAINTS`, `OUTPUT FORMAT`, and `ESCALATION SIGNALS`.
+- Constraints must state that the sidecar is read-only, must not edit files, must not run destructive commands, and must not handle credentials or live account actions.
+- Codex must independently verify sidecar claims against the live repository before editing, testing, staging, committing, or pushing.
+- If `cc` fails, hangs, returns unusable output, or the PixelCat proxy is unavailable, Codex may continue without it, but must state the limitation when it materially affects risk or validation.
+- OpenCode is not part of this multi-agent coding workflow.
 
 See [[local-cc-sidecar-agent-workflow]] for the maintained public wiki version of this workflow.
 

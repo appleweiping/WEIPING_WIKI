@@ -72,9 +72,9 @@ This is the main catalog of the wiki.
 - [[feishu-material-access-workflow]] - API-first, browser-fallback workflow for connecting Feishu/Lark materials and shared forms to Codex.
 - [[readme-maintenance-workflow]] - Rule for periodically refreshing the root README as wiki structure and automation workflows evolve.
 - [[durable-agent-rule-memory]] - Rule that user-requested future-agent memories must be persisted into AGENTS/wiki rather than left only in chat.
-- [[local-cc-sidecar-agent-workflow]] - Workflow for using the D-drive Claude Code / `cc` runtime as a bounded sidecar agent for coding review, planning, debugging, and verification.
+- [[local-cc-sidecar-agent-workflow]] - Strict three-role Codex + Claude Code workflow: Codex coordinates/writes, Opus reviews deep architecture, and Sonnet scans low-risk diffs/docs.
 - [[agent-skill-installation-workflow]] - Durable rule for installing skills as usable tools: D-drive mirror, `.codex/skills` install, dependency setup, smoke tests, wiki docs, and scoped commit.
-- [[research-ideation-policy]] - Rule for ambitious绉戠爺璁ㄨ: no shallow stitching, force novelty, and allow radical reframing.
+- [[research-ideation-policy]] - Rule for ambitious research ideation: no shallow stitching, force novelty, and allow radical reframing.
 - [[song-page-capture-rule]] - Rule that every liked song should get a dedicated clickable, playable song page when possible.
 
 ## Sources

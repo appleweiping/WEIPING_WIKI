@@ -583,3 +583,17 @@ tags:
   - Added a durable rule that substantial coding work can use `D:\cc\cc.cmd` as a bounded sidecar agent instead of requiring the user to open Claude Code manually.
   - Recorded verified versions, D-drive entrypoints, PixelCat proxy status, model smoke tests, and safety boundaries without publishing auth tokens or private chat/video contents.
   - Clarified that Codex remains coordinator/integrator and must verify sidecar output before edits, commits, or pushes.
+## [2026-05-17 19:25] query | strict cc multi-agent roles
+
+- Pages created or updated:
+  - `AGENTS.md`
+  - [[local-cc-sidecar-agent-workflow]]
+  - [[2026-05-17-opencode-cc-pixelcat-setup]]
+  - [[index]]
+- Sources used:
+  - User-approved strict CC multi-agent plan from the current chat.
+  - Existing local CC sidecar workflow and PixelCat/OpenCode/Claude Code setup notes.
+- Notes:
+  - Upgraded the sidecar rule to a strict threshold-based three-role system: Codex Coordinator, Opus Reviewer, and Sonnet Scanner.
+  - Added forced trigger thresholds, Sonnet-to-Opus escalation, lightweight exemptions, fixed handoff prompt contract, command templates, safety gates, and coordinator verification duties.
+  - Explicitly kept OpenCode out of this coding multi-agent workflow while preserving it as an installed tool fact in the setup source note.

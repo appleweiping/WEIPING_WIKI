@@ -53,6 +53,19 @@ Tutorial references:
 
 INFERRED: The installation is usable as a local coding-agent runtime, not just a manually opened terminal tool. Future Codex sessions can call `D:\cc\cc.cmd` directly for sidecar planning, review, debugging, and verification when the task merits multi-agent collaboration.
 
+On 2026-05-17, the workflow was upgraded from a flexible sidecar rule into a strict three-role arrangement:
+
+- Codex Coordinator: supervisor, integrator, file edits, validation, commits, pushes, and wiki memory.
+- Opus Reviewer: `claude-opus-4-7` for deep code review, complex reasoning, architecture, hard debugging, and high-risk final audits.
+- Sonnet Scanner: `claude-sonnet-4-6` for quick diff scans, test suggestions, documentation reading, and routine low-risk checks.
+
+OpenCode remains an installed and smoke-tested tool, but it is not part of this multi-agent coding workflow.
+
+The strict-role update was validated with real sidecar calls:
+
+- EXTRACTED: `claude-sonnet-4-6` performed a read-only quick scan of the policy diff, found no credential or public/private leaks, and suggested tightening PixelCat dependency notes, lightweight exemption boundaries, and prompt authorization wording.
+- EXTRACTED: `claude-opus-4-7` performed a read-only blocker review of the policy diff and reported `NO BLOCKERS`, with low-risk suggestions about role wording drift, Opus/Sonnet trigger precedence, and sidecar failure handling.
+
 See [[local-cc-sidecar-agent-workflow]] for the reusable workflow.
 
 ## Safety Notes
