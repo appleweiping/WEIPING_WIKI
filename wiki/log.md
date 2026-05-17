@@ -3,7 +3,7 @@ title: Log
 type: log
 status: active
 created: 2026-04-21
-updated: 2026-05-15
+updated: 2026-05-17
 tags:
   - log
 ---
@@ -634,3 +634,22 @@ tags:
   - User note that DeepSeek also has the nickname `鲸鱼`.
 - Notes:
   - Added `鲸鱼` as the warmer Chinese nickname future agents may use for DeepSeek when it fits the conversation.
+## [2026-05-17 21:17] analysis | research project workbench audit
+
+- Pages created or updated:
+  - [[research-project-workbench]]
+  - [[uncertainty]]
+  - [[truce-rec]]
+  - [[tgl-rec]]
+  - [[2026-05-17-research-project-roots-deep-review]]
+  - [[2026-05-17-research-project-workbench-audit]]
+  - [[index]]
+- Sources used:
+  - `D:/Research/Uncertainty`
+  - `D:/Research/TRUCE-Rec`
+  - `D:/Research/TGL-Rec`
+  - Project `AGENTS.md`, README, canonical docs, `.codex/skills`, git status, `git ls-files`, `rg --files`, and artifact-size inventory.
+- Notes:
+  - Added an upper-level research project workbench route for the three local LLM4Rec repositories.
+  - Expanded the three project entity pages with defended claims, current gates, startup packets, module maps, file-area boundaries, git-state reminders, and future-agent entry commands.
+  - Recorded the coverage strategy: classify git-tracked text-like files and inventory raw/data/output/log/archive artifacts by metadata only, without copying sensitive or large contents into public wiki.
