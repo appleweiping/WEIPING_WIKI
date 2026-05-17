@@ -62,6 +62,7 @@ This is the main catalog of the wiki.
 - [[feishu-bridge]] - Project-local Feishu/Lark router skill that uses lark-cli for API access and chrome-automation for web-only links/forms.
 - [[readme-blueprint-generator]] - Project-local README specialist skill for high-quality README generation, critique, and rewrite workflows.
 - [[email-assistant-skill]] - Project-local Gmail/Google Workspace assistant skill for quiet mail triage, Chinese summaries, draft-first replies, and explicit send approval across UMN and vipinapple accounts.
+- [[communication-assistant-skill]] - Project-local unified communication router skill for WhatsApp, WeChat, QQ, email, and shared outbox workflows.
 - [[terraria-save-archive]] - Local Terraria save backup and inventory rooted at `D:/Terraria_doc`.
 - [[lu-kan]] - Architect, exhibition designer, curator, and AIGC workflow practitioner profile from user-provided chat material.
 
@@ -90,6 +91,7 @@ This is the main catalog of the wiki.
 - [[2026-05-17-feishu-form-fill-session]] - Source note for the live Feishu shared Base form fill/submit session and browser-automation lessons.
 - [[2026-05-17-readme-blueprint-generator-skill]] - Source note for the GitHub `awesome-copilot` README specialist skill, local adaptation, install paths, and validation.
 - [[2026-05-17-email-assistant-skill]] - Source note for the customized email-assistant skill derived from Benchflow Gmail scripts, including API-first design, local auth paths, safety gates, and validation.
+- [[2026-05-17-communication-assistant-skill]] - Source note for the unified communication router skill, its adapter landscape, shared outbox, and prefill-first safety model.
 - [[2026-05-17-opencode-cc-pixelcat-setup]] - Source note for the D-drive OpenCode, Claude Code, and PixelCat setup plus smoke-test results.
 - [[2026-05-17-research-project-roots-deep-review]] - Public-safe source note for the deep read-only review of analog-agent, Uncertainty/Pony-Rec, TRUCE-Rec, and TGL-Rec local roots.
 

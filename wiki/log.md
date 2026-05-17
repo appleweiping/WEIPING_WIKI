@@ -688,3 +688,20 @@ tags:
   - Installed and customized `email-assistant` for API-first Gmail/Google Workspace triage across `umn` and `vipinapple`.
   - Stored OAuth material under ignored `.wiki-tmp/email-assistant/auth/` paths and added send/delete/label confirmation gates.
   - Validated dependency install, skill frontmatter, JavaScript syntax, no-account behavior, missing-credentials behavior, and fail-closed send/label gates; live Gmail tests remain pending user OAuth.
+## [2026-05-17 22:01] query | communication assistant skill
+
+- Pages created or updated:
+  - [[communication-assistant-skill]]
+  - [[2026-05-17-communication-assistant-skill]]
+  - [[email-assistant-skill]]
+  - [[2026-05-17-email-assistant-skill]]
+  - [[index]]
+  - [[log]]
+- Sources used:
+  - User-approved communication assistant plan.
+  - GitHub references: `op7418/Claude-to-IM-skill`, `fastclaw-ai/weclaw`, `huohuoer/wechat-cli`, `cluic/wxauto`, `NapNeko/NapCatQQ`, `tencent-connect/openclaw-qqbot`, `steipete/warelay`.
+  - Local installed skill under `.codex/skills/communication-assistant/`.
+- Notes:
+  - Installed a unified communication router skill with a shared outbox and prefill-first safety model for WhatsApp, WeChat, QQ, Feishu/Lark, and email reuse.
+  - Added adapter references that prefer QR/login-state/session-based paths and explicitly avoid password storage.
+  - Validated `pnpm install`, `node --check`, outbox create/show/mark/cancel/list smoke tests, and confirmed the runtime state is confined to ignored `.wiki-tmp/communication-assistant/`.

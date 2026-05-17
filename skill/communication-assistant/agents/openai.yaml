@@ -1,0 +1,7 @@
+interface:
+  display_name: "Communication Assistant"
+  short_description: "Triage chats, draft replies, and manage a safe outbox across messaging platforms."
+  default_prompt: "Use $communication-assistant to summarize my messages in Chinese and draft replies without sending."
+
+policy:
+  allow_implicit_invocation: true

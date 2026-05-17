@@ -1,0 +1,15 @@
+{
+  "name": "communication-assistant",
+  "version": "1.0.0",
+  "description": "Unified outbox and routing helpers for personal communication adapters",
+  "type": "module",
+  "scripts": {
+    "outbox": "node scripts/outbox.js",
+    "check": "node --check scripts/outbox.js"
+  },
+  "dependencies": {
+    "minimist": "^1.2.8"
+  },
+  "keywords": ["communication", "wechat", "whatsapp", "qq", "codex", "skill"],
+  "license": "MIT"
+}

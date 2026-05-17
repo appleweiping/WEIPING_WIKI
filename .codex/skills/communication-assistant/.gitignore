@@ -1,0 +1,23 @@
+# Runtime state - never commit private communication data.
+.wiki-tmp/
+/config/
+/sessions/
+/outbox/
+/logs/
+
+# Dependencies
+node_modules/
+package-lock.json
+
+# Local secrets or session material
+*.session
+*.token
+*.cookie
+*.cookies
+*.sqlite
+*.db
+*.log
+
+# OS files
+Thumbs.db
+Desktop.ini
