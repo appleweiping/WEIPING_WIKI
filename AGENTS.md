@@ -280,6 +280,8 @@ When the user asks for research ideas, paper positioning, method design, or proj
 
 - After creating or updating durable wiki content, stage and commit the related changes before ending the turn.
 - After structural, script, or website changes, make scoped commits by concern when practical and push to GitHub by default.
+- After wiki automations or scheduled/local crawl workflows create or update raw manifests, source pages, analysis pages, catalog files, logs, or indexes, validate the results, stage the scoped automation outputs, commit them, and push by default.
+- If automation leaves files marked modified but `git diff`/hash checks show no real content changes, refresh the index or normalize the false dirty state instead of creating a meaningless commit, and report that there was no substantive diff to commit.
 - Keep commits scoped to the saved wiki work and its required index/log updates.
 - Do not stage unrelated local changes unless the user explicitly asks for them.
 
@@ -357,4 +359,5 @@ When the user asks for a complete public corpus using phrases such as full GitHu
 - Use stable IDs and semantic hashes to prevent duplicate captures and noisy commits.
 - Use safe public indexing: metadata, summaries, links, hashes, categories, and license notes; do not publicly mirror unclear-license full PDFs, source code, or long webpage text.
 - Add/update automation so future agents rerun the ingest, validate, commit scoped changes, and push.
+- Treat automation outputs as durable wiki maintenance, not scratch files: if a run changes manifests, source pages, analyses, catalog, index, or log, commit and push those scoped changes after validation.
 - See [[public-corpus-ingest-workflow]] for the maintained wiki version of this workflow.

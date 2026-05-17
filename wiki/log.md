@@ -509,3 +509,16 @@ tags:
   - Recorded the API-first/browser-fallback Feishu material access system as a durable workflow.
   - Recorded a successful live Feishu form submission while omitting personal identifiers and submitted private answer text from the public wiki.
   - Preserved practical lessons about Feishu select controls, required-field validation, one-time-submit confirmation dialogs, and final success verification.
+## [2026-05-17 15:23] query | automation output commit discipline
+
+- Pages created or updated:
+  - `AGENTS.md`
+  - [[public-corpus-ingest-workflow]]
+  - [[log]]
+- Sources used:
+  - User instruction that Lidang and other wiki automation outputs should be committed after validation.
+  - Local git inspection of the previously reported Lidang automation files.
+- Notes:
+  - Added a durable rule that wiki automation outputs are official maintenance results and must be validated, scoped, committed, and pushed by default.
+  - Clarified that false dirty states with no content diff should be normalized and reported rather than committed as meaningless changes.
+  - Checked the Lidang files that appeared modified; their object hashes matched the index and `git diff` showed no substantive content changes after refresh.
