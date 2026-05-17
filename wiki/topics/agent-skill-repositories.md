@@ -14,6 +14,7 @@ source_pages:
   - 2026-05-17-paper-orchestra-github
   - 2026-05-17-content-creation-publisher-skill
   - 2026-05-17-anbeime-frontend-design-and-chrome-automation
+  - 2026-05-17-larksuite-cli-feishu-bridge
 ---
 
 # Agent Skill Repositories
@@ -29,6 +30,7 @@ This topic tracks local repositories and project-local mirrors that collect, gen
 - [[2026-05-17-paper-orchestra-github]] - GitHub source note and local installation record for the PaperOrchestra paper-writing skill pack.
 - [[2026-05-17-content-creation-publisher-skill]] - Source note and local installation record for the Anbeime content creation/publishing skill pack.
 - [[2026-05-17-anbeime-frontend-design-and-chrome-automation]] - Source note, installation record, and smoke-test record for Anbeime frontend design and Chrome automation skills.
+- [[2026-05-17-larksuite-cli-feishu-bridge]] - Source note, local installation record, and smoke-test record for official Lark/Feishu CLI skills plus the local Feishu bridge router.
 
 ## Current Roots
 
@@ -56,6 +58,7 @@ This topic tracks local repositories and project-local mirrors that collect, gen
 - INFERRED: Use [[content-creation-publisher]] when the goal is to collect web content, format Markdown, add illustrations, or prepare/publish to WeChat and X.
 - INFERRED: Use [[frontend-design]] for distinctive frontend/interface design work.
 - INFERRED: Use [[chrome-automation]] when real visible Chrome automation is required.
+- INFERRED: Use [[feishu-bridge]] when the user asks for Feishu/Lark document, Wiki, Drive, Base, Sheet, message, link, or form access; it chooses [[lark-cli]] first and browser automation when needed.
 
 ## Operating Rules
 

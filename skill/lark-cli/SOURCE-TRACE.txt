@@ -1,0 +1,6 @@
+source: https://github.com/larksuite/cli
+version: v1.0.32
+commit: 14a3213038eaf563fb2c1234fe20c92981cc8ed9
+installed_cli: D:/Research/vipin's knowledgebase/.wiki-tmp/tools/lark-cli/v1.0.32/bin/lark-cli.exe
+checksum_windows_amd64_sha256: 8f5fef30ec0485279e1a8b7e949f8ee42df9ada006c7617b0e4fc54177179b9d
+notes: Official Lark/Feishu CLI skills mirrored here. Runtime binary stays in .wiki-tmp/tools and is not committed.

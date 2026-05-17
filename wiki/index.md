@@ -58,6 +58,8 @@ This is the main catalog of the wiki.
 - [[content-creation-publisher]] - Project-local Anbeime content creation/publishing skill pack for web capture, Markdown formatting, illustration, and WeChat/X posting.
 - [[frontend-design]] - Project-local Anbeime frontend design skill for distinctive, production-grade interface aesthetics.
 - [[chrome-automation]] - Project-local Anbeime Chrome automation skill using agent-browser and real Chrome CDP control.
+- [[lark-cli]] - Official Lark/Feishu CLI runtime and installed lark-* skill set for Docs, Wiki, Drive, Base, Sheets, IM, and related API workflows.
+- [[feishu-bridge]] - Project-local Feishu/Lark router skill that uses lark-cli for API access and chrome-automation for web-only links/forms.
 - [[terraria-save-archive]] - Local Terraria save backup and inventory rooted at `D:/Terraria_doc`.
 - [[lu-kan]] - Architect, exhibition designer, curator, and AIGC workflow practitioner profile from user-provided chat material.
 
@@ -76,6 +78,7 @@ This is the main catalog of the wiki.
 - [[2026-05-17-paper-orchestra-github]] - GitHub source note for `Ar9av/PaperOrchestra`, its paper-writing pipeline, local mirror, and installed skills.
 - [[2026-05-17-content-creation-publisher-skill]] - Source note for `anbeime/skill`'s content creation publisher skill, installed sub-skills, runtime notes, and usage patterns.
 - [[2026-05-17-anbeime-frontend-design-and-chrome-automation]] - Source note for Anbeime frontend-design and chrome-automation skills, including local install paths and smoke-test results.
+- [[2026-05-17-larksuite-cli-feishu-bridge]] - Source note for official larksuite/cli, installed lark-* skills, local eishu-bridge, smoke tests, and OAuth-gated validation status.
 
 - [[2026-05-16-canvas-hack-recovery-note]] - User-provided Canvas outage/hack note; expected recovery 2026-05-18 and blocks syllabus retrieval for UMN transfer-credit review.
 

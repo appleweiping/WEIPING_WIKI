@@ -461,3 +461,20 @@ tags:
   - Installed/verified narrow runtime dependencies in `.wiki-tmp/`: Bun, Rust toolchain, and `agent-browser`.
   - Re-ran real smoke tests: `agent-browser 0.27.0`, Chrome CDP open/get-title/get-url/screenshot on `https://example.com`.
   - Added the durable anti-toyification workflow for future skill installs.
+## [2026-05-17 13:47] ingest | Feishu bridge and Lark CLI skill installation
+
+- Pages created or updated:
+  - [[feishu-bridge]]
+  - [[lark-cli]]
+  - [[2026-05-17-larksuite-cli-feishu-bridge]]
+  - [[agent-skill-installation-workflow]]
+  - [[agent-skill-repositories]]
+  - [[index]]
+- Sources used:
+  - `https://github.com/larksuite/cli`
+  - Local D-drive runtime under `.wiki-tmp/tools/lark-cli/v1.0.32/`
+  - Installed skills under `.codex/skills/lark-*` and `.codex/skills/feishu-bridge/`
+- Notes:
+  - Installed official Lark/Feishu CLI runtime and selected official `lark-*` skills for Docs, Wiki, Drive, Base, Sheets, IM, and related workflows.
+  - Created `feishu-bridge` as the API-first/browser-fallback router for Feishu/Lark materials and forms.
+  - Verified binary checksum, CLI version/help, selected skill validation, and browser-fill fallback; marked real Feishu read/write tests as pending OAuth and user-approved test resources.
