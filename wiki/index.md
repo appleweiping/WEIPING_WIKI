@@ -36,7 +36,7 @@ This is the main catalog of the wiki.
 - [[andrej-karpathy]] - Public AI researcher/educator corpus focused on GitHub projects, writing, videos, and reusable technical heuristics.
 - [[vipin]] - Central person page for the owner/subject of this knowledge base.
 - [[university-of-minnesota]] - Issuer entity for University of Minnesota housing contract materials.
-- [[analog-agent]] - AI4EDA layered analog circuit design agent project.
+- [[analog-agent]] - AI4EDA layered analog circuit design workbench entry with SPICE/configured-truth boundaries, startup packet, module map, and artifact safety rules.
 - [[uncertainty]] - Current main project for task-grounded calibrated uncertainty in LLM-based recommendation.
 - [[truce-rec]] - Uncertainty-aware generative recommendation project with strict evidence labels and official-baseline gates.
 - [[tgl-rec]] - Temporal graph-to-language recommendation project focused on next-need transitions.
@@ -76,7 +76,7 @@ This is the main catalog of the wiki.
 - [[local-cc-sidecar-agent-workflow]] - Strict three-role Codex + Claude Code partner workflow with PixelCat preflight: Codex coordinates/writes, Opus reviews deeply, and Sonnet scans low-risk diffs/docs.
 - [[agent-skill-installation-workflow]] - Durable rule for installing skills as usable tools: D-drive mirror, `.codex/skills` install, dependency setup, smoke tests, wiki docs, and scoped commit.
 - [[research-ideation-policy]] - Rule for ambitious research ideation: no shallow stitching, force novelty, and allow radical reframing.
-- [[research-project-workbench]] - Upper-level workbench route for Uncertainty/Pony-Rec, TRUCE-Rec, and TGL-Rec, including startup packets, claim gates, artifact boundaries, and collaboration priority.
+- [[research-project-workbench]] - Upper-level workbench route for analog-agent, Uncertainty/Pony-Rec, TRUCE-Rec, and TGL-Rec, including startup packets, claim gates, artifact boundaries, and collaboration priority.
 - [[song-page-capture-rule]] - Rule that every liked song should get a dedicated clickable, playable song page when possible.
 
 ## Sources
@@ -89,7 +89,7 @@ This is the main catalog of the wiki.
 - [[2026-05-17-feishu-form-fill-session]] - Source note for the live Feishu shared Base form fill/submit session and browser-automation lessons.
 - [[2026-05-17-readme-blueprint-generator-skill]] - Source note for the GitHub `awesome-copilot` README specialist skill, local adaptation, install paths, and validation.
 - [[2026-05-17-opencode-cc-pixelcat-setup]] - Source note for the D-drive OpenCode, Claude Code, and PixelCat setup plus smoke-test results.
-- [[2026-05-17-research-project-roots-deep-review]] - Public-safe source note for the deep read-only review of Uncertainty/Pony-Rec, TRUCE-Rec, and TGL-Rec local roots.
+- [[2026-05-17-research-project-roots-deep-review]] - Public-safe source note for the deep read-only review of analog-agent, Uncertainty/Pony-Rec, TRUCE-Rec, and TGL-Rec local roots.
 
 - [[2026-05-16-canvas-hack-recovery-note]] - User-provided Canvas outage/hack note; expected recovery 2026-05-18 and blocks syllabus retrieval for UMN transfer-credit review.
 
@@ -173,7 +173,7 @@ This is the main catalog of the wiki.
 - [[2026-04-21-llm-rec-research-map]] - First-pass map of the LLM-for-recommendation literature represented in the current local paper collections.
 - [[2026-04-22-llm-wiki-skill-alignment]] - System alignment memo describing how this repository now matches the reference `llm-wiki-skill` operating model.
 - [[2026-05-10-vipin-research-project-map]] - Cross-project map of Vipin's active research portfolio and claim boundaries.
-- [[2026-05-17-research-project-workbench-audit]] - Deep workbench audit for the three local recommendation research projects, including tracked-file coverage, artifact inventory, and collaboration-rule interpretation.
+- [[2026-05-17-research-project-workbench-audit]] - Deep workbench audit for analog-agent plus the three local recommendation research projects, including tracked-file coverage, artifact inventory, claim gates, and collaboration-rule interpretation.
 
 ## Synthesis
 

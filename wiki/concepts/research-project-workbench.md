@@ -8,6 +8,7 @@ tags:
   - research
   - project-workbench
   - llm-recommendation
+  - ai4eda
   - agent-workflow
 source_pages:
   - 2026-05-17-research-project-roots-deep-review
@@ -18,10 +19,11 @@ source_pages:
 
 ## Purpose
 
-This page is the routing layer for three local LLM4Rec research projects:
+This page is the routing layer for Vipin's main local research repositories that need repeated agent work:
 
 | Project | Local root | Role | Start page |
 | --- | --- | --- | --- |
+| [[analog-agent]] | `D:/Research/Agent-AI4EDA/analog-agent` | AI4EDA layered analog circuit design harness with SPICE/configured-truth boundaries | `AGENTS.md`, `README.md`, `docs/configured_truth_user_action_boundary.md` |
 | [[uncertainty]] | `D:/Research/Uncertainty` | Pony-Rec / task-grounded calibrated uncertainty and official same-candidate baseline evidence | `AGENTS.md`, `README.md`, `docs/milestones/README.md` |
 | [[truce-rec]] | `D:/Research/TRUCE-Rec` | CURE/TRUCE uncertainty-aware generative recommendation and Pony official baseline reuse | `AGENTS.md`, `docs/PROJECT_MEMORY.md`, `docs/RESEARCH_IDEA.md` |
 | [[tgl-rec]] | `D:/Research/TGL-Rec` | Phase 10 temporal graph-to-language evidence and Pony official baseline migration | `docs/codex_project_memory.md`, `docs/phase10_master_plan.md` |
@@ -33,17 +35,17 @@ Vipin wiki is the upper-level workbench: it remembers routing, claim boundaries,
 - EXTRACTED: Codex is the main coordinator and the only writer for wiki changes in this repository.
 - EXTRACTED: User-facing collaboration should describe Opus, Sonnet, DeepSeek/Whale, and Codex parallel selves as partners rather than impersonal tools.
 - INFERRED: Project-local multi-agent rules do not conflict with Vipin wiki. Interpret them as: Codex coordinates; Opus/Sonnet/Whale or Codex parallel selves provide bounded review, exploration, or implementation perspectives; the target project's evidence gates decide claim status.
-- EXTRACTED: For the three research repos, do not modify project files from the wiki workbench unless the user explicitly asks for project edits. Always inspect live git status first.
+- EXTRACTED: For routed research repos, do not modify project files from the wiki workbench unless the user explicitly asks for project edits. Always inspect live git status first.
 
 ## Shared Evidence Rule
 
-All three projects are governed by the same paper-safety principle:
+All routed projects are governed by the same paper-safety principle:
 
 ```text
 No smoke run, diagnostic, scaffold, pilot, wrapper name, or raw output becomes paper evidence until the canonical project gates pass.
 ```
 
-Common gates:
+Common recommendation gates:
 
 - same candidate rows, split discipline, and event IDs;
 - exact score schema such as `source_event_id,user_id,item_id,score` when using the shared external baseline lane;
@@ -53,7 +55,36 @@ Common gates:
 - paired/statistical checks where the project declares them necessary;
 - clear labels for `diagnostic`, `controlled_adapter_pilot`, `official_completed`, `completed_result`, and `paper_result`.
 
+Common analog/AI4EDA gates:
+
+- explicit physical-validity boundary: demonstrator truth, configured truth, native artifact, external PDK, Spectre-compatible, signoff, layout, PEX, and yield must not be blurred;
+- paper-facing physical evidence should be SPICE/configured-truth backed and reproducible from committed scripts, configs, seeds, archived outputs, and replay manifests;
+- lightweight internal baselines stay labeled lightweight until external/tuned baselines are wired into the same simulator budget and truth loop;
+- `archive/` and `.artifacts/` are inventory-only from the wiki unless the user asks for local artifact organization.
+
 ## Project Routes
+
+### Analog Agent
+
+Use [[analog-agent]] when the task is about AI4EDA, analog circuit design agents, SPICE/configured-truth evidence, world-model-guided planning, simulator-backed verification, memory/reflection, or submission/benchmark packaging.
+
+Startup packet:
+
+- `AGENTS.md`
+- `README.md`
+- `docs/configured_truth_user_action_boundary.md`
+- `docs/repo-map.md`
+- `docs/related_work_map.md`
+- `docs/stop_conditions.md`
+- `configs/default.yaml`
+- `configs/benchmarks/multi_task_suite_v1.yaml`
+- `configs/simulator/ngspice.yaml`
+- `scripts/run_system_closure_report.py`
+
+Claim boundary:
+
+- Safe: calibrated, surrogate-guided analog sizing loop under explicit SPICE truth boundaries; layered analog-agent harness with reproducible vertical slices and benchmark scaffolding.
+- Unsafe until evidence passes: full signoff flow, layout, PEX, yield, universal analog-design closure, production-strength external baselines, or configured-truth claims without user-managed PDK/model assets validated.
 
 ### Uncertainty / Pony-Rec
 
@@ -120,8 +151,8 @@ Claim boundary:
 | --- | --- |
 | `AGENTS.md`, `README.md`, `docs/`, `.codex/skills/` | Read first; safe to summarize in public wiki. |
 | `src/`, `scripts/`, `configs/`, `tests/` | Safe to inventory and route; edit only when the user asks to work inside that project. |
-| `data/raw/`, large `data/processed/`, `outputs/`, `runs/`, `log/`, `log_tensorboard/`, `*.tar.gz`, `*.tgz`, model/checkpoint arrays | Inventory only: path pattern, size, purpose, and risk. Do not copy raw content into public wiki. |
-| `.env`, private server configs, credentials, raw logs with possible tokens, model weights | Do not read or copy into public wiki. Mention only the generic boundary rule. |
+| `archive/`, `.artifacts/`, `data/raw/`, large `data/processed/`, `outputs/`, `runs/`, `log/`, `log_tensorboard/`, `*.tar.gz`, `*.tgz`, model/checkpoint arrays | Inventory only: path pattern, size, purpose, and risk. Do not copy raw content into public wiki. |
+| `.env`, private server configs, credentials, raw logs with possible tokens, PDK roots/model cards, model weights | Do not read or copy into public wiki. Mention only the generic boundary rule. |
 
 ## Server Collaboration
 
@@ -137,17 +168,19 @@ Claim boundary:
 | C-CRP vs CURE/TRUCE | C-CRP is Pony/Uncertainty's task-grounded calibrated uncertainty method; CURE/TRUCE is TRUCE-Rec's generative recommendation uncertainty framework. |
 | TRUCE vs TGL | TRUCE centers catalog grounding, uncertainty, popularity, long-tail, echo, and conservative policy. TGL centers temporal directed item graph evidence and need transitions. |
 | Pony official baselines vs project methods | Pony official baseline evidence can be reused by TRUCE/TGL only with manifest, provenance, exact score gates, and no copying of large archives into git. |
+| AI4EDA vs LLM4Rec | [[analog-agent]] is an analog circuit/SPICE harness, not a recommender project. It shares evidence discipline and closed-loop uncertainty taste, but its claim gate is physical simulation truth rather than same-candidate ranking. |
 
 ## Counterpoints and Gaps
 
 - This workbench is a router, not a substitute for live repo inspection. Always rescan current files before editing or making time-sensitive claims.
-- The 2026-05-17 pass classified every tracked path by category, but did not read huge raw/output files line by line.
+- The 2026-05-17 pass classified tracked paths by category, but did not read raw/output/artifact files line by line.
 - Some live artifacts may be newer than canonical docs. When manifests, tarballs, and docs disagree, use the most conservative status until the target project updates its own canonical memory.
 
 ## Related
 
 - [[2026-05-17-research-project-roots-deep-review]]
 - [[2026-05-17-research-project-workbench-audit]]
+- [[analog-agent]]
 - [[uncertainty]]
 - [[truce-rec]]
 - [[tgl-rec]]

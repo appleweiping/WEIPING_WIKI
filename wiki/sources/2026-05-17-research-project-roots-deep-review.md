@@ -9,7 +9,17 @@ tags:
   - research
   - project-roots
   - llm-recommendation
+  - ai4eda
 source_files:
+  - D:/Research/Agent-AI4EDA/analog-agent/AGENTS.md
+  - D:/Research/Agent-AI4EDA/analog-agent/README.md
+  - D:/Research/Agent-AI4EDA/analog-agent/docs/configured_truth_user_action_boundary.md
+  - D:/Research/Agent-AI4EDA/analog-agent/docs/repo-map.md
+  - D:/Research/Agent-AI4EDA/analog-agent/docs/related_work_map.md
+  - D:/Research/Agent-AI4EDA/analog-agent/docs/stop_conditions.md
+  - D:/Research/Agent-AI4EDA/analog-agent/configs/default.yaml
+  - D:/Research/Agent-AI4EDA/analog-agent/configs/benchmarks/multi_task_suite_v1.yaml
+  - D:/Research/Agent-AI4EDA/analog-agent/configs/simulator/ngspice.yaml
   - D:/Research/Uncertainty/AGENTS.md
   - D:/Research/Uncertainty/README.md
   - D:/Research/Uncertainty/docs/milestones/README.md
@@ -45,6 +55,7 @@ Origin: local read-only review requested by the user on 2026-05-17.
 
 Roots inspected:
 
+- `D:/Research/Agent-AI4EDA/analog-agent`
 - `D:/Research/Uncertainty`
 - `D:/Research/TRUCE-Rec`
 - `D:/Research/TGL-Rec`
@@ -59,7 +70,7 @@ rg --files
 Get-ChildItem -Recurse -File
 ```
 
-No files in the three project repositories were modified.
+No files in the four project repositories were modified.
 
 ## Coverage Strategy
 
@@ -71,6 +82,7 @@ No files in the three project repositories were modified.
 
 | Project | Branch/status | Remote |
 | --- | --- | --- |
+| [[analog-agent]] | `main...origin/main`; clean | `https://github.com/appleweiping/analog-agent.git` |
 | [[uncertainty]] | `main...origin/main`; untracked `week8_official_external_qwen3base_multik_comparison.md` | `https://github.com/appleweiping/Pony-Rec.git` |
 | [[truce-rec]] | `main...origin/main`; untracked `log/`, `log_tensorboard/` | `https://github.com/appleweiping/TRUCE-Rec.git` |
 | [[tgl-rec]] | `codex/phase9e-lora-rerank-eval...origin/codex/phase9e-lora-rerank-eval`; clean | `https://github.com/appleweiping/TGL-Rec.git` |
@@ -79,6 +91,7 @@ No files in the three project repositories were modified.
 
 | Project | Tracked paths | `rg --files` | Text-like tracked | Main category distribution |
 | --- | ---: | ---: | ---: | --- |
+| [[analog-agent]] | 376 | 358 | 359 | source 184; test 82; script 58; config 33; doc 7; template 4; infra 4 |
 | [[uncertainty]] | 1,062 | 1,063 | 585 | artifact-pointer 452; config 237; source 236; doc 64; test 27; paper 24; script 19 |
 | [[truce-rec]] | 617 | 622 | 612 | source 151; config 143; test 120; doc 100; script 75; artifact-pointer 19; prompt 7 |
 | [[tgl-rec]] | 588 | 575 | 586 | source 203; test 149; config 106; doc 60; script 58; prompt 6; artifact-pointer 4 |
@@ -87,11 +100,19 @@ No files in the three project repositories were modified.
 
 | Project | Largest artifact patterns | Public wiki treatment |
 | --- | --- | --- |
+| [[analog-agent]] | ignored `archive/legacy/...` and `.artifacts/simulation/.../tran.json` files around 0.2 MB each; no giant raw/model artifact visible in the scan | Record route, truth boundary, and artifact policy. Do not copy archive outputs, simulator logs, PDK/model-card contents, or private paper drafts. |
 | [[uncertainty]] | Amazon raw JSONL/GZ files up to about 21.6 GB; processed MovieLens JSONL up to about 4.8 GB; official evidence tarballs up to about 397 MB | Record path patterns, sizes, and status only. Do not copy raw data or evidence archive contents. |
 | [[truce-rec]] | Amazon Video Games raw JSONL about 2.6 GB; observation inputs and examples up to about 790 MB; Pony evidence tarballs up to about 379 MB; controlled-baseline score plans about 253-255 MB | Record manifest/evidence status only. Do not copy `.env`, logs, raw outputs, or evidence package contents. |
 | [[tgl-rec]] | `TGL-Rec-phase9e-lora-results.tgz` about 2.8 GB; raw Video Games JSONL about 2.6 GB; predictions JSONL about 1.4-1.7 GB each | Record as generated/protocol artifacts. Do not copy full predictions, PDFs, archives, model artifacts, or private configs. |
 
 ## Extracted Project Baselines
+
+### Analog Agent
+
+- EXTRACTED: The safe default claim is a calibrated, surrogate-guided analog sizing loop under explicit SPICE truth boundaries.
+- EXTRACTED: Canonical first-read docs are `README.md`, `docs/configured_truth_user_action_boundary.md`, `docs/repo-map.md`, `docs/related_work_map.md`, `docs/stop_conditions.md`, `configs/default.yaml`, `configs/benchmarks/multi_task_suite_v1.yaml`, `configs/simulator/ngspice.yaml`, and `scripts/run_system_closure_report.py`.
+- EXTRACTED: The project must not claim signoff, full-PDK, layout, PEX, yield, or universal analog-design closure unless evidence is present and reproducible.
+- EXTRACTED: `archive/` is the durable ignored sink for paper drafts, benchmark exports, experiment results, reports, and historical outputs; `.artifacts/` is transient simulator/cache output.
 
 ### Uncertainty / Pony-Rec
 
@@ -116,6 +137,7 @@ No files in the three project repositories were modified.
 - INFERRED: Vipin wiki and project-local `AGENTS.md` files are compatible if treated as layers.
 - INFERRED: Vipin wiki owns durable routing and partner-language memory; target projects own local edit, claim, baseline, server, and evidence rules.
 - INFERRED: Opus, Sonnet, DeepSeek/Whale, and Codex parallel selves can be used as read-only or bounded collaborators when the environment permits, but Codex remains responsible for integration, verification, commits, and pushes in Vipin wiki.
+- INFERRED: Analog-agent's multi-agent requirement is compatible with the workbench: use explorer/reviewer passes for complex analog tasks, but preserve SPICE/configured-truth gates and target-repo ownership.
 
 ## Counterpoints and Gaps
 
@@ -127,6 +149,7 @@ No files in the three project repositories were modified.
 
 - [[research-project-workbench]]
 - [[2026-05-17-research-project-workbench-audit]]
+- [[analog-agent]]
 - [[uncertainty]]
 - [[truce-rec]]
 - [[tgl-rec]]

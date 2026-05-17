@@ -137,6 +137,17 @@ Local project names, folder names, and internal layouts may change. For known lo
 - Prefer stable identifiers such as git remotes, README titles, package metadata, deployment targets, and course codes over exact folder spelling.
 - For external project edits, inspect current git status first and never stage unrelated changes.
 
+## Research Project Workbench Memory
+
+For Vipin's local research repositories, treat [[research-project-workbench]] as the durable upper-level route before opening a new project-specific work session.
+
+- Use the workbench to identify the project root, contribution, current phase, startup packet, artifact boundaries, and cross-project relationships.
+- Then rescan the live target repository and follow the target project's own `AGENTS.md`, `.codex/skills`, canonical docs, configs, runbooks, and tests.
+- Keep the workbench as routing memory, not as a replacement for project-local rules. When the workbench and target project differ, trust the target project's current files for edits, commands, and claim status, then update the wiki after verifying the change.
+- When a local research project becomes important enough for repeated work, add or update its entity page, source note, workbench route, index entry, log entry, and catalog.
+- For large raw data, generated outputs, logs, simulator artifacts, evidence archives, model weights, PDKs, and private configs, record public-safe metadata only. Do not copy raw contents, secrets, `.env` values, private logs, or bulky artifacts into public wiki pages.
+- Preserve claim boundaries. Recommendation projects need same-candidate/evidence gates; analog/AI4EDA projects need explicit SPICE/configured-truth boundaries; AI4S or other projects should use their own canonical evidence gates.
+
 ## Active Maintenance / CRUD Policy
 
 Treat the wiki as a maintained knowledge system, not an append-only archive. Periodically perform real create, read, update, and delete passes when scale, drift, duplication, or stale claims make them useful.

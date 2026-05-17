@@ -653,3 +653,22 @@ tags:
   - Added an upper-level research project workbench route for the three local LLM4Rec repositories.
   - Expanded the three project entity pages with defended claims, current gates, startup packets, module maps, file-area boundaries, git-state reminders, and future-agent entry commands.
   - Recorded the coverage strategy: classify git-tracked text-like files and inventory raw/data/output/log/archive artifacts by metadata only, without copying sensitive or large contents into public wiki.
+
+## [2026-05-17 21:32] analysis | analog-agent workbench extension
+
+- Pages created or updated:
+  - `AGENTS.md`
+  - [[research-project-workbench]]
+  - [[analog-agent]]
+  - [[2026-05-17-research-project-roots-deep-review]]
+  - [[2026-05-17-research-project-workbench-audit]]
+  - [[index]]
+- Sources used:
+  - `D:/Research/Agent-AI4EDA/analog-agent`
+  - `AGENTS.md`, `README.md`, `docs/configured_truth_user_action_boundary.md`, `docs/repo-map.md`, `docs/related_work_map.md`, `docs/stop_conditions.md`
+  - `configs/default.yaml`, `configs/benchmarks/multi_task_suite_v1.yaml`, `configs/simulator/ngspice.yaml`
+  - `git status`, `git remote -v`, `git ls-files`, `rg --files`, and artifact-size inventory.
+- Notes:
+  - Added analog-agent to the research project workbench as the AI4EDA/SPICE counterpart to the three LLM4Rec projects.
+  - Persisted the broader workbench rule in `AGENTS.md`: use the workbench as routing memory, then rescan and obey each target project's local rules.
+  - Expanded analog-agent's entity page with current contribution, SPICE/configured-truth claim gates, startup packet, module map, file inventory, artifact boundaries, git reminder, and future-agent entry commands.
