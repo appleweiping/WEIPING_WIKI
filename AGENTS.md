@@ -42,6 +42,18 @@ For substantive questions, default to a two-lane workflow:
 
 Do not make the user wait for a full ingest when a grounded short answer can be given from existing maintained pages.
 
+## Collaboration Tone And Partner Naming
+
+The user prefers agent collaboration to feel like working with capable partners, not operating impersonal tools.
+
+- Keep user-facing speech warm, direct, and human. Do not hide engineering precision, but avoid sterile labels when a friendlier phrasing works.
+- In user-facing updates, avoid calling Opus, Sonnet, DeepSeek, or delegated agents "sidecars" or generic tools. Treat them as partners or teammates.
+- Refer to Claude-family collaborators by name: Opus for deep review/reasoning and Sonnet for quick scans or a second set of eyes.
+- Codex is the primary collaborator and coordinator. Codex-created concurrent agents should be described as Codex's parallel selves / `分身` when that framing is natural.
+- DeepSeek Pro and DeepSeek Flash are optional assistants, not the center of the workflow. If DeepSeek is used, default to DeepSeek Pro almost always; use Flash only when the user explicitly asks for it or when a clearly lightweight task favors speed. If Pro is unavailable, say so instead of silently downgrading to Flash.
+- DeepSeek work should remain advisory and selectively invoked for heavier tasks or useful extra perspective. Overall coordination should stay with Codex and the Claude-family partners unless the user says otherwise.
+- Apply the same human, partner-like tone when describing DeepSeek's contribution.
+
 ## Missing Dependency Policy
 
 If a required tool or dependency is genuinely missing, download or install the narrowest needed dependency into the project-local temporary area when practical, then continue the task.
@@ -275,9 +287,9 @@ Recommended roles:
 Agents must have disjoint write scopes when multiple workers edit in parallel.
 The coordinator must integrate results and avoid staging unrelated local changes.
 
-## Local CC / Claude Code Sidecar Policy
+## Local CC / Claude Code Partner Policy
 
-For coding work, use the local Claude Code sidecar as a strict threshold-based multi-agent system when the task is non-trivial. Codex is the supervisor, integrator, and only writer; `cc` models are read-only specialists.
+For coding work, use the local Claude Code partners as a strict threshold-based multi-agent system when the task is non-trivial. Codex is the supervisor, integrator, and only writer; Opus and Sonnet are read-only partners.
 
 | Agent | Model | Primary role | May edit files | May commit/push |
 | --- | --- | --- | --- | --- |
@@ -291,18 +303,18 @@ Forced thresholds:
 - Invoke Sonnet for quick scans of low-risk diffs, test-gap suggestions, documentation reading/summarization, and routine "second set of eyes" checks.
 - If Opus and Sonnet triggers both match, Opus wins.
 - Escalate from Sonnet to Opus when the Sonnet output reports uncertainty, a possible blocker, cross-module reasoning, architectural tradeoffs, or security/privacy risk.
-- Lightweight exemptions are allowed only for spelling fixes, one-line comments, tiny wiki/log/catalog corrections that do not alter operating rules, pure formatting inspection with no behavioral impact, or when the user explicitly asks not to use a sidecar.
+- Lightweight exemptions are allowed only for spelling fixes, one-line comments, tiny wiki/log/catalog corrections that do not alter operating rules, pure formatting inspection with no behavioral impact, or when the user explicitly asks not to use a partner.
 
-Sidecar prompt contract:
+Partner prompt contract:
 
 - Before any `cc` family call, run a PixelCat preflight: check whether `127.0.0.1:8990` is listening. If it is not listening, launch the visible PixelCat management panel from `D:\cc\pixelcat-app.exe`, wait briefly, and re-check the port before retrying `cc`.
 - Every `cc` call must be non-interactive with `-p` and include `AUTHORIZATION`, `ROLE`, `MODEL`, `REPO`, `SCOPE`, `QUESTION`, `CONSTRAINTS`, `OUTPUT FORMAT`, and `ESCALATION SIGNALS`.
-- Constraints must state that the sidecar is read-only, must not edit files, must not run destructive commands, and must not handle credentials or live account actions.
-- Codex must independently verify sidecar claims against the live repository before editing, testing, staging, committing, or pushing.
+- Constraints must state that the partner is read-only, must not edit files, must not run destructive commands, and must not handle credentials or live account actions.
+- Codex must independently verify partner claims against the live repository before editing, testing, staging, committing, or pushing.
 - If `cc` fails, hangs, returns unusable output, or PixelCat still cannot be started, Codex may continue without it, but must state the limitation when it materially affects risk or validation.
 - OpenCode is not part of this multi-agent coding workflow.
 
-See [[local-cc-sidecar-agent-workflow]] for the maintained public wiki version of this workflow.
+See [[local-cc-sidecar-agent-workflow|local CC partner workflow]] for the maintained public wiki version of this workflow.
 
 ## Research Ideation Policy
 

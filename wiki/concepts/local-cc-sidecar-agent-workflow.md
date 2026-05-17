@@ -1,5 +1,5 @@
 ---
-title: Local CC Sidecar Agent Workflow
+title: Local CC Partner Agent Workflow
 type: concept
 status: active
 created: 2026-05-17
@@ -14,13 +14,13 @@ source_pages:
   - 2026-05-17-opencode-cc-pixelcat-setup.md
 ---
 
-# Local CC Sidecar Agent Workflow
+# Local CC Partner Agent Workflow
 
 ## Purpose
 
 This workflow turns the local `cc` / Claude Code runtime into a strict threshold-based multi-agent coding system.
 
-Codex acts as the supervisor and only writer. The sidecar models act as read-only specialists with bounded prompts. This follows a common supervisor/handoff pattern: one coordinator owns the task state and repository mutations, while specialist agents provide scoped review, scanning, or reasoning.
+Codex acts as the supervisor and only writer. Opus and Sonnet act as read-only partners with bounded prompts. This follows a common supervisor/handoff pattern: one coordinator owns the task state and repository mutations, while specialist partners provide scoped review, scanning, or reasoning.
 
 ## Runtime
 
@@ -48,7 +48,7 @@ If nothing is listening, launch the visible management panel:
 Start-Process -FilePath "D:\cc\pixelcat-app.exe"
 ```
 
-Then wait briefly and re-check `127.0.0.1:8990`. If the proxy still does not come up, record the limitation and either retry later or continue Codex-only when the missing sidecar does not materially change the risk profile.
+Then wait briefly and re-check `127.0.0.1:8990`. If the proxy still does not come up, record the limitation and either retry later or continue Codex-only when the missing partner does not materially change the risk profile.
 
 Do not ask the user to remember how to open PixelCat unless the executable is missing or startup fails repeatedly.
 
@@ -60,7 +60,7 @@ Do not ask the user to remember how to open PixelCat unless the executable is mi
 | Opus Reviewer | `claude-opus-4-7` | Deep code review, complex reasoning, architecture critique, hard debugging, security/privacy review, high-risk design calls, high-risk final review. | no | no |
 | Sonnet Scanner | `claude-sonnet-4-6` | Quick diff scans, test suggestions, documentation reading, low-risk second-pass checks. | no | no |
 
-Codex must not treat sidecar output as authority. It is advisory evidence that Codex verifies against the live repository before acting.
+Codex must not treat partner output as authority. It is advisory evidence that Codex verifies against the live repository before acting.
 
 ## Forced Thresholds
 
@@ -89,13 +89,13 @@ Lightweight exemptions are allowed only when the change is small and not a polic
 - one-line comments
 - tiny wiki/log/catalog corrections that do not alter operating rules
 - pure formatting inspection with no behavioral impact
-- user explicitly asks not to call a sidecar
+- user explicitly asks not to call a partner
 
 Escalate Sonnet to Opus when Sonnet reports uncertainty, a possible blocker, security/privacy risk, cross-module reasoning, architecture tradeoffs, or a recommendation that Codex cannot verify quickly.
 
 ## Handoff Prompt Contract
 
-Every sidecar call must use non-interactive `-p` and include these fields:
+Every partner call must use non-interactive `-p` and include these fields:
 
 ```text
 AUTHORIZATION: User-authorized local read-only review.
@@ -149,22 +149,22 @@ D:\cc\cc.cmd -p "Reply only OK" --model claude-opus-4-7 --output-format text
 
 ## Coordinator Verification
 
-Before Codex adopts a sidecar recommendation:
+Before Codex adopts a partner recommendation:
 
-- re-read the files, diff, or command output the sidecar referenced
+- re-read the files, diff, or command output the partner referenced
 - decide whether the claim is accurate, stale, or overbroad
 - run the relevant tests, lint, build, or wiki validation when available
 - stage only scoped files
 - record durable workflow changes in the wiki when the user asked future agents to remember them
 
-The commit rationale must be Codex-verified. "Sidecar said so" is never sufficient.
+The commit rationale must be Codex-verified. "A partner said so" is never sufficient.
 
 ## Safety Gates
 
-- Sidecars are read-only by default.
+- Opus and Sonnet are read-only partners by default.
 - Do not expose tokens, passwords, cookies, OAuth material, private chats, or sensitive personal data in prompts.
 - Do not delegate destructive commands, production changes, real account actions, payment actions, or credential handling.
-- User approval is still required for destructive operations or cross-repository edits, regardless of sidecar output.
+- User approval is still required for destructive operations or cross-repository edits, regardless of partner output.
 - If `cc` fails, hangs, returns unusable output, or the PixelCat panel/proxy is not running, fall back to Codex-only work and record the limitation when it materially affects risk or validation.
 - When PixelCat is not running, try the PixelCat preflight launch procedure before falling back.
 
@@ -175,16 +175,17 @@ The commit rationale must be Codex-verified. "Sidecar said so" is never sufficie
 - EXTRACTED: The user confirmed that the PixelCat management panel must be open for the local `cc` family tools to work.
 - EXTRACTED: `D:\cc\cc.cmd -p "Reply only OK" --model claude-sonnet-4-6 --output-format text` returned `OK`.
 - EXTRACTED: `D:\cc\cc.cmd -p "Reply only OK" --model claude-opus-4-7 --output-format text` returned `OK`.
-- EXTRACTED: `D:\cc\cc.cmd` successfully ran a read-only `claude-opus-4-7` diff-review sidecar prompt for a wiki update and reported `NO BLOCKERS`.
+- EXTRACTED: `D:\cc\cc.cmd` successfully ran a read-only `claude-opus-4-7` diff-review partner prompt for a wiki update and reported `NO BLOCKERS`.
 
 ## Counterpoints And Gaps
 
 - AMBIGUOUS: Model availability depends on the currently running PixelCat panel/proxy configuration.
-- INFERRED: The strict threshold rule is most useful for non-trivial coding tasks; forcing sidecars for tiny edits would add latency without meaningful safety gains.
-- UNVERIFIED: Long-running implementation by sidecar agents remains out of scope until a separate write-scope protocol is designed and tested.
+- INFERRED: The strict threshold rule is most useful for non-trivial coding tasks; forcing partner calls for tiny edits would add latency without meaningful safety gains.
+- UNVERIFIED: Long-running implementation by partner agents remains out of scope until a separate write-scope protocol is designed and tested.
 
 ## Related Pages
 
 - [[2026-05-17-opencode-cc-pixelcat-setup]]
+- [[agent-collaboration-tone-and-model-roles]]
 - [[durable-agent-rule-memory]]
 - [[agent-skill-installation-workflow]]

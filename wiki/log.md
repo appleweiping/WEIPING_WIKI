@@ -611,3 +611,16 @@ tags:
   - Added a mandatory PixelCat preflight before `cc` sidecar calls.
   - Future agents should check `127.0.0.1:8990`, launch `D:\cc\pixelcat-app.exe` when needed, wait briefly, and re-check before treating `cc` as unavailable.
   - Recorded that public wiki pages must not expose screenshot-visible PixelCat account details, API keys, balances, quota, or usage data.
+## [2026-05-17 20:34] query | agent collaboration tone and model roles
+
+- Pages created or updated:
+  - `AGENTS.md`
+  - [[agent-collaboration-tone-and-model-roles]]
+  - [[local-cc-sidecar-agent-workflow]]
+  - [[durable-agent-rule-memory]]
+  - [[index]]
+- Sources used:
+  - User instruction to make future agent collaboration feel more human and partner-like.
+- Notes:
+  - Added a durable rule to use warmer user-facing language and frame Opus, Sonnet, DeepSeek, and Codex-created agents as collaborators rather than impersonal tools.
+  - Recorded that Codex remains the main coordinator, Codex-created concurrent agents can be described as Codex's `分身`, and DeepSeek should default to Pro when used.
