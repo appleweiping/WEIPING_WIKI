@@ -722,3 +722,17 @@ tags:
   - Installed a unified communication router skill with a shared outbox and prefill-first safety model for WhatsApp, WeChat, QQ, Feishu/Lark, and email reuse.
   - Added adapter references that prefer QR/login-state/session-based paths and explicitly avoid password storage.
   - Validated `pnpm install`, `node --check`, outbox create/show/mark/cancel/list smoke tests, and confirmed the runtime state is confined to ignored `.wiki-tmp/communication-assistant/`.
+## [2026-05-17 22:57] query | nuwa prompt for lidang skill distillation
+
+- Pages created or updated:
+  - [[2026-05-17-how-to-ask-nuwa-to-distill-lidang]]
+  - [[index]]
+  - [[log]]
+- Sources used:
+  - Local `huashu-nuwa` skill instructions.
+  - Existing local `lidang-perspective` skill.
+  - [[lidang]]
+  - [[lidang-idea-taxonomy]]
+- Notes:
+  - Preserved a copy-paste prompt for asking Nuwa, with Opus as the deep review partner, to update the Lidang perspective skill.
+  - Recorded that the existing `lidang-perspective` skill should be reused and deepened rather than duplicated.
