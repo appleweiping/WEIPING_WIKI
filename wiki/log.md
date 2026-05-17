@@ -653,7 +653,6 @@ tags:
   - Added an upper-level research project workbench route for the three local LLM4Rec repositories.
   - Expanded the three project entity pages with defended claims, current gates, startup packets, module maps, file-area boundaries, git-state reminders, and future-agent entry commands.
   - Recorded the coverage strategy: classify git-tracked text-like files and inventory raw/data/output/log/archive artifacts by metadata only, without copying sensitive or large contents into public wiki.
-
 ## [2026-05-17 21:32] analysis | analog-agent workbench extension
 
 - Pages created or updated:
@@ -672,3 +671,20 @@ tags:
   - Added analog-agent to the research project workbench as the AI4EDA/SPICE counterpart to the three LLM4Rec projects.
   - Persisted the broader workbench rule in `AGENTS.md`: use the workbench as routing memory, then rescan and obey each target project's local rules.
   - Expanded analog-agent's entity page with current contribution, SPICE/configured-truth claim gates, startup packet, module map, file inventory, artifact boundaries, git reminder, and future-agent entry commands.
+## [2026-05-17 21:43] query | email assistant skill
+
+- Pages created or updated:
+  - [[email-assistant-skill]]
+  - [[2026-05-17-email-assistant-skill]]
+  - [[index]]
+  - [[log]]
+- Sources used:
+  - User-approved personal email assistant skill plan.
+  - `benchflow-ai/skillsbench` Gmail skill at upstream HEAD `30d31e972211c2287e63257a5f5c05eba5d74bba`.
+  - `glebis/claude-skills` Gmail search skill.
+  - `openai/skills` repository search.
+  - Local installed skill under `.codex/skills/email-assistant/`.
+- Notes:
+  - Installed and customized `email-assistant` for API-first Gmail/Google Workspace triage across `umn` and `vipinapple`.
+  - Stored OAuth material under ignored `.wiki-tmp/email-assistant/auth/` paths and added send/delete/label confirmation gates.
+  - Validated dependency install, skill frontmatter, JavaScript syntax, no-account behavior, missing-credentials behavior, and fail-closed send/label gates; live Gmail tests remain pending user OAuth.

@@ -1,0 +1,7 @@
+interface:
+  display_name: "Email Assistant"
+  short_description: "Read, summarize, and draft Gmail/Google Workspace email with explicit send approval."
+  default_prompt: "Use $email-assistant to triage my email, explain important messages in Chinese, and draft replies for my approval."
+
+policy:
+  allow_implicit_invocation: true

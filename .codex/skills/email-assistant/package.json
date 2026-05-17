@@ -1,0 +1,17 @@
+{
+  "name": "email-assistant",
+  "version": "1.0.0",
+  "description": "Personal Gmail and Google Workspace assistant scripts for Codex",
+  "type": "module",
+  "scripts": {
+    "setup": "node scripts/auth/setup-oauth.js"
+  },
+  "dependencies": {
+    "googleapis": "^144.0.0",
+    "minimist": "^1.2.8",
+    "open": "^10.1.0"
+  },
+  "keywords": ["gmail", "google-workspace", "codex", "skill", "email-assistant"],
+  "author": "",
+  "license": "MIT"
+}
