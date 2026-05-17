@@ -47,4 +47,5 @@ Do not answer "noted" or "I will remember" without writing the rule into a durab
 ## Related Pages
 
 - [[agent-skill-installation-workflow]]
+- [[local-cc-sidecar-agent-workflow]]
 - [[readme-maintenance-workflow]]

@@ -275,6 +275,20 @@ Recommended roles:
 Agents must have disjoint write scopes when multiple workers edit in parallel.
 The coordinator must integrate results and avoid staging unrelated local changes.
 
+## Local CC / Claude Code Sidecar Policy
+
+For substantial coding tasks, architecture reviews, complex debugging, risky refactors, or independent verification, use the local Claude Code sidecar when it is available instead of forcing the user to open a terminal manually.
+
+- Preferred local entrypoint: `D:\cc\cc.cmd`.
+- Use non-interactive bounded prompts with `-p`, for example read-only review, implementation planning, targeted debugging, or final diff audit.
+- Prefer `claude-opus-4-7` for hard reasoning, design review, deep debugging, and reviewer passes; use faster models only when the task is routine.
+- Codex remains the coordinator and integrator: treat sidecar output as advisory, inspect the relevant files yourself, and verify before editing, testing, committing, or pushing.
+- Do not delegate destructive commands, credential handling, payment/account actions, or live production changes to the sidecar without explicit user approval.
+- Keep sidecar tasks scoped and role-specific; ask it to avoid file edits unless the user explicitly wants a separate implementation agent and the write scope is clear.
+- Record reusable prompt patterns, validation results, and limitations in the wiki so future agents can keep using the setup.
+
+See [[local-cc-sidecar-agent-workflow]] for the maintained public wiki version of this workflow.
+
 ## Research Ideation Policy
 
 When the user asks for research ideas, paper positioning, method design, or project strategy:

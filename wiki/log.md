@@ -568,3 +568,18 @@ tags:
   - Installed and locally adapted the `readme-blueprint-generator` skill for high-quality README rewrites.
   - Rewrote the root README using the specialist workflow with stronger first-impression hierarchy and maintainer quick-start structure.
   - Added the durable rule that future-agent memory requests must be persisted into `AGENTS.md` and relevant wiki workflow pages, then validated, committed, and pushed.
+## [2026-05-17 16:42] query | local cc sidecar agent workflow
+
+- Pages created or updated:
+  - `AGENTS.md`
+  - [[local-cc-sidecar-agent-workflow]]
+  - [[2026-05-17-opencode-cc-pixelcat-setup]]
+  - [[durable-agent-rule-memory]]
+  - [[index]]
+- Sources used:
+  - User instruction to let future agents call local `cc` directly for multi-agent coding collaboration.
+  - Local OpenCode / Claude Code / PixelCat setup and smoke-test results from the current session.
+- Notes:
+  - Added a durable rule that substantial coding work can use `D:\cc\cc.cmd` as a bounded sidecar agent instead of requiring the user to open Claude Code manually.
+  - Recorded verified versions, D-drive entrypoints, PixelCat proxy status, model smoke tests, and safety boundaries without publishing auth tokens or private chat/video contents.
+  - Clarified that Codex remains coordinator/integrator and must verify sidecar output before edits, commits, or pushes.
