@@ -192,6 +192,30 @@ Rules:
 
 See [[model-collaboration-context-and-reference-intake|model collaboration context and reference intake]] for the maintained wiki version of this rule.
 
+## Local Storage Policy
+
+All agent data, caches, runtimes, and configurations live on the D: drive under `D:\devtools\`. The C: drive holds only NTFS junctions (symlinks) pointing to D:. This prevents C: from accumulating bulk data over time.
+
+Current junction map:
+
+| C: path (junction) | D: target (real data) | Agent |
+| --- | --- | --- |
+| `C:\Users\admin\.config\opencode` | `D:\devtools\opencode\config` | OpenCode (像素猫) |
+| `C:\Users\admin\.cache\opencode` | `D:\devtools\opencode\cache` | OpenCode |
+| `C:\Users\admin\.local\share\opencode` | `D:\devtools\opencode\share` | OpenCode |
+| `C:\Users\admin\.local\state\opencode` | `D:\devtools\opencode\state` | OpenCode |
+| `C:\Users\admin\.claude` | `D:\devtools\claude` | Claude Code (Opus/Sonnet/Haiku) |
+| `C:\Users\admin\.claude\skills` | `D:\Research\vipin's knowledgebase\.claude\skills` | Claude Code skills |
+| `C:\Users\admin\.codex` | `D:\devtools\codex\home` | Codex (GPT-5.5) |
+| `C:\Users\admin\.cache\codex-runtimes` | `D:\devtools\codex\runtimes` | Codex |
+
+Rules:
+- Never install agent tools, caches, models, or bulk data directly on C:. If a tool defaults to C:, create a junction to D: after installation.
+- `D:\devtools\` is the canonical home for all development infrastructure (agent-hub, node, npm, opencode, claude, codex, pixelcat).
+- DeepSeek is API-only; no local storage needed beyond the VSCode extension.
+- If a new agent or tool is added, follow the same pattern: data on D:, junction from C:.
+- The migration script `D:\devtools\Complete-Migration.cmd` handles any remaining locked directories after restart.
+
 ## Missing Dependency Policy
 
 If a required tool or dependency is genuinely missing, download or install the narrowest needed dependency into the project-local temporary area when practical, then continue the task.
