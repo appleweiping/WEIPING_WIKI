@@ -1,171 +1,132 @@
 # vipin wiki
 
-`vipin wiki` is a source-backed knowledge system for research memory, project history, and reusable agent workflows.
+A source-backed knowledge system with multi-agent orchestration. Turns research, conversations, and automation into maintained, interlinked Markdown knowledge that compounds over time.
 
-It turns important sources, local project discoveries, conversations, and automation results into maintained Markdown knowledge. The point is not to collect more files; the point is to make future answers faster, safer, and better grounded.
+## Architecture
 
-## Start Here
+```
+┌──────────────────────────────────────────────────────────────────┐
+│                         vipin wiki                                │
+├──────────────┬───────────────┬──────────────┬───────────────────┤
+│  wiki/       │  raw/         │  scripts/    │  site/            │
+│  Knowledge   │  Immutable    │  Tooling     │  Quartz           │
+│  graph       │  sources      │              │  publisher        │
+├──────────────┴───────────────┴──────────────┴───────────────────┤
+│                    Agent Hub (D:\devtools\agent-hub)              │
+│  20 MCP tools · real-time daemon · shared state · auto-dispatch  │
+├──────────────────────────────────────────────────────────────────┤
+│  Opus 4.7  │  GPT-5.5  │  Sonnet 4.6  │  Haiku 4.5  │  DS Pro │
+│  Architect  │  Fast exec │  Reviewer    │  Speedster  │  Bulk   │
+└──────────────────────────────────────────────────────────────────┘
+```
 
-| You are | First move | Then use |
-| --- | --- | --- |
-| A reader | Open `wiki/index.md` | Follow topic, source, entity, and analysis links |
-| A future agent | Read `AGENTS.md`, `.wiki-schema.md`, `purpose.md` | Check `wiki/catalog.json`, recent `wiki/log.md`, then inspect only relevant pages |
-| A maintainer | Run the status, catalog, and lint commands below | Commit and push scoped, validated changes |
-| A publisher | Treat `wiki/` as the source of truth | Use `site/` only as the Quartz publishing adapter |
+## Quick Start
 
-## What It Is
-
-- A public Markdown wiki for durable, publishable knowledge.
-- A private local layer for sensitive material that must never leak into public pages, indexes, logs, commits, or site output.
-- A research and project memory system for papers, repos, skills, tools, workflows, and reusable answers.
-- An operating contract for Codex-style agents: answer from maintained context, preserve what matters, validate, commit, and push.
-
-## What It Is Not
-
-- Not a transcript dump.
-- Not an append-only archive.
-- Not a mirror for private documents, credentials, or unclear-license source material.
-- Not a substitute for rescanning a live external repository before editing it.
+| You are | Do this |
+|---------|---------|
+| The user | Open Codex. Everything else is automatic. |
+| A future agent | Read `AGENTS.md` → `CLAUDE.md` → `wiki/index.md` |
+| A maintainer | `python scripts/wiki-catalog.py --root .` then `git push` |
 
 ## Repository Map
 
-| Area | Role | Notes |
-| --- | --- | --- |
-| `raw/` | Source materials and manifests | Treat as immutable during normal ingest |
-| `wiki/` | Public maintained knowledge graph | Main source of truth |
-| `wiki-private/` | Local-only private notes | Never reference from public wiki or public Git content |
-| `scripts/` | Search, catalog, lint, context, graph, ingest, and site utilities | Prefer PowerShell wrappers on Windows |
-| `site/` | Quartz publishing adapter | Build layer, not a second wiki |
-| `.wiki-tmp/` | Local cache/runtime area | Keep tools, browser state, and generated caches out of Git unless deliberate |
-| `.codex/skills/` | Project-local Codex skills (38 installed) | Installed skills should be tested, documented, and committed when source files are deliberate |
-| `.claude/skills/` | Claude Code skills | lidang-perspective, mattpocock-skills; junction-linked to global `~/.claude/skills/` |
-| `CLAUDE.md` | Claude Code operating entry point | Points to AGENTS.md as authority |
+```
+.
+├── AGENTS.md              # Authoritative operating contract (all agents read this)
+├── CLAUDE.md              # Claude Code entry point
+├── purpose.md             # Research direction alignment
+├── wiki/                  # Public maintained knowledge graph
+│   ├── index.md           # Human-readable catalog
+│   ├── log.md             # Chronological activity log
+│   ├── entities/          # People, orgs, projects
+│   ├── concepts/          # Frameworks, workflows, rules
+│   ├── sources/           # One page per ingested source
+│   ├── analyses/          # Syntheses and comparisons
+│   ├── queries/           # Preserved Q&A
+│   └── topics/            # High-frequency corpus hubs
+├── wiki-private/          # Local-only (never in public Git)
+├── raw/                   # Immutable source materials
+├── scripts/               # Catalog, lint, search, build utilities
+├── site/                  # Quartz publishing adapter
+├── .codex/skills/         # 38 Codex skills
+├── .claude/skills/        # Claude Code skills (lidang-perspective, mattpocock-skills)
+└── .github/workflows/     # CI: deploy Quartz + health check
+```
+
+## Multi-Agent System
+
+Five agents collaborate via the Agent Hub MCP server with automatic orchestration:
+
+| Agent | Model | Role | Best at |
+|-------|-------|------|---------|
+| **Opus** | Claude 4.7 | Architect | Complex refactors, 1M context, architecture, security |
+| **GPT-5.5** | GPT-5.5 | Coordinator | Speed, task decomposition, parallel subagents, wiki |
+| **Sonnet** | Claude 4.6 | Reviewer | Code review, test suggestions, documentation |
+| **Haiku** | Claude 4.5 | Speedster | Lint, formatting, pre-screening, classification |
+| **DeepSeek** | V4 Pro | Bulk worker | Translation, summarization, Chinese content |
+
+Key capabilities:
+- **Real-time dispatch** — daemon auto-routes urgent messages to the right agent
+- **Auto-retry cascade** — Opus → Sonnet → DeepSeek on failure
+- **Quality gate** — Haiku lint (2s) → Sonnet review (10s) → PASS/FAIL
+- **Pipeline with gates** — sequential workflows with human confirmation at critical steps
+- **Warm context** — project state auto-cached every 5 min, agents start informed
+- **20 MCP tools** — messaging, shared state, threads, routing, metrics, direct invocation
+
+Infrastructure starts on boot. User only opens one chat window.
 
 ## Core Loop
 
 ```mermaid
 flowchart LR
-  A["Ask or ingest"] --> B["Find maintained context"]
-  B --> C["Answer quickly"]
-  C --> D{"Reusable?"}
-  D -- yes --> E["Crystallize into wiki"]
-  D -- no --> F["Stop without churn"]
-  E --> G["Update index, log, catalog"]
-  G --> H["Lint and diff-check"]
-  H --> I["Scoped commit and push"]
+  A[Ask or ingest] --> B[Find maintained context]
+  B --> C[Answer quickly]
+  C --> D{Reusable?}
+  D -- yes --> E[Crystallize into wiki]
+  D -- no --> F[Done]
+  E --> G[Catalog + lint + commit + push]
 ```
-
-## Common Workflows
-
-| Workflow | Use it when | Output |
-| --- | --- | --- |
-| `query` | The user asks a substantive question | Grounded answer, plus a durable page when reusable |
-| `ingest` | A source should become maintained knowledge | Source note plus linked entity, concept, topic, or analysis updates |
-| `batch-ingest` | A repo set, paper set, person corpus, or folder needs structure | Collection note, manifests, dedupe rules, and maps |
-| `crystallize` | Chat produced something worth reusing | Query, concept, analysis, comparison, topic, or workflow page |
-| `maintain` | The wiki has drift, duplication, stale claims, or weak links | Non-destructive cleanup and a log entry |
-| `automation` | A scheduled/local workflow changes wiki artifacts | Validated scoped commit and push of real changes |
-| `site` | Public wiki needs publishing | Quartz build from `wiki/` through `site/` |
 
 ## Commands
 
-PowerShell is the normal path on this Windows workspace:
-
 ```powershell
-.\scripts\wiki-status.ps1
-.\scripts\wiki-catalog.ps1
-.\scripts\wiki-lint.ps1
-.\scripts\wiki-search.ps1 "llm recommendation"
-.\scripts\wiki-context.ps1 l0
-.\scripts\build-site.ps1
+.\scripts\wiki-catalog.ps1          # Rebuild catalog.json
+.\scripts\wiki-lint.ps1             # Check links, leaks, orphans
+.\scripts\wiki-search.ps1 "query"   # Full-text search
+.\scripts\wiki-status.ps1           # Repository health
+.\scripts\build-site.ps1            # Quartz build
 ```
-
-Python/Bash alternatives exist for cross-platform work:
 
 ```bash
 python scripts/wiki-catalog.py --root .
-python scripts/wiki-search.py "llm recommendation" --root .
-python scripts/wiki-context.py l0 --root .
-bash scripts/wiki-status.sh
-bash scripts/source-registry.sh validate
-bash scripts/build-site.sh
+python scripts/wiki-search.py "query" --root .
 ```
 
-## Quality Gates
+## Quality Discipline
 
-Before committing durable wiki, README, script, site, skill, or automation-output changes, run the narrowest relevant checks. A typical wiki maintenance pass uses:
+- Public/private boundary enforced — `wiki-private/` never leaks
+- Source attribution preserved — EXTRACTED / INFERRED / AMBIGUOUS / UNVERIFIED
+- No append-only accumulation — merge, rewrite, or propose deletion when needed
+- Scoped commits only — stage what belongs to the current task
+- Catalog must be fresh before push — CI validates this
 
-```powershell
-.\scripts\wiki-catalog.ps1
-.\scripts\wiki-lint.ps1
-git diff --check
-```
+## CI/CD
 
-Expected discipline:
+| Workflow | Trigger | What it does |
+|----------|---------|--------------|
+| `deploy.yml` | Push to `wiki/**` or `site/**` | Validate catalog + lint → build Quartz → deploy to GitHub Pages |
+| `pages-health.yml` | Daily 04:17 UTC | Verify live site serves Quartz wiki (not README) |
 
-- Keep public and private material separated.
-- Preserve source attribution and uncertainty.
-- Prefer updating existing pages over creating duplicates.
-- Stage only files that belong to the current task.
-- Do not commit caches, downloaded toolchains, browser profiles, or generated runtime state.
-- Do not create empty commits for false dirty states with no real content diff.
+Published site: [appleweiping.github.io/vipin-wiki](https://appleweiping.github.io/vipin-wiki/)
 
-## Agent Contract
+## For Agents
 
-Agents working here should behave like wiki maintainers, not generic chatbots.
+Read `AGENTS.md`. It defines:
+- Mission and operating priority
+- Wiki structure and page conventions
+- Source handling and sensitivity rules
+- Multi-agent collaboration model with Agent Hub
+- Commit policy and quality gates
+- Research ideation policy
 
-1. Check `git status --short --branch` before editing.
-2. Read the authoritative operating docs for substantial work: `AGENTS.md`, `.wiki-schema.md`, and `purpose.md`.
-3. Use `wiki/index.md`, `wiki/catalog.json`, and recent `wiki/log.md` entries before broad searching.
-4. Answer from the smallest relevant maintained context.
-5. Preserve reusable answers and operational lessons in `wiki/`.
-6. Rebuild catalog, lint, diff-check, commit scoped changes, and push by default after durable updates.
-
-If the user asks an agent to "remember" a reusable rule, persist it into the durable rule layer: usually `AGENTS.md` plus the relevant wiki concept/workflow page and `wiki/log.md`. Chat memory alone is not enough.
-
-## Multi-Agent Collaboration
-
-This project uses a multi-agent system coordinated via the Agent Hub MCP server (`D:\devtools\agent-hub\`).
-
-| Agent | Model | Role | Strengths |
-| --- | --- | --- | --- |
-| Codex | GPT-5.5 | Coordinator + fast executor | Speed, task decomposition, parallel subagents, wiki maintenance |
-| Opus | Claude 4.7 | Architect + deep coder | Long-context (1M), multi-file refactor, architecture, security |
-| Sonnet | Claude 4.6 | Assistant + verifier | Cost-effective review, test suggestions, documentation |
-| DeepSeek Pro | DeepSeek V4 | Cheap labor | Bulk text, translation, summarization, Chinese content |
-
-Communication between agents uses shared disk state at `D:\devtools\agent-hub\state\` via MCP tools: `hub_send_message`, `hub_read_messages`, `hub_set_context`, `hub_get_context`, `hub_route_task`, etc.
-
-For complex coding tasks, Opus and Codex work as equals. For routine work, Codex leads with Sonnet verifying. DeepSeek handles bulk/cheap tasks.
-
-Key capabilities:
-- **Real-time dispatch**: Daemon (port 9800) auto-dispatches urgent messages to agents
-- **Auto-retry cascade**: Opus → Sonnet → DeepSeek on failure
-- **Pipeline with gates**: Sequential multi-step workflows with human confirmation at critical steps
-- **Spec-driven parallel dispatch**: One spec, multiple agents, simultaneous execution
-- **Performance metrics**: Per-agent success/failure tracking at `D:\devtools\agent-hub\state\metrics.json`
-- **Warm context**: Daemon auto-scans project state every 5 minutes, agents read without rescanning
-
-All infrastructure starts automatically on boot (PixelCat + Daemon in `shell:startup`). User only opens Codex.
-
-## Public And Private Boundary
-
-Public pages may include neutral metadata, public URLs, source summaries, stable IDs, hashes, workflow notes, and non-sensitive project memory.
-
-Public pages must not include secrets, tokens, private document contents, sensitive personal identifiers, private chats, or high-sensitivity materials. If a source is too sensitive to summarize safely, record minimal metadata only or keep it in the private layer.
-
-## Maintained Entry Points
-
-- `wiki/index.md` - main human-readable catalog.
-- `wiki/overview.md` - structural overview of the knowledge base.
-- `wiki/log.md` - chronological ingest and maintenance log.
-- `wiki/concepts/agent-skill-installation-workflow.md` - usable skill installation rule.
-- `wiki/concepts/readme-maintenance-workflow.md` - README refresh and specialist-skill rule.
-- `wiki/concepts/feishu-material-access-workflow.md` - Feishu/Lark API-first, browser-fallback workflow.
-- `wiki/analyses/public-corpus-ingest-workflow.md` - public corpus ingest and automation discipline.
-
-## README Rule
-
-This README is a living front door. Refresh it when structure, workflows, automation rules, validation expectations, or major project capabilities change.
-
-For high-impact README work, use the installed `readme-blueprint-generator` skill first, then validate the result against the repository's actual operating docs. The README should stay elegant, public-safe, and concise; deeper navigation belongs in `wiki/index.md`.
+Changes to infrastructure must update: `CLAUDE.md`, `AGENTS.md`, `README.md`, `.claude/skills/README-skills-layout.md`, and `D:\devtools\agent-hub\README.md`.
