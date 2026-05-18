@@ -10,6 +10,13 @@ tags:
 
 # Log
 
+## [2026-05-18 10:45] analysis | analog-agent deep module review and direction discussion
+
+- Pages created or updated:
+  - `D:\Research\Agent-AI4EDA\analog-agent\CLAUDE.md` (full rewrite with per-module assessment, priority roadmap, experiment design, critical questions)
+- Source: Claude Code session, full codebase review of 143 Python files (32k LOC)
+- Notes: Project assessed at ~65% completion. Core gaps: mock truth default, no trained surrogate, toy baselines, no statistical rigor. Recommended direction: "Surrogate-guided Optimization with Trust-aware Fidelity Selection" for DAC/ICCAD. Recommended dropping LLM claim, demoting Memory layer. Priority roadmap defined (P0: real SPICE + trained surrogate, P1: trust gate experiment + SOTA baselines). Direction discussion pending user decision on 5 critical questions.
+
 ## [2026-05-18 10:10] ingest | Agent Hub MCP server and multi-agent upgrade
 
 - Pages created or updated:
