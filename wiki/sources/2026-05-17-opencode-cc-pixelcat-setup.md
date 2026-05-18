@@ -62,6 +62,18 @@ Tutorial references:
 - EXTRACTED: After launching the refreshed binary, PixelCat listened on `127.0.0.1:8990`, but `scripts/Test-LocalCcPartner.ps1` still reported `upstream_credentials_disabled` with HTTP 502.
 - INFERRED: The binary replacement succeeded and did not break the local executable/port path, but it did not resolve the upstream credential/network failure.
 
+## PixelCat Network Workaround Attempt 2026-05-18
+
+- EXTRACTED: Clash Verge was present at `C:\Program Files\Clash Verge\clash-verge.exe`.
+- EXTRACTED: Launching Clash Verge started `verge-mihomo.exe` and a mixed local proxy on `127.0.0.1:7897`.
+- EXTRACTED: PixelCat's displayed `地址: http://127.0.0.1:8990` is its local API listening address for clients, not the outbound proxy address.
+- EXTRACTED: Clash Verge did not have an active real profile: `profiles.yaml` had `current: null`, with only empty Merge/Script stubs.
+- EXTRACTED: Direct and proxied `api.ipify.org` calls returned the same public IP, so the local proxy did not change the exit node.
+- EXTRACTED: Temporarily setting PixelCat `proxyUrl` to `http://127.0.0.1:7897` did not change the health-check result.
+- EXTRACTED: Attempts to force TUN through Clash config were reverted by the app; no Wintun/Clash virtual adapter appeared.
+- EXTRACTED: Temporary PixelCat and Clash config changes were restored after the attempt.
+- INFERRED: A real IP/exit-node change still requires a working Clash profile or connected VPN chosen through the relevant UI. The expected chain is `cc.cmd -> PixelCat:8990 -> outbound proxy/TUN -> ccmax`.
+
 ## Operational Meaning
 
 INFERRED: The installation is usable as a local coding-agent runtime, not just a manually opened terminal tool, when PixelCat's upstream credentials are healthy. Future Codex sessions should call `D:\devtools\cc.cmd` directly for partner planning, review, debugging, and verification when the task merits multi-agent collaboration.

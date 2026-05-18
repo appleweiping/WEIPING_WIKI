@@ -58,6 +58,24 @@ EXTRACTED: The post-refresh health check still returned `upstream_credentials_di
 
 INFERRED: When this exact status persists after a binary refresh, the remaining blocker is upstream credential/account/network state rather than the local PixelCat executable.
 
+## 2026-05-18 TUN / Exit-Node Attempt Result
+
+EXTRACTED: Clash Verge was installed and could launch `verge-mihomo.exe` with a local mixed proxy on `127.0.0.1:7897`, but `profiles.yaml` had `current: null` and only empty Merge/Script profile stubs.
+
+EXTRACTED: PixelCat's panel still showing `地址: http://127.0.0.1:8990` is expected. That field is PixelCat's local API listening endpoint for `cc.cmd` and OpenCode, not the upstream proxy/exit-node setting.
+
+EXTRACTED: Direct IP and proxied IP were both `217.149.131.41`; the local proxy did not provide a different exit node.
+
+EXTRACTED: Temporarily setting PixelCat `proxyUrl` to `http://127.0.0.1:7897` and restarting PixelCat did not change the health-check result: `upstream_credentials_disabled` with HTTP 502.
+
+EXTRACTED: Attempts to force Clash Verge TUN through config files were overwritten back to disabled by the app, no Wintun/Clash virtual adapter appeared, and no TUN startup log was observed.
+
+EXTRACTED: The temporary PixelCat proxy setting and Clash TUN config change were restored after testing.
+
+INFERRED: The panel suggestion still makes sense, but this machine currently lacks an active Clash profile / real exit node. The next practical fix requires the user to select or add a working proxy/VPN profile in Clash/VPN UI, or connect a real VPN, then rerun `.\scripts\Test-LocalCcPartner.ps1`.
+
+INFERRED: The desired routing shape is `cc.cmd -> PixelCat on 127.0.0.1:8990 -> optional outbound proxy/TUN such as 127.0.0.1:7897 -> ccmax`. Seeing `8990` in the PixelCat panel does not prove that the outbound proxy is unused; the proof is whether `proxyUrl` is set, TUN is actually active, and the public exit IP changes.
+
 ## Agent Behavior
 
 Future agents should not keep retrying `cc.cmd` when the health check reports `upstream_credentials_disabled`. They should state the limitation, continue Codex-only when risk is acceptable, or use non-CC partners such as DeepSeek Pro when appropriate and available.

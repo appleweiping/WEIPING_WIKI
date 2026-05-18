@@ -878,3 +878,16 @@ tags:
   - Replaced only `D:\devtools\pixelcat-app.exe`, backed up the old executable, and left PixelCat config/credentials and other Agent Hub files untouched.
   - Confirmed the refreshed binary starts and listens on `127.0.0.1:8990`.
   - Confirmed the remaining failure is still PixelCat/ccmax upstream credential state: `upstream_credentials_disabled` with HTTP 502.
+## [2026-05-18 12:55] query | PixelCat TUN and exit-node attempt
+
+- Pages created or updated:
+  - [[2026-05-18-pixelcat-cc-502-credentials-disabled-runbook]]
+  - [[2026-05-17-opencode-cc-pixelcat-setup]]
+  - [[log]]
+- Sources used:
+  - Local Clash Verge, PixelCat config, network adapter, public-IP, and health-check outputs.
+- Notes:
+  - Launched Clash Verge and confirmed local proxy port `127.0.0.1:7897`, but no active real Clash profile was configured.
+  - PixelCat through the local proxy still returned `upstream_credentials_disabled`; direct and proxied public IP were identical.
+  - TUN forcing attempts were overwritten by Clash Verge, no virtual adapter appeared, and all temporary PixelCat/Clash config changes were restored.
+  - Clarified that PixelCat panel address `127.0.0.1:8990` is the local API endpoint; outbound proxy/TUN routing is separate and would not replace that displayed address.
