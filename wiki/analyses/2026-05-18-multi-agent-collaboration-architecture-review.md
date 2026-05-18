@@ -58,6 +58,12 @@ The critical failure mode is fake collaboration: a partner is named, but receive
 - the prompt included enough conversation, file, decision, and output-format context
 - the returned answer actually addressed the scoped question
 
+## Counterpoints and Gaps
+
+- AMBIGUOUS: The analysis focused on operating rules and prompt contracts, not a full runtime implementation of every partner adapter.
+- UNVERIFIED: DeepSeek Pro still needs a separate adapter-level smoke test before it can be treated as a reliable automatic fallback for local repository tasks.
+- INFERRED: More routing automation may be useful later, but only after repeated failures show that natural-language operating rules are insufficient.
+
 ## Related Pages
 
 - [[local-cc-sidecar-agent-workflow]]

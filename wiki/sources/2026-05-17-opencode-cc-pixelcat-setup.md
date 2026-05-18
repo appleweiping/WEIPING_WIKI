@@ -3,7 +3,7 @@ title: OpenCode, Claude Code, and PixelCat Local Setup Session
 type: source
 status: active
 created: 2026-05-17
-updated: 2026-05-17
+updated: 2026-05-18
 tags:
   - source
   - local-tools
@@ -31,29 +31,29 @@ Tutorial references:
 
 ## Extracted Setup Facts
 
-- EXTRACTED: OpenCode was installed under `D:\cc\npm-global`.
-- EXTRACTED: Claude Code / `cc` was installed under `D:\cc\npm-global`.
-- EXTRACTED: Convenience entrypoints were created at `D:\cc\opencode.cmd` and `D:\cc\cc.cmd`.
-- EXTRACTED: `D:\cc\setup-env.ps1` was created to set the local PATH/runtime environment.
-- EXTRACTED: User PATH was updated to include `D:\cc`, `D:\cc\node`, `D:\cc\npm-global`, and `D:\cc\npm-global\node_modules\.bin`.
-- EXTRACTED: PixelCat local proxy was confirmed running via `D:\cc\pixelcat-app.exe` and listening on `127.0.0.1:8990`.
+- EXTRACTED: Current OpenCode and Claude Code runtime files live under `D:\devtools\`.
+- EXTRACTED: Current convenience entrypoints: `D:\devtools\opencode.cmd` and `D:\devtools\cc.cmd`.
+- EXTRACTED: Current setup helper: `D:\devtools\setup-env.ps1`.
+- EXTRACTED: Current runtime folders include `D:\devtools\node`, `D:\devtools\npm-global`, and `D:\devtools\npm-global\node_modules\.bin`.
+- EXTRACTED: PixelCat local proxy is launched via `D:\devtools\pixelcat-app.exe` and listens on `127.0.0.1:8990`.
 - EXTRACTED: The user later clarified, with a PixelCat management-panel screenshot, that the PixelCat panel must be open for the local `cc` family tools to work.
 - EXTRACTED: OpenCode was configured to use the PixelCat-compatible local API endpoint and a default Claude Sonnet model.
 - EXTRACTED: VSCode had the PixelCat OpenCode extension and Claude Code extension installed.
+- EXTRACTED: Earlier setup notes and some old docs used `D:\cc\...`; live checks on 2026-05-18 found `D:\cc` absent and `D:\devtools` active.
 
 ## Smoke Tests
 
-- EXTRACTED: `D:\cc\opencode.cmd --version` returned `1.15.3`.
-- EXTRACTED: `D:\cc\cc.cmd --version` returned `2.1.143 (Claude Code)`.
-- EXTRACTED: `D:\cc\opencode.cmd run "Reply only OK" --model aiapi3/claude-sonnet-4-6` returned `OK`.
-- EXTRACTED: `D:\cc\cc.cmd -p "Reply only OK" --model claude-sonnet-4-6 --output-format text` returned `OK`.
-- EXTRACTED: `D:\cc\cc.cmd -p "Reply only OK" --model claude-opus-4-7 --output-format text` returned `OK`.
-- EXTRACTED: `D:\cc\cc.cmd` successfully ran a read-only `claude-opus-4-7` diff-review sidecar prompt for the wiki update and reported `NO BLOCKERS`.
+- EXTRACTED: `D:\devtools\opencode.cmd --version` returned `1.15.3`.
+- EXTRACTED: `D:\devtools\cc.cmd --version` returned `2.1.143 (Claude Code)`.
+- EXTRACTED: Earlier OpenCode and `cc` smoke tests returned `OK` while PixelCat upstream credentials were healthy.
+- EXTRACTED: `D:\devtools\cc.cmd` successfully ran a read-only `claude-opus-4-7` diff-review partner prompt for the wiki update and reported `NO BLOCKERS`.
 - EXTRACTED: During the PixelCat preflight-rule update, `127.0.0.1:8990` was observed listening locally.
+- EXTRACTED: On 2026-05-18, `D:\devtools\cc.cmd --version` returned `2.1.143 (Claude Code)` and `D:\devtools\opencode.cmd --version` returned `1.15.3`.
+- EXTRACTED: On 2026-05-18, `scripts/Test-LocalCcPartner.ps1` confirmed the `cc` entrypoint and PixelCat port but reported `upstream_credentials_disabled` because a minimal `/v1/messages` probe returned HTTP 502 from PixelCat/ccmax with all upstream credentials disabled (`0/1`).
 
 ## Operational Meaning
 
-INFERRED: The installation is usable as a local coding-agent runtime, not just a manually opened terminal tool. Future Codex sessions can call `D:\cc\cc.cmd` directly for sidecar planning, review, debugging, and verification when the task merits multi-agent collaboration.
+INFERRED: The installation is usable as a local coding-agent runtime, not just a manually opened terminal tool, when PixelCat's upstream credentials are healthy. Future Codex sessions should call `D:\devtools\cc.cmd` directly for partner planning, review, debugging, and verification when the task merits multi-agent collaboration.
 
 On 2026-05-17, the workflow was upgraded from a flexible sidecar rule into a strict three-role arrangement:
 
@@ -76,6 +76,8 @@ See [[local-cc-sidecar-agent-workflow]] for the reusable workflow.
 - Do not copy private chat/video contents into public wiki pages.
 - Keep runtime packages, caches, and downloaded toolchains out of Git unless they are deliberate source files.
 - If the PixelCat panel/proxy is not running, `cc` and OpenCode may fail even when the entrypoints exist.
-- Future agents should try to launch `D:\cc\pixelcat-app.exe` and re-check `127.0.0.1:8990` before reporting that `cc` is unavailable.
+- Future agents should try to launch `D:\devtools\pixelcat-app.exe` and re-check `127.0.0.1:8990` before reporting that `cc` is unavailable.
+- A listening PixelCat port is not sufficient. Future agents should run `scripts/Test-LocalCcPartner.ps1` or make an equivalent minimal `/v1/messages` probe before counting Opus, Sonnet, or Haiku as available.
+- If PixelCat returns HTTP 502 with all upstream credentials disabled (`0/1`), the local fix is not prompt editing or model-name changes. Repair PixelCat account/network state in the panel, try TUN mode or another IP/exit node, then rerun the health check.
 - The hardcoded D-drive path and local proxy port are operational notes, not portable configuration; update the workflow if the local runtime moves.
 - Do not publish screenshot-visible account details, API keys, balances, quota, or usage data from the PixelCat panel in public wiki pages.

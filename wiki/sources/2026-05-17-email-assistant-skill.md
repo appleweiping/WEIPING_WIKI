@@ -3,7 +3,7 @@ title: 2026-05-17 Email Assistant Skill
 type: source
 status: active
 created: 2026-05-17
-updated: 2026-05-17
+updated: 2026-05-18
 tags:
   - source
   - agent-skills
@@ -43,7 +43,7 @@ source_pages:
 - EXTRACTED: Added `.wiki-tmp/email-assistant/logs/` action logging with body/token redaction.
 - EXTRACTED: Removed high-side-effect upstream scripts for filters, forwarding, token migration, and paywall cleanup.
 - EXTRACTED: Added an `email-message.js` helper shared by direct sends and draft creation/update.
-- EXTRACTED: Updated setup docs to use local `D:\cc\node\corepack.cmd pnpm` because `npm` was not available on PATH during installation.
+- EXTRACTED: Updated setup docs to use local `D:\devtools\node\corepack.cmd pnpm` because `npm` was not available on PATH during installation and the D-drive tool runtime now lives under `D:\devtools`.
 
 ## Safety And Approval Model
 

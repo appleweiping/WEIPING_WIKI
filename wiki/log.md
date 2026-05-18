@@ -679,6 +679,7 @@ tags:
   - `AGENTS.md`
   - [[local-cc-sidecar-agent-workflow]]
   - [[2026-05-17-opencode-cc-pixelcat-setup]]
+  - [[queries-home]]
   - [[index]]
 - Sources used:
   - User-approved strict CC multi-agent plan from the current chat.
@@ -839,3 +840,28 @@ tags:
   - Recorded the full diagnosis and repair sequence: process/path confirmation, cache and state cleanup, clean-profile tests, renderer status inspection, hardware-rendering configuration, winget repair failure, official user installer fallback, and final verification.
   - Documented the Cursor misclassification and restoration so future agents verify the target executable before touching VS Code-family apps.
   - Preserved a fast next-time runbook while avoiding public exposure of sensitive `settings.json` contents.
+## [2026-05-18 11:51] query | PixelCat CC partner outage runbook
+
+- Pages created or updated:
+  - [[2026-05-18-pixelcat-cc-502-credentials-disabled-runbook]]
+  - [[local-cc-sidecar-agent-workflow]]
+  - [[agent-hub-mcp-server]]
+  - [[2026-05-18-multi-agent-collaboration-architecture-review]]
+  - [[2026-05-17-opencode-cc-pixelcat-setup]]
+  - [[2026-05-18-user-feedback-model-collaboration-context-intake]]
+  - [[2026-05-17-where-can-local-cc-be-used]]
+  - [[email-assistant-skill]]
+  - [[2026-05-17-email-assistant-skill]]
+  - [[queries-home]]
+  - [[index]]
+  - [[log]]
+- Sources used:
+  - User-provided PixelCat management-panel screenshot showing HTTP 502 and disabled upstream credentials.
+  - Local checks of `D:\devtools\cc.cmd`, PixelCat on `127.0.0.1:8990`, and the Agent Hub daemon on port 9800.
+  - New `scripts/Test-LocalCcPartner.ps1` health check output.
+- Notes:
+  - Diagnosed the failure as PixelCat/ccmax upstream credential/network state rather than a Claude Code installation, prompt, or model-name problem.
+  - Added a reusable PixelCat/CC health check that detects the `upstream_credentials_disabled` 502 case before future agents spend time retrying `cc`.
+  - Updated Agent Hub and collaboration docs so Opus/Sonnet/Haiku calls fall back quickly and record a clear limitation when the CC family is unavailable.
+  - Cleaned the related wiki lint gaps by indexing the collaboration-context source note and adding counterpoint/gap sections to current multi-agent pages.
+  - Corrected stale `D:\cc` references in current runbooks to the live `D:\devtools` runtime while preserving historical log context.

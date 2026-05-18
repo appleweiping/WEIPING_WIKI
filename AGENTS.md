@@ -401,7 +401,8 @@ Forced thresholds:
 
 Partner prompt contract:
 
-- Before any `cc` family call, run a PixelCat preflight: check whether `127.0.0.1:8990` is listening. If it is not listening, launch the visible PixelCat management panel from `D:\devtools\pixelcat-app.exe`, wait briefly, and re-check the port before retrying `cc`.
+- Before any `cc` family call, run a PixelCat/CC preflight. Prefer `.\scripts\Test-LocalCcPartner.ps1` from this repository when available; otherwise check whether `127.0.0.1:8990` is listening, launch the visible PixelCat management panel from `D:\devtools\pixelcat-app.exe` if needed, then make a minimal Anthropic-compatible `/v1/messages` probe before counting Opus/Sonnet/Haiku as available.
+- If the preflight reports HTTP 502 with PixelCat/ccmax saying all upstream credentials are disabled, treat this as a PixelCat upstream credential/network failure, not a prompt, model-name, or Claude Code installation problem. Do not keep retrying `cc`; ask the user to fix PixelCat account/network state, try TUN or another IP/exit node, then rerun the preflight.
 - Every `cc` call must be non-interactive with `-p` and include a real context pack plus `AUTHORIZATION`, `ROLE`, `MODEL`, `REPO`, `SCOPE`, `QUESTION`, `CONSTRAINTS`, `OUTPUT FORMAT`, and `ESCALATION SIGNALS`.
 - For long or multi-line context packs, prefer piping the prompt into `D:\devtools\cc.cmd -p --model ... --output-format text` through stdin. If the output is only a generic greeting/readiness line or otherwise does not answer the scoped question, treat the partner call as failed or unusable; retry with a better prompt path or state the limitation instead of counting it as a real review.
 - Constraints must state that the partner is read-only, must not edit files, must not run destructive commands, and must not handle credentials or live account actions.

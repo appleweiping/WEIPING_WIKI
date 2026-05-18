@@ -122,6 +122,14 @@ All infrastructure starts automatically on Windows boot (via `shell:startup`):
 
 The user only needs to open one chat window (Codex or Claude Code). Everything else is automatic.
 
+Health check for the Claude Code partner path:
+
+```powershell
+.\scripts\Test-LocalCcPartner.ps1
+```
+
+`upstream_credentials_disabled` means PixelCat is running but ccmax/PixelCat has disabled every upstream credential currently available. Fix the PixelCat panel's account/network state, try TUN or another IP/exit node, then rerun the check before invoking Opus, Sonnet, or Haiku.
+
 ### 20 MCP Tools
 
 | Category | Tools |
@@ -160,6 +168,7 @@ The user only needs to open one chat window (Codex or Claude Code). Everything e
 .\scripts\wiki-context.ps1 l0       # Extract context for agent handoffs
 .\scripts\wiki-graph.ps1            # Link graph visualization
 .\scripts\build-site.ps1            # Build Quartz site locally
+.\scripts\Test-LocalCcPartner.ps1    # Check PixelCat + Claude Code partner availability
 ```
 
 ### Python/Bash (cross-platform, used in CI)

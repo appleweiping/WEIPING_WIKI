@@ -64,12 +64,35 @@ External: `deepseek_chat`
 - Claude Code: `C:\Users\admin\.claude\mcp.json`
 - Startup: `shell:startup\agent-hub-daemon.cmd` + `shell:startup\pixelcat.cmd`
 
+## PixelCat / CC Health Check
+
+Claude-family dispatch depends on both:
+
+- PixelCat listening on `127.0.0.1:8990`
+- a working PixelCat/ccmax upstream credential pool
+
+Preferred check from the `vipin wiki` root:
+
+```powershell
+.\scripts\Test-LocalCcPartner.ps1
+```
+
+EXTRACTED: On 2026-05-18 11:51 +02:00, this check found `D:\devtools\cc.cmd` version `2.1.143`, PixelCat listening, and a minimal `/v1/messages` probe failing with HTTP 502 because PixelCat reported all upstream credentials disabled (`0/1`).
+
+INFERRED: When this status appears, Agent Hub should not keep retrying Opus/Sonnet/Haiku through `cc.cmd`. The fix is to repair PixelCat account/network state in the panel, try TUN mode or another IP/exit node, then rerun the health check. Codex may continue alone or use non-CC partners only after stating the limitation if the missing Claude-family partner materially changes risk.
+
 ## Environment Variables
 
 - `AGENT_HUB_IDENTITY` — agent name (codex/claude)
 - `AGENT_HUB_STATE_DIR` — shared state directory
 - `DEEPSEEK_API_KEY`, `DEEPSEEK_BASE_URL`, `DEEPSEEK_MODEL`
 - `GPT55_API_KEY` (or `OPENAI_API_KEY`), `GPT55_BASE_URL`, `GPT55_MODEL`
+
+## Counterpoints and Gaps
+
+- AMBIGUOUS: The daemon can detect PixelCat upstream failure quickly, but restoring credentials still requires action in PixelCat or its upstream account/network environment.
+- UNVERIFIED: The patched daemon fallback path has passed syntax and status checks, but a live urgent-message fallback was not exercised because it could call paid external models.
+- INFERRED: A future cleaner design would centralize PixelCat health probing in one shared module instead of duplicating small probes in the daemon, MCP server, and PowerShell runbook.
 
 ## Related
 

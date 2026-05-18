@@ -77,8 +77,8 @@ This is the main catalog of the wiki.
 - [[durable-agent-rule-memory]] - Rule that user-requested future-agent memories must be persisted into AGENTS/wiki rather than left only in chat.
 - [[agent-collaboration-tone-and-model-roles]] - User-facing collaboration rule for warmer partner language, Codex parallel selves, Opus/Sonnet roles, and DeepSeek Pro/Flash preferences.
 - [[model-collaboration-context-and-reference-intake]] - Rule that partner handoffs and external reference searches must carry enough context and depth to be genuinely useful, not toy summaries.
-- [[local-cc-sidecar-agent-workflow]] - Strict three-role Codex + Claude Code partner workflow with PixelCat preflight: Codex coordinates/writes, Opus reviews deeply, and Sonnet scans low-risk diffs/docs.
-- [[agent-hub-mcp-server]] - Real-time multi-agent collaboration server (20 MCP tools): messaging, shared state, pipelines, quality gates, auto-retry cascade, and direct invocation of Sonnet/Haiku/GPT-5.5/DeepSeek.
+- [[local-cc-sidecar-agent-workflow]] - Strict three-role Codex + Claude Code partner workflow with PixelCat/CC health check, upstream-credential failure handling, and read-only Opus/Sonnet prompts.
+- [[agent-hub-mcp-server]] - Real-time multi-agent collaboration server (20 MCP tools): messaging, shared state, pipelines, quality gates, PixelCat preflight, auto-retry cascade, and direct invocation of Sonnet/Haiku/GPT-5.5/DeepSeek.
 - [[agent-skill-installation-workflow]] - Durable rule for installing skills as usable tools: D-drive mirror, `.codex/skills` install, dependency setup, smoke tests, wiki docs, and scoped commit.
 - [[research-ideation-policy]] - Rule for ambitious research ideation: no shallow stitching, force novelty, and allow radical reframing.
 - [[research-project-workbench]] - Upper-level workbench route for analog-agent, Uncertainty/Pony-Rec, TRUCE-Rec, and TGL-Rec, including startup packets, claim gates, artifact boundaries, and collaboration priority.
@@ -97,7 +97,8 @@ This is the main catalog of the wiki.
 - [[2026-05-17-readme-blueprint-generator-skill]] - Source note for the GitHub `awesome-copilot` README specialist skill, local adaptation, install paths, and validation.
 - [[2026-05-17-email-assistant-skill]] - Source note for the customized email-assistant skill derived from Benchflow Gmail scripts, including API-first design, local auth paths, safety gates, and validation.
 - [[2026-05-17-communication-assistant-skill]] - Source note for the unified communication router skill, its adapter landscape, shared outbox, and prefill-first safety model.
-- [[2026-05-17-opencode-cc-pixelcat-setup]] - Source note for the D-drive OpenCode, Claude Code, and PixelCat setup plus smoke-test results.
+- [[2026-05-18-user-feedback-model-collaboration-context-intake]] - Chat source note for user feedback on DeepSeek delegation intent, partner context packs, and avoiding toy external-reference summaries.
+- [[2026-05-17-opencode-cc-pixelcat-setup]] - Source note for the D-drive OpenCode, Claude Code, and PixelCat setup, active `D:\devtools` paths, smoke-test results, and the 2026-05-18 upstream-credential outage diagnosis.
 - [[2026-05-17-research-project-roots-deep-review]] - Public-safe source note for the deep read-only review of analog-agent, Uncertainty/Pony-Rec, TRUCE-Rec, and TGL-Rec local roots.
 
 - [[2026-05-16-canvas-hack-recovery-note]] - User-provided Canvas outage/hack note; expected recovery 2026-05-18 and blocks syllabus retrieval for UMN transfer-credit review.
@@ -198,6 +199,7 @@ This is the main catalog of the wiki.
 ## Queries
 
 - [[queries-home]] - Entry page for durable saved answers.
+- [[2026-05-18-pixelcat-cc-502-credentials-disabled-runbook]] - Runbook for diagnosing and fixing PixelCat/ccmax HTTP 502 where `cc` works locally but all upstream credentials are disabled.
 - [[2026-05-18-vscode-black-screen-repair-runbook]] - Detailed Windows VS Code black-screen repair runbook with diagnosis, fixes, backups, and next-time fast path.
 - [[2026-05-17-where-can-local-cc-be-used]] - Short answer on where Vipin's local `cc`/Claude Code setup can be used: terminal, Codex, VSCode/OpenCode, PixelCat-backed local tools, and why generic web/app chat is separate.
 - [[2026-05-17-how-to-ask-nuwa-to-distill-lidang]] - Copy-paste prompt for using Nuwa and Opus to update the Lidang perspective skill.

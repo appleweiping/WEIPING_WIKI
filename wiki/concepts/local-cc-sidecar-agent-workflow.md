@@ -24,17 +24,25 @@ Codex acts as the supervisor and only writer. Opus and Sonnet act as read-only p
 
 ## Runtime
 
-- EXTRACTED: Claude Code entrypoint: `D:\cc\cc.cmd`.
-- EXTRACTED: Node/npm runtime and global packages live under `D:\cc\`, not the C drive.
+- EXTRACTED: Current Claude Code entrypoint: `D:\devtools\cc.cmd`.
+- EXTRACTED: Current Node/npm runtime and global packages live under `D:\devtools\`, not the C drive.
 - EXTRACTED: PixelCat provides the local model proxy on `127.0.0.1:8990`.
-- EXTRACTED: PixelCat management panel executable: `D:\cc\pixelcat-app.exe`.
+- EXTRACTED: PixelCat management panel executable: `D:\devtools\pixelcat-app.exe`.
 - EXTRACTED: Verified Claude Code version: `2.1.143`.
 
 OpenCode is installed and recorded in [[2026-05-17-opencode-cc-pixelcat-setup]], but it is not part of this multi-agent coding workflow.
 
 ## PixelCat Preflight
 
-PixelCat is the required control plane for the local `cc` family setup. Before calling `D:\cc\cc.cmd`, Codex should make sure the PixelCat proxy is available.
+PixelCat is the required control plane for the local `cc` family setup. Before calling `D:\devtools\cc.cmd`, Codex should make sure the PixelCat proxy and upstream credential pool are available.
+
+Preferred check from the `vipin wiki` root:
+
+```powershell
+.\scripts\Test-LocalCcPartner.ps1
+```
+
+The check verifies the `cc` entrypoint, the PixelCat port, and a minimal Anthropic-compatible `/v1/messages` request. A listening port alone is insufficient because PixelCat can be open while its upstream credential pool is disabled.
 
 Check the local proxy:
 
@@ -45,10 +53,12 @@ Get-NetTCPConnection -LocalAddress 127.0.0.1 -LocalPort 8990 -ErrorAction Silent
 If nothing is listening, launch the visible management panel:
 
 ```powershell
-Start-Process -FilePath "D:\cc\pixelcat-app.exe"
+Start-Process -FilePath "D:\devtools\pixelcat-app.exe"
 ```
 
 Then wait briefly and re-check `127.0.0.1:8990`. If the proxy still does not come up, record the limitation and either retry later or continue Codex-only when the missing partner does not materially change the risk profile.
+
+If the port is listening but the API probe returns HTTP 502 with a message like "all upstream credentials are disabled" or `0/1`, the local Claude Code installation is not the broken part. The fix is to repair PixelCat's upstream account/network state in the panel, try TUN mode or another IP/exit node, and rerun the health check. Do not keep retrying `cc`, changing prompts, or treating this as a model-name issue.
 
 Do not ask the user to remember how to open PixelCat unless the executable is missing or startup fails repeatedly.
 
@@ -68,11 +78,11 @@ Codex must not treat partner output as authority. It is advisory evidence that C
 
 | Trigger | Partner | Runtime | Notes |
 | --- | --- | --- | --- |
-| User explicitly asks for Opus | Opus | `D:\cc\cc.cmd` with `claude-opus-4-7` | Send a full context pack and keep the call read-only. |
-| User explicitly asks for Sonnet | Sonnet | `D:\cc\cc.cmd` with `claude-sonnet-4-6` | Use for quick scans, docs, and lower-risk second looks. |
+| User explicitly asks for Opus | Opus | `D:\devtools\cc.cmd` with `claude-opus-4-7` | Send a full context pack and keep the call read-only. |
+| User explicitly asks for Sonnet | Sonnet | `D:\devtools\cc.cmd` with `claude-sonnet-4-6` | Use for quick scans, docs, and lower-risk second looks. |
 | User explicitly asks for DeepSeek / `鲸鱼` | DeepSeek Pro by default | configured DeepSeek route when available | Do not search for a local binary unless the user asks for a CLI route. For local files, Codex gathers a compact read-only snapshot first. |
-| Architecture, cross-module, security/privacy, hard debugging, high-risk final review | Opus | `D:\cc\cc.cmd` | Opus wins when Sonnet and Opus triggers both match. |
-| Low-risk diff scan, test-gap suggestion, documentation summary | Sonnet | `D:\cc\cc.cmd` | Escalate to Opus if Sonnet reports uncertainty, blockers, or architectural/security risk. |
+| Architecture, cross-module, security/privacy, hard debugging, high-risk final review | Opus | `D:\devtools\cc.cmd` | Opus wins when Sonnet and Opus triggers both match. |
+| Low-risk diff scan, test-gap suggestion, documentation summary | Sonnet | `D:\devtools\cc.cmd` | Escalate to Opus if Sonnet reports uncertainty, blockers, or architectural/security risk. |
 | Partner unavailable or context cannot be safely shared | Codex-only with limitation stated | current Codex session | Continue only when the missing partner does not materially change the risk profile. |
 
 ## Forced Thresholds
@@ -138,7 +148,7 @@ CONSTRAINTS: Read-only. Do not edit files. Do not run destructive commands. Do n
 OUTPUT FORMAT: Findings first. If no blockers, say NO BLOCKERS and list residual risks.
 ESCALATION SIGNALS: Say BLOCKER for any issue that should stop commit.
 '@
-$prompt | D:\cc\cc.cmd -p --model claude-opus-4-7 --output-format text
+$prompt | D:\devtools\cc.cmd -p --model claude-opus-4-7 --output-format text
 ```
 
 If the output is only a generic readiness/greeting line or does not answer the scoped question, treat the handoff as failed or unusable. Do not count that as a real partner review.
@@ -148,7 +158,7 @@ If the output is only a generic readiness/greeting line or does not answer the s
 Sonnet quick scan:
 
 ```powershell
-D:\cc\cc.cmd -p "AUTHORIZATION: User-authorized local read-only review.
+D:\devtools\cc.cmd -p "AUTHORIZATION: User-authorized local read-only review.
 ROLE: Sonnet Scanner
 MODEL: claude-sonnet-4-6
 REPO: D:\Research\SomeRepo
@@ -162,7 +172,7 @@ ESCALATION SIGNALS: Say ESCALATE TO OPUS for architecture, cross-module, securit
 Opus deep review:
 
 ```powershell
-D:\cc\cc.cmd -p "AUTHORIZATION: User-authorized local read-only review.
+D:\devtools\cc.cmd -p "AUTHORIZATION: User-authorized local read-only review.
 ROLE: Opus Reviewer
 MODEL: claude-opus-4-7
 REPO: D:\Research\SomeRepo
@@ -176,7 +186,7 @@ ESCALATION SIGNALS: Say BLOCKER for any issue that should stop commit." --model 
 Smoke test:
 
 ```powershell
-D:\cc\cc.cmd -p "Reply only OK" --model claude-opus-4-7 --output-format text
+D:\devtools\cc.cmd -p "Reply only OK" --model claude-opus-4-7 --output-format text
 ```
 
 ## Coordinator Verification
@@ -210,19 +220,20 @@ If the task is software or project work, give the partner enough of the real con
 - Do not delegate destructive commands, production changes, real account actions, payment actions, or credential handling.
 - User approval is still required for destructive operations or cross-repository edits, regardless of partner output.
 - If `cc` fails, hangs, returns unusable output, or the PixelCat panel/proxy is not running, fall back to Codex-only work and record the limitation when it materially affects risk or validation.
+- If the preflight reports `upstream_credentials_disabled`, fall back immediately and record that the CC family is blocked by PixelCat upstream credential/network state. Do not spend the user's time on prompt retries.
 - The limitation is material when the task would normally trigger Opus: architecture, security/privacy, cross-module changes, hard debugging, or high-risk final review.
 - When PixelCat is not running, try the PixelCat preflight launch procedure before falling back.
 
 ## Verified Status
 
-- EXTRACTED: `D:\cc\cc.cmd --version` returned `2.1.143 (Claude Code)`.
+- EXTRACTED: `D:\devtools\cc.cmd --version` returned `2.1.143 (Claude Code)`.
 - EXTRACTED: The PixelCat proxy was observed listening on `127.0.0.1:8990`.
 - EXTRACTED: The user confirmed that the PixelCat management panel must be open for the local `cc` family tools to work.
-- EXTRACTED: `D:\cc\cc.cmd -p "Reply only OK" --model claude-sonnet-4-6 --output-format text` returned `OK`.
-- EXTRACTED: `D:\cc\cc.cmd -p "Reply only OK" --model claude-opus-4-7 --output-format text` returned `OK`.
-- EXTRACTED: `D:\cc\cc.cmd` successfully ran a read-only `claude-opus-4-7` diff-review partner prompt for a wiki update and reported `NO BLOCKERS`.
-- EXTRACTED: On 2026-05-18, piping a long context pack through stdin to `D:\cc\cc.cmd -p --model claude-opus-4-7 --output-format text` successfully produced a scoped Opus architecture review.
+- EXTRACTED: Earlier `D:\devtools\cc.cmd -p "Reply only OK" --model claude-sonnet-4-6 --output-format text` and Opus smoke tests returned `OK` when PixelCat's upstream credentials were healthy.
+- EXTRACTED: `D:\devtools\cc.cmd` successfully ran a read-only `claude-opus-4-7` diff-review partner prompt for a wiki update and reported `NO BLOCKERS`.
+- EXTRACTED: On 2026-05-18, piping a long context pack through stdin to `D:\devtools\cc.cmd -p --model claude-opus-4-7 --output-format text` successfully produced a scoped Opus architecture review.
 - EXTRACTED: In the same session, passing a long prompt directly as a PowerShell argument returned only a generic readiness line; future agents should treat that shape of output as a failed handoff, not as partner input.
+- EXTRACTED: On 2026-05-18 11:51 +02:00, `scripts/Test-LocalCcPartner.ps1` found `D:\devtools\cc.cmd` version `2.1.143`, PixelCat listening on `127.0.0.1:8990`, and the `/v1/messages` probe failing with HTTP 502 because PixelCat reported all upstream credentials disabled (`0/1`).
 
 ## Counterpoints And Gaps
 

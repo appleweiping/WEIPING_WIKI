@@ -74,6 +74,14 @@ Both are in Windows startup folder (`shell:startup`), no manual action needed:
 
 The user only opens Codex. Everything else is automatic.
 
+Before assuming Opus/Sonnet/Haiku are usable, run the vipin wiki health check when available:
+
+```powershell
+.\scripts\Test-LocalCcPartner.ps1
+```
+
+If it returns `upstream_credentials_disabled` or PixelCat HTTP 502 with `0/1` credentials, the CC family is blocked by PixelCat's upstream credential/network state. Fix PixelCat first (credential/account state, TUN, or another IP/exit node), then retry; do not treat it as a prompt or Claude Code installation failure.
+
 ## For Complex Coding Tasks
 
 Opus and Codex work as equals:

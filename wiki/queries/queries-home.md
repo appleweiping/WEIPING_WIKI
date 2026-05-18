@@ -3,7 +3,7 @@ title: Queries Home
 type: query
 status: active
 created: 2026-04-21
-updated: 2026-05-17
+updated: 2026-05-18
 tags:
   - query
 ---
@@ -14,6 +14,8 @@ Store durable answers to important questions here.
 
 ## Current Queries
 
+- [[2026-05-18-pixelcat-cc-502-credentials-disabled-runbook]]
+- [[2026-05-18-vscode-black-screen-repair-runbook]]
 - [[2026-05-17-where-can-local-cc-be-used]]
 - [[2026-04-22-how-to-reduce-github-submit-prompts]]
 - [[2026-04-22-what-is-dbm]]

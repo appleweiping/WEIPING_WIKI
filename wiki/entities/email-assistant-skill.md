@@ -3,7 +3,7 @@ title: Email Assistant Skill
 type: entity
 status: active
 created: 2026-05-17
-updated: 2026-05-17
+updated: 2026-05-18
 tags:
   - entity
   - agent-skills
@@ -58,9 +58,9 @@ Expected workflow:
 
 ```powershell
 cd "D:\Research\vipin's knowledgebase\.codex\skills\email-assistant"
-& "D:\cc\node\corepack.cmd" pnpm install
-& "D:\cc\node\corepack.cmd" pnpm run setup -- --account umn --email "<umn email address>"
-& "D:\cc\node\corepack.cmd" pnpm run setup -- --account vipinapple --email "<personal email address>"
+& "D:\devtools\node\corepack.cmd" pnpm install
+& "D:\devtools\node\corepack.cmd" pnpm run setup -- --account umn --email "<umn email address>"
+& "D:\devtools\node\corepack.cmd" pnpm run setup -- --account vipinapple --email "<personal email address>"
 node scripts/manage-accounts.js --list
 ```
 
@@ -74,7 +74,7 @@ node scripts/manage-accounts.js --list
 
 ## Verification Record
 
-- EXTRACTED: Dependencies installed locally with `D:\cc\node\corepack.cmd pnpm install`.
+- EXTRACTED: Dependencies installed locally with `D:\devtools\node\corepack.cmd pnpm install` after the D-drive tool runtime moved from `D:\cc` to `D:\devtools`.
 - EXTRACTED: `quick_validate.py` passed after installing PyYAML into `.wiki-tmp/python`.
 - EXTRACTED: `node --check` passed for all installed JavaScript scripts.
 - EXTRACTED: `manage-accounts --list` reports no configured accounts cleanly when OAuth tokens are absent.
