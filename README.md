@@ -37,7 +37,9 @@ It turns important sources, local project discoveries, conversations, and automa
 | `scripts/` | Search, catalog, lint, context, graph, ingest, and site utilities | Prefer PowerShell wrappers on Windows |
 | `site/` | Quartz publishing adapter | Build layer, not a second wiki |
 | `.wiki-tmp/` | Local cache/runtime area | Keep tools, browser state, and generated caches out of Git unless deliberate |
-| `.codex/skills/` | Project-local Codex skills | Installed skills should be tested, documented, and committed when source files are deliberate |
+| `.codex/skills/` | Project-local Codex skills (38 installed) | Installed skills should be tested, documented, and committed when source files are deliberate |
+| `.claude/skills/` | Claude Code skills | lidang-perspective, mattpocock-skills; junction-linked to global `~/.claude/skills/` |
+| `CLAUDE.md` | Claude Code operating entry point | Points to AGENTS.md as authority |
 
 ## Core Loop
 
@@ -120,6 +122,31 @@ Agents working here should behave like wiki maintainers, not generic chatbots.
 6. Rebuild catalog, lint, diff-check, commit scoped changes, and push by default after durable updates.
 
 If the user asks an agent to "remember" a reusable rule, persist it into the durable rule layer: usually `AGENTS.md` plus the relevant wiki concept/workflow page and `wiki/log.md`. Chat memory alone is not enough.
+
+## Multi-Agent Collaboration
+
+This project uses a multi-agent system coordinated via the Agent Hub MCP server (`D:\devtools\agent-hub\`).
+
+| Agent | Model | Role | Strengths |
+| --- | --- | --- | --- |
+| Codex | GPT-5.5 | Coordinator + fast executor | Speed, task decomposition, parallel subagents, wiki maintenance |
+| Opus | Claude 4.7 | Architect + deep coder | Long-context (1M), multi-file refactor, architecture, security |
+| Sonnet | Claude 4.6 | Assistant + verifier | Cost-effective review, test suggestions, documentation |
+| DeepSeek Pro | DeepSeek V4 | Cheap labor | Bulk text, translation, summarization, Chinese content |
+
+Communication between agents uses shared disk state at `D:\devtools\agent-hub\state\` via MCP tools: `hub_send_message`, `hub_read_messages`, `hub_set_context`, `hub_get_context`, `hub_route_task`, etc.
+
+For complex coding tasks, Opus and Codex work as equals. For routine work, Codex leads with Sonnet verifying. DeepSeek handles bulk/cheap tasks.
+
+Key capabilities:
+- **Real-time dispatch**: Daemon (port 9800) auto-dispatches urgent messages to agents
+- **Auto-retry cascade**: Opus → Sonnet → DeepSeek on failure
+- **Pipeline with gates**: Sequential multi-step workflows with human confirmation at critical steps
+- **Spec-driven parallel dispatch**: One spec, multiple agents, simultaneous execution
+- **Performance metrics**: Per-agent success/failure tracking at `D:\devtools\agent-hub\state\metrics.json`
+- **Warm context**: Daemon auto-scans project state every 5 minutes, agents read without rescanning
+
+All infrastructure starts automatically on boot (PixelCat + Daemon in `shell:startup`). User only opens Codex.
 
 ## Public And Private Boundary
 
