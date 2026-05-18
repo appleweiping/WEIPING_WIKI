@@ -105,6 +105,7 @@ When the user says future agents should remember a rule, do not leave it only in
 - Update `wiki/index.md` when a new public rule/workflow page is created.
 - Validate, commit, and push scoped durable-rule changes before ending the turn.
 - Prefer updating an existing rule page over creating a duplicate rule page.
+- **Auto-update documentation rule**: Whenever you change agent-hub code, skills, MCP config, startup scripts, agent roles, or any multi-agent infrastructure, you MUST update all relevant documentation files in the same turn. The user should never have to remind you to update docs. Affected files typically include: `CLAUDE.md`, `AGENTS.md`, `README.md`, `.claude/skills/README-skills-layout.md`, and `D:\devtools\agent-hub\README.md`.
 
 ## Codex Prompt Corpus And Automation Memory
 
@@ -322,22 +323,87 @@ For coding work, use the local Claude Code partners as a strict threshold-based 
 | Agent | Model | Primary role | May edit files | May commit/push |
 | --- | --- | --- | --- | --- |
 | Codex Coordinator | current Codex session | orchestration, integration, file edits, tests, staging, commits, pushes, wiki memory | yes | yes |
-| Opus Reviewer | `claude-opus-4-7` via `D:\cc\cc.cmd` | deep code review, complex reasoning, architecture, security/privacy, high-risk design calls | no | no |
-| Sonnet Scanner | `claude-sonnet-4-6` via `D:\cc\cc.cmd` | quick diff scans, test suggestions, doc/README reading, routine second-pass checks | no | no |
+| Opus Reviewer | `claude-opus-4-7` via `D:\devtools\cc.cmd` | deep code review, complex reasoning, architecture, security/privacy, high-risk design calls | no | no |
+| Sonnet Scanner | `claude-sonnet-4-6` via `D:\devtools\cc.cmd` | quick diff scans, test suggestions, doc/README reading, routine second-pass checks | no | no |
+| Haiku Speedster | `claude-haiku-4-5-20251001` via `D:\devtools\cc.cmd` | lint, formatting, quick classification, pre-screening, high-frequency small checks | no | no |
+
+### Agent Hub Collaboration Model
+
+For complex tasks, use the Agent Hub MCP server (`D:\devtools\agent-hub\`) to enable richer collaboration. The hub provides shared state, async messaging, and task routing across all agents.
+
+**Role assignments by task type:**
+
+| Task Type | Primary | Co-pilot | Verifier | Pre-screen | Cheap Labor |
+| --- | --- | --- | --- | --- | --- |
+| Complex refactor / architecture | Opus | Codex | Sonnet | — | — |
+| Short CLI / parallel batch coding | Codex | — | Sonnet | Haiku | — |
+| Security / privacy review | Opus | Codex | — | — | — |
+| Bulk text / translation / summarization | — | — | — | — | DeepSeek Pro |
+| Chinese content generation | — | — | — | — | DeepSeek Pro |
+| Documentation / test suggestions | Sonnet | — | — | Haiku | DeepSeek Pro (drafts) |
+| Long-context codebase analysis (1M) | Opus | — | Sonnet | — | — |
+| Fast iteration / debugging | Codex | Opus (escalation) | — | Haiku | — |
+| Lint / formatting / quick checks | Haiku | — | — | — | — |
+| Quality gate (auto-review pipeline) | — | — | Sonnet | Haiku (first pass) | — |
+
+**Collaboration patterns via Agent Hub:**
+
+- For complex coding: Codex decomposes task → sends architecture question to Opus via `hub_send_message` → Opus responds with design → Codex executes → Sonnet verifies
+- For bulk work: Codex or Opus sends batch prompts to DeepSeek via `deepseek_chat` → integrates results
+- For shared context: any agent writes current task state to `hub_set_context` → others read it without re-serializing full context
+- For routing decisions: any agent calls `hub_route_task` to get a recommendation on who should handle a subtask
+
+**When Opus and Codex work as equals (complex coding):**
+
+- Opus handles: architecture decisions, cross-module design, long-context analysis, security review
+- Codex handles: task decomposition, file-level execution, test running, commit/push, parallel subagents
+- Communication: via Agent Hub messages and shared context, not via cc.cmd (avoids cold-start overhead)
+- Either can initiate work; the user decides who leads based on the task shape
+
+**Daily startup requirement:**
+
+The Agent Hub daemon must be running for real-time collaboration. Location: `D:\devtools\agent-hub\start-daemon.cmd` (HTTP on port 9800). Without the daemon, agents can still use MCP tools for async messaging, but urgent auto-dispatch will not work.
+
+**Advanced collaboration features:**
+
+- **Agent Teams**: Claude Code has `CLAUDE_CODE_EXPERIMENTAL_AGENT_TEAMS=true` enabled. Opus can spawn multiple teammates for parallel work on different files/modules. Use for tasks with 3+ independent subtasks.
+- **Warm Context**: The daemon auto-scans project state every 5 minutes and writes to shared context (`project:vipin-wiki:branch`, `project:vipin-wiki:dirty_files`). Agents should call `hub_get_context` on startup instead of rescanning the repo.
+- **Spec-Driven Dispatch**: For complex multi-file tasks, use `hub_dispatch_spec` to write a spec with task assignments, then all agents receive their portion simultaneously. Each task specifies: title, description, assigned agent, files, and dependencies.
+- **Parallel workflow**: Codex decomposes → writes spec → calls `hub_dispatch_spec` → daemon auto-dispatches to Opus/Sonnet/DeepSeek → each agent works independently → results flow back via messages → Codex integrates.
+- **Auto-retry with fallback**: If Opus fails, daemon automatically retries with Sonnet; if Sonnet also fails, falls back to DeepSeek. Prioritizes model strengths: Opus → Sonnet → DeepSeek.
+- **Pipeline with gates**: Use `hub_pipeline` for sequential multi-step workflows. Set `require_confirmation_at` for steps that need human approval before proceeding. Codex will receive an urgent message when confirmation is needed.
+- **Metrics**: Call `hub_metrics` to see per-agent performance (dispatched/completed/failed/retried counts). Use this to identify which agents are reliable for which task types.
+
+**Pipeline example (Codex should use this pattern for complex tasks):**
+
+```
+hub_pipeline({
+  steps: [
+    { title: "Design architecture", agent: "claude", prompt: "Design the auth module..." },
+    { title: "Implement core", agent: "codex", prompt: "Implement based on design..." },
+    { title: "Write tests", agent: "sonnet", prompt: "Write tests for..." },
+    { title: "Security review", agent: "claude", prompt: "Review for vulnerabilities..." }
+  ],
+  require_confirmation_at: [1, 3]  // Human confirms before implementation and after security review
+})
+```
 
 Forced thresholds:
 
 - Invoke Opus for architecture decisions, cross-module or multi-file refactors, API/schema/data migration work, security/privacy-sensitive changes, hard debugging after a first failed pass, and high-risk final diff audits.
 - Invoke Sonnet for quick scans of low-risk diffs, test-gap suggestions, documentation reading/summarization, and routine "second set of eyes" checks.
+- Invoke Haiku for lint checks, formatting validation, quick classification, pre-screening before Sonnet/Opus review, and any high-frequency small task where speed matters more than depth.
+- Invoke DeepSeek Pro for translation, summarization, classification, bulk draft generation, and any task where cost matters more than depth.
 - If Opus and Sonnet triggers both match, Opus wins.
+- Escalate from Haiku to Sonnet when the task needs reasoning beyond simple pattern matching.
 - Escalate from Sonnet to Opus when the Sonnet output reports uncertainty, a possible blocker, cross-module reasoning, architectural tradeoffs, or security/privacy risk.
 - Lightweight exemptions are allowed only for spelling fixes, one-line comments, tiny wiki/log/catalog corrections that do not alter operating rules, pure formatting inspection with no behavioral impact, or when the user explicitly asks not to use a partner.
 
 Partner prompt contract:
 
-- Before any `cc` family call, run a PixelCat preflight: check whether `127.0.0.1:8990` is listening. If it is not listening, launch the visible PixelCat management panel from `D:\cc\pixelcat-app.exe`, wait briefly, and re-check the port before retrying `cc`.
+- Before any `cc` family call, run a PixelCat preflight: check whether `127.0.0.1:8990` is listening. If it is not listening, launch the visible PixelCat management panel from `D:\devtools\pixelcat-app.exe`, wait briefly, and re-check the port before retrying `cc`.
 - Every `cc` call must be non-interactive with `-p` and include a real context pack plus `AUTHORIZATION`, `ROLE`, `MODEL`, `REPO`, `SCOPE`, `QUESTION`, `CONSTRAINTS`, `OUTPUT FORMAT`, and `ESCALATION SIGNALS`.
-- For long or multi-line context packs, prefer piping the prompt into `D:\cc\cc.cmd -p --model ... --output-format text` through stdin. If the output is only a generic greeting/readiness line or otherwise does not answer the scoped question, treat the partner call as failed or unusable; retry with a better prompt path or state the limitation instead of counting it as a real review.
+- For long or multi-line context packs, prefer piping the prompt into `D:\devtools\cc.cmd -p --model ... --output-format text` through stdin. If the output is only a generic greeting/readiness line or otherwise does not answer the scoped question, treat the partner call as failed or unusable; retry with a better prompt path or state the limitation instead of counting it as a real review.
 - Constraints must state that the partner is read-only, must not edit files, must not run destructive commands, and must not handle credentials or live account actions.
 - Codex must independently verify partner claims against the live repository before editing, testing, staging, committing, or pushing.
 - If `cc` fails, hangs, returns unusable output, or PixelCat still cannot be started, Codex may continue without it, but must state the limitation when it materially affects risk or validation.
@@ -364,6 +430,7 @@ When the user asks for research ideas, paper positioning, method design, or proj
 - After structural, script, or website changes, make scoped commits by concern when practical and push to GitHub by default.
 - After wiki automations or scheduled/local crawl workflows create or update raw manifests, source pages, analysis pages, catalog files, logs, or indexes, validate the results, stage the scoped automation outputs, commit them, and push by default.
 - After periodic README refreshes, stage the README plus any required wiki/index/log/catalog updates, commit them as scoped maintenance, and push by default.
+- **After any agent-hub, skill, or multi-agent infrastructure changes**: update all affected documentation files (`CLAUDE.md`, `AGENTS.md`, `README.md`, `.claude/skills/README-skills-layout.md`, `D:\devtools\agent-hub\README.md`) to reflect the new state. Do not leave documentation stale after infrastructure changes.
 - If automation leaves files marked modified but `git diff`/hash checks show no real content changes, refresh the index or normalize the false dirty state instead of creating a meaningless commit, and report that there was no substantive diff to commit.
 - Keep commits scoped to the saved wiki work and its required index/log updates.
 - Do not stage unrelated local changes unless the user explicitly asks for them.
