@@ -11,6 +11,25 @@ The authoritative operating documents are:
 
 When these files overlap, follow the stricter and more structured interpretation.
 
+## Source of Truth Hierarchy
+
+```
+AGENTS.md                    ← canonical rules for ALL agents (wins all conflicts)
+  ├── .wiki-schema.md        ← content schema and confidence taxonomy
+  ├── purpose.md             ← research direction alignment
+  ├── WORKFLOWS.md           ← operational command vocabulary
+  └── Agent-specific adapters (may NOT contradict AGENTS.md):
+      ├── CLAUDE.md          ← Claude Code / Opus entry point
+      ├── .opencode/OPENCODE.md ← OpenCode entry point
+      └── .codex/ config     ← Codex MCP and skill config
+```
+
+Rules:
+- Agent-specific files adapt canonical policy to tool-specific behavior; they do not redefine it.
+- If any agent-specific file contradicts AGENTS.md, AGENTS.md wins.
+- Any change to agent behavior must update AGENTS.md first, then propagate to adapters in the same commit.
+- The unified CLI (`python scripts/wiki.py <command>`) is the canonical automation surface for all agents regardless of runtime.
+
 ## Mission
 
 Your job is to help compile knowledge into a persistent, interlinked markdown wiki that grows over time.
@@ -484,6 +503,29 @@ When the user asks for research ideas, paper positioning, method design, or proj
 - Be willing to recommend major changes to a project's thesis, method, protocol, or architecture when the evidence suggests the current framing is weak.
 - Preserve evidence discipline: radical ideas still need falsifiable claims, baselines, ablations, failure modes, and reviewer-grade objections.
 - Separate speculative invention from extracted project facts.
+
+## Automation Contract
+
+The canonical automation surface for all agents is:
+
+```
+python scripts/wiki.py <command> [--root <path>] [options]
+```
+
+| Command | Purpose | When to use |
+| --- | --- | --- |
+| `health` | Full health report (scale, tiers, metadata, lint, git, scripts) | Before major work, periodic checks |
+| `status` | Quick wiki status summary | Session startup |
+| `catalog` | Rebuild wiki/catalog.json | After page changes, before commit |
+| `lint` | Check broken links, orphans, leaks | Before push |
+| `search <query>` | Full-text search across wiki | Finding related pages |
+
+Rules:
+- All agents must use `python scripts/wiki.py` as the primary automation tool, regardless of whether they run on Windows, Linux, or CI.
+- PowerShell `.ps1` wrappers remain for backward compatibility but are thin pass-throughs to the Python layer.
+- Bash `.sh` scripts are deprecated for operational use; they exist only as CI convenience or historical reference.
+- Ingest scripts (`ingest-*.ps1`) are source-specific automation; they should call `wiki.py catalog` and `wiki.py lint` as validation gates before completing.
+- Before any bulk edit or ingest run, agents should run `wiki.py health` to confirm the working tree is clean and the catalog is fresh.
 
 ## Commit Policy
 
