@@ -75,6 +75,7 @@ This is the main catalog of the wiki.
 - [[feishu-material-access-workflow]] - API-first, browser-fallback workflow for connecting Feishu/Lark materials and shared forms to Codex.
 - [[readme-maintenance-workflow]] - Rule for periodically refreshing the root README as wiki structure and automation workflows evolve.
 - [[durable-agent-rule-memory]] - Rule that user-requested future-agent memories must be persisted into AGENTS/wiki rather than left only in chat.
+- [[codex-automation-model-policy]] - Hard rule that cron automations use `gpt-5.5` with high reasoning, not low or medium reasoning.
 - [[agent-collaboration-tone-and-model-roles]] - User-facing collaboration rule for warmer partner language, Codex parallel selves, Opus/Sonnet roles, and DeepSeek Pro/Flash preferences.
 - [[model-collaboration-context-and-reference-intake]] - Rule that partner handoffs and external reference searches must carry enough context and depth to be genuinely useful, not toy summaries.
 - [[local-cc-sidecar-agent-workflow]] - Strict three-role Codex + Claude Code partner workflow with PixelCat/CC health check, upstream-credential failure handling, and read-only Opus/Sonnet prompts.

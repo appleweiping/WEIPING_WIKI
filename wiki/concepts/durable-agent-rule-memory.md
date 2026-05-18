@@ -3,7 +3,7 @@ title: Durable Agent Rule Memory
 type: concept
 status: active
 created: 2026-05-17
-updated: 2026-05-17
+updated: 2026-05-18
 tags:
   - wiki-workflow
   - agent-memory
@@ -48,5 +48,6 @@ Do not answer "noted" or "I will remember" without writing the rule into a durab
 
 - [[agent-skill-installation-workflow]]
 - [[agent-collaboration-tone-and-model-roles]]
+- [[codex-automation-model-policy]]
 - [[local-cc-sidecar-agent-workflow]]
 - [[readme-maintenance-workflow]]

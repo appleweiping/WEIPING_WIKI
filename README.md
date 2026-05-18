@@ -158,6 +158,8 @@ When the CC family is unavailable, keep the collaboration shape by assigning the
 | **Automation** | A scheduled/local workflow changes wiki artifacts | Validated scoped commit and push of real changes |
 | **Site publish** | Public wiki needs deploying | Quartz build from `wiki/` through `site/` to GitHub Pages |
 
+Cron automations are high-intelligence by default: use `gpt-5.5` with `high` reasoning. Do not downgrade scheduled work to low or medium reasoning.
+
 ## Commands
 
 ### PowerShell (primary on Windows)

@@ -115,7 +115,7 @@ When ingesting local Codex prompts, treat user-authored prompts and automation p
 - Exclude short prompts, duplicate prompts, garbled/mojibake text, code/log/traceback/server dumps, pasted source files, secret-like material, and private/sensitive material.
 - Public prompt pages may include full selected prompt text only after filtering and safety checks.
 - Use stable IDs such as `codex-user-prompt:<hash>` and `codex-automation-prompt:<automation_id>`, plus `dedupe_key` and `semantic_hash`.
-- Automation models should remain `gpt-5.5` unless the user explicitly changes them.
+- Cron automations must use `model = "gpt-5.5"` and `reasoning_effort = "high"` by default. Do not create or update cron automations with `low`, `medium`, `minimal`, or weaker reasoning; treat the user's preference for high-intelligence automation as a hard rule. Heartbeat automations may not expose model/reasoning fields, so this rule applies where the automation schema supports them.
 - Local crawl/update automations should not be scheduled very early in the morning; prefer noon or afternoon because the user's computer may not be on early.
 
 ## Repository Structure

@@ -919,3 +919,17 @@ tags:
 - Notes:
   - Added the durable rule that when Opus/Sonnet/Haiku are blocked, their collaboration slots should default to Codex parallel selves / `分身`.
   - Clarified that DeepSeek Pro remains a separate optional partner for its own strengths, not the automatic replacement for every CC-family role.
+## [2026-05-18 13:45] query | automation model policy
+
+- Pages created or updated:
+  - [[codex-automation-model-policy]]
+  - [[durable-agent-rule-memory]]
+  - [[index]]
+  - [[log]]
+- Sources used:
+  - User instruction to reset all automations to GPT-5.5 high intelligence and preserve that as a future-agent hard rule.
+  - Local audit of `C:\Users\admin\.codex\automations`.
+- Notes:
+  - Updated seven cron automations from `low` or `medium` reasoning to `high` via the Codex app automation API.
+  - Verified all local cron automations now use `model = "gpt-5.5"` and `reasoning_effort = "high"`.
+  - Recorded that heartbeat automations may not expose model/reasoning fields and are not noncompliant solely for lacking them.

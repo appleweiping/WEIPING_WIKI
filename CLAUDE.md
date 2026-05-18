@@ -84,6 +84,10 @@ If it returns `upstream_credentials_disabled` or PixelCat HTTP 502 with `0/1` cr
 
 When the CC family is unavailable, Codex should preserve the collaboration structure by assigning the Opus/Sonnet/Haiku slots to Codex parallel selves / `分身` by default, with the limitation stated when missing CC review materially increases risk.
 
+## Automation Model Policy
+
+Cron automations must run on `gpt-5.5` with `high` reasoning. Do not create or update scheduled automations with low or medium reasoning. Heartbeat automations may not expose model/reasoning fields.
+
 ## For Complex Coding Tasks
 
 Opus and Codex work as equals:
