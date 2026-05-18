@@ -10,6 +10,19 @@ tags:
 
 # Log
 
+## [2026-05-18 10:10] ingest | Agent Hub MCP server and multi-agent upgrade
+
+- Pages created or updated:
+  - [[agent-hub-mcp-server]] (new concept page)
+  - `CLAUDE.md` (full rewrite: 5-agent system, 20 tools, quality gate, invoke methods)
+  - `AGENTS.md` (Haiku role, Agent Hub section, pipeline example, auto-retry, quality gate)
+  - `README.md` (multi-agent collaboration section)
+  - `.claude/skills/README-skills-layout.md` (agent-hub reference)
+  - `.claude/skills/lidang-perspective/` (new skill, nuwa-distilled)
+  - `.claude/settings.json` (Agent Teams enabled)
+- Source: Claude Code session, building on Codex architecture review
+- Notes: Renamed `D:\cc` to `D:\devtools`. All path references updated across 16+ files. Agent Hub provides 20 MCP tools for real-time collaboration. Daemon auto-starts on boot.
+
 ## [2026-05-18 01:44] analysis | multi-agent collaboration architecture review
 
 - Pages created or updated:

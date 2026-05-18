@@ -78,6 +78,7 @@ This is the main catalog of the wiki.
 - [[agent-collaboration-tone-and-model-roles]] - User-facing collaboration rule for warmer partner language, Codex parallel selves, Opus/Sonnet roles, and DeepSeek Pro/Flash preferences.
 - [[model-collaboration-context-and-reference-intake]] - Rule that partner handoffs and external reference searches must carry enough context and depth to be genuinely useful, not toy summaries.
 - [[local-cc-sidecar-agent-workflow]] - Strict three-role Codex + Claude Code partner workflow with PixelCat preflight: Codex coordinates/writes, Opus reviews deeply, and Sonnet scans low-risk diffs/docs.
+- [[agent-hub-mcp-server]] - Real-time multi-agent collaboration server (20 MCP tools): messaging, shared state, pipelines, quality gates, auto-retry cascade, and direct invocation of Sonnet/Haiku/GPT-5.5/DeepSeek.
 - [[agent-skill-installation-workflow]] - Durable rule for installing skills as usable tools: D-drive mirror, `.codex/skills` install, dependency setup, smoke tests, wiki docs, and scoped commit.
 - [[research-ideation-policy]] - Rule for ambitious research ideation: no shallow stitching, force novelty, and allow radical reframing.
 - [[research-project-workbench]] - Upper-level workbench route for analog-agent, Uncertainty/Pony-Rec, TRUCE-Rec, and TGL-Rec, including startup packets, claim gates, artifact boundaries, and collaboration priority.
