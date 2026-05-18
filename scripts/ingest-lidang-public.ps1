@@ -8,6 +8,9 @@ param(
 
 $ErrorActionPreference = "Stop"
 
+
+. (Join-Path $PSScriptRoot "Ingest-Common.ps1")
+
 $rootPath = (Resolve-Path $Root).Path
 $today = (Get-Date).ToString("yyyy-MM-dd")
 $now = (Get-Date).ToString("yyyy-MM-dd HH:mm")
@@ -25,53 +28,6 @@ $xMirrorUrls = @(
     "https://rattibha.com/lidangzzz",
     "https://twicopy.com/lidangzzz/"
 )
-
-function Read-TextFile([string]$Path) {
-    return [System.IO.File]::ReadAllText($Path, [System.Text.Encoding]::UTF8)
-}
-
-function Ensure-Dir([string]$Path) {
-    if (-not (Test-Path -LiteralPath $Path)) {
-        if (-not $DryRun) { New-Item -ItemType Directory -Force -Path $Path | Out-Null }
-    }
-}
-
-function ConvertTo-Slug([string]$Text) {
-    $slug = $Text.ToLowerInvariant() -replace '\.(md|html|htm|txt)$', ''
-    $slug = $slug -replace '^https?://', ''
-    $slug = $slug -replace '[^a-z0-9]+', '-'
-    $slug = $slug.Trim('-')
-    if ([string]::IsNullOrWhiteSpace($slug)) { return "item" }
-    return $slug
-}
-
-function Escape-Yaml([string]$Text) {
-    if ([string]::IsNullOrWhiteSpace($Text)) { return "" }
-    return (($Text -replace '"', '\"') -replace "(`r`n|`n|`r)", " ").Trim()
-}
-
-function Get-Sha256Text([string]$Text) {
-    $sha = [System.Security.Cryptography.SHA256]::Create()
-    try {
-        $bytes = [System.Text.Encoding]::UTF8.GetBytes($Text)
-        return (($sha.ComputeHash($bytes) | ForEach-Object { $_.ToString("x2") }) -join "")
-    }
-    finally {
-        $sha.Dispose()
-    }
-}
-
-function Write-TextIfChanged([string]$Path, [string]$Content) {
-    $normalized = $Content.TrimEnd() + "`n"
-    if ((Test-Path -LiteralPath $Path) -and ((Read-TextFile $Path) -eq $normalized)) {
-        return $false
-    }
-    if (-not $DryRun) {
-        Ensure-Dir (Split-Path -Parent $Path)
-        [System.IO.File]::WriteAllText($Path, $normalized, $utf8NoBom)
-    }
-    return $true
-}
 
 function Convert-ToRepoRelativePath([string]$Path) {
     $rootFull = [System.IO.Path]::GetFullPath($rootPath)
@@ -123,10 +79,6 @@ function Get-OldHash([hashtable]$OldById, [string]$Id) {
         if ($OldById[$Id].content_hash) { return $OldById[$Id].content_hash }
     }
     return ""
-}
-
-function Get-FirstSeen([hashtable]$OldById, [string]$Id) {
-    return Get-OldValue $OldById $Id "first_seen" $today
 }
 
 function Get-LastSeen([hashtable]$OldById, [string]$Id, [string]$SemanticHash) {
@@ -248,21 +200,6 @@ function Get-ImportanceScore([string]$SourceKind, [string]$Title, [string]$Categ
     if ($Title -match 'AI|agent|coding|manus|Georgia Tech|CS|master|doctor|math|university') { $score += 2 }
     if ($Category -match 'AI coding|Immigration|Career|governance|Controversial') { $score += 1 }
     return $score
-}
-
-function Convert-ToFrontmatterList([string[]]$Items) {
-    if ($null -eq $Items -or $Items.Count -eq 0) { return "  - lidang" }
-    return (($Items | Sort-Object -Unique | ForEach-Object { "  - $_" }) -join "`n")
-}
-
-function Convert-ToWikiAlias([string]$Text) {
-    if ([string]::IsNullOrWhiteSpace($Text)) { return "untitled" }
-    return (($Text -replace '[\[\]\|]', '') -replace '\s+', ' ').Trim()
-}
-
-function Add-OrReplaceIndexLine([string]$Text, [string]$Heading, [string]$Line) {
-    if ($Text -match [regex]::Escape($Line)) { return $Text }
-    return ($Text -replace "($Heading\s*)", "`$1`n$Line`n")
 }
 
 function Get-YtDlpCommand {

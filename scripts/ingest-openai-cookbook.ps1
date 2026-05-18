@@ -6,6 +6,9 @@ param(
 
 $ErrorActionPreference = "Stop"
 
+
+. (Join-Path $PSScriptRoot "Ingest-Common.ps1")
+
 $rootPath = (Resolve-Path $Root).Path
 $today = (Get-Date).ToString("yyyy-MM-dd")
 $now = (Get-Date).ToString("yyyy-MM-dd HH:mm")
@@ -14,33 +17,6 @@ $repoTreeUrl = "https://api.github.com/repos/openai/openai-cookbook/git/trees/ma
 $rawBase = "https://raw.githubusercontent.com/openai/openai-cookbook/main/"
 $githubBase = "https://github.com/openai/openai-cookbook/blob/main/"
 $utf8NoBom = New-Object System.Text.UTF8Encoding($false)
-
-function Read-TextFile([string]$Path) {
-    return [System.IO.File]::ReadAllText($Path, [System.Text.Encoding]::UTF8)
-}
-
-function Ensure-Dir([string]$Path) {
-    if (-not (Test-Path -LiteralPath $Path)) {
-        New-Item -ItemType Directory -Force -Path $Path | Out-Null
-    }
-}
-
-function ConvertTo-Slug([string]$Text) {
-    $slug = $Text.ToLowerInvariant() -replace '\.(ipynb|mdx|md)$', ''
-    $slug = $slug -replace '[^a-z0-9]+', '-'
-    return $slug.Trim('-')
-}
-
-function Get-Sha256Text([string]$Text) {
-    $sha = [System.Security.Cryptography.SHA256]::Create()
-    try {
-        $bytes = [System.Text.Encoding]::UTF8.GetBytes($Text)
-        return (($sha.ComputeHash($bytes) | ForEach-Object { $_.ToString("x2") }) -join "")
-    }
-    finally {
-        $sha.Dispose()
-    }
-}
 
 function Get-TitleFromPath([string]$CookbookPath) {
     $leaf = ($CookbookPath -split '/')[-1]
@@ -125,18 +101,6 @@ function Escape-WikiLinkSyntax([string]$Markdown) {
     $escaped = $Markdown -replace '\[\[', '&#91;&#91;' -replace '\]\]', '&#93;&#93;'
     $escaped = $escaped -replace '(?m)^(<{7}|={7}|>{7})', '`$1'
     return ($escaped -replace '(?m)[ \t]+$', '')
-}
-
-function Write-TextIfChanged([string]$Path, [string]$Content) {
-    $normalized = $Content.TrimEnd() + "`n"
-    if ((Test-Path -LiteralPath $Path) -and ((Read-TextFile $Path) -eq $normalized)) {
-        return $false
-    }
-    if (-not $DryRun) {
-        Ensure-Dir (Split-Path -Parent $Path)
-        [System.IO.File]::WriteAllText($Path, $normalized, $utf8NoBom)
-    }
-    return $true
 }
 
 $rawDir = Join-Path $rootPath "raw\openai-cookbook"

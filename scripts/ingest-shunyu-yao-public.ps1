@@ -8,6 +8,9 @@ param(
 
 $ErrorActionPreference = "Stop"
 
+
+. (Join-Path $PSScriptRoot "Ingest-Common.ps1")
+
 $rootPath = (Resolve-Path $Root).Path
 $today = (Get-Date).ToString("yyyy-MM-dd")
 $now = (Get-Date).ToString("yyyy-MM-dd HH:mm")
@@ -64,76 +67,6 @@ $people = @{
     }
 }
 
-function Read-TextFile([string]$Path) {
-    return [System.IO.File]::ReadAllText($Path, [System.Text.Encoding]::UTF8)
-}
-
-function Ensure-Dir([string]$Path) {
-    if (-not (Test-Path -LiteralPath $Path)) {
-        if (-not $DryRun) { New-Item -ItemType Directory -Force -Path $Path | Out-Null }
-    }
-}
-
-function Write-TextIfChanged([string]$Path, [string]$Content) {
-    $normalized = $Content.TrimEnd() + "`n"
-    if ((Test-Path -LiteralPath $Path) -and ((Read-TextFile $Path) -eq $normalized)) {
-        return $false
-    }
-    if (-not $DryRun) {
-        Ensure-Dir (Split-Path -Parent $Path)
-        [System.IO.File]::WriteAllText($Path, $normalized, $utf8NoBom)
-    }
-    return $true
-}
-
-function ConvertTo-Slug([string]$Text) {
-    $slug = $Text.ToLowerInvariant() -replace '\.(md|html|htm|pdf|txt)$', ''
-    $slug = $slug -replace '^https?://', ''
-    $slug = $slug -replace '[^a-z0-9]+', '-'
-    $slug = $slug.Trim('-')
-    if ([string]::IsNullOrWhiteSpace($slug)) { return "item" }
-    if ($slug.Length -gt 90) { return $slug.Substring(0, 90).Trim('-') }
-    return $slug
-}
-
-function Escape-Yaml([string]$Text) {
-    if ([string]::IsNullOrWhiteSpace($Text)) { return "" }
-    return (($Text -replace '"', '\"') -replace "(`r`n|`n|`r)", " ").Trim()
-}
-
-function Get-Sha256Text([string]$Text) {
-    $sha = [System.Security.Cryptography.SHA256]::Create()
-    try {
-        $bytes = [System.Text.Encoding]::UTF8.GetBytes($Text)
-        return (($sha.ComputeHash($bytes) | ForEach-Object { $_.ToString("x2") }) -join "")
-    }
-    finally {
-        $sha.Dispose()
-    }
-}
-
-function Get-WebHeaders([string]$Url, [hashtable]$Extra = $null) {
-    $headers = @{ "User-Agent" = $userAgent }
-    if ($Extra) {
-        foreach ($key in $Extra.Keys) { $headers[$key] = $Extra[$key] }
-    }
-    if ($githubToken -and $Url -match '^https://(api\.)?github\.com/') {
-        $headers["Authorization"] = "Bearer $githubToken"
-        $headers["X-GitHub-Api-Version"] = "2022-11-28"
-    }
-    return $headers
-}
-
-function Invoke-WebText([string]$Url) {
-    $headers = Get-WebHeaders $Url
-    return (Invoke-WebRequest -Uri $Url -Headers $headers -UseBasicParsing -TimeoutSec 90).Content
-}
-
-function Invoke-WebJson([string]$Url) {
-    $headers = Get-WebHeaders $Url
-    return Invoke-RestMethod -Uri $Url -Headers $headers -TimeoutSec 90
-}
-
 function Get-GitHubHtmlRepoNames([string]$Login, [System.Collections.Generic.List[string]]$Errors) {
     try {
         $html = Invoke-WebText "https://github.com/$Login`?tab=repositories"
@@ -155,21 +88,6 @@ function Get-PlainText([string]$Html) {
     $plain = $plain -replace '<[^>]+>', ' '
     $plain = [System.Net.WebUtility]::HtmlDecode($plain)
     return (($plain -replace '\s+', ' ').Trim())
-}
-
-function Get-PlainSummary([string]$Text, [int]$Limit = 420) {
-    if ([string]::IsNullOrWhiteSpace($Text)) { return "No source summary text was available during this crawl." }
-    $plain = $Text -replace '(?s)```.*?```', ' '
-    $plain = $plain -replace '(?s)<script.*?</script>', ' '
-    $plain = $plain -replace '(?s)<style.*?</style>', ' '
-    $plain = $plain -replace '<[^>]+>', ' '
-    $plain = [System.Net.WebUtility]::HtmlDecode($plain)
-    $plain = $plain -replace '[#*_>`|]', ' '
-    $plain = $plain -replace '\s+', ' '
-    $plain = $plain.Trim()
-    if ($plain.Length -gt $Limit) { return $plain.Substring(0, $Limit).Trim() + "..." }
-    if ($plain.Length -eq 0) { return "No source summary text was available during this crawl." }
-    return $plain
 }
 
 function Get-Links([string]$Html, [string]$BaseUrl) {
@@ -674,11 +592,6 @@ function Build-PersonCorpus([object]$Cfg) {
         error_count = $manifest.errors.Count
         manifest_path = $manifestPath
     }
-}
-
-function Convert-ToWikiAlias([string]$Text) {
-    if ([string]::IsNullOrWhiteSpace($Text)) { return "untitled" }
-    return (($Text -replace '[\[\]\|]', '') -replace '\s+', ' ').Trim()
 }
 
 function Group-Lines([object[]]$Entries, [string]$Field) {

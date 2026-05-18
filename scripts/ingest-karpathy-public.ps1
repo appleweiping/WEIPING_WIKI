@@ -6,6 +6,9 @@ param(
 
 $ErrorActionPreference = "Stop"
 
+
+. (Join-Path $PSScriptRoot "Ingest-Common.ps1")
+
 $rootPath = (Resolve-Path $Root).Path
 $today = (Get-Date).ToString("yyyy-MM-dd")
 $now = (Get-Date).ToString("yyyy-MM-dd HH:mm")
@@ -18,81 +21,6 @@ $homeUrl = "https://karpathy.ai/"
 $blogFeedUrl = "https://karpathy.github.io/feed.xml"
 $youtubeFeedUrl = "https://www.youtube.com/feeds/videos.xml?channel_id=UCXUPKJO5MZQN11PqgIvyuvQ"
 $tweetsUrl = "https://karpathy.ai/tweets.html"
-
-function Read-TextFile([string]$Path) {
-    return [System.IO.File]::ReadAllText($Path, [System.Text.Encoding]::UTF8)
-}
-
-function Ensure-Dir([string]$Path) {
-    if (-not (Test-Path -LiteralPath $Path)) {
-        if (-not $DryRun) { New-Item -ItemType Directory -Force -Path $Path | Out-Null }
-    }
-}
-
-function ConvertTo-Slug([string]$Text) {
-    $slug = $Text.ToLowerInvariant() -replace '\.(md|html|htm|ipynb|txt)$', ''
-    $slug = $slug -replace '[^a-z0-9]+', '-'
-    return $slug.Trim('-')
-}
-
-function Escape-Yaml([string]$Text) {
-    if ([string]::IsNullOrWhiteSpace($Text)) { return "" }
-    return (($Text -replace '"', '\"') -replace "(`r`n|`n|`r)", " ").Trim()
-}
-
-function Get-Sha256Text([string]$Text) {
-    $sha = [System.Security.Cryptography.SHA256]::Create()
-    try {
-        $bytes = [System.Text.Encoding]::UTF8.GetBytes($Text)
-        return (($sha.ComputeHash($bytes) | ForEach-Object { $_.ToString("x2") }) -join "")
-    }
-    finally {
-        $sha.Dispose()
-    }
-}
-
-function Write-TextIfChanged([string]$Path, [string]$Content) {
-    $normalized = $Content.TrimEnd() + "`n"
-    if ((Test-Path -LiteralPath $Path) -and ((Read-TextFile $Path) -eq $normalized)) {
-        return $false
-    }
-    if (-not $DryRun) {
-        Ensure-Dir (Split-Path -Parent $Path)
-        [System.IO.File]::WriteAllText($Path, $normalized, $utf8NoBom)
-    }
-    return $true
-}
-
-function Invoke-WebText([string]$Url) {
-    $headers = @{ "User-Agent" = "vipin-wiki-karpathy-ingest" }
-    return (Invoke-WebRequest -Uri $Url -Headers $headers -UseBasicParsing -TimeoutSec 90).Content
-}
-
-function Invoke-WebJson([string]$Url) {
-    $headers = @{ "User-Agent" = "vipin-wiki-karpathy-ingest" }
-    return Invoke-RestMethod -Uri $Url -Headers $headers -TimeoutSec 90
-}
-
-function Get-PlainSummary([string]$Text, [int]$Limit = 520) {
-    if ([string]::IsNullOrWhiteSpace($Text)) { return "No source summary text was available during this crawl." }
-    $plain = $Text -replace '(?s)```.*?```', ' '
-    $plain = $plain -replace '(?s)<script.*?</script>', ' '
-    $plain = $plain -replace '(?s)<style.*?</style>', ' '
-    $plain = $plain -replace '<[^>]+>', ' '
-    $plain = $plain -replace '&nbsp;', ' '
-    $plain = $plain -replace '&amp;', '&'
-    $plain = $plain -replace '&lt;', '<'
-    $plain = $plain -replace '&gt;', '>'
-    $plain = $plain -replace '(?m)^---.*?---\s*', ' '
-    $plain = $plain -replace '(?m)^#+\s*', ''
-    $plain = $plain -replace '\[[^\]]+\]\([^)]+\)', '$1'
-    $plain = $plain -replace '[#*_>`|]', ' '
-    $plain = $plain -replace '\s+', ' '
-    $plain = $plain.Trim()
-    if ($plain.Length -gt $Limit) { return $plain.Substring(0, $Limit).Trim() + "..." }
-    if ($plain.Length -eq 0) { return "No source summary text was available during this crawl." }
-    return $plain
-}
 
 function Get-CategoryInfo([string]$Name, [string]$Description, [string[]]$Paths) {
     $text = (($Name, $Description) + $Paths) -join " "
@@ -129,26 +57,11 @@ function Get-WhyItMatters([string]$Category) {
     return "This matters as part of Karpathy's broader pattern: compress hard technical systems into readable, inspectable, working artifacts."
 }
 
-function Get-FirstSeen([hashtable]$OldById, [string]$Id) {
-    if ($OldById.ContainsKey($Id) -and $OldById[$Id].first_seen) { return $OldById[$Id].first_seen }
-    return $today
-}
-
 function Get-LastChanged([hashtable]$OldById, [string]$Id, [string]$Hash) {
     if ($OldById.ContainsKey($Id) -and $OldById[$Id].content_hash -eq $Hash -and $OldById[$Id].last_changed) {
         return $OldById[$Id].last_changed
     }
     return $today
-}
-
-function Convert-ToFrontmatterList([string[]]$Items) {
-    if ($null -eq $Items -or $Items.Count -eq 0) { return "  - karpathy" }
-    return (($Items | Sort-Object -Unique | ForEach-Object { "  - $_" }) -join "`n")
-}
-
-function Convert-ToWikiAlias([string]$Text) {
-    if ([string]::IsNullOrWhiteSpace($Text)) { return "untitled" }
-    return (($Text -replace '[\[\]\|]', '') -replace '\s+', ' ').Trim()
 }
 
 function Get-RepoLocalPath([string]$RepoName) {
@@ -600,11 +513,6 @@ $extra
 - INFERRED: Full local preservation, when available, is for private/local use unless a license or explicit source policy makes public redistribution safe.
 - Do not treat this page as permission to republish unlicensed source text or code wholesale.
 "@
-}
-
-function Add-OrReplaceIndexLine([string]$Text, [string]$Heading, [string]$Line) {
-    if ($Text -match [regex]::Escape($Line)) { return $Text }
-    return ($Text -replace "($Heading\s*)", "`$1`n$Line`n")
 }
 
 $rawDir = Join-Path $rootPath "raw\karpathy-public"

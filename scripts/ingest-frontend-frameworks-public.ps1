@@ -8,112 +8,14 @@ param(
 
 $ErrorActionPreference = "Stop"
 
+
+. (Join-Path $PSScriptRoot "Ingest-Common.ps1")
+
 $rootPath = (Resolve-Path $Root).Path
 $today = (Get-Date).ToString("yyyy-MM-dd")
 $now = (Get-Date).ToString("yyyy-MM-dd HH:mm")
 $runStamp = (Get-Date).ToString("o")
 $utf8NoBom = New-Object System.Text.UTF8Encoding($false)
-
-function Read-TextFile([string]$Path) {
-    return [System.IO.File]::ReadAllText($Path, [System.Text.Encoding]::UTF8)
-}
-
-function Ensure-Dir([string]$Path) {
-    if (-not (Test-Path -LiteralPath $Path)) {
-        if (-not $DryRun) { New-Item -ItemType Directory -Force -Path $Path | Out-Null }
-    }
-}
-
-function Write-TextIfChanged([string]$Path, [string]$Content) {
-    $normalized = $Content.TrimEnd() + "`n"
-    if ((Test-Path -LiteralPath $Path) -and ((Read-TextFile $Path) -eq $normalized)) {
-        return $false
-    }
-    if (-not $DryRun) {
-        Ensure-Dir (Split-Path -Parent $Path)
-        [System.IO.File]::WriteAllText($Path, $normalized, $utf8NoBom)
-    }
-    return $true
-}
-
-function ConvertTo-Slug([string]$Text) {
-    $slug = $Text.ToLowerInvariant() -replace '[^a-z0-9]+', '-'
-    return $slug.Trim('-')
-}
-
-function Escape-Yaml([string]$Text) {
-    if ([string]::IsNullOrWhiteSpace($Text)) { return "" }
-    return (($Text -replace '"', '\"') -replace "(`r`n|`n|`r)", " ").Trim()
-}
-
-function Escape-WikiText([string]$Text) {
-    if ([string]::IsNullOrWhiteSpace($Text)) { return "" }
-    return (($Text -replace '\[\[', '&#91;&#91;') -replace '\]\]', '&#93;&#93;') -replace '(?m)^(<{7}|={7}|>{7})', '`$1'
-}
-
-function Get-Sha256Text([string]$Text) {
-    if ($null -eq $Text) { $Text = "" }
-    $sha = [System.Security.Cryptography.SHA256]::Create()
-    try {
-        $bytes = [System.Text.Encoding]::UTF8.GetBytes($Text)
-        return (($sha.ComputeHash($bytes) | ForEach-Object { $_.ToString("x2") }) -join "")
-    }
-    finally {
-        $sha.Dispose()
-    }
-}
-
-function Get-PlainSummary([string]$Text, [int]$Limit = 520) {
-    if ([string]::IsNullOrWhiteSpace($Text)) { return "No source summary text was available during this crawl." }
-    $plain = $Text -replace '(?s)```.*?```', ' '
-    $plain = $plain -replace '(?s)<script.*?</script>', ' '
-    $plain = $plain -replace '(?s)<style.*?</style>', ' '
-    $plain = $plain -replace '<[^>]+>', ' '
-    $plain = $plain -replace '&nbsp;', ' '
-    $plain = $plain -replace '&amp;', '&'
-    $plain = $plain -replace '&lt;', '<'
-    $plain = $plain -replace '&gt;', '>'
-    $plain = $plain -replace '(?m)^---.*?---\s*', ' '
-    $plain = $plain -replace '(?m)^#+\s*', ''
-    $plain = $plain -replace '\[[^\]]+\]\([^)]+\)', '$1'
-    $plain = $plain -replace '[#*_>`|]', ' '
-    $plain = $plain -replace '\s+', ' '
-    $plain = $plain.Trim()
-    if ($plain.Length -gt $Limit) { return $plain.Substring(0, $Limit).Trim() + "..." }
-    if ($plain.Length -eq 0) { return "No source summary text was available during this crawl." }
-    return $plain
-}
-
-function Get-ShortText([string]$Text, [int]$Limit = 220) {
-    $summary = Get-PlainSummary $Text $Limit
-    return Escape-WikiText $summary
-}
-
-function Convert-ToFrontmatterList([string[]]$Items) {
-    if ($null -eq $Items -or $Items.Count -eq 0) { return "  - frontend-frameworks" }
-    return (($Items | Where-Object { -not [string]::IsNullOrWhiteSpace($_) } | Sort-Object -Unique | ForEach-Object { "  - $_" }) -join "`n")
-}
-
-function Invoke-GitHubJson([string]$Url) {
-    $headers = @{
-        "User-Agent" = "vipin-wiki-frontend-frameworks-ingest"
-        "Accept" = "application/vnd.github+json"
-        "X-GitHub-Api-Version" = "2022-11-28"
-    }
-    $token = [Environment]::GetEnvironmentVariable("GITHUB_TOKEN", "Process")
-    if ([string]::IsNullOrWhiteSpace($token)) { $token = [Environment]::GetEnvironmentVariable("GH_TOKEN", "Process") }
-    if ([string]::IsNullOrWhiteSpace($token)) { $token = [Environment]::GetEnvironmentVariable("GITHUB_TOKEN", "User") }
-    if ([string]::IsNullOrWhiteSpace($token)) { $token = [Environment]::GetEnvironmentVariable("GH_TOKEN", "User") }
-    if (-not [string]::IsNullOrWhiteSpace($token)) { $headers["Authorization"] = "Bearer $token" }
-    return Invoke-RestMethod -Uri $Url -Headers $headers -TimeoutSec 90
-}
-
-function Convert-ToObjectArray([object]$Value) {
-    if ($null -eq $Value) { return @() }
-    if ($Value -is [System.Array]) { return @($Value) }
-    if ($Value.PSObject.Properties.Name -contains "items") { return @($Value.items) }
-    return @($Value)
-}
 
 function Invoke-GitHubText([string]$Url) {
     $headers = @{ "User-Agent" = "vipin-wiki-frontend-frameworks-ingest" }
@@ -272,15 +174,6 @@ function Get-PublicHandling([object]$Repo) {
 
 function Format-FrameworkLink([string]$Slug, [string]$Name) {
     return "[[entities/frontend-frameworks/$Slug|$Name]]"
-}
-
-function Add-OrReplaceIndexLine([string]$Text, [string]$Heading, [string]$Line) {
-    if ($Text -match [regex]::Escape($Line)) { return $Text }
-    $pattern = "(?m)^$([regex]::Escape($Heading))\s*$"
-    $match = [regex]::Match($Text, $pattern)
-    if (-not $match.Success) { return $Text.TrimEnd() + "`n`n$Heading`n`n$Line`n" }
-    $insertAt = $match.Index + $match.Length
-    return $Text.Insert($insertAt, "`n`n$Line")
 }
 
 function Set-GeneratedIndexSection([string]$Text, [string]$Content) {
