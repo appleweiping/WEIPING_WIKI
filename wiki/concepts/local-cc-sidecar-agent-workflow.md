@@ -85,7 +85,7 @@ Codex must not treat partner output as authority. It is advisory evidence that C
 | User explicitly asks for DeepSeek / `鲸鱼` | DeepSeek Pro by default | configured DeepSeek route when available | Do not search for a local binary unless the user asks for a CLI route. For local files, Codex gathers a compact read-only snapshot first. |
 | Architecture, cross-module, security/privacy, hard debugging, high-risk final review | Opus | `D:\devtools\cc.cmd` | Opus wins when Sonnet and Opus triggers both match. |
 | Low-risk diff scan, test-gap suggestion, documentation summary | Sonnet | `D:\devtools\cc.cmd` | Escalate to Opus if Sonnet reports uncertainty, blockers, or architectural/security risk. |
-| Partner unavailable or context cannot be safely shared | Codex-only with limitation stated | current Codex session | Continue only when the missing partner does not materially change the risk profile. |
+| Partner unavailable or context cannot be safely shared | Codex parallel selves / `分身` with limitation stated | current Codex session plus bounded Codex subagents when useful | Fill the CC-family collaboration slots with Codex-owned equivalents, keep scopes explicit, and state the limitation when missing CC review materially changes risk. |
 
 ## Forced Thresholds
 
@@ -221,8 +221,8 @@ If the task is software or project work, give the partner enough of the real con
 - Do not expose tokens, passwords, cookies, OAuth material, private chats, or sensitive personal data in prompts.
 - Do not delegate destructive commands, production changes, real account actions, payment actions, or credential handling.
 - User approval is still required for destructive operations or cross-repository edits, regardless of partner output.
-- If `cc` fails, hangs, returns unusable output, or the PixelCat panel/proxy is not running, fall back to Codex-only work and record the limitation when it materially affects risk or validation.
-- If the preflight reports `upstream_credentials_disabled`, fall back immediately and record that the CC family is blocked by PixelCat upstream credential/network state. Do not spend the user's time on prompt retries.
+- If `cc` fails, hangs, returns unusable output, or the PixelCat panel/proxy is not running, fill the CC-family collaboration slots with Codex parallel selves / `分身` and record the limitation when it materially affects risk or validation.
+- If the preflight reports `upstream_credentials_disabled`, fall back immediately to Codex parallel selves / `分身` for the Opus/Sonnet/Haiku slots and record that the CC family is blocked by PixelCat upstream credential/network state. Do not spend the user's time on prompt retries.
 - The limitation is material when the task would normally trigger Opus: architecture, security/privacy, cross-module changes, hard debugging, or high-risk final review.
 - When PixelCat is not running, try the PixelCat preflight launch procedure before falling back.
 

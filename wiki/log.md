@@ -907,3 +907,15 @@ tags:
   - Clarified the invariant that `cc.cmd` must keep calling PixelCat on `127.0.0.1:8990`; proxy ports such as `7897` are outbound exits only.
   - Added verification guidance: first prove the proxy changes public IP, then configure PixelCat outbound proxy, restart if needed, and rerun `scripts/Test-LocalCcPartner.ps1`.
   - Recorded that `429 Too Many Requests` is an upstream rate-limit/retry-exhaustion signal, not evidence that the local API address should be replaced.
+## [2026-05-18 13:31] query | CC-family fallback to Codex parallel selves
+
+- Pages created or updated:
+  - [[2026-05-18-pixelcat-cc-502-credentials-disabled-runbook]]
+  - [[local-cc-sidecar-agent-workflow]]
+  - [[log]]
+- Sources used:
+  - User instruction that future agents should remember to replace unavailable CC-family roles with Codex's `分身`.
+  - Current PixelCat/CC health-check state showing `upstream_credentials_disabled`.
+- Notes:
+  - Added the durable rule that when Opus/Sonnet/Haiku are blocked, their collaboration slots should default to Codex parallel selves / `分身`.
+  - Clarified that DeepSeek Pro remains a separate optional partner for its own strengths, not the automatic replacement for every CC-family role.

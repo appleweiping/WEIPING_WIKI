@@ -72,4 +72,4 @@ Before relying on Opus, Sonnet, or Haiku through Claude Code, run this from the 
 .\scripts\Test-LocalCcPartner.ps1
 ```
 
-If the status is `upstream_credentials_disabled`, PixelCat is open but its upstream credential pool is disabled. Fix the PixelCat panel account/network state first (credential state, TUN, or another IP/exit node), then rerun the health check. Do not diagnose this as a Claude Code skill-folder problem.
+If the status is `upstream_credentials_disabled`, PixelCat is open but its upstream credential pool is disabled. Fix the PixelCat panel account/network state first (credential state, TUN, PixelCat outbound proxy, or another IP/exit node), then rerun the health check. Do not diagnose this as a Claude Code skill-folder problem. While the CC family is unavailable, Codex should fill Opus/Sonnet/Haiku collaboration slots with Codex parallel selves / `分身` by default.

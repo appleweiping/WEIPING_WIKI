@@ -108,7 +108,7 @@ INFERRED: The desired routing shape is `cc.cmd -> PixelCat on 127.0.0.1:8990 -> 
 
 ## Agent Behavior
 
-Future agents should not keep retrying `cc.cmd` when the health check reports `upstream_credentials_disabled`. They should state the limitation, continue Codex-only when risk is acceptable, or use non-CC partners such as DeepSeek Pro when appropriate and available.
+Future agents should not keep retrying `cc.cmd` when the health check reports `upstream_credentials_disabled`. They should state the limitation and fill the Opus/Sonnet/Haiku collaboration slots with Codex parallel selves / `分身` by default when the task still benefits from parallel review or bounded exploration. DeepSeek Pro remains useful for translation, summarization, classification, and bulk drafts when appropriate and available, but it is not the automatic replacement for every CC-family role.
 
 Agent Hub has been patched so direct Sonnet/Haiku invocation and daemon Claude-family dispatch run a PixelCat upstream probe before waiting on `cc.cmd`.
 

@@ -82,6 +82,8 @@ Before assuming Opus/Sonnet/Haiku are usable, run the vipin wiki health check wh
 
 If it returns `upstream_credentials_disabled` or PixelCat HTTP 502 with `0/1` credentials, the CC family is blocked by PixelCat's upstream credential/network state. Fix PixelCat first (credential/account state, TUN, PixelCat outbound proxy, or another IP/exit node), then retry; do not treat it as a prompt or Claude Code installation failure. Keep Claude Code pointed at PixelCat's local API on `127.0.0.1:8990`; local proxy ports such as `7897` are outbound exits only.
 
+When the CC family is unavailable, Codex should preserve the collaboration structure by assigning the Opus/Sonnet/Haiku slots to Codex parallel selves / `分身` by default, with the limitation stated when missing CC review materially increases risk.
+
 ## For Complex Coding Tasks
 
 Opus and Codex work as equals:

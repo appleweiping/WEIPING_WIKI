@@ -130,6 +130,8 @@ Health check for the Claude Code partner path:
 
 `upstream_credentials_disabled` means PixelCat is running but ccmax/PixelCat has disabled every upstream credential currently available. Fix the PixelCat panel's account/network state, try TUN, a PixelCat outbound proxy, or another IP/exit node, then rerun the check before invoking Opus, Sonnet, or Haiku. Keep Claude Code pointed at PixelCat's local API on `127.0.0.1:8990`; proxy ports such as `7897` are outbound exits only.
 
+When the CC family is unavailable, keep the collaboration shape by assigning the Opus/Sonnet/Haiku slots to Codex parallel selves / `分身` by default, and note the missing CC review when it materially increases risk.
+
 ### 20 MCP Tools
 
 | Category | Tools |
