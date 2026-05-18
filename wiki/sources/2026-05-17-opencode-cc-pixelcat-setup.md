@@ -51,6 +51,17 @@ Tutorial references:
 - EXTRACTED: On 2026-05-18, `D:\devtools\cc.cmd --version` returned `2.1.143 (Claude Code)` and `D:\devtools\opencode.cmd --version` returned `1.15.3`.
 - EXTRACTED: On 2026-05-18, `scripts/Test-LocalCcPartner.ps1` confirmed the `cc` entrypoint and PixelCat port but reported `upstream_credentials_disabled` because a minimal `/v1/messages` probe returned HTTP 502 from PixelCat/ccmax with all upstream credentials disabled (`0/1`).
 
+## PixelCat Binary Refresh 2026-05-18
+
+- EXTRACTED: User downloaded `C:\Users\admin\Downloads\PixelCat-beta-1029da-Windows-x64.zip` at 2026-05-18 12:27.
+- EXTRACTED: The zip SHA256 was `BE91861C2CF1DCDDB28DB69559C18EF4EFC59E47B839E889A8371CA9583DEC37`.
+- EXTRACTED: The zip contained `pixelcat-app.exe` and `bundle/nsis/PixelCat_2026.5.18_x64-setup.exe`; only `pixelcat-app.exe` was extracted and installed.
+- EXTRACTED: Old `D:\devtools\pixelcat-app.exe` SHA256 was `459AD5803C3039A5E19CCBCC67EEEAB4DCCFFA6E0D28263B1E9BAB70BAED1F94`.
+- EXTRACTED: Old exe was backed up to `D:\devtools\pixelcat-app.exe.bak-20260518-123304`.
+- EXTRACTED: New installed `D:\devtools\pixelcat-app.exe` SHA256 is `912D3FBDBF0E8BD72C2DE78A6C59C3E47C48280254AEAEC61B29001F073C005E`.
+- EXTRACTED: After launching the refreshed binary, PixelCat listened on `127.0.0.1:8990`, but `scripts/Test-LocalCcPartner.ps1` still reported `upstream_credentials_disabled` with HTTP 502.
+- INFERRED: The binary replacement succeeded and did not break the local executable/port path, but it did not resolve the upstream credential/network failure.
+
 ## Operational Meaning
 
 INFERRED: The installation is usable as a local coding-agent runtime, not just a manually opened terminal tool, when PixelCat's upstream credentials are healthy. Future Codex sessions should call `D:\devtools\cc.cmd` directly for partner planning, review, debugging, and verification when the task merits multi-agent collaboration.

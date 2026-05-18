@@ -865,3 +865,16 @@ tags:
   - Updated Agent Hub and collaboration docs so Opus/Sonnet/Haiku calls fall back quickly and record a clear limitation when the CC family is unavailable.
   - Cleaned the related wiki lint gaps by indexing the collaboration-context source note and adding counterpoint/gap sections to current multi-agent pages.
   - Corrected stale `D:\cc` references in current runbooks to the live `D:\devtools` runtime while preserving historical log context.
+## [2026-05-18 12:34] query | PixelCat binary refresh check
+
+- Pages created or updated:
+  - [[2026-05-17-opencode-cc-pixelcat-setup]]
+  - [[2026-05-18-pixelcat-cc-502-credentials-disabled-runbook]]
+  - [[log]]
+- Sources used:
+  - User-provided instruction to replace the old PixelCat binary with the freshly downloaded `PixelCat-beta-1029da-Windows-x64.zip`.
+  - Local replacement and health-check outputs.
+- Notes:
+  - Replaced only `D:\devtools\pixelcat-app.exe`, backed up the old executable, and left PixelCat config/credentials and other Agent Hub files untouched.
+  - Confirmed the refreshed binary starts and listens on `127.0.0.1:8990`.
+  - Confirmed the remaining failure is still PixelCat/ccmax upstream credential state: `upstream_credentials_disabled` with HTTP 502.

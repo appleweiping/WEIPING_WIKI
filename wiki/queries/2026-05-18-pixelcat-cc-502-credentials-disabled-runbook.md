@@ -50,6 +50,14 @@ For `upstream_credentials_disabled`:
 4. Rerun `.\scripts\Test-LocalCcPartner.ps1`.
 5. Only after `api_ok`, retry Opus/Sonnet/Haiku partner calls.
 
+## 2026-05-18 Binary Refresh Result
+
+EXTRACTED: Replacing `D:\devtools\pixelcat-app.exe` with the 2026-05-18 `PixelCat-beta-1029da-Windows-x64.zip` binary succeeded and kept the port path alive.
+
+EXTRACTED: The post-refresh health check still returned `upstream_credentials_disabled` with HTTP 502.
+
+INFERRED: When this exact status persists after a binary refresh, the remaining blocker is upstream credential/account/network state rather than the local PixelCat executable.
+
 ## Agent Behavior
 
 Future agents should not keep retrying `cc.cmd` when the health check reports `upstream_credentials_disabled`. They should state the limitation, continue Codex-only when risk is acceptable, or use non-CC partners such as DeepSeek Pro when appropriate and available.
