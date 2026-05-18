@@ -3,7 +3,7 @@ title: "Run Colab"
 type: source
 status: mirrored
 created: 2026-05-15
-updated: 2026-05-15
+updated: 2026-05-18
 tags:
   - article
   - cookbook
@@ -37,7 +37,7 @@ source_pages:
 
 ## Summary
 
-$1](https://colab.research.google.com/github/openai/openai-cookbook/blob/main/articles/gpt-oss/run-colab.ipynb) Run OpenAI gpt-oss 20B in a FREE Google Colab OpenAI released gpt-oss $1 and $1. Both models are Apache 2.0 licensed. Specifically, gpt-oss-20b was made for lower latency and local or specialized use cases (21B parameters with 3.6B active parameter...
+![Open in Colab](https://colab.research.google.com/github/openai/openai-cookbook/blob/main/articles/gpt-oss/run-colab.ipynb) Run OpenAI gpt-oss 20B in a FREE Google Colab OpenAI released gpt-oss 120B and 20B. Both models are Apache 2.0 licensed. Specifically, gpt-oss-20b was made for lower latency and local or specialized use cases (21B parameters with 3.6B...
 
 ## What This Teaches
 

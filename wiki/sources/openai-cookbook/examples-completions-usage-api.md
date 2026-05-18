@@ -3,7 +3,7 @@ title: "Completions Usage Api"
 type: source
 status: mirrored
 created: 2026-05-15
-updated: 2026-05-15
+updated: 2026-05-18
 tags:
   - cookbook
   - example
@@ -36,7 +36,7 @@ source_pages:
 
 ## Summary
 
-OpenAI Completions Usage API Extended Example For most of our users, the $1 are sufficient. However, if you need more detailed data or a custom dashboard, you can use the Completions Usage API. This notebook demonstrates how to retrieve and visualize usage data from the OpenAI Completions Usage API and Costs API. We'll: - Call the API to get completions usag...
+OpenAI Completions Usage API Extended Example For most of our users, the default usage and cost dashboards are sufficient. However, if you need more detailed data or a custom dashboard, you can use the Completions Usage API. This notebook demonstrates how to retrieve and visualize usage data from the OpenAI Completions Usage API and Costs API. We'll: - Call...
 
 ## What This Teaches
 

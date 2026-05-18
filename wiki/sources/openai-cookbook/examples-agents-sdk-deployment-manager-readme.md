@@ -3,10 +3,10 @@ title: "Readme"
 type: source
 status: mirrored
 created: 2026-05-15
-updated: 2026-05-15
+updated: 2026-05-18
 tags:
-  - agents
   - agent-workflows
+  - agents
   - cookbook
   - example
   - markdown-source
@@ -38,7 +38,7 @@ source_pages:
 
 ## Summary
 
-Agents SDK Deployment Manager Local control-plane app for running and observing Agents SDK demo projects. Prerequisites - uv - npm - Docker, when using the default local-docker target Run Open: Vite builds the React UI from frontend/ into dist/ , and the Flask backend serves dist/ plus /api/ . Screenshots Deployments !$1 App details !$1 Traces !$1 Scope - Im...
+Agents SDK Deployment Manager Local control-plane app for running and observing Agents SDK demo projects. Prerequisites - uv - npm - Docker, when using the default local-docker target Run Open: Vite builds the React UI from frontend/ into dist/ , and the Flask backend serves dist/ plus /api/ . Screenshots Deployments !Deployments App details !App details Tra...
 
 ## What This Teaches
 

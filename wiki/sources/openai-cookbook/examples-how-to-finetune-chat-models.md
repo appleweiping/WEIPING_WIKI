@@ -3,7 +3,7 @@ title: "How To Finetune Chat Models"
 type: source
 status: mirrored
 created: 2026-05-15
-updated: 2026-05-15
+updated: 2026-05-18
 tags:
   - cookbook
   - example
@@ -37,7 +37,7 @@ source_pages:
 
 ## Summary
 
-How to fine-tune chat models Fine-tuning improves the model by training on many more examples than can fit in a prompt, letting you achieve better results on a wide number of tasks. This notebook provides a step-by-step guide for our new GPT-4o mini fine-tuning. We'll perform entity extraction using the $1, which provides various recipes and a list of extrac...
+How to fine-tune chat models Fine-tuning improves the model by training on many more examples than can fit in a prompt, letting you achieve better results on a wide number of tasks. This notebook provides a step-by-step guide for our new GPT-4o mini fine-tuning. We'll perform entity extraction using the RecipeNLG dataset, which provides various recipes and a...
 
 ## What This Teaches
 

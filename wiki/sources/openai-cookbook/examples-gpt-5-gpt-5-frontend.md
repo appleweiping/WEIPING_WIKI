@@ -3,7 +3,7 @@ title: "Gpt 5 Frontend"
 type: source
 status: mirrored
 created: 2026-05-15
-updated: 2026-05-15
+updated: 2026-05-18
 tags:
   - cookbook
   - example

@@ -3,7 +3,7 @@ title: "Developing Hallucination Guardrails"
 type: source
 status: mirrored
 created: 2026-05-15
-updated: 2026-05-15
+updated: 2026-05-18
 tags:
   - cookbook
   - example
@@ -36,7 +36,7 @@ source_pages:
 
 ## Summary
 
-Developing Hallucination Guardrails A guardrail is a set of rules and checks designed to ensure that the outputs of an LLM are accurate, appropriate, and aligned with user expectations. For more additional information on developing guardrails, you can refer to this $1. In this notebook, we'll walk through the process of developing an output guardrail that sp...
+Developing Hallucination Guardrails A guardrail is a set of rules and checks designed to ensure that the outputs of an LLM are accurate, appropriate, and aligned with user expectations. For more additional information on developing guardrails, you can refer to this guide on developing guardrails. In this notebook, we'll walk through the process of developing...
 
 ## What This Teaches
 

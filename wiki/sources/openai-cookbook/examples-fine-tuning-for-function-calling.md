@@ -3,7 +3,7 @@ title: "Fine Tuning For Function Calling"
 type: source
 status: mirrored
 created: 2026-05-15
-updated: 2026-05-15
+updated: 2026-05-18
 tags:
   - cookbook
   - example
@@ -37,7 +37,7 @@ source_pages:
 
 ## Summary
 
-Fine tuning with function-calling This notebook covers how to fine-tune to increase function calling accuracy and reliability. You can find more information on function calling $1, and on fine tuning $1 For context, from the function calling notebook above: tools is an optional parameter in the Chat Completion API which can be used to provide function specif...
+Fine tuning with function-calling This notebook covers how to fine-tune to increase function calling accuracy and reliability. You can find more information on function calling here, and on fine tuning here For context, from the function calling notebook above: tools is an optional parameter in the Chat Completion API which can be used to provide function sp...
 
 ## What This Teaches
 

@@ -3,7 +3,7 @@ title: "Search Reranking With Cross Encoders"
 type: source
 status: mirrored
 created: 2026-05-15
-updated: 2026-05-15
+updated: 2026-05-18
 tags:
   - cookbook
   - example
@@ -38,7 +38,7 @@ source_pages:
 
 ## Summary
 
-Search reranking with cross-encoders This notebook takes you through examples of using a cross-encoder to re-rank search results. This is a common use case with our customers, where you've implemented semantic search using embeddings (produced using a $1) but the results are not as accurate as your use case requires. A possible cause is that there is some bu...
+Search reranking with cross-encoders This notebook takes you through examples of using a cross-encoder to re-rank search results. This is a common use case with our customers, where you've implemented semantic search using embeddings (produced using a bi-encoder) but the results are not as accurate as your use case requires. A possible cause is that there is...
 
 ## What This Teaches
 

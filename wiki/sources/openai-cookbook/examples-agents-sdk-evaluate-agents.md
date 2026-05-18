@@ -3,10 +3,10 @@ title: "Evaluate Agents"
 type: source
 status: mirrored
 created: 2026-05-15
-updated: 2026-05-15
+updated: 2026-05-18
 tags:
-  - agents
   - agent-workflows
+  - agents
   - cookbook
   - example
   - notebook
@@ -38,7 +38,7 @@ source_pages:
 
 ## Summary
 
-Evaluating Agents with Langfuse In this cookbook, we will learn how to monitor the internal steps (traces) of the $1 and evaluate its performance using $1. This guide covers online and offline evaluation metrics used by teams to bring agents to production fast and reliably. To learn more about evaluation strategies, check out this $1. Why AI agent Evaluation...
+Evaluating Agents with Langfuse In this cookbook, we will learn how to monitor the internal steps (traces) of the OpenAI agent SDK and evaluate its performance using Langfuse. This guide covers online and offline evaluation metrics used by teams to bring agents to production fast and reliably. To learn more about evaluation strategies, check out this blog po...
 
 ## What This Teaches
 

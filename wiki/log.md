@@ -933,3 +933,36 @@ tags:
   - Updated seven cron automations from `low` or `medium` reasoning to `high` via the Codex app automation API.
   - Verified all local cron automations now use `model = "gpt-5.5"` and `reasoning_effort = "high"`.
   - Recorded that heartbeat automations may not expose model/reasoning fields and are not noncompliant solely for lacking them.
+## [2026-05-18 14:09] ingest | openai cookbook mirror
+
+- Pages created or updated:
+  - [[openai-cookbook]]
+  - [[2026-05-15-openai-cookbook]]
+  - [[openai-cookbook-taxonomy]]
+  - `wiki/sources/openai-cookbook/`
+- Sources used:
+  - https://developers.openai.com/cookbook
+  - https://github.com/openai/openai-cookbook
+- Notes:
+  - Mirrored 235 Cookbook article/example pages.
+  - New manifest entries this run: 0.
+  - Changed source hashes this run: 0.
+  - Manifest stored at `raw/openai-cookbook/manifest.json`.
+## [2026-05-18 14:12] lint | automation outputs and mattpocock skill audit
+
+- Pages created or updated:
+  - [[mattpocock-skills]]
+  - [[2026-05-16-skill-source-repository-trace]]
+  - [[log]]
+- Sources used:
+  - Current workspace diff for Shunyu Yao automation outputs.
+  - Current workspace diff for OpenAI Cookbook mirror automation outputs.
+  - `raw/lidang-public/inbox/2026-05-18-light.json`.
+  - `.claude/skills/mattpocock-skills`.
+  - `scripts/Test-LocalCcPartner.ps1`.
+- Notes:
+  - Audited the Shunyu Yao automation changes as conservative maintenance: failed crawls now preserve previous manifest entries and record crawl errors without inventing new facts.
+  - Audited the OpenAI Cookbook mirror refresh as source-preserving maintenance: 235 entries remain, no URLs were added or removed, and the page count matches the manifest.
+  - Audited the new Lidang light capture as public-safe failed-crawl evidence with one metadata-only X profile probe and no private-path leak.
+  - Audited the Matt Pocock Claude skill install as MIT-licensed, provenance-matched, and secret-scan clean; nested `.git` metadata was moved to ignored `.wiki-tmp` backup so the skill can be committed as normal source files.
+  - Confirmed CC-family partners are still blocked by PixelCat `upstream_credentials_disabled`, so this review used Codex-side verification rather than a real Opus/Sonnet pass.

@@ -3,7 +3,7 @@ title: "Chat Finetuning Data Prep"
 type: source
 status: mirrored
 created: 2026-05-15
-updated: 2026-05-15
+updated: 2026-05-18
 tags:
   - cookbook
   - example
@@ -37,7 +37,7 @@ source_pages:
 
 ## Summary
 
-Data preparation and analysis for chat model fine-tuning This notebook serves as a tool to preprocess and analyze the chat dataset used for fine-tuning a chat model. It checks for format errors, provides basic statistics, and estimates token counts for fine-tuning costs. The method shown here corresponds to the $1 for gpt-3.5-turbo. See $1 for models like ba...
+Data preparation and analysis for chat model fine-tuning This notebook serves as a tool to preprocess and analyze the chat dataset used for fine-tuning a chat model. It checks for format errors, provides basic statistics, and estimates token counts for fine-tuning costs. The method shown here corresponds to the current fine-tuning method for gpt-3.5-turbo. S...
 
 ## What This Teaches
 

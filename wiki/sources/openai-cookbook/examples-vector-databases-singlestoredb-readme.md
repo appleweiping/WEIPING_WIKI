@@ -3,7 +3,7 @@ title: "Readme"
 type: source
 status: mirrored
 created: 2026-05-15
-updated: 2026-05-15
+updated: 2026-05-18
 tags:
   - cookbook
   - example
@@ -38,7 +38,7 @@ source_pages:
 
 ## Summary
 
-$1 has first-class support for vector search through our $1. Our vector database subsystem, first made available in 2017 and subsequently enhanced, allows extremely fast nearest-neighbor search to find objects that are semantically similar, easily using SQL. SingleStoreDB supports vectors and vector similarity search using dot product (for cosine similarity)...
+SingleStoreDB has first-class support for vector search through our Vector Functions. Our vector database subsystem, first made available in 2017 and subsequently enhanced, allows extremely fast nearest-neighbor search to find objects that are semantically similar, easily using SQL. SingleStoreDB supports vectors and vector similarity search using dot produc...
 
 ## What This Teaches
 

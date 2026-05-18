@@ -3,7 +3,7 @@ title: "Realtime Out Of Band Transcription"
 type: source
 status: mirrored
 created: 2026-05-15
-updated: 2026-05-15
+updated: 2026-05-18
 tags:
   - cookbook
   - example
@@ -38,7 +38,7 @@ source_pages:
 
 ## Summary
 
-Transcribing User Audio with a Separate Realtime Request Purpose : This notebook demonstrates how to use the Realtime model itself to accurately transcribe user audio out-of-band using the same websocket session connection, avoiding errors and inconsistencies common when relying on a separate transcription model (gpt-4o-transcribe/whisper-1). We call this $1...
+Transcribing User Audio with a Separate Realtime Request Purpose : This notebook demonstrates how to use the Realtime model itself to accurately transcribe user audio out-of-band using the same websocket session connection, avoiding errors and inconsistencies common when relying on a separate transcription model (gpt-4o-transcribe/whisper-1). We call this ou...
 
 ## What This Teaches
 

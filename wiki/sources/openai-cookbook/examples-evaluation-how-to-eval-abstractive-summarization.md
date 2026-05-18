@@ -3,7 +3,7 @@ title: "How To Eval Abstractive Summarization"
 type: source
 status: mirrored
 created: 2026-05-15
-updated: 2026-05-15
+updated: 2026-05-18
 tags:
   - cookbook
   - evals
@@ -38,7 +38,7 @@ source_pages:
 
 ## Summary
 
-How to evaluate a summarization task In this notebook we delve into the evaluation techniques for abstractive summarization tasks using a simple example. We explore traditional evaluation methods like $1 and $1, in addition to showcasing a more novel approach using LLMs as evaluators. Evaluating the quality of summaries is a time-consuming process, as it inv...
+How to evaluate a summarization task In this notebook we delve into the evaluation techniques for abstractive summarization tasks using a simple example. We explore traditional evaluation methods like ROUGE and BERTScore, in addition to showcasing a more novel approach using LLMs as evaluators. Evaluating the quality of summaries is a time-consuming process,...
 
 ## What This Teaches
 

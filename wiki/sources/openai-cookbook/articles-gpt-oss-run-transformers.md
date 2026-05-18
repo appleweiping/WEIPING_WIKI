@@ -3,7 +3,7 @@ title: "Run Transformers"
 type: source
 status: mirrored
 created: 2026-05-15
-updated: 2026-05-15
+updated: 2026-05-18
 tags:
   - article
   - cookbook
@@ -37,7 +37,7 @@ source_pages:
 
 ## Summary
 
-How to run gpt-oss with Hugging Face Transformers The Transformers library by Hugging Face provides a flexible way to load and run large language models locally or on a server. This guide will walk you through running $1 or $1 using Transformers, either with a high-level pipeline or via low-level generate calls with raw token IDs. We'll cover the use of $1 o...
+How to run gpt-oss with Hugging Face Transformers The Transformers library by Hugging Face provides a flexible way to load and run large language models locally or on a server. This guide will walk you through running OpenAI gpt-oss-20b or OpenAI gpt-oss-120b using Transformers, either with a high-level pipeline or via low-level generate calls with raw token...
 
 ## What This Teaches
 

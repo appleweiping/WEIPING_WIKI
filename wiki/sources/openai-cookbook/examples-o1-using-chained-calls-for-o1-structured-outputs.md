@@ -3,7 +3,7 @@ title: "Using Chained Calls For O1 Structured Outputs"
 type: source
 status: mirrored
 created: 2026-05-15
-updated: 2026-05-15
+updated: 2026-05-18
 tags:
   - cookbook
   - example
@@ -38,7 +38,7 @@ source_pages:
 
 ## Summary
 
-Using chained calls for reasoning structured outputs The initially released versions (September 2024) of $1 reasoning models have advanced capabilities but do not have $1 support. This means that requests with o1 don't have reliable type-safety and rely on the prompt itself to return a useful JSON. In this guide, we'll explore two methods to prompt o1 models...
+Using chained calls for reasoning structured outputs The initially released versions (September 2024) of o1 reasoning models have advanced capabilities but do not have structured outputs support. This means that requests with o1 don't have reliable type-safety and rely on the prompt itself to return a useful JSON. In this guide, we'll explore two methods to...
 
 ## What This Teaches
 

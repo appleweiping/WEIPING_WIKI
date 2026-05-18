@@ -3,7 +3,7 @@ title: "Neon Postgres Vector Search Pgvector"
 type: source
 status: mirrored
 created: 2026-05-15
-updated: 2026-05-15
+updated: 2026-05-18
 tags:
   - cookbook
   - example
@@ -38,7 +38,7 @@ source_pages:
 
 ## Summary
 
-Vector similarity search using Neon Postgres This notebook guides you through using $1 as a vector database for OpenAI embeddings. It demonstrates how to: 1. Use embeddings created by OpenAI API. 2. Store embeddings in a Neon Serverless Postgres database. 3. Convert a raw text query to an embedding with OpenAI API. 4. Use Neon with the pgvector extension to...
+Vector similarity search using Neon Postgres This notebook guides you through using Neon Serverless Postgres as a vector database for OpenAI embeddings. It demonstrates how to: 1. Use embeddings created by OpenAI API. 2. Store embeddings in a Neon Serverless Postgres database. 3. Convert a raw text query to an embedding with OpenAI API. 4. Use Neon with the...
 
 ## What This Teaches
 

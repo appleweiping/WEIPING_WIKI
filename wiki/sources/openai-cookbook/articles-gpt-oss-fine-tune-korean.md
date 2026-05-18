@@ -3,7 +3,7 @@ title: "Fine Tune Korean"
 type: source
 status: mirrored
 created: 2026-05-15
-updated: 2026-05-15
+updated: 2026-05-18
 tags:
   - article
   - cookbook
@@ -37,7 +37,7 @@ source_pages:
 
 ## Summary
 
-이 노트북은 OpenAI의 gpt-oss (open‑weight) 모델을 한국 뉴스 문체 + 최신 대화체 로 세밀 튜닝하는 방법을 한국어/영어 이중 언어 로 제공합니다. This notebook shows how to fine‑tune OpenAI's gpt-oss (open‑weight) models for Korean news style + modern chat tone , in Korean & English . --- MXFP4 workflow clarifications · MXFP4 워크플로 정리 EN: - Training or fine-tuning directly in MXFP4 is not supported by public...
+이 노트북은 OpenAI의 gpt-oss (open‑weight) 모델을 한국 뉴스 문체 + 최신 대화체 로 세밀 튜닝하는 방법을 한국어/영어 이중 언어 로 제공합니다. This notebook shows how to fine‑tune OpenAI's gpt-oss (open‑weight) models for Korean news style + modern chat tone , in Korean & English . LoRA targets (MoE) · LoRA 타깃(MoE 포함) EN: - Minimal config (fast, low VRAM): target attention only, e.g. ["q proj","v proj"] ....
 
 ## What This Teaches
 

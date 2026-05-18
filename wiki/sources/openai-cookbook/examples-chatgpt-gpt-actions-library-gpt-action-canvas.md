@@ -3,7 +3,7 @@ title: "Gpt Action Canvas"
 type: source
 status: mirrored
 created: 2026-05-15
-updated: 2026-05-15
+updated: 2026-05-18
 tags:
   - chatgpt
   - cookbook
@@ -38,7 +38,7 @@ source_pages:
 
 ## Summary
 
-Canvas LMS Cookbook Table of Contents 1. $1 - Overview of Canvas LMS, its functionality, and the role of ChatGPT's Custom Actions to enhance educational experiences through AI integration. 2. $1 - Explanation of authentication methods (OAuth and User Generated Access Tokens) for connecting ChatGPT to Canvas, with detailed instructions for setting up each opt...
+Canvas LMS Cookbook Table of Contents 1. General App Information - Overview of Canvas LMS, its functionality, and the role of ChatGPT's Custom Actions to enhance educational experiences through AI integration. 2. Authentication from ChatGPT to Canvas - Explanation of authentication methods (OAuth and User Generated Access Tokens) for connecting ChatGPT to Ca...
 
 ## What This Teaches
 

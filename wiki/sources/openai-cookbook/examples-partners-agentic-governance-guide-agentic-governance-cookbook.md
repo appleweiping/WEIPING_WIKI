@@ -3,7 +3,7 @@ title: "Agentic Governance Cookbook"
 type: source
 status: mirrored
 created: 2026-05-15
-updated: 2026-05-15
+updated: 2026-05-18
 tags:
   - cookbook
   - example
@@ -37,7 +37,7 @@ source_pages:
 
 ## Summary
 
-Building Governed AI Agents: A Practical Guide to Agentic Scaffolding A cookbook for enabling safe, scalable AI agent adoption in your organization --- The Shift in Mindset Every enterprise faces the same tension: the pressure to adopt AI is immense, but so is the fear of getting it wrong. Teams want to build, legal wants to review, security wants to audit,...
+Building Governed AI Agents: A Practical Guide to Agentic Scaffolding A cookbook for enabling safe, scalable AI agent adoption in your organization What We'll Build We'll create a Private Equity firm AI assistant with: 1. Multiple specialist agents that handle different domains 2. A triage agent that routes queries via handoffs 3. Built-in guardrails that va...
 
 ## What This Teaches
 

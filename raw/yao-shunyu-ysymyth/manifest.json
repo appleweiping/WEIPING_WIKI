@@ -11,7 +11,9 @@
     "changed_entries_this_run":  0,
     "removed_entries_this_run":  0,
     "errors":  [
-
+                   "Homepage crawl failed for ysymyth: 基础连接已经关闭: 接收时发生错误。",
+                   "Blog crawl failed for ysymyth: 基础连接已经关闭: 接收时发生错误。",
+                   "arXiv search failed for ysymyth: 基础连接已经关闭: 接收时发生错误。"
                ],
     "entries":  [
                     {

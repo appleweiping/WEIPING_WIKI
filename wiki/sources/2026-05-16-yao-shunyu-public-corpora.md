@@ -3,7 +3,7 @@ title: 2026-05-16 Yao Shunyu Public Corpora
 type: source
 status: active
 created: 2026-05-16
-updated: 2026-05-16
+updated: 2026-05-18
 tags:
   - shunyu-yao
   - public-corpus
@@ -29,8 +29,8 @@ source_pages:
 
 ## Snapshot
 
-- `ysymyth` entries: 57, new 0, changed 0, errors 0.
-- `alfredyao` entries: 16, new 0, changed 0, errors 0.
+- `ysymyth` entries: 57, new 0, changed 0, errors 3.
+- `alfredyao` entries: 16, new 0, changed 0, errors 2.
 
 ## Public Handling
 

@@ -3,7 +3,7 @@ title: "Fine Tune Transfomers"
 type: source
 status: mirrored
 created: 2026-05-15
-updated: 2026-05-15
+updated: 2026-05-18
 tags:
   - article
   - cookbook
@@ -37,7 +37,7 @@ source_pages:
 
 ## Summary
 
-Fine-tuning a Multilingual Reasoner with Hugging Face Authored by: $1, $1, and $1 Large reasoning models like $1 generate a chain-of-thought to improve the accuracy and quality of their responses. However, most of these models reason in English, even when a question is asked in another language. In this notebook, we show how OpenAI's open-weight reasoning mo...
+Fine-tuning a Multilingual Reasoner with Hugging Face Authored by: Edward Beeching, Quentin Gallouédec, and Lewis Tunstall Large reasoning models like OpenAI o3 generate a chain-of-thought to improve the accuracy and quality of their responses. However, most of these models reason in English, even when a question is asked in another language. In this noteboo...
 
 ## What This Teaches
 

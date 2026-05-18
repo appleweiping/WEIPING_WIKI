@@ -3,7 +3,7 @@ title: "Autofix Github Actions"
 type: source
 status: mirrored
 created: 2026-05-15
-updated: 2026-05-15
+updated: 2026-05-18
 tags:
   - codex
   - coding-agents

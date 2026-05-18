@@ -3,7 +3,7 @@ title: "Financial Document Analysis With Llamaindex"
 type: source
 status: mirrored
 created: 2026-05-15
-updated: 2026-05-15
+updated: 2026-05-18
 tags:
   - cookbook
   - example
@@ -37,7 +37,7 @@ source_pages:
 
 ## Summary
 
-Financial Document Analysis with LlamaIndex In this example notebook, we showcase how to perform financial analysis over $1 documents with the $1 framework with just a few lines of code. Notebook Outline $1 $1 $1 $1 $1 Introduction LLamaIndex $1 is a data framework for LLM applications. You can get started with just a few lines of code and build a retrieval-...
+Financial Document Analysis with LlamaIndex In this example notebook, we showcase how to perform financial analysis over 10-K documents with the LlamaIndex framework with just a few lines of code. Notebook Outline Introduction Setup Data Loading & Indexing Simple QA Advanced QA - Compare and Contrast Introduction LLamaIndex LlamaIndex is a data framework for...
 
 ## What This Teaches
 

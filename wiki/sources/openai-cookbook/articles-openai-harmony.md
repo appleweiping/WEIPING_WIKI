@@ -3,7 +3,7 @@ title: "Openai Harmony"
 type: source
 status: mirrored
 created: 2026-05-15
-updated: 2026-05-15
+updated: 2026-05-18
 tags:
   - article
   - cookbook
@@ -37,7 +37,7 @@ source_pages:
 
 ## Summary
 
-OpenAI harmony response format The $1 were trained on the harmony response format for defining conversation structures, generating reasoning output and structuring function calls. If you are not using gpt-oss directly but through an API or a provider like Ollama, you will not have to be concerned about this as your inference solution will handle the formatti...
+OpenAI harmony response format The gpt-oss models were trained on the harmony response format for defining conversation structures, generating reasoning output and structuring function calls. If you are not using gpt-oss directly but through an API or a provider like Ollama, you will not have to be concerned about this as your inference solution will handle...
 
 ## What This Teaches
 

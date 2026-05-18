@@ -3,7 +3,7 @@ title: "Gpt Action Sharepoint Doc"
 type: source
 status: mirrored
 created: 2026-05-15
-updated: 2026-05-15
+updated: 2026-05-18
 tags:
   - chatgpt
   - cookbook
@@ -38,7 +38,7 @@ source_pages:
 
 ## Summary
 
-GPT Action Library: Sharepoint (Return file for Data Analysis / Document Summarization) Introduction This page provides an instruction & guide for developers building a GPT Action for a specific application. Before you proceed, make sure to first familiarize yourself with the following information: - $1 - $1 - $1 This solution enables a GPT action to answer...
+GPT Action Library: Sharepoint (Return file for Data Analysis / Document Summarization) Introduction This page provides an instruction & guide for developers building a GPT Action for a specific application. Before you proceed, make sure to first familiarize yourself with the following information: - Introduction to GPT Actions - Introduction to GPT Actions...
 
 ## What This Teaches
 

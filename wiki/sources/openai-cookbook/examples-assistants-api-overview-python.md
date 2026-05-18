@@ -3,7 +3,7 @@ title: "Assistants Api Overview Python"
 type: source
 status: mirrored
 created: 2026-05-15
-updated: 2026-05-15
+updated: 2026-05-18
 tags:
   - cookbook
   - example
@@ -36,7 +36,7 @@ source_pages:
 
 ## Summary
 
-Assistants API Overview (Python SDK) The new $1 is a stateful evolution of our $1 meant to simplify the creation of assistant-like experiences, and enable developer access to powerful tools like Code Interpreter and File Search. !$1 Chat Completions API vs Assistants API The primitives of the Chat Completions API are Messages , on which you perform a Complet...
+Assistants API Overview (Python SDK) The new Assistants API is a stateful evolution of our Chat Completions API meant to simplify the creation of assistant-like experiences, and enable developer access to powerful tools like Code Interpreter and File Search. !Assistants API Diagram Chat Completions API vs Assistants API The primitives of the Chat Completions...
 
 ## What This Teaches
 

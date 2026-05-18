@@ -3,7 +3,7 @@ title: "Rag With Graph Db"
 type: source
 status: mirrored
 created: 2026-05-15
-updated: 2026-05-15
+updated: 2026-05-18
 tags:
   - cookbook
   - example
@@ -38,7 +38,7 @@ source_pages:
 
 ## Summary
 
-Retrieval Augmented Generation with a Graph Database This notebook shows how to use LLMs in combination with $1, a graph database, to perform Retrieval Augmented Generation (RAG). Why use RAG? If you want to use LLMs to generate answers based on your own content or knowledge base, instead of providing large context when prompting the model, you can fetch the...
+Retrieval Augmented Generation with a Graph Database This notebook shows how to use LLMs in combination with Neo4j, a graph database, to perform Retrieval Augmented Generation (RAG). Why use RAG? If you want to use LLMs to generate answers based on your own content or knowledge base, instead of providing large context when prompting the model, you can fetch...
 
 ## What This Teaches
 

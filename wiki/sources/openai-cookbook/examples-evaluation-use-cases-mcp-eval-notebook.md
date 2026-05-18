@@ -3,7 +3,7 @@ title: "Mcp Eval Notebook"
 type: source
 status: mirrored
 created: 2026-05-15
-updated: 2026-05-15
+updated: 2026-05-18
 tags:
   - cookbook
   - evals
@@ -38,7 +38,7 @@ source_pages:
 
 ## Summary
 
-Evaluating MCP-Based Answers with a Custom Dataset This notebook evaluates a model's ability to answer questions about the $1 GitHub repository using the OpenAI Evals framework with a custom in-memory dataset. We use a custom, in-memory dataset of Q&A pairs and compare two models: gpt-4.1 and o4-mini , that leverage the MCP tool for repository-aware, context...
+Evaluating MCP-Based Answers with a Custom Dataset This notebook evaluates a model's ability to answer questions about the tiktoken GitHub repository using the OpenAI Evals framework with a custom in-memory dataset. We use a custom, in-memory dataset of Q&A pairs and compare two models: gpt-4.1 and o4-mini , that leverage the MCP tool for repository-aware, c...
 
 ## What This Teaches
 

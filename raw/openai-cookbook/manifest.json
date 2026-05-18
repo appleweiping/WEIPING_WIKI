@@ -1,6 +1,6 @@
 {
     "schema":  "openai-cookbook-manifest-v1",
-    "generated_at":  "2026-05-15T23:19:57.4331233+02:00",
+    "generated_at":  "2026-05-18T12:09:45.139Z",
     "discovery_url":  "https://developers.openai.com/cookbook",
     "github_repository":  "https://github.com/openai/openai-cookbook",
     "license_basis":  "MIT license in openai/openai-cookbook",
@@ -18,7 +18,7 @@
                         "source_format":  "md",
                         "content_hash":  "56a464501c12e32516985c050deca6e3dcdb44a2cb7fc9cadca0a8b734e59748",
                         "first_seen":  "2026-05-15",
-                        "last_seen":  "2026-05-15",
+                        "last_seen":  "2026-05-18",
                         "last_changed":  "2026-05-15",
                         "wiki_page":  "wiki/sources/openai-cookbook/articles-chatgpt-agents-sales-meeting-prep.md"
                     },
@@ -34,9 +34,25 @@
                         "source_format":  "md",
                         "content_hash":  "a8f7bac9c378e853e09268518a2b4e59b8113c9f95cd53cb4144ca0d9534dc52",
                         "first_seen":  "2026-05-15",
-                        "last_seen":  "2026-05-15",
+                        "last_seen":  "2026-05-18",
                         "last_changed":  "2026-05-15",
                         "wiki_page":  "wiki/sources/openai-cookbook/articles-codex-exec-plans.md"
+                    },
+                    {
+                        "url":  "https://developers.openai.com/cookbook/articles/gpt-oss-safeguard-guide",
+                        "cookbook_path":  "articles/gpt-oss-safeguard-guide",
+                        "source_path":  "articles/gpt-oss-safeguard-guide.md",
+                        "github_url":  "https://github.com/openai/openai-cookbook/blob/main/articles/gpt-oss-safeguard-guide.md",
+                        "raw_url":  "https://raw.githubusercontent.com/openai/openai-cookbook/main/articles/gpt-oss-safeguard-guide.md",
+                        "category":  "gpt-oss / open-weight deployment",
+                        "title":  "Gpt Oss Safeguard Guide",
+                        "source_kind":  "openai-cookbook-github",
+                        "source_format":  "md",
+                        "content_hash":  "c5f5af7ccd5af9c308a8b89810147d68a15d83a15f4019c48a52ec410d567cda",
+                        "first_seen":  "2026-05-15",
+                        "last_seen":  "2026-05-18",
+                        "last_changed":  "2026-05-15",
+                        "wiki_page":  "wiki/sources/openai-cookbook/articles-gpt-oss-safeguard-guide.md"
                     },
                     {
                         "url":  "https://developers.openai.com/cookbook/articles/gpt-oss/build-your-own-fact-checker-cerebras",
@@ -50,7 +66,7 @@
                         "source_format":  "ipynb",
                         "content_hash":  "1bb0f1c60cf7dac49baf2134acffd8d31384d709b1f5a01f32af1f5f1b0bd378",
                         "first_seen":  "2026-05-15",
-                        "last_seen":  "2026-05-15",
+                        "last_seen":  "2026-05-18",
                         "last_changed":  "2026-05-15",
                         "wiki_page":  "wiki/sources/openai-cookbook/articles-gpt-oss-build-your-own-fact-checker-cerebras.md"
                     },
@@ -66,7 +82,7 @@
                         "source_format":  "ipynb",
                         "content_hash":  "41a61d098c8d230b84e597fd97169996726f3a9f4bc217604fc97007f3a42076",
                         "first_seen":  "2026-05-15",
-                        "last_seen":  "2026-05-15",
+                        "last_seen":  "2026-05-18",
                         "last_changed":  "2026-05-15",
                         "wiki_page":  "wiki/sources/openai-cookbook/articles-gpt-oss-fine-tune-korean.md"
                     },
@@ -82,7 +98,7 @@
                         "source_format":  "ipynb",
                         "content_hash":  "97814cbebe3259a3809a95f6f376b3934a6e1443c606394147cca82af9f30567",
                         "first_seen":  "2026-05-15",
-                        "last_seen":  "2026-05-15",
+                        "last_seen":  "2026-05-18",
                         "last_changed":  "2026-05-15",
                         "wiki_page":  "wiki/sources/openai-cookbook/articles-gpt-oss-fine-tune-transfomers.md"
                     },
@@ -98,7 +114,7 @@
                         "source_format":  "md",
                         "content_hash":  "fd3c1c839df71d5542e966e732bd75ba8717818f75c9047fff4bf1b3322dd7dd",
                         "first_seen":  "2026-05-15",
-                        "last_seen":  "2026-05-15",
+                        "last_seen":  "2026-05-18",
                         "last_changed":  "2026-05-15",
                         "wiki_page":  "wiki/sources/openai-cookbook/articles-gpt-oss-handle-raw-cot.md"
                     },
@@ -114,7 +130,7 @@
                         "source_format":  "ipynb",
                         "content_hash":  "9a018941780e63741297674f4dc1952549778c976f282e81c5ee738225e06323",
                         "first_seen":  "2026-05-15",
-                        "last_seen":  "2026-05-15",
+                        "last_seen":  "2026-05-18",
                         "last_changed":  "2026-05-15",
                         "wiki_page":  "wiki/sources/openai-cookbook/articles-gpt-oss-run-colab.md"
                     },
@@ -130,7 +146,7 @@
                         "source_format":  "md",
                         "content_hash":  "a4a7ebe9e7852d72b6a302e41e909f55e334a53f8b69656e506e117e1bb623cf",
                         "first_seen":  "2026-05-15",
-                        "last_seen":  "2026-05-15",
+                        "last_seen":  "2026-05-18",
                         "last_changed":  "2026-05-15",
                         "wiki_page":  "wiki/sources/openai-cookbook/articles-gpt-oss-run-locally-lmstudio.md"
                     },
@@ -146,7 +162,7 @@
                         "source_format":  "md",
                         "content_hash":  "e87d89c914ad73164a7eee22c12b7593cf4d82b05969d83cd401f8351ffb4a3e",
                         "first_seen":  "2026-05-15",
-                        "last_seen":  "2026-05-15",
+                        "last_seen":  "2026-05-18",
                         "last_changed":  "2026-05-15",
                         "wiki_page":  "wiki/sources/openai-cookbook/articles-gpt-oss-run-locally-ollama.md"
                     },
@@ -162,7 +178,7 @@
                         "source_format":  "ipynb",
                         "content_hash":  "42f7f75f0621624788f073d0b0a1031337f9917a88081aca6b070964142b3efc",
                         "first_seen":  "2026-05-15",
-                        "last_seen":  "2026-05-15",
+                        "last_seen":  "2026-05-18",
                         "last_changed":  "2026-05-15",
                         "wiki_page":  "wiki/sources/openai-cookbook/articles-gpt-oss-run-nvidia.md"
                     },
@@ -178,7 +194,7 @@
                         "source_format":  "md",
                         "content_hash":  "12dba93671b6ccc4c2e973b446e0ae2169909d69122450016724c14d8ce207af",
                         "first_seen":  "2026-05-15",
-                        "last_seen":  "2026-05-15",
+                        "last_seen":  "2026-05-18",
                         "last_changed":  "2026-05-15",
                         "wiki_page":  "wiki/sources/openai-cookbook/articles-gpt-oss-run-transformers.md"
                     },
@@ -194,7 +210,7 @@
                         "source_format":  "md",
                         "content_hash":  "12b32287ec789ecba7b7a83a4000d3681a9a41cf32130714a002bc989dfa524c",
                         "first_seen":  "2026-05-15",
-                        "last_seen":  "2026-05-15",
+                        "last_seen":  "2026-05-18",
                         "last_changed":  "2026-05-15",
                         "wiki_page":  "wiki/sources/openai-cookbook/articles-gpt-oss-run-vllm.md"
                     },
@@ -210,25 +226,9 @@
                         "source_format":  "md",
                         "content_hash":  "2739da26588a3705a13ea603baf2293149de0da8cb7e8637d2fe2187fbe0c6f1",
                         "first_seen":  "2026-05-15",
-                        "last_seen":  "2026-05-15",
+                        "last_seen":  "2026-05-18",
                         "last_changed":  "2026-05-15",
                         "wiki_page":  "wiki/sources/openai-cookbook/articles-gpt-oss-verifying-implementations.md"
-                    },
-                    {
-                        "url":  "https://developers.openai.com/cookbook/articles/gpt-oss-safeguard-guide",
-                        "cookbook_path":  "articles/gpt-oss-safeguard-guide",
-                        "source_path":  "articles/gpt-oss-safeguard-guide.md",
-                        "github_url":  "https://github.com/openai/openai-cookbook/blob/main/articles/gpt-oss-safeguard-guide.md",
-                        "raw_url":  "https://raw.githubusercontent.com/openai/openai-cookbook/main/articles/gpt-oss-safeguard-guide.md",
-                        "category":  "gpt-oss / open-weight deployment",
-                        "title":  "Gpt Oss Safeguard Guide",
-                        "source_kind":  "openai-cookbook-github",
-                        "source_format":  "md",
-                        "content_hash":  "c5f5af7ccd5af9c308a8b89810147d68a15d83a15f4019c48a52ec410d567cda",
-                        "first_seen":  "2026-05-15",
-                        "last_seen":  "2026-05-15",
-                        "last_changed":  "2026-05-15",
-                        "wiki_page":  "wiki/sources/openai-cookbook/articles-gpt-oss-safeguard-guide.md"
                     },
                     {
                         "url":  "https://developers.openai.com/cookbook/articles/openai-harmony",
@@ -242,7 +242,7 @@
                         "source_format":  "md",
                         "content_hash":  "a348e9824793f6d82f241d44e5a6b1e7b23ba3bc410413766db1c0ae47d71cf7",
                         "first_seen":  "2026-05-15",
-                        "last_seen":  "2026-05-15",
+                        "last_seen":  "2026-05-18",
                         "last_changed":  "2026-05-15",
                         "wiki_page":  "wiki/sources/openai-cookbook/articles-openai-harmony.md"
                     },
@@ -258,7 +258,7 @@
                         "source_format":  "mdx",
                         "content_hash":  "295639182b7df356a70e1ab27bb7503fd69d49a4de67f2fa7372ef0404f26cdb",
                         "first_seen":  "2026-05-15",
-                        "last_seen":  "2026-05-15",
+                        "last_seen":  "2026-05-18",
                         "last_changed":  "2026-05-15",
                         "wiki_page":  "wiki/sources/openai-cookbook/articles-what-is-new-with-dalle-3.md"
                     },
@@ -274,7 +274,7 @@
                         "source_format":  "md",
                         "content_hash":  "b21363424a0b57b0c6e4ebe195f30c3e08e32a4f389f60d6ea18c816c762ac5a",
                         "first_seen":  "2026-05-15",
-                        "last_seen":  "2026-05-15",
+                        "last_seen":  "2026-05-18",
                         "last_changed":  "2026-05-15",
                         "wiki_page":  "wiki/sources/openai-cookbook/articles-what-makes-documentation-good.md"
                     },
@@ -290,7 +290,7 @@
                         "source_format":  "ipynb",
                         "content_hash":  "a001a092a3eaaf6cd4ef2c166993f5fd8cd9ec0254727d03bee35c2446e1e57d",
                         "first_seen":  "2026-05-15",
-                        "last_seen":  "2026-05-15",
+                        "last_seen":  "2026-05-18",
                         "last_changed":  "2026-05-15",
                         "wiki_page":  "wiki/sources/openai-cookbook/examples-agentkit-agentkit-walkthrough.md"
                     },
@@ -306,7 +306,7 @@
                         "source_format":  "ipynb",
                         "content_hash":  "a79ee7286065f544188fad8514be0370a389333f15e34edbf9f0ebe4db1c4f17",
                         "first_seen":  "2026-05-15",
-                        "last_seen":  "2026-05-15",
+                        "last_seen":  "2026-05-18",
                         "last_changed":  "2026-05-15",
                         "wiki_page":  "wiki/sources/openai-cookbook/examples-agents-sdk-agent-improvement-loop.md"
                     },
@@ -322,7 +322,7 @@
                         "source_format":  "ipynb",
                         "content_hash":  "985ea92da6a4181e838749f4216e121b32b461d4b25870ae991574c60e463eb8",
                         "first_seen":  "2026-05-15",
-                        "last_seen":  "2026-05-15",
+                        "last_seen":  "2026-05-18",
                         "last_changed":  "2026-05-15",
                         "wiki_page":  "wiki/sources/openai-cookbook/examples-agents-sdk-app-assistant-voice-agents.md"
                     },
@@ -338,7 +338,7 @@
                         "source_format":  "ipynb",
                         "content_hash":  "9f63b4b1d50deec42fa9ddaa12c923b592f22722e381832a60cb9851a34de4d6",
                         "first_seen":  "2026-05-15",
-                        "last_seen":  "2026-05-15",
+                        "last_seen":  "2026-05-18",
                         "last_changed":  "2026-05-15",
                         "wiki_page":  "wiki/sources/openai-cookbook/examples-agents-sdk-building-reliable-agents-memory-compaction.md"
                     },
@@ -354,7 +354,7 @@
                         "source_format":  "ipynb",
                         "content_hash":  "69037cc4236c614210f82afe3e531d5962724786e86cd380407d732df09b8351",
                         "first_seen":  "2026-05-15",
-                        "last_seen":  "2026-05-15",
+                        "last_seen":  "2026-05-18",
                         "last_changed":  "2026-05-15",
                         "wiki_page":  "wiki/sources/openai-cookbook/examples-agents-sdk-computer-use-with-daytona-computer-use-with-daytona.md"
                     },
@@ -370,7 +370,7 @@
                         "source_format":  "ipynb",
                         "content_hash":  "fde249508677c1e9f92347a9c09159c0ec977d28e5e7e6bae795f0cf458d1b4c",
                         "first_seen":  "2026-05-15",
-                        "last_seen":  "2026-05-15",
+                        "last_seen":  "2026-05-18",
                         "last_changed":  "2026-05-15",
                         "wiki_page":  "wiki/sources/openai-cookbook/examples-agents-sdk-context-personalization.md"
                     },
@@ -386,7 +386,7 @@
                         "source_format":  "md",
                         "content_hash":  "5d09fafe36424f07215c147150514633ea912bbbe22d7b44e1fb60542805b5a8",
                         "first_seen":  "2026-05-15",
-                        "last_seen":  "2026-05-15",
+                        "last_seen":  "2026-05-18",
                         "last_changed":  "2026-05-15",
                         "wiki_page":  "wiki/sources/openai-cookbook/examples-agents-sdk-deployment-manager-readme.md"
                     },
@@ -402,7 +402,7 @@
                         "source_format":  "ipynb",
                         "content_hash":  "27dc2e1e1eafc1f1a32bb1465817d2d461e1628aea5dcf26d8f1174b0fbe2032",
                         "first_seen":  "2026-05-15",
-                        "last_seen":  "2026-05-15",
+                        "last_seen":  "2026-05-18",
                         "last_changed":  "2026-05-15",
                         "wiki_page":  "wiki/sources/openai-cookbook/examples-agents-sdk-dispute-agent.md"
                     },
@@ -418,7 +418,7 @@
                         "source_format":  "ipynb",
                         "content_hash":  "6d94f35aa27b0e72b6ec7dd92599253a632674f3785d1b57da26fff0135639d1",
                         "first_seen":  "2026-05-15",
-                        "last_seen":  "2026-05-15",
+                        "last_seen":  "2026-05-18",
                         "last_changed":  "2026-05-15",
                         "wiki_page":  "wiki/sources/openai-cookbook/examples-agents-sdk-evaluate-agents.md"
                     },
@@ -434,7 +434,7 @@
                         "source_format":  "ipynb",
                         "content_hash":  "08e9b93b557d25a95e8533d806ecd241815d3754a98d56f1874961674549f838",
                         "first_seen":  "2026-05-15",
-                        "last_seen":  "2026-05-15",
+                        "last_seen":  "2026-05-18",
                         "last_changed":  "2026-05-15",
                         "wiki_page":  "wiki/sources/openai-cookbook/examples-agents-sdk-multi-agent-portfolio-collaboration-multi-agent-portfolio-collaboration.md"
                     },
@@ -450,7 +450,7 @@
                         "source_format":  "ipynb",
                         "content_hash":  "b7e7e9cf9aa3657026a77e11fd7243c8064282bba174f3998ec47cef50d1e9fc",
                         "first_seen":  "2026-05-15",
-                        "last_seen":  "2026-05-15",
+                        "last_seen":  "2026-05-18",
                         "last_changed":  "2026-05-15",
                         "wiki_page":  "wiki/sources/openai-cookbook/examples-agents-sdk-parallel-agents.md"
                     },
@@ -466,7 +466,7 @@
                         "source_format":  "ipynb",
                         "content_hash":  "ab74e2b0c6b0e3fdd27d95048f44852541580cb129faf3c6e2daf399fe1e49fb",
                         "first_seen":  "2026-05-15",
-                        "last_seen":  "2026-05-15",
+                        "last_seen":  "2026-05-18",
                         "last_changed":  "2026-05-15",
                         "wiki_page":  "wiki/sources/openai-cookbook/examples-agents-sdk-sandboxed-code-migration-sandboxed-code-migration-agent.md"
                     },
@@ -482,7 +482,7 @@
                         "source_format":  "ipynb",
                         "content_hash":  "d5a02f650617ee7735afc7738f4aa57523c8097a7ce6b657dfd6c39cd8534235",
                         "first_seen":  "2026-05-15",
-                        "last_seen":  "2026-05-15",
+                        "last_seen":  "2026-05-18",
                         "last_changed":  "2026-05-15",
                         "wiki_page":  "wiki/sources/openai-cookbook/examples-agents-sdk-session-memory.md"
                     },
@@ -498,7 +498,7 @@
                         "source_format":  "ipynb",
                         "content_hash":  "fe83c608c7711ab92bfe0cfb71119cabcf6c6758d54313859adaa0c4108fd667",
                         "first_seen":  "2026-05-15",
-                        "last_seen":  "2026-05-15",
+                        "last_seen":  "2026-05-18",
                         "last_changed":  "2026-05-15",
                         "wiki_page":  "wiki/sources/openai-cookbook/examples-assistants-api-overview-python.md"
                     },
@@ -514,7 +514,7 @@
                         "source_format":  "ipynb",
                         "content_hash":  "9fe673a5736d13a8e088d01bc568e03875b604a15a9e29b444ea91e72d57bcef",
                         "first_seen":  "2026-05-15",
-                        "last_seen":  "2026-05-15",
+                        "last_seen":  "2026-05-18",
                         "last_changed":  "2026-05-15",
                         "wiki_page":  "wiki/sources/openai-cookbook/examples-azure-chat-with-your-own-data.md"
                     },
@@ -530,7 +530,7 @@
                         "source_format":  "ipynb",
                         "content_hash":  "4940f02a0238ee1274bfc1e3be7a3dc3ace659ac663564814434b43aa968a09f",
                         "first_seen":  "2026-05-15",
-                        "last_seen":  "2026-05-15",
+                        "last_seen":  "2026-05-18",
                         "last_changed":  "2026-05-15",
                         "wiki_page":  "wiki/sources/openai-cookbook/examples-azure-functions.md"
                     },
@@ -546,7 +546,7 @@
                         "source_format":  "ipynb",
                         "content_hash":  "693604fe7cd8a071ad391c98081ab5326da980c767085421d037261e96a41008",
                         "first_seen":  "2026-05-15",
-                        "last_seen":  "2026-05-15",
+                        "last_seen":  "2026-05-18",
                         "last_changed":  "2026-05-15",
                         "wiki_page":  "wiki/sources/openai-cookbook/examples-batch-processing.md"
                     },
@@ -562,7 +562,7 @@
                         "source_format":  "ipynb",
                         "content_hash":  "6b6512f4fa0f6130da7c7f704639066d23d9c5d0c6adbe2d7ef57b979dc98f9c",
                         "first_seen":  "2026-05-15",
-                        "last_seen":  "2026-05-15",
+                        "last_seen":  "2026-05-18",
                         "last_changed":  "2026-05-15",
                         "wiki_page":  "wiki/sources/openai-cookbook/examples-build-a-coding-agent-with-gpt-5-1.md"
                     },
@@ -578,7 +578,7 @@
                         "source_format":  "ipynb",
                         "content_hash":  "294c411bdbc8a41edf361881641b80841c59866d93fa0fbfd2b3a4ac8f382079",
                         "first_seen":  "2026-05-15",
-                        "last_seen":  "2026-05-15",
+                        "last_seen":  "2026-05-18",
                         "last_changed":  "2026-05-15",
                         "wiki_page":  "wiki/sources/openai-cookbook/examples-building-w-rt-mini-building-w-rt-mini.md"
                     },
@@ -594,7 +594,7 @@
                         "source_format":  "ipynb",
                         "content_hash":  "e917a38686a774b3a75f027f6c545161b55f7350d9c5906b50c6ed604d39fe8c",
                         "first_seen":  "2026-05-15",
-                        "last_seen":  "2026-05-15",
+                        "last_seen":  "2026-05-18",
                         "last_changed":  "2026-05-15",
                         "wiki_page":  "wiki/sources/openai-cookbook/examples-chat-finetuning-data-prep.md"
                     },
@@ -610,7 +610,7 @@
                         "source_format":  "md",
                         "content_hash":  "30b75b330448b7149a90ad76efdb401f20bbd3a662a5a0843e568b1c055cb447",
                         "first_seen":  "2026-05-15",
-                        "last_seen":  "2026-05-15",
+                        "last_seen":  "2026-05-18",
                         "last_changed":  "2026-05-15",
                         "wiki_page":  "wiki/sources/openai-cookbook/examples-chatgpt-chatgpt-prompt-guide-chatgpt-prompt-guide.md"
                     },
@@ -626,7 +626,7 @@
                         "source_format":  "ipynb",
                         "content_hash":  "cd88a865f95e7a20d2c81b839e9d6dfa58eb87456629b6bfd73b70ff39fcae33",
                         "first_seen":  "2026-05-15",
-                        "last_seen":  "2026-05-15",
+                        "last_seen":  "2026-05-18",
                         "last_changed":  "2026-05-15",
                         "wiki_page":  "wiki/sources/openai-cookbook/examples-chatgpt-compliance-api-logs-platform.md"
                     },
@@ -642,7 +642,7 @@
                         "source_format":  "ipynb",
                         "content_hash":  "3eab97bc61e01d15fdc980811153acef379c25c10d2387f224cc7bae0111fb8f",
                         "first_seen":  "2026-05-15",
-                        "last_seen":  "2026-05-15",
+                        "last_seen":  "2026-05-18",
                         "last_changed":  "2026-05-15",
                         "wiki_page":  "wiki/sources/openai-cookbook/examples-chatgpt-gpt-actions-library-gpt-action-getting-started.md"
                     },
@@ -658,7 +658,7 @@
                         "source_format":  "ipynb",
                         "content_hash":  "99996881053412c0cfa03b329b1cbbe9e83ae6571a3c5f45bbc0e3c7db536192",
                         "first_seen":  "2026-05-15",
-                        "last_seen":  "2026-05-15",
+                        "last_seen":  "2026-05-18",
                         "last_changed":  "2026-05-15",
                         "wiki_page":  "wiki/sources/openai-cookbook/examples-chatgpt-gpt-actions-library-gpt-action-bigquery.md"
                     },
@@ -674,7 +674,7 @@
                         "source_format":  "ipynb",
                         "content_hash":  "be41fc3172c6a166a8adf46f0b7b1dba8494e0211989458f6572d3b00c8177c4",
                         "first_seen":  "2026-05-15",
-                        "last_seen":  "2026-05-15",
+                        "last_seen":  "2026-05-18",
                         "last_changed":  "2026-05-15",
                         "wiki_page":  "wiki/sources/openai-cookbook/examples-chatgpt-gpt-actions-library-gpt-action-box.md"
                     },
@@ -690,7 +690,7 @@
                         "source_format":  "md",
                         "content_hash":  "58e3818de1b288a80b4384cb03f373fe59c006390c5c11ea5cfb0cf58a4c3180",
                         "first_seen":  "2026-05-15",
-                        "last_seen":  "2026-05-15",
+                        "last_seen":  "2026-05-18",
                         "last_changed":  "2026-05-15",
                         "wiki_page":  "wiki/sources/openai-cookbook/examples-chatgpt-gpt-actions-library-gpt-action-canvas.md"
                     },
@@ -706,7 +706,7 @@
                         "source_format":  "ipynb",
                         "content_hash":  "b5c365e65d1410add7339af3c78164ee527367b9b31a84e443265e96a340c354",
                         "first_seen":  "2026-05-15",
-                        "last_seen":  "2026-05-15",
+                        "last_seen":  "2026-05-18",
                         "last_changed":  "2026-05-15",
                         "wiki_page":  "wiki/sources/openai-cookbook/examples-chatgpt-gpt-actions-library-gpt-action-confluence.md"
                     },
@@ -722,7 +722,7 @@
                         "source_format":  "md",
                         "content_hash":  "db33ddd655fb2a290b3cd7db75725ea1d6dafb52441440e528e1b76cc2852e0b",
                         "first_seen":  "2026-05-15",
-                        "last_seen":  "2026-05-15",
+                        "last_seen":  "2026-05-18",
                         "last_changed":  "2026-05-15",
                         "wiki_page":  "wiki/sources/openai-cookbook/examples-chatgpt-gpt-actions-library-gpt-action-github.md"
                     },
@@ -738,7 +738,7 @@
                         "source_format":  "ipynb",
                         "content_hash":  "be968339f121ec90b582192718d27f5af1dc968dabd1e78390f3202c1fe8ff31",
                         "first_seen":  "2026-05-15",
-                        "last_seen":  "2026-05-15",
+                        "last_seen":  "2026-05-18",
                         "last_changed":  "2026-05-15",
                         "wiki_page":  "wiki/sources/openai-cookbook/examples-chatgpt-gpt-actions-library-gpt-action-gmail.md"
                     },
@@ -754,7 +754,7 @@
                         "source_format":  "md",
                         "content_hash":  "a2fd503d12459db3203a683c56dab4ae732542abdf531ad8142d6c9a61a97c9b",
                         "first_seen":  "2026-05-15",
-                        "last_seen":  "2026-05-15",
+                        "last_seen":  "2026-05-18",
                         "last_changed":  "2026-05-15",
                         "wiki_page":  "wiki/sources/openai-cookbook/examples-chatgpt-gpt-actions-library-gpt-action-google-calendar.md"
                     },
@@ -770,7 +770,7 @@
                         "source_format":  "ipynb",
                         "content_hash":  "22d82cc5b4056ce2b8d1c16aa42351fd0da328c79509c87d3d612830aaea777d",
                         "first_seen":  "2026-05-15",
-                        "last_seen":  "2026-05-15",
+                        "last_seen":  "2026-05-18",
                         "last_changed":  "2026-05-15",
                         "wiki_page":  "wiki/sources/openai-cookbook/examples-chatgpt-gpt-actions-library-gpt-action-google-drive.md"
                     },
@@ -786,7 +786,7 @@
                         "source_format":  "ipynb",
                         "content_hash":  "121154bcb876b88da6f578141be267f618d812fed584ed4287e862a9583b33da",
                         "first_seen":  "2026-05-15",
-                        "last_seen":  "2026-05-15",
+                        "last_seen":  "2026-05-18",
                         "last_changed":  "2026-05-15",
                         "wiki_page":  "wiki/sources/openai-cookbook/examples-chatgpt-gpt-actions-library-gpt-action-googleads-adzviser.md"
                     },
@@ -802,7 +802,7 @@
                         "source_format":  "ipynb",
                         "content_hash":  "87907a749d2db53a7caf3c5c24c84d1cd0fb114757488929f547cc0ee62afb4c",
                         "first_seen":  "2026-05-15",
-                        "last_seen":  "2026-05-15",
+                        "last_seen":  "2026-05-18",
                         "last_changed":  "2026-05-15",
                         "wiki_page":  "wiki/sources/openai-cookbook/examples-chatgpt-gpt-actions-library-gpt-action-jira.md"
                     },
@@ -818,7 +818,7 @@
                         "source_format":  "ipynb",
                         "content_hash":  "a1e6ee4f65fe9810ecdbac2460c144d6941160685feb17cea6351b8e234dcda6",
                         "first_seen":  "2026-05-15",
-                        "last_seen":  "2026-05-15",
+                        "last_seen":  "2026-05-18",
                         "last_changed":  "2026-05-15",
                         "wiki_page":  "wiki/sources/openai-cookbook/examples-chatgpt-gpt-actions-library-gpt-action-notion.md"
                     },
@@ -834,7 +834,7 @@
                         "source_format":  "ipynb",
                         "content_hash":  "fd0a6422c0c3f9f0acdf661fc3ad43d9dbe4ef6ce5ad7a6df7688d720b1c2c8f",
                         "first_seen":  "2026-05-15",
-                        "last_seen":  "2026-05-15",
+                        "last_seen":  "2026-05-18",
                         "last_changed":  "2026-05-15",
                         "wiki_page":  "wiki/sources/openai-cookbook/examples-chatgpt-gpt-actions-library-gpt-action-outlook.md"
                     },
@@ -850,7 +850,7 @@
                         "source_format":  "ipynb",
                         "content_hash":  "680424e127b1b1124d5d049037fb591242cf60dfa815ba0581205b0402390b62",
                         "first_seen":  "2026-05-15",
-                        "last_seen":  "2026-05-15",
+                        "last_seen":  "2026-05-18",
                         "last_changed":  "2026-05-15",
                         "wiki_page":  "wiki/sources/openai-cookbook/examples-chatgpt-gpt-actions-library-gpt-action-redshift.md"
                     },
@@ -866,7 +866,7 @@
                         "source_format":  "md",
                         "content_hash":  "d3157eaa330d2839bc7ff7cf3c963406419896f0c8be49b884a9f635d07cc66a",
                         "first_seen":  "2026-05-15",
-                        "last_seen":  "2026-05-15",
+                        "last_seen":  "2026-05-18",
                         "last_changed":  "2026-05-15",
                         "wiki_page":  "wiki/sources/openai-cookbook/examples-chatgpt-gpt-actions-library-gpt-action-retool-workflow.md"
                     },
@@ -882,7 +882,7 @@
                         "source_format":  "ipynb",
                         "content_hash":  "36d0bbdef1acf2591dde6693e2f418afd8927597e128fa3a7ff3de9e55a91197",
                         "first_seen":  "2026-05-15",
-                        "last_seen":  "2026-05-15",
+                        "last_seen":  "2026-05-18",
                         "last_changed":  "2026-05-15",
                         "wiki_page":  "wiki/sources/openai-cookbook/examples-chatgpt-gpt-actions-library-gpt-action-salesforce.md"
                     },
@@ -898,7 +898,7 @@
                         "source_format":  "md",
                         "content_hash":  "0e497b3fbadf0ec03ded41f236cc91b06166f4a9da288971f1875874a7ea6282",
                         "first_seen":  "2026-05-15",
-                        "last_seen":  "2026-05-15",
+                        "last_seen":  "2026-05-18",
                         "last_changed":  "2026-05-15",
                         "wiki_page":  "wiki/sources/openai-cookbook/examples-chatgpt-gpt-actions-library-gpt-action-salesforce-gong.md"
                     },
@@ -914,7 +914,7 @@
                         "source_format":  "ipynb",
                         "content_hash":  "6f7f8a266397fa32c6e894a5a8cd10e81d8e09c7f94c8defa17716b08228d501",
                         "first_seen":  "2026-05-15",
-                        "last_seen":  "2026-05-15",
+                        "last_seen":  "2026-05-18",
                         "last_changed":  "2026-05-15",
                         "wiki_page":  "wiki/sources/openai-cookbook/examples-chatgpt-gpt-actions-library-gpt-action-sharepoint-doc.md"
                     },
@@ -930,7 +930,7 @@
                         "source_format":  "ipynb",
                         "content_hash":  "187bfaa030e663df5f2dea544bb2d365f8eac8c354b0c54f440f24d09d841f12",
                         "first_seen":  "2026-05-15",
-                        "last_seen":  "2026-05-15",
+                        "last_seen":  "2026-05-18",
                         "last_changed":  "2026-05-15",
                         "wiki_page":  "wiki/sources/openai-cookbook/examples-chatgpt-gpt-actions-library-gpt-action-sharepoint-text.md"
                     },
@@ -946,7 +946,7 @@
                         "source_format":  "ipynb",
                         "content_hash":  "86c4b53ca0a6cbb63995fc71717b5d7071f3d01dc5f50b5a768bbf79d9a6d2f8",
                         "first_seen":  "2026-05-15",
-                        "last_seen":  "2026-05-15",
+                        "last_seen":  "2026-05-18",
                         "last_changed":  "2026-05-15",
                         "wiki_page":  "wiki/sources/openai-cookbook/examples-chatgpt-gpt-actions-library-gpt-action-snowflake-direct.md"
                     },
@@ -962,7 +962,7 @@
                         "source_format":  "ipynb",
                         "content_hash":  "df77243d103cb44b3123cdb599463c0402917f6d16e62722528859dbd3c9082d",
                         "first_seen":  "2026-05-15",
-                        "last_seen":  "2026-05-15",
+                        "last_seen":  "2026-05-18",
                         "last_changed":  "2026-05-15",
                         "wiki_page":  "wiki/sources/openai-cookbook/examples-chatgpt-gpt-actions-library-gpt-action-snowflake-middleware.md"
                     },
@@ -978,7 +978,7 @@
                         "source_format":  "ipynb",
                         "content_hash":  "b5caf2347a8d64fa61e4d5263ba847417f789ed61619b9179e65ac88785d5fec",
                         "first_seen":  "2026-05-15",
-                        "last_seen":  "2026-05-15",
+                        "last_seen":  "2026-05-18",
                         "last_changed":  "2026-05-15",
                         "wiki_page":  "wiki/sources/openai-cookbook/examples-chatgpt-gpt-actions-library-gpt-action-sql-database.md"
                     },
@@ -994,7 +994,7 @@
                         "source_format":  "md",
                         "content_hash":  "b1f70f0f8e74e2b890685b36b8fadfeed6859495a83e8ab4a82c0c6563561ed2",
                         "first_seen":  "2026-05-15",
-                        "last_seen":  "2026-05-15",
+                        "last_seen":  "2026-05-18",
                         "last_changed":  "2026-05-15",
                         "wiki_page":  "wiki/sources/openai-cookbook/examples-chatgpt-gpt-actions-library-gpt-action-trayai-apim.md"
                     },
@@ -1010,7 +1010,7 @@
                         "source_format":  "md",
                         "content_hash":  "aa671fdd82621d2797cac801529726bf9dcd8f230f0f7726b1fabadf1fea7aca",
                         "first_seen":  "2026-05-15",
-                        "last_seen":  "2026-05-15",
+                        "last_seen":  "2026-05-18",
                         "last_changed":  "2026-05-15",
                         "wiki_page":  "wiki/sources/openai-cookbook/examples-chatgpt-gpt-actions-library-gpt-action-workday.md"
                     },
@@ -1026,7 +1026,7 @@
                         "source_format":  "ipynb",
                         "content_hash":  "3d966c0ff2ed0422d8f2e039394860522292cb75764597e94238ab9936295167",
                         "first_seen":  "2026-05-15",
-                        "last_seen":  "2026-05-15",
+                        "last_seen":  "2026-05-18",
                         "last_changed":  "2026-05-15",
                         "wiki_page":  "wiki/sources/openai-cookbook/examples-chatgpt-gpt-actions-library-gpt-action-zapier.md"
                     },
@@ -1042,7 +1042,7 @@
                         "source_format":  "ipynb",
                         "content_hash":  "74fd0d67e166c2c3e006bc440dc04930fe79ce4b85bda80839bedc9253418161",
                         "first_seen":  "2026-05-15",
-                        "last_seen":  "2026-05-15",
+                        "last_seen":  "2026-05-18",
                         "last_changed":  "2026-05-15",
                         "wiki_page":  "wiki/sources/openai-cookbook/examples-chatgpt-gpt-actions-library-gpt-middleware-aws-function.md"
                     },
@@ -1058,7 +1058,7 @@
                         "source_format":  "ipynb",
                         "content_hash":  "63ef88591f03d938dce61125640f6153d6aa3c341e2a69ce6387534cd85fb6e9",
                         "first_seen":  "2026-05-15",
-                        "last_seen":  "2026-05-15",
+                        "last_seen":  "2026-05-18",
                         "last_changed":  "2026-05-15",
                         "wiki_page":  "wiki/sources/openai-cookbook/examples-chatgpt-gpt-actions-library-gpt-middleware-azure-function.md"
                     },
@@ -1074,7 +1074,7 @@
                         "source_format":  "md",
                         "content_hash":  "eff698fe715f7aa3d2b853fa2c6a254a6bcc9a474d061c99d5d6b4be63f548ae",
                         "first_seen":  "2026-05-15",
-                        "last_seen":  "2026-05-15",
+                        "last_seen":  "2026-05-18",
                         "last_changed":  "2026-05-15",
                         "wiki_page":  "wiki/sources/openai-cookbook/examples-chatgpt-gpt-actions-library-gpt-middleware-google-cloud-function.md"
                     },
@@ -1090,7 +1090,7 @@
                         "source_format":  "ipynb",
                         "content_hash":  "106bbc3c429fc794e150049468b920b00a45184b4132463436258f87707b6c1d",
                         "first_seen":  "2026-05-15",
-                        "last_seen":  "2026-05-15",
+                        "last_seen":  "2026-05-18",
                         "last_changed":  "2026-05-15",
                         "wiki_page":  "wiki/sources/openai-cookbook/examples-chatgpt-rag-quickstart-azure-azure-ai-search-with-azure-functions-and-gpt-actions-in-chatgpt.md"
                     },
@@ -1106,7 +1106,7 @@
                         "source_format":  "ipynb",
                         "content_hash":  "a0671d9ee7fc54722724cfc12dbe209d337f05f53b84601a04d51e7a1c872dc2",
                         "first_seen":  "2026-05-15",
-                        "last_seen":  "2026-05-15",
+                        "last_seen":  "2026-05-18",
                         "last_changed":  "2026-05-15",
                         "wiki_page":  "wiki/sources/openai-cookbook/examples-chatgpt-rag-quickstart-gcp-getting-started-with-bigquery-vector-search-and-openai.md"
                     },
@@ -1122,7 +1122,7 @@
                         "source_format":  "ipynb",
                         "content_hash":  "139ebbfc66a3e3cc920185d49c1f718ccc1f826cc849985caa6d05a92d5d1935",
                         "first_seen":  "2026-05-15",
-                        "last_seen":  "2026-05-15",
+                        "last_seen":  "2026-05-18",
                         "last_changed":  "2026-05-15",
                         "wiki_page":  "wiki/sources/openai-cookbook/examples-chatgpt-rag-quickstart-pinecone-retool-gpt-action-pinecone-retool-rag.md"
                     },
@@ -1138,7 +1138,7 @@
                         "source_format":  "ipynb",
                         "content_hash":  "a92c75e4f379e8b6c9d314fef7a7575f617176df6c337a8c1f9f780a2cea1470",
                         "first_seen":  "2026-05-15",
-                        "last_seen":  "2026-05-15",
+                        "last_seen":  "2026-05-18",
                         "last_changed":  "2026-05-15",
                         "wiki_page":  "wiki/sources/openai-cookbook/examples-codex-autofix-github-actions.md"
                     },
@@ -1154,7 +1154,7 @@
                         "source_format":  "md",
                         "content_hash":  "3f306a314f0123f195fbef27ad59f5db9ae8e18174d3733e78ed751565ff75ea",
                         "first_seen":  "2026-05-15",
-                        "last_seen":  "2026-05-15",
+                        "last_seen":  "2026-05-18",
                         "last_changed":  "2026-05-15",
                         "wiki_page":  "wiki/sources/openai-cookbook/examples-codex-build-code-review-with-codex-sdk.md"
                     },
@@ -1170,7 +1170,7 @@
                         "source_format":  "ipynb",
                         "content_hash":  "a3937c45f63cbc8dcc2ddfb915b2f7b8b1c7cc6f934246575b22a1778a59bd43",
                         "first_seen":  "2026-05-15",
-                        "last_seen":  "2026-05-15",
+                        "last_seen":  "2026-05-18",
                         "last_changed":  "2026-05-15",
                         "wiki_page":  "wiki/sources/openai-cookbook/examples-codex-build-iterative-repair-loops-with-codex.md"
                     },
@@ -1186,7 +1186,7 @@
                         "source_format":  "md",
                         "content_hash":  "2896400ff24b5d2bd7347632ec6b55d93ad2d66e76fd1f315ac86ddeea96f803",
                         "first_seen":  "2026-05-15",
-                        "last_seen":  "2026-05-15",
+                        "last_seen":  "2026-05-18",
                         "last_changed":  "2026-05-15",
                         "wiki_page":  "wiki/sources/openai-cookbook/examples-codex-code-modernization.md"
                     },
@@ -1202,7 +1202,7 @@
                         "source_format":  "ipynb",
                         "content_hash":  "6b9fe1e1eedfe80821b70db56f5aba00d2308b9289b067ca8d6846bfb885e0a9",
                         "first_seen":  "2026-05-15",
-                        "last_seen":  "2026-05-15",
+                        "last_seen":  "2026-05-18",
                         "last_changed":  "2026-05-15",
                         "wiki_page":  "wiki/sources/openai-cookbook/examples-codex-codex-mcp-agents-sdk-building-consistent-workflows-codex-cli-agents-sdk.md"
                     },
@@ -1218,7 +1218,7 @@
                         "source_format":  "ipynb",
                         "content_hash":  "1f085031e466147a87f63449a1f9afed12d0e1b7064b3df51f0b35e1513f2d91",
                         "first_seen":  "2026-05-15",
-                        "last_seen":  "2026-05-15",
+                        "last_seen":  "2026-05-18",
                         "last_changed":  "2026-05-15",
                         "wiki_page":  "wiki/sources/openai-cookbook/examples-codex-jira-github.md"
                     },
@@ -1234,7 +1234,7 @@
                         "source_format":  "md",
                         "content_hash":  "92674c44200640be7e3d6a6d15cd65f6dd37ec6330f6f9de8b13a8219396fa22",
                         "first_seen":  "2026-05-15",
-                        "last_seen":  "2026-05-15",
+                        "last_seen":  "2026-05-18",
                         "last_changed":  "2026-05-15",
                         "wiki_page":  "wiki/sources/openai-cookbook/examples-codex-secure-quality-gitlab.md"
                     },
@@ -1250,7 +1250,7 @@
                         "source_format":  "ipynb",
                         "content_hash":  "70504694ef9c8f32e92f7b1dfaf4aeac51e45a6cd2e761f2bd4a9b5f6162475a",
                         "first_seen":  "2026-05-15",
-                        "last_seen":  "2026-05-15",
+                        "last_seen":  "2026-05-18",
                         "last_changed":  "2026-05-15",
                         "wiki_page":  "wiki/sources/openai-cookbook/examples-codex-using-goals-in-codex.md"
                     },
@@ -1266,7 +1266,7 @@
                         "source_format":  "ipynb",
                         "content_hash":  "1746077ee190e18f559a0fd1967ff7b6da83aeb2a6476fc02f1299c8d3ccfa14",
                         "first_seen":  "2026-05-15",
-                        "last_seen":  "2026-05-15",
+                        "last_seen":  "2026-05-18",
                         "last_changed":  "2026-05-15",
                         "wiki_page":  "wiki/sources/openai-cookbook/examples-completions-usage-api.md"
                     },
@@ -1282,7 +1282,7 @@
                         "source_format":  "ipynb",
                         "content_hash":  "a44e3a72309265156c993137d6f16cfbdaa0b0b155ebec41d5d1d5aeee16c606",
                         "first_seen":  "2026-05-15",
-                        "last_seen":  "2026-05-15",
+                        "last_seen":  "2026-05-18",
                         "last_changed":  "2026-05-15",
                         "wiki_page":  "wiki/sources/openai-cookbook/examples-context-summarization-with-realtime-api.md"
                     },
@@ -1298,7 +1298,7 @@
                         "source_format":  "ipynb",
                         "content_hash":  "f408c0a1cb818d52f5e1008a44af7ddb696f6964119a46fd8daaac689d9dd038",
                         "first_seen":  "2026-05-15",
-                        "last_seen":  "2026-05-15",
+                        "last_seen":  "2026-05-18",
                         "last_changed":  "2026-05-15",
                         "wiki_page":  "wiki/sources/openai-cookbook/examples-creating-slides-with-assistants-api-and-dall-e3.md"
                     },
@@ -1314,7 +1314,7 @@
                         "source_format":  "ipynb",
                         "content_hash":  "501862c6d8a7cbdd730f7be3dd034a7fcf558e12b62f10575a718fa608589981",
                         "first_seen":  "2026-05-15",
-                        "last_seen":  "2026-05-15",
+                        "last_seen":  "2026-05-18",
                         "last_changed":  "2026-05-15",
                         "wiki_page":  "wiki/sources/openai-cookbook/examples-custom-image-embedding-search.md"
                     },
@@ -1330,7 +1330,7 @@
                         "source_format":  "ipynb",
                         "content_hash":  "c0863d3af73581fa257a0f66e751a5e63232e4c7e213616f984b566e9b8a50bc",
                         "first_seen":  "2026-05-15",
-                        "last_seen":  "2026-05-15",
+                        "last_seen":  "2026-05-18",
                         "last_changed":  "2026-05-15",
                         "wiki_page":  "wiki/sources/openai-cookbook/examples-custom-llm-as-a-judge.md"
                     },
@@ -1346,7 +1346,7 @@
                         "source_format":  "ipynb",
                         "content_hash":  "99c2cbb24f2c0ebfc98bb9fd2ca8df0a0b9335882ff62408dac3527dfaaac597",
                         "first_seen":  "2026-05-15",
-                        "last_seen":  "2026-05-15",
+                        "last_seen":  "2026-05-18",
                         "last_changed":  "2026-05-15",
                         "wiki_page":  "wiki/sources/openai-cookbook/examples-dalle-how-to-create-dynamic-masks-with-dall-e-and-segment-anything.md"
                     },
@@ -1362,7 +1362,7 @@
                         "source_format":  "ipynb",
                         "content_hash":  "b943849d90760911a1fe4ffb618f314031a41b10b66e7b60f94b70f1ab3d1cac",
                         "first_seen":  "2026-05-15",
-                        "last_seen":  "2026-05-15",
+                        "last_seen":  "2026-05-18",
                         "last_changed":  "2026-05-15",
                         "wiki_page":  "wiki/sources/openai-cookbook/examples-data-extraction-transformation.md"
                     },
@@ -1378,7 +1378,7 @@
                         "source_format":  "ipynb",
                         "content_hash":  "8dfdc52c1064f9f735db8f515bf97cc9842dc0c2638a847647e55a1728309212",
                         "first_seen":  "2026-05-15",
-                        "last_seen":  "2026-05-15",
+                        "last_seen":  "2026-05-18",
                         "last_changed":  "2026-05-15",
                         "wiki_page":  "wiki/sources/openai-cookbook/examples-data-intensive-realtime-apps.md"
                     },
@@ -1394,7 +1394,7 @@
                         "source_format":  "md",
                         "content_hash":  "d1652c403ede0bfaad0bdf8a55313ac14b202c58bc52157f66607ae0c45b3821",
                         "first_seen":  "2026-05-15",
-                        "last_seen":  "2026-05-15",
+                        "last_seen":  "2026-05-18",
                         "last_changed":  "2026-05-15",
                         "wiki_page":  "wiki/sources/openai-cookbook/examples-deep-research-api-how-to-build-a-deep-research-mcp-server-readme.md"
                     },
@@ -1410,7 +1410,7 @@
                         "source_format":  "ipynb",
                         "content_hash":  "13206d1e4ad06fb107e3a0abbc5d44aa0476c3a056aba6c89ce84e9022c540db",
                         "first_seen":  "2026-05-15",
-                        "last_seen":  "2026-05-15",
+                        "last_seen":  "2026-05-18",
                         "last_changed":  "2026-05-15",
                         "wiki_page":  "wiki/sources/openai-cookbook/examples-deep-research-api-introduction-to-deep-research-api.md"
                     },
@@ -1426,7 +1426,7 @@
                         "source_format":  "ipynb",
                         "content_hash":  "9b97f3d82180cf32613097125cc07704e0726b99145dffa3de2233f5521177c0",
                         "first_seen":  "2026-05-15",
-                        "last_seen":  "2026-05-15",
+                        "last_seen":  "2026-05-18",
                         "last_changed":  "2026-05-15",
                         "wiki_page":  "wiki/sources/openai-cookbook/examples-deep-research-api-introduction-to-deep-research-api-agents.md"
                     },
@@ -1442,7 +1442,7 @@
                         "source_format":  "ipynb",
                         "content_hash":  "27f550676b24af3054667be6c03dac2ce23f3955e968bf9e74d543a739757bc9",
                         "first_seen":  "2026-05-15",
-                        "last_seen":  "2026-05-15",
+                        "last_seen":  "2026-05-18",
                         "last_changed":  "2026-05-15",
                         "wiki_page":  "wiki/sources/openai-cookbook/examples-developing-hallucination-guardrails.md"
                     },
@@ -1458,7 +1458,7 @@
                         "source_format":  "ipynb",
                         "content_hash":  "ded90fe7746ab69e85d5aa6ebaab896d403ddadb1ad6108d6eed189cee51ff1a",
                         "first_seen":  "2026-05-15",
-                        "last_seen":  "2026-05-15",
+                        "last_seen":  "2026-05-18",
                         "last_changed":  "2026-05-15",
                         "wiki_page":  "wiki/sources/openai-cookbook/examples-embedding-wikipedia-articles-for-search.md"
                     },
@@ -1474,7 +1474,7 @@
                         "source_format":  "ipynb",
                         "content_hash":  "914b7b242cfdc1870ecdb40e68d488afb8bfe6ad29f4c0311cf4303f17cbc627",
                         "first_seen":  "2026-05-15",
-                        "last_seen":  "2026-05-15",
+                        "last_seen":  "2026-05-18",
                         "last_changed":  "2026-05-15",
                         "wiki_page":  "wiki/sources/openai-cookbook/examples-enhance-your-prompts-with-meta-prompting.md"
                     },
@@ -1490,7 +1490,7 @@
                         "source_format":  "md",
                         "content_hash":  "4754f5f6c93b5fdb9519f6e68ea45f77d2695242712482e21b4de2ba3657715e",
                         "first_seen":  "2026-05-15",
-                        "last_seen":  "2026-05-15",
+                        "last_seen":  "2026-05-18",
                         "last_changed":  "2026-05-15",
                         "wiki_page":  "wiki/sources/openai-cookbook/examples-evaluation-building-resilient-prompts-using-an-evaluation-flywheel.md"
                     },
@@ -1506,7 +1506,7 @@
                         "source_format":  "ipynb",
                         "content_hash":  "ddc4371603caa1bbdd24a04a56ae71dc5bab90839cbd48bd9768c4cf3f628556",
                         "first_seen":  "2026-05-15",
-                        "last_seen":  "2026-05-15",
+                        "last_seen":  "2026-05-18",
                         "last_changed":  "2026-05-15",
                         "wiki_page":  "wiki/sources/openai-cookbook/examples-evaluation-evaluate-rag-with-llamaindex.md"
                     },
@@ -1522,7 +1522,7 @@
                         "source_format":  "ipynb",
                         "content_hash":  "147a35843b750634c65493bf451758afe76c48ad95032435019a17c7720aeca4",
                         "first_seen":  "2026-05-15",
-                        "last_seen":  "2026-05-15",
+                        "last_seen":  "2026-05-18",
                         "last_changed":  "2026-05-15",
                         "wiki_page":  "wiki/sources/openai-cookbook/examples-evaluation-getting-started-with-openai-evals.md"
                     },
@@ -1538,7 +1538,7 @@
                         "source_format":  "ipynb",
                         "content_hash":  "a1982964886592bfc90de8897a64c8056305da9fec0b8d417bc8471151ff8e9b",
                         "first_seen":  "2026-05-15",
-                        "last_seen":  "2026-05-15",
+                        "last_seen":  "2026-05-18",
                         "last_changed":  "2026-05-15",
                         "wiki_page":  "wiki/sources/openai-cookbook/examples-evaluation-how-to-eval-abstractive-summarization.md"
                     },
@@ -1554,7 +1554,7 @@
                         "source_format":  "ipynb",
                         "content_hash":  "1023c8deefe2be52b414537b17d8dfca3069777f24077252a6f2badb53dc4e74",
                         "first_seen":  "2026-05-15",
-                        "last_seen":  "2026-05-15",
+                        "last_seen":  "2026-05-18",
                         "last_changed":  "2026-05-15",
                         "wiki_page":  "wiki/sources/openai-cookbook/examples-evaluation-how-to-evaluate-llms-for-sql-generation.md"
                     },
@@ -1570,7 +1570,7 @@
                         "source_format":  "ipynb",
                         "content_hash":  "cb487bf76c2ce3d764d466a89f86969404c36b0e40538eca334f7cfc6529bf10",
                         "first_seen":  "2026-05-15",
-                        "last_seen":  "2026-05-15",
+                        "last_seen":  "2026-05-18",
                         "last_changed":  "2026-05-15",
                         "wiki_page":  "wiki/sources/openai-cookbook/examples-evaluation-use-cases-bulk-experimentation.md"
                     },
@@ -1586,7 +1586,7 @@
                         "source_format":  "ipynb",
                         "content_hash":  "add92128295e3c083ae1475154bc7dab08150113a643628c59c6a2c92a909370",
                         "first_seen":  "2026-05-15",
-                        "last_seen":  "2026-05-15",
+                        "last_seen":  "2026-05-18",
                         "last_changed":  "2026-05-15",
                         "wiki_page":  "wiki/sources/openai-cookbook/examples-evaluation-use-cases-completion-monitoring.md"
                     },
@@ -1602,7 +1602,7 @@
                         "source_format":  "ipynb",
                         "content_hash":  "8f992d34dbaa5d1995d17a202929bcbb31c1b355fc1c6c91f02132ca54576828",
                         "first_seen":  "2026-05-15",
-                        "last_seen":  "2026-05-15",
+                        "last_seen":  "2026-05-18",
                         "last_changed":  "2026-05-15",
                         "wiki_page":  "wiki/sources/openai-cookbook/examples-evaluation-use-cases-evalsapi-audio-inputs.md"
                     },
@@ -1618,7 +1618,7 @@
                         "source_format":  "ipynb",
                         "content_hash":  "83c2d1e126c1e23eef823bf43b47d42a3662fd75f166d8b479f366dcb816f998",
                         "first_seen":  "2026-05-15",
-                        "last_seen":  "2026-05-15",
+                        "last_seen":  "2026-05-18",
                         "last_changed":  "2026-05-15",
                         "wiki_page":  "wiki/sources/openai-cookbook/examples-evaluation-use-cases-evalsapi-image-inputs.md"
                     },
@@ -1634,7 +1634,7 @@
                         "source_format":  "ipynb",
                         "content_hash":  "accf8c9c29e952bb1ef86e5c909ee0bd317e975ee225b94a22b0d8fbd16f4ed0",
                         "first_seen":  "2026-05-15",
-                        "last_seen":  "2026-05-15",
+                        "last_seen":  "2026-05-18",
                         "last_changed":  "2026-05-15",
                         "wiki_page":  "wiki/sources/openai-cookbook/examples-evaluation-use-cases-mcp-eval-notebook.md"
                     },
@@ -1650,7 +1650,7 @@
                         "source_format":  "ipynb",
                         "content_hash":  "78070554aded313806cf21f445bdf765fae5f587569dcc427807def9f9410aac",
                         "first_seen":  "2026-05-15",
-                        "last_seen":  "2026-05-15",
+                        "last_seen":  "2026-05-18",
                         "last_changed":  "2026-05-15",
                         "wiki_page":  "wiki/sources/openai-cookbook/examples-evaluation-use-cases-regression.md"
                     },
@@ -1666,7 +1666,7 @@
                         "source_format":  "ipynb",
                         "content_hash":  "1c4cea08fad68fd80146514beb6d3bb2500f853899f1a36178b80c2656da1b3a",
                         "first_seen":  "2026-05-15",
-                        "last_seen":  "2026-05-15",
+                        "last_seen":  "2026-05-18",
                         "last_changed":  "2026-05-15",
                         "wiki_page":  "wiki/sources/openai-cookbook/examples-evaluation-use-cases-responses-evaluation.md"
                     },
@@ -1682,7 +1682,7 @@
                         "source_format":  "ipynb",
                         "content_hash":  "197448d0ea18ae9603274b8fccfe3643608aa34d9fbd76f7cd41dbec9c348492",
                         "first_seen":  "2026-05-15",
-                        "last_seen":  "2026-05-15",
+                        "last_seen":  "2026-05-18",
                         "last_changed":  "2026-05-15",
                         "wiki_page":  "wiki/sources/openai-cookbook/examples-evaluation-use-cases-structured-outputs-evaluation.md"
                     },
@@ -1698,7 +1698,7 @@
                         "source_format":  "ipynb",
                         "content_hash":  "1fea22d97cbf32d5263d037b483bbcfd7b93a66a5f999b78c01b783b88a79754",
                         "first_seen":  "2026-05-15",
-                        "last_seen":  "2026-05-15",
+                        "last_seen":  "2026-05-18",
                         "last_changed":  "2026-05-15",
                         "wiki_page":  "wiki/sources/openai-cookbook/examples-evaluation-use-cases-tools-evaluation.md"
                     },
@@ -1714,7 +1714,7 @@
                         "source_format":  "ipynb",
                         "content_hash":  "26f5a9f7bf2d090b68f8e193374e3a5b183d443208a69178dff650c0a0c0e980",
                         "first_seen":  "2026-05-15",
-                        "last_seen":  "2026-05-15",
+                        "last_seen":  "2026-05-18",
                         "last_changed":  "2026-05-15",
                         "wiki_page":  "wiki/sources/openai-cookbook/examples-evaluation-use-cases-web-search-evaluation.md"
                     },
@@ -1730,7 +1730,7 @@
                         "source_format":  "ipynb",
                         "content_hash":  "760f1713972d252373178d3193be81cd2fddd0229c997052184d9f0478feae99",
                         "first_seen":  "2026-05-15",
-                        "last_seen":  "2026-05-15",
+                        "last_seen":  "2026-05-18",
                         "last_changed":  "2026-05-15",
                         "wiki_page":  "wiki/sources/openai-cookbook/examples-file-search-responses.md"
                     },
@@ -1746,7 +1746,7 @@
                         "source_format":  "ipynb",
                         "content_hash":  "551c299037601f86bf5320e94d1fd9872d83ed07cb2f2bc6de35f2ec033303bf",
                         "first_seen":  "2026-05-15",
-                        "last_seen":  "2026-05-15",
+                        "last_seen":  "2026-05-18",
                         "last_changed":  "2026-05-15",
                         "wiki_page":  "wiki/sources/openai-cookbook/examples-fine-tuning-direct-preference-optimization-guide.md"
                     },
@@ -1762,7 +1762,7 @@
                         "source_format":  "ipynb",
                         "content_hash":  "af9af7a394d483a776afe1012b851ada07afd539888d5c7df5cd9d684087998d",
                         "first_seen":  "2026-05-15",
-                        "last_seen":  "2026-05-15",
+                        "last_seen":  "2026-05-18",
                         "last_changed":  "2026-05-15",
                         "wiki_page":  "wiki/sources/openai-cookbook/examples-fine-tuning-for-function-calling.md"
                     },
@@ -1778,7 +1778,7 @@
                         "source_format":  "ipynb",
                         "content_hash":  "7bb1afe577de350778b327db5514ad40cb5cf120645e9acf1e295daec6685f64",
                         "first_seen":  "2026-05-15",
-                        "last_seen":  "2026-05-15",
+                        "last_seen":  "2026-05-18",
                         "last_changed":  "2026-05-15",
                         "wiki_page":  "wiki/sources/openai-cookbook/examples-fine-tuned-qa-ft-retrieval-augmented-generation-qdrant.md"
                     },
@@ -1794,7 +1794,7 @@
                         "source_format":  "ipynb",
                         "content_hash":  "3c0f2a630dd56516f69590a18d9764a561f899598e9c966753788bac1f061f63",
                         "first_seen":  "2026-05-15",
-                        "last_seen":  "2026-05-15",
+                        "last_seen":  "2026-05-18",
                         "last_changed":  "2026-05-15",
                         "wiki_page":  "wiki/sources/openai-cookbook/examples-fine-tuned-qa-reinforcement-finetuning-healthbench.md"
                     },
@@ -1810,7 +1810,7 @@
                         "source_format":  "ipynb",
                         "content_hash":  "a0adf8fba3e866855c8a2c87536fca00d19ee1c9a0fb0e193d03daefe95c72e2",
                         "first_seen":  "2026-05-15",
-                        "last_seen":  "2026-05-15",
+                        "last_seen":  "2026-05-18",
                         "last_changed":  "2026-05-15",
                         "wiki_page":  "wiki/sources/openai-cookbook/examples-function-calling-finding-nearby-places.md"
                     },
@@ -1826,7 +1826,7 @@
                         "source_format":  "ipynb",
                         "content_hash":  "0e4f7ac94ed7218ba9ab5f7d99e15207b2c22dfe59796ef227470bef37c8c4dd",
                         "first_seen":  "2026-05-15",
-                        "last_seen":  "2026-05-15",
+                        "last_seen":  "2026-05-18",
                         "last_changed":  "2026-05-15",
                         "wiki_page":  "wiki/sources/openai-cookbook/examples-function-calling-with-an-openapi-spec.md"
                     },
@@ -1842,7 +1842,7 @@
                         "source_format":  "ipynb",
                         "content_hash":  "7ee33b08ae2035a30b4c49dc3e404b3757ca47489cec11e70a6f14f4b52e70bd",
                         "first_seen":  "2026-05-15",
-                        "last_seen":  "2026-05-15",
+                        "last_seen":  "2026-05-18",
                         "last_changed":  "2026-05-15",
                         "wiki_page":  "wiki/sources/openai-cookbook/examples-generate-images-with-gpt-image.md"
                     },
@@ -1858,7 +1858,7 @@
                         "source_format":  "ipynb",
                         "content_hash":  "e4d79b41ac37b684a8cee44e9b71275d65a15bfaa368bc41c94c100cf63e8e69",
                         "first_seen":  "2026-05-15",
-                        "last_seen":  "2026-05-15",
+                        "last_seen":  "2026-05-18",
                         "last_changed":  "2026-05-15",
                         "wiki_page":  "wiki/sources/openai-cookbook/examples-generate-images-with-high-input-fidelity.md"
                     },
@@ -1874,41 +1874,9 @@
                         "source_format":  "ipynb",
                         "content_hash":  "913448102a8284de675d6ce0138342d2a8d06e6a365ce054dfcbf4845f40f09a",
                         "first_seen":  "2026-05-15",
-                        "last_seen":  "2026-05-15",
+                        "last_seen":  "2026-05-18",
                         "last_changed":  "2026-05-15",
                         "wiki_page":  "wiki/sources/openai-cookbook/examples-gpt-with-vision-for-video-understanding.md"
-                    },
-                    {
-                        "url":  "https://developers.openai.com/cookbook/examples/gpt4-1_prompting_guide",
-                        "cookbook_path":  "examples/gpt4-1_prompting_guide",
-                        "source_path":  "examples/gpt4-1_prompting_guide.ipynb",
-                        "github_url":  "https://github.com/openai/openai-cookbook/blob/main/examples/gpt4-1_prompting_guide.ipynb",
-                        "raw_url":  "https://raw.githubusercontent.com/openai/openai-cookbook/main/examples/gpt4-1_prompting_guide.ipynb",
-                        "category":  "General OpenAI API patterns",
-                        "title":  "Gpt4 1 Prompting Guide",
-                        "source_kind":  "openai-cookbook-github",
-                        "source_format":  "ipynb",
-                        "content_hash":  "1a0803197a1b1afbf2fab06e2ea1182f9cf0b9c964c174d7315c97c8d4ad06d6",
-                        "first_seen":  "2026-05-15",
-                        "last_seen":  "2026-05-15",
-                        "last_changed":  "2026-05-15",
-                        "wiki_page":  "wiki/sources/openai-cookbook/examples-gpt4-1-prompting-guide.md"
-                    },
-                    {
-                        "url":  "https://developers.openai.com/cookbook/examples/gpt4o/introduction_to_gpt4o",
-                        "cookbook_path":  "examples/gpt4o/introduction_to_gpt4o",
-                        "source_path":  "examples/gpt4o/introduction_to_gpt4o.ipynb",
-                        "github_url":  "https://github.com/openai/openai-cookbook/blob/main/examples/gpt4o/introduction_to_gpt4o.ipynb",
-                        "raw_url":  "https://raw.githubusercontent.com/openai/openai-cookbook/main/examples/gpt4o/introduction_to_gpt4o.ipynb",
-                        "category":  "General OpenAI API patterns",
-                        "title":  "Introduction To Gpt4o",
-                        "source_kind":  "openai-cookbook-github",
-                        "source_format":  "ipynb",
-                        "content_hash":  "7ecb1db0bd5c1cebf7895fe9c90081ae1f826025b70a49ae736ba23e05e5094e",
-                        "first_seen":  "2026-05-15",
-                        "last_seen":  "2026-05-15",
-                        "last_changed":  "2026-05-15",
-                        "wiki_page":  "wiki/sources/openai-cookbook/examples-gpt4o-introduction-to-gpt4o.md"
                     },
                     {
                         "url":  "https://developers.openai.com/cookbook/examples/gpt-5/codex_prompting_guide",
@@ -1922,7 +1890,7 @@
                         "source_format":  "ipynb",
                         "content_hash":  "4fe1294b919da533fa9f64cc614d460f89c71c4ec1bb3214f5bc93598e0a27b2",
                         "first_seen":  "2026-05-15",
-                        "last_seen":  "2026-05-15",
+                        "last_seen":  "2026-05-18",
                         "last_changed":  "2026-05-15",
                         "wiki_page":  "wiki/sources/openai-cookbook/examples-gpt-5-codex-prompting-guide.md"
                     },
@@ -1938,7 +1906,7 @@
                         "source_format":  "ipynb",
                         "content_hash":  "021862f162cbb17ca3d4330665f22be7cb4be8325847f38066722586989ba989",
                         "first_seen":  "2026-05-15",
-                        "last_seen":  "2026-05-15",
+                        "last_seen":  "2026-05-18",
                         "last_changed":  "2026-05-15",
                         "wiki_page":  "wiki/sources/openai-cookbook/examples-gpt-5-gpt-5-frontend.md"
                     },
@@ -1954,7 +1922,7 @@
                         "source_format":  "ipynb",
                         "content_hash":  "b35b901108de55ed1a6e9d32c888a37c8c6908c51e0223fbaf9dacf20e843195",
                         "first_seen":  "2026-05-15",
-                        "last_seen":  "2026-05-15",
+                        "last_seen":  "2026-05-18",
                         "last_changed":  "2026-05-15",
                         "wiki_page":  "wiki/sources/openai-cookbook/examples-gpt-5-gpt-5-new-params-and-tools.md"
                     },
@@ -1970,7 +1938,7 @@
                         "source_format":  "ipynb",
                         "content_hash":  "40004a0fff67421790f92b627efa0fa8a888ed8376d4e451bfc846ebd2762b9e",
                         "first_seen":  "2026-05-15",
-                        "last_seen":  "2026-05-15",
+                        "last_seen":  "2026-05-18",
                         "last_changed":  "2026-05-15",
                         "wiki_page":  "wiki/sources/openai-cookbook/examples-gpt-5-gpt-5-prompting-guide.md"
                     },
@@ -1986,7 +1954,7 @@
                         "source_format":  "ipynb",
                         "content_hash":  "f30b317e0a55e7fec2f70577370f126d916f25fe67c1750da626543fd8c65ce2",
                         "first_seen":  "2026-05-15",
-                        "last_seen":  "2026-05-15",
+                        "last_seen":  "2026-05-18",
                         "last_changed":  "2026-05-15",
                         "wiki_page":  "wiki/sources/openai-cookbook/examples-gpt-5-gpt-5-troubleshooting-guide.md"
                     },
@@ -2002,7 +1970,7 @@
                         "source_format":  "ipynb",
                         "content_hash":  "911b51a5188c5ce6aeff990c5cff2b25473a0f9b5e79a14eb148a379159e2b0d",
                         "first_seen":  "2026-05-15",
-                        "last_seen":  "2026-05-15",
+                        "last_seen":  "2026-05-18",
                         "last_changed":  "2026-05-15",
                         "wiki_page":  "wiki/sources/openai-cookbook/examples-gpt-5-gpt-5-1-prompting-guide.md"
                     },
@@ -2018,7 +1986,7 @@
                         "source_format":  "ipynb",
                         "content_hash":  "f69f0584fcd9851149225283fbcd89773d0626ce37cf389fa9ffae28f0d60d71",
                         "first_seen":  "2026-05-15",
-                        "last_seen":  "2026-05-15",
+                        "last_seen":  "2026-05-18",
                         "last_changed":  "2026-05-15",
                         "wiki_page":  "wiki/sources/openai-cookbook/examples-gpt-5-gpt-5-2-prompting-guide.md"
                     },
@@ -2034,7 +2002,7 @@
                         "source_format":  "ipynb",
                         "content_hash":  "2bac7484aca122401aacdbe8a85130be3b7a60ea54c1486b29e385f8fc4fbb60",
                         "first_seen":  "2026-05-15",
-                        "last_seen":  "2026-05-15",
+                        "last_seen":  "2026-05-18",
                         "last_changed":  "2026-05-15",
                         "wiki_page":  "wiki/sources/openai-cookbook/examples-gpt-5-prompt-personalities.md"
                     },
@@ -2050,9 +2018,41 @@
                         "source_format":  "ipynb",
                         "content_hash":  "ec8923950b5b667ddb1378c29ca9dc4d3b06a5f62379d7eae770d10fd01802eb",
                         "first_seen":  "2026-05-15",
-                        "last_seen":  "2026-05-15",
+                        "last_seen":  "2026-05-18",
                         "last_changed":  "2026-05-15",
                         "wiki_page":  "wiki/sources/openai-cookbook/examples-gpt-5-prompt-optimization-cookbook.md"
+                    },
+                    {
+                        "url":  "https://developers.openai.com/cookbook/examples/gpt4-1_prompting_guide",
+                        "cookbook_path":  "examples/gpt4-1_prompting_guide",
+                        "source_path":  "examples/gpt4-1_prompting_guide.ipynb",
+                        "github_url":  "https://github.com/openai/openai-cookbook/blob/main/examples/gpt4-1_prompting_guide.ipynb",
+                        "raw_url":  "https://raw.githubusercontent.com/openai/openai-cookbook/main/examples/gpt4-1_prompting_guide.ipynb",
+                        "category":  "General OpenAI API patterns",
+                        "title":  "Gpt4 1 Prompting Guide",
+                        "source_kind":  "openai-cookbook-github",
+                        "source_format":  "ipynb",
+                        "content_hash":  "1a0803197a1b1afbf2fab06e2ea1182f9cf0b9c964c174d7315c97c8d4ad06d6",
+                        "first_seen":  "2026-05-15",
+                        "last_seen":  "2026-05-18",
+                        "last_changed":  "2026-05-15",
+                        "wiki_page":  "wiki/sources/openai-cookbook/examples-gpt4-1-prompting-guide.md"
+                    },
+                    {
+                        "url":  "https://developers.openai.com/cookbook/examples/gpt4o/introduction_to_gpt4o",
+                        "cookbook_path":  "examples/gpt4o/introduction_to_gpt4o",
+                        "source_path":  "examples/gpt4o/introduction_to_gpt4o.ipynb",
+                        "github_url":  "https://github.com/openai/openai-cookbook/blob/main/examples/gpt4o/introduction_to_gpt4o.ipynb",
+                        "raw_url":  "https://raw.githubusercontent.com/openai/openai-cookbook/main/examples/gpt4o/introduction_to_gpt4o.ipynb",
+                        "category":  "General OpenAI API patterns",
+                        "title":  "Introduction To Gpt4o",
+                        "source_kind":  "openai-cookbook-github",
+                        "source_format":  "ipynb",
+                        "content_hash":  "7ecb1db0bd5c1cebf7895fe9c90081ae1f826025b70a49ae736ba23e05e5094e",
+                        "first_seen":  "2026-05-15",
+                        "last_seen":  "2026-05-18",
+                        "last_changed":  "2026-05-15",
+                        "wiki_page":  "wiki/sources/openai-cookbook/examples-gpt4o-introduction-to-gpt4o.md"
                     },
                     {
                         "url":  "https://developers.openai.com/cookbook/examples/how_to_build_an_agent_with_the_node_sdk",
@@ -2066,7 +2066,7 @@
                         "source_format":  "mdx",
                         "content_hash":  "1f8078e81441a435c614729dd04c753e908a27c1fbad4be220c3cc3ca0cf9ff6",
                         "first_seen":  "2026-05-15",
-                        "last_seen":  "2026-05-15",
+                        "last_seen":  "2026-05-18",
                         "last_changed":  "2026-05-15",
                         "wiki_page":  "wiki/sources/openai-cookbook/examples-how-to-build-an-agent-with-the-node-sdk.md"
                     },
@@ -2082,7 +2082,7 @@
                         "source_format":  "ipynb",
                         "content_hash":  "900dafdd217014324a6029be80a4112e716879690e6984887867117e5b1d3ecd",
                         "first_seen":  "2026-05-15",
-                        "last_seen":  "2026-05-15",
+                        "last_seen":  "2026-05-18",
                         "last_changed":  "2026-05-15",
                         "wiki_page":  "wiki/sources/openai-cookbook/examples-how-to-call-functions-for-knowledge-retrieval.md"
                     },
@@ -2098,7 +2098,7 @@
                         "source_format":  "ipynb",
                         "content_hash":  "9e6946d759a3e03159236a5ad4544d89d0d77f90d6b94e34f896ed18275da459",
                         "first_seen":  "2026-05-15",
-                        "last_seen":  "2026-05-15",
+                        "last_seen":  "2026-05-18",
                         "last_changed":  "2026-05-15",
                         "wiki_page":  "wiki/sources/openai-cookbook/examples-how-to-call-functions-with-chat-models.md"
                     },
@@ -2114,7 +2114,7 @@
                         "source_format":  "ipynb",
                         "content_hash":  "ac446dabc2037e1242dc2c4bcc799e1dec5f2754d084a06ee82aed112ad32ca0",
                         "first_seen":  "2026-05-15",
-                        "last_seen":  "2026-05-15",
+                        "last_seen":  "2026-05-18",
                         "last_changed":  "2026-05-15",
                         "wiki_page":  "wiki/sources/openai-cookbook/examples-how-to-combine-gpt4o-with-rag-outfit-assistant.md"
                     },
@@ -2130,7 +2130,7 @@
                         "source_format":  "ipynb",
                         "content_hash":  "0b7b82d72569c89dee002801779f7d5b1ed7f377a70a51c6c8a610b1d0310288",
                         "first_seen":  "2026-05-15",
-                        "last_seen":  "2026-05-15",
+                        "last_seen":  "2026-05-18",
                         "last_changed":  "2026-05-15",
                         "wiki_page":  "wiki/sources/openai-cookbook/examples-how-to-finetune-chat-models.md"
                     },
@@ -2146,7 +2146,7 @@
                         "source_format":  "ipynb",
                         "content_hash":  "b2e71549c45ee12a555905723447e145d6e43d66a1dbc259edaef97f000d3db8",
                         "first_seen":  "2026-05-15",
-                        "last_seen":  "2026-05-15",
+                        "last_seen":  "2026-05-18",
                         "last_changed":  "2026-05-15",
                         "wiki_page":  "wiki/sources/openai-cookbook/examples-how-to-handle-rate-limits.md"
                     },
@@ -2162,7 +2162,7 @@
                         "source_format":  "ipynb",
                         "content_hash":  "feb61a4e97da2493759c89b6cc9860f91b03b7a63d145cfa459592214559322b",
                         "first_seen":  "2026-05-15",
-                        "last_seen":  "2026-05-15",
+                        "last_seen":  "2026-05-18",
                         "last_changed":  "2026-05-15",
                         "wiki_page":  "wiki/sources/openai-cookbook/examples-how-to-use-guardrails.md"
                     },
@@ -2178,7 +2178,7 @@
                         "source_format":  "ipynb",
                         "content_hash":  "d7337a4ae8bf7082737454ed2f5a2e384138178e825862ad485fd98fddea3182",
                         "first_seen":  "2026-05-15",
-                        "last_seen":  "2026-05-15",
+                        "last_seen":  "2026-05-18",
                         "last_changed":  "2026-05-15",
                         "wiki_page":  "wiki/sources/openai-cookbook/examples-how-to-use-moderation.md"
                     },
@@ -2194,7 +2194,7 @@
                         "source_format":  "ipynb",
                         "content_hash":  "730e0add7dbceb4d5ee8cf241847eb05251bfa80c6da85f9e05bedc7b4cb81ba",
                         "first_seen":  "2026-05-15",
-                        "last_seen":  "2026-05-15",
+                        "last_seen":  "2026-05-18",
                         "last_changed":  "2026-05-15",
                         "wiki_page":  "wiki/sources/openai-cookbook/examples-leveraging-model-distillation-to-fine-tune-a-model.md"
                     },
@@ -2210,7 +2210,7 @@
                         "source_format":  "ipynb",
                         "content_hash":  "fc01c141c92c9e41780fd2f8ffa3007225d822571d486ec2b7eb65c01a8021f1",
                         "first_seen":  "2026-05-15",
-                        "last_seen":  "2026-05-15",
+                        "last_seen":  "2026-05-18",
                         "last_changed":  "2026-05-15",
                         "wiki_page":  "wiki/sources/openai-cookbook/examples-mcp-databricks-mcp-cookbook.md"
                     },
@@ -2226,7 +2226,7 @@
                         "source_format":  "ipynb",
                         "content_hash":  "f82c6822ce826a4f6fb5b2fd8e7bb440713a8a0f71623e30dbe8157d1c4cc331",
                         "first_seen":  "2026-05-15",
-                        "last_seen":  "2026-05-15",
+                        "last_seen":  "2026-05-18",
                         "last_changed":  "2026-05-15",
                         "wiki_page":  "wiki/sources/openai-cookbook/examples-mcp-mcp-tool-guide.md"
                     },
@@ -2242,7 +2242,7 @@
                         "source_format":  "ipynb",
                         "content_hash":  "710f05e507114c4df01fd4969a0d3049c143658f742f6f3ff47ec204da70c531",
                         "first_seen":  "2026-05-15",
-                        "last_seen":  "2026-05-15",
+                        "last_seen":  "2026-05-18",
                         "last_changed":  "2026-05-15",
                         "wiki_page":  "wiki/sources/openai-cookbook/examples-multimodal-document-and-multimodal-understanding-tips.md"
                     },
@@ -2258,7 +2258,7 @@
                         "source_format":  "ipynb",
                         "content_hash":  "70ffd9d8483649de5e6e669551128aaf7ae5a74060c75d29f94321fb995fbcc0",
                         "first_seen":  "2026-05-15",
-                        "last_seen":  "2026-05-15",
+                        "last_seen":  "2026-05-18",
                         "last_changed":  "2026-05-15",
                         "wiki_page":  "wiki/sources/openai-cookbook/examples-multimodal-grounded-spatial-reasoning-layouts.md"
                     },
@@ -2274,7 +2274,7 @@
                         "source_format":  "ipynb",
                         "content_hash":  "7ae0a5e74b7189f3b66690180a988054b830e021e8cecc6f9bdec58169b8d25e",
                         "first_seen":  "2026-05-15",
-                        "last_seen":  "2026-05-15",
+                        "last_seen":  "2026-05-18",
                         "last_changed":  "2026-05-15",
                         "wiki_page":  "wiki/sources/openai-cookbook/examples-multimodal-image-evals.md"
                     },
@@ -2290,7 +2290,7 @@
                         "source_format":  "ipynb",
                         "content_hash":  "59317c8ce9520fde4ab5d39a3617860be2a9d2cb73757ceea28a7585367ad711",
                         "first_seen":  "2026-05-15",
-                        "last_seen":  "2026-05-15",
+                        "last_seen":  "2026-05-18",
                         "last_changed":  "2026-05-15",
                         "wiki_page":  "wiki/sources/openai-cookbook/examples-multimodal-image-understanding-with-rag.md"
                     },
@@ -2306,7 +2306,7 @@
                         "source_format":  "ipynb",
                         "content_hash":  "8c5ea71355531be2fa0e8351020c12b76da04557e2af0f1613a8a6041db2e6db",
                         "first_seen":  "2026-05-15",
-                        "last_seen":  "2026-05-15",
+                        "last_seen":  "2026-05-18",
                         "last_changed":  "2026-05-15",
                         "wiki_page":  "wiki/sources/openai-cookbook/examples-multimodal-image-gen-1-5-prompting-guide.md"
                     },
@@ -2322,7 +2322,7 @@
                         "source_format":  "ipynb",
                         "content_hash":  "3ff10ac8db6839b1f5c2ee1a9127a5e19fb902dce3896973aa05b0c7ed842972",
                         "first_seen":  "2026-05-15",
-                        "last_seen":  "2026-05-15",
+                        "last_seen":  "2026-05-18",
                         "last_changed":  "2026-05-15",
                         "wiki_page":  "wiki/sources/openai-cookbook/examples-multimodal-image-gen-models-prompting-guide.md"
                     },
@@ -2338,7 +2338,7 @@
                         "source_format":  "ipynb",
                         "content_hash":  "9a92d6d13196ea7da4e22cbd026f2a78b611119655092d27a78b899206af2660",
                         "first_seen":  "2026-05-15",
-                        "last_seen":  "2026-05-15",
+                        "last_seen":  "2026-05-18",
                         "last_changed":  "2026-05-15",
                         "wiki_page":  "wiki/sources/openai-cookbook/examples-multimodal-using-gpt4-vision-with-function-calling.md"
                     },
@@ -2354,7 +2354,7 @@
                         "source_format":  "ipynb",
                         "content_hash":  "f0c2d1efedc295e1fe1d67a1734027ace78370e41f9729cb076a4790cbc76861",
                         "first_seen":  "2026-05-15",
-                        "last_seen":  "2026-05-15",
+                        "last_seen":  "2026-05-18",
                         "last_changed":  "2026-05-15",
                         "wiki_page":  "wiki/sources/openai-cookbook/examples-multimodal-vision-fine-tuning-on-gpt4o-for-visual-question-answering.md"
                     },
@@ -2370,9 +2370,25 @@
                         "source_format":  "ipynb",
                         "content_hash":  "2e2321e92d006790444845c7eae74a53acdabd89a12c3db05bc259d9ddb91bf5",
                         "first_seen":  "2026-05-15",
-                        "last_seen":  "2026-05-15",
+                        "last_seen":  "2026-05-18",
                         "last_changed":  "2026-05-15",
                         "wiki_page":  "wiki/sources/openai-cookbook/examples-named-entity-recognition-to-enrich-text.md"
+                    },
+                    {
+                        "url":  "https://developers.openai.com/cookbook/examples/o-series/o3o4-mini_prompting_guide",
+                        "cookbook_path":  "examples/o-series/o3o4-mini_prompting_guide",
+                        "source_path":  "examples/o-series/o3o4-mini_prompting_guide.ipynb",
+                        "github_url":  "https://github.com/openai/openai-cookbook/blob/main/examples/o-series/o3o4-mini_prompting_guide.ipynb",
+                        "raw_url":  "https://raw.githubusercontent.com/openai/openai-cookbook/main/examples/o-series/o3o4-mini_prompting_guide.ipynb",
+                        "category":  "GPT-5 / reasoning / prompting",
+                        "title":  "O3o4 Mini Prompting Guide",
+                        "source_kind":  "openai-cookbook-github",
+                        "source_format":  "ipynb",
+                        "content_hash":  "f04aa759fbefb492f4b829ca70ed03ebe967c76091df77132cf1da7e6aaa2c42",
+                        "first_seen":  "2026-05-15",
+                        "last_seen":  "2026-05-18",
+                        "last_changed":  "2026-05-15",
+                        "wiki_page":  "wiki/sources/openai-cookbook/examples-o-series-o3o4-mini-prompting-guide.md"
                     },
                     {
                         "url":  "https://developers.openai.com/cookbook/examples/o1/using_chained_calls_for_o1_structured_outputs",
@@ -2386,7 +2402,7 @@
                         "source_format":  "ipynb",
                         "content_hash":  "d0a1faa1e3794d8620693c1cb38c38feaf310ee970420a4438b83cf06d1e69c4",
                         "first_seen":  "2026-05-15",
-                        "last_seen":  "2026-05-15",
+                        "last_seen":  "2026-05-18",
                         "last_changed":  "2026-05-15",
                         "wiki_page":  "wiki/sources/openai-cookbook/examples-o1-using-chained-calls-for-o1-structured-outputs.md"
                     },
@@ -2402,7 +2418,7 @@
                         "source_format":  "ipynb",
                         "content_hash":  "004756beba9ce2f7619980018cecddc996641ccd7ae0e26ee2d32d8ed97fc133",
                         "first_seen":  "2026-05-15",
-                        "last_seen":  "2026-05-15",
+                        "last_seen":  "2026-05-18",
                         "last_changed":  "2026-05-15",
                         "wiki_page":  "wiki/sources/openai-cookbook/examples-o1-using-reasoning-for-data-validation.md"
                     },
@@ -2418,7 +2434,7 @@
                         "source_format":  "ipynb",
                         "content_hash":  "f46dfdef0e4c37433c656c7af0be75eda6267c560fc61bf17e2409b61742a87e",
                         "first_seen":  "2026-05-15",
-                        "last_seen":  "2026-05-15",
+                        "last_seen":  "2026-05-18",
                         "last_changed":  "2026-05-15",
                         "wiki_page":  "wiki/sources/openai-cookbook/examples-o1-using-reasoning-for-routine-generation.md"
                     },
@@ -2434,7 +2450,7 @@
                         "source_format":  "ipynb",
                         "content_hash":  "6a6175867679c94820f6d7ed652000b91aff6df8017df425a0d9a84aadde77af",
                         "first_seen":  "2026-05-15",
-                        "last_seen":  "2026-05-15",
+                        "last_seen":  "2026-05-18",
                         "last_changed":  "2026-05-15",
                         "wiki_page":  "wiki/sources/openai-cookbook/examples-object-oriented-agentic-approach-secure-code-interpreter-tool-for-llm-agents.md"
                     },
@@ -2450,7 +2466,7 @@
                         "source_format":  "ipynb",
                         "content_hash":  "9c2782fb19368377152c153f93e0ed93f935e6cffe4dc12cf6fa71b686b48cff",
                         "first_seen":  "2026-05-15",
-                        "last_seen":  "2026-05-15",
+                        "last_seen":  "2026-05-18",
                         "last_changed":  "2026-05-15",
                         "wiki_page":  "wiki/sources/openai-cookbook/examples-optimize-prompts.md"
                     },
@@ -2466,25 +2482,9 @@
                         "source_format":  "ipynb",
                         "content_hash":  "8edf825d8f081ee0ed01e89f71fdf5b8955a0d50cb8770378babad422d185ecb",
                         "first_seen":  "2026-05-15",
-                        "last_seen":  "2026-05-15",
+                        "last_seen":  "2026-05-18",
                         "last_changed":  "2026-05-15",
                         "wiki_page":  "wiki/sources/openai-cookbook/examples-orchestrating-agents.md"
-                    },
-                    {
-                        "url":  "https://developers.openai.com/cookbook/examples/o-series/o3o4-mini_prompting_guide",
-                        "cookbook_path":  "examples/o-series/o3o4-mini_prompting_guide",
-                        "source_path":  "examples/o-series/o3o4-mini_prompting_guide.ipynb",
-                        "github_url":  "https://github.com/openai/openai-cookbook/blob/main/examples/o-series/o3o4-mini_prompting_guide.ipynb",
-                        "raw_url":  "https://raw.githubusercontent.com/openai/openai-cookbook/main/examples/o-series/o3o4-mini_prompting_guide.ipynb",
-                        "category":  "GPT-5 / reasoning / prompting",
-                        "title":  "O3o4 Mini Prompting Guide",
-                        "source_kind":  "openai-cookbook-github",
-                        "source_format":  "ipynb",
-                        "content_hash":  "f04aa759fbefb492f4b829ca70ed03ebe967c76091df77132cf1da7e6aaa2c42",
-                        "first_seen":  "2026-05-15",
-                        "last_seen":  "2026-05-15",
-                        "last_changed":  "2026-05-15",
-                        "wiki_page":  "wiki/sources/openai-cookbook/examples-o-series-o3o4-mini-prompting-guide.md"
                     },
                     {
                         "url":  "https://developers.openai.com/cookbook/examples/parse_pdf_docs_for_rag",
@@ -2498,7 +2498,7 @@
                         "source_format":  "ipynb",
                         "content_hash":  "11253aeb531837f6e7c1c338a4cf7da680be5e10838d2d06434aff225829148b",
                         "first_seen":  "2026-05-15",
-                        "last_seen":  "2026-05-15",
+                        "last_seen":  "2026-05-18",
                         "last_changed":  "2026-05-15",
                         "wiki_page":  "wiki/sources/openai-cookbook/examples-parse-pdf-docs-for-rag.md"
                     },
@@ -2514,7 +2514,7 @@
                         "source_format":  "ipynb",
                         "content_hash":  "0bdf7a38acdb67106c9671871174743929cb49debc7839f36b9bf5a6aead7a62",
                         "first_seen":  "2026-05-15",
-                        "last_seen":  "2026-05-15",
+                        "last_seen":  "2026-05-18",
                         "last_changed":  "2026-05-15",
                         "wiki_page":  "wiki/sources/openai-cookbook/examples-partners-agentic-governance-guide-agentic-governance-cookbook.md"
                     },
@@ -2530,7 +2530,7 @@
                         "source_format":  "ipynb",
                         "content_hash":  "be3ec7a3662bd968adf8ddd4c4bfdd5765a9badc6d55bf52a9ad9607b56e3058",
                         "first_seen":  "2026-05-15",
-                        "last_seen":  "2026-05-15",
+                        "last_seen":  "2026-05-18",
                         "last_changed":  "2026-05-15",
                         "wiki_page":  "wiki/sources/openai-cookbook/examples-partners-eval-driven-system-design-receipt-inspection.md"
                     },
@@ -2546,7 +2546,7 @@
                         "source_format":  "ipynb",
                         "content_hash":  "8b8c82d7d4db600a25788e8045529c98d76274ae7a5f18c876f20da25566ad3f",
                         "first_seen":  "2026-05-15",
-                        "last_seen":  "2026-05-15",
+                        "last_seen":  "2026-05-18",
                         "last_changed":  "2026-05-15",
                         "wiki_page":  "wiki/sources/openai-cookbook/examples-partners-mcp-powered-voice-agents-mcp-powered-agents-cookbook.md"
                     },
@@ -2562,7 +2562,7 @@
                         "source_format":  "ipynb",
                         "content_hash":  "4600eac55de52c77275a1bb4bc159d2ae65fadc4f17483432662326c2b13b6d2",
                         "first_seen":  "2026-05-15",
-                        "last_seen":  "2026-05-15",
+                        "last_seen":  "2026-05-18",
                         "last_changed":  "2026-05-15",
                         "wiki_page":  "wiki/sources/openai-cookbook/examples-partners-model-selection-guide-model-selection-guide.md"
                     },
@@ -2578,7 +2578,7 @@
                         "source_format":  "ipynb",
                         "content_hash":  "0cb89ee6a9cbfb72e188bc987c250ef9d244f2c8271d75975875ffa8e8649eaa",
                         "first_seen":  "2026-05-15",
-                        "last_seen":  "2026-05-15",
+                        "last_seen":  "2026-05-18",
                         "last_changed":  "2026-05-15",
                         "wiki_page":  "wiki/sources/openai-cookbook/examples-partners-self-evolving-agents-autonomous-agent-retraining.md"
                     },
@@ -2594,7 +2594,7 @@
                         "source_format":  "ipynb",
                         "content_hash":  "195a67d5b8ef20b95fa0c0c8f51d70967e89d7d2c86e30f0e6b1dba0fe7d31d6",
                         "first_seen":  "2026-05-15",
-                        "last_seen":  "2026-05-15",
+                        "last_seen":  "2026-05-18",
                         "last_changed":  "2026-05-15",
                         "wiki_page":  "wiki/sources/openai-cookbook/examples-partners-temporal-agents-with-knowledge-graphs-temporal-agents.md"
                     },
@@ -2610,7 +2610,7 @@
                         "source_format":  "ipynb",
                         "content_hash":  "75602b5c872b6284d2edbf80e5080b0c0df7b8d118f1aac0a3a47618679f6c56",
                         "first_seen":  "2026-05-15",
-                        "last_seen":  "2026-05-15",
+                        "last_seen":  "2026-05-18",
                         "last_changed":  "2026-05-15",
                         "wiki_page":  "wiki/sources/openai-cookbook/examples-prompt-caching-201.md"
                     },
@@ -2626,7 +2626,7 @@
                         "source_format":  "ipynb",
                         "content_hash":  "2f1e5fea7989d37dacf702c2ef4059e12f42b21dbf937d6a4e0eecb19b88ab12",
                         "first_seen":  "2026-05-15",
-                        "last_seen":  "2026-05-15",
+                        "last_seen":  "2026-05-18",
                         "last_changed":  "2026-05-15",
                         "wiki_page":  "wiki/sources/openai-cookbook/examples-prompt-caching101.md"
                     },
@@ -2642,7 +2642,7 @@
                         "source_format":  "ipynb",
                         "content_hash":  "3859125d9ac33bbb0d22c209c230042b652aaa56a0fe72c964330ef13b5d1463",
                         "first_seen":  "2026-05-15",
-                        "last_seen":  "2026-05-15",
+                        "last_seen":  "2026-05-18",
                         "last_changed":  "2026-05-15",
                         "wiki_page":  "wiki/sources/openai-cookbook/examples-prompt-migration-guide.md"
                     },
@@ -2658,7 +2658,7 @@
                         "source_format":  "ipynb",
                         "content_hash":  "ef5b052d05762fba75c98daee6ee209a762d9c3cacbd98580b21796fc30a225d",
                         "first_seen":  "2026-05-15",
-                        "last_seen":  "2026-05-15",
+                        "last_seen":  "2026-05-18",
                         "last_changed":  "2026-05-15",
                         "wiki_page":  "wiki/sources/openai-cookbook/examples-question-answering-using-a-search-api.md"
                     },
@@ -2674,7 +2674,7 @@
                         "source_format":  "ipynb",
                         "content_hash":  "c935617662a1fb3a3e0adec32acad85370b0b15179ed4c59401e182eae5cf715",
                         "first_seen":  "2026-05-15",
-                        "last_seen":  "2026-05-15",
+                        "last_seen":  "2026-05-18",
                         "last_changed":  "2026-05-15",
                         "wiki_page":  "wiki/sources/openai-cookbook/examples-rag-with-graph-db.md"
                     },
@@ -2690,7 +2690,7 @@
                         "source_format":  "ipynb",
                         "content_hash":  "df97d075a017d3ab54e66adb14ef7d32169f8251119b5108b486bb448e934a9d",
                         "first_seen":  "2026-05-15",
-                        "last_seen":  "2026-05-15",
+                        "last_seen":  "2026-05-18",
                         "last_changed":  "2026-05-15",
                         "wiki_page":  "wiki/sources/openai-cookbook/examples-realtime-eval-guide.md"
                     },
@@ -2706,7 +2706,7 @@
                         "source_format":  "ipynb",
                         "content_hash":  "95cf501f7afedcdcbba88219e7ead1949c9b17fe5a17e2e28079338cd9dc2dfb",
                         "first_seen":  "2026-05-15",
-                        "last_seen":  "2026-05-15",
+                        "last_seen":  "2026-05-18",
                         "last_changed":  "2026-05-15",
                         "wiki_page":  "wiki/sources/openai-cookbook/examples-realtime-out-of-band-transcription.md"
                     },
@@ -2722,7 +2722,7 @@
                         "source_format":  "ipynb",
                         "content_hash":  "1812284a24d94ebb0bce7ea7ad7f25dd20898039d98efd9152ce27c0d3d13fc8",
                         "first_seen":  "2026-05-15",
-                        "last_seen":  "2026-05-15",
+                        "last_seen":  "2026-05-18",
                         "last_changed":  "2026-05-15",
                         "wiki_page":  "wiki/sources/openai-cookbook/examples-realtime-prompting-guide.md"
                     },
@@ -2738,7 +2738,7 @@
                         "source_format":  "ipynb",
                         "content_hash":  "208606bf39c9f0dcab9d2593d8d1e17f1b2c0af222a12ca732a5d51926bf43ae",
                         "first_seen":  "2026-05-15",
-                        "last_seen":  "2026-05-15",
+                        "last_seen":  "2026-05-18",
                         "last_changed":  "2026-05-15",
                         "wiki_page":  "wiki/sources/openai-cookbook/examples-reasoning-function-calls.md"
                     },
@@ -2754,7 +2754,7 @@
                         "source_format":  "ipynb",
                         "content_hash":  "6d0eed3ec137f6391d74bbfb5728519954d1373a5128f598fc6f19d7e05ee69f",
                         "first_seen":  "2026-05-15",
-                        "last_seen":  "2026-05-15",
+                        "last_seen":  "2026-05-18",
                         "last_changed":  "2026-05-15",
                         "wiki_page":  "wiki/sources/openai-cookbook/examples-reinforcement-fine-tuning.md"
                     },
@@ -2770,7 +2770,7 @@
                         "source_format":  "ipynb",
                         "content_hash":  "2f150916d40319678df8d0f7812bb4897671aa0121296bf54b11092674050912",
                         "first_seen":  "2026-05-15",
-                        "last_seen":  "2026-05-15",
+                        "last_seen":  "2026-05-18",
                         "last_changed":  "2026-05-15",
                         "wiki_page":  "wiki/sources/openai-cookbook/examples-reproducible-outputs-with-the-seed-parameter.md"
                     },
@@ -2786,7 +2786,7 @@
                         "source_format":  "ipynb",
                         "content_hash":  "82b42df3a739f8022ca33b1d444cbfec649e58714ae064160643c05742efcf6e",
                         "first_seen":  "2026-05-15",
-                        "last_seen":  "2026-05-15",
+                        "last_seen":  "2026-05-18",
                         "last_changed":  "2026-05-15",
                         "wiki_page":  "wiki/sources/openai-cookbook/examples-responses-api-reasoning-items.md"
                     },
@@ -2802,7 +2802,7 @@
                         "source_format":  "ipynb",
                         "content_hash":  "be7300e7ffc9e383cc462a4a47e2db0279fb78b88fa938bcbbe3be484dc18686",
                         "first_seen":  "2026-05-15",
-                        "last_seen":  "2026-05-15",
+                        "last_seen":  "2026-05-18",
                         "last_changed":  "2026-05-15",
                         "wiki_page":  "wiki/sources/openai-cookbook/examples-responses-api-responses-api-tool-orchestration.md"
                     },
@@ -2818,7 +2818,7 @@
                         "source_format":  "ipynb",
                         "content_hash":  "1d51b23a76f24c3606597ba99f9670eb72881cb8dfc63b7dd5e0a0a3abb867a1",
                         "first_seen":  "2026-05-15",
-                        "last_seen":  "2026-05-15",
+                        "last_seen":  "2026-05-18",
                         "last_changed":  "2026-05-15",
                         "wiki_page":  "wiki/sources/openai-cookbook/examples-responses-api-responses-example.md"
                     },
@@ -2834,7 +2834,7 @@
                         "source_format":  "ipynb",
                         "content_hash":  "3a4bd9559bad9a5e6367eea6222663c7b483e8495e174562d9370ee70fb4c794",
                         "first_seen":  "2026-05-15",
-                        "last_seen":  "2026-05-15",
+                        "last_seen":  "2026-05-18",
                         "last_changed":  "2026-05-15",
                         "wiki_page":  "wiki/sources/openai-cookbook/examples-sdg1.md"
                     },
@@ -2850,7 +2850,7 @@
                         "source_format":  "ipynb",
                         "content_hash":  "f8d5cc4515b7003fcca934657f8064dd1020b0b0bb43254ad9c980dfc9948278",
                         "first_seen":  "2026-05-15",
-                        "last_seen":  "2026-05-15",
+                        "last_seen":  "2026-05-18",
                         "last_changed":  "2026-05-15",
                         "wiki_page":  "wiki/sources/openai-cookbook/examples-search-reranking-with-cross-encoders.md"
                     },
@@ -2866,7 +2866,7 @@
                         "source_format":  "ipynb",
                         "content_hash":  "b6e7d819eacdb1f1dc64dfc41b94b608d7e6264cd3823bbef648e2284f589756",
                         "first_seen":  "2026-05-15",
-                        "last_seen":  "2026-05-15",
+                        "last_seen":  "2026-05-18",
                         "last_changed":  "2026-05-15",
                         "wiki_page":  "wiki/sources/openai-cookbook/examples-skills-in-api.md"
                     },
@@ -2882,7 +2882,7 @@
                         "source_format":  "ipynb",
                         "content_hash":  "0de356fb60ec5d56fd3df4c2850faf5620a7cee29908a07c948d64cb89d9df79",
                         "first_seen":  "2026-05-15",
-                        "last_seen":  "2026-05-15",
+                        "last_seen":  "2026-05-18",
                         "last_changed":  "2026-05-15",
                         "wiki_page":  "wiki/sources/openai-cookbook/examples-sora-sora2-prompting-guide.md"
                     },
@@ -2898,7 +2898,7 @@
                         "source_format":  "ipynb",
                         "content_hash":  "5fe9d2dc2f365e64e7e671d2f6e5ebab5009bdec342938e8a457baaea2f5bb65",
                         "first_seen":  "2026-05-15",
-                        "last_seen":  "2026-05-15",
+                        "last_seen":  "2026-05-18",
                         "last_changed":  "2026-05-15",
                         "wiki_page":  "wiki/sources/openai-cookbook/examples-speech-transcription-methods.md"
                     },
@@ -2914,7 +2914,7 @@
                         "source_format":  "ipynb",
                         "content_hash":  "d7febf4a4b5bd66cf0a803c0558f9f9690cfc9041d68af95ddd7286e5a014c57",
                         "first_seen":  "2026-05-15",
-                        "last_seen":  "2026-05-15",
+                        "last_seen":  "2026-05-18",
                         "last_changed":  "2026-05-15",
                         "wiki_page":  "wiki/sources/openai-cookbook/examples-stripe-model-eval-selecting-a-model-based-on-stripe-conversion.md"
                     },
@@ -2930,7 +2930,7 @@
                         "source_format":  "ipynb",
                         "content_hash":  "1f8f86b6ce1d10b5b38b7942b9a1d8ca6f4cdc9b0186e03ed33f2926bbbf3849",
                         "first_seen":  "2026-05-15",
-                        "last_seen":  "2026-05-15",
+                        "last_seen":  "2026-05-18",
                         "last_changed":  "2026-05-15",
                         "wiki_page":  "wiki/sources/openai-cookbook/examples-structured-outputs-intro.md"
                     },
@@ -2946,7 +2946,7 @@
                         "source_format":  "ipynb",
                         "content_hash":  "63ec4dd4582c4b3d42132cb04212da038c4475ff32bee658054a1af483adfa0e",
                         "first_seen":  "2026-05-15",
-                        "last_seen":  "2026-05-15",
+                        "last_seen":  "2026-05-18",
                         "last_changed":  "2026-05-15",
                         "wiki_page":  "wiki/sources/openai-cookbook/examples-structured-outputs-multi-agent.md"
                     },
@@ -2962,7 +2962,7 @@
                         "source_format":  "ipynb",
                         "content_hash":  "886c3d3736fbb225b0b0eb6693bdf28cbae53d7cfc242a16aeb845d685a4011d",
                         "first_seen":  "2026-05-15",
-                        "last_seen":  "2026-05-15",
+                        "last_seen":  "2026-05-18",
                         "last_changed":  "2026-05-15",
                         "wiki_page":  "wiki/sources/openai-cookbook/examples-summarizing-long-documents.md"
                     },
@@ -2978,7 +2978,7 @@
                         "source_format":  "ipynb",
                         "content_hash":  "9d7eab6b4ac3392dc32bfd8decf6206d97925593d85b28d19c2a0c4404d68939",
                         "first_seen":  "2026-05-15",
-                        "last_seen":  "2026-05-15",
+                        "last_seen":  "2026-05-18",
                         "last_changed":  "2026-05-15",
                         "wiki_page":  "wiki/sources/openai-cookbook/examples-tag-caption-images-with-gpt4v.md"
                     },
@@ -2994,7 +2994,7 @@
                         "source_format":  "md",
                         "content_hash":  "1b782bb1e1c25cc88e8f6f0af43d3993f66580e34952633fafde8fc6bb2226b0",
                         "first_seen":  "2026-05-15",
-                        "last_seen":  "2026-05-15",
+                        "last_seen":  "2026-05-18",
                         "last_changed":  "2026-05-15",
                         "wiki_page":  "wiki/sources/openai-cookbook/examples-third-party-code-quality-and-security-scan-with-github-actions.md"
                     },
@@ -3010,7 +3010,7 @@
                         "source_format":  "ipynb",
                         "content_hash":  "6683f7e9dc26085c591be6138d6487d10a94c1c6a147424c8182fa4318ca6ad0",
                         "first_seen":  "2026-05-15",
-                        "last_seen":  "2026-05-15",
+                        "last_seen":  "2026-05-18",
                         "last_changed":  "2026-05-15",
                         "wiki_page":  "wiki/sources/openai-cookbook/examples-third-party-financial-document-analysis-with-llamaindex.md"
                     },
@@ -3026,7 +3026,7 @@
                         "source_format":  "ipynb",
                         "content_hash":  "69b95553f83b909721715024d7072ae0bbaeab0b3fee7642b002f42a5195a3db",
                         "first_seen":  "2026-05-15",
-                        "last_seen":  "2026-05-15",
+                        "last_seen":  "2026-05-18",
                         "last_changed":  "2026-05-15",
                         "wiki_page":  "wiki/sources/openai-cookbook/examples-third-party-gpt-finetuning-with-wandb.md"
                     },
@@ -3042,7 +3042,7 @@
                         "source_format":  "ipynb",
                         "content_hash":  "5a149708ba60e242bfabf717d66b583f31d61af88dccd2bed07473c464e09cd4",
                         "first_seen":  "2026-05-15",
-                        "last_seen":  "2026-05-15",
+                        "last_seen":  "2026-05-18",
                         "last_changed":  "2026-05-15",
                         "wiki_page":  "wiki/sources/openai-cookbook/examples-third-party-how-to-automate-s3-storage-with-functions.md"
                     },
@@ -3058,7 +3058,7 @@
                         "source_format":  "ipynb",
                         "content_hash":  "3f3f4fa95ba4bfd5c817faf4f214fdbe9e5057125541de3d9f1989badd7435ce",
                         "first_seen":  "2026-05-15",
-                        "last_seen":  "2026-05-15",
+                        "last_seen":  "2026-05-18",
                         "last_changed":  "2026-05-15",
                         "wiki_page":  "wiki/sources/openai-cookbook/examples-third-party-openai-monitoring-with-wandb-weave.md"
                     },
@@ -3074,7 +3074,7 @@
                         "source_format":  "ipynb",
                         "content_hash":  "5d8de28b14db3757d046536e1101ea36ba33f611e12aeeee499e977971a32279",
                         "first_seen":  "2026-05-15",
-                        "last_seen":  "2026-05-15",
+                        "last_seen":  "2026-05-18",
                         "last_changed":  "2026-05-15",
                         "wiki_page":  "wiki/sources/openai-cookbook/examples-third-party-visualizing-embeddings-in-kangas.md"
                     },
@@ -3090,7 +3090,7 @@
                         "source_format":  "ipynb",
                         "content_hash":  "e0c53cdb172e7570418be55088d815e3ce174792583459084647f1a39ebd8b27",
                         "first_seen":  "2026-05-15",
-                        "last_seen":  "2026-05-15",
+                        "last_seen":  "2026-05-18",
                         "last_changed":  "2026-05-15",
                         "wiki_page":  "wiki/sources/openai-cookbook/examples-third-party-web-search-with-google-api-bring-your-own-browser-tool.md"
                     },
@@ -3106,7 +3106,7 @@
                         "source_format":  "ipynb",
                         "content_hash":  "c8f7f802fe6ee80b0bafef20d4aa36d6dd1c77b11854f7eed41d9df8770d59c5",
                         "first_seen":  "2026-05-15",
-                        "last_seen":  "2026-05-15",
+                        "last_seen":  "2026-05-18",
                         "last_changed":  "2026-05-15",
                         "wiki_page":  "wiki/sources/openai-cookbook/examples-unit-test-writing-using-a-multi-step-prompt-with-older-completions-api.md"
                     },
@@ -3122,7 +3122,7 @@
                         "source_format":  "ipynb",
                         "content_hash":  "79ff9f63d5586668031da162b7417176681095beed79b760a501adce42cf9854",
                         "first_seen":  "2026-05-15",
-                        "last_seen":  "2026-05-15",
+                        "last_seen":  "2026-05-18",
                         "last_changed":  "2026-05-15",
                         "wiki_page":  "wiki/sources/openai-cookbook/examples-using-logprobs.md"
                     },
@@ -3138,7 +3138,7 @@
                         "source_format":  "ipynb",
                         "content_hash":  "196893a63ca70b3d26db24b70c70f684f98de78782db55b53449e8631e6eac54",
                         "first_seen":  "2026-05-15",
-                        "last_seen":  "2026-05-15",
+                        "last_seen":  "2026-05-18",
                         "last_changed":  "2026-05-15",
                         "wiki_page":  "wiki/sources/openai-cookbook/examples-using-tool-required-for-customer-service.md"
                     },
@@ -3154,7 +3154,7 @@
                         "source_format":  "ipynb",
                         "content_hash":  "7f4ac80c4610f5839e2ed40b3d8e3748026fd6f82a4e1c0747e2d702e9b033b5",
                         "first_seen":  "2026-05-15",
-                        "last_seen":  "2026-05-15",
+                        "last_seen":  "2026-05-18",
                         "last_changed":  "2026-05-15",
                         "wiki_page":  "wiki/sources/openai-cookbook/examples-vector-databases-azuresearch-getting-started-with-azure-ai-search-and-openai.md"
                     },
@@ -3170,7 +3170,7 @@
                         "source_format":  "ipynb",
                         "content_hash":  "e7c580739e46f62d6aa433b845eb84e06a4dd7cb43007ab9257c6ac3cb43649f",
                         "first_seen":  "2026-05-15",
-                        "last_seen":  "2026-05-15",
+                        "last_seen":  "2026-05-18",
                         "last_changed":  "2026-05-15",
                         "wiki_page":  "wiki/sources/openai-cookbook/examples-vector-databases-cassandra-astradb-philosophical-quotes-cassio.md"
                     },
@@ -3186,7 +3186,7 @@
                         "source_format":  "ipynb",
                         "content_hash":  "87a6bbb397086d3a5895c70e261eddf91260d748eef137b1bda0bf2c9c653a5a",
                         "first_seen":  "2026-05-15",
-                        "last_seen":  "2026-05-15",
+                        "last_seen":  "2026-05-18",
                         "last_changed":  "2026-05-15",
                         "wiki_page":  "wiki/sources/openai-cookbook/examples-vector-databases-cassandra-astradb-philosophical-quotes-cql.md"
                     },
@@ -3202,7 +3202,7 @@
                         "source_format":  "md",
                         "content_hash":  "c195e22bf41b95cca2231b74c16673b9aadbeb28192a1aa5b7792d2feb78b011",
                         "first_seen":  "2026-05-15",
-                        "last_seen":  "2026-05-15",
+                        "last_seen":  "2026-05-18",
                         "last_changed":  "2026-05-15",
                         "wiki_page":  "wiki/sources/openai-cookbook/examples-vector-databases-cassandra-astradb-readme.md"
                     },
@@ -3218,7 +3218,7 @@
                         "source_format":  "ipynb",
                         "content_hash":  "a851da97c0edae1200d915f093384e3862d884d983db75c2787853bb48eb1b07",
                         "first_seen":  "2026-05-15",
-                        "last_seen":  "2026-05-15",
+                        "last_seen":  "2026-05-18",
                         "last_changed":  "2026-05-15",
                         "wiki_page":  "wiki/sources/openai-cookbook/examples-vector-databases-chroma-hyde-with-chroma-and-openai.md"
                     },
@@ -3234,7 +3234,7 @@
                         "source_format":  "ipynb",
                         "content_hash":  "2be42b8e0d0a3733c8e9aa9399e8c3665b41f342af50f356857d85bb0febe595",
                         "first_seen":  "2026-05-15",
-                        "last_seen":  "2026-05-15",
+                        "last_seen":  "2026-05-18",
                         "last_changed":  "2026-05-15",
                         "wiki_page":  "wiki/sources/openai-cookbook/examples-vector-databases-chroma-using-chroma-for-embeddings-search.md"
                     },
@@ -3250,7 +3250,7 @@
                         "source_format":  "ipynb",
                         "content_hash":  "8883ef32f6bf2103842f8fdfe891a7138cb04e51eec4bf228e5f47f84e08338e",
                         "first_seen":  "2026-05-15",
-                        "last_seen":  "2026-05-15",
+                        "last_seen":  "2026-05-18",
                         "last_changed":  "2026-05-15",
                         "wiki_page":  "wiki/sources/openai-cookbook/examples-vector-databases-deeplake-deeplake-langchain-qa.md"
                     },
@@ -3266,7 +3266,7 @@
                         "source_format":  "ipynb",
                         "content_hash":  "8e74e4aba6434a2f4dc5f0a3b6116b7a2a02649f771a433beb40a4e2b1491f0d",
                         "first_seen":  "2026-05-15",
-                        "last_seen":  "2026-05-15",
+                        "last_seen":  "2026-05-18",
                         "last_changed":  "2026-05-15",
                         "wiki_page":  "wiki/sources/openai-cookbook/examples-vector-databases-elasticsearch-elasticsearch-retrieval-augmented-generation.md"
                     },
@@ -3282,7 +3282,7 @@
                         "source_format":  "ipynb",
                         "content_hash":  "1dfd5ee275c4c55ba8339ba5d37058b792a0a00c17c1353c9ee6121eefb584ef",
                         "first_seen":  "2026-05-15",
-                        "last_seen":  "2026-05-15",
+                        "last_seen":  "2026-05-18",
                         "last_changed":  "2026-05-15",
                         "wiki_page":  "wiki/sources/openai-cookbook/examples-vector-databases-elasticsearch-elasticsearch-semantic-search.md"
                     },
@@ -3298,7 +3298,7 @@
                         "source_format":  "md",
                         "content_hash":  "e6d665195b9e54a16360fc46cb34ded6c4e8982839e02cdea4879ff5c870029f",
                         "first_seen":  "2026-05-15",
-                        "last_seen":  "2026-05-15",
+                        "last_seen":  "2026-05-18",
                         "last_changed":  "2026-05-15",
                         "wiki_page":  "wiki/sources/openai-cookbook/examples-vector-databases-elasticsearch-readme.md"
                     },
@@ -3314,7 +3314,7 @@
                         "source_format":  "ipynb",
                         "content_hash":  "9e213723c17cfdb0426c4b1dd515f400cdf0303704b7d12b163df3700f7646ba",
                         "first_seen":  "2026-05-15",
-                        "last_seen":  "2026-05-15",
+                        "last_seen":  "2026-05-18",
                         "last_changed":  "2026-05-15",
                         "wiki_page":  "wiki/sources/openai-cookbook/examples-vector-databases-hologres-getting-started-with-hologres-and-openai.md"
                     },
@@ -3330,7 +3330,7 @@
                         "source_format":  "md",
                         "content_hash":  "16a3809f569636aa4030edb2d9a4a4c848d728661dc2059eeaf5739b569892af",
                         "first_seen":  "2026-05-15",
-                        "last_seen":  "2026-05-15",
+                        "last_seen":  "2026-05-18",
                         "last_changed":  "2026-05-15",
                         "wiki_page":  "wiki/sources/openai-cookbook/examples-vector-databases-mongodb-atlas-readme.md"
                     },
@@ -3346,7 +3346,7 @@
                         "source_format":  "ipynb",
                         "content_hash":  "433e99241f187a9397b232d5fc1f5b70c31fe50d8873992631e5c58002de2352",
                         "first_seen":  "2026-05-15",
-                        "last_seen":  "2026-05-15",
+                        "last_seen":  "2026-05-18",
                         "last_changed":  "2026-05-15",
                         "wiki_page":  "wiki/sources/openai-cookbook/examples-vector-databases-mongodb-atlas-semantic-search-using-mongodb-atlas-vector-search.md"
                     },
@@ -3362,7 +3362,7 @@
                         "source_format":  "ipynb",
                         "content_hash":  "1b320c624bf0c167a7053fbdedd3c559d97cfe75239bff136a4fe4ef9f9f2e1b",
                         "first_seen":  "2026-05-15",
-                        "last_seen":  "2026-05-15",
+                        "last_seen":  "2026-05-18",
                         "last_changed":  "2026-05-15",
                         "wiki_page":  "wiki/sources/openai-cookbook/examples-vector-databases-myscale-using-myscale-for-embeddings-search.md"
                     },
@@ -3378,7 +3378,7 @@
                         "source_format":  "ipynb",
                         "content_hash":  "642b30dbcbcb2d8206bd01a2140061bbc9041e23ca835d199a4f7496abceaecc",
                         "first_seen":  "2026-05-15",
-                        "last_seen":  "2026-05-15",
+                        "last_seen":  "2026-05-18",
                         "last_changed":  "2026-05-15",
                         "wiki_page":  "wiki/sources/openai-cookbook/examples-vector-databases-neon-neon-postgres-vector-search-pgvector.md"
                     },
@@ -3394,7 +3394,7 @@
                         "source_format":  "md",
                         "content_hash":  "23a2c65c8f64920e774b975636bb97ed4c29b05a23f6234a91477bb710d84b36",
                         "first_seen":  "2026-05-15",
-                        "last_seen":  "2026-05-15",
+                        "last_seen":  "2026-05-18",
                         "last_changed":  "2026-05-15",
                         "wiki_page":  "wiki/sources/openai-cookbook/examples-vector-databases-neon-readme.md"
                     },
@@ -3410,7 +3410,7 @@
                         "source_format":  "ipynb",
                         "content_hash":  "4c34ecadf7866246d514903e0232e204215ff1e3ad37a1219c7bf30093097e44",
                         "first_seen":  "2026-05-15",
-                        "last_seen":  "2026-05-15",
+                        "last_seen":  "2026-05-18",
                         "last_changed":  "2026-05-15",
                         "wiki_page":  "wiki/sources/openai-cookbook/examples-vector-databases-pinecone-using-pinecone-for-embeddings-search.md"
                     },
@@ -3426,7 +3426,7 @@
                         "source_format":  "ipynb",
                         "content_hash":  "e3d9fae1133919914c9bef2f3d66acbf437d6d508641e6472b2622c33010b071",
                         "first_seen":  "2026-05-15",
-                        "last_seen":  "2026-05-15",
+                        "last_seen":  "2026-05-18",
                         "last_changed":  "2026-05-15",
                         "wiki_page":  "wiki/sources/openai-cookbook/examples-vector-databases-pinecone-using-vision-modality-for-rag-with-pinecone.md"
                     },
@@ -3442,7 +3442,7 @@
                         "source_format":  "ipynb",
                         "content_hash":  "0d1e873f21b16ecc6f1d57f0e9d9585e0e550c7acf627e16b1077f713102ca16",
                         "first_seen":  "2026-05-15",
-                        "last_seen":  "2026-05-15",
+                        "last_seen":  "2026-05-18",
                         "last_changed":  "2026-05-15",
                         "wiki_page":  "wiki/sources/openai-cookbook/examples-vector-databases-polardb-getting-started-with-polardb-and-openai.md"
                     },
@@ -3458,7 +3458,7 @@
                         "source_format":  "ipynb",
                         "content_hash":  "2b7552a03c8768beda2953afd50d55c4fb6a180cf4485ef1ab8fd02784537b8f",
                         "first_seen":  "2026-05-15",
-                        "last_seen":  "2026-05-15",
+                        "last_seen":  "2026-05-18",
                         "last_changed":  "2026-05-15",
                         "wiki_page":  "wiki/sources/openai-cookbook/examples-vector-databases-qdrant-using-qdrant-for-embeddings-search.md"
                     },
@@ -3474,7 +3474,7 @@
                         "source_format":  "md",
                         "content_hash":  "829d4cc1cc51a585fad43aa2baf47e541b85b112ae83dfb1465eb769f3b20648",
                         "first_seen":  "2026-05-15",
-                        "last_seen":  "2026-05-15",
+                        "last_seen":  "2026-05-18",
                         "last_changed":  "2026-05-15",
                         "wiki_page":  "wiki/sources/openai-cookbook/examples-vector-databases-readme.md"
                     },
@@ -3490,7 +3490,7 @@
                         "source_format":  "ipynb",
                         "content_hash":  "e79ddb1af3d0b4ec4db907861e9e7a95dd3dbea2c6020bf652d5628438fd9b60",
                         "first_seen":  "2026-05-15",
-                        "last_seen":  "2026-05-15",
+                        "last_seen":  "2026-05-18",
                         "last_changed":  "2026-05-15",
                         "wiki_page":  "wiki/sources/openai-cookbook/examples-vector-databases-redis-using-redis-for-embeddings-search.md"
                     },
@@ -3506,7 +3506,7 @@
                         "source_format":  "ipynb",
                         "content_hash":  "e233a76b68296d477c0526c72b826a95401ba7bd7c33312bec1c851ca42c4de6",
                         "first_seen":  "2026-05-15",
-                        "last_seen":  "2026-05-15",
+                        "last_seen":  "2026-05-18",
                         "last_changed":  "2026-05-15",
                         "wiki_page":  "wiki/sources/openai-cookbook/examples-vector-databases-singlestoredb-openai-wikipedia-semantic-search.md"
                     },
@@ -3522,7 +3522,7 @@
                         "source_format":  "md",
                         "content_hash":  "bdba1125e8947ac465b18a81de92d17a01325581d4c17db1612e0ffbef66d629",
                         "first_seen":  "2026-05-15",
-                        "last_seen":  "2026-05-15",
+                        "last_seen":  "2026-05-18",
                         "last_changed":  "2026-05-15",
                         "wiki_page":  "wiki/sources/openai-cookbook/examples-vector-databases-singlestoredb-readme.md"
                     },
@@ -3538,7 +3538,7 @@
                         "source_format":  "md",
                         "content_hash":  "5cffac60cb5a7a849fcd735d5dbc794ec9885c4dd583532c08e7fb22e5aed7e8",
                         "first_seen":  "2026-05-15",
-                        "last_seen":  "2026-05-15",
+                        "last_seen":  "2026-05-18",
                         "last_changed":  "2026-05-15",
                         "wiki_page":  "wiki/sources/openai-cookbook/examples-vector-databases-supabase-readme.md"
                     },
@@ -3554,7 +3554,7 @@
                         "source_format":  "mdx",
                         "content_hash":  "5b2124149b7802b2e9c518afe8c9cad9a24c032263309b865c7d29f244b96e8b",
                         "first_seen":  "2026-05-15",
-                        "last_seen":  "2026-05-15",
+                        "last_seen":  "2026-05-18",
                         "last_changed":  "2026-05-15",
                         "wiki_page":  "wiki/sources/openai-cookbook/examples-vector-databases-supabase-semantic-search.md"
                     },
@@ -3570,7 +3570,7 @@
                         "source_format":  "ipynb",
                         "content_hash":  "7704bce52e9f9b16ab2d26468e7461deb7f867f1e65429498bcf749e095c2907",
                         "first_seen":  "2026-05-15",
-                        "last_seen":  "2026-05-15",
+                        "last_seen":  "2026-05-18",
                         "last_changed":  "2026-05-15",
                         "wiki_page":  "wiki/sources/openai-cookbook/examples-vector-databases-tair-getting-started-with-tair-and-openai.md"
                     },
@@ -3586,7 +3586,7 @@
                         "source_format":  "ipynb",
                         "content_hash":  "129cabcf7cb5663465b34283e33e4d38f0785b9b4ec2ce26480487db97a20826",
                         "first_seen":  "2026-05-15",
-                        "last_seen":  "2026-05-15",
+                        "last_seen":  "2026-05-18",
                         "last_changed":  "2026-05-15",
                         "wiki_page":  "wiki/sources/openai-cookbook/examples-vector-databases-tair-qa-with-langchain-tair-and-openai.md"
                     },
@@ -3602,7 +3602,7 @@
                         "source_format":  "ipynb",
                         "content_hash":  "b3a5adf7cc6bcd76c1d6f66f179f2e669537dc74a2b688766b337c90d9b65933",
                         "first_seen":  "2026-05-15",
-                        "last_seen":  "2026-05-15",
+                        "last_seen":  "2026-05-18",
                         "last_changed":  "2026-05-15",
                         "wiki_page":  "wiki/sources/openai-cookbook/examples-vector-databases-typesense-using-typesense-for-embeddings-search.md"
                     },
@@ -3618,7 +3618,7 @@
                         "source_format":  "ipynb",
                         "content_hash":  "f7259bce41c8040dc621bfc7ca52cc102ff84d13db3ec9bb7ebbca69c59e1457",
                         "first_seen":  "2026-05-15",
-                        "last_seen":  "2026-05-15",
+                        "last_seen":  "2026-05-18",
                         "last_changed":  "2026-05-15",
                         "wiki_page":  "wiki/sources/openai-cookbook/examples-vector-databases-weaviate-generative-search-with-weaviate-and-openai.md"
                     },
@@ -3634,7 +3634,7 @@
                         "source_format":  "ipynb",
                         "content_hash":  "8fdce3581d63b662fd24c2120e34f71da88a4d83664bf1799194cbfe0bf7bb2a",
                         "first_seen":  "2026-05-15",
-                        "last_seen":  "2026-05-15",
+                        "last_seen":  "2026-05-18",
                         "last_changed":  "2026-05-15",
                         "wiki_page":  "wiki/sources/openai-cookbook/examples-vector-databases-weaviate-using-weaviate-for-embeddings-search.md"
                     },
@@ -3650,7 +3650,7 @@
                         "source_format":  "mdx",
                         "content_hash":  "d2025951d3e7e06c23d86ccd7e65116e880e09d57e7fd7723f0fe1681c06af0a",
                         "first_seen":  "2026-05-15",
-                        "last_seen":  "2026-05-15",
+                        "last_seen":  "2026-05-18",
                         "last_changed":  "2026-05-15",
                         "wiki_page":  "wiki/sources/openai-cookbook/examples-voice-solutions-one-way-translation-using-realtime-api.md"
                     },
@@ -3666,7 +3666,7 @@
                         "source_format":  "mdx",
                         "content_hash":  "6a678639634ebda136b619da94fe36f95840fff69e3f66f32c6e3ac733b95667",
                         "first_seen":  "2026-05-15",
-                        "last_seen":  "2026-05-15",
+                        "last_seen":  "2026-05-18",
                         "last_changed":  "2026-05-15",
                         "wiki_page":  "wiki/sources/openai-cookbook/examples-voice-solutions-realtime-translation-guide.md"
                     },
@@ -3682,7 +3682,7 @@
                         "source_format":  "md",
                         "content_hash":  "29ce2c81fe7af8c31826eb9e7e6f23363726d716af448da908a51ee44c4ba8f8",
                         "first_seen":  "2026-05-15",
-                        "last_seen":  "2026-05-15",
+                        "last_seen":  "2026-05-18",
                         "last_changed":  "2026-05-15",
                         "wiki_page":  "wiki/sources/openai-cookbook/examples-voice-solutions-running-realtime-api-speech-on-esp32-arduino-edge-runtime-elatoai.md"
                     },
@@ -3698,7 +3698,7 @@
                         "source_format":  "ipynb",
                         "content_hash":  "5f847fb31e545c5adcc0a1fc15a227d19b673c452b991d7847f581a30932b6e9",
                         "first_seen":  "2026-05-15",
-                        "last_seen":  "2026-05-15",
+                        "last_seen":  "2026-05-18",
                         "last_changed":  "2026-05-15",
                         "wiki_page":  "wiki/sources/openai-cookbook/examples-voice-solutions-steering-tts.md"
                     },
@@ -3709,12 +3709,12 @@
                         "github_url":  "https://github.com/openai/openai-cookbook/blob/main/examples/voice_solutions/voice_translation_into_different_languages_using_GPT-4o.ipynb",
                         "raw_url":  "https://raw.githubusercontent.com/openai/openai-cookbook/main/examples/voice_solutions/voice_translation_into_different_languages_using_GPT-4o.ipynb",
                         "category":  "Realtime / voice / transcription",
-                        "title":  "Voice Translation Into Different Languages Using Gpt 4O",
+                        "title":  "Voice Translation Into Different Languages Using Gpt 4o",
                         "source_kind":  "openai-cookbook-github",
                         "source_format":  "ipynb",
                         "content_hash":  "f49140c1c3ad4b7d590e4e476949269dc810ca1a37b6f81fc6eab65694849fe9",
                         "first_seen":  "2026-05-15",
-                        "last_seen":  "2026-05-15",
+                        "last_seen":  "2026-05-18",
                         "last_changed":  "2026-05-15",
                         "wiki_page":  "wiki/sources/openai-cookbook/examples-voice-solutions-voice-translation-into-different-languages-using-gpt-4o.md"
                     },
@@ -3730,7 +3730,7 @@
                         "source_format":  "ipynb",
                         "content_hash":  "1c5835752a79f969ec32daba80b65d01095808fe4a7eea9c014ef61f5a70143c",
                         "first_seen":  "2026-05-15",
-                        "last_seen":  "2026-05-15",
+                        "last_seen":  "2026-05-18",
                         "last_changed":  "2026-05-15",
                         "wiki_page":  "wiki/sources/openai-cookbook/examples-whisper-correct-misspelling.md"
                     },
@@ -3746,7 +3746,7 @@
                         "source_format":  "ipynb",
                         "content_hash":  "b7fee3c54cd9e65882709efffa7bf48f72f408125ffbda06bf44f3af3964627d",
                         "first_seen":  "2026-05-15",
-                        "last_seen":  "2026-05-15",
+                        "last_seen":  "2026-05-18",
                         "last_changed":  "2026-05-15",
                         "wiki_page":  "wiki/sources/openai-cookbook/examples-whisper-processing-guide.md"
                     },
@@ -3762,7 +3762,7 @@
                         "source_format":  "ipynb",
                         "content_hash":  "ceb74433f92bd8b1152eb21a76b780773cdfb56aaec83d78db9dce031ed984d9",
                         "first_seen":  "2026-05-15",
-                        "last_seen":  "2026-05-15",
+                        "last_seen":  "2026-05-18",
                         "last_changed":  "2026-05-15",
                         "wiki_page":  "wiki/sources/openai-cookbook/examples-whisper-prompting-guide.md"
                     }

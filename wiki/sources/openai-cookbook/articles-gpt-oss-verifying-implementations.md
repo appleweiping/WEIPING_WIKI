@@ -3,7 +3,7 @@ title: "Verifying Implementations"
 type: source
 status: mirrored
 created: 2026-05-15
-updated: 2026-05-15
+updated: 2026-05-18
 tags:
   - article
   - cookbook
@@ -37,7 +37,7 @@ source_pages:
 
 ## Summary
 
-Verifying gpt-oss implementations The $1 are introducing a lot of new concepts to the open-model ecosystem and $1. This guide is meant to help developers building inference solutions to verify their implementations or for developers who want to test any provider’s implementation on their own to gain confidence. Why is implementing gpt-oss models different? T...
+Verifying gpt-oss implementations The OpenAI gpt-oss models are introducing a lot of new concepts to the open-model ecosystem and getting them to perform as expected might take some time. This guide is meant to help developers building inference solutions to verify their implementations or for developers who want to test any provider’s implementation on thei...
 
 ## What This Teaches
 

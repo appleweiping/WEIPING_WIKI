@@ -3,7 +3,7 @@ title: Shunyu Yao Project Taxonomy
 type: analysis
 status: active
 created: 2026-05-16
-updated: 2026-05-16
+updated: 2026-05-18
 tags:
   - shunyu-yao
   - project-taxonomy

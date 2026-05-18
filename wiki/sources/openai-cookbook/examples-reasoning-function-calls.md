@@ -3,7 +3,7 @@ title: "Reasoning Function Calls"
 type: source
 status: mirrored
 created: 2026-05-15
-updated: 2026-05-15
+updated: 2026-05-18
 tags:
   - cookbook
   - example
@@ -38,7 +38,7 @@ source_pages:
 
 ## Summary
 
-Managing Function Calls With Reasoning Models OpenAI now offers function calling using $1. Reasoning models are trained to follow logical chains of thought, making them better suited for complex or multi-step tasks. Reasoning models like o3 and o4-mini are LLMs trained with reinforcement learning to perform reasoning. Reasoning models think before they answe...
+Managing Function Calls With Reasoning Models OpenAI now offers function calling using reasoning models. Reasoning models are trained to follow logical chains of thought, making them better suited for complex or multi-step tasks. Reasoning models like o3 and o4-mini are LLMs trained with reinforcement learning to perform reasoning. Reasoning models think bef...
 
 ## What This Teaches
 

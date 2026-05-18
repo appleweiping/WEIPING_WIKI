@@ -3,7 +3,7 @@ title: "How To Call Functions For Knowledge Retrieval"
 type: source
 status: mirrored
 created: 2026-05-15
-updated: 2026-05-15
+updated: 2026-05-18
 tags:
   - cookbook
   - evals
@@ -38,7 +38,7 @@ source_pages:
 
 ## Summary
 
-How to use functions with a knowledge base This notebook builds on the concepts in the $1 notebook, by creating an agent with access to a knowledge base and two functions that it can call based on the user requirement. We'll create an agent that uses data from arXiv to answer questions about academic subjects. It has two functions at its disposal: - get arti...
+How to use functions with a knowledge base This notebook builds on the concepts in the argument generation notebook, by creating an agent with access to a knowledge base and two functions that it can call based on the user requirement. We'll create an agent that uses data from arXiv to answer questions about academic subjects. It has two functions at its dis...
 
 ## What This Teaches
 

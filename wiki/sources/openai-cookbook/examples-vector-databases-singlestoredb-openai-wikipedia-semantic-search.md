@@ -3,7 +3,7 @@ title: "Openai Wikipedia Semantic Search"
 type: source
 status: mirrored
 created: 2026-05-15
-updated: 2026-05-15
+updated: 2026-05-18
 tags:
   - cookbook
   - example
@@ -38,7 +38,7 @@ source_pages:
 
 ## Summary
 
-Intro This notebook is an example on how you can use SingleStoreDB vector storage and functions to build an interactive Q&A application with ChatGPT. If you start a $1 in SingleStoreDB, you can find the same notebook in our sample notebooks with native connection. First let's talk directly to ChatGPT and try and get back a response Let's connect to OpenAI an...
+Intro This notebook is an example on how you can use SingleStoreDB vector storage and functions to build an interactive Q&A application with ChatGPT. If you start a Trial in SingleStoreDB, you can find the same notebook in our sample notebooks with native connection. First let's talk directly to ChatGPT and try and get back a response Let's connect to OpenAI...
 
 ## What This Teaches
 

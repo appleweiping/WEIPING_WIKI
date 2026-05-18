@@ -3,7 +3,7 @@ title: "Codex Prompting Guide"
 type: source
 status: mirrored
 created: 2026-05-15
-updated: 2026-05-15
+updated: 2026-05-18
 tags:
   - codex
   - coding-agents
@@ -38,7 +38,7 @@ source_pages:
 
 ## Summary
 
-Codex Prompting Guide Codex models advance the frontier of intelligence and efficiency and our recommended agentic coding model. Follow this guide closely to ensure you’re getting the best performance possible from this model. This guide is for anyone using the model directly via the API for maximum customizability; we also have the $1 for simpler integratio...
+Codex Prompting Guide Codex models advance the frontier of intelligence and efficiency and our recommended agentic coding model. Follow this guide closely to ensure you’re getting the best performance possible from this model. This guide is for anyone using the model directly via the API for maximum customizability; we also have the Codex SDK for simpler int...
 
 ## What This Teaches
 

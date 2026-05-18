@@ -3,7 +3,7 @@ title: "Run Vllm"
 type: source
 status: mirrored
 created: 2026-05-15
-updated: 2026-05-15
+updated: 2026-05-18
 tags:
   - article
   - cookbook
@@ -37,7 +37,7 @@ source_pages:
 
 ## Summary
 
-How to run gpt-oss with vLLM $1 is an open-source, high-throughput inference engine designed to efficiently serve large language models (LLMs) by optimizing memory usage and processing speed. This guide will walk you through how to use vLLM to set up gpt-oss-20b or gpt-oss-120b on a server to serve gpt-oss as an API for your applications, and even connect it...
+How to run gpt-oss with vLLM vLLM is an open-source, high-throughput inference engine designed to efficiently serve large language models (LLMs) by optimizing memory usage and processing speed. This guide will walk you through how to use vLLM to set up gpt-oss-20b or gpt-oss-120b on a server to serve gpt-oss as an API for your applications, and even connect...
 
 ## What This Teaches
 

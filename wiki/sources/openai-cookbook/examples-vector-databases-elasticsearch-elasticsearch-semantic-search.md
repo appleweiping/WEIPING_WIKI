@@ -3,7 +3,7 @@ title: "Elasticsearch Semantic Search"
 type: source
 status: mirrored
 created: 2026-05-15
-updated: 2026-05-15
+updated: 2026-05-18
 tags:
   - cookbook
   - example
@@ -38,7 +38,7 @@ source_pages:
 
 ## Summary
 
-Semantic search using Elasticsearch and OpenAI $1](openai/openai-cookbook/blob/main/examples/vector databases/elasticsearch/elasticsearch-semantic-search.ipynb) This notebook demonstrates how to: - Index the OpenAI Wikipedia vector dataset into Elasticsearch - Embed a question with the OpenAI $1 endpoint - Perform semantic search on the Elasticsearch index u...
+Semantic search using Elasticsearch and OpenAI ![Open In Colab](openai/openai-cookbook/blob/main/examples/vector databases/elasticsearch/elasticsearch-semantic-search.ipynb) This notebook demonstrates how to: - Index the OpenAI Wikipedia vector dataset into Elasticsearch - Embed a question with the OpenAI embeddings endpoint - Perform semantic search on the...
 
 ## What This Teaches
 

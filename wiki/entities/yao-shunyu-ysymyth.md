@@ -3,7 +3,7 @@ title: Yao Shunyu / Shunyu Yao / ysymyth
 type: entity
 status: active
 created: 2026-05-16
-updated: 2026-05-16
+updated: 2026-05-18
 tags:
   - shunyu-yao
   - ysymyth
@@ -29,7 +29,7 @@ source_pages:
 - Entries: 57
 - New entries this run: 0
 - Changed entries this run: 0
-- Errors: 0
+- Errors: 3
 
 ## Research Shape
 

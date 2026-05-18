@@ -3,13 +3,14 @@ title: 2026-05-16 Skill Source Repository Trace
 type: source
 status: active
 created: 2026-05-16
-updated: 2026-05-16
+updated: 2026-05-18
 tags:
   - source
   - agent-skills
   - local-projects
 source_files:
   - D:/Skill
+  - .claude/skills/mattpocock-skills
 source_pages:
   - https://github.com/anbeime/skill
   - https://github.com/titanwings/colleague-skill
@@ -53,6 +54,15 @@ source_pages:
 - Do not mirror full upstream repos into the public wiki.
 - Preserve provenance, repository role, upstream/fork relationship, current HEAD, source confidence, and usage routing.
 - Re-scan live remotes before making current claims because these upstream projects are active.
+
+## 2026-05-18 Claude Skill Install Audit
+
+- EXTRACTED: `.claude/skills/mattpocock-skills` is a local install copy of the Matt Pocock skills repository, with `origin` set to `https://github.com/appleweiping/skills.git` and `upstream` set to `https://github.com/mattpocock/skills.git`.
+- EXTRACTED: The install copy is on branch `main` at `e74f0061bb67222181640effa98c675bdb2fdaa7`, matching the previously recorded source-mirror HEAD.
+- EXTRACTED: `.claude-plugin/plugin.json` declares 14 skills, and all declared skill directories contain `SKILL.md`.
+- EXTRACTED: The repository license is MIT.
+- EXTRACTED: A local credential/private-path scan found no obvious secrets in the install copy.
+- INFERRED: The install is reasonable to track as source files under `.claude/skills/mattpocock-skills`, but its nested `.git` metadata should remain untracked.
 
 ## Counterpoints And Gaps
 

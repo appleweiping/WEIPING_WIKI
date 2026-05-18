@@ -3,7 +3,7 @@ title: "Semantic Search Using Mongodb Atlas Vector Search"
 type: source
 status: mirrored
 created: 2026-05-15
-updated: 2026-05-15
+updated: 2026-05-18
 tags:
   - cookbook
   - example
@@ -38,7 +38,7 @@ source_pages:
 
 ## Summary
 
-This notebook demonstrates how to build a semantic search application using OpenAI and $1 Step 1: Setup the environment There are 2 pre-requisites for this: 1. MongoDB Atlas cluster : To create a forever free MongoDB Atlas cluster, first, you need to create a MongoDB Atlas account if you don't already have one. Visit the $1 and click on “Register.” Visit the...
+This notebook demonstrates how to build a semantic search application using OpenAI and MongoDB Atlas vector search Step 1: Setup the environment There are 2 pre-requisites for this: 1. MongoDB Atlas cluster : To create a forever free MongoDB Atlas cluster, first, you need to create a MongoDB Atlas account if you don't already have one. Visit the MongoDB Atla...
 
 ## What This Teaches
 

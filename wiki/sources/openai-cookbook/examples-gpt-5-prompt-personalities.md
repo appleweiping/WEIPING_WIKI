@@ -3,7 +3,7 @@ title: "Prompt Personalities"
 type: source
 status: mirrored
 created: 2026-05-15
-updated: 2026-05-15
+updated: 2026-05-18
 tags:
   - cookbook
   - example
@@ -38,7 +38,7 @@ source_pages:
 
 ## Summary
 
-Shaping your agent’s personality Similar to ChatGPT’s built-in personality $1, you can steer your Agent’s behavior by explicitly defining its personality in your prompt instructions. These instructions—sometimes called the “system prompt” or “developer prompt”—guide the agent’s tone, detail level, and style of responses. In this notebook, we’ll refer to them...
+Shaping your agent’s personality Similar to ChatGPT’s built-in personality presets, you can steer your Agent’s behavior by explicitly defining its personality in your prompt instructions. These instructions—sometimes called the “system prompt” or “developer prompt”—guide the agent’s tone, detail level, and style of responses. In this notebook, we’ll refer to...
 
 ## What This Teaches
 

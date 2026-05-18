@@ -3,7 +3,7 @@ title: "Visualizing Embeddings In Kangas"
 type: source
 status: mirrored
 created: 2026-05-15
-updated: 2026-05-15
+updated: 2026-05-18
 tags:
   - cookbook
   - example
@@ -38,7 +38,7 @@ source_pages:
 
 ## Summary
 
-Visualizing the embeddings in Kangas In this Jupyter Notebook, we construct a Kangas DataGrid containing the data and projections of the embeddings into 2 dimensions. What is Kangas? $1 as an open source, mixed-media, dataframe-like tool for data scientists. It was developed by $1, a company designed to help reduce the friction of moving models into producti...
+Visualizing the embeddings in Kangas In this Jupyter Notebook, we construct a Kangas DataGrid containing the data and projections of the embeddings into 2 dimensions. What is Kangas? Kangas as an open source, mixed-media, dataframe-like tool for data scientists. It was developed by Comet, a company designed to help reduce the friction of moving models into p...
 
 ## What This Teaches
 

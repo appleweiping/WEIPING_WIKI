@@ -3,7 +3,7 @@ title: "Function Calling With An Openapi Spec"
 type: source
 status: mirrored
 created: 2026-05-15
-updated: 2026-05-15
+updated: 2026-05-18
 tags:
   - cookbook
   - example
@@ -38,7 +38,7 @@ source_pages:
 
 ## Summary
 
-Function-calling with an OpenAPI specification Much of the internet is powered by RESTful APIs. Giving GPT the ability to call them opens up a world of possibilities. This notebook demonstrates how GPTs can be used to intelligently call APIs. It leverages OpenAPI specifications and chained function calls. The $1 is a universally accepted standard for describ...
+Function-calling with an OpenAPI specification Much of the internet is powered by RESTful APIs. Giving GPT the ability to call them opens up a world of possibilities. This notebook demonstrates how GPTs can be used to intelligently call APIs. It leverages OpenAPI specifications and chained function calls. The OpenAPI Specification (OAS) is a universally acce...
 
 ## What This Teaches
 

@@ -3,7 +3,7 @@ title: "Gpt Action Github"
 type: source
 status: mirrored
 created: 2026-05-15
-updated: 2026-05-15
+updated: 2026-05-18
 tags:
   - chatgpt
   - cookbook
@@ -38,7 +38,7 @@ source_pages:
 
 ## Summary
 
-GPT Action Library: GitHub Introduction This page provides instructions for developers connecting a GPT Action to GitHub. Before proceeding, familiarize yourself with the following resources: - $1 - $1 - $1 This GPT Action helps developers evaluate the quality and security of a GitHub Pull Request diff. It provides feedback and suggestions for each domain, a...
+GPT Action Library: GitHub Introduction This page provides instructions for developers connecting a GPT Action to GitHub. Before proceeding, familiarize yourself with the following resources: - Introduction to GPT Actions - GPT Actions Library - Building a GPT Action from Scratch This GPT Action helps developers evaluate the quality and security of a GitHub...
 
 ## What This Teaches
 

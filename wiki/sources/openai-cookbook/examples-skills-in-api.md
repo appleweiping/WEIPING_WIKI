@@ -3,7 +3,7 @@ title: "Skills In Api"
 type: source
 status: mirrored
 created: 2026-05-15
-updated: 2026-05-15
+updated: 2026-05-18
 tags:
   - cookbook
   - example
@@ -36,7 +36,7 @@ source_pages:
 
 ## Summary
 
-Skills in OpenAI API Upload, manage, and attach reusable skills to hosted environments. Agent Skills let you upload and reuse versioned bundles of files in hosted and local shell environments. For the full reference, see the $1. What is a skill? A skill is a reusable bundle of files (instructions + scripts + assets), packaged as a folder and anchored by a re...
+Skills in OpenAI API Upload, manage, and attach reusable skills to hosted environments. Agent Skills let you upload and reuse versioned bundles of files in hosted and local shell environments. For the full reference, see the Skills documentation. What is a skill? A skill is a reusable bundle of files (instructions + scripts + assets), packaged as a folder an...
 
 ## What This Teaches
 

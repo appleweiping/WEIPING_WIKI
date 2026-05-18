@@ -3,7 +3,7 @@ title: "Build A Coding Agent With Gpt 5.1"
 type: source
 status: mirrored
 created: 2026-05-15
-updated: 2026-05-15
+updated: 2026-05-18
 tags:
   - cookbook
   - example
@@ -38,7 +38,7 @@ source_pages:
 
 ## Summary
 
-Building a Coding Agent with GPT-5.1 and the OpenAI Agents SDK GPT-5.1 is exceptionally strong at coding, and with the new code-editing and command-execution tools available in the $1, it’s now easier than ever to build coding agents that can work across full codebases and iterate quickly. In this guide, we’ll use the $1 to build a coding agent that can scaf...
+Building a Coding Agent with GPT-5.1 and the OpenAI Agents SDK GPT-5.1 is exceptionally strong at coding, and with the new code-editing and command-execution tools available in the Responses API, it’s now easier than ever to build coding agents that can work across full codebases and iterate quickly. In this guide, we’ll use the Agents SDK to build a coding...
 
 ## What This Teaches
 

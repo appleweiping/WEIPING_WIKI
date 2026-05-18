@@ -3,7 +3,7 @@ title: "Logs Platform"
 type: source
 status: mirrored
 created: 2026-05-15
-updated: 2026-05-15
+updated: 2026-05-18
 tags:
   - chatgpt
   - cookbook
@@ -38,7 +38,7 @@ source_pages:
 
 ## Summary
 
-OpenAI Compliance Logs Platform quickstart Use this notebook to get started using the OpenAI Compliance Logs Platform. The examples focus on downloading log files so you can ingest them into your SIEM or data lake. - $1 - $1 Prerequisites - An Enterprise Compliance API key exported as COMPLIANCE API KEY . - The ChatGPT account ID or the API Platform Org ID f...
+OpenAI Compliance Logs Platform quickstart Use this notebook to get started using the OpenAI Compliance Logs Platform. The examples focus on downloading log files so you can ingest them into your SIEM or data lake. - Help Center Overview - API Reference Prerequisites - An Enterprise Compliance API key exported as COMPLIANCE API KEY . - The ChatGPT account ID...
 
 ## What This Teaches
 

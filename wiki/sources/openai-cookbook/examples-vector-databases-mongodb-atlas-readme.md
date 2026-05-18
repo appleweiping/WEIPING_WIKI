@@ -3,7 +3,7 @@ title: "Readme"
 type: source
 status: mirrored
 created: 2026-05-15
-updated: 2026-05-15
+updated: 2026-05-18
 tags:
   - cookbook
   - example
@@ -38,7 +38,7 @@ source_pages:
 
 ## Summary
 
-MongoDB Atlas Vector Search $1 is a fully managed service that simplifies the process of effectively indexing high-dimensional vector data within MongoDB and being able to perform fast vector similarity searches. With Atlas Vector Search, you can use MongoDB as a standalone vector database for a new project or augment your existing MongoDB collections with v...
+MongoDB Atlas Vector Search Atlas Vector Search is a fully managed service that simplifies the process of effectively indexing high-dimensional vector data within MongoDB and being able to perform fast vector similarity searches. With Atlas Vector Search, you can use MongoDB as a standalone vector database for a new project or augment your existing MongoDB c...
 
 ## What This Teaches
 

@@ -626,6 +626,16 @@ function Build-PersonCorpus([object]$Cfg) {
     }
     $entries = $unique
 
+    if ($errors.Count -gt 0 -and $oldById.Count -gt 0) {
+        foreach ($oldId in @($oldById.Keys | Sort-Object)) {
+            if (-not $byId.ContainsKey($oldId)) {
+                $oldEntry = $oldById[$oldId]
+                $byId[$oldId] = $oldEntry
+                $entries.Add($oldEntry)
+            }
+        }
+    }
+
     $newEntries = @($entries | Where-Object { -not $oldById.ContainsKey($_.id) })
     $updatedEntries = @($entries | Where-Object { $oldById.ContainsKey($_.id) -and $oldById[$_.id].semantic_hash -ne $_.semantic_hash })
     $removedEntries = @()
@@ -844,7 +854,7 @@ $(Group-Lines $allEntries "source_kind")
 ## Counterpoints And Gaps
 
 - This hub is an index and routing surface, not a substitute for reading the item pages and source URLs.
-- GitHub API access can be rate-limited; the script uses the public GitHub HTML repository listing as a fallback when needed.
+- GitHub API access can be rate-limited; ``scripts/ingest-shunyu-yao-public.ps1`` uses ``GITHUB_TOKEN`` or ``GH_TOKEN`` when available, then falls back to the public GitHub HTML repository listing if API access still fails.
 "@
 
     $source = @"
@@ -875,6 +885,7 @@ source_pages:
 - alfredyao GitHub API: https://api.github.com/users/alfredyao
 - alfredyao CV pointer: https://alfredyao.github.io/Shunyu_Yao_CV.pdf
 - arXiv API query: author ``Shunyu Yao`` with identity/category filters.
+- GitHub API calls should use ``GITHUB_TOKEN`` or ``GH_TOKEN`` from the process, user, or machine environment; this raises the rate limit and keeps repository metadata source confidence at ``github-api``.
 
 ## Snapshot
 
@@ -1019,17 +1030,22 @@ Use this workflow when the user asks for a complete public corpus such as full G
 - Use safe public indexing: metadata, summaries, links, hashes, categories, and license notes.
 - Do not publicly mirror unclear-license full PDFs, source code, or long webpage text.
 - Add or update an automation that reruns the ingest, validates, commits scoped changes, and pushes.
+- Treat automation outputs as official wiki maintenance. If a run changes raw manifests, source pages, topic pages, analysis pages, ``wiki/catalog.json``, ``wiki/index.md``, or ``wiki/log.md``, stage those scoped outputs, commit them, and push after validation.
 
 ## Validation
 
 - Run manifest duplicate checks.
 - Run ``scripts/wiki-catalog.ps1``, ``scripts/wiki-lint.ps1``, and ``git diff --check``.
 - Ignore unrelated local changes such as ``GetPdf.pdf`` unless the user explicitly asks otherwise.
+- Before committing, inspect ``git diff --stat`` and the relevant file diffs so generated changes are real content changes and do not leak private data.
+- If ``git status`` reports automation-managed files as modified but hashes and ``git diff`` show no real content changes, treat it as false dirty state from line endings or index metadata. Refresh/normalize the index and report that there was no substantive automation output to commit.
+- Never leave real automation output uncommitted at the end of the turn unless validation fails or the user explicitly asks to pause.
 
 ## Counterpoints And Gaps
 
 - This workflow is a default pattern, not permission to ignore source-specific licenses or identity ambiguity.
 - Some public platforms block automated access; record crawl errors and use stable fallback sources instead of inventing completeness.
+- Automation commits still need scope discipline: do not stage unrelated local edits just because an automation run touched nearby wiki sections.
 "@
 
     Write-TextIfChanged (Join-Path $rootPath "wiki/entities/yao-shunyu-ysymyth.md") $entityY | Out-Null
@@ -1056,7 +1072,7 @@ Use this workflow when the user asks for a complete public corpus such as full G
             $indexText = $indexText -replace "($($item.Heading)\s*)", "`$1`n$($item.Line)`n"
         }
     }
-    $itemLines = @($allEntries | Where-Object { $_.wiki_page } | Sort-Object person_key, source_kind, title | ForEach-Object {
+    $itemLines = @($allEntries | Where-Object { $_.wiki_page -and $_.source_kind -ne "person-profile" } | Sort-Object person_key, source_kind, title | ForEach-Object {
         $wikiId = ($_.wiki_page -replace '^wiki/', '' -replace '\.md$', '')
         "  - [[$wikiId|$(Convert-ToWikiAlias $_.title)]] - ``$($_.person_key)``, ``$($_.source_kind)``"
     })
@@ -1146,5 +1162,5 @@ if (-not $SkipValidation -and -not $DryRun) {
 
 [pscustomobject]@{
     Person = $Person
-    Corpora = @($results | ForEach-Object { [pscustomobject]@{ person_key = $_.cfg.key; entries = $_.manifest.entry_count; new_entries = $_.manifest.new_entries_this_run; changed_entries = $_.manifest.changed_entries_this_run; removed_entries = $_.manifest.removed_entries_this_run; errors = $_.manifest.errors.Count; manifest = $_.manifest_path } })
+    Corpora = @($results | ForEach-Object { [pscustomobject]@{ person_key = $_.person_key; entries = $_.entry_count; new_entries = $_.new_entries_this_run; changed_entries = $_.changed_entries_this_run; removed_entries = $_.removed_entries_this_run; errors = $_.error_count; manifest = $_.manifest_path } })
 }

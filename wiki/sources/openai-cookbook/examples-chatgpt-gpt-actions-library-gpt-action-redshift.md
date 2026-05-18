@@ -3,7 +3,7 @@ title: "Gpt Action Redshift"
 type: source
 status: mirrored
 created: 2026-05-15
-updated: 2026-05-15
+updated: 2026-05-18
 tags:
   - chatgpt
   - cookbook
@@ -38,7 +38,7 @@ source_pages:
 
 ## Summary
 
-GPT Action Library: AWS RedShift Introduction This page provides an instruction & guide for developers building a GPT Action for a specific application. Before you proceed, make sure to first familiarize yourself with the following information: - $1 - $1 - $1 This solution enables a GPT action to retrieve data from Redshift and perform data analysis.It uses...
+GPT Action Library: AWS RedShift Introduction This page provides an instruction & guide for developers building a GPT Action for a specific application. Before you proceed, make sure to first familiarize yourself with the following information: - Introduction to GPT Actions - Introduction to GPT Actions Library - Example of Building a GPT Action from Scratch...
 
 ## What This Teaches
 

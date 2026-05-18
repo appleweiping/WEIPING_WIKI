@@ -3,7 +3,7 @@ title: "Run Locally Ollama"
 type: source
 status: mirrored
 created: 2026-05-15
-updated: 2026-05-15
+updated: 2026-05-18
 tags:
   - article
   - cookbook
@@ -37,7 +37,7 @@ source_pages:
 
 ## Summary
 
-How to run gpt-oss locally with Ollama Want to get $1 running on your own hardware? This guide will walk you through how to use $1 to set up gpt-oss-20b or gpt-oss-120b locally, to chat with it offline, use it through an API, and even connect it to the Agents SDK. Note that this guide is meant for consumer hardware, like running a model on a PC or Mac. For s...
+How to run gpt-oss locally with Ollama Want to get OpenAI gpt-oss running on your own hardware? This guide will walk you through how to use Ollama to set up gpt-oss-20b or gpt-oss-120b locally, to chat with it offline, use it through an API, and even connect it to the Agents SDK. Note that this guide is meant for consumer hardware, like running a model on a...
 
 ## What This Teaches
 

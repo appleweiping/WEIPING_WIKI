@@ -3,7 +3,7 @@ title: "Getting Started With Openai Evals"
 type: source
 status: mirrored
 created: 2026-05-15
-updated: 2026-05-15
+updated: 2026-05-18
 tags:
   - cookbook
   - evals
@@ -38,7 +38,7 @@ source_pages:
 
 ## Summary
 
-Getting Started with OpenAI Evals Note: OpenAI now has a hosted evals product with an API! We recommend you use this instead. See $1 The $1 framework consists of 1. A framework to evaluate an LLM (large language model) or a system built on top of an LLM. 2. An open-source registry of challenging evals This notebook will cover: Introduction to Evaluation and...
+Getting Started with OpenAI Evals Note: OpenAI now has a hosted evals product with an API! We recommend you use this instead. See Evals The OpenAI Evals framework consists of 1. A framework to evaluate an LLM (large language model) or a system built on top of an LLM. 2. An open-source registry of challenging evals This notebook will cover: Introduction to Ev...
 
 ## What This Teaches
 

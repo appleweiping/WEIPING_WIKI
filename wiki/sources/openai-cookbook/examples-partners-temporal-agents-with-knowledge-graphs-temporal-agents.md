@@ -3,7 +3,7 @@ title: "Temporal Agents"
 type: source
 status: mirrored
 created: 2026-05-15
-updated: 2026-05-15
+updated: 2026-05-18
 tags:
   - cookbook
   - example
@@ -37,7 +37,7 @@ source_pages:
 
 ## Summary
 
-1. Executive Summary --- 1.1. Purpose and Audience This notebook provides a hands-on guide for building temporally-aware knowledge graphs and performing multi-hop retrieval directly over those graphs . It's designed for engineers, architects, and analysts working on temporally-aware knowledge graphs. Whether you’re prototyping, deploying at scale, or explori...
+1. Executive Summary This cookbook is designed for flexible engagement: 1. Use it as a comprehensive technical guide—read from start to finish for a deep understanding of temporally-aware knowledge graph systems. 2. Skim for advanced concepts, methodologies, and implementation patterns if you prefer a high-level overview. 3. Jump into any of the three modula...
 
 ## What This Teaches
 

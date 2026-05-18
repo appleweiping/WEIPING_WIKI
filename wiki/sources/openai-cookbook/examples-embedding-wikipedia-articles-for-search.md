@@ -3,7 +3,7 @@ title: "Embedding Wikipedia Articles For Search"
 type: source
 status: mirrored
 created: 2026-05-15
-updated: 2026-05-15
+updated: 2026-05-18
 tags:
   - cookbook
   - example
@@ -38,7 +38,7 @@ source_pages:
 
 ## Summary
 
-Embedding Wikipedia articles for search This notebook shows how we prepared a dataset of Wikipedia articles for search, used in $1. Procedure: 0. Prerequisites: Import libraries, set API key (if needed) 1. Collect: We download a few hundred Wikipedia articles about the 2022 Olympics 2. Chunk: Documents are split into short, semi-self-contained sections to be...
+Embedding Wikipedia articles for search This notebook shows how we prepared a dataset of Wikipedia articles for search, used in Question answering using embeddings.ipynb. Procedure: 0. Prerequisites: Import libraries, set API key (if needed) 1. Collect: We download a few hundred Wikipedia articles about the 2022 Olympics 2. Chunk: Documents are split into sh...
 
 ## What This Teaches
 

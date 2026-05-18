@@ -3,7 +3,7 @@ title: "Introduction To Deep Research Api Agents"
 type: source
 status: mirrored
 created: 2026-05-15
-updated: 2026-05-15
+updated: 2026-05-18
 tags:
   - cookbook
   - example
@@ -38,7 +38,7 @@ source_pages:
 
 ## Summary
 
-Deep Research Agents Cookbook This cookbook demonstrates how to build Agentic research workflows using the OpenAI Deep Research API and the OpenAI $1. It is a continuation of $1, if you have not already familiarized yourself with that content, please consider doing so. You’ll learn how to orchestrate single and multi-agent pipelines, enrich user queries to m...
+Deep Research Agents Cookbook This cookbook demonstrates how to build Agentic research workflows using the OpenAI Deep Research API and the OpenAI Agents SDK. It is a continuation of a fundamentals cookbook, if you have not already familiarized yourself with that content, please consider doing so. You’ll learn how to orchestrate single and multi-agent pipeli...
 
 ## What This Teaches
 

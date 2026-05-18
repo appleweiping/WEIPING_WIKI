@@ -3,7 +3,7 @@ title: "What Is New With Dalle 3"
 type: source
 status: mirrored
 created: 2026-05-15
-updated: 2026-05-15
+updated: 2026-05-18
 tags:
   - article
   - cookbook
@@ -37,7 +37,7 @@ source_pages:
 
 ## Summary
 
-What’s new with DALL·E-3? DALL·E-3 is the latest version of our DALL-E text-to-image generation models. As the current state of the art in text-to-image generation, DALL·E is capable of generating high-quality images across a wide variety of domains. If you're interested in more technical details of how DALL·E-3 was built, you can read more about in our $1....
+What’s new with DALL·E-3? DALL·E-3 is the latest version of our DALL-E text-to-image generation models. As the current state of the art in text-to-image generation, DALL·E is capable of generating high-quality images across a wide variety of domains. If you're interested in more technical details of how DALL·E-3 was built, you can read more about in our rese...
 
 ## What This Teaches
 

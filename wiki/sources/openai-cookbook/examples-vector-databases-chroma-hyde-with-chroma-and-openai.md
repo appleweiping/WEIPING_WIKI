@@ -3,7 +3,7 @@ title: "Hyde With Chroma And Openai"
 type: source
 status: mirrored
 created: 2026-05-15
-updated: 2026-05-15
+updated: 2026-05-18
 tags:
   - cookbook
   - example
@@ -38,7 +38,7 @@ source_pages:
 
 ## Summary
 
-Robust Question Answering with Chroma and OpenAI This notebook guides you step-by-step through answering questions about a collection of data, using $1, an open-source embeddings database, along with OpenAI's $1 and $1 API's. Additionally, this notebook demonstrates some of the tradeoffs in making a question answering system more robust. As we shall see, sim...
+Robust Question Answering with Chroma and OpenAI This notebook guides you step-by-step through answering questions about a collection of data, using Chroma, an open-source embeddings database, along with OpenAI's text embeddings and chat completion API's. Additionally, this notebook demonstrates some of the tradeoffs in making a question answering system mor...
 
 ## What This Teaches
 

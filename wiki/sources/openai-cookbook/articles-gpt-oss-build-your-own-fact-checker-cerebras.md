@@ -3,7 +3,7 @@ title: "Build Your Own Fact Checker Cerebras"
 type: source
 status: mirrored
 created: 2026-05-15
-updated: 2026-05-15
+updated: 2026-05-18
 tags:
   - article
   - cookbook

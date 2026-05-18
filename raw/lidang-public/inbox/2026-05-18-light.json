@@ -1,0 +1,148 @@
+{
+    "schema":  "lidang-public-capture-v2",
+    "captured_at":  "2026-05-18T13:31:46.9354334+02:00",
+    "mode":  "Light",
+    "sources":  {
+                    "youtube_feed":  "https://www.youtube.com/feeds/videos.xml?channel_id=UC4gzU_8MxRDiQrSFOiT79tQ",
+                    "youtube_channel":  "https://www.youtube.com/@lidangzzz",
+                    "x_canonical":  "https://x.com/lidangzzz",
+                    "x_mirrors":  [
+                                      "https://twstalker.com/lidangzzz",
+                                      "https://rattibha.com/lidangzzz",
+                                      "https://twicopy.com/lidangzzz/"
+                                  ]
+                },
+    "backfill":  {
+                     "status":  "not-run",
+                     "tool":  "",
+                     "items":  [
+
+                               ],
+                     "error":  ""
+                 },
+    "errors":  [
+                   "YouTube RSS crawl failed: Exception calling \u0027DownloadData\u0027 with \u00271\u0027 argument(s): \u0027The underlying connection was closed: An unexpected error occurred on a receive.\u0027",
+                   "Probe failed for https://x.com/lidangzzz: Exception calling \u0027DownloadData\u0027 with \u00271\u0027 argument(s): \u0027The underlying connection was closed: An unexpected error occurred on a receive.\u0027",
+                   "Probe failed for https://twstalker.com/lidangzzz: Exception calling \u0027DownloadData\u0027 with \u00271\u0027 argument(s): \u0027The underlying connection was closed: An unexpected error occurred on a receive.\u0027",
+                   "Probe failed for https://rattibha.com/lidangzzz: Exception calling \u0027DownloadData\u0027 with \u00271\u0027 argument(s): \u0027The underlying connection was closed: An unexpected error occurred on a receive.\u0027",
+                   "Probe failed for https://twicopy.com/lidangzzz/: Exception calling \u0027DownloadData\u0027 with \u00271\u0027 argument(s): \u0027The underlying connection was closed: An unexpected error occurred on a receive.\u0027"
+               ],
+    "entries":  [
+                    {
+                        "id":  "x-profile:lidangzzz",
+                        "source_kind":  "x-profile-probe",
+                        "canonical_url":  "https://x.com/lidangzzz",
+                        "mirror_urls":  [
+                                            "https://twstalker.com/lidangzzz",
+                                            "https://rattibha.com/lidangzzz",
+                                            "https://twicopy.com/lidangzzz/"
+                                        ],
+                        "title":  "X profile probe for lidangzzz",
+                        "published_at":  "",
+                        "captured_at":  "2026-05-18T13:31:46.9354334+02:00",
+                        "content_hash":  "a0156816e39b731e50e5e2d799b80c37fb01a0ffd931d970eb6cdcf7ee204450",
+                        "semantic_hash":  "a0156816e39b731e50e5e2d799b80c37fb01a0ffd931d970eb6cdcf7ee204450",
+                        "raw_html_path":  null,
+                        "raw_html_hash":  null,
+                        "source_confidence":  "canonical-profile-plus-nonauthoritative-mirror-probes",
+                        "category":  "Everyday heuristics / judgment frames",
+                        "tags":  [
+                                     "lidang",
+                                     "x",
+                                     "html-snapshot",
+                                     "mirror-probe"
+                                 ],
+                        "engagement":  {
+
+                                       },
+                        "importance_score":  1,
+                        "dedupe_key":  "x-profile:lidangzzz",
+                        "wiki_page":  "",
+                        "public_handling":  "public-link-probe-metadata-only",
+                        "summary":  "Canonical X profile and auxiliary mirrors were probed. Reachable HTML snapshots are cached under raw/lidang-public/html; public wiki pages keep metadata and summaries only.",
+                        "first_seen":  "2026-05-16",
+                        "last_seen":  "2026-05-18",
+                        "last_changed":  "2026-05-18",
+                        "crawl_status":  "profile-unreachable",
+                        "backfill_status":  "no-status-links-found",
+                        "probes":  [
+                                       {
+                                           "url":  "https://x.com/lidangzzz",
+                                           "ok":  false,
+                                           "status":  "ERR",
+                                           "length":  0,
+                                           "title":  "",
+                                           "status_ids":  [
+
+                                                          ],
+                                           "status_links":  [
+
+                                                            ],
+                                           "raw_html_path":  "",
+                                           "raw_html_hash":  "",
+                                           "semantic_hash":  "3109296f79a77d8729f3663be283a661e4e937f86378d775dd8afa87c8f630a7",
+                                           "error":  "Exception calling \u0027DownloadData\u0027 with \u00271\u0027 argument(s): \u0027The underlying connection was closed: An unexpected error occurred on a receive.\u0027",
+                                           "crawl_status":  "error",
+                                           "backfill_status":  "unreachable-or-blocked"
+                                       },
+                                       {
+                                           "url":  "https://twstalker.com/lidangzzz",
+                                           "ok":  false,
+                                           "status":  "ERR",
+                                           "length":  0,
+                                           "title":  "",
+                                           "status_ids":  [
+
+                                                          ],
+                                           "status_links":  [
+
+                                                            ],
+                                           "raw_html_path":  "",
+                                           "raw_html_hash":  "",
+                                           "semantic_hash":  "e4440cf76d641a332181ae0bf89a81e4a1ff778a2b05043ce292539f79639683",
+                                           "error":  "Exception calling \u0027DownloadData\u0027 with \u00271\u0027 argument(s): \u0027The underlying connection was closed: An unexpected error occurred on a receive.\u0027",
+                                           "crawl_status":  "error",
+                                           "backfill_status":  "unreachable-or-blocked"
+                                       },
+                                       {
+                                           "url":  "https://rattibha.com/lidangzzz",
+                                           "ok":  false,
+                                           "status":  "ERR",
+                                           "length":  0,
+                                           "title":  "",
+                                           "status_ids":  [
+
+                                                          ],
+                                           "status_links":  [
+
+                                                            ],
+                                           "raw_html_path":  "",
+                                           "raw_html_hash":  "",
+                                           "semantic_hash":  "3c62759cb164945cd52e161d69575008cc1f19412e754d8d85808560aaa27ca0",
+                                           "error":  "Exception calling \u0027DownloadData\u0027 with \u00271\u0027 argument(s): \u0027The underlying connection was closed: An unexpected error occurred on a receive.\u0027",
+                                           "crawl_status":  "error",
+                                           "backfill_status":  "unreachable-or-blocked"
+                                       },
+                                       {
+                                           "url":  "https://twicopy.com/lidangzzz/",
+                                           "ok":  false,
+                                           "status":  "ERR",
+                                           "length":  0,
+                                           "title":  "",
+                                           "status_ids":  [
+
+                                                          ],
+                                           "status_links":  [
+
+                                                            ],
+                                           "raw_html_path":  "",
+                                           "raw_html_hash":  "",
+                                           "semantic_hash":  "20a2bc3ba2c53ed08416aecd3a6c5b2be61551975f5d36e4b57346e6e11d6bcc",
+                                           "error":  "Exception calling \u0027DownloadData\u0027 with \u00271\u0027 argument(s): \u0027The underlying connection was closed: An unexpected error occurred on a receive.\u0027",
+                                           "crawl_status":  "error",
+                                           "backfill_status":  "unreachable-or-blocked"
+                                       }
+                                   ]
+                    }
+                ]
+}

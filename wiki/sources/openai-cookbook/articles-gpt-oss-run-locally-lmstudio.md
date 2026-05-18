@@ -3,7 +3,7 @@ title: "Run Locally Lmstudio"
 type: source
 status: mirrored
 created: 2026-05-15
-updated: 2026-05-15
+updated: 2026-05-18
 tags:
   - article
   - cookbook
@@ -37,7 +37,7 @@ source_pages:
 
 ## Summary
 
-How to run gpt-oss locally with LM Studio $1 is a performant and friendly desktop application for running large language models (LLMs) on local hardware. This guide will walk you through how to set up and run gpt-oss-20b or gpt-oss-120b models using LM Studio, including how to chat with them, use MCP servers, or interact with the models through LM Studio's l...
+How to run gpt-oss locally with LM Studio LM Studio is a performant and friendly desktop application for running large language models (LLMs) on local hardware. This guide will walk you through how to set up and run gpt-oss-20b or gpt-oss-120b models using LM Studio, including how to chat with them, use MCP servers, or interact with the models through LM Stu...
 
 ## What This Teaches
 

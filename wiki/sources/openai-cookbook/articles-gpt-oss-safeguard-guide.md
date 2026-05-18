@@ -3,7 +3,7 @@ title: "Gpt Oss Safeguard Guide"
 type: source
 status: mirrored
 created: 2026-05-15
-updated: 2026-05-15
+updated: 2026-05-18
 tags:
   - article
   - cookbook
@@ -37,7 +37,7 @@ source_pages:
 
 ## Summary
 
-User guide for gpt-oss-safeguard Introduction & Overview ROOST and OpenAI have prepared a guide that explains how to write policy prompts that maximize $1 reasoning power, choose the right policy length for deep analysis, and integrate oss-safeguard's reasoning outputs into production Trust & Safety systems. What is gpt-oss-safeguard? gpt-oss-safeguard is a...
+User guide for gpt-oss-safeguard Introduction & Overview ROOST and OpenAI have prepared a guide that explains how to write policy prompts that maximize gpt-oss-safeguard's reasoning power, choose the right policy length for deep analysis, and integrate oss-safeguard's reasoning outputs into production Trust & Safety systems. What is gpt-oss-safeguard? gpt-os...
 
 ## What This Teaches
 

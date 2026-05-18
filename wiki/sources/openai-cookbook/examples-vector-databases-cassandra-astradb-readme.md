@@ -3,7 +3,7 @@ title: "Readme"
 type: source
 status: mirrored
 created: 2026-05-15
-updated: 2026-05-15
+updated: 2026-05-18
 tags:
   - cookbook
   - example
@@ -38,7 +38,7 @@ source_pages:
 
 ## Summary
 
-RAG with Astra DB and Cassandra The demos in this directory show how to use the Vector Search capabilities available today in DataStax Astra DB , a serverless Database-as-a-Service built on Apache Cassandra®. These example notebooks demonstrate implementation of the same GenAI standard RAG workload with different libraries and APIs. To use $1 with its HTTP A...
+RAG with Astra DB and Cassandra The demos in this directory show how to use the Vector Search capabilities available today in DataStax Astra DB , a serverless Database-as-a-Service built on Apache Cassandra®. These example notebooks demonstrate implementation of the same GenAI standard RAG workload with different libraries and APIs. To use Astra DB with its...
 
 ## What This Teaches
 

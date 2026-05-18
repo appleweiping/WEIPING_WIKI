@@ -3,7 +3,7 @@ title: "Steering Tts"
 type: source
 status: mirrored
 created: 2026-05-15
-updated: 2026-05-15
+updated: 2026-05-18
 tags:
   - cookbook
   - example
@@ -38,7 +38,7 @@ source_pages:
 
 ## Summary
 
-Steering Text-to-Speech for more dynamic audio generation Our traditional $1 don't have the ability to steer the voice of the generated audio. For example, if you wanted to convert a paragraph of text to audio, you would not be able to give any specific instructions on audio generation. With $1, you can give specific instructions before generating the audio....
+Steering Text-to-Speech for more dynamic audio generation Our traditional TTS APIs don't have the ability to steer the voice of the generated audio. For example, if you wanted to convert a paragraph of text to audio, you would not be able to give any specific instructions on audio generation. With audio chat completions, you can give specific instructions be...
 
 ## What This Teaches
 

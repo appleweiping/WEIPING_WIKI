@@ -3,7 +3,7 @@ title: 2026-05-15 OpenAI Cookbook
 type: source
 status: active
 created: 2026-05-15
-updated: 2026-05-15
+updated: 2026-05-18
 tags:
   - openai
   - cookbook
@@ -21,7 +21,7 @@ source_pages:
 - Canonical discovery page: https://developers.openai.com/cookbook
 - Preferred full-text source: https://github.com/openai/openai-cookbook
 - License basis: OpenAI Cookbook repository MIT license.
-- Crawl date: 2026-05-15
+- Crawl date: 2026-05-18
 - Discovered Cookbook pages: 235
 - Manifest: `raw/openai-cookbook/manifest.json`
 

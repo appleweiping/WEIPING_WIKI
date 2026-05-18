@@ -3,7 +3,7 @@ title: "Semantic Search"
 type: source
 status: mirrored
 created: 2026-05-15
-updated: 2026-05-15
+updated: 2026-05-18
 tags:
   - cookbook
   - example
@@ -38,7 +38,7 @@ source_pages:
 
 ## Summary
 
-Semantic search using Supabase Vector The purpose of this guide is to demonstrate how to store OpenAI embeddings in $1 (Postgres + pgvector) for the purposes of semantic search. $1 is an open-source Firebase alternative built on top of $1, a production-grade SQL database. Since Supabase Vector is built on $1, you can store your embeddings within the same dat...
+Semantic search using Supabase Vector The purpose of this guide is to demonstrate how to store OpenAI embeddings in Supabase Vector (Postgres + pgvector) for the purposes of semantic search. Supabase is an open-source Firebase alternative built on top of Postgres, a production-grade SQL database. Since Supabase Vector is built on pgvector, you can store your...
 
 ## What This Teaches
 

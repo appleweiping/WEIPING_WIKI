@@ -3,7 +3,7 @@ title: "Gpt Action Salesforce Gong"
 type: source
 status: mirrored
 created: 2026-05-15
-updated: 2026-05-15
+updated: 2026-05-18
 tags:
   - chatgpt
   - cookbook
@@ -38,7 +38,7 @@ source_pages:
 
 ## Summary
 
-GPT Action Library: Salesforce + Gong Introduction This page provides an instruction & guide for developers building middleware to connect a GPT Action to a specific application. Before you proceed, make sure to first familiarize yourself with the following information: - $1 - $1 - $1 This particular GPT Action provides an overview of how to build a GPT that...
+GPT Action Library: Salesforce + Gong Introduction This page provides an instruction & guide for developers building middleware to connect a GPT Action to a specific application. Before you proceed, make sure to first familiarize yourself with the following information: - Introduction to GPT Actions - Introduction to GPT Actions Library - Example of Building...
 
 ## What This Teaches
 

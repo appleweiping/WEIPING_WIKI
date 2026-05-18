@@ -3,7 +3,7 @@ title: "Build Code Review With Codex Sdk"
 type: source
 status: mirrored
 created: 2026-05-15
-updated: 2026-05-15
+updated: 2026-05-18
 tags:
   - codex
   - coding-agents
@@ -38,7 +38,7 @@ source_pages:
 
 ## Summary
 
-Build Code Review with the Codex SDK With $1 in Codex Cloud, you can connect your team's cloud hosted GitHub repository to Codex and receive automated code reviews on every PR. But what if your code is hosted on-prem, or you don't have GitHub as an SCM? Luckily, we can replicate Codex's cloud hosted review process in our own CI/CD runners. In this guide, we'...
+Build Code Review with the Codex SDK With Code Review in Codex Cloud, you can connect your team's cloud hosted GitHub repository to Codex and receive automated code reviews on every PR. But what if your code is hosted on-prem, or you don't have GitHub as an SCM? Luckily, we can replicate Codex's cloud hosted review process in our own CI/CD runners. In this g...
 
 ## What This Teaches
 

@@ -3,7 +3,7 @@ title: "Gpt Action Sql Database"
 type: source
 status: mirrored
 created: 2026-05-15
-updated: 2026-05-15
+updated: 2026-05-18
 tags:
   - chatgpt
   - cookbook
@@ -38,7 +38,7 @@ source_pages:
 
 ## Summary
 
-GPT Action Library: SQL Database Introduction This is a guide for developers seeking to give ChatGPT the ability to query a SQL database using a GPT Action. Before reading this guide, please familiarize yourself with the following content: $1 $1 $1 This guide outlines the workflow required to connect ChatGPT to a SQL Database via a middleware application. We...
+GPT Action Library: SQL Database Introduction This is a guide for developers seeking to give ChatGPT the ability to query a SQL database using a GPT Action. Before reading this guide, please familiarize yourself with the following content: Introduction to GPT Actions Introduction to GPT Actions Library Example of Building a GPT Action from Scratch This guide...
 
 ## What This Teaches
 

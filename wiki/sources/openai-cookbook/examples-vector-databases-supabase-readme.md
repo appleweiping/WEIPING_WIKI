@@ -3,7 +3,7 @@ title: "Readme"
 type: source
 status: mirrored
 created: 2026-05-15
-updated: 2026-05-15
+updated: 2026-05-18
 tags:
   - cookbook
   - example
@@ -38,7 +38,7 @@ source_pages:
 
 ## Summary
 
-Supabase Vector Database $1 is an open-source Firebase alternative built on top of $1, a production-grade SQL database. $1 is a vector toolkit built on $1, a Postgres extension that allows you to store your embeddings inside the same database that holds the rest of your application data. When combined with pgvector's indexing algorithms, vector search remain...
+Supabase Vector Database Supabase is an open-source Firebase alternative built on top of Postgres, a production-grade SQL database. Supabase Vector is a vector toolkit built on pgvector, a Postgres extension that allows you to store your embeddings inside the same database that holds the rest of your application data. When combined with pgvector's indexing a...
 
 ## What This Teaches
 

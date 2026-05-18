@@ -3,7 +3,7 @@ title: "Readme"
 type: source
 status: mirrored
 created: 2026-05-15
-updated: 2026-05-15
+updated: 2026-05-18
 tags:
   - cookbook
   - example
@@ -38,7 +38,7 @@ source_pages:
 
 ## Summary
 
-MCP for Deep Research This is a minimal example of a Deep Research style MCP server for searching and fetching files from the OpenAI file storage service. For a reference of how to call this service from the Responses API, with Deep Research see $1. To see how to call the MCP server with the Agents SDK, checkout $1! The Deep Research agent relies specificall...
+MCP for Deep Research This is a minimal example of a Deep Research style MCP server for searching and fetching files from the OpenAI file storage service. For a reference of how to call this service from the Responses API, with Deep Research see this cookbook. To see how to call the MCP server with the Agents SDK, checkout this cookbook! The Deep Research ag...
 
 ## What This Teaches
 

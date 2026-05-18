@@ -3,7 +3,7 @@ title: "Gpt Action Workday"
 type: source
 status: mirrored
 created: 2026-05-15
-updated: 2026-05-15
+updated: 2026-05-18
 tags:
   - chatgpt
   - cookbook
@@ -38,7 +38,7 @@ source_pages:
 
 ## Summary
 
-Workday GPT Action Cookbook Table of Contents 1. $1 2. $1 3. $1 4. $1 5. $1 General App Information Workday is a cloud-based platform that offers solutions for human capital management, payroll, and financial management. Integrating ChatGPT with Workday through Custom Actions can enhance HR operations by providing automated responses to employee inquiries, g...
+Workday GPT Action Cookbook Table of Contents 1. General App Information 2. Authentication from ChatGPT to Workday 3. Sample Use Case: PTO Submission and Benefit Plan Inquiry 4. Additional Resources 5. Conclusion General App Information Workday is a cloud-based platform that offers solutions for human capital management, payroll, and financial management. In...
 
 ## What This Teaches
 

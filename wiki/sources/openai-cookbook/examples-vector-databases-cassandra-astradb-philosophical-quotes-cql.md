@@ -3,7 +3,7 @@ title: "Philosophical Quotes Cql"
 type: source
 status: mirrored
 created: 2026-05-15
-updated: 2026-05-15
+updated: 2026-05-18
 tags:
   - cookbook
   - example
@@ -38,7 +38,7 @@ source_pages:
 
 ## Summary
 
-Philosophy with Vector Embeddings, OpenAI and Cassandra / Astra DB CQL Version In this quickstart you will learn how to build a "philosophy quote finder & generator" using OpenAI's vector embeddings and $1, or equivalently DataStax $1, as the vector store for data persistence. The basic workflow of this notebook is outlined below. You will evaluate and store...
+Philosophy with Vector Embeddings, OpenAI and Cassandra / Astra DB CQL Version In this quickstart you will learn how to build a "philosophy quote finder & generator" using OpenAI's vector embeddings and Apache Cassandra®, or equivalently DataStax Astra DB through CQL, as the vector store for data persistence. The basic workflow of this notebook is outlined b...
 
 ## What This Teaches
 

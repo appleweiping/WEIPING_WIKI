@@ -3,7 +3,7 @@ title: "Readme"
 type: source
 status: mirrored
 created: 2026-05-15
-updated: 2026-05-15
+updated: 2026-05-18
 tags:
   - cookbook
   - example
@@ -38,7 +38,7 @@ source_pages:
 
 ## Summary
 
-Elasticsearch Elasticsearch is a popular search/analytics engine and $1. Elasticsearch offers an efficient way to create, store, and search vector embeddings at scale. For technical details, refer to the $1. The $1 repo contains executable Python notebooks, sample apps, and resources for testing out the Elastic platform. OpenAI cookbook notebooks 📒 Check ou...
+Elasticsearch Elasticsearch is a popular search/analytics engine and vector database. Elasticsearch offers an efficient way to create, store, and search vector embeddings at scale. For technical details, refer to the Elasticsearch documentation. The elasticsearch-labs repo contains executable Python notebooks, sample apps, and resources for testing out the E...
 
 ## What This Teaches
 

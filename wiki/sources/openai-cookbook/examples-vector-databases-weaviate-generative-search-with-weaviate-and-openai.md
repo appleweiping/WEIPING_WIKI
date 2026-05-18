@@ -3,7 +3,7 @@ title: "Generative Search With Weaviate And Openai"
 type: source
 status: mirrored
 created: 2026-05-15
-updated: 2026-05-15
+updated: 2026-05-18
 tags:
   - cookbook
   - example
@@ -38,7 +38,7 @@ source_pages:
 
 ## Summary
 
-Using Weaviate with Generative OpenAI module for Generative Search This notebook is prepared for a scenario where: Your data is already in Weaviate You want to use Weaviate with the Generative OpenAI module ($1). Prerequisites This cookbook only coveres Generative Search examples, however, it doesn't cover the configuration and data imports. In order to make...
+Using Weaviate with Generative OpenAI module for Generative Search This notebook is prepared for a scenario where: Your data is already in Weaviate You want to use Weaviate with the Generative OpenAI module (generative-openai). Prerequisites This cookbook only coveres Generative Search examples, however, it doesn't cover the configuration and data imports. I...
 
 ## What This Teaches
 

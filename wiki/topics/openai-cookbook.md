@@ -3,7 +3,7 @@ title: OpenAI Cookbook
 type: topic
 status: active
 created: 2026-05-15
-updated: 2026-05-15
+updated: 2026-05-18
 tags:
   - openai
   - cookbook
@@ -17,8 +17,8 @@ The OpenAI Cookbook is a high-value implementation reference for OpenAI API usag
 
 ## Why It Matters
 
-- EXTRACTED: The current ingest discovered 235 Cookbook article/example pages from https://developers.openai.com/cookbook.
-- EXTRACTED: Every discovered developers page mapped to a source file in the MIT-licensed openai/openai-cookbook GitHub repository during this crawl.
+- EXTRACTED: The current ingest discovered 235 Cookbook article/example pages from `https://developers.openai.com/cookbook`.
+- EXTRACTED: Every discovered developers page mapped to a source file in the MIT-licensed `openai/openai-cookbook` GitHub repository during this crawl.
 - INFERRED: This source should be treated as a living implementation library rather than a static tutorial because new examples and articles can appear over time.
 
 ## How To Use This Hub

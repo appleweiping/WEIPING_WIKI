@@ -3,7 +3,7 @@ title: "Readme"
 type: source
 status: mirrored
 created: 2026-05-15
-updated: 2026-05-15
+updated: 2026-05-18
 tags:
   - cookbook
   - example
@@ -38,7 +38,7 @@ source_pages:
 
 ## Summary
 
-What is Neon? $1 is Serverless Postgres built for the cloud. Neon separates compute and storage to offer modern developer features such as autoscaling, database branching, scale-to-zero, and more. Vector search Neon supports vector search using the $1 open-source PostgreSQL extension, which enables Postgres as a vector database for storing and querying embed...
+What is Neon? Neon is Serverless Postgres built for the cloud. Neon separates compute and storage to offer modern developer features such as autoscaling, database branching, scale-to-zero, and more. Vector search Neon supports vector search using the pgvector open-source PostgreSQL extension, which enables Postgres as a vector database for storing and queryi...
 
 ## What This Teaches
 

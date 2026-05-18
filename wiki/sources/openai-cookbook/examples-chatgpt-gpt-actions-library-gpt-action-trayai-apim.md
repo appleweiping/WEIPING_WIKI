@@ -3,7 +3,7 @@ title: "Gpt Action Trayai Apim"
 type: source
 status: mirrored
 created: 2026-05-15
-updated: 2026-05-15
+updated: 2026-05-18
 tags:
   - chatgpt
   - cookbook
@@ -38,7 +38,7 @@ source_pages:
 
 ## Summary
 
-GPT Action Library: Tray.ai API Management Operations Introduction This page provides an instruction & guide for developers building a set of GPT Actions across a set of applications. Before you proceed, make sure to first familiarize yourself with the following information: - $1 - $1 - $1 This particular GPT Action(s) provides an overview of how to connect...
+GPT Action Library: Tray.ai API Management Operations Introduction This page provides an instruction & guide for developers building a set of GPT Actions across a set of applications. Before you proceed, make sure to first familiarize yourself with the following information: - Introduction to GPT Actions - Introduction to GPT Actions Library - Example of Bui...
 
 ## What This Teaches
 

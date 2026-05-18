@@ -3,10 +3,10 @@ title: "Agentkit Walkthrough"
 type: source
 status: mirrored
 created: 2026-05-15
-updated: 2026-05-15
+updated: 2026-05-18
 tags:
-  - agents
   - agent-workflows
+  - agents
   - cookbook
   - example
   - notebook
@@ -38,7 +38,7 @@ source_pages:
 
 ## Summary
 
-Build, deploy, and optimize agentic workflows with AgentKit Introduction At DevDay 2025 we launched $1, a complete set of tools for developers and enterprises to build, deploy, and optimize agents. AgentKit is a set of interconnected building blocks: $1: visually build and iterate on agent workflows $1: easily embed chat-based workflows into your app $1: imp...
+Build, deploy, and optimize agentic workflows with AgentKit Introduction At DevDay 2025 we launched AgentKit, a complete set of tools for developers and enterprises to build, deploy, and optimize agents. AgentKit is a set of interconnected building blocks: Agent Builder: visually build and iterate on agent workflows ChatKit: easily embed chat-based workflows...
 
 ## What This Teaches
 

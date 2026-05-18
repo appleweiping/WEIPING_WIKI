@@ -1,9 +1,9 @@
 ---
-title: "Voice Translation Into Different Languages Using Gpt 4O"
+title: "Voice Translation Into Different Languages Using Gpt 4o"
 type: source
 status: mirrored
 created: 2026-05-15
-updated: 2026-05-15
+updated: 2026-05-18
 tags:
   - cookbook
   - example
@@ -16,7 +16,7 @@ source_pages:
   - https://github.com/openai/openai-cookbook/blob/main/examples/voice_solutions/voice_translation_into_different_languages_using_GPT-4o.ipynb
 ---
 
-# Voice Translation Into Different Languages Using Gpt 4O
+# Voice Translation Into Different Languages Using Gpt 4o
 
 ## Source
 

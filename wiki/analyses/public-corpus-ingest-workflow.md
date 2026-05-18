@@ -3,7 +3,7 @@ title: Public Corpus Ingest Workflow
 type: analysis
 status: active
 created: 2026-05-16
-updated: 2026-05-17
+updated: 2026-05-18
 tags:
   - wiki-workflow
   - public-corpus

@@ -3,7 +3,7 @@ title: "Deeplake Langchain Qa"
 type: source
 status: mirrored
 created: 2026-05-15
-updated: 2026-05-15
+updated: 2026-05-18
 tags:
   - cookbook
   - example
@@ -38,7 +38,7 @@ source_pages:
 
 ## Summary
 
-Question Answering with LangChain, Deep Lake, & OpenAI This notebook shows how to implement a question answering system with LangChain, $1 as a vector store and OpenAI embeddings. We will take the following steps to achieve this: 1. Load a Deep Lake text dataset 2. Initialize a $1 3. Add text to the vector store 4. Run queries on the database 5. Done! You ca...
+Question Answering with LangChain, Deep Lake, & OpenAI This notebook shows how to implement a question answering system with LangChain, Deep Lake as a vector store and OpenAI embeddings. We will take the following steps to achieve this: 1. Load a Deep Lake text dataset 2. Initialize a Deep Lake vector store with LangChain 3. Add text to the vector store 4. R...
 
 ## What This Teaches
 

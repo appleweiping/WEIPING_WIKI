@@ -3,7 +3,7 @@ title: "Creating Slides With Assistants Api And Dall E3"
 type: source
 status: mirrored
 created: 2026-05-15
-updated: 2026-05-15
+updated: 2026-05-18
 tags:
   - cookbook
   - example
@@ -37,7 +37,7 @@ source_pages:
 
 ## Summary
 
-Creating slides with the Assistants API (GPT-4), and DALL·E-3 This notebook illustrates the use of the new $1 (GPT-4), and DALL·E-3 in crafting informative and visually appealing slides. <br Creating slides is a pivotal aspect of many jobs, but can be laborious and time-consuming. Additionally, extracting insights from data and articulating them effectively...
+Creating slides with the Assistants API (GPT-4), and DALL·E-3 This notebook illustrates the use of the new Assistants API (GPT-4), and DALL·E-3 in crafting informative and visually appealing slides. <br Creating slides is a pivotal aspect of many jobs, but can be laborious and time-consuming. Additionally, extracting insights from data and articulating them...
 
 ## What This Teaches
 

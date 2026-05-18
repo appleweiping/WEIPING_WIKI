@@ -3,7 +3,7 @@ title: "Elasticsearch Retrieval Augmented Generation"
 type: source
 status: mirrored
 created: 2026-05-15
-updated: 2026-05-15
+updated: 2026-05-18
 tags:
   - cookbook
   - evals
@@ -38,7 +38,7 @@ source_pages:
 
 ## Summary
 
-Retrieval augmented generation using Elasticsearch and OpenAI $1](openai/openai-cookbook/blob/main/examples/vector databases/elasticsearch/elasticsearch-retrieval-augmented-generation.ipynb) This notebook demonstrates how to: - Index the OpenAI Wikipedia vector dataset into Elasticsearch - Embed a question with the OpenAI $1 endpoint - Perform semantic searc...
+Retrieval augmented generation using Elasticsearch and OpenAI ![Open In Colab](openai/openai-cookbook/blob/main/examples/vector databases/elasticsearch/elasticsearch-retrieval-augmented-generation.ipynb) This notebook demonstrates how to: - Index the OpenAI Wikipedia vector dataset into Elasticsearch - Embed a question with the OpenAI embeddings endpoint - P...
 
 ## What This Teaches
 

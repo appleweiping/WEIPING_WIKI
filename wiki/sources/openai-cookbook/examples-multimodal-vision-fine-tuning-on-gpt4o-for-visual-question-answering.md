@@ -3,7 +3,7 @@ title: "Vision Fine Tuning On Gpt4o For Visual Question Answering"
 type: source
 status: mirrored
 created: 2026-05-15
-updated: 2026-05-15
+updated: 2026-05-18
 tags:
   - cookbook
   - example
@@ -37,7 +37,7 @@ source_pages:
 
 ## Summary
 
-Vision Fine-tuning on GPT-4o for Visual Question Answering We're excited to announce the launch of $1, a cutting-edge multimodal fine-tuning capability that empowers developers to fine-tune GPT-4o using both images and text . With this new feature, you can customize models to have stronger image understanding capabilities, unlocking possibilities across vari...
+Vision Fine-tuning on GPT-4o for Visual Question Answering We're excited to announce the launch of Vision Fine-Tuning on GPT-4o, a cutting-edge multimodal fine-tuning capability that empowers developers to fine-tune GPT-4o using both images and text . With this new feature, you can customize models to have stronger image understanding capabilities, unlocking...
 
 ## What This Teaches
 

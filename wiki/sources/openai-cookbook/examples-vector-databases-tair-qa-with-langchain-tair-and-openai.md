@@ -3,7 +3,7 @@ title: "Qa With Langchain Tair And Openai"
 type: source
 status: mirrored
 created: 2026-05-15
-updated: 2026-05-15
+updated: 2026-05-18
 tags:
   - cookbook
   - example
@@ -38,7 +38,7 @@ source_pages:
 
 ## Summary
 
-Question Answering with Langchain, Tair and OpenAI This notebook presents how to implement a Question Answering system with Langchain, Tair as a knowledge based and OpenAI embeddings. If you are not familiar with Tair, it’s better to check out the $1 notebook. This notebook presents an end-to-end process of: - Calculating the embeddings with OpenAI API. - St...
+Question Answering with Langchain, Tair and OpenAI This notebook presents how to implement a Question Answering system with Langchain, Tair as a knowledge based and OpenAI embeddings. If you are not familiar with Tair, it’s better to check out the Getting started with Tair and OpenAI.ipynb notebook. This notebook presents an end-to-end process of: - Calculat...
 
 ## What This Teaches
 

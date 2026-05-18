@@ -3,7 +3,7 @@ title: "Custom Image Embedding Search"
 type: source
 status: mirrored
 created: 2026-05-15
-updated: 2026-05-15
+updated: 2026-05-18
 tags:
   - cookbook
   - example
@@ -38,7 +38,7 @@ source_pages:
 
 ## Summary
 
-Multimodal RAG with CLIP Embeddings and GPT-4 Vision Multimodal RAG integrates additional modalities into traditional text-based RAG, enhancing LLMs' question-answering by providing extra context and grounding textual data for improved understanding. Adopting the approach from the $1, we directly embed images for similarity search, bypassing the lossy proces...
+Multimodal RAG with CLIP Embeddings and GPT-4 Vision Multimodal RAG integrates additional modalities into traditional text-based RAG, enhancing LLMs' question-answering by providing extra context and grounding textual data for improved understanding. Adopting the approach from the clothing matchmaker cookbook, we directly embed images for similarity search,...
 
 ## What This Teaches
 
