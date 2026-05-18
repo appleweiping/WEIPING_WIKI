@@ -85,7 +85,7 @@ On 2026-05-17, the workflow was upgraded from a flexible sidecar rule into a str
 - Opus Reviewer: `claude-opus-4-7` for deep code review, complex reasoning, architecture, hard debugging, and high-risk final audits.
 - Sonnet Scanner: `claude-sonnet-4-6` for quick diff scans, test suggestions, documentation reading, and routine low-risk checks.
 
-OpenCode remains an installed and smoke-tested tool, but it is not part of this multi-agent coding workflow.
+OpenCode remains an installed and smoke-tested tool. As of 2026-05-18, it has been promoted to a full CC-family fusion partner in the multi-agent collaboration system (see `AGENTS.md` § OpenCode Partner Policy).
 
 The strict-role update was validated with real sidecar calls:
 

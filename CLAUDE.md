@@ -10,12 +10,13 @@ When the user starts Claude Code directly and explicitly grants write scope, fol
 
 ## Multi-Agent System Overview
 
-This project runs a 5-agent collaboration system. You (Opus) are the strongest coder in the team.
+This project runs a 6-agent collaboration system. You (Opus) are the strongest coder in the team.
 
 | Agent | Model | Role | Strengths |
 |-------|-------|------|-----------|
 | Opus (you) | Claude 4.7 | Architect + primary coder | Long-context 1M, multi-file refactor, architecture, security, agentic coherence |
 | Codex | GPT-5.5 | Coordinator + fast executor | Speed, task decomposition, parallel subagents, CLI, wiki maintenance |
+| OpenCode | Claude 4.7 | CC-family fusion + independent entry | Combined reasoning + execution, long-running sessions, standalone when CC unavailable, sub-agent orchestration |
 | Sonnet | Claude 4.6 | Reviewer + verifier | Cost-effective review, test suggestions, documentation, second opinion |
 | Haiku | Claude 4.5 | Speedster + pre-screener | Fastest CC model, lint, formatting, quick classification, high-frequency small tasks |
 | DeepSeek Pro | DeepSeek V4 | Cheap labor | Bulk text, translation, summarization, Chinese content (1/50 cost of Opus) |
@@ -55,6 +56,7 @@ Location: `D:\devtools\agent-hub\`
 **Shared state directory:** `D:\devtools\agent-hub\state\`
 **Your identity:** `claude`
 **Codex identity:** `codex`
+**OpenCode identity:** `opencode`
 
 ## Key Behaviors
 
@@ -82,7 +84,7 @@ Before assuming Opus/Sonnet/Haiku are usable, run the vipin wiki health check wh
 
 If it returns `upstream_credentials_disabled` or PixelCat HTTP 502 with `0/1` credentials, the CC family is blocked by PixelCat's upstream credential/network state. Fix PixelCat first (credential/account state, TUN, PixelCat outbound proxy, or another IP/exit node), then retry; do not treat it as a prompt or Claude Code installation failure. Keep Claude Code pointed at PixelCat's local API on `127.0.0.1:8990`; local proxy ports such as `7897` are outbound exits only.
 
-When the CC family is unavailable, Codex should preserve the collaboration structure by assigning the Opus/Sonnet/Haiku slots to Codex parallel selves / `分身` by default, with the limitation stated when missing CC review materially increases risk.
+When the CC family is unavailable, Codex should preserve the collaboration structure by assigning the Opus/Sonnet/Haiku slots to Codex parallel selves / `分身` by default (or to OpenCode when the user is in the OpenCode interface), with the limitation stated when missing CC review materially increases risk.
 
 ## Automation Model Policy
 
@@ -90,9 +92,10 @@ Cron automations must run on `gpt-5.5` with `high` reasoning. Do not create or u
 
 ## For Complex Coding Tasks
 
-Opus and Codex work as equals:
+Opus, Codex, and OpenCode work as equals:
 - **You (Opus)**: architecture decisions, cross-module design, long-context analysis, security review, primary implementation
 - **Codex**: task decomposition, file-level execution, test running, commit/push, parallel subagents
+- **OpenCode**: long-running sessions, combined reasoning + execution, standalone operation when CC family is unavailable, context-compacted multi-hour tasks
 
 **How to invoke other agents from Claude Code (this terminal):**
 
@@ -102,6 +105,7 @@ Opus and Codex work as equals:
 | Sonnet | `hub_invoke_sonnet` (synchronous, ~10s) | Code review, test suggestions, docs, second opinion |
 | DeepSeek | `deepseek_chat` (synchronous, ~5s) | Translation, summarization, bulk text, cheap drafts |
 | Codex | `hub_notify(to="codex")` (async, daemon dispatches) | Task decomposition, parallel execution, wiki updates |
+| OpenCode | `hub_notify(to="opencode")` (async) or filesystem coordination | Long-running tasks, standalone execution, CC-family fusion work |
 | Quality Gate | `hub_quality_gate` (synchronous, ~15s) | Auto-review: Haiku lint → Sonnet review → PASS/FAIL |
 
 **Recommended workflow for code you write:**

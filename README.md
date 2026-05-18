@@ -11,13 +11,13 @@ This repository serves four purposes:
 1. **Knowledge Graph** — A public Markdown wiki (`wiki/`) with entities, concepts, sources, analyses, queries, and topics, all interlinked and maintained over time.
 2. **Research Memory** — Papers, project histories, baseline comparisons, and literature maps that persist across sessions and agents.
 3. **Agent Operating Contract** — Authoritative rules (`AGENTS.md`) that govern how AI agents collaborate, write, validate, and commit within this repository.
-4. **Multi-Agent Collaboration Hub** — A 5-agent system with real-time orchestration, shared state, and automated quality gates.
+4. **Multi-Agent Collaboration Hub** — A 6-agent system with real-time orchestration, shared state, and automated quality gates.
 
 ## Getting Started
 
 | You are | First step | Then |
 |---------|-----------|------|
-| The user (Vipin) | Open Codex or Claude Code | Talk naturally. Agents handle orchestration, wiki updates, and commits. |
+| The user (Vipin) | Open Codex, Claude Code, or OpenCode | Talk naturally. Agents handle orchestration, wiki updates, and commits. |
 | A future AI agent | Read `AGENTS.md` in full | Then read `CLAUDE.md`, check `wiki/index.md`, `wiki/catalog.json`, and recent `wiki/log.md` entries. |
 | A human reader | Open `wiki/index.md` | Follow links to entities, concepts, sources, and analyses. |
 | A maintainer | Run `python scripts/wiki-catalog.py --root .` | Fix any issues, then `git push`. |
@@ -79,6 +79,9 @@ vipin-wiki/
 │       ├── mattpocock-skills/  # Engineering workflow skills (tdd, grill-me, diagnose, etc.)
 │       └── README-skills-layout.md
 │
+├── .opencode/                 # OpenCode configuration (CC-family fusion agent)
+│   └── OPENCODE.md            # OpenCode-specific operating guide
+│
 └── .github/workflows/         # CI/CD
     ├── deploy.yml             # Validate + build Quartz + deploy to GitHub Pages
     └── pages-health.yml       # Daily health check on live site
@@ -86,7 +89,7 @@ vipin-wiki/
 
 ## Multi-Agent Collaboration System
 
-Five AI agents collaborate through the Agent Hub MCP server (`D:\devtools\agent-hub\`), a custom-built orchestration layer with 20 tools, a real-time daemon, and shared persistent state.
+Six AI agents collaborate through the Agent Hub MCP server (`D:\devtools\agent-hub\`), a custom-built orchestration layer with 20 tools, a real-time daemon, and shared persistent state.
 
 ### Agent Roles
 
@@ -94,6 +97,7 @@ Five AI agents collaborate through the Agent Hub MCP server (`D:\devtools\agent-
 |-------|-------|------|-------------------|
 | **Opus** | Claude 4.7 | Architect + primary coder | Complex multi-file refactors, architecture design, security review, long-context analysis (1M tokens), agentic multi-hour tasks |
 | **GPT-5.5** | GPT-5.5 | Coordinator + fast executor | Task decomposition, parallel subagent orchestration, short CLI tasks, math/algorithms, wiki maintenance |
+| **OpenCode** | Claude 4.7 | CC-family fusion + independent entry | Long-running sessions with context compaction, combined reasoning + execution, standalone operation when CC family unavailable, sub-agent orchestration (explore/general) |
 | **Sonnet** | Claude 4.6 | Reviewer + verifier | Code review second pass, test gap analysis, documentation generation, routine "second set of eyes" checks |
 | **Haiku** | Claude 4.5 | Speedster + pre-screener | Lint checks, formatting validation, quick classification, high-frequency small tasks, pre-screening before deeper review |
 | **DeepSeek Pro** | DeepSeek V4 | Bulk worker | Translation, summarization, classification, batch text processing, Chinese content generation, cost-sensitive tasks |
@@ -120,7 +124,7 @@ All infrastructure starts automatically on Windows boot (via `shell:startup`):
 - **PixelCat** (`D:\devtools\pixelcat-app.exe`) — Local API proxy on port 8990, holds Anthropic API key
 - **Agent Hub Daemon** (`D:\devtools\agent-hub\daemon.mjs`) — HTTP server on port 9800, handles dispatch/retry/pipeline/warm-context
 
-The user only needs to open one chat window (Codex or Claude Code). Everything else is automatic.
+The user only needs to open one chat window (Codex, Claude Code, or OpenCode). Everything else is automatic.
 
 Health check for the Claude Code partner path:
 
@@ -130,7 +134,7 @@ Health check for the Claude Code partner path:
 
 `upstream_credentials_disabled` means PixelCat is running but ccmax/PixelCat has disabled every upstream credential currently available. Fix the PixelCat panel's account/network state, try TUN, a PixelCat outbound proxy, or another IP/exit node, then rerun the check before invoking Opus, Sonnet, or Haiku. Keep Claude Code pointed at PixelCat's local API on `127.0.0.1:8990`; proxy ports such as `7897` are outbound exits only.
 
-When the CC family is unavailable, keep the collaboration shape by assigning the Opus/Sonnet/Haiku slots to Codex parallel selves / `分身` by default, and note the missing CC review when it materially increases risk.
+When the CC family is unavailable, keep the collaboration shape by assigning the Opus/Sonnet/Haiku slots to Codex parallel selves / `分身` or to OpenCode (when the user is in the OpenCode interface) by default, and note the missing CC review when it materially increases risk.
 
 ### 20 MCP Tools
 

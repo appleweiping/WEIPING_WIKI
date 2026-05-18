@@ -966,3 +966,23 @@ tags:
   - Audited the new Lidang light capture as public-safe failed-crawl evidence with one metadata-only X profile probe and no private-path leak.
   - Audited the Matt Pocock Claude skill install as MIT-licensed, provenance-matched, and secret-scan clean; nested `.git` metadata was moved to ignored `.wiki-tmp` backup so the skill can be committed as normal source files.
   - Confirmed CC-family partners are still blocked by PixelCat `upstream_credentials_disabled`, so this review used Codex-side verification rather than a real Opus/Sonnet pass.
+
+## [2026-05-18 20:25] bootstrap | OpenCode promoted to full collaboration partner
+
+- Pages created or updated:
+  - `AGENTS.md` — added OpenCode to CC partner table, role assignments, collaboration patterns, and new `## OpenCode Partner Policy` section
+  - `CLAUDE.md` — updated to 6-agent system, added OpenCode identity and invocation path
+  - `README.md` — updated to 6-agent system, added OpenCode to agent roles table and getting started
+  - `.claude/skills/README-skills-layout.md` — added OpenCode directory reference
+  - `.opencode/OPENCODE.md` — created OpenCode-specific operating guide
+  - [[local-cc-sidecar-agent-workflow]] — updated OpenCode status from excluded to full partner
+  - [[2026-05-17-opencode-cc-pixelcat-setup]] — updated OpenCode status note
+- Sources used:
+  - Existing `AGENTS.md`, `CLAUDE.md`, `README.md` operating docs
+  - User request to integrate OpenCode as CC-family fusion partner
+- Notes:
+  - OpenCode (claude-opus-4-7 via OpenCode CLI) is now a full read/write collaboration partner, not excluded.
+  - Positioned as CC-family fusion: combines Opus reasoning depth with Codex-style task decomposition and sub-agent orchestration.
+  - Independent entry point: does not depend on PixelCat, Agent Hub daemon, or cc.cmd.
+  - Coordinates with other agents via git state and wiki/log.md (always available) plus Agent Hub shared state (when daemon is running).
+  - System upgraded from 5-agent to 6-agent collaboration.

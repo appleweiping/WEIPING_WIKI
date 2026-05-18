@@ -30,7 +30,7 @@ Codex acts as the supervisor and only writer. Opus and Sonnet act as read-only p
 - EXTRACTED: PixelCat management panel executable: `D:\devtools\pixelcat-app.exe`.
 - EXTRACTED: Verified Claude Code version: `2.1.143`.
 
-OpenCode is installed and recorded in [[2026-05-17-opencode-cc-pixelcat-setup]], but it is not part of this multi-agent coding workflow.
+OpenCode is installed and recorded in [[2026-05-17-opencode-cc-pixelcat-setup]]. As of 2026-05-18, OpenCode is a full CC-family fusion partner in the multi-agent collaboration system — see the `## OpenCode Partner Policy` section in `AGENTS.md` for its role, permissions, and coordination model.
 
 ## PixelCat Preflight
 

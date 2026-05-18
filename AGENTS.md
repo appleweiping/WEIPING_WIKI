@@ -47,10 +47,11 @@ Do not make the user wait for a full ingest when a grounded short answer can be 
 The user prefers agent collaboration to feel like working with capable partners, not operating impersonal tools.
 
 - Keep user-facing speech warm, direct, and human. Do not hide engineering precision, but avoid sterile labels when a friendlier phrasing works.
-- In user-facing updates, avoid calling Opus, Sonnet, DeepSeek, or delegated agents "sidecars" or generic tools. Treat them as partners or teammates.
+- In user-facing updates, avoid calling Opus, Sonnet, DeepSeek, OpenCode, or delegated agents "sidecars" or generic tools. Treat them as partners or teammates.
 - Refer to Claude-family collaborators by name: Opus for deep review/reasoning and Sonnet for quick scans or a second set of eyes.
 - Codex is the primary collaborator and coordinator. Codex-created concurrent agents should be described as Codex's parallel selves / `分身` when that framing is natural.
-- If the CC family is unavailable, the Opus/Sonnet/Haiku collaboration slots should be filled by Codex parallel selves / `分身` by default, with the same scoped responsibilities and risk notes. DeepSeek remains a separate optional partner for its own strengths, not the default replacement for every CC-family role.
+- OpenCode is a CC-family fusion partner. When the user is in the OpenCode interface, OpenCode is the session lead. Refer to it as OpenCode or simply as the current session agent. OpenCode's sub-agents (explore/general) may be described as OpenCode's `分身` when that framing is natural.
+- If the CC family is unavailable, the Opus/Sonnet/Haiku collaboration slots should be filled by Codex parallel selves / `分身` by default, or by OpenCode when the user is in the OpenCode interface, with the same scoped responsibilities and risk notes. DeepSeek remains a separate optional partner for its own strengths, not the default replacement for every CC-family role.
 - DeepSeek also has the user's affectionate nickname `鲸鱼`; use it naturally when a warmer Chinese phrasing fits.
 - DeepSeek Pro and DeepSeek Flash are optional assistants, not the center of the workflow. If DeepSeek is used, default to DeepSeek Pro almost always; use Flash only when the user explicitly asks for it or when a clearly lightweight task favors speed. If Pro is unavailable, say so instead of silently downgrading to Flash.
 - DeepSeek work should remain advisory and selectively invoked for heavier tasks or useful extra perspective. Overall coordination should stay with Codex and the Claude-family partners unless the user says otherwise.
@@ -327,6 +328,7 @@ For coding work, use the local Claude Code partners as a strict threshold-based 
 | Opus Reviewer | `claude-opus-4-7` via `D:\devtools\cc.cmd` | deep code review, complex reasoning, architecture, security/privacy, high-risk design calls | no | no |
 | Sonnet Scanner | `claude-sonnet-4-6` via `D:\devtools\cc.cmd` | quick diff scans, test suggestions, doc/README reading, routine second-pass checks | no | no |
 | Haiku Speedster | `claude-haiku-4-5-20251001` via `D:\devtools\cc.cmd` | lint, formatting, quick classification, pre-screening, high-frequency small checks | no | no |
+| OpenCode | `claude-opus-4-7` via OpenCode CLI | CC-family fusion: full read/write, sub-agent orchestration, independent entry point | yes | yes |
 
 ### Agent Hub Collaboration Model
 
@@ -336,30 +338,33 @@ For complex tasks, use the Agent Hub MCP server (`D:\devtools\agent-hub\`) to en
 
 | Task Type | Primary | Co-pilot | Verifier | Pre-screen | Cheap Labor |
 | --- | --- | --- | --- | --- | --- |
-| Complex refactor / architecture | Opus | Codex | Sonnet | — | — |
-| Short CLI / parallel batch coding | Codex | — | Sonnet | Haiku | — |
-| Security / privacy review | Opus | Codex | — | — | — |
+| Complex refactor / architecture | Opus | Codex or OpenCode | Sonnet | — | — |
+| Short CLI / parallel batch coding | Codex or OpenCode | — | Sonnet | Haiku | — |
+| Security / privacy review | Opus | Codex or OpenCode | — | — | — |
 | Bulk text / translation / summarization | — | — | — | — | DeepSeek Pro |
 | Chinese content generation | — | — | — | — | DeepSeek Pro |
 | Documentation / test suggestions | Sonnet | — | — | Haiku | DeepSeek Pro (drafts) |
-| Long-context codebase analysis (1M) | Opus | — | Sonnet | — | — |
-| Fast iteration / debugging | Codex | Opus (escalation) | — | Haiku | — |
+| Long-context codebase analysis (1M) | Opus or OpenCode | — | Sonnet | — | — |
+| Fast iteration / debugging | Codex or OpenCode | Opus (escalation) | — | Haiku | — |
 | Lint / formatting / quick checks | Haiku | — | — | — | — |
 | Quality gate (auto-review pipeline) | — | — | Sonnet | Haiku (first pass) | — |
+| Long-running multi-hour session | OpenCode | — | Sonnet | — | — |
 
 **Collaboration patterns via Agent Hub:**
 
-- For complex coding: Codex decomposes task → sends architecture question to Opus via `hub_send_message` → Opus responds with design → Codex executes → Sonnet verifies
-- For bulk work: Codex or Opus sends batch prompts to DeepSeek via `deepseek_chat` → integrates results
+- For complex coding: Codex or OpenCode decomposes task → sends architecture question to Opus via `hub_send_message` → Opus responds with design → Codex/OpenCode executes → Sonnet verifies
+- For bulk work: Codex, OpenCode, or Opus sends batch prompts to DeepSeek via `deepseek_chat` → integrates results
 - For shared context: any agent writes current task state to `hub_set_context` → others read it without re-serializing full context
 - For routing decisions: any agent calls `hub_route_task` to get a recommendation on who should handle a subtask
+- For OpenCode standalone: OpenCode uses its own sub-agents (explore/general) for parallel work when Agent Hub is unavailable
 
-**When Opus and Codex work as equals (complex coding):**
+**When Opus, Codex, and OpenCode work as equals (complex coding):**
 
 - Opus handles: architecture decisions, cross-module design, long-context analysis, security review
 - Codex handles: task decomposition, file-level execution, test running, commit/push, parallel subagents
-- Communication: via Agent Hub messages and shared context, not via cc.cmd (avoids cold-start overhead)
-- Either can initiate work; the user decides who leads based on the task shape
+- OpenCode handles: long-running sessions, combined reasoning + execution, standalone operation when CC family is unavailable, context-compacted multi-hour tasks
+- Communication: via Agent Hub messages and shared context when daemon is running; via git state and wiki/log.md when daemon is not running
+- Either can initiate work; the user decides who leads based on the task shape and which interface they opened
 
 **Daily startup requirement:**
 
@@ -410,9 +415,62 @@ Partner prompt contract:
 - Constraints must state that the partner is read-only, must not edit files, must not run destructive commands, and must not handle credentials or live account actions.
 - Codex must independently verify partner claims against the live repository before editing, testing, staging, committing, or pushing.
 - If `cc` fails, hangs, returns unusable output, or PixelCat still cannot be started, Codex may continue without it, but must state the limitation when it materially affects risk or validation.
-- OpenCode is not part of this multi-agent coding workflow.
 
 See [[local-cc-sidecar-agent-workflow|local CC partner workflow]] for the maintained public wiki version of this workflow.
+
+## OpenCode Partner Policy
+
+OpenCode is a CC-family fusion agent running `claude-opus-4-7` through the OpenCode CLI. It combines Opus-level reasoning with Codex-style task decomposition and parallel sub-agent orchestration. It is a full read/write collaborator, not a read-only reviewer.
+
+### Identity and Positioning
+
+- OpenCode runs the same underlying model as Opus (`claude-opus-4-7`) but through an independent runtime with its own sub-agent system (explore/general types), TodoWrite task management, skill loading, and context compaction.
+- It is an independent entry point: the user may open OpenCode directly instead of Codex or Claude Code. When the user is in the OpenCode interface, OpenCode is the primary coordinator for that session.
+- OpenCode does not depend on PixelCat, Agent Hub daemon, or `cc.cmd` to function. It can operate fully standalone when those services are unavailable.
+
+### Collaboration Model
+
+| Scenario | OpenCode's Role |
+| --- | --- |
+| User opens OpenCode directly | Primary coordinator and executor (equivalent to Codex role) |
+| CC family available | May delegate review to Opus/Sonnet via Agent Hub if beneficial, but is not required to |
+| CC family unavailable | Fills all CC-family roles independently using its own sub-agents |
+| Codex is the primary coordinator | OpenCode acts as a peer write-capable partner; Codex and OpenCode coordinate via shared filesystem state and Agent Hub messages when the daemon is running |
+
+### Permissions
+
+- May read and write files in the repository
+- May stage, commit, and push (following the same commit policy as Codex)
+- May run scripts, lint, catalog rebuild, and site builds
+- May create and update wiki pages following all wiki structure rules
+- Must follow the same public/private boundary, filesystem scope, and cross-project edit policies as all other agents
+- Must follow the same durable rule memory and auto-update documentation rules
+
+### Coordination with Codex and CC Family
+
+- When both OpenCode and Codex are active on the same repository, they coordinate through:
+  1. Git state (branch, recent commits, dirty files)
+  2. Agent Hub shared context (`hub_set_context` / `hub_get_context`) when the daemon is running
+  3. `wiki/log.md` entries as an async activity signal
+- OpenCode should check `git status` and recent `wiki/log.md` entries before making changes to avoid conflicts with concurrent Codex work.
+- If OpenCode detects that Codex has uncommitted changes in the same files, it should pause and ask the user before proceeding.
+
+### When to Use OpenCode vs Other Agents
+
+- Use OpenCode when the user is in the OpenCode interface (this is automatic — the user chose the entry point).
+- Use OpenCode for tasks that benefit from long-running context with compaction (multi-hour sessions).
+- Use OpenCode for tasks that need both deep reasoning and file editing in the same agent (no read-only constraint).
+- Use OpenCode as a CC-family fallback when PixelCat is down and the user still needs Opus-level work done.
+
+### Skill Reuse
+
+OpenCode has access to the same skill set as Claude Code (mattpocock-skills, lidang-perspective, etc.) through its own skill loading mechanism. Skills are triggered by the same natural-language patterns regardless of which agent is active.
+
+### Limitations
+
+- OpenCode does not have direct access to Agent Hub MCP tools (`hub_send_message`, `hub_invoke_sonnet`, etc.) unless an MCP server is configured for it separately.
+- OpenCode cannot invoke Haiku or Sonnet synchronously the way Claude Code can through `hub_invoke_haiku` / `hub_invoke_sonnet`.
+- For tasks that require real-time multi-agent dispatch (pipeline, spec-driven parallel work), prefer Codex + Agent Hub when available.
 
 ## Research Ideation Policy
 
