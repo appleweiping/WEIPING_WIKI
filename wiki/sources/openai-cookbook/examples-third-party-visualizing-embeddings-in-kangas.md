@@ -1,7 +1,7 @@
 ---
 title: "Visualizing Embeddings In Kangas"
 type: source
-status: mirrored
+status: imported
 created: 2026-05-15
 updated: 2026-05-18
 tags:

@@ -1,7 +1,7 @@
 ---
 title: Vipin
 type: entity
-status: seed
+status: draft
 created: 2026-04-21
 updated: 2026-04-21
 tags:

@@ -1,7 +1,7 @@
 ---
 title: Research Project Roots
 type: source
-status: ingested
+status: active
 created: 2026-05-10
 updated: 2026-05-10
 tags:
