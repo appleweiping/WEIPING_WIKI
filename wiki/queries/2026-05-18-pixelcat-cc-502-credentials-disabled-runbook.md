@@ -40,15 +40,45 @@ Interpretation:
 - `local_auth_failed`: check the local PixelCat API key / `ANTHROPIC_AUTH_TOKEN` configuration.
 - `rate_limited`: wait or reduce concurrent CC-family calls.
 
+If an external run aborts with text like `exceeded retry limit, last status: 429 Too Many Requests`, treat it as an upstream rate-limit/retry-exhaustion condition. It is not evidence that `cc` should be pointed at a proxy port instead of PixelCat's local API.
+
 ## Fix Path
 
 For `upstream_credentials_disabled`:
 
 1. Open the PixelCat panel at the visible app, not Codex.
 2. Fix account/credential availability in PixelCat or ccmax.
-3. Try TUN mode or another IP/exit node if the panel suggests a network/IP issue.
+3. Try TUN mode, a PixelCat process-level proxy, or another IP/exit node if the panel suggests a network/IP issue.
 4. Rerun `.\scripts\Test-LocalCcPartner.ps1`.
 5. Only after `api_ok`, retry Opus/Sonnet/Haiku partner calls.
+
+## No-TUN IP Change Options
+
+INFERRED: It is possible to change PixelCat's upstream exit IP without using the provider's virtual VPN/TUN app, but only if there is a real trusted exit node available. A local config change alone cannot create a new public IP.
+
+Recommended routing shape:
+
+```text
+cc.cmd -> PixelCat local API on 127.0.0.1:8990 -> trusted outbound proxy / SSH tunnel / hotspot / WARP -> ccmax
+```
+
+Do not replace the `cc`/PixelCat local API address with a proxy port such as `127.0.0.1:7897`. The `8990` port is where `cc.cmd` talks to PixelCat. Ports such as `7897`, `7898`, or other local proxy ports are only candidates for PixelCat's outbound `proxyUrl` or for a system-level route.
+
+Practical non-TUN choices:
+
+- Self-owned VPS SSH dynamic forwarding: start a local SOCKS proxy such as `ssh -N -D 127.0.0.1:7898 user@vps-host`, then configure PixelCat's outbound proxy to the local SOCKS endpoint if PixelCat supports SOCKS. If PixelCat only accepts HTTP proxies, put a local HTTP-to-SOCKS bridge in front of it.
+- Trusted HTTP/SOCKS proxy: configure PixelCat's outbound proxy URL to that proxy, then verify the public IP changes before retrying `cc`.
+- Different physical network: switch to a mobile hotspot, another Wi-Fi, or another router exit and rerun the health check.
+- WARP or similar outbound route: acceptable if it provides a changed exit path, but it may still install a network adapter; treat it as an exit-node option, not as changing the `cc` base URL.
+
+Verification order:
+
+1. Confirm the proxy itself changes public IP with a command such as `curl.exe --proxy http://127.0.0.1:PORT https://api.ipify.org`.
+2. Configure PixelCat outbound proxy only after the proxy exit differs from the direct exit.
+3. Restart PixelCat if required.
+4. Run `.\scripts\Test-LocalCcPartner.ps1`.
+
+Safety note: avoid random free proxies for this path. Even when HTTPS protects upstream content, the proxy still sees timing, destination, and account-adjacent traffic patterns, and a malicious proxy can cause confusing failures.
 
 ## 2026-05-18 Binary Refresh Result
 

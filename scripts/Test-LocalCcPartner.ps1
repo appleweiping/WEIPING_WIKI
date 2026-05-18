@@ -122,7 +122,7 @@ function Invoke-PixelCatProbe {
         $recommendation = "Inspect PixelCat, then retry this script."
         if ($code -eq 502 -and ($bodyText -match "0/1" -or $bodyText -match "(?i)credential|disabled|upstream")) {
             $status = "upstream_credentials_disabled"
-            $recommendation = "PixelCat is running, but its upstream credential pool is disabled. In the PixelCat panel, fix credential/network state, try TUN or another IP/exit node, then rerun this script."
+            $recommendation = "PixelCat is running, but its upstream credential pool is disabled. In the PixelCat panel, fix credential/network state, try TUN, a PixelCat outbound proxy, or another IP/exit node, then rerun this script."
         } elseif ($code -in 401, 403) {
             $status = "local_auth_failed"
             $recommendation = "Check ANTHROPIC_AUTH_TOKEN or the PixelCat config apiKey."

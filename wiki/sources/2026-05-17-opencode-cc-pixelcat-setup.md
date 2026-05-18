@@ -73,6 +73,7 @@ Tutorial references:
 - EXTRACTED: Attempts to force TUN through Clash config were reverted by the app; no Wintun/Clash virtual adapter appeared.
 - EXTRACTED: Temporary PixelCat and Clash config changes were restored after the attempt.
 - INFERRED: A real IP/exit-node change still requires a working Clash profile or connected VPN chosen through the relevant UI. The expected chain is `cc.cmd -> PixelCat:8990 -> outbound proxy/TUN -> ccmax`.
+- INFERRED: A provider VPN/TUN app is not strictly required if there is a trusted alternative exit, such as a self-owned VPS SSH dynamic proxy, trusted HTTP/SOCKS proxy, mobile hotspot, WARP-style route, or another physical network. The invariant is that `cc.cmd` still calls PixelCat on `127.0.0.1:8990`; only PixelCat's outbound path changes.
 
 ## Operational Meaning
 

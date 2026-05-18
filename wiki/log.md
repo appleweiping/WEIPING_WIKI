@@ -891,3 +891,19 @@ tags:
   - PixelCat through the local proxy still returned `upstream_credentials_disabled`; direct and proxied public IP were identical.
   - TUN forcing attempts were overwritten by Clash Verge, no virtual adapter appeared, and all temporary PixelCat/Clash config changes were restored.
   - Clarified that PixelCat panel address `127.0.0.1:8990` is the local API endpoint; outbound proxy/TUN routing is separate and would not replace that displayed address.
+## [2026-05-18 13:02] query | PixelCat no-TUN exit routing
+
+- Pages created or updated:
+  - [[2026-05-18-pixelcat-cc-502-credentials-disabled-runbook]]
+  - [[local-cc-sidecar-agent-workflow]]
+  - [[2026-05-17-opencode-cc-pixelcat-setup]]
+  - `scripts/Test-LocalCcPartner.ps1`
+  - [[log]]
+- Sources used:
+  - User question about changing IP without the provider's virtual VPN application.
+  - Prior local PixelCat, Clash Verge, and health-check results.
+- Notes:
+  - Recorded that a provider VPN/TUN app is not strictly required if PixelCat can use a trusted alternative exit such as a self-owned VPS SSH dynamic proxy, trusted HTTP/SOCKS proxy, WARP-style route, hotspot, or another physical network.
+  - Clarified the invariant that `cc.cmd` must keep calling PixelCat on `127.0.0.1:8990`; proxy ports such as `7897` are outbound exits only.
+  - Added verification guidance: first prove the proxy changes public IP, then configure PixelCat outbound proxy, restart if needed, and rerun `scripts/Test-LocalCcPartner.ps1`.
+  - Recorded that `429 Too Many Requests` is an upstream rate-limit/retry-exhaustion signal, not evidence that the local API address should be replaced.

@@ -60,6 +60,8 @@ Then wait briefly and re-check `127.0.0.1:8990`. If the proxy still does not com
 
 If the port is listening but the API probe returns HTTP 502 with a message like "all upstream credentials are disabled" or `0/1`, the local Claude Code installation is not the broken part. The fix is to repair PixelCat's upstream account/network state in the panel, try TUN mode or another IP/exit node, and rerun the health check. Do not keep retrying `cc`, changing prompts, or treating this as a model-name issue.
 
+Changing IP does not require changing the `cc` base URL. Keep `cc.cmd` pointed at PixelCat's local API on `127.0.0.1:8990`; if a different exit is needed, route PixelCat's outbound traffic through a trusted process-level proxy, SSH dynamic tunnel, WARP-style route, mobile hotspot, or another real network exit. A local proxy port such as `127.0.0.1:7897` is not a replacement for `8990`; it is only useful if it is a working outbound proxy and the public exit IP actually changes.
+
 Do not ask the user to remember how to open PixelCat unless the executable is missing or startup fails repeatedly.
 
 ## Role Contract
