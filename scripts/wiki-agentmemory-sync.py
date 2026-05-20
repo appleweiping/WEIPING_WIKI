@@ -80,7 +80,8 @@ def call_memory_save_mcp(content: str, concepts: list[str], mem_type: str = "fac
         result = subprocess.run(
             [node, standalone],
             input=input_data, capture_output=True, text=True, timeout=15,
-            env={**os.environ, "AGENTMEMORY_URL": AGENTMEMORY_URL}
+            env={**os.environ, "AGENTMEMORY_URL": AGENTMEMORY_URL},
+            encoding="utf-8", errors="replace"
         )
         lines = result.stdout.strip().split("\n")
         for line in lines:
