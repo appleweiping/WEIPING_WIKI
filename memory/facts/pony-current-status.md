@@ -92,6 +92,20 @@ All gates passed (B1, B2, B3). Ready for B4 (analysis) and B5 (practical value),
 
 ## 下一步
 
-- 设计 position-calibration 实验
-- 用已有的 pointwise scores 计算 position-wise accuracy curve
-- 看不同用户的 calibration curve 是否有差异（有差异 = 可以做 adaptive cutoff）
+- 在全量 973 用户上跑 v3 prompt（当前 200 用户结果已超 ProEx HR）
+- 进一步优化 prompt 缩小 NDCG gap（ProEx NDCG 领先 6%）
+- 加入 conformal calibration layer（C-CRP 核心贡献 + calibration depth 优势）
+- 跑 4 个 domain
+
+## C-CRP v3 Results (2026-05-21, 200 users, beauty)
+
+**HR@10 = 0.265, NDCG@10 = 0.1410**
+
+| Method | HR@10 | NDCG@10 | vs ProEx |
+|--------|-------|---------|----------|
+| C-CRP v1 (raw) | 0.221 | 0.1294 | -13% HR |
+| **C-CRP v3 (profile prompt)** | **0.265** | **0.1410** | **+5% HR, -6% NDCG** |
+| ProEx (best baseline) | 0.253 | 0.1506 | — |
+| IRLLRec | 0.220 | 0.1289 | -13% HR |
+
+**C-CRP v3 HR@10 超过 ProEx！** Profile-enhanced prompt 大幅提升了 scoring 质量。
