@@ -278,7 +278,19 @@ Rules:
 8. On session start, read `memory/INDEX.md` and any files relevant to the current task.
 9. On session end (significant sessions), write a summary to `memory/sessions/`.
 
-See `memory/README.md` for full format specification and examples.
+### Memory Write Triggers (强制，不依赖判断)
+
+以下事件发生时，agent 必须写入 memory，不需要判断"是否重要"：
+- **ARIS 步骤完成** → 更新 `facts/<project>-status.md`
+- **用户做出决策** → 写 `decisions/<topic>.md`
+- **发现 bug/踩坑** → 写 `lessons/<slug>.md`
+- **用户表达偏好/规则** → 写 `preferences/<slug>.md`
+- **项目状态变化** → 更新对应 facts 文件
+- **Session 结束（显著）** → 写 `sessions/YYYY-MM-DD_<slug>.md`
+
+不需要写入：简单问答、纯执行、信息已在代码/git 里。
+
+See `memory/README.md` for full format specification and `memory/decisions/memory-write-policy.md` for complete policy.
 
 ## Mandatory Skill Use Policy
 
