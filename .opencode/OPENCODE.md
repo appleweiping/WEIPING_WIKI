@@ -49,6 +49,15 @@ When the user opens OpenCode directly, OpenCode is the primary coordinator for t
 - If another agent has uncommitted changes in the same files, pause and ask the user
 - Prefer working on different files/sections when concurrent work is happening
 
+## Shared Memory
+
+All agents share file-based memory at `memory/` in this repo. No server dependency — just file I/O.
+
+- Read `memory/INDEX.md` for an overview of stored knowledge.
+- Write new memories as markdown files with YAML frontmatter (see `memory/README.md` for format).
+- On session start, scan INDEX.md for relevant context.
+- On significant session end, write a summary to `memory/sessions/`.
+
 ## Sub-Agent Usage
 
 OpenCode has two sub-agent types:
@@ -79,6 +88,18 @@ Skills are triggered by natural-language patterns in user requests.
 - No real-time daemon dispatch capability
 
 For tasks requiring these capabilities, note the limitation and suggest the user switch to Codex or Claude Code for that specific subtask.
+
+## Server Access
+
+Remote GPU server `pony-rec-gpu` is directly accessible via SSH (key-based auth):
+- **SSH command**: `ssh pony-rec-gpu`
+- **Host**: `125.71.97.70:15302`, User `ajifang`
+- **GPU**: NVIDIA RTX 4090 (49GB VRAM)
+- **Server projects**: `~/projects/` (pony-rec-rescue-shadow-v6, uncertainty-llm4rec, etc.)
+- **SSH config**: `C:\Users\admin\.ssh\config` (Host `pony-rec-gpu`)
+- **Port mappings**: 8800→26150, 8801→26151, 8802→26152, 8803→26153, 8804→26154, 8805→26155
+
+Agents can execute server commands directly: `ssh pony-rec-gpu "<command>"`
 
 ## Startup Checklist
 

@@ -208,11 +208,13 @@ Current junction map:
 | `C:\Users\admin\.claude\skills` | `D:\Research\vipin's knowledgebase\.claude\skills` | Claude Code skills |
 | `C:\Users\admin\.codex` | `D:\devtools\codex\home` | Codex (GPT-5.5) |
 | `C:\Users\admin\.cache\codex-runtimes` | `D:\devtools\codex\runtimes` | Codex |
+| `C:\Users\admin\.openhands` | `D:\devtools\openhands\home` | OpenHands |
 
 Rules:
 - Never install agent tools, caches, models, or bulk data directly on C:. If a tool defaults to C:, create a junction to D: after installation.
 - `D:\devtools\` is the canonical home for all development infrastructure (agent-hub, node, npm, opencode, claude, codex, pixelcat).
 - DeepSeek is API-only; no local storage needed beyond the VSCode extension.
+- All agent CLI launchers live at `D:\devtools\*.cmd` (cc.cmd, codex.cmd, opencode.cmd, deepseek.cmd, openhands.cmd).
 - If a new agent or tool is added, follow the same pattern: data on D:, junction from C:.
 - The migration script `D:\devtools\Complete-Migration.cmd` handles any remaining locked directories after restart.
 
@@ -251,6 +253,50 @@ When the user says future agents should remember a rule, do not leave it only in
 - Validate, commit, and push scoped durable-rule changes before ending the turn.
 - Prefer updating an existing rule page over creating a duplicate rule page.
 - **Auto-update documentation rule**: Whenever you change agent-hub code, skills, MCP config, startup scripts, agent roles, or any multi-agent infrastructure, you MUST update all relevant documentation files in the same turn. The user should never have to remind you to update docs. Affected files typically include: `CLAUDE.md`, `AGENTS.md`, `README.md`, `.claude/skills/README-skills-layout.md`, and `D:\devtools\agent-hub\README.md`.
+
+## Shared Agent Memory
+
+All agents share a file-based memory system at `memory/` (relative to this repo root: `D:\research\Vipin's Knowledgebase\memory\`). No server dependency — just read/write markdown files.
+
+Structure:
+- `memory/INDEX.md` — auto-maintained index of all memories (read this first)
+- `memory/decisions/` — architectural decisions, permanent rules
+- `memory/facts/` — current state, project status, server mappings
+- `memory/lessons/` — bugs found, patterns learned
+- `memory/preferences/` — user preferences, agent behavior rules
+- `memory/workflows/` — reusable procedures
+- `memory/sessions/` — per-session summaries (significant sessions only)
+
+Rules:
+1. Any agent may read any memory file at any time.
+2. Any agent may write new files or update existing ones.
+3. Use YAML frontmatter (title, type, created, updated, agent, tags, related) + markdown body.
+4. Use lowercase-kebab-case filenames.
+5. Prefer updating an existing memory over creating a duplicate.
+6. After writing/updating, regenerate `memory/INDEX.md`.
+7. Do not store secrets, API keys, or credentials in memory files.
+8. On session start, read `memory/INDEX.md` and any files relevant to the current task.
+9. On session end (significant sessions), write a summary to `memory/sessions/`.
+
+See `memory/README.md` for full format specification and examples.
+
+## Mandatory Skill Use Policy
+
+**科研项目（强制）：** 当任何 agent 在做科研项目时，每一步都必须先检查是否有对应的 ARIS skill：
+- CC/OpenCode: `.claude/skills/aris/skills/<step-name>/SKILL.md`
+- Codex: `.codex/skills/aris-<step-name>/SKILL.md`
+
+如果有对应 skill，必须按 skill 的结构化 phases 执行，不允许自由发挥。跳过 skill 等同于违规。
+
+**做项目（复杂任务 / 多 agent 协作时强制）：** 复杂任务或需要多 agent 协作的任务，必须先检查以下位置有没有现成的工作流或技能：
+1. 项目内已安装的 skills（`.claude/skills/`、`.codex/skills/`）
+2. `D:\agent-resources\skills\` — obra-superpowers (debugging, TDD, parallel-agents)、anthropics (claude-api, mcp-builder)、context-engineering-kit
+3. `D:\agent-resources\slash-commands\` — create-pr, fix-github-issue, optimize, commit
+4. `memory/workflows/agent-resources-guide.md` — 完整索引
+
+简单任务（单文件修改、快速问答、格式化）不需要用 skill，直接做。
+
+**如果没有现成 skill：** 先问用户是否需要寻找，或者自动在 GitHub 上搜索热门、高质量、相关的 skill/workflow，下载到 `D:\agent-resources\` 对应目录，然后使用。不要在没有方法论的情况下硬做复杂任务。
 
 ## Codex Prompt Corpus And Automation Memory
 

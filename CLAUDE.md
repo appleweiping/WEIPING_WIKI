@@ -25,6 +25,12 @@ This project runs a 6-agent collaboration system. You (Opus) are the strongest c
 
 Location: `D:\devtools\agent-hub\`
 
+## Shared Memory
+
+All agents share file-based memory at `memory/` in this repo. Read `memory/INDEX.md` on session start for context. Write session summaries on significant sessions. No MCP server needed — just read/write files. See `memory/README.md` for format spec.
+
+## Agent Hub Details
+
 **Two layers:**
 - `agent-hub.mjs` — MCP server (each agent spawns its own instance, shares disk state)
 - `daemon.mjs` — HTTP daemon on port 9800 (auto-dispatches urgent messages, auto-retries on failure)
@@ -132,6 +138,18 @@ Use `hub_send_message` to communicate with Codex. Use `hub_set_context` to share
 | Claude MCP config | `C:\Users\admin\.claude\mcp.json` |
 | Skills (Claude) | `D:\Research\vipin's knowledgebase\.claude\skills\` |
 | Skills (Codex) | `D:\Research\vipin's knowledgebase\.codex\skills\` |
+
+## Server Access
+
+Remote GPU server `pony-rec-gpu` is now directly accessible via SSH (key-based auth configured):
+- **SSH command**: `ssh pony-rec-gpu`
+- **Host**: `125.71.97.70`, Port `15302`, User `ajifang`
+- **GPU**: NVIDIA RTX 4090 (49GB VRAM)
+- **Server projects**: `~/projects/` (pony-rec-rescue-shadow-v6, uncertainty-llm4rec, etc.)
+- **SSH config**: `C:\Users\admin\.ssh\config` (Host `pony-rec-gpu`)
+- **Port mappings**: 8800→26150, 8801→26151, 8802→26152, 8803→26153, 8804→26154, 8805→26155
+
+Agents can execute server commands directly via `ssh pony-rec-gpu "<command>"`.
 
 ## Mandatory: Auto-Update Documentation
 

@@ -1,0 +1,13 @@
+{
+  "name": "aris",
+  "skills": [
+    "./skills/research-refine",
+    "./skills/experiment-plan",
+    "./skills/experiment-bridge",
+    "./skills/experiment-audit",
+    "./skills/paper-write",
+    "./skills/auto-review-loop",
+    "./skills/citation-audit",
+    "./skills/paper-claim-audit"
+  ]
+}
