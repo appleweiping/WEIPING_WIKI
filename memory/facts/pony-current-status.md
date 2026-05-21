@@ -10,11 +10,30 @@ related: [project-server-mapping.md, pony-research-refine-v2.md, pony-experiment
 
 ## 项目概述
 
-- 项目名: Ranking Stability as Uncertainty for LLM-Based Recommendation
-- 方法: RSC (Rank-Stability Conformal) — permutation instability as uncertainty signal
+- 项目名: Task-Grounded Uncertainty for LLM-based Recommendation (C-CRP)
+- 方法: C-CRP (Conformalized Calibrated Recommendation with Prediction sets) — 我们自己的方法
 - 服务器: pony-rec-gpu (125.71.97.70:15302, user: ajifang)
-- 代码: ~/projects/pony-rec-rescue-shadow-v6/experiments/rsc/
-- Conda env: qwen_vllm
+- 代码: ~/projects/pony-rec-rescue-shadow-v6/
+
+## 核心定位（不要偏离！）
+
+**C-CRP 是我们自己的方法，是 paper 的主角。** Calibration depth 分析是 evaluation contribution，用来证明 C-CRP 的优势。不是做 analysis paper，不是用别人的方法做 ensemble。
+
+**C-CRP 的优势（已验证）：**
+- Lift@0 = 6.9x（排第 7/38，比 IRLLRec 6.4x 好）
+- Reliable depth = 19（排前列，比 IRLLRec 12 深得多）
+- 提供 conformal coverage guarantee（其他 baseline 没有）
+
+**C-CRP 的劣势（需要解决）：**
+- NDCG@10 比 ProEx 低约 15%（但 calibration depth 更好）
+- 需要 C-CRP v2 改进来缩小 NDCG gap
+
+## Paper 正确结构
+
+1. 我们的方法 C-CRP（主角）— uncertainty-aware recommendation with conformal guarantees
+2. 和 8 个 baseline 比 — 比 NDCG + 比 calibration depth（双指标）
+3. Calibration depth 作为新评估指标 — 证明传统 NDCG 不够，需要看 depth
+4. C-CRP 在 depth 指标上优于大多数 baseline — 这是我们的 selling point
 
 ## 当前 ARIS 阶段
 
