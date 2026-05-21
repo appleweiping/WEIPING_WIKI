@@ -320,6 +320,33 @@ Rules:
 
 **如果没有现成 skill：** 先问用户是否需要寻找，或者自动在 GitHub 上搜索热门、高质量、相关的 skill/workflow，下载到 `D:\agent-resources\` 对应目录，然后使用。不要在没有方法论的情况下硬做复杂任务。
 
+## Task Complexity & Collaboration Rules
+
+### 5 问快速判定（单 agent vs 多 agent）
+
+1. 任务能拆成 3+ 个互不依赖的子任务吗？
+2. 子任务涉及不同的文件集吗？
+3. 需要不同角色的专业能力吗？（审核 vs 实现 vs 翻译）
+4. 单 agent 做完需要超过 30 分钟吗？
+5. 有明确的 spec 可以分发给其他 agent 吗？
+
+**≥3 个 YES** → 多 agent 协作（通过 Agent Hub 分发）
+**≤2 个 YES** → 单 agent 做
+
+ARIS 科研流程强制多 agent（不管复杂度）。
+
+### 自主搜寻资料规则
+
+**必须搜寻：** 不熟悉的库/工具、没见过的错误、需要最新信息、没有现成 skill 且任务复杂。
+**不需要搜寻：** 已有 skill、标准库、用户给了方案、简单任务。
+**流程：** 先查 `D:\agent-resources\` → 没有则搜 GitHub → 下载到 agent-resources → 使用。
+
+### 软件开发反问规则
+
+需求模糊时必须先反问用户：不确定技术栈、不确定功能边界、多个方案 trade-off 不明显、涉及业务逻辑、会影响已有功能。
+
+完整规则详见 `memory/decisions/task-complexity-and-collaboration.md`。
+
 ## Codex Prompt Corpus And Automation Memory
 
 When ingesting local Codex prompts, treat user-authored prompts and automation prompts as a durable `codex-prompts-public` corpus, but preserve only clean, substantive, reusable prompts.

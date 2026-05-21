@@ -9,6 +9,7 @@ Auto-maintained index of all shared agent memories. Last updated: 2026-05-21.
 | [research-hard-rules.md](decisions/research-hard-rules.md) | 科研项目硬规则 — 多模型协作与质量标准 | ARIS, hard-rule, multi-model, quality, permanent | 2026-05-21 |
 | [agent-roles-and-skills.md](decisions/agent-roles-and-skills.md) | Agent 角色分工与技能使用规则 | roles, ARIS, skills, permanent, critical | 2026-05-21 |
 | [memory-write-policy.md](decisions/memory-write-policy.md) | Memory Write Policy — 何时写入、谁来写、写什么 | memory, policy, all-agents, permanent, critical | 2026-05-21 |
+| [task-complexity-and-collaboration.md](decisions/task-complexity-and-collaboration.md) | 任务复杂度判定与协作规则 | complexity, multi-agent, collaboration, routing, permanent | 2026-05-21 |
 
 ## Facts
 
