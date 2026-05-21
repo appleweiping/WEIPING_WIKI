@@ -94,6 +94,16 @@ The strict-role update was validated with real sidecar calls:
 
 See [[local-cc-sidecar-agent-workflow]] for the reusable workflow.
 
+## Additional API Endpoints (Non-PixelCat)
+
+### Codex GPT-5.5 Direct Line (added 2026-05-20)
+
+- Base URL: `https://ssvip.moono.vip/v1`
+- API Key: configured locally only; do not publish the secret value.
+- Use case: Direct OpenAI-compatible endpoint for GPT-5.5 (Codex). Bypasses PixelCat. Use when PixelCat quota is exhausted or for heavy Codex workloads.
+- Compatible with: OpenCode custom provider, litellm, any OpenAI-compatible client.
+- Note: This is a separate billing line from PixelCat/ccmax.
+
 ## Safety Notes
 
 - Do not publish local auth tokens or provider secrets in wiki pages.
