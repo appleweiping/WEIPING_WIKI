@@ -49,10 +49,26 @@ related: [project-server-mapping.md, pony-research-refine-v2.md, pony-experiment
 
 **Codex concern (must address):** Cliff might be protocol artifact. Need validation across candidate set sizes, datasets, relevance definitions.
 
+## B1 Full Results (38 methods × 4 domains)
+
+**B1 GATE: PASS** (34/38 methods with cliff > 3)
+
+Key findings:
+- With correct 0-indexing on 10000-user datasets, most methods maintain lift > 1.0 through rank 20
+- But DEGREE of calibration varies enormously:
+  - Best: LLMEmb books Lift@0=12.1x, depth=18
+  - Worst: LLM2Rec electronics Lift@0=1.1x, depth=0
+- The story shifts from "cliff" to "calibration depth gradient"
+- Different methods × domains have wildly different reliability profiles
+
+**Revised paper angle:**
+> "How deeply calibrated are LLM recommenders? A systematic study revealing massive variation in position-wise reliability across methods and domains, with conformal guarantees on recommendation depth."
+
 ## 下一步
 
-- 设计 experiment-plan 围绕 PCR
-- 核心 blocks: cliff characterization (8 methods), cross-dataset, candidate-size sensitivity, conformal adaptive depth, practical value
+- B2: Protocol sensitivity (candidate size, negative sampling)
+- B3: Conformal adaptive depth (use calibration gradient for set-size selection)
+- The data is rich — 38 methods × 4 domains gives strong empirical evidence
 
 ## 下一步
 
