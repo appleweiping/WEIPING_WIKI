@@ -79,6 +79,18 @@ Agent 写入 memory 时，按以下规则自动选择目录和文件名：
 
 整个过程不需要问用户。Agent 直接做。
 
+## 每次任务完成后的强制记录（所有 agent）
+
+**每个 agent 完成一个 prompt/任务后，必须把相关贡献、结论、所作所为写入对应文件。** 不需要用户提醒。这是自动行为。
+
+具体：
+- 完成了什么 → 更新对应 `facts/` 文件（项目状态）
+- 做了什么决策 → 写 `decisions/`
+- 发现了什么 → 写 `lessons/`
+- Session 有重要产出 → 写 `sessions/`
+
+**不写 = 违规。** 下一个 agent 开 session 时如果发现状态文件没更新，说明上一个 agent 没遵守规则。
+
 ## Session 结束审计（close-day 模式）
 
 每个显著 session 结束时，agent 应该：

@@ -302,6 +302,18 @@ Rules:
 
 不需要写入：简单问答、纯执行、信息已在代码/git 里。
 
+**每次任务完成后强制记录：** 每个 agent 完成一个 prompt/任务后，必须把贡献、结论、所作所为写入对应 memory 文件。不需要用户提醒。不写 = 违规。
+
+## Project Sequencing Rules
+
+**科研项目顺序执行（不并行）：** Pony → TGL-Rec → TRUCE-Rec → Analog-Agent。一个做完再做下一个。
+
+**My Terraria 外包：** 由 Codex + DeepSeek 负责，可与科研并行。CC 不参与日常开发。
+
+**不要搞混项目：** Pony/TGL-Rec/TRUCE-Rec 共享 8 个外部 baseline，但方法完全不同。不要把一个项目的方法/结果混到另一个。
+
+详见 `memory/facts/all-projects-status.md`。
+
 ## Mandatory Skill Use Policy
 
 **科研项目（强制）：** 当任何 agent 在做科研项目时，每一步都必须先检查是否有对应的 ARIS skill：
