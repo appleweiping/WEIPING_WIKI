@@ -18,26 +18,44 @@ related: [project-server-mapping.md, pony-research-refine-v2.md, pony-experiment
 
 ## 当前 ARIS 阶段
 
-- ✅ research-refine (Codex scored Novelty 7/10)
-- ✅ experiment-plan (6 blocks, 8 baselines, Codex scored Paper 7/10)
-- 🔄 experiment-bridge (M0 passed, B1 full run in progress)
+- ✅ research-refine v3 (PCR, Codex scored Novelty 8, Impact 8)
+- → experiment-plan (redesign for PCR)
+- → experiment-bridge
 
-## M0 Sanity Check 结果 (2026-05-21)
+## 历史 pivots
 
-- Spearman ρ = 0.91 (threshold: 0.2)
-- Quartile error rates: 0.167 → 0.333 → 0.500 → 1.000 (perfectly monotonic)
-- Decision: PROCEED
+- v1 (Rank-Stability Conformal): B1 FAIL, ρ=-0.02, permutation instability is noise
+- v2 (Logit Entropy): B1 FAIL, ρ=-0.097, entropy uncorrelated with error
+- v2.5 (Pointwise score features): best ρ=-0.11, too weak
+- **v3 (Position-Calibrated Recommendation): Codex scored 8/8/7/8/6 — PROCEED**
 
-## 方法核心
+## 当前方向: Position-Calibrated Recommendation (PCR)
 
-1. Listwise LLM reranker (Qwen3-8B) reranks 20 candidates per user
-2. Run K=10 passes with different input permutations
-3. Per-user rank variance = uncertainty signal
-4. Conditional conformal prediction per stability group
-5. Output: adaptive prediction sets (stable users → small sets, unstable → large)
+**Codex Review:** Novelty 8, Feasibility 8, Clarity 7, Impact 8, Baseline-beating 6. ALL ≥6.
+
+**Research Question:**
+> LLM pointwise recommenders exhibit a sharp "calibration cliff" — rank 0 has 6.4x random precision but by rank 5 it drops below random. Where exactly does a ranking stop being reliable, and can we provide formal guarantees on recommendation depth?
+
+**Method:**
+1. Characterize position-wise calibration curve: P(relevant | rank k)
+2. Estimate per-method confidence depth (cliff position)
+3. Conformal prediction for adaptive recommendation set size
+4. Cross-method comparison of cliff positions (8+ methods)
+
+**Validated findings:**
+- IRLLRec cliff at rank ~5 (6.4x→0.8x random)
+- LLM2Rec cliff at rank ~2 (1.5x→below random)
+- 973 users, Amazon Beauty, 101-candidate protocol
+
+**Codex concern (must address):** Cliff might be protocol artifact. Need validation across candidate set sizes, datasets, relevance definitions.
 
 ## 下一步
 
-- 等 B1 full run 完成 (200 users × 10 passes, ~30-60 min)
-- 确认 full ρ > 0.2 + monotonicity + controls
-- 然后实现 B2 (conditional conformal pipeline)
+- 设计 experiment-plan 围绕 PCR
+- 核心 blocks: cliff characterization (8 methods), cross-dataset, candidate-size sensitivity, conformal adaptive depth, practical value
+
+## 下一步
+
+- 设计 position-calibration 实验
+- 用已有的 pointwise scores 计算 position-wise accuracy curve
+- 看不同用户的 calibration curve 是否有差异（有差异 = 可以做 adaptive cutoff）
