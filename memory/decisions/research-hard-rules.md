@@ -20,12 +20,13 @@ related: [agent-cli-launch-config.md]
 ## 质量标准
 
 1. 顶会级别 (NeurIPS/ICML/ICLR oral 级别为目标)
-2. 禁止 toy 化 (不允许 mock/pilot 作为 paper evidence)
-3. 禁止缝合 (禁止 A+B 模块拼接式创新)
-4. 强制创新 (必须有 original problem reframing)
+2. **禁止缝合** (禁止 A+B 模块拼接式创新，这不是创新)
+3. **必须创新** (必须有 original problem reframing，把已知问题用全新视角重新定义)
+4. 禁止 toy 化 (不允许 mock/pilot 作为 paper evidence)
 5. 效果要好 (Baselines 至少 8 个, 统计显著性 20+ seeds)
 6. 持续与顶会论文比较 rigor
 7. Evidence discipline (clear labels: diagnostic/pilot/official/paper_result)
+8. **缝合判定标准**: 如果你的方法可以用"A方法+B方法"一句话概括，那就是缝合。真正的创新应该是"发现了X现象/视角，因此提出Y方法"。
 
 ## ARIS 全流程
 
