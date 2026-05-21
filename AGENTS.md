@@ -281,16 +281,26 @@ Rules:
 ### Memory Write Triggers (强制，不依赖判断)
 
 以下事件发生时，agent 必须写入 memory，不需要判断"是否重要"：
+
+**科研：**
 - **ARIS 步骤完成** → 更新 `facts/<project>-status.md`
 - **用户做出决策** → 写 `decisions/<topic>.md`
 - **发现 bug/踩坑** → 写 `lessons/<slug>.md`
 - **用户表达偏好/规则** → 写 `preferences/<slug>.md`
+
+**软件开发：**
+- **PR merge / deploy / feature 完成** → 写 `sessions/YYYY-MM-DD_<feature>.md`
+- **Bug 修复完成** → 写 `lessons/<bug-slug>.md`
+- **架构/技术决策** → 写 `decisions/<topic>.md`
+- **项目初始化 / 重大重构** → 写 `facts/<project>-status.md`
+
+**通用：**
 - **项目状态变化** → 更新对应 facts 文件
 - **Session 结束（显著）** → 写 `sessions/YYYY-MM-DD_<slug>.md`
 
-不需要写入：简单问答、纯执行、信息已在代码/git 里。
+分类和文件名由 agent 全自动决定，不需要问用户。详见 `memory/decisions/memory-write-policy.md`。
 
-See `memory/README.md` for full format specification and `memory/decisions/memory-write-policy.md` for complete policy.
+不需要写入：简单问答、纯执行、信息已在代码/git 里。
 
 ## Mandatory Skill Use Policy
 
