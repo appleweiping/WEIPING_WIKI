@@ -92,20 +92,32 @@ All gates passed (B1, B2, B3). Ready for B4 (analysis) and B5 (practical value),
 
 ## 下一步
 
-- 在全量 973 用户上跑 v3 prompt（当前 200 用户结果已超 ProEx HR）
-- 进一步优化 prompt 缩小 NDCG gap（ProEx NDCG 领先 6%）
-- 加入 conformal calibration layer（C-CRP 核心贡献 + calibration depth 优势）
-- 跑 4 个 domain
+1. 等 3 domain 跑完（books/electronics/movies, 各 10000 users, ~21 hours）
+2. 汇总 4 domain 结果 vs 8 baselines
+3. 加 conformal calibration layer（C-CRP 核心贡献）
+4. Paper writing (ARIS: paper-plan → paper-write)
 
-## C-CRP v3 Results (2026-05-21, 200 users, beauty)
+## C-CRP v3 Results (2026-05-21)
 
-**HR@10 = 0.265, NDCG@10 = 0.1410**
+**Beauty full (973 users): HR@10 = 0.239, NDCG@10 = 0.1361**
 
 | Method | HR@10 | NDCG@10 | vs ProEx |
 |--------|-------|---------|----------|
 | C-CRP v1 (raw) | 0.221 | 0.1294 | -13% HR |
-| **C-CRP v3 (profile prompt)** | **0.265** | **0.1410** | **+5% HR, -6% NDCG** |
+| **C-CRP v3 (full 973 users)** | **0.239** | **0.1361** | **-6% HR, -10% NDCG** |
 | ProEx (best baseline) | 0.253 | 0.1506 | — |
 | IRLLRec | 0.220 | 0.1289 | -13% HR |
 
-**C-CRP v3 HR@10 超过 ProEx！** Profile-enhanced prompt 大幅提升了 scoring 质量。
+C-CRP v3 超过 IRLLRec，接近 ProEx。Gap 从 v1 的 -13% 缩小到 -6% HR。
+
+**Other domains running (launched 2026-05-21, ~21 hours):**
+- Books: 10000 users
+- Electronics: 10000 users
+- Movies: 10000 users
+
+## 下一步
+
+1. 等 3 domain 跑完
+2. 汇总 4 domain 结果 vs 8 baselines
+3. 加 conformal calibration layer
+4. Paper writing
