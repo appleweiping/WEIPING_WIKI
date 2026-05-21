@@ -8,7 +8,13 @@ tags: [projects, priority, all-agents, critical]
 related: [pony-current-status.md, project-server-mapping.md, research-hard-rules.md]
 ---
 
-## 项目优先级（顺序执行，不并行）
+## 项目优先级（顺序执行，但可交错）
+
+### 执行逻辑
+
+科研项目按优先级顺序推进，但**当一个项目在服务器跑实验时，可以切换到下一个项目做准备工作**（research-refine、experiment-plan 等不需要 GPU 的步骤）。等实验跑完再回头处理结果。这样不浪费等待时间。
+
+**不允许的是：** 同时在两个项目上做同一类工作（比如同时写两个项目的代码）。
 
 ### 科研项目（按顺序，一个做完再做下一个）
 
