@@ -49,26 +49,27 @@ related: [project-server-mapping.md, pony-research-refine-v2.md, pony-experiment
 
 **Codex concern (must address):** Cliff might be protocol artifact. Need validation across candidate set sizes, datasets, relevance definitions.
 
-## B1 Full Results (38 methods × 4 domains)
+## B2 & B3 Results
 
-**B1 GATE: PASS** (34/38 methods with cliff > 3)
+**B2 PASS:** Cliff persists across candidate sizes (20→50→101) and all 4 domains. Not a protocol artifact.
+- Beauty cliff=5, Books/Electronics/Movies cliff=10
+- Larger datasets show deeper calibration (more statistical power)
 
-Key findings:
-- With correct 0-indexing on 10000-user datasets, most methods maintain lift > 1.0 through rank 20
-- But DEGREE of calibration varies enormously:
-  - Best: LLMEmb books Lift@0=12.1x, depth=18
-  - Worst: LLM2Rec electronics Lift@0=1.1x, depth=0
-- The story shifts from "cliff" to "calibration depth gradient"
-- Different methods × domains have wildly different reliability profiles
+**B3 PASS:** Conformal coverage holds in 24/24 experiments (100%).
+- Average set size savings: 3% (small, conformal is conservative)
+- Real value: formal guarantee + cross-method comparison + new evaluation metric
+- Coverage valid within 3% tolerance for all target levels (50%, 70%, 80%, 90%)
 
-**Revised paper angle:**
-> "How deeply calibrated are LLM recommenders? A systematic study revealing massive variation in position-wise reliability across methods and domains, with conformal guarantees on recommendation depth."
+## Paper Status
 
-## 下一步
+All gates passed (B1, B2, B3). Ready for B4 (analysis) and B5 (practical value), then paper writing.
 
-- B2: Protocol sensitivity (candidate size, negative sampling)
-- B3: Conformal adaptive depth (use calibration gradient for set-size selection)
-- The data is rich — 38 methods × 4 domains gives strong empirical evidence
+**Paper contribution (refined):**
+1. **Empirical finding:** LLM recommenders have vastly different position-wise reliability (Lift@0 ranges from 1.1x to 12.1x across methods)
+2. **New metric:** Calibration depth — how deep into the ranking is a method reliable?
+3. **Robustness:** Phenomenon persists across 4 domains, multiple candidate sizes, 38 methods
+4. **Conformal framework:** Formal coverage guarantees for adaptive recommendation depth
+5. **Practical implication:** Don't use fixed top-10 — use method-specific reliable depth
 
 ## 下一步
 
