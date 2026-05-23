@@ -22,3 +22,8 @@ raw/private-chat/
 raw/private-journal/
 raw/private-docs/
 wiki-private/
+
+# Graphify knowledge graph (keep graph.json and report, ignore cache)
+graphify-out/.graphify_*
+graphify-out/.semantic_cache/
+graphify-out/*.tmp

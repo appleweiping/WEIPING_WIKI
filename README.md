@@ -57,6 +57,7 @@ vipin-wiki/
 │   ├── wiki-search.py         # Full-text search across wiki
 │   ├── wiki-status.ps1        # Repository health overview
 │   ├── wiki-context.py        # Context extraction for agent handoffs
+│   ├── graphify-extract.py    # Knowledge graph extraction (full or incremental)
 │   ├── wiki-graph.ps1         # Link graph visualization
 │   └── build-site.ps1         # Quartz site build
 │
@@ -81,6 +82,11 @@ vipin-wiki/
 │
 ├── .opencode/                 # OpenCode configuration (CC-family fusion agent)
 │   └── OPENCODE.md            # OpenCode-specific operating guide
+│
+├── graphify-out/              # Knowledge graph (auto-generated, incremental)
+│   ├── graph.json             # Queryable knowledge graph (nodes + edges)
+│   ├── GRAPH_REPORT.md        # Key concepts, connections, suggested questions
+│   └── cache/                 # AST and semantic extraction cache
 │
 └── .github/workflows/         # CI/CD
     ├── deploy.yml             # Validate + build Quartz + deploy to GitHub Pages
@@ -187,7 +193,45 @@ python scripts/wiki-search.py "query" --root . # Full-text search
 python scripts/wiki-context.py l0 --root .     # Context extraction
 bash scripts/wiki-status.sh                    # Repository health
 bash scripts/build-site.sh                     # Quartz build
+python scripts/graphify-extract.py             # Full knowledge graph extraction
+python scripts/graphify-extract.py --update    # Incremental graph update
 ```
+
+## Knowledge Graph (Graphify)
+
+The repository includes a queryable knowledge graph built by [graphify](https://github.com/safishamsi/graphify). It indexes all code, docs, papers, and images into a structured graph with entity extraction, relationship mapping, and confidence scoring.
+
+### Usage
+
+```bash
+# Full extraction (first run, ~10 min for this corpus)
+python scripts/graphify-extract.py
+
+# Incremental update (only changed files)
+python scripts/graphify-extract.py --update
+
+# Query the graph
+python -m graphify query "How does the agent hub dispatch tasks?"
+python -m graphify path "AgentHub" "DeepSeek"
+python -m graphify explain "ARIS"
+```
+
+### Auto-update
+
+A post-commit hook (`.git/hooks/post-commit`) runs incremental extraction after each commit when `graphify-out/graph.json` exists. Only files with supported extensions are re-extracted.
+
+### Output
+
+| File | Purpose |
+|------|---------|
+| `graphify-out/graph.json` | Full graph (nodes, edges, communities) — queryable by agents |
+| `graphify-out/GRAPH_REPORT.md` | Key concepts, god nodes, surprising connections |
+| `graphify-out/cache/` | AST and semantic extraction cache (speeds up incremental runs) |
+
+### Requirements
+
+- Python 3.10+ with `graphifyy` package installed (`pip install graphifyy`)
+- `DEEPSEEK_API_KEY` environment variable set (used for semantic extraction)
 
 ## Quality Discipline
 
