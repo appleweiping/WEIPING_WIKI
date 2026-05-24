@@ -232,13 +232,23 @@ If a required tool or dependency is genuinely missing, download or install the n
 
 When installing a skill, treat success as operational usability rather than file collection.
 
-- Mirror the source under `skill/<skill-name>/` on the D: drive and install the usable skill under `.codex/skills/<skill-name>/`.
+**Full install protocol (mandatory — no partial installs):**
+
+1. Clone/copy repo to `D:\agent-resources\repos\<name>`, extract skills to `D:\agent-resources\skills\<group>\`
+2. Symlink the group into every agent that supports skill directories:
+   - CC: `D:\devtools\claude\skills\<group>` → symlink to agent-resources path
+   - Codex: `D:\devtools\codex\home\skills\<group>` → symlink to agent-resources path
+3. For agents without skill dirs, verify their config already references `D:\agent-resources\SKILL-INDEX.md`:
+   - OpenCode (`opencode.json` instructions), DeepSeek CLI (`config.toml`), vipin-lab/vipin-council (`CLAUDE.md`)
+4. Update `D:\agent-resources\SKILL-INDEX.md` with a section for the new skill/group
+5. Commit and push both `agent-resources` and `devtools`
+
+**This protocol runs automatically whenever the user says "put X in resource" or "add this skill" — no reminder needed.**
+
+Additional rules:
 - If a skill pack contains independently useful sub-skills, install those sub-skills directly as well when it improves future triggering.
 - Read the upstream `SKILL.md`, references, and scripts before summarizing function or use.
-- Install or download narrow missing dependencies into `.wiki-tmp/` or another D-drive project-local cache when practical.
-- Re-run relevant tests after installation: guidance-only skills need discovery/content checks; executable skills need help/version and non-destructive smoke tests; browser skills need a real connection test when possible.
 - Never toyify a skill install by skipping required setup and then documenting the skill as if it were ready.
-- Record concrete usage, local paths, dependencies, test results, and limitations in the wiki.
 - Do not commit downloaded toolchains, browser profiles, caches, or generated runtime artifacts unless they are deliberate source files.
 
 See [[agent-skill-installation-workflow]] for the maintained public wiki version of this workflow.
