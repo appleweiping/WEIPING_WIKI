@@ -2,10 +2,10 @@
 title: "全部项目状态与优先级"
 type: fact
 created: 2026-05-21T22:00:00+08:00
-updated: 2026-05-21T22:00:00+08:00
+updated: 2026-05-21T23:30:00+08:00
 agent: claude
 tags: [projects, priority, all-agents, critical]
-related: [pony-current-status.md, project-server-mapping.md, research-hard-rules.md]
+related: [pony-current-status.md, truce-rec-current-status.md, tglrec-current-status.md, project-server-mapping.md, research-hard-rules.md]
 ---
 
 ## 项目优先级（顺序执行，但可交错）
@@ -21,8 +21,8 @@ related: [pony-current-status.md, project-server-mapping.md, research-hard-rules
 | # | 项目 | 方向 | 状态 | 服务器 |
 |---|------|------|------|--------|
 | 1 | **Pony/Uncertainty (RSC)** | Ranking Stability Conformal for LLM-Rec | 🔄 experiment-bridge (M0 passed ρ=0.91) | pony-rec-gpu |
-| 2 | **TGL-Rec** | Temporal Graph + LLM Rec | 待启动（Pony 完成后） | 未部署 |
-| 3 | **TRUCE-Rec** | Uncertainty-Aware Generative Rec / Storyflow | 待启动（TGL-Rec 完成后） | ~/projects/uncertainty-llm4rec/ (旧) |
+| 2 | **TGL-Rec** | Temporal Graph + LLM Rec | 🔄 Phase 10 已启动（reportable path实现，待部署服务器） | 未部署（脚本就绪） |
+| 3 | **TRUCE-Rec** | Uncertainty-Aware Generative Rec (title grounding + confidence-popularity disentanglement + exposure-aware calibration) | 🔄 Gate R1: 代码完整，novelty确认，待服务器部署 | ~/projects/TRUCE-Rec (待部署) |
 | 4 | **Analog-Agent (AI4EDA)** | Analog circuit design with AI | ~65% 需深度重做 | 服务器上有 |
 
 ### 软件/游戏项目（可与科研并行）
@@ -33,11 +33,14 @@ related: [pony-current-status.md, project-server-mapping.md, research-hard-rules
 
 ## 关键区分（不要搞混！）
 
-- Pony、TGL-Rec、TRUCE-Rec 共享 8 个外部 baseline（ProEx, SETRec, ELMRec, IRLLRec 等）
-- 但三个项目的方法完全不同：
-  - Pony: permutation instability → conformal prediction
+- Pony、TGL-Rec、TRUCE-Rec 共享 8 个外部 baseline 和数据 setting
+- 8 个共享 baseline: LLM2Rec, LLM-ESR, LLMEmb, RLMRec, IRLLRec, ELMRec, ProEx, ProMax
+- 数据 setting: Amazon 四域 (Beauty/Books/Electronics/Movies), same-candidate, Qwen3-8B + LoRA
+- Baseline 分数可复用（同 baseline + 同数据 = 同分数）
+- 但三个项目的方法完全不同，代码绝不混用：
+  - Pony: permutation instability → conformal prediction (ranking stability)
   - TGL-Rec: temporal graph evidence → need-gate → LoRA reranking
-  - TRUCE-Rec: storyflow / uncertainty-aware generative recommendation
+  - TRUCE-Rec: title grounding → confidence-popularity disentanglement → exposure-counterfactual calibration
 - **不要把一个项目的方法/结果混到另一个项目里**
 
 ## My Terraria 外包规则

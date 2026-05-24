@@ -27,3 +27,5 @@ wiki-private/
 graphify-out/.graphify_*
 graphify-out/.semantic_cache/
 graphify-out/*.tmp
+graphify-out/cache/
+graphify-out/manifest.json

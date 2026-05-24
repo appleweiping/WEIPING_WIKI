@@ -14,15 +14,18 @@ related: [pony-current-status.md, proteinshift-status.md]
 |---------|-----------|---------|
 | Pony/Uncertainty | ~/projects/pony-rec-rescue-shadow-v6/ | Task-Grounded Uncertainty for LLM-based Recommendation (主力项目) |
 | D:\research\TGL-Rec | 未部署到服务器 | Temporal Graph + LLM Rec (独立项目) |
-| D:\research\TRUCE-Rec | ~/projects/uncertainty-llm4rec/ (旧版) | Uncertainty-Aware LLM4Rec / Storyflow |
+| D:\research\TRUCE-Rec | ~/projects/TRUCE-Rec (待部署) | Uncertainty-Aware Generative Recommendation (独立项目) |
 
-## 关键区分
+## 三个项目的关系
 
-- **pony-rec-rescue-shadow-v6 ≠ TGL-Rec！** 它是 Pony/Uncertainty 项目
-- 三个项目都是推荐系统, 共享外部 baseline 设定, 但各自方法完全不同
-- **Pony**: Task-Grounded Uncertainty signals (Shadow series, verbalized confidence, calibration)
-- **TGL-Rec**: Temporal Graph evidence + Need-Gate + LoRA reranking
-- **TRUCE-Rec**: Storyflow / uncertainty-aware generative recommendation
+- 三个项目都是推荐系统论文，共享 8 个外部 baseline 和数据 setting
+- 8 个共享 baseline: LLM2Rec, LLM-ESR, LLMEmb, RLMRec, IRLLRec, ELMRec, ProEx, ProMax
+- 数据 setting: Amazon 四域 (Beauty/Books/Electronics/Movies), same-candidate, Qwen3-8B + LoRA
+- Baseline 分数可复用（同 baseline + 同数据 = 同分数）
+- 方法/framework 完全不同，代码绝不混用：
+  - **Pony**: Task-Grounded Uncertainty signals (Shadow series, verbalized confidence, calibration)
+  - **TGL-Rec**: Temporal Graph evidence + Need-Gate + LoRA reranking
+  - **TRUCE-Rec**: Title grounding + Confidence-popularity disentanglement + Exposure-counterfactual calibration
 
 ## 服务器信息
 

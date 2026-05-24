@@ -2,11 +2,30 @@
 title: "Memory Write Policy — 何时写入、谁来写、写什么"
 type: decision
 created: 2026-05-21T20:00:00+08:00
-updated: 2026-05-21T20:00:00+08:00
+updated: 2026-05-22T22:00:00+08:00
 agent: claude
 tags: [memory, policy, all-agents, permanent, critical]
 related: [agent-roles-and-skills.md, research-hard-rules.md]
 ---
+
+## 存储分层规则（2026-05-22 更新）
+
+**不再双写。每类信息只存一个地方，各层有明确分工。**
+
+| 信息类型 | 存储位置 | 原因 |
+|---------|---------|------|
+| fact / decision / preference / workflow | **Vipin's Knowledgebase markdown** (`D:\research\...\memory\`) | 人类可读、git 追踪、IDE 可浏览 |
+| lesson（经验教训、踩坑） | **agentmemory MCP** (lesson_save) | 自动衰减/强化机制有意义 |
+| signal / action / lease | **agentmemory MCP** | 纯运行时跨 agent 协调 |
+| CC 专属偏好/反馈 | **CC auto-memory** (`C:\Users\admin\.claude\projects\...\memory\`) | 仅 CC 需要 |
+| agentmemory 摘要指针 | **agentmemory MCP** (memory_save, 简短摘要 + 指向 markdown 路径) | 让其他 agent 能搜到，然后去读 markdown |
+
+### 关键规则
+
+1. **fact/decision 不再写入 agentmemory 全文** — 只写一行摘要 + markdown 文件路径作为指针
+2. **lesson 不再写 markdown** — 只存 agentmemory，靠 confidence 衰减自动管理生命周期
+3. **已有的 agentmemory 数据不删除** — 自然衰减即可
+4. **已有的 markdown 文件不删除** — 保持现状，后续按新规则写入
 
 ## 核心原则
 

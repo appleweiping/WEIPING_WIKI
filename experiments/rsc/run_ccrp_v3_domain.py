@@ -81,47 +81,54 @@ def main():
         score = parse_score(result["raw_text"])
         user_scores[meta["user_id"]].append((meta["candidate_idx"], score))
 
-    # Evaluate
-    hits, ndcgs, mrrs = [], [], []
+    # Save raw scores for post-hoc evaluation at different k
+    scores_output = []
     for rec in records:
         uid = rec["user_id"]
         pos_idx = rec["positive_item_index"]
         scores = user_scores.get(uid, [])
         if not scores:
             continue
-        # Sort by score descending
         scores.sort(key=lambda x: -x[1])
         ranked_indices = [idx for idx, _ in scores]
-        if pos_idx in ranked_indices:
-            rank = ranked_indices.index(pos_idx)
-            hits.append(1.0 if rank < 10 else 0.0)
-            ndcgs.append(1.0 / np.log2(rank + 2) if rank < 10 else 0.0)
-            mrrs.append(1.0 / (rank + 1))
-        else:
-            hits.append(0.0)
-            ndcgs.append(0.0)
-            mrrs.append(0.0)
+        rank = ranked_indices.index(pos_idx) if pos_idx in ranked_indices else len(ranked_indices)
+        scores_output.append({"user_id": uid, "pos_rank": rank, "n_candidates": len(scores)})
 
-    report = {
-        "hr10": float(np.mean(hits)),
-        "ndcg10": float(np.mean(ndcgs)),
-        "mrr": float(np.mean(mrrs)),
-        "n_users": len(hits),
-        "n_prompts": len(all_prompts),
-        "inference_time_s": elapsed,
-        "data_path": args.data,
-    }
+    # Evaluate at multiple k
+    pos_ranks = np.array([s["pos_rank"] for s in scores_output])
+
+    report = {}
+    for k in [5, 10, 20]:
+        hr = float(np.mean(pos_ranks < k))
+        ndcg = float(np.mean([1.0 / np.log2(r + 2) if r < k else 0.0 for r in pos_ranks]))
+        report[f"hr{k}"] = hr
+        report[f"ndcg{k}"] = ndcg
+
+    report["mrr"] = float(np.mean([1.0 / (r + 1) for r in pos_ranks]))
+    report["n_users"] = len(pos_ranks)
+    report["n_prompts"] = len(all_prompts)
+    report["inference_time_s"] = elapsed
+    report["data_path"] = args.data
 
     out_dir = Path(args.output)
     out_dir.mkdir(parents=True, exist_ok=True)
     with open(out_dir / "report.json", "w") as f:
         json.dump(report, f, indent=2)
 
+    # Save per-user ranks for post-hoc analysis
+    with open(out_dir / "user_ranks.jsonl", "w") as f:
+        for s in scores_output:
+            f.write(json.dumps(s) + "\n")
+
     print(f"\n{'='*50}")
-    print(f"C-CRP v3 Results ({len(hits)} users)")
+    print(f"C-CRP v3 Results ({report['n_users']} users)")
     print(f"{'='*50}")
+    print(f"HR@5:    {report['hr5']:.3f}")
     print(f"HR@10:   {report['hr10']:.3f}")
+    print(f"HR@20:   {report['hr20']:.3f}")
+    print(f"NDCG@5:  {report['ndcg5']:.4f}")
     print(f"NDCG@10: {report['ndcg10']:.4f}")
+    print(f"NDCG@20: {report['ndcg20']:.4f}")
     print(f"MRR:     {report['mrr']:.4f}")
 
 if __name__ == "__main__":

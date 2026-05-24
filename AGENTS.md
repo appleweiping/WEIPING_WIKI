@@ -304,6 +304,30 @@ Rules:
 
 **每次任务完成后强制记录：** 每个 agent 完成一个 prompt/任务后，必须把贡献、结论、所作所为写入对应 memory 文件。不需要用户提醒。不写 = 违规。
 
+### Memory 极简 Checklist（低智商 agent 专用，照做即可）
+
+不需要判断"是否重要"。看到左列 → 立即执行右列。
+
+| 你刚做了什么 | 立即写什么 | 写到哪里 |
+|-------------|-----------|---------|
+| 跑完一个实验/脚本 | 结果数字 + 配置 + 耗时 | `memory_save(type=workflow)` |
+| 修了一个 bug/报错 | 错误信息 + 根因 + 修复方法 | `memory_lesson_save()` |
+| 做了一个选择(A not B) | 选了什么 + 为什么 | markdown `decisions/<topic>.md` |
+| 用户说了偏好/规则 | 规则原文 + 适用范围 | markdown `preferences/<slug>.md` |
+| 改了配置/参数 | 改了什么 + 旧值→新值 | `memory_save(type=fact)` |
+| 遇到报错但还没修 | 错误全文 + 当前状态 | `memory_save(type=bug)` |
+| Session 结束 | 做了什么 + 结论 + 下一步 | markdown `sessions/YYYY-MM-DD_<slug>.md` |
+
+**口诀：做完事 → 写 memory → 再汇报。不是"做完所有事再写"，是每一步都写。**
+
+### Git & 备份规则（所有 agent 必须遵守）
+
+1. **本地改动必须 commit + push** — 改了代码/配置/文档后，commit 到对应 GitHub repo。不要攒着。
+2. **服务器不 push** — 服务器只 `git pull` + 执行实验。所有 commit 从本地发起。
+3. **关键证据备份到本地** — 服务器跑出的重要产物（report.json、metrics.csv、关键 log）必须 scp/rsync 回本地，不能只存服务器。
+4. **数据也要备份** — 不可再生的实验数据（processed datasets、trained checkpoints）必须有本地副本。
+5. **不要假设服务器永远在** — 服务器可能重装/迁移/磁盘满，本地 + GitHub 才是持久存储。
+
 ## Project Sequencing Rules
 
 **科研项目顺序执行（不并行）：** Pony → TGL-Rec → TRUCE-Rec → Analog-Agent。一个做完再做下一个。
