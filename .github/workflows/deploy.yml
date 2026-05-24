@@ -7,7 +7,11 @@ on:
     paths:
       - "wiki/**"
       - "site/**"
+      - "memory/**"
       - ".github/workflows/deploy.yml"
+  schedule:
+    # Weekly redeploy every Sunday at 03:17 UTC — keeps site fresh even without wiki changes
+    - cron: "17 3 * * 0"
   workflow_dispatch:
 
 permissions:
