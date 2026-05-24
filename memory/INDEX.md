@@ -8,6 +8,7 @@ Auto-maintained index of all shared agent memories.
 | File | Title | Tags | Updated |
 |------|-------|------|---------|
 | [agent-roles-and-skills.md](decisions/agent-roles-and-skills.md) | Agent 角色分工与技能使用规则 | roles, ARIS, skills, permanent, all-agents, critical | 2026-05-21 |
+| [auto-memory-session-end-rule.md](decisions/auto-memory-session-end-rule.md) | 强制规则：每次 session 结束前必须自动写 memory | memory, hard-rule, permanent, all-agents, critical, auto-memory | 2026-05-24 |
 | [local-primary-server-experiment.md](decisions/local-primary-server-experiment.md) | 硬规则：本地主开发 + 服务器只跑实验 | workflow, server, local, hard-rule, permanent, all-agents, critical | 2026-05-21 |
 | [memory-write-policy.md](decisions/memory-write-policy.md) | Memory Write Policy — 何时写入、谁来写、写什么 | memory, policy, all-agents, permanent, critical | 2026-05-22 |
 | [pony-method-decisions-20260524.md](decisions/pony-method-decisions-20260524.md) | PonyRec 方案决策: v3 主表 + v4 验证 + 放弃 temperature | pony, decision, method, c-crp | unknown |
