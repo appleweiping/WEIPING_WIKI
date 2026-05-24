@@ -1,3 +1,7 @@
+<div align="center">
+<img src="banner.png" alt="Vipin's Knowledgebase" width="720" />
+</div>
+
 # vipin wiki
 
 A source-backed knowledge system with multi-agent orchestration. Turns research, conversations, and automation into maintained, interlinked Markdown knowledge that compounds over time.
