@@ -1,7 +1,8 @@
 ---
-title: "PonyRec 服务器实验碰壁全记录 (2026-05-23~24)"
+title: "PonyRec 服务器实验碰壁全记录 (2026-05-23~25)"
 type: lesson
 created: 2026-05-24T15:20:00+08:00
+updated: 2026-05-25T21:00:00+08:00
 agent: claude
 tags: [pony, server, lesson, troubleshooting]
 ---
@@ -50,3 +51,24 @@ tags: [pony, server, lesson, troubleshooting]
 - **原因:** 之前解压 tarball 时可能只提取了部分文件
 - **修复:** 从本地 tarball 提取 scores.csv, scp 上传到服务器
 - **教训:** 关键产物必须备份到本地, 服务器文件可能不完整
+
+## 碰壁 10: SRPD HF batch_size=4 OOM (2026-05-25)
+- **问题:** SRPD listwise ranking prompt 含 101 candidates 全文, 达 24K tokens. HF batch_size=4 → CUDA OOM
+- **修复:** 降到 batch_size=1, 但速度 16.5s/sample = 46h/domain, 不可接受
+- **教训:** listwise ranking 101 candidates 的 prompt 极长, 不能用大 batch
+
+## 碰壁 11: SRPD HF batch_size=1 太慢
+- **问题:** 10,000 users × 16.5s = 46h/domain, 6 domain-splits = 276h 仅 Step 1
+- **修复:** 改用 vLLM + title-only compact prompts (2.5K tokens vs 24K), 速度 ~1.9 samples/s
+- **教训:** 当 prompt 太长时, 减少信息密度 (title-only) 比减少 batch_size 更有效
+
+## 碰壁 12: vLLM CUDA fork error
+- **问题:** `RuntimeError: Cannot re-initialize CUDA in forked subprocess`
+- **原因:** main_rank.py 导入链中有模块提前初始化了 CUDA, vLLM 的 fork 子进程无法重新初始化
+- **修复:** `export VLLM_WORKER_MULTIPROC_METHOD=spawn`
+- **教训:** 通过 pipeline 框架调用 vLLM 时必须设此环境变量
+
+## 碰壁 13: vLLM max_model_len=4096 vs 24K prompt
+- **问题:** 原始 ranking prompt (含 full text) 达 23,233 tokens, 超过 max_model_len=4096
+- **修复:** 写独立脚本 `run_srpd_anchor_rank_vllm.py`, 用 title-only prompts (~2.5K tokens)
+- **教训:** vLLM max_model_len 决定 KV cache 分配, 设太大会减少并发; 应优化 prompt 长度而非盲目加大 max_model_len

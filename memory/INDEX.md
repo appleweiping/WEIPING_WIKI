@@ -27,7 +27,7 @@ Auto-maintained index of all shared agent memories.
 | [gpt-image-2-config.md](facts/gpt-image-2-config.md) | GPT Image 2 图像生成 API 配置 | gpt-image-2, api, image-generation, all-agents, infrastructure | 2026-05-21 |
 | [openhands-official-cli-gui-agentmemory.md](facts/openhands-official-cli-gui-agentmemory.md) | OpenHands official CLI/GUI + agentmemory setup | openhands, agentmemory, cli, gui, gpt-5.5, setup, verified | 2026-05-22 |
 | [pony-ccrp-decision-point.md](facts/pony-ccrp-decision-point.md) | Pony C-CRP 关键决策点 — 77% gap 分析 | pony, C-CRP, decision-point, pointwise-vs-listwise, critical | 2026-05-21 |
-| [pony-ccrp-four-domain-status.md](facts/pony-ccrp-four-domain-status.md) | PonyRec C-CRP 四域实验状态 (2026-05-24) | pony, c-crp, experiment, status, four-domain | 2026-05-24 |
+| [pony-ccrp-four-domain-status.md](facts/pony-ccrp-four-domain-status.md) | PonyRec 全状态: C-CRP v3 done + SRPD running + Paper draft done | pony, c-crp, srpd, experiment, status, four-domain | 2026-05-25 |
 | [pony-current-status.md](facts/pony-current-status.md) | Pony C-CRP → RSC 项目当前状态 | pony, RSC, ranking-stability, conformal, LLM4Rec, critical | 2026-05-21 |
 | [pony-experiment-plan.md](facts/pony-experiment-plan.md) | Pony Experiment Plan — Ranking Stability as Uncertainty | pony, experiment-plan, ARIS, listwise, conformal, critical | 2026-05-21 |
 | [pony-pcr-experiment-plan.md](facts/pony-pcr-experiment-plan.md) | Pony PCR Experiment Plan — Calibration Cliffs in LLM Recommendation | pony, PCR, experiment-plan, ARIS, calibration-cliff, critical | 2026-05-21 |

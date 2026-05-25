@@ -1,10 +1,10 @@
 ---
-title: "PonyRec C-CRP 四域实验状态 (2026-05-24)"
+title: "PonyRec 项目全状态 (2026-05-25 更新)"
 type: fact
 created: 2026-05-24T15:20:00+08:00
-updated: 2026-05-24T15:20:00+08:00
+updated: 2026-05-25T21:00:00+08:00
 agent: claude
-tags: [pony, c-crp, experiment, status, four-domain]
+tags: [pony, c-crp, srpd, experiment, status, four-domain]
 related: [pony-ccrp-v2-decision.md]
 ---
 
@@ -62,3 +62,57 @@ related: [pony-ccrp-v2-decision.md]
 - Beauty 全指标补完后更新总表
 - 三域诊断完成后, 观察链 1/2 环节全部完成
 - 之后进入论文写作阶段 (M6)
+
+---
+
+## 2026-05-25 更新
+
+### C-CRP v3: 全部完成 ✅
+
+所有四域实验已完成, 观察链 100%, Paper 初稿已写完:
+
+| Domain | Users | HR@5 | NDCG@5 | HR@10 | NDCG@10 | HR@20 | NDCG@20 | MRR | Rank |
+|--------|-------|------|--------|-------|---------|-------|---------|-----|------|
+| Books | 10,000 | 0.374 | 0.300 | 0.476 | 0.333 | 0.592 | 0.362 | 0.306 | **#1 SOTA** |
+| Electronics | 10,000 | 0.218 | 0.157 | 0.299 | 0.183 | 0.418 | 0.213 | 0.168 | **#1 SOTA** |
+| Beauty | 973 | 0.157 | 0.111 | 0.229 | 0.134 | 0.369 | 0.169 | 0.128 | #2 (ProEx #1) |
+| Movies | 10,000 | 0.145 | 0.108 | 0.208 | 0.128 | 0.331 | 0.159 | 0.127 | #5 (LLMEmb #1) |
+
+### 已放弃的方向
+- **V4 enhanced prompt**: movies 上更差, 放弃
+- **Temperature scaling**: 数学上无效 (monotonic transform preserves rank order)
+- **Formal C-CRP (uncertainty decomposition)**: beauty 上变差
+
+### SRPD Pipeline: 正在运行 🔄
+
+目标: 补强 C-CRP v3 在 beauty/movies 的短板 (trainable listwise ranking + LoRA)
+
+**PID 3855835** on pony-rec-gpu, Log: `outputs/summary/logs/srpd_full_vllm.log`
+
+| Step | 内容 | 状态 | 预计时间 |
+|------|------|------|---------|
+| 1 | Anchor rank (vLLM, title-only) | 🔄 books/valid 进行中 | ~11h |
+| 2 | Teacher reranking | ⏳ 等待 | 分钟级 |
+| 3 | Build training data | ⏳ 等待 | 分钟级 |
+| 4 | LoRA training (r=16, 2 epochs) | ⏳ 等待 | ~20h |
+| 5 | Test inference (LoRA + HF) | ⏳ 等待 | ~46h/domain |
+| 6 | Evaluate (full metrics) | ⏳ 等待 | 分钟级 |
+
+关键技术决策:
+- Step 1 用 vLLM + title-only prompts (~2.5K tokens) 代替 full-text (24K tokens), 避免 OOM
+- 仍是全量: 10K users × 101 candidates, 非 toy
+- Step 5 用 HF batch_size=1 (vLLM 0.10.2 不支持 LoRA adapter loading)
+- `VLLM_WORKER_MULTIPROC_METHOD=spawn` 解决 CUDA fork 问题
+
+### Paper 状态
+
+- 初稿完成: `D:\Research\Uncertainty\Paper\` (main.tex + sections/ + tables/)
+- CLAIM_MAP.md 已对齐所有 claim-evidence
+- 等 SRPD 结果后更新 main_results 表 + 补充 SRPD 相关 section
+- 之后进入 Phase 5: internal review + auto-review-loop
+
+### 新增关键文件
+- `experiments/rsc/run_srpd_anchor_rank_vllm.py` — vLLM anchor rank 独立脚本
+- `experiments/rsc/run_srpd_full_vllm.sh` — SRPD 完整 pipeline
+- `configs/model/qwen3_8b_vllm_rank_safe.yaml` — vLLM ranking 配置
+- `configs/model/qwen3_8b_local_rank.yaml` — HF ranking 配置 (batch_size=1)

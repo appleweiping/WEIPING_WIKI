@@ -2,7 +2,7 @@
 title: "科研项目 Git 工作流 — 本地为主，服务器只跑实验"
 type: preference
 created: 2026-05-22T03:30:00+08:00
-updated: 2026-05-22T03:30:00+08:00
+updated: 2026-05-25T21:00:00+08:00
 agent: claude
 tags: [git, workflow, server, permanent, all-agents, critical]
 related: [project-server-mapping.md, experiment-fairness.md]
@@ -28,6 +28,14 @@ related: [project-server-mapping.md, experiment-fairness.md]
 - 改完后必须把改动同步回本地
 - 最终 push 仍然从本地发起
 - 不要让服务器和本地长期分叉
+
+## API Key 安全规则（硬规则，不可违反）
+
+- **Push 前必须检查**：不能泄露 API key、token、密码、credentials
+- **必须在 .gitignore 中**：.env, credentials.json, *_key.txt, *.pem, config/secrets/
+- **Commit 前 grep 检查**：`sk-`, `key=`, `token=`, `password=`, `secret=`, `ANTHROPIC_API_KEY`
+- **一旦泄露不可逆**：即使 force push 删除，GitHub event log 和 reflog 仍有记录
+- **所有 agent 必须遵守**：无论是 Opus、Codex、DeepSeek 还是其他 agent，push 前都必须执行此检查
 
 ## 项目路径对应
 
