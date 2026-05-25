@@ -2,7 +2,7 @@
 title: "ProteinShift DA-BCP 方法升级 — research-refine 完成"
 type: fact
 created: 2026-05-23T00:00:00+08:00
-updated: 2026-05-23T00:00:00+08:00
+updated: 2026-05-25T00:00:00+08:00
 agent: opus
 tags: [ProteinShift, DA-BCP, bilevel-conformal, protein-optimization, research-refine, ARIS, critical]
 related: [research-hard-rules.md, proteinshift-status.md]
@@ -12,8 +12,8 @@ related: [research-hard-rules.md, proteinshift-status.md]
 
 项目路径: D:\research\ProteinShift
 服务器路径: ~/projects/ProteinShift/ (pony-rec-gpu, qwen_vllm env)
-状态: **M0 ✓ M1 ✓ (6/6 PASS, DG=0.92-0.95)** — 现象极其显著，下一步 M2 full comparison
-ARIS 阶段: research-refine ✓ → experiment-plan ✓ → experiment-bridge (M0 ✓, M1 ✓, next: M2)
+状态: **M0 ✓ M1 ✓ M2 Phase1 RUNNING (TEM1 done, UBE4B~70%)** — Phase 2 generative script ready
+ARIS 阶段: research-refine ✓ → experiment-plan ✓ → experiment-bridge (M0 ✓, M1 ✓, M2 running)
 
 ## M1 结果 (2026-05-24)
 
@@ -70,10 +70,20 @@ Decision Gap 在所有 6 个数据集上 > 0.9 (阈值 0.3):
 3. ~~M0 sanity~~ ✓
 4. ~~数据下载~~ ✓
 5. ~~M1 phenomenon~~ ✓ (DG=0.92-0.95, 6/6 PASS)
-6. **M2 full comparison** — RUNNING (PID 2928060, 6 tasks × 10 methods × 20 seeds)
-7. M2 analysis — script ready (scripts/m2_analysis.py), run after M2 completes
-8. M3-M6 (ablation, mechanism, robustness, downstream)
-9. Paper writing
+6. **M2 Phase 1 pool-based** — RUNNING (PID 3716258, TEM1 done, UBE4B→Pab1→GFP→AAV→GB1)
+7. **M2 Phase 2 generative** — script ready (m2_generative.py), pending Phase 1 completion
+   - Official baselines: ProSpero, TuRBO (BoTorch), LatProtRL (needs VED pre-train)
+   - Design: 双设定 (main=pool-based, appendix=generative)
+8. M2 analysis — script ready (scripts/m2_analysis.py), run after M2 completes
+9. M3-M6 (ablation, mechanism, robustness, downstream)
+10. Paper writing
+
+## 2026-05-25 进展
+
+- M2 Phase 1: TEM1 完成, CUDA OOM 修复 (precompute_embeddings.py + resume logic)
+- Phase 2 generative: 官方 baseline 全部 clone (ProSpero/LatProtRL/HDBO), m2_generative.py 写完
+- 用户强制约束: 禁止 proxy/toy 化/缝合, 必须 official code + 完整数据 + 完整 metrics
+- AAV 可用 JSON oracle (无需 TAPE download), GFP 需要 TAPE (被 GFW 阻断, 待解决)
 
 ## 服务器部署
 
