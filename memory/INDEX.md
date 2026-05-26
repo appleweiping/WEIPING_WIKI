@@ -22,7 +22,7 @@ Auto-maintained index of all shared agent memories.
 |------|-------|------|---------|
 | [agent-cli-launch-config.md](facts/agent-cli-launch-config.md) | Agent CLI 启动方式与配置位置 | agent-cli, launch, config, infrastructure | 2026-05-21 |
 | [all-projects-status.md](facts/all-projects-status.md) | 全部项目状态与优先级 | projects, priority, all-agents, critical | 2026-05-21 |
-| [analog-agent-status.md](facts/analog-agent-status.md) | Analog-Agent (AI4EDA) 项目状态 | analog-agent, AI4EDA, circuit-design, research | 2026-05-21 |
+| [analog-agent-status.md](facts/analog-agent-status.md) | CSATG-EDA Phase 6c — Full comparison DONE, SOTA on OTA2, paper next | CSATG-EDA, AI4EDA, circuit-design, research, sky130, SOTA, critical | 2026-05-27 |
 | [api-keys-backup-channels.md](facts/api-keys-backup-channels.md) | API Key 备选通道 — 多 key 冗余策略 | api-key, infrastructure, backup, all-agents, critical | 2026-05-22 |
 | [gpt-image-2-config.md](facts/gpt-image-2-config.md) | GPT Image 2 图像生成 API 配置 | gpt-image-2, api, image-generation, all-agents, infrastructure | 2026-05-21 |
 | [openhands-official-cli-gui-agentmemory.md](facts/openhands-official-cli-gui-agentmemory.md) | OpenHands official CLI/GUI + agentmemory setup | openhands, agentmemory, cli, gui, gpt-5.5, setup, verified | 2026-05-22 |
@@ -34,7 +34,7 @@ Auto-maintained index of all shared agent memories.
 | [pony-research-refine-listwise.md](facts/pony-research-refine-listwise.md) | Pony Research Refine — Listwise Conformal Recommendation | pony, research-refine, listwise, conformal-prediction, LLM4Rec, critical | 2026-05-21 |
 | [pony-research-refine-v2.md](facts/pony-research-refine-v2.md) | Pony Research Refine v2 — Ranking Stability as Uncertainty | pony, research-refine, listwise, ranking-stability, conformal-prediction, LLM4Rec, critical | 2026-05-21 |
 | [project-server-mapping.md](facts/project-server-mapping.md) | 项目-服务器映射 (Pony, TGL-Rec, TRUCE-Rec) | pony, TGL-Rec, TRUCE-Rec, server, mapping, critical | 2026-05-21 |
-| [proteinshift-status.md](facts/proteinshift-status.md) | ProteinShift DA-BCP 方法升级 — research-refine 完成 | ProteinShift, DA-BCP, bilevel-conformal, protein-optimization, research-refine, ARIS, critical | 2026-05-23 |
+| [proteinshift-status.md](facts/proteinshift-status.md) | ProteinShift DA-BCP v2 — M2 完成, rank #2/10, best coverage gap | ProteinShift, DA-BCP, bilevel-conformal, M2-complete, ARIS, critical | 2026-05-27 |
 | [terraria-project-plan.md](facts/terraria-project-plan.md) | My Terraria 项目计划 (Codex 制定) | terraria, game, codex-lead, plan | 2026-05-21 |
 | [tglrec-current-status.md](facts/tglrec-current-status.md) | TGL-Rec 项目当前状态 — Phase 10 已启动 | TGL-Rec, temporal-graph, LLM4Rec, research, critical | 2026-05-21 |
 | [truce-rec-current-status.md](facts/truce-rec-current-status.md) | TRUCE-Rec 项目当前状态 — 服务器部署阶段 | TRUCE-Rec, uncertainty, LLM4Rec, generative-recommendation, research, critical | 2026-05-21 |

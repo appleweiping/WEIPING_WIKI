@@ -23,7 +23,8 @@ related: [pony-current-status.md, truce-rec-current-status.md, tglrec-current-st
 | 1 | **Pony/Uncertainty (RSC)** | Ranking Stability Conformal for LLM-Rec | 🔄 experiment-bridge (M0 passed ρ=0.91) | pony-rec-gpu |
 | 2 | **TGL-Rec** | Temporal Graph + LLM Rec | 🔄 Phase 10 已启动（reportable path实现，待部署服务器） | 未部署（脚本就绪） |
 | 3 | **TRUCE-Rec** | Uncertainty-Aware Generative Rec (title grounding + confidence-popularity disentanglement + exposure-aware calibration) | 🔄 Gate R1: 代码完整，novelty确认，待服务器部署 | ~/projects/TRUCE-Rec (待部署) |
-| 4 | **Analog-Agent (AI4EDA)** | Analog circuit design with AI | ~65% 需深度重做 | 服务器上有 |
+| 4 | **ProteinShift (DA-BCP)** | Decision-Aware Bilevel Conformal for Protein Optimization | ✅ M2 done (rank #2/10), next: stats+mechanism+paper | pony-rec-gpu |
+| 5 | **CSATG-EDA** | Analog circuit design with AI | Phase 6c done, SOTA on OTA2, paper next | 服务器上有 |
 
 ### 软件/游戏项目（可与科研并行）
 
