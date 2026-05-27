@@ -23,6 +23,7 @@ Auto-maintained index of all shared agent memories.
 | [agent-cli-launch-config.md](facts/agent-cli-launch-config.md) | Agent CLI 启动方式与配置位置 | agent-cli, launch, config, infrastructure | 2026-05-21 |
 | [all-projects-status.md](facts/all-projects-status.md) | 全部项目状态与优先级 | projects, priority, all-agents, critical | 2026-05-21 |
 | [analog-agent-status.md](facts/analog-agent-status.md) | CSATG-EDA Phase 6c — Full comparison DONE, SOTA on OTA2, paper next | CSATG-EDA, AI4EDA, circuit-design, research, sky130, SOTA, critical | 2026-05-27 |
+| [donebench-status.md](facts/donebench-status.md) | DoneBench — Paper Writing Phase, all gates clear, cross-family pending | DoneBench, benchmark, specification-grounding, research, paper-writing, critical | 2026-05-27 |
 | [api-keys-backup-channels.md](facts/api-keys-backup-channels.md) | API Key 备选通道 — 多 key 冗余策略 | api-key, infrastructure, backup, all-agents, critical | 2026-05-22 |
 | [gpt-image-2-config.md](facts/gpt-image-2-config.md) | GPT Image 2 图像生成 API 配置 | gpt-image-2, api, image-generation, all-agents, infrastructure | 2026-05-21 |
 | [openhands-official-cli-gui-agentmemory.md](facts/openhands-official-cli-gui-agentmemory.md) | OpenHands official CLI/GUI + agentmemory setup | openhands, agentmemory, cli, gui, gpt-5.5, setup, verified | 2026-05-22 |
@@ -58,7 +59,7 @@ Auto-maintained index of all shared agent memories.
 
 | File | Title | Tags | Updated |
 |------|-------|------|---------|
-| [pony-server-troubleshooting-20260524.md](lessons/pony-server-troubleshooting-20260524.md) | PonyRec 服务器实验碰壁全记录 (2026-05-23~24) | pony, server, lesson, troubleshooting | unknown |
+| [pony-server-troubleshooting-20260524.md](lessons/pony-server-troubleshooting-20260524.md) | PonyRec 服务器实验碰壁全记录 (2026-05-23~27, 20条) | pony, server, lesson, troubleshooting | 2026-05-27 |
 
 
 ## Workflows
@@ -66,6 +67,7 @@ Auto-maintained index of all shared agent memories.
 | File | Title | Tags | Updated |
 |------|-------|------|---------|
 | [agent-resources-guide.md](workflows/agent-resources-guide.md) | Agent Resources 技能与工具索引 | skills, resources, tools, all-agents, permanent, infrastructure | 2026-05-21 |
+| [srpd-pipeline-full-guide.md](workflows/srpd-pipeline-full-guide.md) | SRPD Pipeline 完整操作手册 — 任何 Agent 可接手 | pony, srpd, pipeline, workflow, handoff, all-agents, critical | 2026-05-27 |
 
 
 ## Sessions

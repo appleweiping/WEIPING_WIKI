@@ -29,3 +29,4 @@ graphify-out/.semantic_cache/
 graphify-out/*.tmp
 graphify-out/cache/
 graphify-out/manifest.json
+raw/pdfs/

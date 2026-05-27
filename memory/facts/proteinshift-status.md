@@ -1,10 +1,10 @@
 ---
-title: "ProteinShift DA-BCP v2 — M2 完成, rank #2/10"
+title: "ProteinShift DA-BCP — Paper draft v1 complete, AUCE SOTA"
 type: fact
 created: 2026-05-23T00:00:00+08:00
-updated: 2026-05-27T00:00:00+08:00
+updated: 2026-05-27T20:50:00+08:00
 agent: opus
-tags: [ProteinShift, DA-BCP, bilevel-conformal, protein-optimization, M2-complete, ARIS, critical]
+tags: [ProteinShift, DA-BCP, bilevel-conformal, protein-optimization, paper-writing, ARIS, critical]
 related: [research-hard-rules.md, research-core-rules.md]
 ---
 
@@ -12,9 +12,10 @@ related: [research-hard-rules.md, research-core-rules.md]
 
 项目路径: D:\research\ProteinShift
 服务器路径: ~/projects/ProteinShift/ (ajifang@125.71.97.70:15302, qwen_vllm env)
-状态: **M2 v2 ✓ COMPLETED** — DA-BCP rank #2/10, best coverage gap #1
-ARIS 阶段: research-refine ✓ → experiment-plan ✓ → experiment-bridge (M0✓ M1✓ M2✓) → 下一步 stats+mechanism+paper
-Branch: `feat/m2-experiment-progress`
+状态: **Paper draft v1 COMPLETE** — AUCE SOTA (0.095), fitness #2, Pareto-optimal
+ARIS 阶段: research-refine ✓ → experiment-plan ✓ → experiment-bridge (M0✓ M1✓ M2✓ Stats✓ AUCE✓ M4✓ M6✓) → paper-write (v1 done)
+Branch: `feat/m2-experiment-progress` (commit 0de4a31)
+**实验必须在服务器运行，禁止在本地电脑跑实验**
 
 ## M2 v2 最终结果 (2026-05-27)
 
@@ -94,14 +95,26 @@ git push origin feat/m2-experiment-progress
 
 ## 下一步 (优先级)
 
-1. **Statistical analysis** — paired permutation tests, Holm-Bonferroni, Cohen's d, bootstrap CIs
-2. **M4 mechanism** — g_phi visualization, PCA of learned scores, correlation with sequence features
+1. **[IN PROGRESS] Per-dataset tuning** — PID 1726894 on server (AAV+UBE4B, beta grid)
+2. **Publication figures** — Pareto plot, calibration curves, g_phi PCA, trajectory
 3. **M5 robustness** — vary surrogate (GP/RF/ensemble), noise, embedding (ESM-2/ProtTrans)
-4. **M6 downstream** — true fitness top-10, diversity, novelty vs training set
-5. **M2-gen** — generative setting (ProSpero/TuRBO/DA-BCP-gen), GFP+AAV, appendix
-6. **AUCE + calibration** — at alpha=0.05, 0.1, 0.15, 0.2
-7. **Publication figures** — comparison table, Pareto, calibration, g_phi PCA
-8. **Paper draft** — ARIS paper-write, 8 pages + appendix, target NeurIPS/ICML 2026
+4. **M2-gen** — generative setting (ProSpero/TuRBO/DA-BCP-gen), GFP+AAV, appendix
+5. **Cross-model review** — claim-evidence audit, notation consistency
+6. **Final paper polish** — submission checklist, NeurIPS 2026
+
+## Paper (paper/ directory)
+
+All sections written (NeurIPS 2026 format):
+- `main.tex` — document structure, custom commands
+- `sections/abstract.tex` — AUCE SOTA, Pareto-optimal framing
+- `sections/introduction.tex` — problem + 4 contributions
+- `sections/related-work.tex` — CP shift, protein UQ, bilevel ML
+- `sections/method.tex` — bilevel formulation, soft-quantile, ST-topk, algorithm box
+- `sections/experiments.tex` — 6 datasets, 10 methods, AUCE + fitness tables
+- `sections/analysis.tex` — g_phi mechanism, ablation, efficiency
+- `sections/conclusion.tex` — summary, limitations, future work
+- `sections/appendix.tex` — implementation details, per-dataset results
+- `references.bib` — 25 citations
 
 ## 计算预算
 

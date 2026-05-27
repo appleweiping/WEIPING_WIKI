@@ -83,26 +83,31 @@ related: [pony-ccrp-v2-decision.md]
 - **Temperature scaling**: 数学上无效 (monotonic transform preserves rank order)
 - **Formal C-CRP (uncertainty decomposition)**: beauty 上变差
 
-### SRPD Pipeline: 正在运行 🔄
+### SRPD Pipeline: Step 5 运行中 🔄
 
 目标: 补强 C-CRP v3 在 beauty/movies 的短板 (trainable listwise ranking + LoRA)
 
-**PID 3855835** on pony-rec-gpu, Log: `outputs/summary/logs/srpd_full_vllm.log`
+**完整操作手册**: `memory/workflows/srpd-pipeline-full-guide.md`
 
-| Step | 内容 | 状态 | 预计时间 |
-|------|------|------|---------|
-| 1 | Anchor rank (vLLM, title-only) | 🔄 books/valid 进行中 | ~11h |
-| 2 | Teacher reranking | ⏳ 等待 | 分钟级 |
-| 3 | Build training data | ⏳ 等待 | 分钟级 |
-| 4 | LoRA training (r=16, 2 epochs) | ⏳ 等待 | ~20h |
-| 5 | Test inference (LoRA + HF) | ⏳ 等待 | ~46h/domain |
-| 6 | Evaluate (full metrics) | ⏳ 等待 | 分钟级 |
+**当前进程**: PID 3762241 (GPU 33.3GB), Log: `outputs/summary/logs/srpd_steps4_6.log`
+
+| Step | 内容 | beauty | books | electronics | movies |
+|------|------|--------|-------|-------------|--------|
+| 1 | Anchor rank (vLLM) | ✅ | ✅ | ✅ | ✅ |
+| 2 | Teacher signal | ✅ | ✅ | ✅ | ✅ |
+| 3 | Training data | ✅ | ✅ | ✅ | ✅ |
+| 4 | LoRA training | ✅ | ✅ | ✅ | ✅ |
+| 5 | Test inference (HF) | ✅ 973/973 | 🔄 41% | ⏳ | ⏳ |
+| 6 | Evaluate | ⏳ | ⏳ | ⏳ | ⏳ |
+
+**预计完成**: books ~26h + electronics ~40h + movies ~40h ≈ 4.4天 (2026-05-31)
 
 关键技术决策:
 - Step 1 用 vLLM + title-only prompts (~2.5K tokens) 代替 full-text (24K tokens), 避免 OOM
 - 仍是全量: 10K users × 101 candidates, 非 toy
-- Step 5 用 HF batch_size=1 (vLLM 0.10.2 不支持 LoRA adapter loading)
+- Step 5 用 HF batch_size=1 (~15s/sample, vLLM 0.10.2 不支持 LoRA adapter loading)
 - `VLLM_WORKER_MULTIPROC_METHOD=spawn` 解决 CUDA fork 问题
+- `--resume_partial` 支持断点续跑
 
 ### Paper 状态
 
@@ -112,7 +117,12 @@ related: [pony-ccrp-v2-decision.md]
 - 之后进入 Phase 5: internal review + auto-review-loop
 
 ### 新增关键文件
-- `experiments/rsc/run_srpd_anchor_rank_vllm.py` — vLLM anchor rank 独立脚本
-- `experiments/rsc/run_srpd_full_vllm.sh` — SRPD 完整 pipeline
+- `experiments/rsc/run_srpd_anchor_rank_vllm.py` — vLLM anchor rank 独立脚本 (Step 1)
+- `experiments/rsc/run_srpd_steps2_6_formal.py` — Steps 2-6 主脚本
+- `experiments/rsc/run_srpd_full_vllm.sh` — SRPD 完整 pipeline (旧, Step 1 only)
 - `configs/model/qwen3_8b_vllm_rank_safe.yaml` — vLLM ranking 配置
 - `configs/model/qwen3_8b_local_rank.yaml` — HF ranking 配置 (batch_size=1)
+- `configs/lora/{prefix}_srpd_v6_formal.yaml` — 4 个 LoRA 训练配置
+- `configs/srpd/{prefix}_srpd_v6_formal.yaml` — 4 个 SRPD 数据配置
+- `src/training/lora_rank_trainer.py` — LoRA 训练核心 (已修 2 处 bug)
+- `artifacts/adapters/{prefix}_srpd_v6_formal/` — 4 个 LoRA adapter

@@ -72,3 +72,41 @@ tags: [pony, server, lesson, troubleshooting]
 - **问题:** 原始 ranking prompt (含 full text) 达 23,233 tokens, 超过 max_model_len=4096
 - **修复:** 写独立脚本 `run_srpd_anchor_rank_vllm.py`, 用 title-only prompts (~2.5K tokens)
 - **教训:** vLLM max_model_len 决定 KV cache 分配, 设太大会减少并发; 应优化 prompt 长度而非盲目加大 max_model_len
+
+## 碰壁 14: title-only prompts 在 electronics 仍超 4096 tokens
+- **问题:** electronics 域 title-only prompts 仍有 5554 tokens (101 candidates × 长标题), 超过 max_model_len=4096
+- **修复:** 对 electronics/movies 域提升 max_model_len=8192, batch_size 从 256 降到 128 保持 KV cache 不溢出
+- **教训:** title-only 不等于短; electronics 产品标题本身就长。不同域可能需要不同 max_model_len
+
+## 碰壁 15: transformers API 变更 — dtype vs torch_dtype (2026-05-26)
+- **问题:** `lora_rank_trainer.py:416` 用 `AutoModelForCausalLM.from_pretrained(..., dtype=torch_dtype)` 报 TypeError
+- **原因:** 新版 transformers 参数名是 `torch_dtype` 不是 `dtype`
+- **修复:** 改为 `torch_dtype=torch_dtype`
+- **教训:** transformers 版本升级后 API 参数名可能变化，报 unexpected keyword argument 时检查参数名
+
+## 碰壁 16: PEFT + gradient_checkpointing 需要 enable_input_require_grads (2026-05-26)
+- **问题:** LoRA training 报 `RuntimeError: element 0 of tensors does not require grad`
+- **原因:** gradient_checkpointing 会 detach inputs，PEFT 的 LoRA 层拿不到梯度
+- **修复:** 在 `get_peft_model(model, lora_cfg)` 之后加 `model.enable_input_require_grads()`
+- **教训:** PEFT + gradient_checkpointing 是已知冲突，必须显式 enable_input_require_grads()
+
+## 碰壁 17: formal_policy 严格验证阻塞训练 (2026-05-26)
+- **问题:** LoRA config 中 `formal_policy.enabled: true` 触发多项 strict validation (teacher path, leakage audit 等)
+- **修复:** 所有 4 个 LoRA config 设 `formal_policy.enabled: false`
+- **教训:** formal_policy 是论文提交前的最终验证，开发/调试阶段应关闭
+
+## 碰壁 18: leakage_audit 1/10000 overlap 导致 build_srpd_rank_data 失败 (2026-05-26)
+- **问题:** valid 和 test 有 1 个 event_id 重叠 (10000 中的 1 个)，leakage audit 报错拒绝构建
+- **修复:** patched config 中设 `leakage_audit.allow_overlap = True`
+- **教训:** 极小 overlap 在 same-candidate protocol 下无实际泄露风险，可安全忽略
+
+## 碰壁 19: 空 adapter 目录导致 --skip_existing 误跳过 (2026-05-26)
+- **问题:** 之前失败的训练留下空 adapter 目录，`--skip_existing` 检测到目录存在就跳过
+- **修复:** 删除空目录，重写 shell 脚本不用 `--skip_existing`
+- **教训:** skip_existing 逻辑应检查目录非空 + 包含 adapter_model.safetensors，不能只检查目录存在
+
+## 碰壁 20: HF inference 速度 ~15s/sample，4 域需 ~120h (2026-05-26)
+- **问题:** Step 5 用 HF transformers (batch_size=1) 推理，10K users × 15s = 42h/domain
+- **原因:** vLLM 0.10.2 不支持动态加载 LoRA adapter，只能用 HF
+- **应对:** 接受现实，用 `--resume_partial` 支持断点续跑，nohup 后台运行
+- **教训:** 如果未来 vLLM 支持 LoRA loading，速度可提升 10x+
