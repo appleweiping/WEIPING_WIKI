@@ -2,6 +2,10 @@
 
 This directory stores audio notes or exported transcripts intended for wiki ingest.
 
+## Inventory
+
+- `voice sample.zip` - public voice sample archive containing Hangzhou dialect, Mandarin, and English MP3 files. Source note: [[2026-05-31-voice-sample]].
+
 Recommended flow:
 
 1. Save the audio file or transcript here.

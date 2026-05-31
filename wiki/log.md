@@ -986,3 +986,16 @@ tags:
   - Independent entry point: does not depend on PixelCat, Agent Hub daemon, or cc.cmd.
   - Coordinates with other agents via git state and wiki/log.md (always available) plus Agent Hub shared state (when daemon is running).
   - System upgraded from 5-agent to 6-agent collaboration.
+
+## [2026-05-31 18:50] ingest | public voice sample archive
+
+- Pages created or updated:
+  - [[2026-05-31-voice-sample]]
+  - [[index]]
+  - [[log]]
+  - `raw/voice-notes/README.md`
+- Sources used:
+  - User-provided `voice sample.zip`.
+- Notes:
+  - Added `raw/voice-notes/voice sample.zip` as a public raw source archive, preserving the original filename.
+  - Recorded archive hash and MP3 member filenames for future voice-related work.
