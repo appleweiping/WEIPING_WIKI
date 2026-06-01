@@ -3,12 +3,25 @@ title: Log
 type: log
 status: active
 created: 2026-04-21
-updated: 2026-05-18
+updated: 2026-06-01
 tags:
   - log
 ---
 
 # Log
+
+## [2026-06-01 16:10] maintenance | Whole-computer vipin wiki maintenance map
+
+- Pages/files updated:
+  - [[whole-computer-project-map]]
+  - [[d-drive-project-map]]
+  - [[local-project-roots]]
+  - `AGENTS.md`, `CLAUDE.md`, `.opencode/OPENCODE.md`, `.claude/skills/README-skills-layout.md`, `README.md`
+  - `.codex/skills/vipin-wiki/SKILL.md`
+- Notes:
+  - Rebuilt the `vipin-wiki` skill around continuing maintenance, old-content refresh, whole-computer project mapping, and importance-based depth so future agents do not need a fresh prompt.
+  - Added `scripts/computer-inventory.ps1` as a shallow public-safe inventory helper for `C:/`, `D:/`, `G:/`, and user-profile junctions.
+  - Kept research experiment code, datasets, checkpoints, logs, and progress outside this maintenance scope.
 
 ## [2026-06-01 15:35] maintenance | D-drive project map and safety gates
 

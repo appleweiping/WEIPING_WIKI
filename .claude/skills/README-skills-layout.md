@@ -1,7 +1,7 @@
 ---
 name: skills-directory-layout
 description: |
-  Explains the D-drive skill layout, shared agent-resources library, implicit skill triggering, and the retired Agent Hub boundary for future agents.
+  Explains the whole-computer/D-drive skill layout, shared agent-resources library, implicit skill triggering, and the retired Agent Hub boundary for future agents.
 metadata:
   type: reference
 ---
@@ -14,7 +14,7 @@ Skills are chosen by task intent. Agents should inspect skill metadata, read the
 
 `agentmemory` is the active memory/collaboration layer. Agent Hub is retired and should not be registered as an active MCP server.
 
-For D-drive infrastructure or organization tasks, read `wiki/concepts/d-drive-project-map.md` before editing. It is the routing map for public exports, private runtime state, skills/resources, and research isolation.
+For whole-computer maintenance, project routing, or organization tasks, read `wiki/concepts/whole-computer-project-map.md` first. For D-drive infrastructure detail, also read `wiki/concepts/d-drive-project-map.md`, which separates public exports, private runtime state, skills/resources, and research isolation.
 
 ## Skill Roots
 

@@ -22,6 +22,8 @@ EXTRACTED: Future agents should use this page as the first public-safe routing m
 
 This map is not a permission slip to edit everything on D drive. It is a routing layer that separates agent infrastructure, public exports, private runtime state, and research workbenches.
 
+For whole-computer routing across `C:/`, `D:/`, `G:/`, user-profile junctions, active projects, archives, and low-detail system/cache buckets, start with [[whole-computer-project-map]] and use this page for D-drive infrastructure detail.
+
 ## Agent Infrastructure
 
 | Path | Role | Edit policy |
@@ -81,6 +83,7 @@ For D-drive tasks:
 
 ## Related
 
+- [[whole-computer-project-map]]
 - [[agentmemory-first-agent-collaboration]]
 - [[implicit-skill-routing]]
 - [[agent-skill-installation-workflow]]

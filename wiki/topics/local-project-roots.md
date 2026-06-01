@@ -19,6 +19,8 @@ source_pages:
 
 This topic records the content nature of local project and archive roots that Vipin may ask about later. It is meant for fast routing and quick answers, not for copying folder contents into the wiki.
 
+For whole-computer routing and importance-based depth across `C:/`, `D:/`, and `G:/`, start with [[whole-computer-project-map]]. This page keeps the project/archive root layer beneath that map.
+
 ## Current Roots
 
 - [[weipingyan-portfolio]] - Public academic website/profile repos plus a private memory-album repo.
@@ -33,6 +35,7 @@ This topic records the content nature of local project and archive roots that Vi
 ## Operating Rule
 
 - EXTRACTED: The user explicitly clarified that adding these roots to the wiki means adding their content nature, not placing folders inside the wiki.
+- EXTRACTED: For whole-computer maintenance, classify roots by importance before deep reading: active/high-consequence roots get detail; system/cache/download/bulk roots get shallow bucket summaries.
 - EXTRACTED: For D-drive organization, classify roots by role before moving anything. Do not reorganize research experiments, datasets, checkpoints, or active experiment state as part of general cleanup.
 - INFERRED: Use this page to answer "where is X?" and "what kind of material is this?" quickly.
 - INFERRED: Before making edits in any external root, rescan that root because folder names and internal contents may change.
@@ -64,6 +67,8 @@ Use these buckets when deciding how to tidy D-drive without breaking active work
 
 ## Related
 
+- [[whole-computer-project-map]]
+- [[d-drive-project-map]]
 - [[2026-05-10-d-drive-portfolio-and-undergraduate-roots]]
 - [[2026-05-15-d-drive-healthcare-and-skill-roots]]
 - [[2026-05-15-terraria-local-save-files]]

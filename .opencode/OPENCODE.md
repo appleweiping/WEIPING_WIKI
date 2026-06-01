@@ -4,7 +4,7 @@ Read `AGENTS.md` first. It is the authoritative operating guide for this reposit
 
 This file provides OpenCode-specific context for operating inside `vipin wiki`.
 
-For D-drive infrastructure or organization work, read `wiki/concepts/d-drive-project-map.md` before editing. Use it to separate public exports, private runtime state, and research workbenches.
+For whole-computer maintenance, project routing, or local file-organization work, read `wiki/concepts/whole-computer-project-map.md` first. Use `wiki/concepts/d-drive-project-map.md` for D-drive infrastructure detail, public exports, private runtime state, and research workbenches.
 
 ## Identity
 
@@ -64,7 +64,7 @@ The session lead remains responsible for verifying sub-agent claims before editi
 ## Startup Checklist
 
 1. Read `AGENTS.md`.
-2. For D-drive infrastructure/organization tasks, read `wiki/concepts/d-drive-project-map.md`.
+2. For whole-computer maintenance, project routing, or local organization tasks, read `wiki/concepts/whole-computer-project-map.md`; for D-drive infrastructure detail, also read `wiki/concepts/d-drive-project-map.md`.
 3. Check `git status`.
 4. Search active agentmemory when past state matters.
 5. Inspect relevant skill metadata and read matched `SKILL.md`.
