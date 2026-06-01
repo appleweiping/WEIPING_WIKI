@@ -43,7 +43,12 @@ Stop before staging when:
 - a deletion is needed but the user has not approved it
 - sensitive material appears in a public candidate diff
 - only ignored report artifacts changed
+- a physical file move is proposed without a `workstation-maintenance` manifest, user-approved batch, and rollback manifest
 
 ## Agentmemory
 
 Use agentmemory as live operational memory when available. If unavailable, continue from git/wiki evidence and record the degraded state. Do not store secrets or raw private material in agentmemory.
+
+## Workstation Manifests
+
+Keep workstation inventory, move-plan, applied-batch, and rollback artifacts in ignored local report directories such as `.wiki-tmp/workstation-maintenance/`. Do not stage them or publish raw sensitive filenames.

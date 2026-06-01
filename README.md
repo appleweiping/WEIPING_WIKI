@@ -13,7 +13,7 @@ The wiki is the public crystallization layer. Day-to-day agent memory and collab
 | You are | First step | Then |
 | --- | --- | --- |
 | Vipin | Open Codex, Claude Code, or OpenCode | Talk naturally. Agents choose skills, use agentmemory, update the wiki, and make scoped commits when useful. |
-| A future agent | Read `AGENTS.md` | For whole-computer maintenance or local project routing, read `wiki/concepts/whole-computer-project-map.md`; for D-drive infrastructure detail, read `wiki/concepts/d-drive-project-map.md`; then check `wiki/index.md`, `wiki/catalog.json`, and recent `wiki/log.md`; use agentmemory for active recall/collaboration. |
+| A future agent | Read `AGENTS.md` | For whole-computer maintenance or local project routing, read `wiki/concepts/whole-computer-project-map.md`; for D-drive infrastructure detail, read `wiki/concepts/d-drive-project-map.md`; for physical C:/D:/G: organization, use `D:\agent-resources\skills\vipin\workstation-maintenance`; then check `wiki/index.md`, `wiki/catalog.json`, and recent `wiki/log.md`; use agentmemory for active recall/collaboration. |
 | A human reader | Open `wiki/index.md` | Follow entities, concepts, sources, analyses, and saved query pages. |
 | A maintainer | Run `python scripts/wiki.py maintain --scope whole-computer --json` | Review the ignored maintenance report, make curated updates only when evidence changed, then validate before committing. |
 
@@ -52,6 +52,7 @@ Primary skill roots:
 | --- | --- |
 | `D:\agent-resources\SKILL-INDEX.md` | Broad curated skill index and routing map. |
 | `D:\agent-resources\skills\` | Shared reusable skill library. |
+| `D:\agent-resources\skills\vipin\workstation-maintenance` | Shared C:/D:/G: inventory, batch-move, rollback, and agent-infrastructure sync workflow. |
 | `.codex/skills/` | Codex project-local skills, including ARIS research audit workflows. |
 | `.claude/skills/` | Claude Code / OpenCode-visible project skills. |
 
@@ -74,6 +75,8 @@ python scripts/wiki.py obsidian backlinks vipinknowledge-maintenance-system
 powershell .\scripts\computer-inventory.ps1
 powershell .\scripts\wiki-maintenance-audit.ps1
 powershell .\scripts\wiki-maintain.ps1 -Scope whole-computer -Json
+powershell D:\agent-resources\skills\vipin\workstation-maintenance\scripts\New-WorkstationInventory.ps1 -OutputDir ".wiki-tmp\workstation-maintenance"
+powershell D:\agent-resources\skills\vipin\workstation-maintenance\scripts\New-MovePlan.ps1 -ManifestPath "<manifest.json>"
 ```
 
 Compatibility wrappers still exist for older workflows, but `scripts/wiki.py` is the canonical surface.
@@ -95,7 +98,7 @@ Compatibility wrappers still exist for older workflows, but `scripts/wiki.py` is
 - Keep research project claims inside their evidence gates. Do not change experiment progress, datasets, checkpoints, or server state from this repo.
 - Stage only scoped files. Existing unrelated dirty work belongs to its owner.
 - Infrastructure changes must update the relevant operating docs in the same commit.
-- Whole-computer maintenance, local project routing, or file-organization work should start from [whole-computer project map](wiki/concepts/whole-computer-project-map.md); D-drive infrastructure detail stays in [D-drive project map](wiki/concepts/d-drive-project-map.md) so agent runtime cleanup stays separate from research experiments.
+- Whole-computer maintenance, local project routing, or file-organization work should start from [whole-computer project map](wiki/concepts/whole-computer-project-map.md); D-drive infrastructure detail stays in [D-drive project map](wiki/concepts/d-drive-project-map.md) so agent runtime cleanup stays separate from research experiments. Physical drive organization must use the shared workstation-maintenance skill, produce a dry-run manifest first, and move only user-approved batches with rollback manifests.
 - Continuous VipinKnowledge maintenance is documented in [VipinKnowledge maintenance system](wiki/concepts/vipinknowledge-maintenance-system.md). Weekly automation should report first, update only curated scoped files, validate, then commit and push when real evidence changed.
 - Obsidian-compatible local-first features are documented in [Obsidian feature parity](wiki/concepts/obsidian-feature-parity.md). Use `python scripts/wiki.py obsidian export --json` to refresh vault config, Bases, Canvas, command palette, templates, slides home, workspaces, and the dashboard.
 

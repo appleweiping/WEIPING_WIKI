@@ -6,6 +6,8 @@ Use this when a task touches local project routing, file organization, or whole-
 
 Start shallow across `C:/`, `D:/`, and `G:/`. Promote a root to deeper inspection only when live evidence shows active use, high consequence, repeated user interest, or operating-system/agent infrastructure relevance.
 
+Physical file organization is delegated to `D:\agent-resources\skills\vipin\workstation-maintenance`. Use that skill for dry-run manifests, move plans, approved batches, and rollback; use `vipin-wiki` for public-safe routing pages after actual state changes.
+
 ## Evidence To Read
 
 For important roots, read only entry evidence first:
@@ -25,6 +27,8 @@ Do not deep-read source trees, private files, datasets, logs, browser profiles, 
 - Tier 2 archives get content nature, discovery clues, and edit caution.
 - Tier 3 bulk/system roots get a bucket line and a reason for low detail.
 - Private/sensitive roots get private-only minimal metadata or no public record.
+
+No tier allows broad physical moves under `D:\Research`; resolved paths under that root are excluded from workstation move plans.
 
 ## Promotion Triggers
 

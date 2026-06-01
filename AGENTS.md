@@ -39,8 +39,9 @@ The active collaboration layer is `agentmemory`, not Agent Hub.
 - Promote stable public-safe knowledge into `wiki/` pages, `wiki/index.md`, and `wiki/log.md`.
 - Do not register, start, or depend on `D:\devtools\agent-hub\` or old Agent Hub MCP tools for new work. Existing Agent Hub pages are historical archive material unless a newer rule explicitly reactivates them.
 - Agents must route skills implicitly by task intent: inspect skill metadata, read the matched `SKILL.md`, and follow it before improvising on non-trivial work.
-- For whole-computer maintenance, project routing, local file organization, or old-content refresh tasks, read [[whole-computer-project-map]] first; use [[d-drive-project-map]] for D-drive infrastructure detail and research-isolation boundaries.
+- For whole-computer maintenance, project routing, local file organization, or old-content refresh tasks, read [[whole-computer-project-map]] first; use [[d-drive-project-map]] for D-drive infrastructure detail and research-isolation boundaries. Physical C:/D:/G: file organization must use the shared `workstation-maintenance` skill from `D:\agent-resources\skills\vipin\workstation-maintenance` before any move plan is trusted.
 - `vipinknowledge` continuous maintenance uses the `vipin-wiki` skill and `python scripts/wiki.py maintain --scope whole-computer --json` as the report-first command. Weekly automation may commit/push only scoped validated wiki/skill/script/doc changes when live evidence changed.
+- Actual file moves require a dry-run manifest, user-approved batch ID, rollback manifest, and a hard exclusion for `D:\Research` resolved paths. Do not delete files during broad organization work.
 
 ## Mission
 
@@ -221,6 +222,8 @@ Current junction map:
 | `C:\Users\admin\.codex` | `D:\devtools\codex\home` | Codex (GPT-5.5) |
 | `C:\Users\admin\.cache\codex-runtimes` | `D:\devtools\codex\runtimes` | Codex |
 | `C:\Users\admin\.openhands` | `D:\devtools\openhands\home` | OpenHands |
+| `D:\devtools\codex\home\skills\workstation-maintenance` | `D:\agent-resources\skills\vipin\workstation-maintenance` | Shared workstation maintenance skill |
+| `D:\devtools\claude\skills\workstation-maintenance` | `D:\agent-resources\skills\vipin\workstation-maintenance` | Shared workstation maintenance skill |
 
 Rules:
 - Never install agent tools, caches, models, or bulk data directly on C:. If a tool defaults to C:, create a junction to D: after installation.
@@ -228,6 +231,7 @@ Rules:
 - DeepSeek is API-only; no local storage needed beyond the VSCode extension.
 - All agent CLI launchers live at `D:\devtools\*.cmd` when installed. Launchers must read secrets from environment variables or ignored local files, never from tracked source.
 - If a new agent or tool is added, follow the same pattern: data on D:, junction from C:.
+- Shared reusable skills should be authored in `D:\agent-resources` and exposed into agent-specific skill roots by junction/symlink where practical; do not duplicate the source copy inside `D:\devtools`.
 - The migration script `D:\devtools\Complete-Migration.cmd` handles any remaining locked directories after restart.
 
 ## Missing Dependency Policy

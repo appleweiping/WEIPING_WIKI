@@ -31,10 +31,24 @@ EXTRACTED: A shallow inventory on 2026-06-01 found three filesystem drives: `C:/
 
 | Drive/root | Role | Default depth |
 | --- | --- | --- |
-| `C:/` | Windows system drive, installed applications, user profile entrypoints, and junctions into D-drive agent homes. | Shallow. Do not reorganize system/app folders. Inspect only explicit user-profile or launcher paths. |
+| `C:/` | Windows system drive, installed applications, user profile entrypoints, and junctions into D-drive agent homes. | Inventory/classify broadly but move narrowly. Do not reorganize system/app folders; physical moves require `workstation-maintenance` batches. |
 | `C:/Users/admin` | User profile with many tool dotfolders; `.claude`, `.codex`, and `.openhands` are junctions into `D:/devtools`. | Medium for junction routing; shallow for personal/tool state unless explicitly asked. |
 | `D:/` | Primary workspace for agent infrastructure, knowledge base, research, projects, portfolios, games, healthcare, coursework, media, and caches. | Detailed for active roots; bucket summaries for archives/system/cache/media. |
 | `G:/` | Google Drive-style cloud drive rooted at `G:/我的云端硬盘`. | Shallow. Treat as synced/cloud material; inspect only when explicitly relevant. |
+
+## Latest Workstation Dry Run
+
+EXTRACTED: On 2026-06-01, `workstation-maintenance` generated a local dry-run inventory under ignored `.wiki-tmp/workstation-maintenance/`. It recorded 3,026 classified entries and 669 low-risk move-eligible file candidates. `D:/Research` entries were 0, and move-eligible reparse points, directories, and git worktree items were all 0.
+
+Public-safe batch summary:
+
+| Batch ID | Category | Items | Size | Destination root |
+| --- | --- | ---: | ---: | --- |
+| `batch-downloads` | Downloads | 598 | 723.35 MB | `D:/_Organized` |
+| `batch-mediaassets` | MediaAssets | 69 | 72.37 MB | `D:/_Organized` |
+| `batch-tempcache` | TempCache | 2 | 1.66 MB | `D:/_Organized` |
+
+These are approval candidates only. No physical file move has been executed from this dry run.
 
 ## Importance-Based Depth
 
@@ -57,6 +71,7 @@ When uncertain, start shallow. Promote a root to more detail only after live evi
 | `D:/devtools-public` | Clean public export of safe launchers, docs, templates, and safety checks. | README, safety gate scripts, Git tags. |
 | `D:/agent-resources` | Public curated skill/resource library and implicit skill-routing index. | README, `SKILL-INDEX.md`, provenance/license notes. |
 | `C:/Users/admin/.claude`, `C:/Users/admin/.codex`, `C:/Users/admin/.openhands` | Junction entrypoints into D-drive agent homes. | Verify junction target before changing agent storage. |
+| `D:/agent-resources/skills/vipin/workstation-maintenance` | Shared skill for C:/D:/G: inventory, classification, batch-approved moves, rollback, and agent-infrastructure sync. | Read `SKILL.md`; run only dry-run manifest until the user approves a batch. |
 
 For active non-research project roots with more detailed entry docs, use [[local-active-project-roots]].
 
@@ -79,6 +94,7 @@ EXTRACTED: `C:/` holds Windows, installed applications, tool remnants, temporary
 - Do not install agent tools, models, caches, or bulk data directly onto `C:/` when a D-drive location is available.
 - Before changing agent config from `C:/Users/admin`, check whether the path is a junction into `D:/devtools`.
 - Treat Windows, Program Files, Python/MinGW/system tool folders, Xbox/game install roots, and DLL/log remnants as system/tooling buckets unless the user asks for a specific fix.
+- For broad C-drive cleanup, include C-drive paths in the dry-run inventory but move only manifest-listed, low-risk, user-approved batches. Sensitive user downloads should be classified locally and summarized publicly only at bucket level.
 
 ## Maintenance Loop
 
@@ -86,13 +102,14 @@ For whole-computer upkeep:
 
 1. Run or mentally apply `scripts/computer-inventory.ps1` for a shallow map.
 2. Identify the target tier and bucket before opening files.
-3. Read existing wiki pages first: this page, [[d-drive-project-map]], [[local-project-roots]], and the relevant entity/topic page.
-4. Inspect the smallest live evidence that proves current state.
-5. Refresh existing pages before creating new ones.
-6. Mark stale or superseded content instead of deleting useful history.
-7. Run `scripts/wiki-maintenance-audit.ps1` when the task is about stale content or broad upkeep.
-8. Update `wiki/index.md`, `wiki/log.md`, and `wiki/catalog.json`.
-9. Validate, then stage only scoped files.
+3. For physical file organization, use `D:/agent-resources/skills/vipin/workstation-maintenance` to generate the dry-run manifest and move plan. Never include `D:/Research` resolved paths.
+4. Read existing wiki pages first: this page, [[d-drive-project-map]], [[local-project-roots]], and the relevant entity/topic page.
+5. Inspect the smallest live evidence that proves current state.
+6. Refresh existing pages before creating new ones.
+7. Mark stale or superseded content instead of deleting useful history.
+8. Run `scripts/wiki-maintenance-audit.ps1` when the task is about stale content or broad upkeep.
+9. Update `wiki/index.md`, `wiki/log.md`, and `wiki/catalog.json`.
+10. Validate, then stage only scoped files.
 
 ## Old-Content Refresh Triggers
 
@@ -103,6 +120,7 @@ Deletion still requires explicit user approval. Most old content should be rewri
 ## Safety Boundaries
 
 - Do not modify research experiment code, datasets, checkpoints, logs, result files, or active experiment progress during general wiki/computer maintenance.
+- Do not move or delete any `D:/Research` resolved path during workstation organization.
 - Do not publish secrets, tokens, raw private chats, credentials, browser profiles, account state, DBs, logs, or sensitive private documents.
 - Do not move external folders as part of wiki maintenance unless the user explicitly asks for file organization and the target scope is clear.
 - Use live repo instructions before editing any external project.

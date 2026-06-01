@@ -38,6 +38,7 @@ For whole-computer routing and importance-based depth across `C:/`, `D:/`, and `
 - EXTRACTED: The user explicitly clarified that adding these roots to the wiki means adding their content nature, not placing folders inside the wiki.
 - EXTRACTED: For whole-computer maintenance, classify roots by importance before deep reading: active/high-consequence roots get detail; system/cache/download/bulk roots get shallow bucket summaries.
 - EXTRACTED: For D-drive organization, classify roots by role before moving anything. Do not reorganize research experiments, datasets, checkpoints, or active experiment state as part of general cleanup.
+- EXTRACTED: Physical C:/D:/G: file organization now uses the shared `D:/agent-resources/skills/vipin/workstation-maintenance` skill for dry-run manifests, approved move batches, and rollback manifests. `D:/Research` remains a hard no-move boundary.
 - INFERRED: Use this page to answer "where is X?" and "what kind of material is this?" quickly.
 - INFERRED: Before making edits in any external root, rescan that root because folder names and internal contents may change.
 - INFERRED: For quick answers, load the relevant wiki page first; for slow ingest or direct modification, inspect the live external repository.
@@ -50,6 +51,7 @@ Use these buckets when deciding how to tidy D-drive without breaking active work
 | --- | --- | --- |
 | Agent infrastructure | `D:/devtools`, `D:/devtools-public`, `D:/agent-resources`, `D:/.claude` | Keep launchers/config/runtime homes here; public-safe exports go to separate repos. |
 | Research workbench | `D:/Research` | Route through [[research-project-workbench]]; do not move or rewrite experiments during infrastructure cleanup. |
+| Approved organization target | `D:/_Organized/Downloads`, `D:/_Organized/Coursework`, `D:/_Organized/Documents-Private`, `D:/_Organized/Media`, `D:/_Organized/Archives`, `D:/_Organized/Temp-Review`, `D:/_Organized/Tools-Review` | Planned destination buckets for future user-approved low-risk moves. Do not create or use them outside `workstation-maintenance` move batches. |
 | Public/professional portfolio | `D:/WeipingYan_portfolio`, `D:/Academic_portfolio` | Keep public and sensitive/application material separate; public pages record metadata only. |
 | Coursework/archive | `D:/Undergraduate_project_netherlands`, `D:/Undergraduate_study_netherlands`, `D:/tuelearning` | Treat as archive/course material; edit only when asked. |
 | Product/project roots | `D:/Project`, `D:/frontend`, `D:/CS project`, `D:/Healthcare`, `D:/Game_develop`, `D:/Idea` | Rescan live roots before claims; add wiki entity/topic pages only for repeatedly used projects. |

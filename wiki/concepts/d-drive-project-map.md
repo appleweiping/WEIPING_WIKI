@@ -32,6 +32,7 @@ For whole-computer routing across `C:/`, `D:/`, `G:/`, user-profile junctions, a
 | `D:/devtools-public` | Public-safe export of selected launchers, examples, docs, and safety checks. | Public repo. Run safety/history/pre-push gates before tag, commit, or push. |
 | `D:/agent-resources` | Public curated skill/resource library and implicit skill-routing index. | Public repo. Commit only provenance-cleared skills and docs. Keep unknown-license packs local-only. |
 | `D:/Research/vipin's knowledgebase` | `vipin wiki`: public operating contract and durable knowledge layer. | Maintain `wiki/`, adapters, index, log, and validation; keep the private wiki layer out of Git. |
+| `D:/agent-resources/skills/vipin/workstation-maintenance` | Shared workstation maintenance skill for inventory, classification, approved move batches, rollback, and cross-agent infrastructure sync. | Source of truth for physical C:/D:/G: organization workflow; exposed into Codex/Claude homes by local junctions. |
 
 ## Active Agent Substrate
 
@@ -40,6 +41,7 @@ For whole-computer routing across `C:/`, `D:/`, `G:/`, user-profile junctions, a
 | agentmemory | Active operational memory, signals, actions, checkpoints, and diagnostics. |
 | Agent Hub | Deprecated historical experiment; do not start, register, or depend on it for new work. |
 | Skills | Trigger by task intent. Inspect metadata, read matched `SKILL.md`, then act. |
+| Workstation maintenance | Use shared `workstation-maintenance` for physical drive organization; use `vipin-wiki` for public-safe maps and logs. |
 | Git | Source-of-truth for file changes. Stage only scoped files and preserve unrelated dirty work. |
 
 ## Public And Private Boundaries
@@ -61,6 +63,7 @@ Use [[research-project-workbench]] before opening a repeated research project. T
 | Agent infrastructure | `D:/devtools`, `D:/devtools-public`, `D:/agent-resources` | Keep D-drive-first; separate public source from private runtime. |
 | Knowledge base | `D:/Research/vipin's knowledgebase` | Public wiki plus ignored private layer. |
 | Research workbench | `D:/Research/*` project repos | Isolate from infra cleanup; modify only on explicit research task. |
+| Approved organization target | `D:/_Organized/*` | Planned target for future user-approved low-risk file moves; create/use only through `workstation-maintenance` move batches. |
 | Portfolio/course archives | `D:/Academic_portfolio`, `D:/Undergraduate_*` | Record public-safe metadata only unless explicitly asked. |
 | Product/game/health roots | `D:/Project`, `D:/Game_develop`, `D:/Healthcare` | Rescan live roots before claims or edits. |
 | Media/download/cache/system bulk | downloads, videos, tool caches, drivers, Docker, VirtualBox | Do not publish raw contents; cleanup only with explicit storage-maintenance scope. |
@@ -73,7 +76,8 @@ For D-drive tasks:
 2. Identify the target bucket.
 3. Check the target repo's `git status`.
 4. Load relevant skill metadata and read the matched `SKILL.md`.
-5. Keep changes inside the requested bucket and validate before commit/push.
+5. For physical moves, generate a `workstation-maintenance` manifest and wait for explicit batch approval.
+6. Keep changes inside the requested bucket and validate before commit/push.
 
 ## Counterpoints And Gaps
 

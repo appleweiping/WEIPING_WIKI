@@ -14,6 +14,10 @@ public/
 __pycache__/
 *.pyc
 
+# skill/ is a local junction into D:\agent-resources\skills\vipin.
+# Shared workstation-maintenance source is committed in agent-resources.
+skill/workstation-maintenance/
+
 # High-sensitivity local materials must never be published
 raw/private*/
 raw/private-images/

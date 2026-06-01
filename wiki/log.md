@@ -1153,3 +1153,29 @@ tags:
   - Recorded that `agentmemory` remains the active local runtime while mem0 is absorbed as an architecture reference, not maintained as a fork.
   - Captured the service contract: agentmemory 0.9.24, iii 0.11.2, `http://localhost:3111`, all tools, slots enabled, and MCP tool-surface health checks.
   - Marked OpenMemory, old Agent Hub mailbox/state paths, tracked runtime DB/log files, and old C-drive npm agentmemory paths as inactive surfaces.
+
+## [2026-06-01 18:45] infrastructure | workstation maintenance skill and drive-organization guardrails
+
+- Pages created or updated:
+  - [[whole-computer-project-map]]
+  - [[d-drive-project-map]]
+  - [[local-project-roots]]
+  - [[vipinknowledge-maintenance-system]]
+  - [[index]]
+  - [[log]]
+  - `AGENTS.md`
+  - `README.md`
+  - `CLAUDE.md`
+  - `.opencode/OPENCODE.md`
+  - `.codex/skills/vipin-wiki/SKILL.md`
+  - `.claude/skills/vipin-wiki/SKILL.md`
+  - `.claude/skills/README-skills-layout.md`
+- Sources used:
+  - Live preflight over `vipinknowledge`, `agent-resources`, `devtools`, `devtools-public`, agentmemory, and `D:/devtools/health-check.ps1`.
+  - New shared skill at `D:/agent-resources/skills/vipin/workstation-maintenance`.
+- Notes:
+  - Added a two-layer maintenance rule: `workstation-maintenance` owns physical C:/D:/G: inventory, move plans, approved batches, and rollback; `vipin-wiki` owns public-safe map/index/log/catalog updates.
+  - Reaffirmed `D:/Research` as a hard no-move boundary for workstation organization.
+  - Generated a dry-run workstation inventory with 3,026 classified entries and 669 low-risk move-eligible file candidates; `D:/Research` entries were 0, and move-eligible reparse points, directories, and git worktree items were all 0.
+  - Generated approval-candidate batches `batch-downloads`, `batch-mediaassets`, and `batch-tempcache`; no physical file move was executed.
+  - Actual C/D file moves remain gated on explicit user approval of generated batch IDs.
