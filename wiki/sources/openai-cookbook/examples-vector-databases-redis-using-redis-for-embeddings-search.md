@@ -362,7 +362,7 @@ def search_redis(
 
 ```python
 # For using OpenAI to generate query embedding
-openai.api_key = os.getenv("OPENAI_API_KEY", "sk-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx")
+openai.api_key = os.getenv("OPENAI_API_KEY", "sk-REDACTED")
 results = search_redis(redis_client, 'modern art in Europe', k=10)
 ```
 

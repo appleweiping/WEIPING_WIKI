@@ -30,6 +30,16 @@ Rules:
 - Any change to agent behavior must update AGENTS.md first, then propagate to adapters in the same commit.
 - The unified CLI (`python scripts/wiki.py <command>`) is the canonical automation surface for all agents regardless of runtime.
 
+## Current Agent Infrastructure Policy
+
+The active collaboration layer is `agentmemory`, not Agent Hub.
+
+- Use agentmemory for active memory recall, persistent lessons, cross-agent signals, actions, and checkpoints.
+- Treat the repo-local markdown `memory/` tree as historical/superseded unless the task explicitly targets it.
+- Promote stable public-safe knowledge into `wiki/` pages, `wiki/index.md`, and `wiki/log.md`.
+- Do not register, start, or depend on `D:\devtools\agent-hub\` or `hub_*` tools for new work. Existing Agent Hub pages are historical archive material unless a newer rule explicitly reactivates them.
+- Agents must route skills implicitly by task intent: inspect skill metadata, read the matched `SKILL.md`, and follow it before improvising on non-trivial work.
+
 ## Mission
 
 Your job is to help compile knowledge into a persistent, interlinked markdown wiki that grows over time.
@@ -212,9 +222,9 @@ Current junction map:
 
 Rules:
 - Never install agent tools, caches, models, or bulk data directly on C:. If a tool defaults to C:, create a junction to D: after installation.
-- `D:\devtools\` is the canonical home for all development infrastructure (agent-hub, node, npm, opencode, claude, codex, pixelcat).
+- `D:\devtools\` is the canonical home for all development infrastructure (agentmemory launchers, node, npm, opencode, claude, codex, pixelcat).
 - DeepSeek is API-only; no local storage needed beyond the VSCode extension.
-- All agent CLI launchers live at `D:\devtools\*.cmd` (cc.cmd, codex.cmd, opencode.cmd, deepseek.cmd, openhands.cmd).
+- All agent CLI launchers live at `D:\devtools\*.cmd` when installed. Launchers must read secrets from environment variables or ignored local files, never from tracked source.
 - If a new agent or tool is added, follow the same pattern: data on D:, junction from C:.
 - The migration script `D:\devtools\Complete-Migration.cmd` handles any remaining locked directories after restart.
 
@@ -262,73 +272,24 @@ When the user says future agents should remember a rule, do not leave it only in
 - Update `wiki/index.md` when a new public rule/workflow page is created.
 - Validate, commit, and push scoped durable-rule changes before ending the turn.
 - Prefer updating an existing rule page over creating a duplicate rule page.
-- **Auto-update documentation rule**: Whenever you change agent-hub code, skills, MCP config, startup scripts, agent roles, or any multi-agent infrastructure, you MUST update all relevant documentation files in the same turn. The user should never have to remind you to update docs. Affected files typically include: `CLAUDE.md`, `AGENTS.md`, `README.md`, `.claude/skills/README-skills-layout.md`, and `D:\devtools\agent-hub\README.md`.
+- **Auto-update documentation rule**: Whenever you change agentmemory setup, skills, MCP config, startup scripts, agent roles, or any multi-agent infrastructure, you MUST update all relevant documentation files in the same turn. The user should never have to remind you to update docs. Affected files typically include: `CLAUDE.md`, `AGENTS.md`, `README.md`, `.opencode/OPENCODE.md`, `.claude/skills/README-skills-layout.md`, and the relevant `D:\devtools` / `D:\agent-resources` README files.
 
-## Shared Agent Memory
+## Active Agent Memory
 
-All agents share a file-based memory system at `memory/` (relative to this repo root: `D:\research\Vipin's Knowledgebase\memory\`). No server dependency — just read/write markdown files.
+The active memory system is `agentmemory`, backed by the local service under `D:\devtools`.
 
-Structure:
-- `memory/INDEX.md` — auto-maintained index of all memories (read this first)
-- `memory/decisions/` — architectural decisions, permanent rules
-- `memory/facts/` — current state, project status, server mappings
-- `memory/lessons/` — bugs found, patterns learned
-- `memory/preferences/` — user preferences, agent behavior rules
-- `memory/workflows/` — reusable procedures
-- `memory/sessions/` — per-session summaries (significant sessions only)
+Use agentmemory for:
 
-Rules:
-1. Any agent may read any memory file at any time.
-2. Any agent may write new files or update existing ones.
-3. Use YAML frontmatter (title, type, created, updated, agent, tags, related) + markdown body.
-4. Use lowercase-kebab-case filenames.
-5. Prefer updating an existing memory over creating a duplicate.
-6. After writing/updating, regenerate `memory/INDEX.md`.
-7. Do not store secrets, API keys, or credentials in memory files.
-8. On session start, read `memory/INDEX.md` and any files relevant to the current task.
-9. On session end (significant sessions), write a summary to `memory/sessions/`.
+- session-start recall when past context matters
+- decisions, lessons, durable findings, and configuration facts
+- cross-agent signals and handoffs
+- task actions, checkpoints, and follow-up state when available
 
-### Memory Write Triggers (强制，不依赖判断)
+Do not store secrets, API keys, credentials, private chats, sensitive account state, or raw private documents in agentmemory.
 
-以下事件发生时，agent 必须写入 memory，不需要判断"是否重要"：
+The repo-local markdown `memory/` tree is a historical/superseded layer. Agents may read it as audit material when useful, but should not treat it as mandatory session-start truth and should not keep dual-writing every task to markdown. Stable public-safe knowledge should be crystallized into `wiki/` pages, index/log entries, and normal Git history.
 
-**科研：**
-- **ARIS 步骤完成** → 更新 `facts/<project>-status.md`
-- **用户做出决策** → 写 `decisions/<topic>.md`
-- **发现 bug/踩坑** → 写 `lessons/<slug>.md`
-- **用户表达偏好/规则** → 写 `preferences/<slug>.md`
-
-**软件开发：**
-- **PR merge / deploy / feature 完成** → 写 `sessions/YYYY-MM-DD_<feature>.md`
-- **Bug 修复完成** → 写 `lessons/<bug-slug>.md`
-- **架构/技术决策** → 写 `decisions/<topic>.md`
-- **项目初始化 / 重大重构** → 写 `facts/<project>-status.md`
-
-**通用：**
-- **项目状态变化** → 更新对应 facts 文件
-- **Session 结束（显著）** → 写 `sessions/YYYY-MM-DD_<slug>.md`
-
-分类和文件名由 agent 全自动决定，不需要问用户。详见 `memory/decisions/memory-write-policy.md`。
-
-不需要写入：简单问答、纯执行、信息已在代码/git 里。
-
-**每次任务完成后强制记录：** 每个 agent 完成一个 prompt/任务后，必须把贡献、结论、所作所为写入对应 memory 文件。不需要用户提醒。不写 = 违规。
-
-### Memory 极简 Checklist（低智商 agent 专用，照做即可）
-
-不需要判断"是否重要"。看到左列 → 立即执行右列。
-
-| 你刚做了什么 | 立即写什么 | 写到哪里 |
-|-------------|-----------|---------|
-| 跑完一个实验/脚本 | 结果数字 + 配置 + 耗时 | `memory_save(type=workflow)` |
-| 修了一个 bug/报错 | 错误信息 + 根因 + 修复方法 | `memory_lesson_save()` |
-| 做了一个选择(A not B) | 选了什么 + 为什么 | markdown `decisions/<topic>.md` |
-| 用户说了偏好/规则 | 规则原文 + 适用范围 | markdown `preferences/<slug>.md` |
-| 改了配置/参数 | 改了什么 + 旧值→新值 | `memory_save(type=fact)` |
-| 遇到报错但还没修 | 错误全文 + 当前状态 | `memory_save(type=bug)` |
-| Session 结束 | 做了什么 + 结论 + 下一步 | markdown `sessions/YYYY-MM-DD_<slug>.md` |
-
-**口诀：做完事 → 写 memory → 再汇报。不是"做完所有事再写"，是每一步都写。**
+If a specific old markdown memory file is still useful, summarize or supersede it in the wiki rather than blindly copying it forward.
 
 ### Git & 备份规则（所有 agent 必须遵守）
 
@@ -360,11 +321,11 @@ Rules:
 1. 项目内已安装的 skills（`.claude/skills/`、`.codex/skills/`）
 2. `D:\agent-resources\skills\` — obra-superpowers (debugging, TDD, parallel-agents)、anthropics (claude-api, mcp-builder)、context-engineering-kit
 3. `D:\agent-resources\slash-commands\` — create-pr, fix-github-issue, optimize, commit
-4. `memory/workflows/agent-resources-guide.md` — 完整索引
+4. `D:\agent-resources\SKILL-INDEX.md` — 完整索引
 
 简单任务（单文件修改、快速问答、格式化）不需要用 skill，直接做。
 
-**如果没有现成 skill：** 先问用户是否需要寻找，或者自动在 GitHub 上搜索热门、高质量、相关的 skill/workflow，下载到 `D:\agent-resources\` 对应目录，然后使用。不要在没有方法论的情况下硬做复杂任务。
+**如果没有现成 skill：** 对复杂或陌生任务，先查 `D:\agent-resources\`，必要时再搜索高质量公开 skill/workflow，下载到 `D:\agent-resources\` 对应目录并记录来源/许可证后使用。不要在没有方法论的情况下硬做复杂任务。
 
 ## Task Complexity & Collaboration Rules
 
@@ -376,7 +337,7 @@ Rules:
 4. 单 agent 做完需要超过 30 分钟吗？
 5. 有明确的 spec 可以分发给其他 agent 吗？
 
-**≥3 个 YES** → 多 agent 协作（通过 Agent Hub 分发）
+**≥3 个 YES** → 多 agent 协作（通过 agentmemory signals/actions 和明确上下文包协调）
 **≤2 个 YES** → 单 agent 做
 
 ARIS 科研流程强制多 agent（不管复杂度）。
@@ -614,9 +575,9 @@ For coding work, use the local Claude Code partners as a strict threshold-based 
 | Haiku Speedster | `claude-haiku-4-5-20251001` via `D:\devtools\cc.cmd` | lint, formatting, quick classification, pre-screening, high-frequency small checks | no | no |
 | OpenCode | `claude-opus-4-7` via OpenCode CLI | CC-family fusion: full read/write, sub-agent orchestration, independent entry point | yes | yes |
 
-### Agent Hub Collaboration Model
+### Agentmemory Collaboration Model
 
-For complex tasks, use the Agent Hub MCP server (`D:\devtools\agent-hub\`) to enable richer collaboration. The hub provides shared state, async messaging, and task routing across all agents.
+For complex tasks, use agentmemory signals/actions and explicit context packs to enable collaboration. The old Agent Hub MCP server (`D:\devtools\agent-hub\`) is retired and must not be used for new work.
 
 **Role assignments by task type:**
 
@@ -634,49 +595,32 @@ For complex tasks, use the Agent Hub MCP server (`D:\devtools\agent-hub\`) to en
 | Quality gate (auto-review pipeline) | — | — | Sonnet | Haiku (first pass) | — |
 | Long-running multi-hour session | OpenCode | — | Sonnet | — | — |
 
-**Collaboration patterns via Agent Hub:**
+**Collaboration patterns via agentmemory:**
 
-- For complex coding: Codex or OpenCode decomposes task → sends architecture question to Opus via `hub_send_message` → Opus responds with design → Codex/OpenCode executes → Sonnet verifies
-- For bulk work: Codex, OpenCode, or Opus sends batch prompts to DeepSeek via `deepseek_chat` → integrates results
-- For shared context: any agent writes current task state to `hub_set_context` → others read it without re-serializing full context
-- For routing decisions: any agent calls `hub_route_task` to get a recommendation on who should handle a subtask
-- For OpenCode standalone: OpenCode uses its own sub-agents (explore/general) for parallel work when Agent Hub is unavailable
+- For complex coding: Codex or OpenCode decomposes task → sends bounded context to Opus/Sonnet/DeepSeek through the available partner route → records handoffs and outcomes in agentmemory signals → integrates and verifies.
+- For bulk work: Codex or OpenCode gathers a public-safe snapshot, asks DeepSeek Pro when useful, and saves only the distilled conclusion or task state.
+- For shared state: agents use agentmemory signals, actions, checkpoints, and saved facts; git state remains the source of truth for changed files.
+- For OpenCode standalone: OpenCode uses its own sub-agents for parallel exploration and reports coordination state through git/log/agentmemory where available.
 
 **When Opus, Codex, and OpenCode work as equals (complex coding):**
 
 - Opus handles: architecture decisions, cross-module design, long-context analysis, security review
 - Codex handles: task decomposition, file-level execution, test running, commit/push, parallel subagents
 - OpenCode handles: long-running sessions, combined reasoning + execution, standalone operation when CC family is unavailable, context-compacted multi-hour tasks
-- Communication: via Agent Hub messages and shared context when daemon is running; via git state and wiki/log.md when daemon is not running
+- Communication: via agentmemory signals/actions when available; via git state and `wiki/log.md` for durable public activity records.
 - Either can initiate work; the user decides who leads based on the task shape and which interface they opened
 
 **Daily startup requirement:**
 
-The Agent Hub daemon must be running for real-time collaboration. Location: `D:\devtools\agent-hub\start-daemon.cmd` (HTTP on port 9800). Without the daemon, agents can still use MCP tools for async messaging, but urgent auto-dispatch will not work.
+Prefer an active agentmemory service on `http://localhost:3111`. Run diagnostics before relying on memory state for critical coordination. There is no Agent Hub daemon startup requirement.
 
 **Advanced collaboration features:**
 
-- **Agent Teams**: Claude Code has `CLAUDE_CODE_EXPERIMENTAL_AGENT_TEAMS=true` enabled. Opus can spawn multiple teammates for parallel work on different files/modules. Use for tasks with 3+ independent subtasks.
-- **Warm Context**: The daemon auto-scans project state every 5 minutes and writes to shared context (`project:vipin-wiki:branch`, `project:vipin-wiki:dirty_files`). Agents should call `hub_get_context` on startup instead of rescanning the repo.
-- **Spec-Driven Dispatch**: For complex multi-file tasks, use `hub_dispatch_spec` to write a spec with task assignments, then all agents receive their portion simultaneously. Each task specifies: title, description, assigned agent, files, and dependencies.
-- **Parallel workflow**: Codex decomposes → writes spec → calls `hub_dispatch_spec` → daemon auto-dispatches to Opus/Sonnet/DeepSeek → each agent works independently → results flow back via messages → Codex integrates.
-- **Auto-retry with fallback**: If Opus fails, daemon automatically retries with Sonnet; if Sonnet also fails, falls back to DeepSeek. Prioritizes model strengths: Opus → Sonnet → DeepSeek.
-- **Pipeline with gates**: Use `hub_pipeline` for sequential multi-step workflows. Set `require_confirmation_at` for steps that need human approval before proceeding. Codex will receive an urgent message when confirmation is needed.
-- **Metrics**: Call `hub_metrics` to see per-agent performance (dispatched/completed/failed/retried counts). Use this to identify which agents are reliable for which task types.
-
-**Pipeline example (Codex should use this pattern for complex tasks):**
-
-```
-hub_pipeline({
-  steps: [
-    { title: "Design architecture", agent: "claude", prompt: "Design the auth module..." },
-    { title: "Implement core", agent: "codex", prompt: "Implement based on design..." },
-    { title: "Write tests", agent: "sonnet", prompt: "Write tests for..." },
-    { title: "Security review", agent: "claude", prompt: "Review for vulnerabilities..." }
-  ],
-  require_confirmation_at: [1, 3]  // Human confirms before implementation and after security review
-})
-```
+- **Agentmemory diagnostics**: verify memory/signals/actions health before relying on cross-agent state.
+- **Signals and actions**: use typed messages and action/checkpoint records instead of ad hoc markdown queues.
+- **Explicit context packs**: every partner handoff must include role, scope, constraints, evidence, and desired output format.
+- **Parallel workflow**: Codex decomposes → assigns bounded scopes → partners respond through the available route → Codex verifies and integrates.
+- **Human gates**: for risky steps, ask the user directly or stop at a plan; do not hide confirmation inside automation.
 
 Forced thresholds:
 
@@ -717,9 +661,9 @@ OpenCode is a CC-family fusion agent running `claude-opus-4-7` through the OpenC
 | Scenario | OpenCode's Role |
 | --- | --- |
 | User opens OpenCode directly | Primary coordinator and executor (equivalent to Codex role) |
-| CC family available | May delegate review to Opus/Sonnet via Agent Hub if beneficial, but is not required to |
+| CC family available | May delegate review to Opus/Sonnet if beneficial, but is not required to |
 | CC family unavailable | Fills all CC-family roles independently using its own sub-agents |
-| Codex is the primary coordinator | OpenCode acts as a peer write-capable partner; Codex and OpenCode coordinate via shared filesystem state and Agent Hub messages when the daemon is running |
+| Codex is the primary coordinator | OpenCode acts as a peer write-capable partner; Codex and OpenCode coordinate via git state, wiki/log, and agentmemory signals when available |
 
 ### Permissions
 
@@ -734,8 +678,8 @@ OpenCode is a CC-family fusion agent running `claude-opus-4-7` through the OpenC
 
 - When both OpenCode and Codex are active on the same repository, they coordinate through:
   1. Git state (branch, recent commits, dirty files)
-  2. Agent Hub shared context (`hub_set_context` / `hub_get_context`) when the daemon is running
-  3. `wiki/log.md` entries as an async activity signal
+  2. agentmemory signals/actions when available
+  3. `wiki/log.md` entries as durable public activity signals
 - OpenCode should check `git status` and recent `wiki/log.md` entries before making changes to avoid conflicts with concurrent Codex work.
 - If OpenCode detects that Codex has uncommitted changes in the same files, it should pause and ask the user before proceeding.
 
@@ -752,9 +696,9 @@ OpenCode has access to the same skill set as Claude Code (mattpocock-skills, lid
 
 ### Limitations
 
-- OpenCode does not have direct access to Agent Hub MCP tools (`hub_send_message`, `hub_invoke_sonnet`, etc.) unless an MCP server is configured for it separately.
-- OpenCode cannot invoke Haiku or Sonnet synchronously the way Claude Code can through `hub_invoke_haiku` / `hub_invoke_sonnet`.
-- For tasks that require real-time multi-agent dispatch (pipeline, spec-driven parallel work), prefer Codex + Agent Hub when available.
+- OpenCode does not depend on retired Agent Hub MCP tools (`hub_send_message`, `hub_invoke_sonnet`, etc.).
+- OpenCode cannot invoke Haiku or Sonnet synchronously unless that route is separately configured.
+- For tasks that require multi-agent dispatch, prefer explicit context packs plus agentmemory signals/actions.
 
 ## Research Ideation Policy
 
@@ -798,7 +742,7 @@ Rules:
 - After structural, script, or website changes, make scoped commits by concern when practical and push to GitHub by default.
 - After wiki automations or scheduled/local crawl workflows create or update raw manifests, source pages, analysis pages, catalog files, logs, or indexes, validate the results, stage the scoped automation outputs, commit them, and push by default.
 - After periodic README refreshes, stage the README plus any required wiki/index/log/catalog updates, commit them as scoped maintenance, and push by default.
-- **After any agent-hub, skill, or multi-agent infrastructure changes**: update all affected documentation files (`CLAUDE.md`, `AGENTS.md`, `README.md`, `.claude/skills/README-skills-layout.md`, `D:\devtools\agent-hub\README.md`) to reflect the new state. Do not leave documentation stale after infrastructure changes.
+- **After any agentmemory, skill, MCP, startup, or multi-agent infrastructure changes**: update all affected documentation files (`CLAUDE.md`, `AGENTS.md`, `README.md`, `.opencode/OPENCODE.md`, `.claude/skills/README-skills-layout.md`, relevant `D:\devtools` and `D:\agent-resources` READMEs) to reflect the new state. Do not leave documentation stale after infrastructure changes.
 - If automation leaves files marked modified but `git diff`/hash checks show no real content changes, refresh the index or normalize the false dirty state instead of creating a meaningless commit, and report that there was no substantive diff to commit.
 - Keep commits scoped to the saved wiki work and its required index/log updates.
 - Do not stage unrelated local changes unless the user explicitly asks for them.

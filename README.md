@@ -4,294 +4,99 @@
 
 # vipin wiki
 
-A source-backed knowledge system with multi-agent orchestration. Turns research, conversations, and automation into maintained, interlinked Markdown knowledge that compounds over time.
+A source-backed knowledge system for turning research, conversations, and agent work into maintained, interlinked Markdown.
 
-Built for a research workflow spanning LLM-based recommendation systems, uncertainty quantification, analog circuit design, and personal knowledge management. The system is designed to make future answers faster, safer, and better grounded by preserving reusable knowledge rather than letting it decay in chat history.
+The wiki is the public crystallization layer. Day-to-day agent memory and collaboration now live in `agentmemory`; stable facts, rules, source notes, and reusable answers are promoted back into `wiki/` when they deserve a durable public home.
 
-## Overview
-
-This repository serves four purposes:
-
-1. **Knowledge Graph** — A public Markdown wiki (`wiki/`) with entities, concepts, sources, analyses, queries, and topics, all interlinked and maintained over time.
-2. **Research Memory** — Papers, project histories, baseline comparisons, and literature maps that persist across sessions and agents.
-3. **Agent Operating Contract** — Authoritative rules (`AGENTS.md`) that govern how AI agents collaborate, write, validate, and commit within this repository.
-4. **Multi-Agent Collaboration Hub** — A 6-agent system with real-time orchestration, shared state, and automated quality gates.
-
-## Getting Started
+## Start Here
 
 | You are | First step | Then |
-|---------|-----------|------|
-| The user (Vipin) | Open Codex, Claude Code, or OpenCode | Talk naturally. Agents handle orchestration, wiki updates, and commits. |
-| A future AI agent | Read `AGENTS.md` in full | Then read `CLAUDE.md`, check `wiki/index.md`, `wiki/catalog.json`, and recent `wiki/log.md` entries. |
-| A human reader | Open `wiki/index.md` | Follow links to entities, concepts, sources, and analyses. |
-| A maintainer | Run `python scripts/wiki-catalog.py --root .` | Fix any issues, then `git push`. |
+| --- | --- | --- |
+| Vipin | Open Codex, Claude Code, or OpenCode | Talk naturally. Agents choose skills, use agentmemory, update the wiki, and make scoped commits when useful. |
+| A future agent | Read `AGENTS.md` | Check `wiki/index.md`, `wiki/catalog.json`, and recent `wiki/log.md`; use agentmemory for active recall/collaboration. |
+| A human reader | Open `wiki/index.md` | Follow entities, concepts, sources, analyses, and saved query pages. |
+| A maintainer | Run `python scripts/wiki.py health` | Rebuild catalog and lint before committing public wiki changes. |
 
-## Repository Structure
+## What This Repo Holds
 
-```
-vipin-wiki/
-├── AGENTS.md                  # Authoritative operating contract for all agents
-├── CLAUDE.md                  # Claude Code (Opus/Sonnet) entry point and role definition
-├── purpose.md                 # Research direction alignment
-├── .wiki-schema.md            # Confidence taxonomy (EXTRACTED/INFERRED/AMBIGUOUS/UNVERIFIED)
-│
-├── wiki/                      # Public maintained knowledge graph
-│   ├── index.md               # Human-readable catalog of all pages
-│   ├── log.md                 # Chronological activity log
-│   ├── catalog.json           # Machine-readable catalog (CI-validated)
-│   ├── entities/              # People, organizations, products, projects
-│   ├── concepts/              # Frameworks, workflows, methods, rules
-│   ├── sources/               # One page per ingested source
-│   ├── analyses/              # Syntheses, comparisons, memos
-│   ├── queries/               # High-value preserved Q&A
-│   ├── topics/                # High-frequency corpus hubs
-│   ├── timelines/             # Chronological views
-│   └── _templates/            # Page templates for consistency
-│
-├── wiki-private/              # Local-only private knowledge (never in public Git)
-│
-├── raw/                       # Immutable source materials and manifests
-│   ├── inbox/                 # New materials arrive here
-│   ├── lidang-public/         # Public corpus for Lidang entity
-│   └── codex-prompts-public/  # Ingested Codex prompt corpus
-│
-├── scripts/                   # Operational utilities
-│   ├── wiki-catalog.py        # Rebuild catalog.json (CI uses this)
-│   ├── wiki-lint.ps1          # Check links, leaks, orphans, contradictions
-│   ├── wiki-search.py         # Full-text search across wiki
-│   ├── wiki-status.ps1        # Repository health overview
-│   ├── wiki-context.py        # Context extraction for agent handoffs
-│   ├── graphify-extract.py    # Knowledge graph extraction (full or incremental)
-│   ├── wiki-graph.ps1         # Link graph visualization
-│   └── build-site.ps1         # Quartz site build
-│
-├── site/                      # Quartz publishing adapter
-│   ├── sync-content.mjs       # Syncs wiki/ into Quartz content/
-│   ├── quartz.config.ts       # Site configuration
-│   └── custom.scss            # Custom styling
-│
-├── .codex/skills/             # 38 installed Codex skills
-│   ├── lark-*/                # 11 Lark/Feishu integration skills
-│   ├── chrome-automation/     # Browser automation
-│   ├── content-creation-publisher/
-│   ├── agent-research-aggregator/
-│   └── ...
-│
-├── .claude/                   # Claude Code configuration
-│   ├── settings.json          # Agent Teams enabled
-│   └── skills/                # Claude Code skills
-│       ├── lidang-perspective/ # Distilled thinking framework (nuwa-skill process)
-│       ├── mattpocock-skills/  # Engineering workflow skills (tdd, grill-me, diagnose, etc.)
-│       └── README-skills-layout.md
-│
-├── .opencode/                 # OpenCode configuration (CC-family fusion agent)
-│   └── OPENCODE.md            # OpenCode-specific operating guide
-│
-├── graphify-out/              # Knowledge graph (auto-generated, incremental)
-│   ├── graph.json             # Queryable knowledge graph (nodes + edges)
-│   ├── GRAPH_REPORT.md        # Key concepts, connections, suggested questions
-│   └── cache/                 # AST and semantic extraction cache
-│
-└── .github/workflows/         # CI/CD
-    ├── deploy.yml             # Validate + build Quartz + deploy to GitHub Pages
-    └── pages-health.yml       # Daily health check on live site
-```
+| Layer | Path | Purpose |
+| --- | --- | --- |
+| Operating contract | `AGENTS.md`, `CLAUDE.md`, `.opencode/OPENCODE.md` | Rules for agent behavior, wiki edits, collaboration, skills, commits, and public/private boundaries. |
+| Public wiki | `wiki/` | Maintained knowledge graph: entities, concepts, topics, sources, analyses, queries, timelines, and logs. |
+| Private layer | `wiki-private/` | Local-only sensitive material; never indexed into the public wiki or public Git. |
+| Raw sources | `raw/` | Immutable public-safe source packages and manifests. |
+| Automation | `scripts/` | The canonical CLI is `python scripts/wiki.py <command>`. |
+| Publishing | `site/` | Quartz adapter for GitHub Pages; `wiki/` remains the source of truth. |
+| Skills | `.codex/skills/`, `.claude/skills/` | Project-local skills; broader reusable skills live in `D:\agent-resources`. |
 
-## Multi-Agent Collaboration System
+## Agentmemory-First Collaboration
 
-Six AI agents collaborate through the Agent Hub MCP server (`D:\devtools\agent-hub\`), a custom-built orchestration layer with 20 tools, a real-time daemon, and shared persistent state.
+The old custom Agent Hub is retired. Historical pages may still describe it, but active coordination should use [agentmemory](https://github.com/rohitg00/agentmemory).
 
-### Agent Roles
+Agents should use:
 
-| Agent | Model | Role | Primary Use Cases |
-|-------|-------|------|-------------------|
-| **Opus** | Claude 4.7 | Architect + primary coder | Complex multi-file refactors, architecture design, security review, long-context analysis (1M tokens), agentic multi-hour tasks |
-| **GPT-5.5** | GPT-5.5 | Coordinator + fast executor | Task decomposition, parallel subagent orchestration, short CLI tasks, math/algorithms, wiki maintenance |
-| **OpenCode** | Claude 4.7 | CC-family fusion + independent entry | Long-running sessions with context compaction, combined reasoning + execution, standalone operation when CC family unavailable, sub-agent orchestration (explore/general) |
-| **Sonnet** | Claude 4.6 | Reviewer + verifier | Code review second pass, test gap analysis, documentation generation, routine "second set of eyes" checks |
-| **Haiku** | Claude 4.5 | Speedster + pre-screener | Lint checks, formatting validation, quick classification, high-frequency small tasks, pre-screening before deeper review |
-| **DeepSeek Pro** | DeepSeek V4 | Bulk worker | Translation, summarization, classification, batch text processing, Chinese content generation, cost-sensitive tasks |
+- `memory_recall` / smart search for active memory retrieval.
+- `memory_save` for important decisions, lessons, configurations, and findings.
+- `memory_signal_send` / signal reads for cross-agent handoffs.
+- action/checkpoint tools when a task needs coordination state.
 
-### Orchestration Capabilities
+Markdown files under `memory/` are now a historical/superseded layer unless the user explicitly asks to work with them. Reusable public-safe knowledge should be crystallized into `wiki/` pages instead of requiring every agent to dual-write session files.
 
-**Real-time dispatch**: A background daemon (port 9800) polls agent mailboxes every 2 seconds. When an urgent message arrives, the daemon automatically invokes the recipient agent without human intervention.
+## Implicit Skill Routing
 
-**Auto-retry cascade**: If the primary agent fails a task, the daemon automatically retries with the next agent in the chain: Opus → Sonnet → DeepSeek. This ensures tasks complete even when individual agents are unavailable.
+Agents should not wait for the user to name a skill. For non-trivial work, classify the task intent, inspect available skill metadata, read the matched `SKILL.md`, and follow that workflow before acting.
 
-**Quality gate**: A multi-layer automated code review pipeline. Haiku performs fast lint (~2 seconds), then Sonnet performs deeper correctness/security review (~10 seconds). Code must pass all checks before delivery.
+Primary skill roots:
 
-**Pipeline with human gates**: Sequential multi-step workflows where critical steps pause for human confirmation. Non-critical steps execute automatically. The user receives an urgent notification when confirmation is needed.
+| Root | Use |
+| --- | --- |
+| `D:\agent-resources\SKILL-INDEX.md` | Broad curated skill index and routing map. |
+| `D:\agent-resources\skills\` | Shared reusable skill library. |
+| `.codex/skills/` | Codex project-local skills, including ARIS research audit workflows. |
+| `.claude/skills/` | Claude Code / OpenCode-visible project skills. |
 
-**Spec-driven parallel dispatch**: For complex tasks, one agent writes a specification that defines subtasks with assigned agents, file boundaries, and dependencies. All agents receive their portion simultaneously and work in parallel.
+Research-audit work remains strict: use the appropriate ARIS skill and preserve evidence labels, baseline boundaries, and experiment integrity.
 
-**Warm context**: The daemon scans project state every 5 minutes (branch, dirty files, recent commits, active files) and writes it to shared state. Any agent can read current project status instantly without rescanning the repository.
-
-**Performance metrics**: Every dispatch, completion, failure, and retry is logged to `D:\devtools\agent-hub\state\metrics.json`. Agents can query `hub_metrics` to see per-agent success rates and identify reliability patterns.
-
-### Infrastructure
-
-All infrastructure starts automatically on Windows boot (via `shell:startup`):
-- **PixelCat** (`D:\devtools\pixelcat-app.exe`) — Local API proxy on port 8990, holds Anthropic API key
-- **Agent Hub Daemon** (`D:\devtools\agent-hub\daemon.mjs`) — HTTP server on port 9800, handles dispatch/retry/pipeline/warm-context
-
-The user only needs to open one chat window (Codex, Claude Code, or OpenCode). Everything else is automatic.
-
-Health check for the Claude Code partner path:
+## Common Commands
 
 ```powershell
-.\scripts\Test-LocalCcPartner.ps1
+python scripts/wiki.py status
+python scripts/wiki.py health
+python scripts/wiki.py catalog
+python scripts/wiki.py lint
+python scripts/wiki.py search "agentmemory"
 ```
 
-`upstream_credentials_disabled` means PixelCat is running but ccmax/PixelCat has disabled every upstream credential currently available. Fix the PixelCat panel's account/network state, try TUN, a PixelCat outbound proxy, or another IP/exit node, then rerun the check before invoking Opus, Sonnet, or Haiku. Keep Claude Code pointed at PixelCat's local API on `127.0.0.1:8990`; proxy ports such as `7897` are outbound exits only.
-
-When the CC family is unavailable, keep the collaboration shape by assigning the Opus/Sonnet/Haiku slots to Codex parallel selves / `分身` or to OpenCode (when the user is in the OpenCode interface) by default, and note the missing CC review when it materially increases risk.
-
-### 20 MCP Tools
-
-| Category | Tools |
-|----------|-------|
-| Messaging | `hub_send_message`, `hub_read_messages`, `hub_mark_read`, `hub_notify` |
-| Shared State | `hub_set_context`, `hub_get_context`, `hub_list_context`, `hub_agent_status` |
-| Collaboration | `hub_create_thread`, `hub_thread_history`, `hub_dispatch_spec` |
-| Routing | `hub_route_task` |
-| Pipeline | `hub_pipeline`, `hub_pipeline_status` |
-| Metrics | `hub_metrics` |
-| Direct Invocation | `hub_invoke_sonnet`, `hub_invoke_haiku`, `hub_invoke_gpt55` |
-| Quality | `hub_quality_gate` |
-| External | `deepseek_chat` |
+Compatibility wrappers still exist for older workflows, but `scripts/wiki.py` is the canonical surface.
 
 ## Knowledge Workflows
 
-| Workflow | When to use | What it produces |
-|----------|-------------|-----------------|
-| **Query** | User asks a substantive question | Grounded answer from maintained context, plus a durable wiki page when the answer is reusable |
-| **Ingest** | A source should become maintained knowledge | Source page plus linked entity, concept, topic, or analysis updates |
-| **Batch ingest** | A repo set, paper set, person corpus, or folder needs structure | Collection note, manifests, dedup rules, and topic maps |
-| **Crystallize** | A chat produced something worth reusing | Query, concept, analysis, comparison, topic, or workflow page |
-| **Maintain** | Wiki has drift, duplication, stale claims, or weak links | Non-destructive cleanup, merge/rewrite, and a log entry |
-| **Automation** | A scheduled/local workflow changes wiki artifacts | Validated scoped commit and push of real changes |
-| **Site publish** | Public wiki needs deploying | Quartz build from `wiki/` through `site/` to GitHub Pages |
+| Workflow | When | Output |
+| --- | --- | --- |
+| Answer | User asks a substantive question | Grounded answer from maintained pages and active memory when relevant. |
+| Crystallize | A conversation produced reusable knowledge | Query, concept, analysis, source, or topic page plus log/catalog updates. |
+| Ingest | A source should become durable knowledge | Source page plus linked entities, concepts, or topics. |
+| Maintain | Pages drift, duplicate, or go stale | Non-destructive cleanup, supersession notes, and validation. |
+| Publish | Public wiki changes | Catalog/lint checks, scoped commit, and GitHub push. |
 
-Cron automations are high-intelligence by default: use `gpt-5.5` with `high` reasoning. Do not downgrade scheduled work to low or medium reasoning.
+## Quality Rules
 
-## Commands
+- Use the `.wiki-schema.md` confidence taxonomy: `EXTRACTED`, `INFERRED`, `AMBIGUOUS`, `UNVERIFIED`.
+- Preserve public/private boundaries. Public pages must not expose secrets, tokens, private chats, private docs, or sensitive personal data.
+- Keep research project claims inside their evidence gates. Do not change experiment progress, datasets, checkpoints, or server state from this repo.
+- Stage only scoped files. Existing unrelated dirty work belongs to its owner.
+- Infrastructure changes must update the relevant operating docs in the same commit.
 
-### PowerShell (primary on Windows)
+## Related Repositories
 
-```powershell
-.\scripts\wiki-catalog.ps1          # Rebuild catalog.json
-.\scripts\wiki-lint.ps1             # Check links, leaks, orphans, contradictions
-.\scripts\wiki-search.ps1 "query"   # Full-text search across wiki
-.\scripts\wiki-status.ps1           # Repository health overview
-.\scripts\wiki-context.ps1 l0       # Extract context for agent handoffs
-.\scripts\wiki-graph.ps1            # Link graph visualization
-.\scripts\build-site.ps1            # Build Quartz site locally
-.\scripts\Test-LocalCcPartner.ps1    # Check PixelCat + Claude Code partner availability
-```
+| Repo | Purpose |
+| --- | --- |
+| [agent-resources](https://github.com/appleweiping/agent-resources) | Public curated skills, workflows, references, and implicit skill-routing guidance. |
+| [devtools-public](https://github.com/appleweiping/devtools-public) | Clean public export of D-drive-first local agent infrastructure. |
+| [agentmemory](https://github.com/rohitg00/agentmemory) | Upstream persistent memory and MCP coordination system. |
 
-### Python/Bash (cross-platform, used in CI)
+## For Agents
 
-```bash
-python scripts/wiki-catalog.py --root .       # Rebuild catalog (CI gate)
-python scripts/wiki-search.py "query" --root . # Full-text search
-python scripts/wiki-context.py l0 --root .     # Context extraction
-bash scripts/wiki-status.sh                    # Repository health
-bash scripts/build-site.sh                     # Quartz build
-python scripts/graphify-extract.py             # Full knowledge graph extraction
-python scripts/graphify-extract.py --update    # Incremental graph update
-```
+Read `AGENTS.md` first. It defines the mission, source hierarchy, collaboration tone, agentmemory policy, implicit skill routing, cross-project boundaries, validation gates, and commit discipline.
 
-## Knowledge Graph (Graphify)
-
-The repository includes a queryable knowledge graph built by [graphify](https://github.com/safishamsi/graphify). It indexes all code, docs, papers, and images into a structured graph with entity extraction, relationship mapping, and confidence scoring.
-
-### Usage
-
-```bash
-# Full extraction (first run, ~10 min for this corpus)
-python scripts/graphify-extract.py
-
-# Incremental update (only changed files)
-python scripts/graphify-extract.py --update
-
-# Query the graph
-python -m graphify query "How does the agent hub dispatch tasks?"
-python -m graphify path "AgentHub" "DeepSeek"
-python -m graphify explain "ARIS"
-```
-
-### Auto-update
-
-A post-commit hook (`.git/hooks/post-commit`) runs incremental extraction after each commit when `graphify-out/graph.json` exists. Only files with supported extensions are re-extracted.
-
-### Output
-
-| File | Purpose |
-|------|---------|
-| `graphify-out/graph.json` | Full graph (nodes, edges, communities) — queryable by agents |
-| `graphify-out/GRAPH_REPORT.md` | Key concepts, god nodes, surprising connections |
-| `graphify-out/cache/` | AST and semantic extraction cache (speeds up incremental runs) |
-
-### Requirements
-
-- Python 3.10+ with `graphifyy` package installed (`pip install graphifyy`)
-- `DEEPSEEK_API_KEY` environment variable set (used for semantic extraction)
-
-## Quality Discipline
-
-### Confidence Taxonomy
-
-All substantive claims in wiki pages use the confidence taxonomy from `.wiki-schema.md`:
-- **EXTRACTED** — directly stated in the source
-- **INFERRED** — logically derived from source material
-- **AMBIGUOUS** — multiple interpretations possible
-- **UNVERIFIED** — plausible but not confirmed
-
-### Public/Private Boundary
-
-Public pages (`wiki/`) may include: neutral metadata, public URLs, source summaries, stable IDs, hashes, workflow notes, and non-sensitive project memory.
-
-Public pages must never include: secrets, tokens, private document contents, sensitive personal identifiers, private chats, or high-sensitivity materials. The `wiki-private/` layer exists for sensitive content and is excluded from Git, site builds, and public indexes.
-
-### Commit Discipline
-
-- Stage only files that belong to the current task
-- Catalog must be fresh before push (CI validates this)
-- No append-only accumulation — merge, rewrite, or propose deletion when content becomes stale
-- No empty commits for false dirty states
-- Infrastructure changes must update all documentation files in the same commit
-
-## CI/CD
-
-| Workflow | Trigger | Steps |
-|----------|---------|-------|
-| **Deploy Quartz site** | Push to `wiki/**` or `site/**` on main | Validate catalog → lint gates → checkout Quartz → build → verify artifact → check public/private boundary → deploy to GitHub Pages → verify live site |
-| **Pages health check** | Daily at 04:17 UTC + manual dispatch | Verify live site serves Quartz wiki home (not README or raw Markdown) |
-
-Published site: [appleweiping.github.io/vipin-wiki](https://appleweiping.github.io/vipin-wiki/)
-
-## Research Directions
-
-- Large language models and their application to recommendation systems
-- Uncertainty quantification in LLM-based recommendation
-- Analog circuit design with AI (AI4EDA)
-- Paper digestion, literature mapping, and synthesis
-- Personal knowledge management and agent workflow optimization
-
-## For AI Agents
-
-Read `AGENTS.md` first. It is the single authoritative operating contract and defines:
-
-- Mission, operating priority, and two-lane workflow (answer first, crystallize second)
-- Collaboration tone and partner naming conventions
-- Context packing rules for agent handoffs
-- Wiki structure, page conventions, and file naming
-- Source handling, sensitivity rules, and ingest workflow
-- Multi-agent collaboration model with Agent Hub (roles, thresholds, dispatch patterns)
-- Local CC partner policy (PixelCat preflight, prompt contract, escalation rules)
-- Pipeline examples and quality gate patterns
-- Commit policy, lint workflow, and validation gates
-- Research ideation policy
-- Durable rule memory and auto-update documentation rule
-
-**Mandatory rule**: Any change to agent-hub code, skills, MCP config, startup scripts, or agent roles must update all affected documentation files (`CLAUDE.md`, `AGENTS.md`, `README.md`, `.claude/skills/README-skills-layout.md`, `D:\devtools\agent-hub\README.md`) in the same turn. The user should never need to remind agents to keep docs current.
+Agent Hub references in older pages are historical unless explicitly marked active by a newer rule. The current operating model is agentmemory-first.

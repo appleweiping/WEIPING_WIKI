@@ -267,7 +267,7 @@ Now that we've imported the vectors into Typesense, we can do a nearest neighbor
 def query_typesense(query, field='title', top_k=20):
 
     # Creates embedding vector from user query
-    openai.api_key = os.getenv("OPENAI_API_KEY", "sk-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx")
+    openai.api_key = os.getenv("OPENAI_API_KEY", "sk-REDACTED")
     embedded_query = openai.Embedding.create(
         input=query,
         model=EMBEDDING_MODEL,

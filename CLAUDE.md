@@ -2,163 +2,68 @@
 
 Read `AGENTS.md` first. It is the authoritative operating guide for this repository.
 
-This repository is `vipin wiki`, a maintained personal knowledge base. Preserve public/private boundaries, update the wiki deliberately, and do not treat chat-only conclusions as durable memory when the user asks future agents to remember a rule.
+This repository is `vipin wiki`, a maintained personal knowledge base. Preserve public/private boundaries, update wiki pages deliberately, and treat active agent memory as `agentmemory` state unless the user explicitly asks for historical markdown `memory/` files.
 
-When Claude Code is invoked by Codex as Opus or Sonnet, act as a read-only partner: inspect, reason, review, and report findings, but do not edit files, stage, commit, push, run destructive commands, or handle credentials/live accounts.
+When Claude Code is invoked by Codex as Opus or Sonnet, act as a read-only partner: inspect, reason, review, and report findings. Do not edit files, stage, commit, push, run destructive commands, or handle credentials/live accounts.
 
 When the user starts Claude Code directly and explicitly grants write scope, follow that user request while still obeying `AGENTS.md`, `.wiki-schema.md`, and `purpose.md`.
 
-## Multi-Agent System Overview
+## Active Memory And Coordination
 
-This project runs a 6-agent collaboration system. You (Opus) are the strongest coder in the team.
+Use `agentmemory` automatically and proactively:
 
-| Agent | Model | Role | Strengths |
-|-------|-------|------|-----------|
-| Opus (you) | Claude 4.7 | Architect + primary coder | Long-context 1M, multi-file refactor, architecture, security, agentic coherence |
-| Codex | GPT-5.5 | Coordinator + fast executor | Speed, task decomposition, parallel subagents, CLI, wiki maintenance |
-| OpenCode | Claude 4.7 | CC-family fusion + independent entry | Combined reasoning + execution, long-running sessions, standalone when CC unavailable, sub-agent orchestration |
-| Sonnet | Claude 4.6 | Reviewer + verifier | Cost-effective review, test suggestions, documentation, second opinion |
-| Haiku | Claude 4.5 | Speedster + pre-screener | Fastest CC model, lint, formatting, quick classification, high-frequency small tasks |
-| DeepSeek Pro | DeepSeek V4 | Cheap labor | Bulk text, translation, summarization, Chinese content (1/50 cost of Opus) |
+1. On session start or when past context matters, search or recall relevant memories.
+2. For collaboration, use agentmemory signals rather than Agent Hub queues.
+3. After important work, save decisions, findings, lessons, configurations, and next steps with agentmemory.
+4. Do not store secrets, API keys, private chats, credentials, or sensitive account state in memory.
 
-## Agent Hub (MCP Server + Daemon)
+Markdown `memory/` files in this repo are historical/superseded unless the task explicitly targets them. Stable public-safe knowledge should be crystallized into `wiki/`.
 
-Location: `D:\devtools\agent-hub\`
+## Implicit Skill Use
 
-## Shared Memory
+Do not wait for the user to name a skill. Before non-trivial work:
 
-All agents share file-based memory at `memory/` in this repo. Read `memory/INDEX.md` on session start for context. Write session summaries on significant sessions. No MCP server needed — just read/write files. See `memory/README.md` for format spec.
+1. Classify the task intent.
+2. Check project skills and `D:\agent-resources\SKILL-INDEX.md`.
+3. Read the matched `SKILL.md`.
+4. Follow that skill's workflow before improvising.
 
-## Agent Hub Details
+Research tasks must use the matching ARIS skill when one exists. README, architecture, skill, audit, browser, frontend, document, and infrastructure tasks should route to the relevant installed skills by description.
 
-**Two layers:**
-- `agent-hub.mjs` — MCP server (each agent spawns its own instance, shares disk state)
-- `daemon.mjs` — HTTP daemon on port 9800 (auto-dispatches urgent messages, auto-retries on failure)
+## Multi-Agent Roles
 
-**19 MCP Tools available to you:**
+| Agent | Role | Notes |
+| --- | --- | --- |
+| Codex | Coordinator, fast executor, integrator, commit/push owner | Uses agentmemory and git state to coordinate. |
+| Opus | Deep reasoning, architecture, high-risk review | Read-only when invoked by Codex. |
+| Sonnet | Quick second look, test gaps, docs review | Read-only when invoked by Codex. |
+| Haiku | Fast classification/lint-style checks | Use only for lightweight checks. |
+| OpenCode | Independent CC-family entry point | May write when the user starts OpenCode directly. |
+| DeepSeek Pro / `鲸鱼` | Bulk text, translation, summarization, low-cost drafts | Advisory unless explicitly scoped otherwise. |
 
-| Tool | Purpose |
-|------|---------|
-| `hub_send_message` | Send message to another agent's mailbox |
-| `hub_read_messages` | Read your mailbox (or another agent's) |
-| `hub_mark_read` | Mark messages as read |
-| `hub_notify` | Send urgent message via daemon (triggers auto-dispatch to recipient) |
-| `hub_set_context` | Write shared key-value state |
-| `hub_get_context` | Read shared state |
-| `hub_list_context` | List all shared state keys |
-| `hub_create_thread` | Start a collaboration thread |
-| `hub_thread_history` | Get full thread conversation |
-| `hub_dispatch_spec` | Dispatch multi-task spec to multiple agents in parallel |
-| `hub_route_task` | Get recommendation on which agent should handle a task |
-| `hub_agent_status` | Report/query agent availability |
-| `hub_metrics` | View per-agent performance stats |
-| `hub_pipeline` | Run sequential pipeline with human confirmation gates |
-| `hub_pipeline_status` | Check pipeline progress |
-| `hub_invoke_sonnet` | Call Sonnet synchronously (review, docs, second opinion) |
-| `hub_invoke_haiku` | Call Haiku synchronously (lint, formatting, quick checks, pre-screening) |
-| `hub_quality_gate` | Run multi-agent quality checks on code (Haiku lint → Sonnet review) |
-| `deepseek_chat` | Call DeepSeek API directly |
+Agent Hub is retired. Do not call `hub_*` tools or expect `D:\devtools\agent-hub` to be active. Use agentmemory signals/actions and git state for coordination.
 
-**Shared state directory:** `D:\devtools\agent-hub\state\`
-**Your identity:** `claude`
-**Codex identity:** `codex`
-**OpenCode identity:** `opencode`
+## CC Partner Preflight
 
-## Key Behaviors
-
-**Auto-retry cascade:** If you (Opus) fail a task dispatched by daemon, it auto-retries with Sonnet, then DeepSeek. This is handled by the daemon, not by you.
-
-**Warm context:** Daemon auto-scans project state every 5 minutes and writes to shared context (`project:vipin-wiki:branch`, `project:vipin-wiki:dirty_files`). Call `hub_get_context` to read current project state without rescanning.
-
-**Agent Teams:** `CLAUDE_CODE_EXPERIMENTAL_AGENT_TEAMS=true` is enabled. You can spawn multiple teammates for parallel work on different files/modules.
-
-**Pipeline gates:** When Codex runs a pipeline with `require_confirmation_at`, the pipeline pauses at those steps and sends an urgent message to Codex asking for human confirmation. You don't need to handle this — it's between Codex and the user.
-
-## Daily Startup (already automated)
-
-Both are in Windows startup folder (`shell:startup`), no manual action needed:
-1. PixelCat (`D:\devtools\pixelcat-app.exe`) — API proxy on port 8990, starts minimized
-2. Agent Hub Daemon (`D:\devtools\agent-hub\start-daemon.cmd`) — collaboration daemon on port 9800, starts minimized
-
-The user only opens Codex. Everything else is automatic.
-
-Before assuming Opus/Sonnet/Haiku are usable, run the vipin wiki health check when available:
+Before relying on Opus, Sonnet, or Haiku through `D:\devtools\cc.cmd`, run the local partner health check when available:
 
 ```powershell
 .\scripts\Test-LocalCcPartner.ps1
 ```
 
-If it returns `upstream_credentials_disabled` or PixelCat HTTP 502 with `0/1` credentials, the CC family is blocked by PixelCat's upstream credential/network state. Fix PixelCat first (credential/account state, TUN, PixelCat outbound proxy, or another IP/exit node), then retry; do not treat it as a prompt or Claude Code installation failure. Keep Claude Code pointed at PixelCat's local API on `127.0.0.1:8990`; local proxy ports such as `7897` are outbound exits only.
-
-When the CC family is unavailable, Codex should preserve the collaboration structure by assigning the Opus/Sonnet/Haiku slots to Codex parallel selves / `分身` by default (or to OpenCode when the user is in the OpenCode interface), with the limitation stated when missing CC review materially increases risk.
-
-## Automation Model Policy
-
-Cron automations must run on `gpt-5.5` with `high` reasoning. Do not create or update scheduled automations with low or medium reasoning. Heartbeat automations may not expose model/reasoning fields.
-
-## For Complex Coding Tasks
-
-Opus, Codex, and OpenCode work as equals:
-- **You (Opus)**: architecture decisions, cross-module design, long-context analysis, security review, primary implementation
-- **Codex**: task decomposition, file-level execution, test running, commit/push, parallel subagents
-- **OpenCode**: long-running sessions, combined reasoning + execution, standalone operation when CC family is unavailable, context-compacted multi-hour tasks
-
-**How to invoke other agents from Claude Code (this terminal):**
-
-| Agent | How to call | When |
-|-------|-------------|------|
-| Haiku | `hub_invoke_haiku` (synchronous, ~2s) | Lint, formatting, quick classification, pre-screening |
-| Sonnet | `hub_invoke_sonnet` (synchronous, ~10s) | Code review, test suggestions, docs, second opinion |
-| DeepSeek | `deepseek_chat` (synchronous, ~5s) | Translation, summarization, bulk text, cheap drafts |
-| Codex | `hub_notify(to="codex")` (async, daemon dispatches) | Task decomposition, parallel execution, wiki updates |
-| OpenCode | `hub_notify(to="opencode")` (async) or filesystem coordination | Long-running tasks, standalone execution, CC-family fusion work |
-| Quality Gate | `hub_quality_gate` (synchronous, ~15s) | Auto-review: Haiku lint → Sonnet review → PASS/FAIL |
-
-**Recommended workflow for code you write:**
-1. Write the code
-2. Call `hub_quality_gate` with the code
-3. If FAIL → fix issues and re-check
-4. If PASS → deliver to user
-
-You can also use Claude Code's native Agent Teams (spawn teammates) for parallel work within the CC family.
-
-Use `hub_send_message` to communicate with Codex. Use `hub_set_context` to share task state. Use `hub_notify` for urgent real-time dispatch.
-
-## File Locations Quick Reference
-
-| What | Where |
-|------|-------|
-| Agent Hub server | `D:\devtools\agent-hub\agent-hub.mjs` |
-| Agent Hub daemon | `D:\devtools\agent-hub\daemon.mjs` |
-| Shared state | `D:\devtools\agent-hub\state\` |
-| Metrics | `D:\devtools\agent-hub\state\metrics.json` |
-| PixelCat (API proxy) | `D:\devtools\pixelcat-app.exe` |
-| Claude Code CLI | `D:\devtools\cc.cmd` |
-| Codex config | `C:\Users\admin\.codex\config.toml` |
-| Claude MCP config | `C:\Users\admin\.claude\mcp.json` |
-| Skills (Claude) | `D:\Research\vipin's knowledgebase\.claude\skills\` |
-| Skills (Codex) | `D:\Research\vipin's knowledgebase\.codex\skills\` |
+If PixelCat reports disabled upstream credentials or returns unusable output, state the limitation and continue with Codex-owned review or another available partner when that is acceptable.
 
 ## Server Access
 
-Remote GPU server `pony-rec-gpu` is now directly accessible via SSH (key-based auth configured):
-- **SSH command**: `ssh pony-rec-gpu`
-- **Host**: `125.71.97.70`, Port `15302`, User `ajifang`
-- **GPU**: NVIDIA RTX 4090 (49GB VRAM)
-- **Server projects**: `~/projects/` (pony-rec-rescue-shadow-v6, uncertainty-llm4rec, etc.)
-- **SSH config**: `C:\Users\admin\.ssh\config` (Host `pony-rec-gpu`)
-- **Port mappings**: 8800→26150, 8801→26151, 8802→26152, 8803→26153, 8804→26154, 8805→26155
+Remote GPU server access and research experiment operations are out of scope unless the user explicitly asks. Do not change research experiment progress, datasets, checkpoints, baselines, or server state while maintaining this wiki/infrastructure layer.
 
-Agents can execute server commands directly via `ssh pony-rec-gpu "<command>"`.
+## Documentation Rule
 
-## Mandatory: Auto-Update Documentation
+When agent memory, skill routing, MCP config, startup scripts, agent roles, or multi-agent infrastructure changes, update the relevant docs in the same scoped change:
 
-Whenever you change agent-hub code, skills, MCP config, startup scripts, agent roles, or any multi-agent infrastructure, you MUST update all relevant documentation files in the same turn:
-
-- `CLAUDE.md` (this file)
 - `AGENTS.md`
+- `CLAUDE.md`
 - `README.md`
+- `.opencode/OPENCODE.md`
 - `.claude/skills/README-skills-layout.md`
-- `D:\devtools\agent-hub\README.md`
-
-The user should never have to remind you. If you changed infrastructure, update docs. No exceptions.
+- relevant `wiki/` pages, `wiki/index.md`, and `wiki/log.md`

@@ -3,7 +3,7 @@ title: Local CC Partner Agent Workflow
 type: concept
 status: active
 created: 2026-05-17
-updated: 2026-05-18
+updated: 2026-06-01
 tags:
   - agent-workflow
   - coding
@@ -18,7 +18,7 @@ source_pages:
 
 ## Purpose
 
-This workflow turns the local `cc` / Claude Code runtime into a strict threshold-based multi-agent coding system.
+This workflow turns the local `cc` / Claude Code runtime into a strict threshold-based partner-review system.
 
 Codex acts as the supervisor and only writer. Opus and Sonnet act as read-only partners with bounded prompts. This follows a common supervisor/handoff pattern: one coordinator owns the task state and repository mutations, while specialist partners provide scoped review, scanning, or reasoning.
 
@@ -30,7 +30,7 @@ Codex acts as the supervisor and only writer. Opus and Sonnet act as read-only p
 - EXTRACTED: PixelCat management panel executable: `D:\devtools\pixelcat-app.exe`.
 - EXTRACTED: Verified Claude Code version: `2.1.143`.
 
-OpenCode is installed and recorded in [[2026-05-17-opencode-cc-pixelcat-setup]]. As of 2026-05-18, OpenCode is a full CC-family fusion partner in the multi-agent collaboration system — see the `## OpenCode Partner Policy` section in `AGENTS.md` for its role, permissions, and coordination model.
+OpenCode is installed and recorded in [[2026-05-17-opencode-cc-pixelcat-setup]]. As of 2026-06-01, OpenCode coordinates through git state, wiki/log entries, and agentmemory signals/actions rather than Agent Hub.
 
 ## PixelCat Preflight
 
@@ -68,11 +68,13 @@ Do not ask the user to remember how to open PixelCat unless the executable is mi
 
 | Agent | Model | Role | Writes files | Commits/pushes |
 | --- | --- | --- | --- | --- |
-| Codex Coordinator | current Codex session | Owns task framing, repo inspection, implementation, integration, validation, staging, commits, pushes, and wiki memory. | yes | yes |
+| Codex Coordinator | current Codex session | Owns task framing, repo inspection, implementation, integration, validation, staging, commits, pushes, and agentmemory/wiki crystallization. | yes | yes |
 | Opus Reviewer | `claude-opus-4-7` | Deep code review, complex reasoning, architecture critique, hard debugging, security/privacy review, high-risk design calls, high-risk final review. | no | no |
 | Sonnet Scanner | `claude-sonnet-4-6` | Quick diff scans, test suggestions, documentation reading, low-risk second-pass checks. | no | no |
 
 Codex must not treat partner output as authority. It is advisory evidence that Codex verifies against the live repository before acting.
+
+Agent Hub is retired. Partner coordination should use explicit context packs and agentmemory signals/actions where available.
 
 ## Quick Routing Reference
 

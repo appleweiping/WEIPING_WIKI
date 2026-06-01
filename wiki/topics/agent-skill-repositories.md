@@ -3,7 +3,7 @@ title: Agent Skill Repositories
 type: topic
 status: active
 created: 2026-05-15
-updated: 2026-05-17
+updated: 2026-06-01
 tags:
   - topic
   - agent-skills
@@ -36,6 +36,7 @@ This topic tracks local repositories and project-local mirrors that collect, gen
 
 | Page | Local root | Main purpose |
 | --- | --- | --- |
+| [[agent-resources]] | `D:/agent-resources` | Canonical shared skill/resource library, public index, and implicit skill-routing map for local agents. |
 | [[anbeime-skill]] | `D:/Skill/anbeime-skill` | Fork of `anbeime/skill`; skill store / skill-library crawler and local collected skill inventory. |
 | [[colleague-skill]] | `D:/Skill/colleague-skill` | Fork of `titanwings/colleague-skill`; `dot-skill` meta-skill for distilling people/context into reusable skills. |
 | [[darwin-skill]] | `D:/Skill/darwin-skill` | Fork of `alchaincyf/darwin-skill`; autonomous skill optimizer and scoring loop. |
@@ -69,6 +70,7 @@ This topic tracks local repositories and project-local mirrors that collect, gen
 - Classify this corpus as `skill`, not as generic local projects, because the durable unit is reusable agent behavior encoded in `SKILL.md` and related tooling.
 - For project-local `.codex/skills/` installs, keep a source mirror under `skill/` when practical so future agents can inspect upstream docs and reinstall without using the C drive.
 - Follow [[agent-skill-installation-workflow]] for future skill installs; do not treat untested skill files as usable.
+- Follow [[implicit-skill-routing]] so agents use installed skills from task intent, not only explicit skill names.
 
 ## Counterpoints And Gaps
 

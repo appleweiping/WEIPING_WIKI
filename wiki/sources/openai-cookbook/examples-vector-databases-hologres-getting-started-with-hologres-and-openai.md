@@ -107,7 +107,7 @@ Once you get your key, please add it to your environment variables as `OPENAI_AP
 import os
 
 # Note. alternatively you can set a temporary env variable like this:
-# os.environ["OPENAI_API_KEY"] = "sk-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
+# os.environ["OPENAI_API_KEY"] = "sk-REDACTED"
 
 if os.getenv("OPENAI_API_KEY") is not None:
     print("OPENAI_API_KEY is ready")

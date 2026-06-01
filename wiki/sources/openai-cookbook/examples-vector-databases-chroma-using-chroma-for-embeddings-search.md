@@ -186,7 +186,7 @@ from chromadb.utils.embedding_functions import OpenAIEmbeddingFunction
 # Note. if you run this notebook locally, you will need to reload your terminal and the notebook for the env variables to be live.
 
 # Note. alternatively you can set a temporary env variable like this:
-# os.environ["OPENAI_API_KEY"] = 'sk-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx'
+# os.environ["OPENAI_API_KEY"] = 'sk-REDACTED'
 
 if os.getenv("OPENAI_API_KEY") is not None:
     openai.api_key = os.getenv("OPENAI_API_KEY")

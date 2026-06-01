@@ -80,14 +80,14 @@ First we make sure the python dependencies we need are installed.
 
 We use OpenAI's API's throughout this notebook. You can get an API key from [https://beta.openai.com/account/api-keys](https://beta.openai.com/account/api-keys)
 
-You can add your API key as an environment variable by executing the command `export OPENAI_API_KEY=sk-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx` in a terminal. Note that you will need to reload the notebook if the environment variable wasn't set yet. Alternatively, you can set it in the notebook, see below.
+You can add your API key as an environment variable by executing the command `export OPENAI_API_KEY=sk-REDACTED` in a terminal. Note that you will need to reload the notebook if the environment variable wasn't set yet. Alternatively, you can set it in the notebook, see below.
 
 ```python
 import os
 from openai import OpenAI
 
 # Uncomment the following line to set the environment variable in the notebook
-# os.environ["OPENAI_API_KEY"] = 'sk-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx'
+# os.environ["OPENAI_API_KEY"] = 'sk-REDACTED'
 
 api_key = os.getenv("OPENAI_API_KEY")
 

@@ -999,3 +999,23 @@ tags:
 - Notes:
   - Added `raw/voice-notes/voice sample.zip` as a public raw source archive, preserving the original filename.
   - Recorded archive hash and MP3 member filenames for future voice-related work.
+
+## [2026-06-01 10:18] maintenance | agentmemory-first infrastructure refresh
+
+- Pages created or updated:
+  - [[agentmemory-first-agent-collaboration]]
+  - [[implicit-skill-routing]]
+  - [[agent-resources]]
+  - [[agent-hub-mcp-server]]
+  - [[agent-skill-installation-workflow]]
+  - [[agent-skill-repositories]]
+  - [[local-cc-sidecar-agent-workflow]]
+  - [[index]]
+  - [[log]]
+- Sources used:
+  - User request to retire Agent Hub, make agentmemory active, improve implicit skill use, and prepare `agent-resources` / `devtools` for public-safe open source.
+  - Current local docs and configs under `vipin-wiki`, `D:\agent-resources`, and `D:\devtools`.
+- Notes:
+  - Marked Agent Hub as deprecated historical infrastructure.
+  - Recorded agentmemory as the active collaboration/memory layer and markdown `memory/` as historical/superseded.
+  - Added durable implicit skill-routing rules so agents invoke skills by task intent rather than waiting for explicit skill names.

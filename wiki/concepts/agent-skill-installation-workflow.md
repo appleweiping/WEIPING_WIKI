@@ -3,7 +3,7 @@ title: Agent Skill Installation Workflow
 type: concept
 status: active
 created: 2026-05-17
-updated: 2026-05-17
+updated: 2026-06-01
 tags:
   - concept
   - agent-skills
@@ -20,7 +20,7 @@ source_pages:
 
 ## Rule
 
-Installing a skill means making it usable, not merely archiving its files.
+Installing a skill means making it usable and discoverable by intent, not merely archiving its files.
 
 ## Required Workflow
 
@@ -28,8 +28,8 @@ When the user asks to install a skill from GitHub or another source:
 
 1. Inspect current git status.
 2. Fetch the narrowest relevant upstream path, preferably with sparse checkout when the user provides a subdirectory URL.
-3. Preserve a source mirror under `skill/<skill-name>/` on D drive.
-4. Install usable skill files under `.codex/skills/<skill-name>/`.
+3. Preserve a source mirror under `D:\agent-resources\repos\<name>` or another documented D-drive source path when useful.
+4. Install usable skill files under `D:\agent-resources\skills\<group>\<skill-name>` and link them into supported agent homes when they should be global.
 5. If a pack contains independently triggerable sub-skills, install those sub-skills directly as well when that improves usability.
 6. Read the upstream `SKILL.md` and nearby references/scripts before summarizing.
 7. Install or download missing narrow dependencies into `.wiki-tmp/` or another D-drive project-local cache when practical.
@@ -37,11 +37,12 @@ When the user asks to install a skill from GitHub or another source:
    - Guidance-only skills: verify install paths, frontmatter, trigger intent, and enough content to be discoverable.
    - Scripted skills: run help/version commands and at least one non-destructive smoke test.
    - Browser or publishing skills: verify runtime setup, but require explicit user confirmation before account actions, submissions, or live posts.
-9. Record function, contribution, concrete usage, local paths, dependencies, smoke-test results, and limitations in wiki pages.
-10. Update `wiki/index.md`, relevant entity/topic pages, `wiki/log.md`, and `wiki/catalog.json`.
-11. Run `scripts/wiki-catalog.ps1` and `scripts/wiki-lint.ps1`.
-12. Stage only scoped source mirror, `.codex/skills` installs, and wiki updates.
-13. Commit and push.
+9. Update `D:\agent-resources\SKILL-INDEX.md` with concise `What`, `When`, and `Path` entries so future agents can trigger the skill implicitly.
+10. Record function, contribution, concrete usage, local paths, dependencies, smoke-test results, and limitations in wiki pages when public-safe and durable.
+11. Update `wiki/index.md`, relevant entity/topic pages, `wiki/log.md`, and `wiki/catalog.json` when wiki pages change.
+12. Run `python scripts/wiki.py catalog` and `python scripts/wiki.py lint`.
+13. Stage only scoped resource installs, links, docs, and wiki updates.
+14. Commit and push.
 
 ## Anti-Toyification Rule
 

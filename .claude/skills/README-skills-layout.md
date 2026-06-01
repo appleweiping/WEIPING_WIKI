@@ -1,79 +1,63 @@
 ---
 name: skills-directory-layout
 description: |
-  说明全局 .claude/skills 的 junction 链接结构，以及 D 盘上 skill 文件夹的组织方式。
-  未来 agent 在查找 skill、安装新 skill、或理解为什么有多个 skill 目录时参考此文件。
+  Explains the D-drive skill layout, shared agent-resources library, implicit skill triggering, and the retired Agent Hub boundary for future agents.
 metadata:
   type: reference
 ---
 
-# Skills 目录结构说明
+# Skills Directory Layout
 
-## 全局 Junction
+## Active Model
 
-`C:\Users\admin\.claude\skills\` 是一个 NTFS junction，指向：
+Skills are chosen by task intent. Agents should inspect skill metadata, read the matched `SKILL.md`, and follow the workflow even when the user did not name the skill.
 
-```
-D:\Research\vipin's knowledgebase\.claude\skills\
-```
+`agentmemory` is the active memory/collaboration layer. Agent Hub is retired and should not be registered as an active MCP server.
 
-C 盘不存实际文件，只有链接。所有 skill 的增删改都在 D 盘操作。
+## Skill Roots
 
-## D 盘 Skill 相关目录
+| Path | Purpose |
+| --- | --- |
+| `D:\agent-resources\SKILL-INDEX.md` | Curated routing index for shared reusable skills. |
+| `D:\agent-resources\skills\` | Canonical shared skill/resource library. |
+| `D:\Research\vipin's knowledgebase\.claude\skills\` | Claude Code / OpenCode-visible project skills. |
+| `D:\Research\vipin's knowledgebase\.codex\skills\` | Codex-visible project skills, including ARIS audit skills. |
+| `D:\devtools\claude\skills\` | D-drive Claude home skill links for globally installed agent resources. |
+| `D:\devtools\codex\home\skills\` | D-drive Codex home skill links for globally installed agent resources. |
 
-| 路径 | 用途 |
-|------|------|
-| `D:\Skill\` | 本地 skill 仓库收藏（git clone 的原始 repo） |
-| `D:\Research\vipin's knowledgebase\.claude\skills\` | Claude Code 全局加载的 skill（通过 junction） |
-| `D:\Research\vipin's knowledgebase\.codex\skills\` | Codex agent 用的 skill 目录 |
-| `D:\Research\vipin's knowledgebase\.opencode\` | OpenCode agent 配置目录 |
+`C:\Users\admin\.claude\skills\` and `C:\Users\admin\.codex` should be junctions into D-drive targets. C drive should not hold the real skill or agent-home payload.
 
-## 当前已安装的 Claude skills
+## Routing Rules
 
-- `lidang-perspective` — 立党思维框架 skill（女娲流程蒸馏）
-- `mattpocock-skills` — Matt Pocock 的工程 skill 集合（/tdd, /grill-me, /diagnose 等）
+- Research audit, paper review, experiment audit, and citation work must use the corresponding ARIS skill when present.
+- README and public-repo presentation work should use `readme-blueprint-generator`.
+- Agent/tool/memory architecture work should use an agent architecture audit skill when present.
+- Skill creation or frontmatter/trigger optimization should use `skill-creator`.
+- Browser, frontend, document, security, and debugging tasks should search `D:\agent-resources\SKILL-INDEX.md` before improvising.
 
-## 操作规则
+If a task is trivial and no workflow value is added, a skill is optional. If the task is complex, unfamiliar, safety-sensitive, or repetitive, skill lookup is mandatory.
 
-- 新增 skill → 放到 `D:\Research\vipin's knowledgebase\.claude\skills\` 下，junction 会自动让全局可见
-- 不要在 C 盘 `.claude\skills\` 下直接创建文件（它是 junction，写入会落到 D 盘，但语义上应该去 D 盘操作）
-- `D:\Skill\` 是素材库/归档，不会被 Claude Code 自动加载
-- mattpocock skills 的使用需要先在项目里跑一次 `/setup-matt-pocock-skills`
+## Installing Or Updating Skills
 
-## 为什么有四个文件夹
+1. Inspect the upstream source and license.
+2. Install the usable skill into `D:\agent-resources\skills\<group>\`.
+3. Link it into supported agent homes when it should be globally available.
+4. Update `D:\agent-resources\SKILL-INDEX.md` with a concise `What`, `When`, and `Path`.
+5. Keep generated caches, toolchains, browser profiles, and account state out of Git.
+6. Validate frontmatter and a non-destructive smoke path when possible.
 
-历史原因：
-1. `.claude/skills/` — Claude Code 的 skill 加载路径
-2. `.codex/skills/` — OpenAI Codex 的 skill 加载路径
-3. `.opencode/` — OpenCode (CC-family fusion agent) 的配置目录
-4. `D:\Skill\` — 用户自己的 git repo 收藏夹
+## Retired Agent Hub Boundary
 
-如果只用 Claude Code，关注 `.claude/skills/` 即可。
-如果用 OpenCode，它通过全局 `C:\Users\admin\.claude\skills\` junction 共享 Claude Code 的 skill 集合。
+`D:\devtools\agent-hub\` was a custom collaboration experiment. It is historical only.
 
-## Agent Hub MCP Server
-
-位置：`D:\devtools\agent-hub\`
-
-多 Agent 实时协作总线（MCP server + HTTP daemon）。
-
-- MCP server: `agent-hub.mjs`（16 tools，每个 agent spawn 自己的实例）
-- HTTP daemon: `daemon.mjs`（端口 9800，自动 dispatch + 容错重试 + pipeline 引擎 + 绩效追踪）
-- Claude Code MCP 注册：`C:\Users\admin\.claude\mcp.json`
-- Codex MCP 注册：`C:\Users\admin\.codex\config.toml` → `[mcp_servers.agent_hub]`
-- OpenCode：通过文件系统共享状态协作，不强依赖 Agent Hub daemon
-- 共享状态：`D:\devtools\agent-hub\state\`
-- 绩效数据：`D:\devtools\agent-hub\state\metrics.json`
-- 开机自启动：`shell:startup` 里有 `pixelcat.cmd` 和 `agent-hub-daemon.cmd`
-
-详细文档见 `D:\devtools\agent-hub\README.md` 和项目根目录的 `CLAUDE.md`。
+Do not add active `hub_*` tool instructions, Agent Hub daemon startup requirements, port `9800` dependencies, or `mcp_servers.agent_hub` registrations. Use agentmemory signals/actions plus git state instead.
 
 ## PixelCat / CC Health Check
 
-Before relying on Opus, Sonnet, or Haiku through Claude Code, run this from the vipin wiki root when available:
+Before relying on Opus, Sonnet, or Haiku through Claude Code, run from the vipin wiki root when available:
 
 ```powershell
 .\scripts\Test-LocalCcPartner.ps1
 ```
 
-If the status is `upstream_credentials_disabled`, PixelCat is open but its upstream credential pool is disabled. Fix the PixelCat panel account/network state first (credential state, TUN, PixelCat outbound proxy, or another IP/exit node), then rerun the health check. Do not diagnose this as a Claude Code skill-folder problem. While the CC family is unavailable, Codex should fill Opus/Sonnet/Haiku collaboration slots with Codex parallel selves / `分身` by default.
+If PixelCat's upstream credentials are disabled, do not debug skill folders or prompts. State the limitation and use Codex-owned review or another available partner when acceptable.

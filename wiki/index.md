@@ -3,7 +3,7 @@ title: Index
 type: index
 status: active
 created: 2026-04-21
-updated: 2026-05-18
+updated: 2026-06-01
 tags:
   - index
 ---
@@ -62,6 +62,7 @@ This is the main catalog of the wiki.
 - [[lark-cli]] - Official Lark/Feishu CLI runtime and installed lark-* skill set for Docs, Wiki, Drive, Base, Sheets, IM, and related API workflows.
 - [[feishu-bridge]] - Project-local Feishu/Lark router skill that uses lark-cli for API access and chrome-automation for web-only links/forms.
 - [[readme-blueprint-generator]] - Project-local README specialist skill for high-quality README generation, critique, and rewrite workflows.
+- [[agent-resources]] - Shared D-drive skill/resource library and implicit skill-routing map for local agents.
 - [[email-assistant-skill]] - Project-local Gmail/Google Workspace assistant skill for quiet mail triage, Chinese summaries, draft-first replies, and explicit send approval across UMN and vipinapple accounts.
 - [[communication-assistant-skill]] - Project-local unified communication router skill for WhatsApp, WeChat, QQ, email, and shared outbox workflows.
 - [[terraria-save-archive]] - Local Terraria save backup and inventory rooted at `D:/Terraria_doc`.
@@ -77,9 +78,11 @@ This is the main catalog of the wiki.
 - [[durable-agent-rule-memory]] - Rule that user-requested future-agent memories must be persisted into AGENTS/wiki rather than left only in chat.
 - [[codex-automation-model-policy]] - Hard rule that cron automations use `gpt-5.5` with high reasoning, not low or medium reasoning.
 - [[agent-collaboration-tone-and-model-roles]] - User-facing collaboration rule for warmer partner language, Codex parallel selves, Opus/Sonnet roles, and DeepSeek Pro/Flash preferences.
+- [[agentmemory-first-agent-collaboration]] - Active collaboration model using agentmemory for memory, signals, actions, and handoffs while keeping the wiki as public crystallization.
+- [[implicit-skill-routing]] - Rule that agents should choose relevant skills from task intent and skill metadata, not only explicit user skill names.
 - [[model-collaboration-context-and-reference-intake]] - Rule that partner handoffs and external reference searches must carry enough context and depth to be genuinely useful, not toy summaries.
 - [[local-cc-sidecar-agent-workflow]] - Strict three-role Codex + Claude Code partner workflow with PixelCat/CC health check, upstream-credential failure handling, and read-only Opus/Sonnet prompts.
-- [[agent-hub-mcp-server]] - Real-time multi-agent collaboration server (20 MCP tools): messaging, shared state, pipelines, quality gates, PixelCat preflight, auto-retry cascade, and direct invocation of Sonnet/Haiku/GPT-5.5/DeepSeek.
+- [[agent-hub-mcp-server]] - Deprecated historical custom Agent Hub MCP server, superseded by agentmemory-first collaboration.
 - [[agent-skill-installation-workflow]] - Durable rule for installing skills as usable tools: D-drive mirror, `.codex/skills` install, dependency setup, smoke tests, wiki docs, and scoped commit.
 - [[research-ideation-policy]] - Rule for ambitious research ideation: no shallow stitching, force novelty, and allow radical reframing.
 - [[research-project-workbench]] - Upper-level workbench route for analog-agent, Uncertainty/Pony-Rec, TRUCE-Rec, and TGL-Rec, including startup packets, claim gates, artifact boundaries, and collaboration priority.
