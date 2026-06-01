@@ -78,10 +78,11 @@ powershell .\scripts\wiki-maintain.ps1 -Scope whole-computer -Json
 powershell D:\agent-resources\skills\vipin\workstation-maintenance\scripts\New-WorkstationInventory.ps1 -OutputDir ".wiki-tmp\workstation-maintenance"
 powershell D:\agent-resources\skills\vipin\workstation-maintenance\scripts\New-MovePlan.ps1 -ManifestPath "<manifest.json>"
 powershell D:\agent-resources\skills\vipin\workstation-maintenance\scripts\Test-MovePlanBatches.ps1 -MovePlanPath "<move-plan.json>"
+powershell D:\agent-resources\skills\vipin\workstation-maintenance\scripts\New-ApprovalPacket.ps1 -MovePlanPath "<move-plan.json>" -PreflightSummaryPath "<preflight-summary.json>"
 powershell D:\agent-resources\skills\vipin\workstation-maintenance\scripts\Invoke-ApprovedMoveBatch.ps1 -MovePlanPath "<move-plan.json>" -BatchId "<batch-id>" -PreflightOnly
 ```
 
-The move-plan command defaults to a 30-day age gate and 100-item batch cap for live manifests; recent files are deferred for review instead of placed in executable batches. `Test-MovePlanBatches.ps1` is a non-moving readiness check for every proposed batch, not approval to move files.
+The move-plan command defaults to a 30-day age gate and 100-item batch cap for live manifests; recent files are deferred for review instead of placed in executable batches. `Test-MovePlanBatches.ps1` is a non-moving readiness check for every proposed batch, not approval to move files. Once broad approval is granted, future agents should execute currently passing low-risk batches without asking for trivial per-batch confirmations.
 
 Compatibility wrappers still exist for older workflows, but `scripts/wiki.py` is the canonical surface.
 
@@ -102,7 +103,7 @@ Compatibility wrappers still exist for older workflows, but `scripts/wiki.py` is
 - Keep research project claims inside their evidence gates. Do not change experiment progress, datasets, checkpoints, or server state from this repo.
 - Stage only scoped files. Existing unrelated dirty work belongs to its owner.
 - Infrastructure changes must update the relevant operating docs in the same commit.
-- Whole-computer maintenance, local project routing, or file-organization work should start from [whole-computer project map](wiki/concepts/whole-computer-project-map.md); D-drive infrastructure detail stays in [D-drive project map](wiki/concepts/d-drive-project-map.md) so agent runtime cleanup stays separate from research experiments. Physical drive organization must use the shared workstation-maintenance skill, produce a dry-run manifest first, defer recent files and cap batch sizes by default, optionally preflight the full plan or an exact batch, and move only user-approved batches with rollback manifests.
+- Whole-computer maintenance, local project routing, or file-organization work should start from [whole-computer project map](wiki/concepts/whole-computer-project-map.md); D-drive infrastructure detail stays in [D-drive project map](wiki/concepts/d-drive-project-map.md) so agent runtime cleanup stays separate from research experiments. Physical drive organization must use the shared workstation-maintenance skill, produce a dry-run manifest first, defer recent files and cap batch sizes by default, optionally preflight the full plan or an exact batch, and move only user-approved batches with rollback manifests. Broad approval counts for all currently passing low-risk batches.
 - Continuous VipinKnowledge maintenance is documented in [VipinKnowledge maintenance system](wiki/concepts/vipinknowledge-maintenance-system.md). Weekly automation should report first, update only curated scoped files, validate, then commit and push when real evidence changed.
 - Obsidian-compatible local-first features are documented in [Obsidian feature parity](wiki/concepts/obsidian-feature-parity.md). Use `python scripts/wiki.py obsidian export --json` to refresh vault config, Bases, Canvas, command palette, templates, slides home, workspaces, and the dashboard.
 

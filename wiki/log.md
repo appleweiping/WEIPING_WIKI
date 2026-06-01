@@ -1202,3 +1202,30 @@ tags:
   - Added all-batch preflight support to the shared workstation-maintenance skill and recorded the public-safe result in the wiki.
   - The full non-moving preflight checked 531 items across 13 approval-candidate batches, passed all 13 batches, failed 0 batches, and executed 0 moves.
   - This is readiness evidence only; physical C/D file moves still require explicit user approval of batch IDs and rollback manifests.
+
+## [2026-06-01 20:18] infrastructure | approved C-drive downloads organization
+
+- Pages created or updated:
+  - [[whole-computer-project-map]]
+  - [[d-drive-project-map]]
+  - [[local-project-roots]]
+  - [[vipinknowledge-maintenance-system]]
+  - [[log]]
+  - `AGENTS.md`
+  - `README.md`
+  - `CLAUDE.md`
+  - `.opencode/OPENCODE.md`
+  - `.codex/skills/vipin-wiki/SKILL.md`
+  - `.claude/skills/vipin-wiki/SKILL.md`
+  - `.claude/skills/README-skills-layout.md`
+- Sources used:
+  - Fresh local inventory `workstation-inventory-20260601-201417.json` and move plan `workstation-move-plan-20260601-201438.json` under ignored `.wiki-tmp/workstation-maintenance/`.
+  - Fresh full preflight summary `workstation-preflight-summary-20260601-201503.json`.
+  - Applied summary `workstation-applied-summary-20260601-201604.json` and per-batch rollback manifests.
+  - Post-move inventory `workstation-inventory-20260601-201722.json` and post-move plan `workstation-move-plan-20260601-201812.json`.
+- Notes:
+  - User granted broad approval for the current low-risk organization work and asked not to stop on trivial approvals.
+  - Executed all 13 preflight-passing low-risk batches, moving 531 old files, about 307.08 MB, from scattered/download locations into `D:/_Organized/Downloads` and `D:/_Organized/Media`.
+  - Verification found 531 original sources absent, 531 moved destinations present, and 0 applied paths under `D:/Research`.
+  - Post-move inventory shows 138 remaining move-eligible candidates, all deferred by the 30-day age gate; post-move move plan has 0 executable batches.
+  - No deletion was performed.

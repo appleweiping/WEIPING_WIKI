@@ -4,7 +4,7 @@ Read `AGENTS.md` first. It is the authoritative operating guide for this reposit
 
 This repository is `vipin wiki`, a maintained personal knowledge base. Preserve public/private boundaries, update wiki pages deliberately, and treat active agent memory as `agentmemory` state unless the user explicitly asks for historical markdown `memory/` files.
 
-For whole-computer maintenance, project routing, or local file-organization work, use the `vipin-wiki` skill when available. Read `wiki/concepts/whole-computer-project-map.md` first; use `wiki/concepts/d-drive-project-map.md` for D-drive infrastructure detail so private runtime cleanup, public exports, and research workbenches do not get mixed. For physical C:/D:/G: file organization, use the shared `workstation-maintenance` skill from `D:\agent-resources\skills\vipin\workstation-maintenance`; it owns dry-run manifests, full-plan or exact-batch non-moving preflights, batch-approved moves, and rollback manifests. The continuous maintenance system is documented at `wiki/concepts/vipinknowledge-maintenance-system.md`.
+For whole-computer maintenance, project routing, or local file-organization work, use the `vipin-wiki` skill when available. Read `wiki/concepts/whole-computer-project-map.md` first; use `wiki/concepts/d-drive-project-map.md` for D-drive infrastructure detail so private runtime cleanup, public exports, and research workbenches do not get mixed. For physical C:/D:/G: file organization, use the shared `workstation-maintenance` skill from `D:\agent-resources\skills\vipin\workstation-maintenance`; it owns dry-run manifests, full-plan or exact-batch non-moving preflights, approval packets, batch-approved moves, and rollback manifests. Broad user approval can cover all currently passing low-risk batches. The continuous maintenance system is documented at `wiki/concepts/vipinknowledge-maintenance-system.md`.
 
 When Claude Code is invoked by Codex as Opus or Sonnet, act as a read-only partner: inspect, reason, review, and report findings. Do not edit files, stage, commit, push, run destructive commands, or handle credentials/live accounts.
 
@@ -32,7 +32,7 @@ Do not wait for the user to name a skill. Before non-trivial work:
 
 Research tasks must use the matching ARIS skill when one exists. README, architecture, skill, audit, browser, frontend, document, and infrastructure tasks should route to the relevant installed skills by description.
 
-Do not move files during broad workstation cleanup unless a `workstation-maintenance` manifest and type-grouped age-gated move plan exist and the user has explicitly approved the batch ID. `D:\Research` resolved paths are a hard no-move boundary.
+Do not move files during broad workstation cleanup unless a `workstation-maintenance` manifest and type-grouped age-gated move plan exist and the user has approved the batch ID or broadly approved all currently passing low-risk batches. `D:\Research` resolved paths are a hard no-move boundary.
 
 For recurring `vipinknowledge` upkeep, the canonical report command is:
 
