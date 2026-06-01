@@ -1,0 +1,29 @@
+{
+  "items": [
+    {
+      "type": "file",
+      "path": "wiki/home.md",
+      "title": "Home"
+    },
+    {
+      "type": "file",
+      "path": "wiki/index.md",
+      "title": "Index"
+    },
+    {
+      "type": "file",
+      "path": "wiki/obsidian-dashboard.md",
+      "title": "Obsidian Dashboard"
+    },
+    {
+      "type": "file",
+      "path": "wiki/canvases/vipinknowledge-map.canvas",
+      "title": "VipinKnowledge Map"
+    },
+    {
+      "type": "search",
+      "query": "tag:#maintenance",
+      "title": "Maintenance"
+    }
+  ]
+}

@@ -32,7 +32,7 @@ powershell .\scripts\Test-PrePushSafety.ps1
 - Ingest sources into source notes and propagate durable facts.
 - Maintain old pages by comparing them with live evidence and current operating rules.
 - Map the whole computer shallowly, deep-reading only important roots.
-- Maintain Obsidian-compatible vault artifacts (`.obsidian/`, `.base`, `.canvas`, templates, dashboard, and `wiki.py obsidian ...`) when the task asks for Obsidian-style knowledge-system upgrades.
+- Maintain Obsidian-compatible vault artifacts (`.obsidian/`, `.base`, `.canvas`, commands, templates, dashboard, workspaces, slides, and `wiki.py obsidian ...`) when the task asks for Obsidian-style knowledge-system upgrades.
 - Upgrade the skill/workflow when a future agent would otherwise need a fresh prompt.
 
 ## Safety

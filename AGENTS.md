@@ -732,7 +732,7 @@ python scripts/wiki.py <command> [--root <path>] [options]
 | `search <query>` | Full-text search across wiki | Finding related pages |
 | `context <level>` | Build layered context packs | Handoffs, partner review, targeted retrieval |
 | `maintain --scope whole-computer` | Build ignored maintenance report with git, agentmemory, inventory, audit, health, and recommendations | Weekly `vipinknowledge` maintenance and broad project-map refresh |
-| `obsidian <command>` | Generate and query Obsidian-compatible vault artifacts | Bases, Canvas, backlinks, tags, properties, tasks, daily notes, and local-first vault parity |
+| `obsidian <command>` | Generate and query Obsidian-compatible vault artifacts | Bases, Canvas, backlinks, outgoing links, search, quick switcher, command palette, file explorer, outline, preview, footnotes, tags, properties, tasks, daily/unique notes, random notes, word count, external links, format audit, slides, workspaces, and local-first vault parity |
 
 Rules:
 - All agents must use `python scripts/wiki.py` as the primary automation tool, regardless of whether they run on Windows, Linux, or CI.

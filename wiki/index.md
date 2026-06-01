@@ -81,7 +81,7 @@ This is the main catalog of the wiki.
 - [[agentmemory-first-agent-collaboration]] - Active collaboration model using agentmemory for memory, signals, actions, and handoffs while keeping the wiki as public crystallization.
 - [[implicit-skill-routing]] - Rule that agents should choose relevant skills from task intent and skill metadata, not only explicit user skill names.
 - [[vipinknowledge-maintenance-system]] - Continuous maintenance system for whole-computer project routing, weekly reports, skill self-upgrades, and scoped auto commit/push gates.
-- [[obsidian-feature-parity]] - Obsidian-compatible vault layer with Bases, Canvas, dashboard, templates, backlinks, tags, properties, and task commands.
+- [[obsidian-feature-parity]] - Obsidian-compatible vault layer with Bases, Canvas, dashboard, commands, templates, backlinks, search, quick switcher, outline, preview, tags, properties, tasks, slides, and word-count commands.
 - [[whole-computer-project-map]] - First-stop routing map for whole-computer maintenance across C/D/G drives, importance-based depth, active roots, archives, and safety boundaries.
 - [[d-drive-project-map]] - First-stop routing map for D-drive agent infrastructure, public exports, private runtime state, and research isolation.
 - [[local-active-project-roots]] - Detailed launch map for active non-research local project roots, including entry docs and safety boundaries.
@@ -98,6 +98,8 @@ This is the main catalog of the wiki.
 - [[2026-05-31-voice-sample]] - Public voice sample archive with Hangzhou dialect, Mandarin, and English MP3 files.
 - [[2026-06-01-umn-az-hold-esl-course-information]] - User-provided verbatim University of Minnesota AZ hold, ESL course, English proficiency score, MN Battery Test, and MELP contact guidance.
 - [[obsidian-dashboard]] - Generated Obsidian-style dashboard for bookmarks, top tags, frontmatter properties, and open checkbox tasks.
+- [[obsidian-compatible-commands]] - Generated command-palette view for Obsidian-style local-first wiki operations.
+- [[slides/README]] - Generated home for note-derived Markdown slide decks.
 - [[bases/README]] - Generated Obsidian Bases index for all pages, active projects, source notes, and maintenance views.
 - [[2026-05-17-html-ppt-skill-and-deck-session]] - Chat/session source note for installing the D-drive HTML PPT skill/template setup and producing two validated decks.
 - [[2026-05-17-paper-orchestra-github]] - GitHub source note for `Ar9av/PaperOrchestra`, its paper-writing pipeline, local mirror, and installed skills.

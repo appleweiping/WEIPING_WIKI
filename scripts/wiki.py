@@ -8,7 +8,7 @@ Usage:
     python scripts/wiki.py search <query> [--top N]
     python scripts/wiki.py context <level> [--query Q]
     python scripts/wiki.py maintain --scope whole-computer [--json]
-    python scripts/wiki.py obsidian <report|export|backlinks|outgoing|tags|properties|tasks|daily>
+    python scripts/wiki.py obsidian <report|export|search|quick|commands|backlinks|outgoing|outline|preview|tags|properties|tasks|daily|unique|random|word-count|footnotes|files|external-links|format-report|slides>
     python scripts/wiki.py health [--json] [--fix]
 
 All commands accept --root <path> (defaults to repo root).
@@ -500,13 +500,26 @@ def cmd_obsidian(args):
     """Obsidian-compatible vault reports and exports."""
     from wiki_obsidian import (
         backlinks_report,
+        commands_report,
         create_daily_note,
+        external_links_report,
         export_obsidian_artifacts,
         feature_report,
+        files_report,
+        footnotes_report,
+        format_report,
+        outline_report,
         outgoing_report,
+        preview_report,
         properties_report,
+        quick_switcher_report,
+        random_note_report,
+        search_report,
+        slides_export,
         tags_report,
         tasks_report,
+        unique_note,
+        word_count_report,
     )
 
     root = resolve_root(args.root)
@@ -514,10 +527,20 @@ def cmd_obsidian(args):
         payload = feature_report(root)
     elif args.obsidian_command == "export":
         payload = export_obsidian_artifacts(root)
+    elif args.obsidian_command == "search":
+        payload = search_report(root, args.query, args.top)
+    elif args.obsidian_command == "quick":
+        payload = quick_switcher_report(root, args.query, args.top)
+    elif args.obsidian_command == "commands":
+        payload = commands_report(root)
     elif args.obsidian_command == "backlinks":
         payload = backlinks_report(root, args.page)
     elif args.obsidian_command == "outgoing":
         payload = outgoing_report(root, args.page)
+    elif args.obsidian_command == "outline":
+        payload = outline_report(root, args.page)
+    elif args.obsidian_command == "preview":
+        payload = preview_report(root, args.page, args.max_chars)
     elif args.obsidian_command == "tags":
         payload = tags_report(root)
     elif args.obsidian_command == "properties":
@@ -526,6 +549,22 @@ def cmd_obsidian(args):
         payload = tasks_report(root, args.status)
     elif args.obsidian_command == "daily":
         payload = create_daily_note(root, args.date)
+    elif args.obsidian_command == "unique":
+        payload = unique_note(root, args.title)
+    elif args.obsidian_command == "random":
+        payload = random_note_report(root, args.seed)
+    elif args.obsidian_command == "word-count":
+        payload = word_count_report(root, args.page, args.top)
+    elif args.obsidian_command == "footnotes":
+        payload = footnotes_report(root, args.page)
+    elif args.obsidian_command == "files":
+        payload = files_report(root, args.max_items)
+    elif args.obsidian_command == "external-links":
+        payload = external_links_report(root, args.page, args.top)
+    elif args.obsidian_command == "format-report":
+        payload = format_report(root, args.page, args.top)
+    elif args.obsidian_command == "slides":
+        payload = slides_export(root, args.page)
     else:
         raise SystemExit("Unknown obsidian command")
 
@@ -584,11 +623,28 @@ def main():
     q.add_argument("--json", action="store_true")
     q = obsidian_sub.add_parser("export", help="Write Obsidian vault config, bases, canvas, templates, and dashboard")
     q.add_argument("--json", action="store_true")
+    q = obsidian_sub.add_parser("search", help="Search wiki pages with structured JSON")
+    q.add_argument("query")
+    q.add_argument("--top", type=int, default=10)
+    q.add_argument("--json", action="store_true")
+    q = obsidian_sub.add_parser("quick", help="Quick-switch by title, id, alias, or search")
+    q.add_argument("query")
+    q.add_argument("--top", type=int, default=10)
+    q.add_argument("--json", action="store_true")
+    q = obsidian_sub.add_parser("commands", help="Show Obsidian-style command palette")
+    q.add_argument("--json", action="store_true")
     q = obsidian_sub.add_parser("backlinks", help="Show backlinks and unlinked mentions for a page")
     q.add_argument("page")
     q.add_argument("--json", action="store_true")
     q = obsidian_sub.add_parser("outgoing", help="Show outgoing links for a page")
     q.add_argument("page")
+    q.add_argument("--json", action="store_true")
+    q = obsidian_sub.add_parser("outline", help="Show heading outline for a page")
+    q.add_argument("page")
+    q.add_argument("--json", action="store_true")
+    q = obsidian_sub.add_parser("preview", help="Show a short page preview")
+    q.add_argument("page")
+    q.add_argument("--max-chars", type=int, default=900)
     q.add_argument("--json", action="store_true")
     q = obsidian_sub.add_parser("tags", help="Show tag counts and tagged pages")
     q.add_argument("--json", action="store_true")
@@ -599,6 +655,33 @@ def main():
     q.add_argument("--json", action="store_true")
     q = obsidian_sub.add_parser("daily", help="Create a daily note from the daily template")
     q.add_argument("--date", help="YYYY-MM-DD; defaults to today")
+    q.add_argument("--json", action="store_true")
+    q = obsidian_sub.add_parser("unique", help="Create a timestamped inbox note")
+    q.add_argument("--title", help="Optional note title")
+    q.add_argument("--json", action="store_true")
+    q = obsidian_sub.add_parser("random", help="Open a random note candidate")
+    q.add_argument("--seed", help="Optional deterministic seed")
+    q.add_argument("--json", action="store_true")
+    q = obsidian_sub.add_parser("word-count", help="Show word and character counts")
+    q.add_argument("--page", help="Optional page id")
+    q.add_argument("--top", type=int, default=20)
+    q.add_argument("--json", action="store_true")
+    q = obsidian_sub.add_parser("footnotes", help="Audit footnote references and definitions")
+    q.add_argument("--page", help="Optional page id")
+    q.add_argument("--json", action="store_true")
+    q = obsidian_sub.add_parser("files", help="Show vault folder/recent-file report")
+    q.add_argument("--max-items", type=int, default=100)
+    q.add_argument("--json", action="store_true")
+    q = obsidian_sub.add_parser("external-links", help="Show external links for a page or vault slice")
+    q.add_argument("--page", help="Optional page id")
+    q.add_argument("--top", type=int, default=100)
+    q.add_argument("--json", action="store_true")
+    q = obsidian_sub.add_parser("format-report", help="Report Markdown conversion issues")
+    q.add_argument("--page", help="Optional page id")
+    q.add_argument("--top", type=int, default=100)
+    q.add_argument("--json", action="store_true")
+    q = obsidian_sub.add_parser("slides", help="Export a wiki page as a Markdown slide deck")
+    q.add_argument("page")
     q.add_argument("--json", action="store_true")
 
     # health

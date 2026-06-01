@@ -1120,11 +1120,15 @@ tags:
   - [[obsidian-feature-parity]]
   - [[obsidian-dashboard]]
   - [[bases/README]]
+  - [[obsidian-compatible-commands]]
+  - [[slides/README]]
   - [[index]]
   - [[log]]
   - `.obsidian/`
   - `wiki/bases/*.base`
   - `wiki/canvases/vipinknowledge-map.canvas`
+  - `wiki/commands/obsidian-compatible-commands.md`
+  - `wiki/slides/README.md`
   - `wiki/_templates/daily.md`
   - `wiki/_templates/web-clip.md`
   - `scripts/wiki_obsidian.py`
@@ -1136,4 +1140,4 @@ tags:
   - Obsidian GitHub organization pages for open components such as JSON Canvas and Web Clipper.
 - Notes:
   - Recorded that Obsidian core is proprietary, so this project adapts documented behavior and open file formats instead of claiming source-level parity.
-  - Added real local-first artifacts for opening the repository as an Obsidian vault: settings, Bases, Canvas, generated dashboard, daily/web-clip templates, and CLI reports for backlinks, outgoing links, tags, properties, tasks, and daily notes.
+  - Added real local-first artifacts for opening the repository as an Obsidian vault: settings, Bases, Canvas, bookmarks, workspaces, generated dashboard, command page, slides home, daily/web-clip templates, and CLI reports for backlinks, outgoing links, search, quick switcher, outline, preview, footnotes, tags, properties, tasks, word count, random notes, external links, format audit, slides, and daily/unique notes.
