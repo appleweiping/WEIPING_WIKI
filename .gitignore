@@ -30,3 +30,7 @@ graphify-out/*.tmp
 graphify-out/cache/
 graphify-out/manifest.json
 raw/pdfs/
+
+# agentmemory is the active operational memory layer.
+# Markdown session dumps are local/historical unless deliberately crystallized.
+memory/sessions/*.md

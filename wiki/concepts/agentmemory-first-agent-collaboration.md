@@ -50,7 +50,7 @@ Agents use agentmemory for active recall, memory saves, cross-agent signals, act
 
 ## Counterpoints And Gaps
 
-- AMBIGUOUS: Some agentmemory tools may differ by client or server version; run diagnostics before relying on advanced slots/actions in critical workflows.
+- AMBIGUOUS: Some agentmemory tools may differ by client or server version; run diagnostics before relying on advanced slots/actions in critical workflows. Slots require the service to start with `AGENTMEMORY_SLOTS=true`.
 - INFERRED: Markdown memory remains useful as historical evidence, but it should not be an always-on instruction source.
 - UNVERIFIED: Cross-agent mesh synchronization beyond the local workstation is not part of the current active contract.
 

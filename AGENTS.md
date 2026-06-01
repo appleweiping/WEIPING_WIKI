@@ -287,7 +287,7 @@ Use agentmemory for:
 
 Do not store secrets, API keys, credentials, private chats, sensitive account state, or raw private documents in agentmemory.
 
-The repo-local markdown `memory/` tree is a historical/superseded layer. Agents may read it as audit material when useful, but should not treat it as mandatory session-start truth and should not keep dual-writing every task to markdown. Stable public-safe knowledge should be crystallized into `wiki/` pages, index/log entries, and normal Git history.
+The repo-local markdown `memory/` tree is a historical/superseded layer. Agents may read it as audit material when useful, but should not treat it as mandatory session-start truth and should not keep dual-writing every task to markdown. Stable public-safe knowledge should be crystallized into `wiki/` pages, index/log entries, and normal Git history. Raw `memory/sessions/` dumps are local noise by default; commit only a deliberately curated session note.
 
 If a specific old markdown memory file is still useful, summarize or supersede it in the wiki rather than blindly copying it forward.
 

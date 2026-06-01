@@ -10,6 +10,19 @@ tags:
 
 # Log
 
+## [2026-06-01 11:40] maintenance | D-drive agent infrastructure follow-up
+
+- Pages/files updated:
+  - `AGENTS.md`
+  - `.gitignore`
+  - [[agentmemory-first-agent-collaboration]]
+  - [[local-project-roots]]
+- Notes:
+  - Recorded that agentmemory slots require `AGENTMEMORY_SLOTS=true`.
+  - Reclassified raw `memory/sessions/` dumps as local historical noise unless deliberately curated.
+  - Refreshed top-level D-drive organization buckets and cleanup boundaries.
+  - Kept PixelCat as a resident Claude dependency in the devtools health model.
+
 ## [2026-05-18 10:45] analysis | analog-agent deep module review and direction discussion
 
 - Pages created or updated:
