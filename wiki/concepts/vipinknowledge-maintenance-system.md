@@ -96,7 +96,7 @@ Use [[d-drive-project-map]] for D-drive infrastructure detail, [[local-active-pr
 
 Important roots should record path, purpose, current activity status, first-read files, safety boundary, related wiki pages, and last verified evidence. Low-value roots should stay as bucket summaries.
 
-If the work involves moving files, generate the workstation manifest and conservative move plan first. Live move plans defer recent files and cap batch sizes by default; exact batches may be preflighted without moving files. Update wiki pages after dry-run evidence or after an approved batch changes the filesystem. Public pages should summarize bucket-level state and safety rules, not raw sensitive file names.
+If the work involves moving files, generate the workstation manifest and conservative move plan first. Live move plans defer recent files and cap batch sizes by default; every batch can be preflighted together without moving files, and exact batches may be preflighted again immediately before approval. Update wiki pages after dry-run evidence or after an approved batch changes the filesystem. Public pages should summarize bucket-level state and safety rules, not raw sensitive file names.
 
 ## Automation Contract
 

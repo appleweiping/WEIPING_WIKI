@@ -1181,3 +1181,24 @@ tags:
   - Generated 13 granular approval-candidate batches by file type and part number; no physical file move was executed.
   - Added and tested non-moving batch preflight support; `batch-downloads-installers-old` preflight passed with 1 checked item and 0 moves.
   - Actual C/D file moves remain gated on explicit user approval of generated batch IDs.
+
+## [2026-06-01 19:56] infrastructure | workstation move-plan full preflight
+
+- Pages created or updated:
+  - [[whole-computer-project-map]]
+  - [[vipinknowledge-maintenance-system]]
+  - [[log]]
+  - `AGENTS.md`
+  - `README.md`
+  - `CLAUDE.md`
+  - `.opencode/OPENCODE.md`
+  - `.codex/skills/vipin-wiki/SKILL.md`
+  - `.claude/skills/vipin-wiki/SKILL.md`
+  - `.claude/skills/README-skills-layout.md`
+- Sources used:
+  - Local `workstation-maintenance` move plan `workstation-move-plan-20260601-193600.json` under ignored `.wiki-tmp/workstation-maintenance/`.
+  - Local full preflight summary `workstation-preflight-summary-20260601-195540.json` under ignored `.wiki-tmp/workstation-maintenance/`.
+- Notes:
+  - Added all-batch preflight support to the shared workstation-maintenance skill and recorded the public-safe result in the wiki.
+  - The full non-moving preflight checked 531 items across 13 approval-candidate batches, passed all 13 batches, failed 0 batches, and executed 0 moves.
+  - This is readiness evidence only; physical C/D file moves still require explicit user approval of batch IDs and rollback manifests.

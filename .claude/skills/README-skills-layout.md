@@ -14,7 +14,7 @@ Skills are chosen by task intent. Agents should inspect skill metadata, read the
 
 `agentmemory` is the active memory/collaboration layer. Agent Hub is retired and should not be registered as an active MCP server.
 
-For whole-computer maintenance, project routing, or organization tasks, read `wiki/concepts/whole-computer-project-map.md` first. For D-drive infrastructure detail, also read `wiki/concepts/d-drive-project-map.md`, which separates public exports, private runtime state, skills/resources, and research isolation. For physical C:/D:/G: file moves, use `D:\agent-resources\skills\vipin\workstation-maintenance` before trusting any manifest or type-grouped age-gated move plan.
+For whole-computer maintenance, project routing, or organization tasks, read `wiki/concepts/whole-computer-project-map.md` first. For D-drive infrastructure detail, also read `wiki/concepts/d-drive-project-map.md`, which separates public exports, private runtime state, skills/resources, and research isolation. For physical C:/D:/G: file moves, use `D:\agent-resources\skills\vipin\workstation-maintenance` before trusting any manifest or type-grouped age-gated move plan, and run its full-plan or exact-batch non-moving preflight before requesting approval.
 
 ## Skill Roots
 
@@ -33,7 +33,7 @@ For whole-computer maintenance, project routing, or organization tasks, read `wi
 
 - Research audit, paper review, experiment audit, and citation work must use the corresponding ARIS skill when present.
 - Whole-computer maintenance, local project routing, wiki refresh, and `vipinknowledge` skill upgrades should use `vipin-wiki`.
-- Physical C:/D:/G: file organization should use `workstation-maintenance`; `vipin-wiki` records only the public-safe routing/documentation updates afterward.
+- Physical C:/D:/G: file organization should use `workstation-maintenance`; `vipin-wiki` records only the public-safe routing/documentation updates afterward. Full-plan and exact-batch preflights do not authorize movement by themselves.
 - README and public-repo presentation work should use `readme-blueprint-generator`.
 - Agent/tool/memory architecture work should use an agent architecture audit skill when present.
 - Skill creation or frontmatter/trigger optimization should use `skill-creator`.

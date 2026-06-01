@@ -4,7 +4,7 @@ Read `AGENTS.md` first. It is the authoritative operating guide for this reposit
 
 This file provides OpenCode-specific context for operating inside `vipin wiki`.
 
-For whole-computer maintenance, project routing, or local file-organization work, use the `vipin-wiki` skill when available and read `wiki/concepts/whole-computer-project-map.md` first. Use `wiki/concepts/d-drive-project-map.md` for D-drive infrastructure detail, public exports, private runtime state, and research workbenches. For physical C:/D:/G: organization, use `D:\agent-resources\skills\vipin\workstation-maintenance` first; it owns dry-run manifests, approved move batches, and rollback manifests. The continuous maintenance system is documented at `wiki/concepts/vipinknowledge-maintenance-system.md`.
+For whole-computer maintenance, project routing, or local file-organization work, use the `vipin-wiki` skill when available and read `wiki/concepts/whole-computer-project-map.md` first. Use `wiki/concepts/d-drive-project-map.md` for D-drive infrastructure detail, public exports, private runtime state, and research workbenches. For physical C:/D:/G: organization, use `D:\agent-resources\skills\vipin\workstation-maintenance` first; it owns dry-run manifests, full-plan or exact-batch non-moving preflights, approved move batches, and rollback manifests. The continuous maintenance system is documented at `wiki/concepts/vipinknowledge-maintenance-system.md`.
 
 ## Identity
 

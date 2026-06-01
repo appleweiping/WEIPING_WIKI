@@ -60,7 +60,7 @@ Public-safe batch summary:
 
 These are approval candidates only. No physical file move has been executed from this dry run.
 
-EXTRACTED: A non-moving preflight for `batch-downloads-installers-old` passed on 2026-06-01 and wrote a local preflight manifest under ignored `.wiki-tmp/workstation-maintenance/`. The preflight checked 1 item and executed 0 moves.
+EXTRACTED: A full non-moving preflight for all 13 approval-candidate batches passed on 2026-06-01 and wrote local preflight manifests plus a summary under ignored `.wiki-tmp/workstation-maintenance/`. The pass checked 531 items, reported 13 passed batches and 0 failed batches, and executed 0 moves.
 
 ## Importance-Based Depth
 
@@ -114,7 +114,7 @@ For whole-computer upkeep:
 
 1. Run or mentally apply `scripts/computer-inventory.ps1` for a shallow map.
 2. Identify the target tier and bucket before opening files.
-3. For physical file organization, use `D:/agent-resources/skills/vipin/workstation-maintenance` to generate the dry-run manifest and type-grouped, age-gated move plan. Optionally run `Invoke-ApprovedMoveBatch.ps1 -PreflightOnly` for the exact batch before asking the user to approve. Never include `D:/Research` resolved paths.
+3. For physical file organization, use `D:/agent-resources/skills/vipin/workstation-maintenance` to generate the dry-run manifest and type-grouped, age-gated move plan. Run `Test-MovePlanBatches.ps1` for a full non-moving readiness check or `Invoke-ApprovedMoveBatch.ps1 -PreflightOnly` for an exact batch before asking the user to approve. Never include `D:/Research` resolved paths.
 4. Read existing wiki pages first: this page, [[d-drive-project-map]], [[local-project-roots]], and the relevant entity/topic page.
 5. Inspect the smallest live evidence that proves current state.
 6. Refresh existing pages before creating new ones.
