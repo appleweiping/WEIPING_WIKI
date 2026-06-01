@@ -51,7 +51,7 @@ Use these buckets when deciding how to tidy D-drive without breaking active work
 | --- | --- | --- |
 | Agent infrastructure | `D:/devtools`, `D:/devtools-public`, `D:/agent-resources`, `D:/.claude` | Keep launchers/config/runtime homes here; public-safe exports go to separate repos. |
 | Research workbench | `D:/Research` | Route through [[research-project-workbench]]; do not move or rewrite experiments during infrastructure cleanup. |
-| Approved organization target | `D:/_Organized/Downloads`, `D:/_Organized/Media`; planned buckets include `Coursework`, `Documents-Private`, `Archives`, `Temp-Review`, and `Tools-Review` | Active destination buckets for the 2026-06-01 approved low-risk moves. Do not create or use new buckets outside `workstation-maintenance` move batches. |
+| Approved organization target | `D:/_Organized/Downloads`, `D:/_Organized/Media`, `D:/_Organized/Temp-Review`; planned buckets include `Coursework`, `Documents-Private`, `Archives`, and `Tools-Review` | Active destination buckets for the 2026-06-01 approved low-risk moves. Do not create or use new buckets outside `workstation-maintenance` move batches. |
 | Public/professional portfolio | `D:/WeipingYan_portfolio`, `D:/Academic_portfolio` | Keep public and sensitive/application material separate; public pages record metadata only. |
 | Coursework/archive | `D:/Undergraduate_project_netherlands`, `D:/Undergraduate_study_netherlands`, `D:/tuelearning` | Treat as archive/course material; edit only when asked. |
 | Product/project roots | `D:/Project`, `D:/frontend`, `D:/CS project`, `D:/Healthcare`, `D:/Game_develop`, `D:/Idea` | Rescan live roots before claims; add wiki entity/topic pages only for repeatedly used projects. |

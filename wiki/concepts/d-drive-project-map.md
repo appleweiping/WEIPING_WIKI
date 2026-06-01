@@ -63,7 +63,7 @@ Use [[research-project-workbench]] before opening a repeated research project. T
 | Agent infrastructure | `D:/devtools`, `D:/devtools-public`, `D:/agent-resources` | Keep D-drive-first; separate public source from private runtime. |
 | Knowledge base | `D:/Research/vipin's knowledgebase` | Public wiki plus ignored private layer. |
 | Research workbench | `D:/Research/*` project repos | Isolate from infra cleanup; modify only on explicit research task. |
-| Approved organization target | `D:/_Organized/Downloads`, `D:/_Organized/Media` | Active target populated by approved `workstation-maintenance` batches on 2026-06-01; use ignored applied manifests for rollback if needed. Future use still goes through manifest/preflight gates. |
+| Approved organization target | `D:/_Organized/Downloads`, `D:/_Organized/Media`, `D:/_Organized/Temp-Review` | Active target populated by approved `workstation-maintenance` batches on 2026-06-01; use ignored applied manifests for rollback if needed. Future use still goes through manifest/preflight gates. |
 | Portfolio/course archives | `D:/Academic_portfolio`, `D:/Undergraduate_*` | Record public-safe metadata only unless explicitly asked. |
 | Product/game/health roots | `D:/Project`, `D:/Game_develop`, `D:/Healthcare` | Rescan live roots before claims or edits. |
 | Media/download/cache/system bulk | downloads, videos, tool caches, drivers, Docker, VirtualBox | Do not publish raw contents; cleanup only with explicit storage-maintenance scope. |

@@ -58,9 +58,9 @@ Public-safe batch summary:
 | `batch-downloads-pdf-old-part-003` | Downloads PDFs | 45 | 17.52 MB | `D:/_Organized` |
 | `batch-mediaassets-old` | MediaAssets | 32 | 11.51 MB | `D:/_Organized` |
 
-EXTRACTED: The user granted broad approval on 2026-06-01 to proceed without further trivial per-batch prompts. After a fresh all-batch non-moving preflight passed, all 13 batches were executed. The applied summary records 531 moved files, about 307.08 MB, into `D:/_Organized/Downloads` and `D:/_Organized/Media`. Post-move verification found 531 original sources absent, 531 moved destinations present, and 0 applied paths under `D:/Research`.
+EXTRACTED: The user granted broad approval on 2026-06-01 to proceed without further trivial per-batch prompts. After a fresh all-batch non-moving preflight passed, all 13 aged batches were executed. The applied summary records 531 moved files, about 307.08 MB, into `D:/_Organized/Downloads` and `D:/_Organized/Media`. Post-move verification found 531 original sources absent, 531 moved destinations present, and 0 applied paths under `D:/Research`.
 
-EXTRACTED: A post-move inventory on 2026-06-01 recorded 2,465 classified entries and 138 remaining move-eligible candidates. A fresh post-move move plan produced 0 executable batches and deferred all 138 recent candidates under the 30-day age gate. `D:/Research` entries remained 0, and move-eligible reparse points, directories, and git worktree items remained 0.
+EXTRACTED: Because the user explicitly disallowed conservative waiting, a second `MinimumAgeDays 0` pass handled the 138 recent move-eligible candidates. That supplemental pass moved another 138 files, about 490.31 MB, into `D:/_Organized`. A duplicate temp-log destination surfaced during execution; `workstation-maintenance` was updated to generate unique destination paths and reject duplicate destinations before movement. Final verification recorded 669 total moved files, about 797.39 MB, 0 remaining move-eligible candidates, 0 executable batches, 0 deferred candidates, and 0 `D:/Research` hits.
 
 ## Importance-Based Depth
 
@@ -93,7 +93,7 @@ For active non-research project roots with more detailed entry docs, use [[local
 | --- | --- | --- |
 | Agent infrastructure | `D:/devtools`, `D:/devtools-public`, `D:/agent-resources`, `D:/.claude` | Keep runtime/log/cache/auth out of public Git; use [[d-drive-project-map]] for details. |
 | Research workbench | `D:/Research` | Route through [[research-project-workbench]]. Do not touch experiments during general maintenance. |
-| Organized low-risk files | `D:/_Organized/Downloads`, `D:/_Organized/Media` | Current target for applied low-risk workstation moves; keep rollback manifests in ignored `.wiki-tmp` if reversal is needed. |
+| Organized low-risk files | `D:/_Organized/Downloads`, `D:/_Organized/Media`, `D:/_Organized/Temp-Review` | Current target for applied low-risk workstation moves; keep rollback manifests in ignored `.wiki-tmp` if reversal is needed. |
 | Product/app/project roots | `D:/Project`, `D:/frontend`, `D:/CS project`, `D:/Company`, `D:/Idea` | Rescan live README/config/status before claims or edits. Create pages only for repeated/active projects. |
 | Healthcare roots | `D:/Healthcare` | Treat code and test data conservatively; avoid exposing health-sensitive material. |
 | Game roots | `D:/Game_develop`, `D:/Terraria_doc`, `D:/girlvania` | Keep binaries/saves/assets outside public pages; record routing and content nature. |

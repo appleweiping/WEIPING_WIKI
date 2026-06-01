@@ -1229,3 +1229,21 @@ tags:
   - Verification found 531 original sources absent, 531 moved destinations present, and 0 applied paths under `D:/Research`.
   - Post-move inventory shows 138 remaining move-eligible candidates, all deferred by the 30-day age gate; post-move move plan has 0 executable batches.
   - No deletion was performed.
+
+## [2026-06-01 20:34] infrastructure | broad-approval supplemental organization
+
+- Pages created or updated:
+  - [[whole-computer-project-map]]
+  - [[d-drive-project-map]]
+  - [[local-project-roots]]
+  - [[log]]
+- Sources used:
+  - Supplemental `MinimumAgeDays 0` move plan `workstation-move-plan-20260601-202730.json`.
+  - Final inventory `workstation-inventory-20260601-203318.json` and final move plan `workstation-move-plan-20260601-203338.json`.
+  - Updated `workstation-maintenance` duplicate-destination handling in `D:/agent-resources`.
+- Notes:
+  - Executed the broadly approved supplemental pass for recent-but-move-eligible low-risk candidates.
+  - Moved another 138 files, about 490.31 MB, into `D:/_Organized`.
+  - A duplicate temp-log target surfaced during execution; the skill now generates unique destination paths and rejects duplicate batch destinations before moving.
+  - Final inventory reports 0 remaining move-eligible candidates, 0 executable batches, 0 deferred candidates, and 0 `D:/Research` hits.
+  - Total approved organization moved 669 files, about 797.39 MB. No deletion was performed.
