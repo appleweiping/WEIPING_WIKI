@@ -22,6 +22,8 @@ raw/private-chat/
 raw/private-journal/
 raw/private-docs/
 wiki-private/
+memory/facts/api-keys-*.md
+memory/facts/*credentials*.md
 
 # Graphify knowledge graph (keep graph.json and report, ignore cache)
 graphify-out/.graphify_*
