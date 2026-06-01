@@ -32,6 +32,7 @@ For whole-computer maintenance, project routing, or organization tasks, read `wi
 ## Routing Rules
 
 - Research audit, paper review, experiment audit, and citation work must use the corresponding ARIS skill when present.
+- Whole-computer maintenance, local project routing, wiki refresh, and `vipinknowledge` skill upgrades should use `vipin-wiki`.
 - README and public-repo presentation work should use `readme-blueprint-generator`.
 - Agent/tool/memory architecture work should use an agent architecture audit skill when present.
 - Skill creation or frontmatter/trigger optimization should use `skill-creator`.
@@ -47,6 +48,18 @@ If a task is trivial and no workflow value is added, a skill is optional. If the
 4. Update `D:\agent-resources\SKILL-INDEX.md` with a concise `What`, `When`, and `Path`.
 5. Keep generated caches, toolchains, browser profiles, and account state out of Git.
 6. Validate frontmatter and a non-destructive smoke path when possible.
+
+## VipinKnowledge Maintenance Skill
+
+Claude Code and OpenCode can trigger `D:\Research\vipin's knowledgebase\.claude\skills\vipin-wiki\SKILL.md`.
+
+Codex uses `D:\Research\vipin's knowledgebase\.codex\skills\vipin-wiki\SKILL.md` as the full orchestrator. Both routes point to the same canonical command:
+
+```powershell
+python scripts/wiki.py maintain --scope whole-computer --json
+```
+
+The command writes ignored reports under `.wiki-tmp/vipinknowledge-maintenance/`; curated wiki/skill/doc changes still require validation, scoped staging, commit, and push.
 
 ## Retired Agent Hub Boundary
 

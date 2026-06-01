@@ -2,6 +2,13 @@
 
 Use this reference when the task is broad, recurring, or about keeping `vipinknowledge` useful without a fresh prompt.
 
+For focused procedures, prefer the smaller companion references:
+
+- `weekly-maintenance-runbook.md` for the recurring automation run.
+- `whole-computer-depth.md` for importance-based scan depth.
+- `skill-upgrade-loop.md` for improving this skill.
+- `safety-and-automation.md` for commit/push gates and public/private boundaries.
+
 ## The Compounding Standard
 
 A change is good only if it makes future retrieval or maintenance easier. Prefer:

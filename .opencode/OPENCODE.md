@@ -4,7 +4,7 @@ Read `AGENTS.md` first. It is the authoritative operating guide for this reposit
 
 This file provides OpenCode-specific context for operating inside `vipin wiki`.
 
-For whole-computer maintenance, project routing, or local file-organization work, read `wiki/concepts/whole-computer-project-map.md` first. Use `wiki/concepts/d-drive-project-map.md` for D-drive infrastructure detail, public exports, private runtime state, and research workbenches.
+For whole-computer maintenance, project routing, or local file-organization work, use the `vipin-wiki` skill when available and read `wiki/concepts/whole-computer-project-map.md` first. Use `wiki/concepts/d-drive-project-map.md` for D-drive infrastructure detail, public exports, private runtime state, and research workbenches. The continuous maintenance system is documented at `wiki/concepts/vipinknowledge-maintenance-system.md`.
 
 ## Identity
 
@@ -69,3 +69,5 @@ The session lead remains responsible for verifying sub-agent claims before editi
 4. Search active agentmemory when past state matters.
 5. Inspect relevant skill metadata and read matched `SKILL.md`.
 6. Work within the user's requested scope and validate before reporting completion.
+
+For whole-computer upkeep, run `python scripts/wiki.py maintain --scope whole-computer --json` first, then make only curated scoped wiki/skill/doc updates when evidence changed.

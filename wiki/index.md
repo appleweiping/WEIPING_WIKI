@@ -80,6 +80,7 @@ This is the main catalog of the wiki.
 - [[agent-collaboration-tone-and-model-roles]] - User-facing collaboration rule for warmer partner language, Codex parallel selves, Opus/Sonnet roles, and DeepSeek Pro/Flash preferences.
 - [[agentmemory-first-agent-collaboration]] - Active collaboration model using agentmemory for memory, signals, actions, and handoffs while keeping the wiki as public crystallization.
 - [[implicit-skill-routing]] - Rule that agents should choose relevant skills from task intent and skill metadata, not only explicit user skill names.
+- [[vipinknowledge-maintenance-system]] - Continuous maintenance system for whole-computer project routing, weekly reports, skill self-upgrades, and scoped auto commit/push gates.
 - [[whole-computer-project-map]] - First-stop routing map for whole-computer maintenance across C/D/G drives, importance-based depth, active roots, archives, and safety boundaries.
 - [[d-drive-project-map]] - First-stop routing map for D-drive agent infrastructure, public exports, private runtime state, and research isolation.
 - [[local-active-project-roots]] - Detailed launch map for active non-research local project roots, including entry docs and safety boundaries.

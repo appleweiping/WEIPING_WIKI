@@ -15,7 +15,7 @@ The wiki is the public crystallization layer. Day-to-day agent memory and collab
 | Vipin | Open Codex, Claude Code, or OpenCode | Talk naturally. Agents choose skills, use agentmemory, update the wiki, and make scoped commits when useful. |
 | A future agent | Read `AGENTS.md` | For whole-computer maintenance or local project routing, read `wiki/concepts/whole-computer-project-map.md`; for D-drive infrastructure detail, read `wiki/concepts/d-drive-project-map.md`; then check `wiki/index.md`, `wiki/catalog.json`, and recent `wiki/log.md`; use agentmemory for active recall/collaboration. |
 | A human reader | Open `wiki/index.md` | Follow entities, concepts, sources, analyses, and saved query pages. |
-| A maintainer | Run `python scripts/wiki.py health` | Rebuild catalog and lint before committing public wiki changes. |
+| A maintainer | Run `python scripts/wiki.py maintain --scope whole-computer --json` | Review the ignored maintenance report, make curated updates only when evidence changed, then validate before committing. |
 
 ## What This Repo Holds
 
@@ -65,8 +65,11 @@ python scripts/wiki.py health
 python scripts/wiki.py catalog
 python scripts/wiki.py lint
 python scripts/wiki.py search "agentmemory"
+python scripts/wiki.py context L1 --query "whole-computer maintenance"
+python scripts/wiki.py maintain --scope whole-computer --json
 powershell .\scripts\computer-inventory.ps1
 powershell .\scripts\wiki-maintenance-audit.ps1
+powershell .\scripts\wiki-maintain.ps1 -Scope whole-computer -Json
 ```
 
 Compatibility wrappers still exist for older workflows, but `scripts/wiki.py` is the canonical surface.
@@ -89,6 +92,7 @@ Compatibility wrappers still exist for older workflows, but `scripts/wiki.py` is
 - Stage only scoped files. Existing unrelated dirty work belongs to its owner.
 - Infrastructure changes must update the relevant operating docs in the same commit.
 - Whole-computer maintenance, local project routing, or file-organization work should start from [whole-computer project map](wiki/concepts/whole-computer-project-map.md); D-drive infrastructure detail stays in [D-drive project map](wiki/concepts/d-drive-project-map.md) so agent runtime cleanup stays separate from research experiments.
+- Continuous VipinKnowledge maintenance is documented in [VipinKnowledge maintenance system](wiki/concepts/vipinknowledge-maintenance-system.md). Weekly automation should report first, update only curated scoped files, validate, then commit and push when real evidence changed.
 
 ## Related Repositories
 

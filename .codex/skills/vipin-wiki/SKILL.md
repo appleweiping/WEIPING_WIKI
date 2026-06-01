@@ -1,93 +1,86 @@
 ---
 name: vipin-wiki
-description: Maintain and evolve `vipin wiki` / `vipinknowledge` as a long-lived personal knowledge system and whole-computer project map. Use when Codex needs to answer from the wiki, ingest sources, refresh stale pages, maintain project/root maps across C:/D:/G:, classify important vs low-value files or folders, preserve research/project memory, update wiki indexes/logs/catalogs, protect public/private boundaries, or improve the wiki/skill itself so future agents do not need a fresh prompt.
+description: Maintain and upgrade `vipin wiki` / `vipinknowledge` as a long-lived personal knowledge system, whole-computer project map, and self-maintaining agent workflow. Use when Codex needs to answer from the wiki, ingest or crystallize sources, refresh stale pages, run weekly maintenance, maintain project/root maps across C:/D:/G:, classify important vs low-value files or folders, protect public/private boundaries, update index/log/catalog, create or validate maintenance automations, or improve this skill so future agents do not need a fresh prompt.
 ---
 
 # Vipin Wiki
 
 ## Mission
 
-Maintain `vipin wiki` as a compounding knowledge system, not a one-off note dump.
-
-The skill has four jobs:
-
-1. Answer quickly from maintained wiki pages.
-2. Crystallize reusable knowledge into durable pages.
-3. Keep project maps current across the whole computer.
-4. Refresh old content when stronger evidence, changed project state, or better organization makes it stale.
+Keep `vipinknowledge` useful without a bespoke prompt. The system should answer from maintained knowledge, preserve reusable results, route future agents into the right local projects, and continuously improve its own workflow.
 
 ## First Moves
 
-1. Work from the repository root containing `AGENTS.md`, `.wiki-schema.md`, and `purpose.md`.
-2. Check `git status --short --branch`; do not stage unrelated local changes.
-3. Read `AGENTS.md`, `.wiki-schema.md`, and `purpose.md` before substantial maintenance, ingest, synthesis, or structural changes.
-4. For interpretation, prioritization, or recommendation work, also read `reader-context.md`.
-5. For whole-computer or local-project work, read `wiki/concepts/whole-computer-project-map.md`, then `wiki/topics/local-active-project-roots.md`, `wiki/concepts/d-drive-project-map.md`, and `wiki/topics/local-project-roots.md` if the task touches D-drive roots.
-6. Use `wiki/index.md`, `wiki/catalog.json`, and recent `wiki/log.md` as the lightweight route before opening broad source material.
+1. Work from the repo root containing `AGENTS.md`, `.wiki-schema.md`, and `purpose.md`.
+2. Run `git status --short --branch`; preserve unrelated dirty work.
+3. Read `AGENTS.md`, `.wiki-schema.md`, and `purpose.md` before substantial maintenance, ingest, skill, script, automation, or operating-rule edits.
+4. For whole-computer/project routing, read `wiki/concepts/whole-computer-project-map.md` first, then `wiki/concepts/d-drive-project-map.md`, `wiki/topics/local-active-project-roots.md`, and `wiki/topics/local-project-roots.md` as needed.
+5. For interpretation or prioritization, read `reader-context.md`.
+6. Search active agentmemory when past state can affect the task.
 
-## Operating Modes
+## Mode Router
 
-- **Query**: answer from maintained pages first; preserve reusable answers under `wiki/queries/`, `wiki/analyses/`, `wiki/comparisons/`, or an existing concept/topic page.
-- **Ingest**: treat `raw/` as immutable. Create or update source notes, then propagate durable facts into entities, concepts, topics, analyses, index, and log.
-- **Maintain / refresh**: compare old pages to live evidence, stronger sources, current project state, and current operating rules. Rewrite stale sections, merge duplicates, add supersession notes, and propose deletions when needed.
-- **Whole-computer project mapping**: classify roots by importance and sensitivity. Important active projects get detailed routing; low-value/system/cache/download roots get brief bucket summaries.
-- **Skill upgrade**: when this skill fails, feels prompt-dependent, or misses a repeatable workflow, update this skill and its reference files in the same maintenance pass.
+- **Query**: answer from `wiki/index.md`, `wiki/catalog.json`, `python scripts/wiki.py search`, and the smallest relevant maintained pages. Crystallize reusable answers.
+- **Ingest**: treat `raw/` as immutable; create/update source notes, then propagate durable facts into concepts, entities, topics, analyses, index, log, and catalog.
+- **Maintain**: compare current pages to live evidence, stronger sources, and current rules. Update existing pages before creating duplicates. Propose deletions only after explicit user approval.
+- **Whole-computer map**: shallow-scan all drives, classify roots by importance, deep-read only important roots, and keep low-value/system/cache/download roots as brief bucket summaries.
+- **Skill upgrade**: when this skill feels prompt-dependent, misses a repeatable step, or fails validation, update the skill and references in the same scoped maintenance pass.
+- **Automation run**: use `python scripts/wiki.py maintain --scope whole-computer --json` as the canonical report, then make curated wiki/skill/doc updates only when evidence changed.
 
-## Importance-Based Depth
+## Whole-Computer Depth
 
-Use this depth policy for computer/project inventory:
+Use importance tiers before opening files:
 
-| Tier | What qualifies | Wiki depth |
+| Tier | Qualifies | Depth |
 | --- | --- | --- |
-| Tier 0: operating contract | `vipin wiki`, `AGENTS.md`, skill roots, agentmemory/devtools/agent-resources | Detailed page, current commands, safety gates, update rules, links, log entry |
-| Tier 1: active projects | research workbenches, active product/app/game/healthcare/company repos | Dedicated entity/topic page or refreshed section with purpose, root, status, entry docs, safety boundaries |
-| Tier 2: useful archives | portfolio, coursework, study archives, old project roots, media packages | Summary with content nature, discovery clues, and edit caution |
-| Tier 3: bulk/system/noise | OS folders, caches, downloads, binaries, package stores, temp dirs | One-line bucket summary; do not deep-read unless explicitly asked |
-| Private/sensitive | credentials, account state, medical/financial/private docs, raw private chats | Private-only minimal metadata or no public record |
+| Tier 0 | `vipin wiki`, operating docs, skill roots, agentmemory, `D:/devtools`, `D:/agent-resources` | Detailed routing, commands, safety gates, update rules, log/catalog/index changes |
+| Tier 1 | Active research/product/app/game/health/company repos | Dedicated page or detailed section with purpose, root, status, entry docs, safety boundary |
+| Tier 2 | Portfolio, coursework, study archives, old projects, media packages | Public-safe summary and discovery clues |
+| Tier 3 | OS folders, caches, downloads, binaries, package stores, temp dirs | One-line bucket summary; do not deep-read unless asked |
+| Private/sensitive | Credentials, private chats/docs, account state, medical/financial records | Private-only minimal metadata or no public record |
 
-When unsure, start shallow and promote a root to more detail only after evidence shows repeated use, active work, or high consequence.
+Read `references/whole-computer-depth.md` before broad inventory or local organization work.
 
-## Whole-Computer Maintenance Loop
+## Recurring Maintenance
 
-For recurring maintenance, run this loop:
+Default cadence is weekly Tuesday afternoon with `gpt-5.5` and high reasoning. Automation may commit and push only after scoped curated changes and validation.
 
-1. **Route**: identify the target drive/root and importance tier.
-2. **Inspect**: read the smallest live evidence that proves current state. Use `scripts/computer-inventory.ps1` for shallow machine maps.
-3. **Compare**: check existing wiki pages for stale paths, stale status, duplicates, weak claims, or missing links.
-4. **Refresh**: update existing pages before creating new ones. Mark superseded history instead of blindly deleting.
-5. **Index**: update `wiki/index.md`, section homes, and `wiki/catalog.json`.
-6. **Log**: append `wiki/log.md` with what changed and why.
-7. **Validate**: run the narrowest relevant validation.
-8. **Commit**: stage only scoped files, commit, and push unless the user explicitly asks not to.
+Run:
 
-Read `references/maintenance-model.md` when doing a broad refresh, whole-computer inventory, stale-page cleanup, or skill iteration.
+```powershell
+python scripts/wiki.py maintain --scope whole-computer --json
+python scripts/wiki.py catalog
+python scripts/wiki.py lint
+python scripts/wiki.py health --json
+powershell .\scripts\Test-PrePushSafety.ps1
+git diff --check
+```
+
+Read `references/weekly-maintenance-runbook.md` for automation behavior and `references/safety-and-automation.md` for commit/push gates.
+
+## Self-Upgrade Loop
+
+Upgrade this skill when:
+
+- a user has to explain a workflow that should be automatic
+- a future agent would need to invent a prompt to maintain the wiki
+- a maintenance report shows repeated manual triage
+- validation, safety, or automation rules are stale
+- the whole-computer map gains a new important root or risk boundary
+
+Keep `SKILL.md` compact. Put detailed procedures in `references/`, scripts in `scripts/`, and user-facing docs in `wiki/`. Regenerate/validate `agents/openai.yaml` when trigger wording changes. Read `references/skill-upgrade-loop.md` before editing this skill.
 
 ## Safety Rules
 
-- Default to the public wiki layer. Use private layers only when the user explicitly asks for private material or the task truly requires it.
-- Never expose secrets, tokens, private chats, credentials, private account state, sensitive documents, or raw private material through public pages, public indexes, public logs, or staged Git content.
-- Do not move, rewrite, or clean research experiment code, datasets, checkpoints, server logs, or result files during general wiki/infrastructure maintenance.
-- For external project edits, rescan the live repo, read its own instructions, and check its `git status` first.
-- Deletions require explicit user approval after a concrete deletion proposal.
+- Do not edit external projects during whole-computer maintenance; read only entry evidence unless the user explicitly asks for project work.
+- Never expose secrets, tokens, credentials, private chats, account state, sensitive documents, raw private material, logs, DBs, or bulky artifacts in public pages or Git.
+- Do not move, rewrite, or clean research experiment code, datasets, checkpoints, server logs, or result files during general wiki maintenance.
+- Keep reports in ignored `.wiki-tmp/vipinknowledge-maintenance/`; commit curated wiki/skill/script/doc changes only.
+- If validation fails, stop before commit/push and leave a clear report.
 
-## Page And Log Conventions
+## Canonical Outputs
 
-- Use lowercase kebab-case filenames.
-- Use YAML frontmatter when practical: `title`, `type`, `status`, `created`, `updated`, `tags`, `source_files`, `source_pages`.
-- Mark non-trivial claims with `EXTRACTED`, `INFERRED`, `AMBIGUOUS`, or `UNVERIFIED`.
-- Use Obsidian links like `[[page-name]]`.
-- Append log entries as `## [YYYY-MM-DD HH:MM] operation | title`.
-
-## Useful Commands
-
-```powershell
-python scripts/wiki.py status
-python scripts/wiki.py search "query text"
-python scripts/wiki.py catalog
-python scripts/wiki.py lint
-powershell .\scripts\computer-inventory.ps1
-powershell .\scripts\wiki-maintenance-audit.ps1
-powershell .\scripts\Test-PrePushSafety.ps1
-```
-
-After durable wiki, script, skill, or site changes, run validation, stage only scoped files, commit, and push when appropriate.
+- Updated wiki pages with YAML frontmatter and confidence labels where useful.
+- Updated `wiki/index.md`, `wiki/log.md`, and `wiki/catalog.json`.
+- Scoped commits that exclude unrelated dirty work.
+- Agentmemory save for important decisions, findings, and next steps when available.

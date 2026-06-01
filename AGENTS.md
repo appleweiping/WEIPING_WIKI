@@ -40,6 +40,7 @@ The active collaboration layer is `agentmemory`, not Agent Hub.
 - Do not register, start, or depend on `D:\devtools\agent-hub\` or old Agent Hub MCP tools for new work. Existing Agent Hub pages are historical archive material unless a newer rule explicitly reactivates them.
 - Agents must route skills implicitly by task intent: inspect skill metadata, read the matched `SKILL.md`, and follow it before improvising on non-trivial work.
 - For whole-computer maintenance, project routing, local file organization, or old-content refresh tasks, read [[whole-computer-project-map]] first; use [[d-drive-project-map]] for D-drive infrastructure detail and research-isolation boundaries.
+- `vipinknowledge` continuous maintenance uses the `vipin-wiki` skill and `python scripts/wiki.py maintain --scope whole-computer --json` as the report-first command. Weekly automation may commit/push only scoped validated wiki/skill/script/doc changes when live evidence changed.
 
 ## Mission
 
@@ -729,6 +730,8 @@ python scripts/wiki.py <command> [--root <path>] [options]
 | `catalog` | Rebuild wiki/catalog.json | After page changes, before commit |
 | `lint` | Check broken links, orphans, leaks | Before push |
 | `search <query>` | Full-text search across wiki | Finding related pages |
+| `context <level>` | Build layered context packs | Handoffs, partner review, targeted retrieval |
+| `maintain --scope whole-computer` | Build ignored maintenance report with git, agentmemory, inventory, audit, health, and recommendations | Weekly `vipinknowledge` maintenance and broad project-map refresh |
 
 Rules:
 - All agents must use `python scripts/wiki.py` as the primary automation tool, regardless of whether they run on Windows, Linux, or CI.

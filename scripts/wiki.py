@@ -7,6 +7,7 @@ Usage:
     python scripts/wiki.py lint [--json]
     python scripts/wiki.py search <query> [--top N]
     python scripts/wiki.py context <level> [--query Q]
+    python scripts/wiki.py maintain --scope whole-computer [--json]
     python scripts/wiki.py health [--json] [--fix]
 
 All commands accept --root <path> (defaults to repo root).
@@ -14,10 +15,15 @@ All commands accept --root <path> (defaults to repo root).
 from __future__ import annotations
 
 import argparse
+import datetime as dt
+import importlib.util
 import json
 import os
+import re
 import subprocess
 import sys
+import urllib.error
+import urllib.request
 from pathlib import Path
 
 # Ensure scripts/ is on path for wiki_core import
@@ -40,7 +46,13 @@ from wiki_core import (
 
 def cmd_status(args):
     """Show wiki status summary."""
-    from wiki_status import print_status
+    status_module = Path(__file__).with_name("wiki-status.py")
+    spec = importlib.util.spec_from_file_location("wiki_status", status_module)
+    if spec is None or spec.loader is None:
+        raise RuntimeError(f"Cannot load {status_module}")
+    module = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(module)
+    print_status = module.print_status
     status = build_status(resolve_root(args.root))
     if args.json:
         print(json.dumps(status, ensure_ascii=False, indent=2))
@@ -99,9 +111,40 @@ def cmd_search(args):
             print(f"   {path}")
 
 
-def cmd_health(args):
-    """Comprehensive health check — combines status, lint, metadata validation, and quality tiers."""
+def cmd_context(args):
+    """Build layered context packs through the shared context script."""
     root = resolve_root(args.root)
+    context_module = Path(__file__).with_name("wiki-context.py")
+    spec = importlib.util.spec_from_file_location("wiki_context", context_module)
+    if spec is None or spec.loader is None:
+        raise RuntimeError(f"Cannot load {context_module}")
+    module = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(module)
+
+    level = args.level.lower()
+    if level == "l0":
+        output = module.l0_pack(root)
+    elif level == "l1":
+        output = module.l1_pack(root)
+        if args.query:
+            output = output.rstrip() + "\n\n---\n\n" + module.query_pack(root, args.query, args.top)
+    elif level in {"l2", "query"}:
+        if not args.query:
+            raise SystemExit("context L2/query requires --query")
+        output = module.query_pack(root, args.query, args.top)
+    elif level in {"l3", "page"}:
+        page_id = args.page or args.query
+        if not page_id:
+            raise SystemExit("context L3/page requires --page or --query <page-id>")
+        output = module.page_pack(root, page_id)
+    else:
+        raise SystemExit("level must be one of L0, L1, L2, L3, query, page")
+
+    print(output, end="")
+
+
+def build_health_report(root: Path) -> dict:
+    """Build the health report used by `health` and `maintain`."""
     report = {}
 
     # 1. Basic status
@@ -198,6 +241,14 @@ def cmd_health(args):
             "large_scripts": sorted(large_scripts, key=lambda x: -x["size_kb"]),
         }
 
+    return report
+
+
+def cmd_health(args):
+    """Comprehensive health check — combines status, lint, metadata validation, and quality tiers."""
+    root = resolve_root(args.root)
+    report = build_health_report(root)
+
     # Output
     if args.json:
         print(json.dumps(report, ensure_ascii=False, indent=2))
@@ -238,6 +289,212 @@ def cmd_health(args):
             print(f"- {s['file']} ({s['size_kb']} KB)")
 
 
+def _run_capture(command: list[str], root: Path, timeout: int = 60) -> dict:
+    try:
+        result = subprocess.run(
+            command,
+            capture_output=True,
+            text=True,
+            cwd=root,
+            timeout=timeout,
+            encoding="utf-8",
+            errors="replace",
+        )
+        return {
+            "command": command,
+            "exit_code": result.returncode,
+            "stdout": result.stdout,
+            "stderr": result.stderr,
+        }
+    except Exception as exc:
+        return {
+            "command": command,
+            "exit_code": None,
+            "stdout": "",
+            "stderr": str(exc),
+        }
+
+
+def _agentmemory_health(timeout: int = 4) -> dict:
+    url = "http://localhost:3111/agentmemory/health"
+    try:
+        with urllib.request.urlopen(url, timeout=timeout) as response:
+            payload = json.loads(response.read().decode("utf-8", errors="replace"))
+        health = payload.get("health", payload)
+        return {
+            "available": True,
+            "status": payload.get("status") or health.get("status") or "unknown",
+            "version": payload.get("version"),
+            "connection_state": health.get("connectionState"),
+            "alerts": health.get("alerts", []),
+            "notes": health.get("notes", []),
+        }
+    except (urllib.error.URLError, TimeoutError, json.JSONDecodeError) as exc:
+        return {
+            "available": False,
+            "status": "degraded",
+            "error": str(exc),
+        }
+
+
+def _first_lines(text: str, limit: int = 80) -> list[str]:
+    return text.splitlines()[:limit]
+
+
+def _parse_audit_summary(text: str) -> dict:
+    summary: dict[str, int] = {}
+    for line in text.splitlines():
+        match = re.match(r"^-\s+(.+?):\s+(\d+)\s*$", line.strip())
+        if match:
+            key = match.group(1).lower().replace(" ", "_").replace("`", "")
+            summary[key] = int(match.group(2))
+    return summary
+
+
+def _parse_inventory_summary(text: str) -> dict:
+    drives = []
+    top_levels = []
+    in_drives = False
+    for line in text.splitlines():
+        if line.startswith("## Drives"):
+            in_drives = True
+            continue
+        if in_drives and line.startswith("## "):
+            in_drives = False
+        if in_drives and line.startswith("| ") and not line.startswith("| ---") and "Drive" not in line:
+            drives.append(line)
+        if line.startswith("## Top Level: "):
+            top_levels.append(line.replace("## Top Level: ", ""))
+    return {"drives": drives, "top_level_sections": top_levels}
+
+
+def _maintenance_recommendations(report: dict) -> list[str]:
+    recommendations = []
+    if not report["agentmemory"].get("available"):
+        recommendations.append("Agentmemory is unavailable; continue from wiki/git evidence and note degraded recall.")
+    if report["wiki_health"].get("catalog_status") != "fresh":
+        recommendations.append("Rebuild wiki/catalog.json before committing curated wiki changes.")
+    if report["wiki_health"].get("lint_total", 0) > 0:
+        recommendations.append("Fix lint issues before auto commit/push.")
+    audit = report.get("wiki_maintenance_audit", {}).get("summary", {})
+    if audit.get("pages_mentioning_agent_hub", 0) > 0:
+        recommendations.append("Review Agent Hub mentions and keep only clearly historical references.")
+    if audit.get("typed_pages_missing_counterpoints_section", 0) > 0:
+        recommendations.append("Triage missing Counterpoints sections; update high-value current pages first.")
+    dirty = report.get("git", {}).get("dirty_files", [])
+    if dirty:
+        recommendations.append("Preserve unrelated dirty work; stage only scoped maintenance files.")
+    if not recommendations:
+        recommendations.append("No immediate maintenance blockers detected; avoid noisy commits unless live evidence changed.")
+    return recommendations
+
+
+def _maintenance_markdown(report: dict) -> str:
+    lines = [
+        "# VipinKnowledge Maintenance Report",
+        "",
+        f"- Generated: {report['generated_at']}",
+        f"- Scope: {report['scope']}",
+        f"- Root: {report['root']}",
+        f"- Agentmemory: {report['agentmemory'].get('status')} (available={report['agentmemory'].get('available')})",
+        f"- Catalog: {report['wiki_health'].get('catalog_status')}",
+        f"- Lint total: {report['wiki_health'].get('lint_total')}",
+        f"- Git dirty files: {len(report['git'].get('dirty_files', []))}",
+        "",
+        "## Recommendations",
+        "",
+    ]
+    lines.extend(f"- {item}" for item in report["recommendations"])
+    lines.extend(["", "## Inventory Preview", ""])
+    lines.extend(report["computer_inventory"]["preview"])
+    lines.extend(["", "## Wiki Maintenance Audit Preview", ""])
+    lines.extend(report["wiki_maintenance_audit"]["preview"])
+    return "\n".join(lines).rstrip() + "\n"
+
+
+def cmd_maintain(args):
+    """Dry-run maintenance report for vipinknowledge whole-computer upkeep."""
+    root = resolve_root(args.root)
+    if args.scope != "whole-computer":
+        raise SystemExit("Only --scope whole-computer is supported.")
+
+    timestamp = dt.datetime.now().astimezone().isoformat(timespec="seconds")
+    safe_stamp = re.sub(r"[^0-9A-Za-z]+", "-", timestamp).strip("-")
+    artifact_dir = root / ".wiki-tmp" / "vipinknowledge-maintenance"
+    artifact_dir.mkdir(parents=True, exist_ok=True)
+
+    git_status = _run_capture(["git", "status", "--short", "--branch"], root, timeout=10)
+    git_diff_names = _run_capture(["git", "diff", "--name-only"], root, timeout=10)
+    inventory = _run_capture(
+        [
+            "powershell",
+            "-NoProfile",
+            "-ExecutionPolicy",
+            "Bypass",
+            "-File",
+            str(root / "scripts" / "computer-inventory.ps1"),
+            "-MaxTopLevelItems",
+            str(args.max_top_level_items),
+        ],
+        root,
+        timeout=120,
+    )
+    audit = _run_capture(
+        [
+            "powershell",
+            "-NoProfile",
+            "-ExecutionPolicy",
+            "Bypass",
+            "-File",
+            str(root / "scripts" / "wiki-maintenance-audit.ps1"),
+            "-MaxItems",
+            str(args.max_audit_items),
+        ],
+        root,
+        timeout=120,
+    )
+
+    report = {
+        "generated_at": timestamp,
+        "scope": args.scope,
+        "root": str(root),
+        "artifact_dir": str(artifact_dir),
+        "git": {
+            "status_output": git_status["stdout"].splitlines(),
+            "dirty_files": [line for line in git_status["stdout"].splitlines() if line and not line.startswith("##")],
+            "diff_name_only": [line for line in git_diff_names["stdout"].splitlines() if line.strip()],
+            "status_error": git_status["stderr"],
+        },
+        "agentmemory": _agentmemory_health(),
+        "wiki_health": build_health_report(root),
+        "computer_inventory": {
+            "exit_code": inventory["exit_code"],
+            "summary": _parse_inventory_summary(inventory["stdout"]),
+            "preview": _first_lines(inventory["stdout"], 80),
+            "stderr": inventory["stderr"],
+        },
+        "wiki_maintenance_audit": {
+            "exit_code": audit["exit_code"],
+            "summary": _parse_audit_summary(audit["stdout"]),
+            "preview": _first_lines(audit["stdout"], 80),
+            "stderr": audit["stderr"],
+        },
+    }
+    report["recommendations"] = _maintenance_recommendations(report)
+
+    json_path = artifact_dir / f"{safe_stamp}.json"
+    md_path = artifact_dir / f"{safe_stamp}.md"
+    json_path.write_text(json.dumps(report, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+    md_path.write_text(_maintenance_markdown(report), encoding="utf-8")
+    report["artifacts"] = {"json": str(json_path), "markdown": str(md_path)}
+
+    if args.json:
+        print(json.dumps(report, ensure_ascii=False, indent=2))
+    else:
+        print(_maintenance_markdown(report), end="")
+        print(f"\nArtifacts:\n- {json_path}\n- {md_path}")
+
+
 def main():
     if hasattr(sys.stdout, "reconfigure"):
         sys.stdout.reconfigure(encoding="utf-8")
@@ -266,6 +523,20 @@ def main():
     p.add_argument("query", help="Search query")
     p.add_argument("--top", type=int, default=10)
 
+    # context
+    p = sub.add_parser("context", help="Build layered context packs")
+    p.add_argument("level", help="L0, L1, L2, L3, query, or page")
+    p.add_argument("--query", help="Search query or page id, depending on level")
+    p.add_argument("--page", help="Page id for L3/page context")
+    p.add_argument("--top", type=int, default=6)
+
+    # maintain
+    p = sub.add_parser("maintain", help="Build a VipinKnowledge maintenance report")
+    p.add_argument("--scope", choices=["whole-computer"], default="whole-computer")
+    p.add_argument("--json", action="store_true")
+    p.add_argument("--max-top-level-items", type=int, default=40)
+    p.add_argument("--max-audit-items", type=int, default=25)
+
     # health
     p = sub.add_parser("health", help="Comprehensive health check")
     p.add_argument("--json", action="store_true")
@@ -278,6 +549,8 @@ def main():
         "catalog": cmd_catalog,
         "lint": cmd_lint,
         "search": cmd_search,
+        "context": cmd_context,
+        "maintain": cmd_maintain,
         "health": cmd_health,
     }
 

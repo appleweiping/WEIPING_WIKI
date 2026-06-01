@@ -1068,3 +1068,20 @@ tags:
   - Removed tracked `memory/sessions/*.md` dumps from the public Git index while leaving local files in place.
   - Removed active Agent Hub state dependencies from the wiki dashboard/token scripts; they now use agentmemory/default local token state and only read legacy metrics from an explicit environment variable.
   - Removed a secret-bearing key memory file from public Git, rewrote `vipin-wiki` history, force-pushed the clean history, and verified a fresh remote clone has zero exact-key/history hits.
+## [2026-06-01 16:42] maintenance | vipinknowledge continuous maintenance system
+
+- Pages created or updated:
+  - [[vipinknowledge-maintenance-system]]
+  - [[index]]
+  - [[log]]
+  - `.codex/skills/vipin-wiki/SKILL.md`
+  - `.claude/skills/vipin-wiki/SKILL.md`
+  - `scripts/wiki.py`
+  - `scripts/wiki-maintain.ps1`
+- Sources used:
+  - User-approved continuous maintenance upgrade plan
+  - Live repository operating docs and maintenance scripts
+- Notes:
+  - Added the canonical `python scripts/wiki.py maintain --scope whole-computer --json` report command.
+  - Rebuilt `vipin-wiki` as a mode-based orchestrator with whole-computer depth, weekly maintenance, safety, automation, and self-upgrade references.
+  - Recorded scoped automation gates: report first, update curated wiki/skill/docs only when evidence changed, validate, then stage and push only scoped files.
