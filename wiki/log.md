@@ -1141,3 +1141,15 @@ tags:
 - Notes:
   - Recorded that Obsidian core is proprietary, so this project adapts documented behavior and open file formats instead of claiming source-level parity.
   - Added real local-first artifacts for opening the repository as an Obsidian vault: settings, Bases, Canvas, bookmarks, workspaces, generated dashboard, command page, slides home, daily/web-clip templates, and CLI reports for backlinks, outgoing links, search, quick switcher, outline, preview, footnotes, tags, properties, tasks, word count, random notes, external links, format audit, slides, and daily/unique notes.
+
+## [2026-06-01 17:55] infrastructure | devtools agentmemory cleanup and mem0 mapping
+
+- Pages created or updated:
+  - [[agentmemory-first-agent-collaboration]]
+  - [[log]]
+- Sources used:
+  - Local implementation pass over `D:\devtools`, `D:\devtools-public`, upstream `rohitg00/agentmemory`, and upstream `mem0ai/mem0`.
+- Notes:
+  - Recorded that `agentmemory` remains the active local runtime while mem0 is absorbed as an architecture reference, not maintained as a fork.
+  - Captured the service contract: agentmemory 0.9.24, iii 0.11.2, `http://localhost:3111`, all tools, slots enabled, and MCP tool-surface health checks.
+  - Marked OpenMemory, old Agent Hub mailbox/state paths, tracked runtime DB/log files, and old C-drive npm agentmemory paths as inactive surfaces.

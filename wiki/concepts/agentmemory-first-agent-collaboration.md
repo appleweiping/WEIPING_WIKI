@@ -41,6 +41,16 @@ Agents use agentmemory for active recall, memory saves, cross-agent signals, act
 5. Save important decisions or lessons to agentmemory.
 6. Crystallize stable public-safe knowledge into `wiki/` when it should survive outside the operational memory layer.
 
+## Devtools Implementation Boundary
+
+As of 2026-06-01, `D:\devtools` keeps `agentmemory` as the active local runtime and treats `mem0ai/mem0` as an architecture reference rather than a bundled fork.
+
+- Local runtime target: `@agentmemory/agentmemory` `0.9.24`, `iii.exe` `0.11.2`, service on `http://localhost:3111`, viewer on `http://localhost:3113`.
+- Required service flags: `AGENTMEMORY_TOOLS=all` and `AGENTMEMORY_SLOTS=true`.
+- Health checks should verify `/agentmemory/mcp/tools`; a very small tool count means the client has fallen back to standalone MCP instead of the full server-backed surface.
+- Mem0 concepts absorbed into the local workflow: additive fact capture, explicit project/entity/agent context, agent-generated facts, hybrid retrieval, and temporal current-state notes.
+- OpenMemory, old Agent Hub mailboxes, tracked DB/log files, and old C-drive npm agentmemory paths are not active interfaces.
+
 ## Safety Boundaries
 
 - Do not store secrets, API keys, credentials, private chats, sensitive personal data, or raw private documents in agentmemory.
