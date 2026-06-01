@@ -57,7 +57,7 @@ Output: `refine-logs/FEASIBILITY.md`
 3. **Define the evaluation protocol** (metrics, datasets, baselines, statistical tests)
 4. **Position in the field**: One paragraph explaining where this sits relative to SOTA
 
-Quality check: Show to Codex for cross-model review (invoke via hub_invoke_gpt55 or hub_send_message). Codex must score ≥7/10 on novelty and feasibility.
+Quality check: Show to Codex for cross-model review using an explicit context pack through agentmemory signals/actions, or by handing the same context to the current Codex session. Codex must score >=7/10 on novelty and feasibility.
 
 Output: `refine-logs/RESEARCH_QUESTION.md`
 

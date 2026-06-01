@@ -81,7 +81,7 @@ Create `refine-logs/EXPERIMENT_TRACKER.md`:
 ## Phase 6 — Cross-Model Review
 
 Submit plan to Codex (GPT-5.5) for audit:
-- Send via `hub_send_message` or `hub_invoke_gpt55`
+- Send an explicit context pack through agentmemory signals/actions, or hand the same context to the current Codex session
 - Codex scores: Evidence (1-10), Rigor (1-10), Gates (1-10), Feasibility (1-10), Paper-potential (1-10)
 - If any score <6, iterate on that dimension
 

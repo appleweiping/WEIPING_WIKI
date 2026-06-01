@@ -1032,3 +1032,4 @@ tags:
   - Marked Agent Hub as deprecated historical infrastructure.
   - Recorded agentmemory as the active collaboration/memory layer and markdown `memory/` as historical/superseded.
   - Added durable implicit skill-routing rules so agents invoke skills by task intent rather than waiting for explicit skill names.
+  - Replaced remaining active ARIS Claude skill handoff wording with agentmemory signals/actions and explicit context packs.

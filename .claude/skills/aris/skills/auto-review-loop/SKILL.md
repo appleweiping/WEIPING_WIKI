@@ -16,7 +16,7 @@ Before running:
 
 ## Phase 1 — Structured Review (Codex as Reviewer 1)
 
-Invoke Codex (via hub_invoke_gpt55 or hub_send_message) with the paper and this rubric:
+Invoke Codex with the paper and this rubric using an explicit context pack through agentmemory signals/actions, or by handing the same context to the current Codex session:
 
 ### Review Rubric (score 1-10 each)
 
@@ -58,7 +58,7 @@ If the kill argument is valid and unanswerable → the paper needs fundamental r
 
 ## Phase 3 — Sonnet Quick Scan (Reviewer 2)
 
-Invoke Sonnet (via hub_invoke_sonnet) for a fast second opinion:
+Invoke Sonnet for a fast second opinion using agentmemory signals/actions or an explicit current-session handoff:
 - Focus on: clarity, missing references, presentation issues
 - Sonnet is cost-effective for surface-level review
 

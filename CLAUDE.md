@@ -41,7 +41,7 @@ Research tasks must use the matching ARIS skill when one exists. README, archite
 | OpenCode | Independent CC-family entry point | May write when the user starts OpenCode directly. |
 | DeepSeek Pro / `鲸鱼` | Bulk text, translation, summarization, low-cost drafts | Advisory unless explicitly scoped otherwise. |
 
-Agent Hub is retired. Do not call `hub_*` tools or expect `D:\devtools\agent-hub` to be active. Use agentmemory signals/actions and git state for coordination.
+Agent Hub is retired. Do not call old Agent Hub MCP tools or expect `D:\devtools\agent-hub` to be active. Use agentmemory signals/actions and git state for coordination.
 
 ## CC Partner Preflight
 

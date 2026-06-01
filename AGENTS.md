@@ -37,7 +37,7 @@ The active collaboration layer is `agentmemory`, not Agent Hub.
 - Use agentmemory for active memory recall, persistent lessons, cross-agent signals, actions, and checkpoints.
 - Treat the repo-local markdown `memory/` tree as historical/superseded unless the task explicitly targets it.
 - Promote stable public-safe knowledge into `wiki/` pages, `wiki/index.md`, and `wiki/log.md`.
-- Do not register, start, or depend on `D:\devtools\agent-hub\` or `hub_*` tools for new work. Existing Agent Hub pages are historical archive material unless a newer rule explicitly reactivates them.
+- Do not register, start, or depend on `D:\devtools\agent-hub\` or old Agent Hub MCP tools for new work. Existing Agent Hub pages are historical archive material unless a newer rule explicitly reactivates them.
 - Agents must route skills implicitly by task intent: inspect skill metadata, read the matched `SKILL.md`, and follow it before improvising on non-trivial work.
 
 ## Mission
@@ -696,7 +696,7 @@ OpenCode has access to the same skill set as Claude Code (mattpocock-skills, lid
 
 ### Limitations
 
-- OpenCode does not depend on retired Agent Hub MCP tools (`hub_send_message`, `hub_invoke_sonnet`, etc.).
+- OpenCode does not depend on retired Agent Hub MCP tools.
 - OpenCode cannot invoke Haiku or Sonnet synchronously unless that route is separately configured.
 - For tasks that require multi-agent dispatch, prefer explicit context packs plus agentmemory signals/actions.
 

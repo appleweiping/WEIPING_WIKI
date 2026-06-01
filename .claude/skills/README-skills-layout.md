@@ -50,7 +50,7 @@ If a task is trivial and no workflow value is added, a skill is optional. If the
 
 `D:\devtools\agent-hub\` was a custom collaboration experiment. It is historical only.
 
-Do not add active `hub_*` tool instructions, Agent Hub daemon startup requirements, port `9800` dependencies, or `mcp_servers.agent_hub` registrations. Use agentmemory signals/actions plus git state instead.
+Do not add old Agent Hub tool instructions, daemon startup requirements, port `9800` dependencies, or MCP server registrations. Use agentmemory signals/actions plus git state instead.
 
 ## PixelCat / CC Health Check
 
