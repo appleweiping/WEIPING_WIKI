@@ -14,7 +14,7 @@ Read `AGENTS.md` first. This adapter makes Claude Code and OpenCode follow the s
 3. Read `wiki/concepts/d-drive-project-map.md`, `wiki/topics/local-active-project-roots.md`, and `wiki/topics/local-project-roots.md` when D-drive or active project roots are involved.
 4. Use `python scripts/wiki.py search "<query>"`, `wiki/index.md`, and `wiki/catalog.json` for retrieval.
 5. Use agentmemory for active recall/signals when available.
-6. For actual file moves, use `D:\agent-resources\skills\vipin\workstation-maintenance` to generate the manifest, type-grouped age-gated move plan, approved batch, and rollback artifacts.
+6. For actual file moves, use `D:\agent-resources\skills\vipin\workstation-maintenance` to generate the manifest, optional preflight, type-grouped age-gated move plan, approved batch, and rollback artifacts.
 
 ## Canonical Commands
 

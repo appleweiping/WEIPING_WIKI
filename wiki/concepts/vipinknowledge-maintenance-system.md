@@ -96,7 +96,7 @@ Use [[d-drive-project-map]] for D-drive infrastructure detail, [[local-active-pr
 
 Important roots should record path, purpose, current activity status, first-read files, safety boundary, related wiki pages, and last verified evidence. Low-value roots should stay as bucket summaries.
 
-If the work involves moving files, generate the workstation manifest and conservative move plan first. Live move plans defer recent files and cap batch sizes by default; update wiki pages after dry-run evidence or after an approved batch changes the filesystem. Public pages should summarize bucket-level state and safety rules, not raw sensitive file names.
+If the work involves moving files, generate the workstation manifest and conservative move plan first. Live move plans defer recent files and cap batch sizes by default; exact batches may be preflighted without moving files. Update wiki pages after dry-run evidence or after an approved batch changes the filesystem. Public pages should summarize bucket-level state and safety rules, not raw sensitive file names.
 
 ## Automation Contract
 
@@ -108,7 +108,7 @@ Automation may commit and push only after:
 - `powershell .\scripts\Test-PrePushSafety.ps1`
 - `git diff --check`
 
-Automation must stage only scoped wiki/skill/script/doc changes. It must not stage unrelated dirty work, ignored report artifacts, workstation manifests or move plans from `.wiki-tmp`, memory session dumps, raw private material, caches, generated runtime artifacts, or external project files.
+Automation must stage only scoped wiki/skill/script/doc changes. It must not stage unrelated dirty work, ignored report artifacts, workstation manifests, preflight manifests, move plans from `.wiki-tmp`, memory session dumps, raw private material, caches, generated runtime artifacts, or external project files.
 
 EXTRACTED: Obvious same-session or cross-chat wiki/raw/memory/doc outputs should not be left behind just because they look like adjacent dirty work. If inspection shows they are deliberate, public-safe, validated, and part of the user's ongoing knowledge work, include them in a scoped commit. Hold them back only when they are source-unclear, sensitive, conflicting, incomplete, external-project edits, or validation-failing.
 

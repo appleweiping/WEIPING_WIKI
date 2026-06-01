@@ -51,4 +51,4 @@ Use agentmemory as live operational memory when available. If unavailable, conti
 
 ## Workstation Manifests
 
-Keep workstation inventory, move-plan, applied-batch, and rollback artifacts in ignored local report directories such as `.wiki-tmp/workstation-maintenance/`. Do not stage them or publish raw sensitive filenames.
+Keep workstation inventory, preflight, move-plan, applied-batch, and rollback artifacts in ignored local report directories such as `.wiki-tmp/workstation-maintenance/`. Do not stage them or publish raw sensitive filenames.

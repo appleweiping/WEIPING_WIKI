@@ -1179,4 +1179,5 @@ tags:
   - Generated a dry-run workstation inventory with 3,026 classified entries and 669 low-risk move-eligible file candidates; `D:/Research` entries were 0.
   - Tightened move-plan generation to default to a 30-day age gate and 100-item batch cap: 531 old low-risk candidates remain executable, 138 recent candidates are deferred, and executable reparse points, directories, git worktree items, and recently modified files are all 0.
   - Generated 13 granular approval-candidate batches by file type and part number; no physical file move was executed.
+  - Added and tested non-moving batch preflight support; `batch-downloads-installers-old` preflight passed with 1 checked item and 0 moves.
   - Actual C/D file moves remain gated on explicit user approval of generated batch IDs.
