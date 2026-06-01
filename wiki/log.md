@@ -1113,3 +1113,27 @@ tags:
 - Notes:
   - Added the durable rule that deliberate, public-safe, validated wiki/raw/memory/doc outputs should be included in a scoped commit even when they were produced by another active chat.
   - Preserved the guard against committing source-unclear, sensitive, conflicting, incomplete, external-project, or validation-failing work.
+
+## [2026-06-01 17:28] maintenance | Obsidian-compatible vault upgrade
+
+- Pages created or updated:
+  - [[obsidian-feature-parity]]
+  - [[obsidian-dashboard]]
+  - [[bases/README]]
+  - [[index]]
+  - [[log]]
+  - `.obsidian/`
+  - `wiki/bases/*.base`
+  - `wiki/canvases/vipinknowledge-map.canvas`
+  - `wiki/_templates/daily.md`
+  - `wiki/_templates/web-clip.md`
+  - `scripts/wiki_obsidian.py`
+  - `scripts/wiki.py`
+  - `scripts/wiki_core.py`
+- Sources used:
+  - Obsidian official Help pages for core plugins, Bases, Properties, Web Clipper, and CLI.
+  - JSON Canvas 1.0 specification.
+  - Obsidian GitHub organization pages for open components such as JSON Canvas and Web Clipper.
+- Notes:
+  - Recorded that Obsidian core is proprietary, so this project adapts documented behavior and open file formats instead of claiming source-level parity.
+  - Added real local-first artifacts for opening the repository as an Obsidian vault: settings, Bases, Canvas, generated dashboard, daily/web-clip templates, and CLI reports for backlinks, outgoing links, tags, properties, tasks, and daily notes.

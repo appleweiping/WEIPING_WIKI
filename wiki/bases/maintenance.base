@@ -1,0 +1,16 @@
+filters:
+  and:
+    - or:
+      - file.hasTag("maintenance")
+      - file.hasTag("workflow")
+      - file.hasTag("agentmemory")
+      - file.hasTag("skills")
+views:
+  - type: table
+    name: Maintenance
+    order:
+      - file.name
+      - title
+      - status
+      - updated
+      - tags

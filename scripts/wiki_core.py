@@ -433,6 +433,11 @@ def lint_wiki(root: Path) -> dict:
         for link in page.links:
             if link in WIKI_EXCLUDE_STEMS:
                 continue
+            linked_file = link.split("#", 1)[0].split("|", 1)[0].strip()
+            if Path(linked_file).suffix and (
+                (root / "wiki" / linked_file).exists() or (root / linked_file).exists()
+            ):
+                continue
             if link in ambiguous:
                 ambiguous_links.add(f"{page.path} -> [[{link}]]")
                 continue

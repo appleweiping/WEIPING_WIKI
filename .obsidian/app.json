@@ -1,0 +1,8 @@
+{
+  "alwaysUpdateLinks": true,
+  "attachmentFolderPath": "raw/attachments",
+  "newFileLocation": "folder",
+  "newFileFolderPath": "wiki/inbox",
+  "promptDelete": false,
+  "showInlineTitle": true
+}

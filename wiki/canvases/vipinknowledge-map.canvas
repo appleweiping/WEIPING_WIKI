@@ -1,0 +1,456 @@
+{
+  "nodes": [
+    {
+      "id": "n0",
+      "type": "file",
+      "file": "home.md",
+      "x": 0,
+      "y": 0,
+      "width": 420,
+      "height": 180,
+      "color": "1"
+    },
+    {
+      "id": "n1",
+      "type": "file",
+      "file": "index.md",
+      "x": 520,
+      "y": 0,
+      "width": 420,
+      "height": 180,
+      "color": "2"
+    },
+    {
+      "id": "n2",
+      "type": "file",
+      "file": "log.md",
+      "x": 1040,
+      "y": 0,
+      "width": 420,
+      "height": 180,
+      "color": "3"
+    },
+    {
+      "id": "n3",
+      "type": "file",
+      "file": "concepts/vipinknowledge-maintenance-system.md",
+      "x": 1560,
+      "y": 0,
+      "width": 420,
+      "height": 180,
+      "color": "4"
+    },
+    {
+      "id": "n4",
+      "type": "file",
+      "file": "concepts/whole-computer-project-map.md",
+      "x": 0,
+      "y": 260,
+      "width": 420,
+      "height": 180,
+      "color": "5"
+    },
+    {
+      "id": "n5",
+      "type": "file",
+      "file": "concepts/d-drive-project-map.md",
+      "x": 520,
+      "y": 260,
+      "width": 420,
+      "height": 180,
+      "color": "6"
+    },
+    {
+      "id": "n6",
+      "type": "file",
+      "file": "topics/local-active-project-roots.md",
+      "x": 1040,
+      "y": 260,
+      "width": 420,
+      "height": 180,
+      "color": "1"
+    },
+    {
+      "id": "n7",
+      "type": "file",
+      "file": "topics/local-project-roots.md",
+      "x": 1560,
+      "y": 260,
+      "width": 420,
+      "height": 180,
+      "color": "2"
+    },
+    {
+      "id": "n8",
+      "type": "file",
+      "file": "concepts/research-project-workbench.md",
+      "x": 0,
+      "y": 520,
+      "width": 420,
+      "height": 180,
+      "color": "3"
+    },
+    {
+      "id": "n9",
+      "type": "file",
+      "file": "concepts/agentmemory-first-agent-collaboration.md",
+      "x": 520,
+      "y": 520,
+      "width": 420,
+      "height": 180,
+      "color": "4"
+    },
+    {
+      "id": "n10",
+      "type": "file",
+      "file": "concepts/implicit-skill-routing.md",
+      "x": 1040,
+      "y": 520,
+      "width": 420,
+      "height": 180,
+      "color": "5"
+    },
+    {
+      "id": "n11",
+      "type": "file",
+      "file": "concepts/agent-skill-installation-workflow.md",
+      "x": 1560,
+      "y": 520,
+      "width": 420,
+      "height": 180,
+      "color": "6"
+    }
+  ],
+  "edges": [
+    {
+      "id": "e0",
+      "fromNode": "n0",
+      "toNode": "n1",
+      "toEnd": "arrow"
+    },
+    {
+      "id": "e1",
+      "fromNode": "n0",
+      "toNode": "n2",
+      "toEnd": "arrow"
+    },
+    {
+      "id": "e2",
+      "fromNode": "n0",
+      "toNode": "n7",
+      "toEnd": "arrow"
+    },
+    {
+      "id": "e3",
+      "fromNode": "n1",
+      "toNode": "n11",
+      "toEnd": "arrow"
+    },
+    {
+      "id": "e4",
+      "fromNode": "n1",
+      "toNode": "n9",
+      "toEnd": "arrow"
+    },
+    {
+      "id": "e5",
+      "fromNode": "n1",
+      "toNode": "n5",
+      "toEnd": "arrow"
+    },
+    {
+      "id": "e6",
+      "fromNode": "n1",
+      "toNode": "n10",
+      "toEnd": "arrow"
+    },
+    {
+      "id": "e7",
+      "fromNode": "n1",
+      "toNode": "n8",
+      "toEnd": "arrow"
+    },
+    {
+      "id": "e8",
+      "fromNode": "n1",
+      "toNode": "n3",
+      "toEnd": "arrow"
+    },
+    {
+      "id": "e9",
+      "fromNode": "n1",
+      "toNode": "n4",
+      "toEnd": "arrow"
+    },
+    {
+      "id": "e10",
+      "fromNode": "n1",
+      "toNode": "n0",
+      "toEnd": "arrow"
+    },
+    {
+      "id": "e11",
+      "fromNode": "n1",
+      "toNode": "n2",
+      "toEnd": "arrow"
+    },
+    {
+      "id": "e12",
+      "fromNode": "n1",
+      "toNode": "n6",
+      "toEnd": "arrow"
+    },
+    {
+      "id": "e13",
+      "fromNode": "n1",
+      "toNode": "n7",
+      "toEnd": "arrow"
+    },
+    {
+      "id": "e14",
+      "fromNode": "n2",
+      "toNode": "n11",
+      "toEnd": "arrow"
+    },
+    {
+      "id": "e15",
+      "fromNode": "n2",
+      "toNode": "n9",
+      "toEnd": "arrow"
+    },
+    {
+      "id": "e16",
+      "fromNode": "n2",
+      "toNode": "n5",
+      "toEnd": "arrow"
+    },
+    {
+      "id": "e17",
+      "fromNode": "n2",
+      "toNode": "n10",
+      "toEnd": "arrow"
+    },
+    {
+      "id": "e18",
+      "fromNode": "n2",
+      "toNode": "n8",
+      "toEnd": "arrow"
+    },
+    {
+      "id": "e19",
+      "fromNode": "n2",
+      "toNode": "n3",
+      "toEnd": "arrow"
+    },
+    {
+      "id": "e20",
+      "fromNode": "n2",
+      "toNode": "n4",
+      "toEnd": "arrow"
+    },
+    {
+      "id": "e21",
+      "fromNode": "n2",
+      "toNode": "n1",
+      "toEnd": "arrow"
+    },
+    {
+      "id": "e22",
+      "fromNode": "n2",
+      "toNode": "n2",
+      "toEnd": "arrow"
+    },
+    {
+      "id": "e23",
+      "fromNode": "n2",
+      "toNode": "n6",
+      "toEnd": "arrow"
+    },
+    {
+      "id": "e24",
+      "fromNode": "n2",
+      "toNode": "n7",
+      "toEnd": "arrow"
+    },
+    {
+      "id": "e25",
+      "fromNode": "n3",
+      "toNode": "n11",
+      "toEnd": "arrow"
+    },
+    {
+      "id": "e26",
+      "fromNode": "n3",
+      "toNode": "n9",
+      "toEnd": "arrow"
+    },
+    {
+      "id": "e27",
+      "fromNode": "n3",
+      "toNode": "n5",
+      "toEnd": "arrow"
+    },
+    {
+      "id": "e28",
+      "fromNode": "n3",
+      "toNode": "n10",
+      "toEnd": "arrow"
+    },
+    {
+      "id": "e29",
+      "fromNode": "n3",
+      "toNode": "n8",
+      "toEnd": "arrow"
+    },
+    {
+      "id": "e30",
+      "fromNode": "n3",
+      "toNode": "n4",
+      "toEnd": "arrow"
+    },
+    {
+      "id": "e31",
+      "fromNode": "n3",
+      "toNode": "n6",
+      "toEnd": "arrow"
+    },
+    {
+      "id": "e32",
+      "fromNode": "n3",
+      "toNode": "n7",
+      "toEnd": "arrow"
+    },
+    {
+      "id": "e33",
+      "fromNode": "n4",
+      "toNode": "n9",
+      "toEnd": "arrow"
+    },
+    {
+      "id": "e34",
+      "fromNode": "n4",
+      "toNode": "n5",
+      "toEnd": "arrow"
+    },
+    {
+      "id": "e35",
+      "fromNode": "n4",
+      "toNode": "n10",
+      "toEnd": "arrow"
+    },
+    {
+      "id": "e36",
+      "fromNode": "n4",
+      "toNode": "n8",
+      "toEnd": "arrow"
+    },
+    {
+      "id": "e37",
+      "fromNode": "n4",
+      "toNode": "n6",
+      "toEnd": "arrow"
+    },
+    {
+      "id": "e38",
+      "fromNode": "n4",
+      "toNode": "n7",
+      "toEnd": "arrow"
+    },
+    {
+      "id": "e39",
+      "fromNode": "n5",
+      "toNode": "n11",
+      "toEnd": "arrow"
+    },
+    {
+      "id": "e40",
+      "fromNode": "n5",
+      "toNode": "n9",
+      "toEnd": "arrow"
+    },
+    {
+      "id": "e41",
+      "fromNode": "n5",
+      "toNode": "n10",
+      "toEnd": "arrow"
+    },
+    {
+      "id": "e42",
+      "fromNode": "n5",
+      "toNode": "n8",
+      "toEnd": "arrow"
+    },
+    {
+      "id": "e43",
+      "fromNode": "n5",
+      "toNode": "n4",
+      "toEnd": "arrow"
+    },
+    {
+      "id": "e44",
+      "fromNode": "n5",
+      "toNode": "n7",
+      "toEnd": "arrow"
+    },
+    {
+      "id": "e45",
+      "fromNode": "n6",
+      "toNode": "n8",
+      "toEnd": "arrow"
+    },
+    {
+      "id": "e46",
+      "fromNode": "n6",
+      "toNode": "n4",
+      "toEnd": "arrow"
+    },
+    {
+      "id": "e47",
+      "fromNode": "n6",
+      "toNode": "n7",
+      "toEnd": "arrow"
+    },
+    {
+      "id": "e48",
+      "fromNode": "n7",
+      "toNode": "n5",
+      "toEnd": "arrow"
+    },
+    {
+      "id": "e49",
+      "fromNode": "n7",
+      "toNode": "n8",
+      "toEnd": "arrow"
+    },
+    {
+      "id": "e50",
+      "fromNode": "n7",
+      "toNode": "n4",
+      "toEnd": "arrow"
+    },
+    {
+      "id": "e51",
+      "fromNode": "n7",
+      "toNode": "n6",
+      "toEnd": "arrow"
+    },
+    {
+      "id": "e52",
+      "fromNode": "n9",
+      "toNode": "n10",
+      "toEnd": "arrow"
+    },
+    {
+      "id": "e53",
+      "fromNode": "n10",
+      "toNode": "n11",
+      "toEnd": "arrow"
+    },
+    {
+      "id": "e54",
+      "fromNode": "n10",
+      "toNode": "n9",
+      "toEnd": "arrow"
+    }
+  ]
+}

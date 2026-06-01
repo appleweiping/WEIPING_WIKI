@@ -67,6 +67,8 @@ python scripts/wiki.py lint
 python scripts/wiki.py search "agentmemory"
 python scripts/wiki.py context L1 --query "whole-computer maintenance"
 python scripts/wiki.py maintain --scope whole-computer --json
+python scripts/wiki.py obsidian export --json
+python scripts/wiki.py obsidian backlinks vipinknowledge-maintenance-system
 powershell .\scripts\computer-inventory.ps1
 powershell .\scripts\wiki-maintenance-audit.ps1
 powershell .\scripts\wiki-maintain.ps1 -Scope whole-computer -Json
@@ -93,6 +95,7 @@ Compatibility wrappers still exist for older workflows, but `scripts/wiki.py` is
 - Infrastructure changes must update the relevant operating docs in the same commit.
 - Whole-computer maintenance, local project routing, or file-organization work should start from [whole-computer project map](wiki/concepts/whole-computer-project-map.md); D-drive infrastructure detail stays in [D-drive project map](wiki/concepts/d-drive-project-map.md) so agent runtime cleanup stays separate from research experiments.
 - Continuous VipinKnowledge maintenance is documented in [VipinKnowledge maintenance system](wiki/concepts/vipinknowledge-maintenance-system.md). Weekly automation should report first, update only curated scoped files, validate, then commit and push when real evidence changed.
+- Obsidian-compatible local-first features are documented in [Obsidian feature parity](wiki/concepts/obsidian-feature-parity.md). Use `python scripts/wiki.py obsidian export --json` to refresh vault config, Bases, Canvas, templates, and the dashboard.
 
 ## Related Repositories
 

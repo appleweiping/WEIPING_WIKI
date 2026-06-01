@@ -1,0 +1,16 @@
+filters:
+  and:
+    - or:
+      - file.hasTag("project")
+      - file.hasTag("research")
+      - file.hasTag("infrastructure")
+views:
+  - type: table
+    name: Active roots
+    order:
+      - file.name
+      - title
+      - type
+      - status
+      - updated
+      - tags

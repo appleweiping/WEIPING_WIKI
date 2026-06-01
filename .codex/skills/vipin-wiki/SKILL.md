@@ -24,6 +24,7 @@ Keep `vipinknowledge` useful without a bespoke prompt. The system should answer 
 - **Ingest**: treat `raw/` as immutable; create/update source notes, then propagate durable facts into concepts, entities, topics, analyses, index, log, and catalog.
 - **Maintain**: compare current pages to live evidence, stronger sources, and current rules. Update existing pages before creating duplicates. Propose deletions only after explicit user approval.
 - **Whole-computer map**: shallow-scan all drives, classify roots by importance, deep-read only important roots, and keep low-value/system/cache/download roots as brief bucket summaries.
+- **Obsidian compatibility**: maintain `.obsidian/`, `.base`, `.canvas`, template, dashboard, and `wiki.py obsidian ...` support so the repo works as a real local-first vault without depending on Obsidian's proprietary core.
 - **Skill upgrade**: when this skill feels prompt-dependent, misses a repeatable step, or fails validation, update the skill and references in the same scoped maintenance pass.
 - **Automation run**: use `python scripts/wiki.py maintain --scope whole-computer --json` as the canonical report, then make curated wiki/skill/doc updates only when evidence changed.
 
@@ -57,6 +58,8 @@ git diff --check
 ```
 
 Read `references/weekly-maintenance-runbook.md` for automation behavior and `references/safety-and-automation.md` for commit/push gates.
+
+Read `references/obsidian-compatibility.md` before Obsidian-style vault, Bases, Canvas, backlink, tag, property, task, daily note, template, or web-clip upgrades.
 
 ## Self-Upgrade Loop
 

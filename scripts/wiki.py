@@ -8,6 +8,7 @@ Usage:
     python scripts/wiki.py search <query> [--top N]
     python scripts/wiki.py context <level> [--query Q]
     python scripts/wiki.py maintain --scope whole-computer [--json]
+    python scripts/wiki.py obsidian <report|export|backlinks|outgoing|tags|properties|tasks|daily>
     python scripts/wiki.py health [--json] [--fix]
 
 All commands accept --root <path> (defaults to repo root).
@@ -495,6 +496,45 @@ def cmd_maintain(args):
         print(f"\nArtifacts:\n- {json_path}\n- {md_path}")
 
 
+def cmd_obsidian(args):
+    """Obsidian-compatible vault reports and exports."""
+    from wiki_obsidian import (
+        backlinks_report,
+        create_daily_note,
+        export_obsidian_artifacts,
+        feature_report,
+        outgoing_report,
+        properties_report,
+        tags_report,
+        tasks_report,
+    )
+
+    root = resolve_root(args.root)
+    if args.obsidian_command == "report":
+        payload = feature_report(root)
+    elif args.obsidian_command == "export":
+        payload = export_obsidian_artifacts(root)
+    elif args.obsidian_command == "backlinks":
+        payload = backlinks_report(root, args.page)
+    elif args.obsidian_command == "outgoing":
+        payload = outgoing_report(root, args.page)
+    elif args.obsidian_command == "tags":
+        payload = tags_report(root)
+    elif args.obsidian_command == "properties":
+        payload = properties_report(root)
+    elif args.obsidian_command == "tasks":
+        payload = tasks_report(root, args.status)
+    elif args.obsidian_command == "daily":
+        payload = create_daily_note(root, args.date)
+    else:
+        raise SystemExit("Unknown obsidian command")
+
+    if getattr(args, "json", False):
+        print(json.dumps(payload, ensure_ascii=False, indent=2))
+    else:
+        print(json.dumps(payload, ensure_ascii=False, indent=2))
+
+
 def main():
     if hasattr(sys.stdout, "reconfigure"):
         sys.stdout.reconfigure(encoding="utf-8")
@@ -537,6 +577,30 @@ def main():
     p.add_argument("--max-top-level-items", type=int, default=40)
     p.add_argument("--max-audit-items", type=int, default=25)
 
+    # obsidian
+    p = sub.add_parser("obsidian", help="Obsidian-compatible vault helpers")
+    obsidian_sub = p.add_subparsers(dest="obsidian_command", required=True)
+    q = obsidian_sub.add_parser("report", help="Show Obsidian feature parity report")
+    q.add_argument("--json", action="store_true")
+    q = obsidian_sub.add_parser("export", help="Write Obsidian vault config, bases, canvas, templates, and dashboard")
+    q.add_argument("--json", action="store_true")
+    q = obsidian_sub.add_parser("backlinks", help="Show backlinks and unlinked mentions for a page")
+    q.add_argument("page")
+    q.add_argument("--json", action="store_true")
+    q = obsidian_sub.add_parser("outgoing", help="Show outgoing links for a page")
+    q.add_argument("page")
+    q.add_argument("--json", action="store_true")
+    q = obsidian_sub.add_parser("tags", help="Show tag counts and tagged pages")
+    q.add_argument("--json", action="store_true")
+    q = obsidian_sub.add_parser("properties", help="Show frontmatter property schema")
+    q.add_argument("--json", action="store_true")
+    q = obsidian_sub.add_parser("tasks", help="Show Markdown checkbox tasks")
+    q.add_argument("--status", choices=["all", "open", "done"], default="all")
+    q.add_argument("--json", action="store_true")
+    q = obsidian_sub.add_parser("daily", help="Create a daily note from the daily template")
+    q.add_argument("--date", help="YYYY-MM-DD; defaults to today")
+    q.add_argument("--json", action="store_true")
+
     # health
     p = sub.add_parser("health", help="Comprehensive health check")
     p.add_argument("--json", action="store_true")
@@ -551,6 +615,7 @@ def main():
         "search": cmd_search,
         "context": cmd_context,
         "maintain": cmd_maintain,
+        "obsidian": cmd_obsidian,
         "health": cmd_health,
     }
 

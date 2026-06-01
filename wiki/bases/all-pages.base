@@ -1,0 +1,13 @@
+filters:
+  and:
+    - file.inFolder("wiki")
+views:
+  - type: table
+    name: All pages
+    order:
+      - file.name
+      - title
+      - type
+      - status
+      - updated
+      - tags

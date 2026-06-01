@@ -1,0 +1,13 @@
+filters:
+  and:
+    - file.inFolder("wiki/sources")
+views:
+  - type: table
+    name: Source notes
+    order:
+      - file.name
+      - title
+      - status
+      - updated
+      - source_files
+      - tags
