@@ -1,6 +1,6 @@
 ---
 name: vipin-wiki
-description: Maintain and upgrade `vipin wiki` / `vipinknowledge` as a long-lived personal knowledge system, whole-computer project map, and self-maintaining agent workflow. Use when Codex needs to answer from the wiki, ingest or crystallize sources, refresh stale pages, run weekly maintenance, maintain project/root maps across C:/D:/G:, classify important vs low-value files or folders, protect public/private boundaries, update index/log/catalog, create or validate maintenance automations, or improve this skill so future agents do not need a fresh prompt. For physical C:/D:/G: file organization, pair this with the shared `workstation-maintenance` skill in `D:\agent-resources`.
+description: Maintain and upgrade `vipin wiki` / `vipinknowledge` as a long-lived personal knowledge system, whole-computer project map, and self-maintaining agent workflow. Use when Codex needs to answer from the wiki, ingest or crystallize sources, refresh stale pages, run weekly maintenance, maintain project/root maps across C:/D:/G:, classify important vs low-value files or folders, protect public/private boundaries, update index/log/catalog, create or validate maintenance automations, or improve this skill so future agents do not need a fresh prompt. For physical C:/D:/G: file organization or D-root move-with-junction organization, pair this with the shared `workstation-maintenance` skill in `D:\agent-resources`.
 ---
 
 # Vipin Wiki
@@ -24,7 +24,7 @@ Keep `vipinknowledge` useful without a bespoke prompt. The system should answer 
 - **Ingest**: treat `raw/` as immutable; create/update source notes, then propagate durable facts into concepts, entities, topics, analyses, index, log, and catalog.
 - **Maintain**: compare current pages to live evidence, stronger sources, and current rules. Update existing pages before creating duplicates. Propose deletions only after explicit user approval.
 - **Whole-computer map**: shallow-scan all drives, classify roots by importance, deep-read only important roots, and keep low-value/system/cache/download roots as brief bucket summaries.
-- **Physical file organization**: delegate manifests, full-plan or exact-batch non-moving preflights, type-grouped age-gated move plans, approval packets, approved batch moves, and rollbacks to `D:\agent-resources\skills\vipin\workstation-maintenance`; this skill records only public-safe routing updates after dry-run evidence or actual changes. Broad user approval can cover all currently passing low-risk batches.
+- **Physical file organization**: delegate manifests, full-plan, exact-batch, or D-root organization non-moving preflights, type-grouped age-gated move plans, approval packets, approved batch moves, D-root move-with-junction organization, and rollbacks to `D:\agent-resources\skills\vipin\workstation-maintenance`; this skill records only public-safe routing updates after dry-run evidence or actual changes. Broad user approval can cover all currently passing low-risk batches.
 - **Obsidian compatibility**: maintain `.obsidian/`, `.base`, `.canvas`, command-palette, template, dashboard, workspace, slide, backlink/search/outline/preview/tag/property/task/word-count, and `wiki.py obsidian ...` support so the repo works as a real local-first vault without depending on Obsidian's proprietary core.
 - **Skill upgrade**: when this skill feels prompt-dependent, misses a repeatable step, or fails validation, update the skill and references in the same scoped maintenance pass.
 - **Automation run**: use `python scripts/wiki.py maintain --scope whole-computer --json` as the canonical report, then make curated wiki/skill/doc updates only when evidence changed.
@@ -42,7 +42,7 @@ Use importance tiers before opening files:
 | Private/sensitive | Credentials, private chats/docs, account state, medical/financial records | Private-only minimal metadata or no public record |
 
 Read `references/whole-computer-depth.md` before broad inventory or local organization work.
-Read the shared `workstation-maintenance` skill before any physical C:/D:/G: move plan.
+Read the shared `workstation-maintenance` skill before any physical C:/D:/G: move plan or D-root organization plan.
 
 ## Recurring Maintenance
 
@@ -78,7 +78,7 @@ Keep `SKILL.md` compact. Put detailed procedures in `references/`, scripts in `s
 ## Safety Rules
 
 - Do not edit external projects during whole-computer maintenance; read only entry evidence unless the user explicitly asks for project work.
-- Do not physically move files during whole-computer maintenance unless a `workstation-maintenance` manifest and user-approved age-gated batch exists.
+- Do not physically move files during whole-computer maintenance unless a `workstation-maintenance` manifest and user-approved age-gated batch exists. For D-root directory organization, require a drive-root plan, non-moving preflight, and rollback-capable move-with-junction execution.
 - Never expose secrets, tokens, credentials, private chats, account state, sensitive documents, raw private material, logs, DBs, or bulky artifacts in public pages or Git.
 - Do not move, rewrite, or clean research experiment code, datasets, checkpoints, server logs, or result files during general wiki maintenance.
 - Keep reports in ignored `.wiki-tmp/vipinknowledge-maintenance/`; commit curated wiki/skill/script/doc changes only.

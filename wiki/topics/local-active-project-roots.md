@@ -48,8 +48,8 @@ EXTRACTED: The entries below are based on a shallow live inventory plus top-leve
 | `D:/frontend/beauty-love` | Top-level `source/`; no obvious README in the root at inspection time. | Treat as generated/presentation or asset project until a user asks for it. Keep summary-level routing only. |
 | `D:/frontend/life-did-not-spare-you` | No obvious top-level README at inspection time; likely related to prior HTML PPT work. | Route through [[html-ppt-agent-workflow]] and inspect only on explicit deck/presentation tasks. |
 | `D:/frontend/frontend-design-test` | No obvious top-level README at inspection time. | Treat as local design test/scratch root. Do not elevate unless reused. |
-| `D:/CS project/AI foundation models` | Contains `doravmon_extra_package`; no obvious top-level README at inspection time. | Coursework/project archive. Inspect only when a course/project question names it. |
-| `D:/Academic_portfolio` | Application/course/archive folders including `umn`, school-application material, exemption/double-degree/course folders. | Sensitive archive. Public wiki records content nature only. |
+| `D:/CS project/AI foundation models` | Contains `doravmon_extra_package`; no obvious top-level README at inspection time. The root stayed physically at `D:/` during the 2026-06-01 D-root organization pass because Windows denied the directory move. | Coursework/project archive. Inspect only when a course/project question names it; treat as a classified locked exception until a later retry. |
+| `D:/Academic_portfolio` | Application/course/archive folders including `umn`, school-application material, exemption/double-degree/course folders. This root is now a compatibility junction to `D:/_Organized/Documents-Private/_RootDirs/Academic_portfolio`. | Sensitive archive. Public wiki records content nature only. |
 | `G:/我的云端硬盘` | Cloud-drive root observed under `G:/`. | Cloud/synced material. Keep shallow unless explicitly relevant. |
 
 ## Research Boundary

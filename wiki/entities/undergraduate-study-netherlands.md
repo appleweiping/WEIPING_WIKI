@@ -3,7 +3,7 @@ title: Undergraduate Study Netherlands
 type: entity
 status: active
 created: 2026-05-10
-updated: 2026-05-10
+updated: 2026-06-01
 tags:
   - entity
   - study-archive
@@ -24,6 +24,7 @@ source_files:
 ## Key Facts
 
 - EXTRACTED: The requested lowercase/hyphen path was absent; the discovered current path is `D:/Undergraduate_study_netherlands`.
+- EXTRACTED: After the 2026-06-01 D-root organization pass, `D:/Undergraduate_study_netherlands` is a compatibility junction to `D:/_Organized/Coursework/_RootDirs/Undergraduate_study_netherlands`.
 - EXTRACTED: The root is a git repository with remote `https://github.com/appleweiping/Undergraduate-Study-Notes-Netherlands-.git`.
 - EXTRACTED: Top-level domains include applied physics, computer science and engineering, electrical engineering, languages, notes, textbooks, and TU/e learning folders.
 - EXTRACTED: Course-code anchors include examples such as `2IRR40`, `5EID0`, `31EMA`, and many others.
@@ -36,7 +37,7 @@ source_files:
 
 ## Dynamic Discovery
 
-- If exact path lookup fails, search for `Undergraduate_study_netherlands`, `study`, `netherlands`, and course-code folder patterns.
+- If exact path lookup fails, search for `Undergraduate_study_netherlands`, `study`, `netherlands`, course-code folder patterns, and physical organized path `D:/_Organized/Coursework/_RootDirs/Undergraduate_study_netherlands`.
 - Use course-code folders as anchors, but inspect live contents because folders and course materials may move.
 - Do not assume tracked git content is safe to publish; deleted/untracked status may indicate local reorganization or privacy cleanup.
 

@@ -39,6 +39,7 @@ For whole-computer routing and importance-based depth across `C:/`, `D:/`, and `
 - EXTRACTED: For whole-computer maintenance, classify roots by importance before deep reading: active/high-consequence roots get detail; system/cache/download/bulk roots get shallow bucket summaries.
 - EXTRACTED: For D-drive organization, classify roots by role before moving anything. Do not reorganize research experiments, datasets, checkpoints, or active experiment state as part of general cleanup.
 - EXTRACTED: Physical C:/D:/G: file organization now uses the shared `D:/agent-resources/skills/vipin/workstation-maintenance` skill for dry-run manifests, preflighted approved move batches, broad-approval execution, and rollback manifests. `D:/Research` remains a hard no-move boundary.
+- EXTRACTED: On 2026-06-01, D-root organization moved 25 classified immediate root directories into `D:/_Organized/<bucket>/_RootDirs/...` and kept old root paths as junctions. Five classified roots stayed physically at `D:/` because Windows denied access or the roots appeared locked; treat them as classified exceptions, not unknown folders.
 - INFERRED: Use this page to answer "where is X?" and "what kind of material is this?" quickly.
 - INFERRED: Before making edits in any external root, rescan that root because folder names and internal contents may change.
 - INFERRED: For quick answers, load the relevant wiki page first; for slow ingest or direct modification, inspect the live external repository.
@@ -51,12 +52,12 @@ Use these buckets when deciding how to tidy D-drive without breaking active work
 | --- | --- | --- |
 | Agent infrastructure | `D:/devtools`, `D:/devtools-public`, `D:/agent-resources`, `D:/.claude` | Keep launchers/config/runtime homes here; public-safe exports go to separate repos. |
 | Research workbench | `D:/Research` | Route through [[research-project-workbench]]; do not move or rewrite experiments during infrastructure cleanup. |
-| Approved organization target | `D:/_Organized/Downloads`, `D:/_Organized/Media`, `D:/_Organized/Temp-Review`; planned buckets include `Coursework`, `Documents-Private`, `Archives`, and `Tools-Review` | Active destination buckets for the 2026-06-01 approved low-risk moves. Do not create or use new buckets outside `workstation-maintenance` move batches. |
-| Public/professional portfolio | `D:/WeipingYan_portfolio`, `D:/Academic_portfolio` | Keep public and sensitive/application material separate; public pages record metadata only. |
-| Coursework/archive | `D:/Undergraduate_project_netherlands`, `D:/Undergraduate_study_netherlands`, `D:/tuelearning` | Treat as archive/course material; edit only when asked. |
-| Product/project roots | `D:/Project`, `D:/frontend`, `D:/CS project`, `D:/Healthcare`, `D:/Game_develop`, `D:/Idea` | Rescan live roots before claims; add wiki entity/topic pages only for repeatedly used projects. |
-| Media and personal downloads | `D:/video creation`, `D:/BaiduNetdiskDownload`, `D:/迅雷下载`, `D:/迅雷云盘`, `D:/微信`, `D:/嗨格式录屏文件` | Do not publish raw contents; classify by source/type and move only with explicit user approval. |
-| Temporary/tool caches | `D:/temp`, `D:/tmp`, `D:/tempappleweiping-site`, `D:/codex-chrome-automation-profile-*`, `.pnpm-store` | Cleanup candidates after checking no active process or repo depends on them. |
+| Approved organization target | `D:/_Organized/Downloads`, `D:/_Organized/Media`, `D:/_Organized/Temp-Review`, `D:/_Organized/Coursework`, `D:/_Organized/Documents-Private`, `D:/_Organized/Games`, `D:/_Organized/Tools-Review` | Active destination buckets for the 2026-06-01 approved file moves and D-root move-with-junction organization. Do not create or use new buckets outside `workstation-maintenance` move batches. |
+| Public/professional portfolio | `D:/WeipingYan_portfolio`; sensitive/application archive roots may now be compatibility junctions into `D:/_Organized/Documents-Private/_RootDirs` | Keep public and sensitive/application material separate; public pages record metadata only. |
+| Coursework/archive | Moved roots under `D:/_Organized/Coursework/_RootDirs`; locked coursework roots remain at `D:/` | Treat as archive/course material; edit only when asked. Use old `D:/<name>` paths when compatibility matters because moved roots keep junctions. |
+| Product/project roots | `D:/Project`, `D:/frontend`, `D:/Healthcare`, `D:/Game_develop`, `D:/Idea` | Rescan live roots before claims; add wiki entity/topic pages only for repeatedly used projects. |
+| Media and personal downloads | Moved media/download roots under `D:/_Organized/Media/_RootDirs` and `D:/_Organized/Downloads/_RootDirs`; locked personal/download roots remain at `D:/` | Do not publish raw contents; classify by source/type and move only with explicit user approval. |
+| Temporary/tool caches | Moved temp/tool roots under `D:/_Organized/Temp-Review/_RootDirs` and `D:/_Organized/Tools-Review/_RootDirs`; `.pnpm-store` remains record-only | Cleanup candidates after checking no active process or repo depends on them. |
 | Vendor/system/bulk | `D:/Docker`, `D:/VirtualBox`, `D:/Drivers`, `D:/Program Files`, `D:/System Volume Information`, `D:/pagefile.sys` | Leave alone unless doing a dedicated storage/system maintenance pass. |
 
 ## Counterpoints and Gaps

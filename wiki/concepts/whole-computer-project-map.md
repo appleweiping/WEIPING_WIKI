@@ -62,6 +62,8 @@ EXTRACTED: The user granted broad approval on 2026-06-01 to proceed without furt
 
 EXTRACTED: Because the user explicitly disallowed conservative waiting, a second `MinimumAgeDays 0` pass handled the 138 recent move-eligible candidates. That supplemental pass moved another 138 files, about 490.31 MB, into `D:/_Organized`. A duplicate temp-log destination surfaced during execution; `workstation-maintenance` was updated to generate unique destination paths and reject duplicate destinations before movement. Final verification recorded 669 total moved files, about 797.39 MB, 0 remaining move-eligible candidates, 0 executable batches, 0 deferred candidates, and 0 `D:/Research` hits.
 
+EXTRACTED: A follow-up D-drive root organization pass on 2026-06-01 classified 52 immediate `D:/` children. It planned 30 move-with-junction directory roots and completed 25 of them into `D:/_Organized/<bucket>/_RootDirs/...`, preserving the old root paths as NTFS junctions. Completed buckets were Coursework 1, Documents-Private 1, Downloads 5, Games 2, Media 3, Temp-Review 5, and Tools-Review 8. Five classified roots stayed in place because Windows denied access or the root appeared locked: three coursework/archive roots, one download-migration root, and one personal messaging data root. `D:/Research`, `D:/agent-resources`, `D:/devtools`, and `D:/devtools-public` remained normal non-reparse directories.
+
 ## Importance-Based Depth
 
 | Tier | What qualifies | Wiki treatment |
@@ -93,12 +95,12 @@ For active non-research project roots with more detailed entry docs, use [[local
 | --- | --- | --- |
 | Agent infrastructure | `D:/devtools`, `D:/devtools-public`, `D:/agent-resources`, `D:/.claude` | Keep runtime/log/cache/auth out of public Git; use [[d-drive-project-map]] for details. |
 | Research workbench | `D:/Research` | Route through [[research-project-workbench]]. Do not touch experiments during general maintenance. |
-| Organized low-risk files | `D:/_Organized/Downloads`, `D:/_Organized/Media`, `D:/_Organized/Temp-Review` | Current target for applied low-risk workstation moves; keep rollback manifests in ignored `.wiki-tmp` if reversal is needed. |
-| Product/app/project roots | `D:/Project`, `D:/frontend`, `D:/CS project`, `D:/Company`, `D:/Idea` | Rescan live README/config/status before claims or edits. Create pages only for repeated/active projects. |
+| Organized files and moved D-root directories | `D:/_Organized/Downloads`, `D:/_Organized/Media`, `D:/_Organized/Temp-Review`, `D:/_Organized/Coursework`, `D:/_Organized/Documents-Private`, `D:/_Organized/Games`, `D:/_Organized/Tools-Review` | Current target for applied workstation moves. Root directories moved here keep old `D:/<name>` compatibility junctions; keep rollback manifests in ignored `.wiki-tmp` if reversal is needed. |
+| Product/app/project roots | `D:/Project`, `D:/frontend`, `D:/Company`, `D:/Idea` | Rescan live README/config/status before claims or edits. Create pages only for repeated/active projects. |
 | Healthcare roots | `D:/Healthcare` | Treat code and test data conservatively; avoid exposing health-sensitive material. |
-| Game roots | `D:/Game_develop`, `D:/Terraria_doc`, `D:/girlvania` | Keep binaries/saves/assets outside public pages; record routing and content nature. |
-| Portfolio/course archives | `D:/WeipingYan_portfolio`, `D:/Academic_portfolio`, `D:/Undergraduate_project_netherlands`, `D:/Undergraduate_study_netherlands`, `D:/tuelearning` | Public-safe metadata only unless explicitly asked. |
-| Media/download/cache/system bulk | `D:/BaiduNetdiskDownload`, `D:/video creation`, `D:/微信`, `D:/Docker`, `D:/VirtualBox`, `D:/temp`, `.pnpm-store` | Bucket summaries by default. Cleanup requires explicit storage-maintenance scope. |
+| Game roots | `D:/Game_develop`; compatibility junctions such as `D:/Terraria_doc` and `D:/girlvania` point into `D:/_Organized/Games/_RootDirs` | Keep binaries/saves/assets outside public pages; record routing and content nature. |
+| Portfolio/course archives | `D:/WeipingYan_portfolio`; moved roots under `D:/_Organized/Coursework/_RootDirs` and `D:/_Organized/Documents-Private/_RootDirs`; locked coursework exceptions remain at root | Public-safe metadata only unless explicitly asked. Old paths may be junctions and should still be used for compatibility. |
+| Media/download/cache/system bulk | Moved download/media/temp/tool roots under `D:/_Organized`; locked personal/download exceptions remain at root; system roots include `D:/Docker`, `D:/VirtualBox`, `.pnpm-store` | Bucket summaries by default. Cleanup requires explicit storage-maintenance scope. |
 
 ## C-Drive Handling
 
@@ -115,7 +117,7 @@ For whole-computer upkeep:
 
 1. Run or mentally apply `scripts/computer-inventory.ps1` for a shallow map.
 2. Identify the target tier and bucket before opening files.
-3. For physical file organization, use `D:/agent-resources/skills/vipin/workstation-maintenance` to generate the dry-run manifest and type-grouped, age-gated move plan. Run `Test-MovePlanBatches.ps1` for a full non-moving readiness check or `Invoke-ApprovedMoveBatch.ps1 -PreflightOnly` for an exact batch before approval. If the user grants broad approval, execute all currently passing low-risk batches without repeated per-batch prompts. Never include `D:/Research` resolved paths.
+3. For physical file organization, use `D:/agent-resources/skills/vipin/workstation-maintenance` to generate the dry-run manifest and type-grouped, age-gated move plan. Run `Test-MovePlanBatches.ps1` for a full non-moving readiness check or `Invoke-ApprovedMoveBatch.ps1 -PreflightOnly` for an exact batch before approval. For D-root directory organization, generate a drive-root plan, run `Invoke-DriveRootOrganizationPlan.ps1 -PreflightOnly`, then move eligible roots with junction compatibility. If the user grants broad approval, execute all currently passing low-risk batches without repeated per-batch prompts. Never include `D:/Research` resolved paths.
 4. Read existing wiki pages first: this page, [[d-drive-project-map]], [[local-project-roots]], and the relevant entity/topic page.
 5. Inspect the smallest live evidence that proves current state.
 6. Refresh existing pages before creating new ones.

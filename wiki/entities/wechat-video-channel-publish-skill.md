@@ -3,7 +3,7 @@ title: WeChat Video Channel Publish Skill
 type: entity
 status: active
 created: 2026-05-17
-updated: 2026-05-17
+updated: 2026-06-01
 tags:
   - entity
   - agent-skills
@@ -34,6 +34,7 @@ It is distinct from [[content-creation-publisher]] and `baoyu-post-to-wechat`, w
 ## Local Runtime Notes
 
 - A project-local Node runtime was installed under `D:/video creation/tools/nodejs/node-v22.21.1-win-x64/`.
+- After the 2026-06-01 D-root organization pass, `D:/video creation` is a compatibility junction to `D:/_Organized/Media/_RootDirs/video creation`; keep using the old path for existing scripts unless deliberately updating path references.
 - `npm install` and `npm run build` were validated in `.codex/skills/wechat-video-channel-publish/`.
 - The upstream build command used Unix `cp`; the local installed and mirrored `package.json` were patched to use a cross-platform Node `copyFileSync` build step.
 - Smoke tests completed:

@@ -3,7 +3,7 @@ title: Terraria Save Archive
 type: entity
 status: active
 created: 2026-05-15
-updated: 2026-05-15
+updated: 2026-06-01
 tags:
   - entity
   - local-files
@@ -26,6 +26,7 @@ This page is the routing note for Vipin's local Terraria saves and their D-drive
 
 - EXTRACTED: Original save root: `C:/Users/admin/Documents/My Games/Terraria`.
 - EXTRACTED: Backup root: `D:/Terraria_doc/Terraria_saves`.
+- EXTRACTED: After the 2026-06-01 D-root organization pass, `D:/Terraria_doc` is a compatibility junction to `D:/_Organized/Games/_RootDirs/Terraria_doc`.
 - EXTRACTED: Inventory and analysis files:
   - `D:/Terraria_doc/inventory/terraria-file-analysis.md`
   - `D:/Terraria_doc/inventory/terraria-file-inventory.csv`

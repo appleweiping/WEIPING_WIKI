@@ -58,15 +58,17 @@ Use [[research-project-workbench]] before opening a repeated research project. T
 
 ## D-Drive Organization Buckets
 
+EXTRACTED: On 2026-06-01, a drive-root `workstation-maintenance` plan classified 52 immediate `D:/` children and completed 25 move-with-junction root moves into `D:/_Organized/<bucket>/_RootDirs/...`. The old root paths remain usable as NTFS junctions. Five classified roots remain physically at `D:/` because Windows denied access or the roots appeared locked; they should be retried only after the lock or ACL issue is resolved.
+
 | Bucket | Examples | Rule |
 | --- | --- | --- |
 | Agent infrastructure | `D:/devtools`, `D:/devtools-public`, `D:/agent-resources` | Keep D-drive-first; separate public source from private runtime. |
 | Knowledge base | `D:/Research/vipin's knowledgebase` | Public wiki plus ignored private layer. |
 | Research workbench | `D:/Research/*` project repos | Isolate from infra cleanup; modify only on explicit research task. |
-| Approved organization target | `D:/_Organized/Downloads`, `D:/_Organized/Media`, `D:/_Organized/Temp-Review` | Active target populated by approved `workstation-maintenance` batches on 2026-06-01; use ignored applied manifests for rollback if needed. Future use still goes through manifest/preflight gates. |
-| Portfolio/course archives | `D:/Academic_portfolio`, `D:/Undergraduate_*` | Record public-safe metadata only unless explicitly asked. |
+| Approved organization target | `D:/_Organized/Downloads`, `D:/_Organized/Media`, `D:/_Organized/Temp-Review`, `D:/_Organized/Coursework`, `D:/_Organized/Documents-Private`, `D:/_Organized/Games`, `D:/_Organized/Tools-Review` | Active target populated by approved `workstation-maintenance` batches and D-root move-with-junction organization on 2026-06-01; use ignored applied manifests for rollback if needed. Future use still goes through manifest/preflight gates. |
+| Portfolio/course archives | Moved roots under `D:/_Organized/Coursework/_RootDirs` and `D:/_Organized/Documents-Private/_RootDirs`; locked exceptions remain at `D:/` | Record public-safe metadata only unless explicitly asked. Old `D:/<name>` paths may be junctions and remain valid. |
 | Product/game/health roots | `D:/Project`, `D:/Game_develop`, `D:/Healthcare` | Rescan live roots before claims or edits. |
-| Media/download/cache/system bulk | downloads, videos, tool caches, drivers, Docker, VirtualBox | Do not publish raw contents; cleanup only with explicit storage-maintenance scope. |
+| Media/download/cache/system bulk | moved download/media/temp/tool roots under `D:/_Organized`; protected system roots such as Docker, VirtualBox, Program Files, pagefile, and `.pnpm-store` remain record-only | Do not publish raw contents; cleanup only with explicit storage-maintenance scope. |
 
 ## Startup Use
 
@@ -76,7 +78,7 @@ For D-drive tasks:
 2. Identify the target bucket.
 3. Check the target repo's `git status`.
 4. Load relevant skill metadata and read the matched `SKILL.md`.
-5. For physical moves, generate a `workstation-maintenance` manifest and run preflight. If the user gives broad approval, execute all currently passing low-risk batches without repeated per-batch prompts.
+5. For physical moves, generate a `workstation-maintenance` manifest or D-root organization plan and run the relevant preflight. If the user gives broad approval, execute all currently passing low-risk batches without repeated per-batch prompts. For D-root directory moves, preserve old paths as junctions and record locked roots as classified exceptions.
 6. Keep changes inside the requested bucket and validate before commit/push.
 
 ## Counterpoints And Gaps

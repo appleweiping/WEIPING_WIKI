@@ -10,6 +10,24 @@ tags:
 
 # Log
 
+## [2026-06-01 22:25] infrastructure | D-drive root organization and workstation-maintenance upgrade
+
+- Pages/files updated:
+  - [[whole-computer-project-map]]
+  - [[d-drive-project-map]]
+  - [[local-project-roots]]
+  - [[local-active-project-roots]]
+  - [[vipinknowledge-maintenance-system]]
+  - `AGENTS.md`, `CLAUDE.md`, `.opencode/OPENCODE.md`, `.claude/skills/README-skills-layout.md`, `README.md`
+  - `D:/agent-resources/skills/vipin/workstation-maintenance`
+- Notes:
+  - Ran a D-drive root organization plan over 52 immediate `D:/` children. The plan classified every root, protected `D:/Research`, `D:/agent-resources`, `D:/devtools`, `D:/devtools-public`, and `D:/_Organized`, and produced 0 unknown roots.
+  - Completed 25 move-with-junction root moves into `D:/_Organized/<bucket>/_RootDirs/...`; old `D:/<name>` paths remain usable as NTFS junctions.
+  - Left 5 classified roots physically at `D:/` because Windows denied access or the root appeared locked. These are recorded as classified exceptions to retry only after locks or ACL issues are resolved.
+  - Upgraded `workstation-maintenance` with D-root plan/invoke scripts, preflight-only support, resume/skip handling, drive-root rollback, and fixture coverage.
+  - Sonnet/Opus review attempts failed because local Claude upstream credentials were disabled; a Codex read-only review found high-risk edge cases in partial move repair, junction target validation, rollback validation, and tampered protected-root plans, and the scripts/tests were hardened before commit.
+  - Public wiki pages record bucket-level outcomes and safety rules only; local manifests remain ignored under `.wiki-tmp/workstation-maintenance/`.
+
 ## [2026-06-01 16:55] maintenance | Active local roots and refresh audit helper
 
 - Pages/files updated:
