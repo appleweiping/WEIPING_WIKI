@@ -32,7 +32,7 @@ Do not wait for the user to name a skill. Before non-trivial work:
 
 Research tasks must use the matching ARIS skill when one exists. README, architecture, skill, audit, browser, frontend, document, and infrastructure tasks should route to the relevant installed skills by description.
 
-Do not move files during broad workstation cleanup unless a `workstation-maintenance` manifest and age-gated move plan exist and the user has explicitly approved the batch ID. `D:\Research` resolved paths are a hard no-move boundary.
+Do not move files during broad workstation cleanup unless a `workstation-maintenance` manifest and type-grouped age-gated move plan exist and the user has explicitly approved the batch ID. `D:\Research` resolved paths are a hard no-move boundary.
 
 For recurring `vipinknowledge` upkeep, the canonical report command is:
 

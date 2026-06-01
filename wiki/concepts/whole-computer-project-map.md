@@ -38,17 +38,24 @@ EXTRACTED: A shallow inventory on 2026-06-01 found three filesystem drives: `C:/
 
 ## Latest Workstation Dry Run
 
-EXTRACTED: On 2026-06-01, `workstation-maintenance` generated a local dry-run inventory under ignored `.wiki-tmp/workstation-maintenance/`. It recorded 3,026 classified entries and 669 low-risk move-eligible file candidates. The conservative move plan applies a 30-day age gate, leaving 531 executable approval candidates and deferring 138 recent candidates for review. `D:/Research` entries were 0, and executable reparse points, directories, git worktree items, and files modified within 30 days were all 0.
+EXTRACTED: On 2026-06-01, `workstation-maintenance` generated a local dry-run inventory under ignored `.wiki-tmp/workstation-maintenance/`. It recorded 3,026 classified entries and 669 low-risk move-eligible file candidates. The conservative move plan applies a 30-day age gate and 100-item batch cap, leaving 531 executable approval candidates across 13 narrow batches and deferring 138 recent candidates for review. `D:/Research` entries were 0, and executable reparse points, directories, git worktree items, and files modified within 30 days were all 0.
 
 Public-safe batch summary:
 
 | Batch ID | Category | Items | Size | Destination root |
 | --- | --- | ---: | ---: | --- |
 | `batch-downloads-archives-old` | Downloads archives | 59 | 55.39 MB | `D:/_Organized` |
-| `batch-downloads-documents-old` | Downloads documents | 427 | 239.78 MB | `D:/_Organized` |
+| `batch-downloads-code-old` | Downloads code/config | 6 | 18.03 KB | `D:/_Organized` |
 | `batch-downloads-installers-old` | Downloads installers | 1 | 29.85 KB | `D:/_Organized` |
+| `batch-downloads-markdown-old-part-001` | Downloads markdown | 100 | 995.26 KB | `D:/_Organized` |
+| `batch-downloads-markdown-old-part-002` | Downloads markdown | 37 | 824.90 KB | `D:/_Organized` |
 | `batch-downloads-media-old` | Downloads media | 1 | 10.82 KB | `D:/_Organized` |
-| `batch-downloads-other-old` | Downloads other | 11 | 364.49 KB | `D:/_Organized` |
+| `batch-downloads-notebooks-old` | Downloads notebooks | 7 | 658.95 KB | `D:/_Organized` |
+| `batch-downloads-office-data-old` | Downloads office/data | 38 | 65.41 MB | `D:/_Organized` |
+| `batch-downloads-other-old` | Downloads other | 5 | 346.46 KB | `D:/_Organized` |
+| `batch-downloads-pdf-old-part-001` | Downloads PDFs | 100 | 80.08 MB | `D:/_Organized` |
+| `batch-downloads-pdf-old-part-002` | Downloads PDFs | 100 | 70.18 MB | `D:/_Organized` |
+| `batch-downloads-pdf-old-part-003` | Downloads PDFs | 45 | 21.69 MB | `D:/_Organized` |
 | `batch-mediaassets-old` | MediaAssets | 32 | 11.51 MB | `D:/_Organized` |
 
 These are approval candidates only. No physical file move has been executed from this dry run.
@@ -105,7 +112,7 @@ For whole-computer upkeep:
 
 1. Run or mentally apply `scripts/computer-inventory.ps1` for a shallow map.
 2. Identify the target tier and bucket before opening files.
-3. For physical file organization, use `D:/agent-resources/skills/vipin/workstation-maintenance` to generate the dry-run manifest and age-gated move plan. Never include `D:/Research` resolved paths.
+3. For physical file organization, use `D:/agent-resources/skills/vipin/workstation-maintenance` to generate the dry-run manifest and type-grouped, age-gated move plan. Never include `D:/Research` resolved paths.
 4. Read existing wiki pages first: this page, [[d-drive-project-map]], [[local-project-roots]], and the relevant entity/topic page.
 5. Inspect the smallest live evidence that proves current state.
 6. Refresh existing pages before creating new ones.

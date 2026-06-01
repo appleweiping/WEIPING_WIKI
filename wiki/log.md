@@ -1177,6 +1177,6 @@ tags:
   - Added a two-layer maintenance rule: `workstation-maintenance` owns physical C:/D:/G: inventory, move plans, approved batches, and rollback; `vipin-wiki` owns public-safe map/index/log/catalog updates.
   - Reaffirmed `D:/Research` as a hard no-move boundary for workstation organization.
   - Generated a dry-run workstation inventory with 3,026 classified entries and 669 low-risk move-eligible file candidates; `D:/Research` entries were 0.
-  - Tightened move-plan generation to default to a 30-day age gate: 531 old low-risk candidates remain executable, 138 recent candidates are deferred, and executable reparse points, directories, git worktree items, and recently modified files are all 0.
-  - Generated granular approval-candidate batches `batch-downloads-archives-old`, `batch-downloads-documents-old`, `batch-downloads-installers-old`, `batch-downloads-media-old`, `batch-downloads-other-old`, and `batch-mediaassets-old`; no physical file move was executed.
+  - Tightened move-plan generation to default to a 30-day age gate and 100-item batch cap: 531 old low-risk candidates remain executable, 138 recent candidates are deferred, and executable reparse points, directories, git worktree items, and recently modified files are all 0.
+  - Generated 13 granular approval-candidate batches by file type and part number; no physical file move was executed.
   - Actual C/D file moves remain gated on explicit user approval of generated batch IDs.

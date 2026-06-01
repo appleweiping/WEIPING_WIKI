@@ -41,7 +41,7 @@ The active collaboration layer is `agentmemory`, not Agent Hub.
 - Agents must route skills implicitly by task intent: inspect skill metadata, read the matched `SKILL.md`, and follow it before improvising on non-trivial work.
 - For whole-computer maintenance, project routing, local file organization, or old-content refresh tasks, read [[whole-computer-project-map]] first; use [[d-drive-project-map]] for D-drive infrastructure detail and research-isolation boundaries. Physical C:/D:/G: file organization must use the shared `workstation-maintenance` skill from `D:\agent-resources\skills\vipin\workstation-maintenance` before any move plan is trusted.
 - `vipinknowledge` continuous maintenance uses the `vipin-wiki` skill and `python scripts/wiki.py maintain --scope whole-computer --json` as the report-first command. Weekly automation may commit/push only scoped validated wiki/skill/script/doc changes when live evidence changed.
-- Actual file moves require a dry-run manifest, age-gated move plan, user-approved batch ID, rollback manifest, and a hard exclusion for `D:\Research` resolved paths. Do not delete files during broad organization work.
+- Actual file moves require a dry-run manifest, type-grouped age-gated move plan, user-approved batch ID, rollback manifest, and a hard exclusion for `D:\Research` resolved paths. Do not delete files during broad organization work.
 
 ## Mission
 

@@ -43,7 +43,7 @@ OpenCode should trigger skills by task intent, not only explicit names:
 
 Research audit work must use ARIS skills. README, documentation, architecture, debugging, frontend, browser, and security tasks should route to the relevant installed skill when available.
 
-Broad file moves require an approved age-gated workstation-maintenance batch ID. Never move or delete `D:\Research` resolved paths during local organization work.
+Broad file moves require an approved type-grouped age-gated workstation-maintenance batch ID. Never move or delete `D:\Research` resolved paths during local organization work.
 
 ## Coordination
 
