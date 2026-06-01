@@ -86,7 +86,7 @@ The Codex skill is the full orchestrator. Its references split the recurring pro
 - `safety-and-automation.md` - public/private and commit/push gates
 - `maintenance-model.md` - broad maintenance model
 
-The shared workstation skill owns dry-run C:/D:/G: inventory manifests, risk classification, `D:/Research` resolved-path exclusion, user-approved move batches, rollback manifests, and devtools/agent-resources/vipinknowledge skill-link sync checks.
+The shared workstation skill owns dry-run C:/D:/G: inventory manifests, risk classification, `D:/Research` resolved-path exclusion, age-gated user-approved move batches, rollback manifests, and devtools/agent-resources/vipinknowledge skill-link sync checks.
 
 ## Whole-Computer Routing
 
@@ -96,7 +96,7 @@ Use [[d-drive-project-map]] for D-drive infrastructure detail, [[local-active-pr
 
 Important roots should record path, purpose, current activity status, first-read files, safety boundary, related wiki pages, and last verified evidence. Low-value roots should stay as bucket summaries.
 
-If the work involves moving files, generate the workstation manifest and move plan first, then update wiki pages only after an approved batch changes the filesystem. Public pages should summarize bucket-level state and safety rules, not raw sensitive file names.
+If the work involves moving files, generate the workstation manifest and conservative move plan first. Live move plans defer recent files by default; update wiki pages after dry-run evidence or after an approved batch changes the filesystem. Public pages should summarize bucket-level state and safety rules, not raw sensitive file names.
 
 ## Automation Contract
 

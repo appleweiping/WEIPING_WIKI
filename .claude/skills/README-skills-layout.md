@@ -14,7 +14,7 @@ Skills are chosen by task intent. Agents should inspect skill metadata, read the
 
 `agentmemory` is the active memory/collaboration layer. Agent Hub is retired and should not be registered as an active MCP server.
 
-For whole-computer maintenance, project routing, or organization tasks, read `wiki/concepts/whole-computer-project-map.md` first. For D-drive infrastructure detail, also read `wiki/concepts/d-drive-project-map.md`, which separates public exports, private runtime state, skills/resources, and research isolation. For physical C:/D:/G: file moves, use `D:\agent-resources\skills\vipin\workstation-maintenance` before trusting any manifest or move plan.
+For whole-computer maintenance, project routing, or organization tasks, read `wiki/concepts/whole-computer-project-map.md` first. For D-drive infrastructure detail, also read `wiki/concepts/d-drive-project-map.md`, which separates public exports, private runtime state, skills/resources, and research isolation. For physical C:/D:/G: file moves, use `D:\agent-resources\skills\vipin\workstation-maintenance` before trusting any manifest or age-gated move plan.
 
 ## Skill Roots
 

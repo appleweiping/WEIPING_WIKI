@@ -43,7 +43,7 @@ Stop before staging when:
 - a deletion is needed but the user has not approved it
 - sensitive material appears in a public candidate diff
 - only ignored report artifacts changed
-- a physical file move is proposed without a `workstation-maintenance` manifest, user-approved batch, and rollback manifest
+- a physical file move is proposed without a `workstation-maintenance` manifest, age-gated user-approved batch, and rollback manifest
 
 ## Agentmemory
 

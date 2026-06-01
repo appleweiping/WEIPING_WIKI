@@ -14,7 +14,7 @@ Read `AGENTS.md` first. This adapter makes Claude Code and OpenCode follow the s
 3. Read `wiki/concepts/d-drive-project-map.md`, `wiki/topics/local-active-project-roots.md`, and `wiki/topics/local-project-roots.md` when D-drive or active project roots are involved.
 4. Use `python scripts/wiki.py search "<query>"`, `wiki/index.md`, and `wiki/catalog.json` for retrieval.
 5. Use agentmemory for active recall/signals when available.
-6. For actual file moves, use `D:\agent-resources\skills\vipin\workstation-maintenance` to generate the manifest, move plan, approved batch, and rollback artifacts.
+6. For actual file moves, use `D:\agent-resources\skills\vipin\workstation-maintenance` to generate the manifest, age-gated move plan, approved batch, and rollback artifacts.
 
 ## Canonical Commands
 
@@ -33,10 +33,10 @@ powershell .\scripts\Test-PrePushSafety.ps1
 - Ingest sources into source notes and propagate durable facts.
 - Maintain old pages by comparing them with live evidence and current operating rules.
 - Map the whole computer shallowly, deep-reading only important roots.
-- Delegate physical C:/D:/G: organization to the shared workstation-maintenance skill; update public-safe wiki maps only after actual state changes.
+- Delegate physical C:/D:/G: organization to the shared workstation-maintenance skill; update public-safe wiki maps after dry-run evidence or actual state changes.
 - Maintain Obsidian-compatible vault artifacts (`.obsidian/`, `.base`, `.canvas`, commands, templates, dashboard, workspaces, slides, and `wiki.py obsidian ...`) when the task asks for Obsidian-style knowledge-system upgrades.
 - Upgrade the skill/workflow when a future agent would otherwise need a fresh prompt.
 
 ## Safety
 
-Do not edit external project files during whole-computer maintenance. Do not move files unless a workstation-maintenance manifest and user-approved batch exists. `D:\Research` resolved paths are a hard no-move boundary. Do not expose secrets, private chats, credentials, account state, medical/financial/private docs, logs, DBs, or bulky artifacts in public pages or commits. Stage only scoped files and preserve unrelated dirty work.
+Do not edit external project files during whole-computer maintenance. Do not move files unless a workstation-maintenance manifest and user-approved age-gated batch exists. `D:\Research` resolved paths are a hard no-move boundary. Do not expose secrets, private chats, credentials, account state, medical/financial/private docs, logs, DBs, or bulky artifacts in public pages or commits. Stage only scoped files and preserve unrelated dirty work.

@@ -79,6 +79,8 @@ powershell D:\agent-resources\skills\vipin\workstation-maintenance\scripts\New-W
 powershell D:\agent-resources\skills\vipin\workstation-maintenance\scripts\New-MovePlan.ps1 -ManifestPath "<manifest.json>"
 ```
 
+The move-plan command defaults to a 30-day age gate for live manifests; recent files are deferred for review instead of placed in executable batches.
+
 Compatibility wrappers still exist for older workflows, but `scripts/wiki.py` is the canonical surface.
 
 ## Knowledge Workflows
@@ -98,7 +100,7 @@ Compatibility wrappers still exist for older workflows, but `scripts/wiki.py` is
 - Keep research project claims inside their evidence gates. Do not change experiment progress, datasets, checkpoints, or server state from this repo.
 - Stage only scoped files. Existing unrelated dirty work belongs to its owner.
 - Infrastructure changes must update the relevant operating docs in the same commit.
-- Whole-computer maintenance, local project routing, or file-organization work should start from [whole-computer project map](wiki/concepts/whole-computer-project-map.md); D-drive infrastructure detail stays in [D-drive project map](wiki/concepts/d-drive-project-map.md) so agent runtime cleanup stays separate from research experiments. Physical drive organization must use the shared workstation-maintenance skill, produce a dry-run manifest first, and move only user-approved batches with rollback manifests.
+- Whole-computer maintenance, local project routing, or file-organization work should start from [whole-computer project map](wiki/concepts/whole-computer-project-map.md); D-drive infrastructure detail stays in [D-drive project map](wiki/concepts/d-drive-project-map.md) so agent runtime cleanup stays separate from research experiments. Physical drive organization must use the shared workstation-maintenance skill, produce a dry-run manifest first, defer recent files by default, and move only user-approved batches with rollback manifests.
 - Continuous VipinKnowledge maintenance is documented in [VipinKnowledge maintenance system](wiki/concepts/vipinknowledge-maintenance-system.md). Weekly automation should report first, update only curated scoped files, validate, then commit and push when real evidence changed.
 - Obsidian-compatible local-first features are documented in [Obsidian feature parity](wiki/concepts/obsidian-feature-parity.md). Use `python scripts/wiki.py obsidian export --json` to refresh vault config, Bases, Canvas, command palette, templates, slides home, workspaces, and the dashboard.
 

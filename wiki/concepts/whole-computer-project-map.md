@@ -38,15 +38,18 @@ EXTRACTED: A shallow inventory on 2026-06-01 found three filesystem drives: `C:/
 
 ## Latest Workstation Dry Run
 
-EXTRACTED: On 2026-06-01, `workstation-maintenance` generated a local dry-run inventory under ignored `.wiki-tmp/workstation-maintenance/`. It recorded 3,026 classified entries and 669 low-risk move-eligible file candidates. `D:/Research` entries were 0, and move-eligible reparse points, directories, and git worktree items were all 0.
+EXTRACTED: On 2026-06-01, `workstation-maintenance` generated a local dry-run inventory under ignored `.wiki-tmp/workstation-maintenance/`. It recorded 3,026 classified entries and 669 low-risk move-eligible file candidates. The conservative move plan applies a 30-day age gate, leaving 531 executable approval candidates and deferring 138 recent candidates for review. `D:/Research` entries were 0, and executable reparse points, directories, git worktree items, and files modified within 30 days were all 0.
 
 Public-safe batch summary:
 
 | Batch ID | Category | Items | Size | Destination root |
 | --- | --- | ---: | ---: | --- |
-| `batch-downloads` | Downloads | 598 | 723.35 MB | `D:/_Organized` |
-| `batch-mediaassets` | MediaAssets | 69 | 72.37 MB | `D:/_Organized` |
-| `batch-tempcache` | TempCache | 2 | 1.66 MB | `D:/_Organized` |
+| `batch-downloads-archives-old` | Downloads archives | 59 | 55.39 MB | `D:/_Organized` |
+| `batch-downloads-documents-old` | Downloads documents | 427 | 239.78 MB | `D:/_Organized` |
+| `batch-downloads-installers-old` | Downloads installers | 1 | 29.85 KB | `D:/_Organized` |
+| `batch-downloads-media-old` | Downloads media | 1 | 10.82 KB | `D:/_Organized` |
+| `batch-downloads-other-old` | Downloads other | 11 | 364.49 KB | `D:/_Organized` |
+| `batch-mediaassets-old` | MediaAssets | 32 | 11.51 MB | `D:/_Organized` |
 
 These are approval candidates only. No physical file move has been executed from this dry run.
 
@@ -102,7 +105,7 @@ For whole-computer upkeep:
 
 1. Run or mentally apply `scripts/computer-inventory.ps1` for a shallow map.
 2. Identify the target tier and bucket before opening files.
-3. For physical file organization, use `D:/agent-resources/skills/vipin/workstation-maintenance` to generate the dry-run manifest and move plan. Never include `D:/Research` resolved paths.
+3. For physical file organization, use `D:/agent-resources/skills/vipin/workstation-maintenance` to generate the dry-run manifest and age-gated move plan. Never include `D:/Research` resolved paths.
 4. Read existing wiki pages first: this page, [[d-drive-project-map]], [[local-project-roots]], and the relevant entity/topic page.
 5. Inspect the smallest live evidence that proves current state.
 6. Refresh existing pages before creating new ones.
