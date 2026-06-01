@@ -28,6 +28,7 @@ For whole-computer routing and importance-based depth across `C:/`, `D:/`, and `
 - [[undergraduate-projects-netherlands]] - Coursework and project repositories, including Venus Team 28.
 - [[undergraduate-study-netherlands]] - Undergraduate study archive organized by course/domain.
 - [[research-projects]] - Research project roots under `D:/Research`.
+- [[local-active-project-roots]] - Detailed launch map for important active non-research project roots.
 - [[healthcare-projects]] - Healthcare project routing under `D:/Healthcare`, currently centered on [[medora]].
 - [[agent-skill-repositories]] - Skill repository routing under `D:/Skill`, including local skill stores, person-skill generators, and skill optimizers.
 - [[terraria-save-archive]] - Local Terraria save archive discovered under the Windows Documents game-save directory and backed up to `D:/Terraria_doc`.
@@ -68,6 +69,7 @@ Use these buckets when deciding how to tidy D-drive without breaking active work
 ## Related
 
 - [[whole-computer-project-map]]
+- [[local-active-project-roots]]
 - [[d-drive-project-map]]
 - [[2026-05-10-d-drive-portfolio-and-undergraduate-roots]]
 - [[2026-05-15-d-drive-healthcare-and-skill-roots]]

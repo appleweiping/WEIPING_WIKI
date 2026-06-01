@@ -22,7 +22,7 @@ The skill has four jobs:
 2. Check `git status --short --branch`; do not stage unrelated local changes.
 3. Read `AGENTS.md`, `.wiki-schema.md`, and `purpose.md` before substantial maintenance, ingest, synthesis, or structural changes.
 4. For interpretation, prioritization, or recommendation work, also read `reader-context.md`.
-5. For whole-computer or local-project work, read `wiki/concepts/whole-computer-project-map.md`, then `wiki/concepts/d-drive-project-map.md` and `wiki/topics/local-project-roots.md` if the task touches D-drive roots.
+5. For whole-computer or local-project work, read `wiki/concepts/whole-computer-project-map.md`, then `wiki/topics/local-active-project-roots.md`, `wiki/concepts/d-drive-project-map.md`, and `wiki/topics/local-project-roots.md` if the task touches D-drive roots.
 6. Use `wiki/index.md`, `wiki/catalog.json`, and recent `wiki/log.md` as the lightweight route before opening broad source material.
 
 ## Operating Modes
@@ -86,6 +86,7 @@ python scripts/wiki.py search "query text"
 python scripts/wiki.py catalog
 python scripts/wiki.py lint
 powershell .\scripts\computer-inventory.ps1
+powershell .\scripts\wiki-maintenance-audit.ps1
 powershell .\scripts\Test-PrePushSafety.ps1
 ```
 

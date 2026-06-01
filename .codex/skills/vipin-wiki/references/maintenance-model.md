@@ -68,6 +68,7 @@ Weak evidence:
 
 - After major infrastructure or project changes: refresh relevant pages immediately.
 - After broad local discovery: update project maps, index, catalog, and log.
+- During old-content refresh: run `scripts/wiki-maintenance-audit.ps1` to find stale pages, missing `updated` frontmatter, local-path pages, Agent Hub mentions, and missing counterpoint sections.
 - Periodically: scan for stale maps, duplicate project pages, orphan entries, and private/public boundary drift.
 - When the user says future agents should remember something: persist it in `AGENTS.md` and a relevant wiki page.
 

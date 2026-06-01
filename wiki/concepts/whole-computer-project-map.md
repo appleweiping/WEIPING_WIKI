@@ -58,6 +58,8 @@ When uncertain, start shallow. Promote a root to more detail only after live evi
 | `D:/agent-resources` | Public curated skill/resource library and implicit skill-routing index. | README, `SKILL-INDEX.md`, provenance/license notes. |
 | `C:/Users/admin/.claude`, `C:/Users/admin/.codex`, `C:/Users/admin/.openhands` | Junction entrypoints into D-drive agent homes. | Verify junction target before changing agent storage. |
 
+For active non-research project roots with more detailed entry docs, use [[local-active-project-roots]].
+
 ## D-Drive Working Roots
 
 | Bucket | Examples | Rule |
@@ -88,8 +90,9 @@ For whole-computer upkeep:
 4. Inspect the smallest live evidence that proves current state.
 5. Refresh existing pages before creating new ones.
 6. Mark stale or superseded content instead of deleting useful history.
-7. Update `wiki/index.md`, `wiki/log.md`, and `wiki/catalog.json`.
-8. Validate, then stage only scoped files.
+7. Run `scripts/wiki-maintenance-audit.ps1` when the task is about stale content or broad upkeep.
+8. Update `wiki/index.md`, `wiki/log.md`, and `wiki/catalog.json`.
+9. Validate, then stage only scoped files.
 
 ## Old-Content Refresh Triggers
 
@@ -113,6 +116,7 @@ Deletion still requires explicit user approval. Most old content should be rewri
 ## Related
 
 - [[d-drive-project-map]]
+- [[local-active-project-roots]]
 - [[local-project-roots]]
 - [[research-project-workbench]]
 - [[agentmemory-first-agent-collaboration]]

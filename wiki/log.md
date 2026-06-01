@@ -10,6 +10,19 @@ tags:
 
 # Log
 
+## [2026-06-01 16:55] maintenance | Active local roots and refresh audit helper
+
+- Pages/files updated:
+  - [[local-active-project-roots]]
+  - [[whole-computer-project-map]]
+  - [[local-project-roots]]
+  - `.codex/skills/vipin-wiki/SKILL.md`
+  - `scripts/wiki-maintenance-audit.ps1`
+- Notes:
+  - Added a detailed public-safe launch map for important non-research local roots such as legal-case automation, Veylora, Medora, Agent Town, Pretext, and portfolio repos.
+  - Added an advisory maintenance audit script for stale pages, missing `updated` frontmatter, local-path pages, Agent Hub mentions, and missing counterpoints.
+  - Kept no-README/scratch/archive roots at summary level and kept research experiments routed through [[research-project-workbench]].
+
 ## [2026-06-01 16:10] maintenance | Whole-computer vipin wiki maintenance map
 
 - Pages/files updated:

@@ -66,6 +66,7 @@ python scripts/wiki.py catalog
 python scripts/wiki.py lint
 python scripts/wiki.py search "agentmemory"
 powershell .\scripts\computer-inventory.ps1
+powershell .\scripts\wiki-maintenance-audit.ps1
 ```
 
 Compatibility wrappers still exist for older workflows, but `scripts/wiki.py` is the canonical surface.
