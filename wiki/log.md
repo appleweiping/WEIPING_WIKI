@@ -1034,3 +1034,5 @@ tags:
   - Added durable implicit skill-routing rules so agents invoke skills by task intent rather than waiting for explicit skill names.
   - Replaced remaining active ARIS Claude skill handoff wording with agentmemory signals/actions and explicit context packs.
   - Removed tracked `memory/sessions/*.md` dumps from the public Git index while leaving local files in place.
+  - Removed active Agent Hub state dependencies from the wiki dashboard/token scripts; they now use agentmemory/default local token state and only read legacy metrics from an explicit environment variable.
+  - Removed a secret-bearing key memory file from public Git, rewrote `vipin-wiki` history, force-pushed the clean history, and verified a fresh remote clone has zero exact-key/history hits.

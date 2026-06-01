@@ -1,11 +1,15 @@
 """
 wiki-dashboard.py — Agent performance dashboard for Vipin's Knowledgebase.
 
-Reads D:\\devtools\\agent-hub\\state\\metrics.json and produces:
-  - Per-agent success/failure/retry rates
-  - Task latency distribution
-  - Cascade fallback analysis
-  - Recent activity timeline
+Agent Hub is retired. This dashboard treats agentmemory as the active
+coordination service and only renders per-agent dispatch metrics when a future
+agentmemory-backed event exporter exists.
+
+Produces:
+  - agentmemory health/context summary
+  - Per-agent success/failure/retry rates when event data is available
+  - Task latency distribution when event data is available
+  - Recent activity timeline when event data is available
   - HTML dashboard (self-contained, no server needed)
 
 Usage:
@@ -21,6 +25,8 @@ import json
 import os
 import sys
 import time
+import urllib.error
+import urllib.request
 from collections import defaultdict
 from dataclasses import dataclass, field
 from datetime import datetime, timezone
@@ -28,7 +34,7 @@ from pathlib import Path
 from typing import Optional
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
-METRICS_FILE = Path(r"D:\devtools\agent-hub\state\metrics.json")
+AGENTMEMORY_URL = os.environ.get("AGENTMEMORY_URL", "http://localhost:3111").rstrip("/")
 DASHBOARD_OUT = REPO_ROOT / "wiki-dashboard.html"
 
 AGENT_COLORS = {
@@ -108,27 +114,42 @@ class AgentStats:
 
 
 def load_events() -> list[Event]:
-    if not METRICS_FILE.exists():
-        return []
+    # Agent Hub metrics are retired. Keep this boundary so a future
+    # agentmemory event exporter can plug in without changing the dashboard UI.
+    return []
+
+
+def _get_agentmemory(path: str) -> dict:
+    url = f"{AGENTMEMORY_URL}/agentmemory/{path.lstrip('/')}"
     try:
-        raw = json.loads(METRICS_FILE.read_text(encoding="utf-8"))
-        events = []
-        for e in raw.get("events", []):
-            try:
-                ts = datetime.fromisoformat(e["timestamp"].replace("Z", "+00:00"))
-            except (ValueError, KeyError):
-                ts = datetime.now(timezone.utc)
-            events.append(Event(
-                agent=e.get("agent", "unknown"),
-                task_id=e.get("task_id", ""),
-                event=e.get("event", ""),
-                detail=e.get("detail", ""),
-                timestamp=ts,
-            ))
-        return sorted(events, key=lambda e: e.timestamp)
-    except Exception as ex:
-        print(f"Warning: could not load metrics: {ex}", file=sys.stderr)
-        return []
+        with urllib.request.urlopen(url, timeout=2) as response:
+            return json.loads(response.read().decode("utf-8"))
+    except (OSError, urllib.error.URLError, json.JSONDecodeError):
+        return {}
+
+
+def _viewer_url() -> str:
+    if AGENTMEMORY_URL.endswith(":3111"):
+        return AGENTMEMORY_URL[:-4] + "3113"
+    return AGENTMEMORY_URL
+
+
+def load_agentmemory_summary() -> dict:
+    health = _get_agentmemory("health")
+    sessions = _get_agentmemory("sessions")
+    memories = _get_agentmemory("memories?count=true")
+    flags = _get_agentmemory("config/flags")
+    session_list = sessions.get("sessions") if isinstance(sessions.get("sessions"), list) else []
+    return {
+        "url": AGENTMEMORY_URL,
+        "viewer": _viewer_url(),
+        "status": health.get("status") or "unreachable",
+        "version": health.get("version") or "?",
+        "sessions": len(session_list),
+        "observations": sum(int(s.get("observationCount") or 0) for s in session_list),
+        "memories": memories.get("latestCount") or memories.get("total") or 0,
+        "flags": flags.get("flags") or [],
+    }
 
 
 def compute_stats(events: list[Event]) -> tuple[dict[str, AgentStats], dict[str, TaskStats], list[Event]]:
@@ -194,6 +215,21 @@ def hr(w=80): return c("─" * w, DIM)
 def bar(value: float, width: int = 20, color: str = GREEN) -> str:
     filled = int(value * width)
     return c("█" * filled, color) + c("░" * (width - filled), DIM)
+
+
+def print_agentmemory_summary(summary: dict):
+    print(f"\n  {c('Agentmemory Coordination Summary', BOLD, CYAN)}")
+    print(c(f"  {datetime.now(timezone.utc).strftime('%Y-%m-%d %H:%M UTC')}", DIM))
+    print(hr())
+    print(f"  URL:          {summary['url']}")
+    print(f"  Health:       {summary['status']}")
+    print(f"  Version:      {summary['version']}")
+    print(f"  Sessions:     {summary['sessions']}")
+    print(f"  Observations: {summary['observations']}")
+    print(f"  Memories:     {summary['memories']}")
+    print(f"  Viewer:       {summary['viewer']}")
+    print(c("\n  Per-agent dispatch metrics are not currently exported. Agent Hub is retired; use agentmemory signals/actions/slots for coordination.", DIM))
+    print()
 
 
 def print_dashboard(agent_stats: dict[str, AgentStats],
@@ -380,9 +416,22 @@ tr:last-child td{{border-bottom:none}}
 
 def run_once(args):
     events = load_events()
+    agentmemory = load_agentmemory_summary()
     if not events:
-        print("No metrics data found. Agent Hub may not have run yet.")
+        if getattr(args, "json", False):
+            print(json.dumps({
+                "generated": datetime.now(timezone.utc).isoformat(),
+                "agentmemory": agentmemory,
+                "summary": {
+                    "total_tasks": 0,
+                    "successful_tasks": 0,
+                    "cascade_tasks": 0,
+                },
+                "agents": {},
+            }, indent=2))
+            return
         if not getattr(args, "html", False):
+            print_agentmemory_summary(agentmemory)
             return
     agent_stats, task_stats, recent = compute_stats(events)
 

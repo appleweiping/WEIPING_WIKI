@@ -6,11 +6,10 @@ Integrates with the agent performance dashboard and wiki health page.
 
 Token data sources:
   1. Manual log entries (via `log` command)
-  2. Agent Hub metrics.json (parsed for token events)
-  3. Anthropic/OpenAI API response headers (if available)
+  2. Anthropic/OpenAI API response headers (if available)
+  3. Optional legacy metrics file supplied explicitly with VIPIN_LEGACY_METRICS_FILE
 
-Storage: D:\\devtools\\agent-hub\\state\\token-usage.json
-         (alongside metrics.json, same state directory)
+Storage: D:\\devtools\\agentmemory\\state\\token-usage.json by default.
 
 Usage:
     python scripts/wiki-tokens.py log --agent opus --tokens 12500 --task "paper review"
@@ -24,6 +23,7 @@ from __future__ import annotations
 
 import argparse
 import json
+import os
 import sys
 from collections import defaultdict
 from dataclasses import asdict, dataclass, field
@@ -32,9 +32,9 @@ from pathlib import Path
 from typing import Optional
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
-STATE_DIR = Path(r"D:\devtools\agent-hub\state")
+STATE_DIR = Path(os.environ.get("VIPIN_AGENT_TOKEN_STATE_DIR", r"D:\devtools\agentmemory\state"))
 TOKEN_FILE = STATE_DIR / "token-usage.json"
-METRICS_FILE = STATE_DIR / "metrics.json"
+LEGACY_METRICS_FILE = os.environ.get("VIPIN_LEGACY_METRICS_FILE")
 
 # Model cost table (USD per 1M tokens, input/output)
 MODEL_COSTS: dict[str, tuple[float, float]] = {
@@ -153,13 +153,19 @@ def new_id() -> str:
 
 def parse_metrics_for_tokens() -> list[TokenEntry]:
     """
-    Parse agent-hub metrics.json for token usage events.
-    Looks for events with token_count or usage fields.
+    Parse an explicitly supplied legacy metrics file for token usage events.
+
+    Agent Hub is retired, so this does not read any default Agent Hub path.
+    Set VIPIN_LEGACY_METRICS_FILE to import old metrics for one-off analysis.
     """
-    if not METRICS_FILE.exists():
+    if not LEGACY_METRICS_FILE:
+        return []
+    metrics_file = Path(LEGACY_METRICS_FILE)
+    if not metrics_file.exists():
+        print(f"Warning: legacy metrics file not found: {metrics_file}", file=sys.stderr)
         return []
     try:
-        raw = json.loads(METRICS_FILE.read_text(encoding="utf-8"))
+        raw = json.loads(metrics_file.read_text(encoding="utf-8"))
     except Exception:
         return []
 
@@ -257,7 +263,7 @@ def fmt_tokens(n: int) -> str:
 
 def fmt_cost(usd: float) -> str:
     if usd < 0.01:
-        return f"${usd*100:.2f}¢"
+        return f"{usd*100:.2f} cents"
     return f"${usd:.4f}"
 
 
@@ -416,7 +422,7 @@ def cmd_log(args):
 
 def cmd_report(args):
     entries = load_entries()
-    # Also parse metrics.json for any token events
+    # Optional one-off import from an explicitly supplied legacy metrics file.
     metrics_entries = parse_metrics_for_tokens()
     # Merge (avoid duplicates by id)
     existing_ids = {e.id for e in entries}
