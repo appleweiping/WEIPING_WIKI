@@ -1068,6 +1068,7 @@ tags:
   - Removed tracked `memory/sessions/*.md` dumps from the public Git index while leaving local files in place.
   - Removed active Agent Hub state dependencies from the wiki dashboard/token scripts; they now use agentmemory/default local token state and only read legacy metrics from an explicit environment variable.
   - Removed a secret-bearing key memory file from public Git, rewrote `vipin-wiki` history, force-pushed the clean history, and verified a fresh remote clone has zero exact-key/history hits.
+
 ## [2026-06-01 16:42] maintenance | vipinknowledge continuous maintenance system
 
 - Pages created or updated:
@@ -1079,9 +1080,36 @@ tags:
   - `scripts/wiki.py`
   - `scripts/wiki-maintain.ps1`
 - Sources used:
-  - User-approved continuous maintenance upgrade plan
-  - Live repository operating docs and maintenance scripts
+  - User-approved implementation plan for weekly whole-computer maintenance, safe auto commit/push, and shallow all-drive scanning.
+  - Existing [[whole-computer-project-map]], [[d-drive-project-map]], [[local-active-project-roots]], and [[local-project-roots]].
 - Notes:
-  - Added the canonical `python scripts/wiki.py maintain --scope whole-computer --json` report command.
-  - Rebuilt `vipin-wiki` as a mode-based orchestrator with whole-computer depth, weekly maintenance, safety, automation, and self-upgrade references.
+  - Added `python scripts/wiki.py maintain --scope whole-computer --json` as the canonical ignored-report command for weekly maintenance.
+  - Rebuilt the Codex `vipin-wiki` skill as a mode router with separate references for scan depth, weekly maintenance, self-upgrade, and automation safety.
+  - Added a Claude/OpenCode-visible adapter skill so non-Codex partners can trigger the same maintenance workflow.
   - Recorded scoped automation gates: report first, update curated wiki/skill/docs only when evidence changed, validate, then stage and push only scoped files.
+
+## [2026-06-01 16:44] ingest | University of Minnesota AZ hold guidance
+
+- Pages created or updated:
+  - [[2026-06-01-umn-az-hold-esl-course-information]]
+  - [[university-of-minnesota]]
+  - [[index]]
+  - [[log]]
+  - `raw/inbox/2026-06-01-umn-az-hold.txt`
+- Sources used:
+  - User-provided pasted text about AZ holds, English proficiency scores, ESL course registration, MN Battery Test, transfer exemptions, and MELP contact information.
+- Notes:
+  - Preserved the provided passage verbatim in both the raw inbox text file and the source note's verbatim text block.
+  - Marked the source as user-provided and not independently verified.
+
+## [2026-06-01 17:10] maintenance | commit discipline for cross-chat wiki outputs
+
+- Pages created or updated:
+  - `AGENTS.md`
+  - [[vipinknowledge-maintenance-system]]
+  - [[log]]
+- Sources used:
+  - User instruction that obvious same-session/cross-chat wiki, raw, memory, and documentation outputs should be committed rather than left behind as trivial adjacent dirty work.
+- Notes:
+  - Added the durable rule that deliberate, public-safe, validated wiki/raw/memory/doc outputs should be included in a scoped commit even when they were produced by another active chat.
+  - Preserved the guard against committing source-unclear, sensitive, conflicting, incomplete, external-project, or validation-failing work.

@@ -95,6 +95,7 @@ This is the main catalog of the wiki.
 ## Sources
 
 - [[2026-05-31-voice-sample]] - Public voice sample archive with Hangzhou dialect, Mandarin, and English MP3 files.
+- [[2026-06-01-umn-az-hold-esl-course-information]] - User-provided verbatim University of Minnesota AZ hold, ESL course, English proficiency score, MN Battery Test, and MELP contact guidance.
 - [[2026-05-17-html-ppt-skill-and-deck-session]] - Chat/session source note for installing the D-drive HTML PPT skill/template setup and producing two validated decks.
 - [[2026-05-17-paper-orchestra-github]] - GitHub source note for `Ar9av/PaperOrchestra`, its paper-writing pipeline, local mirror, and installed skills.
 - [[2026-05-17-content-creation-publisher-skill]] - Source note for `anbeime/skill`'s content creation publisher skill, installed sub-skills, runtime notes, and usage patterns.

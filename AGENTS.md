@@ -750,6 +750,7 @@ Rules:
 - If automation leaves files marked modified but `git diff`/hash checks show no real content changes, refresh the index or normalize the false dirty state instead of creating a meaningless commit, and report that there was no substantive diff to commit.
 - Keep commits scoped to the saved wiki work and its required index/log updates.
 - Do not stage unrelated local changes unless the user explicitly asks for them.
+- Do not leave obvious same-session or cross-chat wiki/raw/memory/doc outputs uncommitted merely because they look like adjacent dirty work. If inspection shows they are deliberate, public-safe, validated, and part of the user's ongoing knowledge work, include them in a scoped commit; hold them back only when they are source-unclear, sensitive, conflicting, incomplete, external-project edits, or validation-failing, and say why.
 
 ## Lint Workflow
 

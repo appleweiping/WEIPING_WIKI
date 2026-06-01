@@ -102,6 +102,8 @@ Automation may commit and push only after:
 
 Automation must stage only scoped wiki/skill/script/doc changes. It must not stage unrelated dirty work, ignored report artifacts, memory session dumps, raw private material, caches, generated runtime artifacts, or external project files.
 
+EXTRACTED: Obvious same-session or cross-chat wiki/raw/memory/doc outputs should not be left behind just because they look like adjacent dirty work. If inspection shows they are deliberate, public-safe, validated, and part of the user's ongoing knowledge work, include them in a scoped commit. Hold them back only when they are source-unclear, sensitive, conflicting, incomplete, external-project edits, or validation-failing.
+
 If validation fails, the automation stops before commit/push and leaves the report for a future agent.
 
 ## Counterpoints And Gaps
