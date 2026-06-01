@@ -10,6 +10,12 @@ tags:
 
 # Log
 
+## [2026-06-01 15:35] maintenance | D-drive project map and safety gates
+
+- Added [[d-drive-project-map]] as the first-stop routing page for D-drive infrastructure, public exports, private runtime state, and research isolation.
+- Added pre-push safety gate scripts for public-facing repositories and recorded that Agent Hub historical references should carry deprecated context.
+- Recorded endpoint-key rotation status privately because provider management APIs returned `401` without a logged-in dashboard session.
+
 ## [2026-06-01 11:40] maintenance | D-drive agent infrastructure follow-up
 
 - Pages/files updated:

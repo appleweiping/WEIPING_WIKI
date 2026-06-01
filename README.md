@@ -13,7 +13,7 @@ The wiki is the public crystallization layer. Day-to-day agent memory and collab
 | You are | First step | Then |
 | --- | --- | --- |
 | Vipin | Open Codex, Claude Code, or OpenCode | Talk naturally. Agents choose skills, use agentmemory, update the wiki, and make scoped commits when useful. |
-| A future agent | Read `AGENTS.md` | Check `wiki/index.md`, `wiki/catalog.json`, and recent `wiki/log.md`; use agentmemory for active recall/collaboration. |
+| A future agent | Read `AGENTS.md` | For D-drive work, read `wiki/concepts/d-drive-project-map.md`; then check `wiki/index.md`, `wiki/catalog.json`, and recent `wiki/log.md`; use agentmemory for active recall/collaboration. |
 | A human reader | Open `wiki/index.md` | Follow entities, concepts, sources, analyses, and saved query pages. |
 | A maintainer | Run `python scripts/wiki.py health` | Rebuild catalog and lint before committing public wiki changes. |
 
@@ -86,6 +86,7 @@ Compatibility wrappers still exist for older workflows, but `scripts/wiki.py` is
 - Keep research project claims inside their evidence gates. Do not change experiment progress, datasets, checkpoints, or server state from this repo.
 - Stage only scoped files. Existing unrelated dirty work belongs to its owner.
 - Infrastructure changes must update the relevant operating docs in the same commit.
+- D-drive infrastructure or organization changes should start from [D-drive project map](wiki/concepts/d-drive-project-map.md) so agent runtime cleanup stays separate from research experiments.
 
 ## Related Repositories
 

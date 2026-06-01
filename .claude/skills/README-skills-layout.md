@@ -14,6 +14,8 @@ Skills are chosen by task intent. Agents should inspect skill metadata, read the
 
 `agentmemory` is the active memory/collaboration layer. Agent Hub is retired and should not be registered as an active MCP server.
 
+For D-drive infrastructure or organization tasks, read `wiki/concepts/d-drive-project-map.md` before editing. It is the routing map for public exports, private runtime state, skills/resources, and research isolation.
+
 ## Skill Roots
 
 | Path | Purpose |

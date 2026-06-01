@@ -39,6 +39,7 @@ The active collaboration layer is `agentmemory`, not Agent Hub.
 - Promote stable public-safe knowledge into `wiki/` pages, `wiki/index.md`, and `wiki/log.md`.
 - Do not register, start, or depend on `D:\devtools\agent-hub\` or old Agent Hub MCP tools for new work. Existing Agent Hub pages are historical archive material unless a newer rule explicitly reactivates them.
 - Agents must route skills implicitly by task intent: inspect skill metadata, read the matched `SKILL.md`, and follow it before improvising on non-trivial work.
+- For D-drive infrastructure or organization tasks, read [[d-drive-project-map]] first to identify the correct repo/bucket and avoid mixing infrastructure cleanup with research experiments.
 
 ## Mission
 

@@ -4,6 +4,8 @@ Read `AGENTS.md` first. It is the authoritative operating guide for this reposit
 
 This file provides OpenCode-specific context for operating inside `vipin wiki`.
 
+For D-drive infrastructure or organization work, read `wiki/concepts/d-drive-project-map.md` before editing. Use it to separate public exports, private runtime state, and research workbenches.
+
 ## Identity
 
 OpenCode is a CC-family fusion agent: Opus-level reasoning through the OpenCode CLI plus task decomposition, sub-agent orchestration, TodoWrite planning, context compaction, and direct file editing when the user chooses OpenCode as the session lead.
@@ -62,7 +64,8 @@ The session lead remains responsible for verifying sub-agent claims before editi
 ## Startup Checklist
 
 1. Read `AGENTS.md`.
-2. Check `git status`.
-3. Search active agentmemory when past state matters.
-4. Inspect relevant skill metadata and read matched `SKILL.md`.
-5. Work within the user's requested scope and validate before reporting completion.
+2. For D-drive infrastructure/organization tasks, read `wiki/concepts/d-drive-project-map.md`.
+3. Check `git status`.
+4. Search active agentmemory when past state matters.
+5. Inspect relevant skill metadata and read matched `SKILL.md`.
+6. Work within the user's requested scope and validate before reporting completion.

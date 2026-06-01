@@ -18,6 +18,9 @@ source_pages:
 
 # PixelCat CC 502 Credentials Disabled Runbook
 
+> [!WARNING]
+> Historical Agent Hub references on this page are deprecated. Current partner coordination uses agentmemory signals/actions, git state, and explicit context packs.
+
 ## Short Answer
 
 EXTRACTED: On 2026-05-18, PixelCat was running on `127.0.0.1:8990`, `D:\devtools\cc.cmd --version` returned `2.1.143 (Claude Code)`, but a minimal `/v1/messages` probe returned HTTP 502 because PixelCat/ccmax reported that all upstream credentials were disabled (`0/1`).
@@ -110,7 +113,7 @@ INFERRED: The desired routing shape is `cc.cmd -> PixelCat on 127.0.0.1:8990 -> 
 
 Future agents should not keep retrying `cc.cmd` when the health check reports `upstream_credentials_disabled`. They should state the limitation and fill the Opus/Sonnet/Haiku collaboration slots with Codex parallel selves / `分身` by default when the task still benefits from parallel review or bounded exploration. DeepSeek Pro remains useful for translation, summarization, classification, and bulk drafts when appropriate and available, but it is not the automatic replacement for every CC-family role.
 
-Agent Hub has been patched so direct Sonnet/Haiku invocation and daemon Claude-family dispatch run a PixelCat upstream probe before waiting on `cc.cmd`.
+Historical note: Agent Hub was later retired. The current equivalent guard is the PixelCat/CC preflight plus agentmemory-based coordination; do not revive Agent Hub daemon dispatch for this runbook.
 
 ## Related
 

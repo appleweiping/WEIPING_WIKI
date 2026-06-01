@@ -17,6 +17,9 @@ source_pages:
 
 # Agent Hub MCP Server
 
+> [!WARNING]
+> Deprecated historical page. Agent Hub is retired; use [[agentmemory-first-agent-collaboration]] for active memory, signals, actions, checkpoints, and partner handoffs.
+
 ## Status
 
 DEPRECATED: Agent Hub is no longer active infrastructure for Vipin's agent stack.

@@ -4,6 +4,8 @@ Read `AGENTS.md` first. It is the authoritative operating guide for this reposit
 
 This repository is `vipin wiki`, a maintained personal knowledge base. Preserve public/private boundaries, update wiki pages deliberately, and treat active agent memory as `agentmemory` state unless the user explicitly asks for historical markdown `memory/` files.
 
+For D-drive infrastructure or organization work, read `wiki/concepts/d-drive-project-map.md` before editing so private runtime cleanup, public exports, and research workbenches do not get mixed.
+
 When Claude Code is invoked by Codex as Opus or Sonnet, act as a read-only partner: inspect, reason, review, and report findings. Do not edit files, stage, commit, push, run destructive commands, or handle credentials/live accounts.
 
 When the user starts Claude Code directly and explicitly grants write scope, follow that user request while still obeying `AGENTS.md`, `.wiki-schema.md`, and `purpose.md`.
