@@ -10,6 +10,21 @@ tags:
 
 # Log
 
+## [2026-06-04 18:08] maintenance | constellation entrypoint and handoff contract hardening
+
+- Pages/files updated:
+  - `.codex/skills/vipin-wiki/references/skill-upgrade-loop.md`
+  - `.codex/skills/vipin-wiki/references/safety-and-automation.md`
+  - `.codex/skills/vipin-wiki/references/weekly-maintenance-runbook.md`
+  - [[weiping-agentic-project-constellation]]
+  - [[whole-computer-project-map]]
+  - [[d-drive-project-map]]
+- Notes:
+  - Promoted new cross-repo `AGENTS.md` entrypoints into the WEIPING route map for `devtools`, `DELVTOOLS_PUBLIC`, `AGENT_RESOURCE`, `WEIPING_LAB`, and `WEIPING_COUNCIL`.
+  - Clarified Lab and Council artifact handoffs as explicit path/schema contracts rather than private runtime coupling.
+  - Tightened UUPF usage: target the smallest skill or reference file, keep raw reports in ignored target work areas, and treat offline output as audit input only.
+  - Recorded `D:/DELVTOOLS_PUBLIC` as the current local public-export checkout while preserving `devtools-public` as the GitHub and historical alias.
+
 ## [2026-06-04 17:20] maintenance | agentic constellation and UUPF maintenance upgrade
 
 - Pages/files updated:

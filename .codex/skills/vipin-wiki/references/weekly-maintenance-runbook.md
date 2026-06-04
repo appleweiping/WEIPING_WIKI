@@ -33,13 +33,13 @@ When the goal is whole-system maintenance rather than a narrow wiki edit, inspec
 | --- | --- | --- |
 | `D:/Research/WEIPING_WIKI` | Canonical wiki repo | `AGENTS.md`, `.wiki-schema.md`, `purpose.md`, `wiki/concepts/whole-computer-project-map.md` |
 | `D:/Research/vipin's knowledgebase` | Compatibility junction to `WEIPING_WIKI` | Resolve junction target before editing |
-| `D:/devtools` | Private agent runtime/workstation repo | `README.md`, `health-check.ps1`, `codex/home/automations/` summaries, git status |
-| `D:/devtools-public` | Public-safe export repo | `README.md`, `docs/`, safety scripts |
-| `D:/AGENT_RESOURCE` | Canonical resource/skill repo | `README.md`, `SKILL-INDEX.md`, `docs/skill-provenance-audit-*.md` |
+| `D:/devtools` | Private agent runtime/workstation repo | `AGENTS.md`, `README.md`, `health-check.ps1`, `codex/home/automations/` summaries, git status |
+| `D:/DELVTOOLS_PUBLIC` / `D:/devtools-public` | Public-safe export repo | `AGENTS.md`, `README.md`, `docs/`, safety scripts |
+| `D:/AGENT_RESOURCE` | Canonical resource/skill repo | `AGENTS.md`, `README.md`, `SKILL-INDEX.md`, `docs/skill-provenance-audit-*.md` |
 | `D:/agent-resources` | Compatibility junction to `AGENT_RESOURCE` | Resolve junction target before editing |
 | `D:/AGENTIC_SCIENCE` | Workflow factory repo | `README.md`, `AGENTS.md`, `uupf/UniversalUpgradeForge.zip` |
-| `D:/Research/WEIPING_LAB` | Research workbench repo | `README.md`, `CLAUDE.md`, `.codex/skills/weiping-lab/SKILL.md`, `pyproject.toml` |
-| `D:/Research/WEIPING_COUNCIL` | Multi-model deliberation repo | `README.md`, `CLAUDE.md`, `.codex/skills/weiping-council/SKILL.md`, `pyproject.toml` |
+| `D:/Research/WEIPING_LAB` | Research workbench repo | `AGENTS.md`, `README.md`, `CLAUDE.md`, `.codex/skills/weiping-lab/SKILL.md`, `pyproject.toml` |
+| `D:/Research/WEIPING_COUNCIL` | Multi-model deliberation repo | `AGENTS.md`, `README.md`, `CLAUDE.md`, `.codex/skills/weiping-council/SKILL.md`, `pyproject.toml` |
 
 The pass should update routing, aliases, safety boundaries, and cross-project relationship notes. It should not edit external project source code, generated artifacts, private runtime state, local workspaces, or experiment outputs.
 
@@ -76,7 +76,7 @@ Do not create a noisy commit when no meaningful route, rule, or status changed.
 
 ## UUPF Upgrade Pass
 
-For major skill or maintenance-system upgrades, run UUPF offline from `D:/AGENTIC_SCIENCE/uupf/UniversalUpgradeForge.zip` after reading its `AGENTS.md` / `CODEX.md`:
+For major skill or maintenance-system upgrades, optionally run UUPF offline from `D:/AGENTIC_SCIENCE/uupf/UniversalUpgradeForge.zip` after reading its `AGENTS.md` / `CODEX.md`. It is not a normal weekly dependency.
 
 ```powershell
 $env:PYTHONIOENCODING = "utf-8"
@@ -85,7 +85,7 @@ python -m uupgrade.cli plan "<target>" --goal "<goal>" --iterations 108 --output
 python -m uupgrade.cli upgrade "<target>" --goal "<goal>" --iterations 108 --provider offline --output ".wiki-tmp/uupf-runs/<name>"
 ```
 
-Keep UUPF runs under ignored `.wiki-tmp/`. Summarize `FINAL_REPORT.md`, `ITERATION_LOG.md`, and `PROVENANCE.md` in the maintenance note or final report, but only hand-apply reviewed changes.
+Keep expanded UUPF tools and runs under ignored `.wiki-tmp/`. Do not target the entire wiki repo; target the smallest skill or reference file. Summarize `FINAL_REPORT.md`, `ITERATION_LOG.md`, and `PROVENANCE.md` in the maintenance note or final report, but only hand-apply reviewed changes.
 
 ## Validation Gate
 

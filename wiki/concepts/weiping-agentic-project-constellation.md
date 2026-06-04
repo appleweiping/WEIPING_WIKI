@@ -31,12 +31,12 @@ This page routes the local agentic infrastructure projects that should be mainta
 | Canonical root | Compatibility alias | Role | First-read evidence |
 | --- | --- | --- | --- |
 | `D:/Research/WEIPING_WIKI` | `D:/Research/vipin's knowledgebase` | Public knowledge system, operating contract, project map, maintenance automations, and skill rules. | `AGENTS.md`, `.wiki-schema.md`, `purpose.md`, `.codex/skills/vipin-wiki/SKILL.md` |
-| `D:/devtools` | `C:/Users/admin/.codex`, `C:/Users/admin/.claude`, other user-profile junctions | Private local agent runtime, Codex/Claude homes, automations, launchers, caches, health checks. | `README.md`, `health-check.ps1`, `codex/home/automations/` |
-| `D:/devtools-public` | none observed | Public-safe export of selected devtools docs and scripts. | `README.md`, `docs/`, safety scripts |
-| `D:/AGENT_RESOURCE` | `D:/agent-resources` | Shared skill/resource library and implicit routing index. | `README.md`, `SKILL-INDEX.md`, `docs/skill-provenance-audit-*.md` |
+| `D:/devtools` | `C:/Users/admin/.codex`, `C:/Users/admin/.claude`, other user-profile junctions | Private local agent runtime, Codex/Claude homes, automations, launchers, caches, health checks. | `AGENTS.md`, `README.md`, `health-check.ps1`, `codex/home/automations/` |
+| `D:/DELVTOOLS_PUBLIC` | `D:/devtools-public`, GitHub `devtools-public` | Public-safe export of selected devtools docs and scripts. | `AGENTS.md`, `README.md`, `docs/`, safety scripts |
+| `D:/AGENT_RESOURCE` | `D:/agent-resources` | Shared skill/resource library and implicit routing index. | `AGENTS.md`, `README.md`, `SKILL-INDEX.md`, `docs/skill-provenance-audit-*.md` |
 | `D:/AGENTIC_SCIENCE` | none observed | Workflow factory repo; source for UUPF, URWF, and LWWF packs. | `README.md`, `AGENTS.md`, `uupf/UniversalUpgradeForge.zip` |
-| `D:/Research/WEIPING_LAB` | `D:/Research/vipin-lab` | Honest research workbench for phenomenon-driven discovery, kill-first ideation, experiment planning, evidence-gated writing, and cross-model audit. | `README.md`, `CLAUDE.md`, `.codex/skills/weiping-lab/SKILL.md`, `pyproject.toml` |
-| `D:/Research/WEIPING_COUNCIL` | `D:/Research/vipin-council` | Multi-model deliberation runtime and council/review companion. | `README.md`, `CLAUDE.md`, `.codex/skills/weiping-council/SKILL.md`, `pyproject.toml` |
+| `D:/Research/WEIPING_LAB` | `D:/Research/vipin-lab` | Honest research workbench for phenomenon-driven discovery, kill-first ideation, experiment planning, evidence-gated writing, and cross-model audit. | `AGENTS.md`, `README.md`, `CLAUDE.md`, `.codex/skills/weiping-lab/SKILL.md`, `pyproject.toml` |
+| `D:/Research/WEIPING_COUNCIL` | `D:/Research/vipin-council` | Multi-model deliberation runtime and council/review companion. | `AGENTS.md`, `README.md`, `CLAUDE.md`, `.codex/skills/weiping-council/SKILL.md`, `pyproject.toml` |
 
 ## Compatibility Junctions
 
@@ -48,6 +48,8 @@ EXTRACTED: `D:/Research/WEIPING_WIKI/skill` points to `D:/agent-resources/skills
 
 - EXTRACTED: `WEIPING_LAB` names `WEIPING_COUNCIL` as its companion review/council layer.
 - EXTRACTED: `WEIPING_COUNCIL` describes `WEIPING_LAB` as a broader lab/workbench layer that can consume council session artifacts, while council remains runnable on its own.
+- EXTRACTED: `WEIPING_LAB` handoff artifacts include workspace session, idea, plan, paper, experiment-plan/tracker, result JSON, and redacted outbox files under the configured workspace root.
+- EXTRACTED: `WEIPING_COUNCIL` handoff artifacts are saved session JSON files under `data/sessions/<uuid>.json`, but those saved sessions remain runtime state unless deliberately curated.
 - EXTRACTED: `AGENT_RESOURCE` is the shared skill and workflow library; `D:/agent-resources` is a compatibility junction.
 - EXTRACTED: `AGENTIC_SCIENCE` contains UUPF, which can produce offline 108-pass upgrade audits for skills and docs. The observed local UUPF ZIP SHA256 was `7DC22DA85DEFFE106C8D44114E047AD9D25BE35BE926A7A88B76D82B424F445A`.
 - INFERRED: WEIPING_WIKI is the router and durable map; it should know how these projects relate but should not become their runtime dependency manager.

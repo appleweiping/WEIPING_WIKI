@@ -23,17 +23,27 @@ Before editing the skill, inspect:
 For non-trivial upgrades, run UUPF in offline mode before editing:
 
 ```powershell
-$out = ".wiki-tmp\uupf"
-Expand-Archive -LiteralPath "D:\AGENTIC_SCIENCE\uupf\UniversalUpgradeForge.zip" -DestinationPath $out -Force
-Push-Location "$out\UniversalUpgradeForge"
 $env:PYTHONIOENCODING = "utf-8"
-python -m uupgrade.cli doctor
+$tools = ".wiki-tmp\uupf-tools"
+$runs = ".wiki-tmp\uupf-runs"
+Expand-Archive -LiteralPath "D:\AGENTIC_SCIENCE\uupf\UniversalUpgradeForge.zip" -DestinationPath $tools -Force
+Push-Location "$tools\UniversalUpgradeForge"
+python -m uupgrade.cli doctor --json
 python -m uupgrade.cli plan "<target-skill-or-doc>" --goal "<upgrade-goal>" --iterations 108 --output "..\..\uupf-runs\<name>"
 python -m uupgrade.cli upgrade "<target-skill-or-doc>" --goal "<upgrade-goal>" --iterations 108 --provider offline --output "..\..\uupf-runs\<name>"
 Pop-Location
 ```
 
-Use the reports as a structured audit checklist. UUPF offline runs do not prove the skill is upgraded and do not patch the original files. The responsible agent must still inspect live evidence, hand-apply concise changes, validate, and preserve provenance.
+Keep expanded tools and run outputs under ignored `.wiki-tmp/`. Do not point UUPF at the whole wiki repo; pass the smallest skill or reference file that needs review. UUPF offline runs copy inputs into their own workspaces, do not patch the original files, and do not prove the skill is upgraded.
+
+Triage the generated `FINAL_REPORT.md`, `ITERATION_LOG.md`, and `PROVENANCE.md` as an audit checklist:
+
+- Which findings are supported by live project files?
+- Which findings would increase private-data exposure or cross-repo coupling?
+- Which changes belong in `SKILL.md`, `references/`, `scripts/`, wiki pages, adapters, or automation prompts?
+- Which raw reports must remain ignored and summarized only?
+
+The responsible agent must still inspect live evidence, hand-apply concise changes, validate, and preserve public-safe provenance.
 
 ## Edit Pattern
 

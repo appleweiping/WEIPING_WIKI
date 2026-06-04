@@ -32,6 +32,7 @@ Automation may commit and push only if all are true:
 - `git diff --check` passes
 - no unrelated dirty work is staged
 - no raw private or ignored runtime material is staged
+- no raw UUPF, workstation-maintenance, CI, browser, or project-generated report folders are staged; commit curated summaries and source changes only
 
 For WEIPING_WIKI recurring maintenance, cron automations should use `model = "gpt-5.5"` and `reasoning_effort = "xhigh"` when supported. The prompt must explicitly preserve unrelated dirty work and must not stage external project files merely because it inspected them.
 
@@ -45,6 +46,7 @@ Stop before staging when:
 - a deletion is needed but the user has not approved it
 - sensitive material appears in a public candidate diff
 - only ignored report artifacts changed
+- only UUPF offline report artifacts changed
 - a physical file move is proposed without a `workstation-maintenance` manifest, age-gated user-approved batch, and rollback manifest
 - a proposed cross-project link would make one repository depend on another repository's private `.env`, database, runtime cache, generated report, or active workspace state
 
