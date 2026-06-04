@@ -32,8 +32,8 @@ For whole-computer maintenance, project routing, or organization tasks, read `wi
 ## Routing Rules
 
 - Research audit, paper review, experiment audit, and citation work must use the corresponding ARIS skill when present.
-- Whole-computer maintenance, local project routing, wiki refresh, and `vipinknowledge` skill upgrades should use `vipin-wiki`.
-- Physical C:/D:/G: file organization should use `workstation-maintenance`; `vipin-wiki` records only the public-safe routing/documentation updates afterward. Full-plan, exact-batch, and D-root organization preflights do not authorize movement by themselves.
+- Whole-computer maintenance, local project routing, wiki refresh, and `WEIPING_WIKI` skill upgrades should use `weiping-wiki`. `vipin-wiki` is a historical alias that may still appear in old skill folders or automation snippets.
+- Physical C:/D:/G: file organization should use `workstation-maintenance`; `weiping-wiki` records only the public-safe routing/documentation updates afterward. Full-plan, exact-batch, and D-root organization preflights do not authorize movement by themselves.
 - README and public-repo presentation work should use `readme-blueprint-generator`.
 - Agent/tool/memory architecture work should use an agent architecture audit skill when present.
 - Skill creation or frontmatter/trigger optimization should use `skill-creator`.
@@ -50,9 +50,9 @@ If a task is trivial and no workflow value is added, a skill is optional. If the
 5. Keep generated caches, toolchains, browser profiles, and account state out of Git.
 6. Validate frontmatter and a non-destructive smoke path when possible.
 
-## VipinKnowledge Maintenance Skill
+## WEIPING_WIKI Maintenance Skill
 
-Claude Code and OpenCode can trigger `D:\Research\vipin's knowledgebase\.claude\skills\vipin-wiki\SKILL.md`.
+Claude Code and OpenCode can trigger the project maintenance skill from `D:\Research\vipin's knowledgebase\.claude\skills\vipin-wiki\SKILL.md`; the physical folder is retained as the historical `vipin-wiki` alias while the skill name is `weiping-wiki`.
 
 Codex uses `D:\Research\vipin's knowledgebase\.codex\skills\vipin-wiki\SKILL.md` as the full orchestrator. Both routes point to the same canonical command:
 
@@ -60,7 +60,7 @@ Codex uses `D:\Research\vipin's knowledgebase\.codex\skills\vipin-wiki\SKILL.md`
 python scripts/wiki.py maintain --scope whole-computer --json
 ```
 
-The command writes ignored reports under `.wiki-tmp/vipinknowledge-maintenance/`; curated wiki/skill/doc changes still require validation, scoped staging, commit, and push.
+The command writes ignored reports under `.wiki-tmp/vipinknowledge-maintenance/` for historical compatibility; curated wiki/skill/doc changes still require validation, scoped staging, commit, and push.
 
 ## Retired Agent Hub Boundary
 
@@ -70,7 +70,7 @@ Do not add old Agent Hub tool instructions, daemon startup requirements, port `9
 
 ## PixelCat / CC Health Check
 
-Before relying on Opus, Sonnet, or Haiku through Claude Code, run from the vipin wiki root when available:
+Before relying on Opus, Sonnet, or Haiku through Claude Code, run from the WEIPING_WIKI root when available:
 
 ```powershell
 .\scripts\Test-LocalCcPartner.ps1

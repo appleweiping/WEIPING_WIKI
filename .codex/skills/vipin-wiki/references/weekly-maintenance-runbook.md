@@ -1,6 +1,6 @@
 # Weekly Maintenance Runbook
 
-Use this for the `Maintain VipinKnowledge` automation and for manual whole-computer maintenance.
+Use this for the `Maintain WEIPING_WIKI` automation and for manual whole-computer maintenance. `Maintain VipinKnowledge` is the historical automation label.
 
 ## Cadence
 
@@ -14,7 +14,7 @@ Run:
 python scripts/wiki.py maintain --scope whole-computer --json
 ```
 
-The command writes ignored artifacts under `.wiki-tmp/vipinknowledge-maintenance/` and prints a structured report with:
+The command writes ignored artifacts under `.wiki-tmp/vipinknowledge-maintenance/` for historical compatibility and prints a structured report with:
 
 - git dirty summary
 - agentmemory health
@@ -59,5 +59,5 @@ Stage only files that belong to the maintenance pass. Exclude unrelated dirty wo
 Suggested commit message:
 
 ```text
-Upgrade vipinknowledge maintenance system
+Upgrade WEIPING_WIKI maintenance system
 ```

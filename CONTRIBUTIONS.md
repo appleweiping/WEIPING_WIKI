@@ -1,6 +1,8 @@
 # Contributions
 
-This file records external ideas that materially influenced the design of `vipin wiki`.
+This file records external ideas that materially influenced the design of `WEIPING_WIKI` / `Weiping Wiki`.
+
+Historical aliases preserved for attribution and compatibility: `vipin wiki`, `vipinknowledge`, and `vipin-wiki`.
 
 ## Karpathy LLM Wiki
 

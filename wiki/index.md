@@ -3,7 +3,7 @@ title: Index
 type: index
 status: active
 created: 2026-04-21
-updated: 2026-06-01
+updated: 2026-06-04
 tags:
   - index
 ---
@@ -80,7 +80,8 @@ This is the main catalog of the wiki.
 - [[agent-collaboration-tone-and-model-roles]] - User-facing collaboration rule for warmer partner language, Codex parallel selves, Opus/Sonnet roles, and DeepSeek Pro/Flash preferences.
 - [[agentmemory-first-agent-collaboration]] - Active collaboration model using agentmemory for memory, signals, actions, and handoffs while keeping the wiki as public crystallization.
 - [[implicit-skill-routing]] - Rule that agents should choose relevant skills from task intent and skill metadata, not only explicit user skill names.
-- [[vipinknowledge-maintenance-system]] - Continuous maintenance system for whole-computer project routing, workstation-maintenance handoff, D-root move-with-junction organization, weekly reports, skill self-upgrades, and scoped auto commit/push gates.
+- [[weiping-wiki-maintenance-system]] - Continuous WEIPING_WIKI maintenance system for whole-computer project routing, workstation-maintenance handoff, D-root move-with-junction organization, weekly reports, skill self-upgrades, scoped auto commit/push gates, and historical `vipin-wiki` alias compatibility.
+- [[vipinknowledge-maintenance-system]] - Historical alias page that redirects old `vipinknowledge` / `vipin-wiki` maintenance links to [[weiping-wiki-maintenance-system]].
 - [[obsidian-feature-parity]] - Obsidian-compatible vault layer with Bases, Canvas, dashboard, commands, templates, backlinks, search, quick switcher, outline, preview, tags, properties, tasks, slides, and word-count commands.
 - [[whole-computer-project-map]] - First-stop routing map for whole-computer maintenance across C/D/G drives, importance-based depth, workstation move boundaries, D-root organized buckets, active roots, archives, and safety boundaries.
 - [[d-drive-project-map]] - First-stop routing map for D-drive agent infrastructure, public exports, private runtime state, D-root organized buckets, and research isolation.
@@ -166,6 +167,7 @@ This is the main catalog of the wiki.
 
 ## Analyses
 
+- [[2026-06-04-weiping-wiki-rename-upgrade]] - Rename/upgrade record for the WEIPING_WIKI identity, agentmemory-first boundary, public/private separation, and research-integrity no-change scope.
 - [[2026-05-18-multi-agent-collaboration-architecture-review]] - Decision record for which Claude Code / DeepSeek collaboration improvements to adopt now, defer, or reject.
 - [[html-ppt-template-workflow-results]] - Results and future guardrails from the first `frontend-slides` plus `beautiful-html-templates` deck-generation tests.
 

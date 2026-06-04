@@ -1,13 +1,13 @@
 ---
-name: vipin-wiki
-description: Maintain and upgrade `vipin wiki` / `vipinknowledge` as a long-lived personal knowledge system, whole-computer project map, and self-maintaining agent workflow. Use when Codex needs to answer from the wiki, ingest or crystallize sources, refresh stale pages, run weekly maintenance, maintain project/root maps across C:/D:/G:, classify important vs low-value files or folders, protect public/private boundaries, update index/log/catalog, create or validate maintenance automations, or improve this skill so future agents do not need a fresh prompt. For physical C:/D:/G: file organization or D-root move-with-junction organization, pair this with the shared `workstation-maintenance` skill in `D:\agent-resources`.
+name: weiping-wiki
+description: Maintain and upgrade `WEIPING_WIKI` / `Weiping Wiki` as a long-lived personal knowledge system, whole-computer project map, and self-maintaining agent workflow. Use when Codex needs to answer from the wiki, ingest or crystallize sources, refresh stale pages, run weekly maintenance, maintain project/root maps across C:/D:/G:, classify important vs low-value files or folders, protect public/private boundaries, update index/log/catalog, create or validate maintenance automations, or improve this skill so future agents do not need a fresh prompt. Historical aliases are `vipin wiki`, `vipinknowledge`, and `vipin-wiki`; the physical folder may keep the old name for compatibility. For physical C:/D:/G: file organization or D-root move-with-junction organization, pair this with the shared `workstation-maintenance` skill in `D:\agent-resources`.
 ---
 
-# Vipin Wiki
+# WEIPING_WIKI
 
 ## Mission
 
-Keep `vipinknowledge` useful without a bespoke prompt. The system should answer from maintained knowledge, preserve reusable results, route future agents into the right local projects, and continuously improve its own workflow.
+Keep `WEIPING_WIKI` useful without a bespoke prompt. The system should answer from maintained knowledge, preserve reusable results, route future agents into the right local projects, and continuously improve its own workflow. Treat `vipin wiki`, `vipinknowledge`, and `vipin-wiki` as historical aliases.
 
 ## First Moves
 
@@ -35,7 +35,7 @@ Use importance tiers before opening files:
 
 | Tier | Qualifies | Depth |
 | --- | --- | --- |
-| Tier 0 | `vipin wiki`, operating docs, skill roots, agentmemory, `D:/devtools`, `D:/agent-resources` | Detailed routing, commands, safety gates, update rules, log/catalog/index changes |
+| Tier 0 | `WEIPING_WIKI`, operating docs, skill roots, agentmemory, `D:/devtools`, `D:/agent-resources` | Detailed routing, commands, safety gates, update rules, log/catalog/index changes |
 | Tier 1 | Active research/product/app/game/health/company repos | Dedicated page or detailed section with purpose, root, status, entry docs, safety boundary |
 | Tier 2 | Portfolio, coursework, study archives, old projects, media packages | Public-safe summary and discovery clues |
 | Tier 3 | OS folders, caches, downloads, binaries, package stores, temp dirs | One-line bucket summary; do not deep-read unless asked |
@@ -81,7 +81,7 @@ Keep `SKILL.md` compact. Put detailed procedures in `references/`, scripts in `s
 - Do not physically move files during whole-computer maintenance unless a `workstation-maintenance` manifest and user-approved age-gated batch exists. For D-root directory organization, require a drive-root plan, non-moving preflight, and rollback-capable move-with-junction execution.
 - Never expose secrets, tokens, credentials, private chats, account state, sensitive documents, raw private material, logs, DBs, or bulky artifacts in public pages or Git.
 - Do not move, rewrite, or clean research experiment code, datasets, checkpoints, server logs, or result files during general wiki maintenance.
-- Keep reports in ignored `.wiki-tmp/vipinknowledge-maintenance/`; commit curated wiki/skill/script/doc changes only.
+- Keep reports in ignored `.wiki-tmp/vipinknowledge-maintenance/` for historical compatibility; commit curated wiki/skill/script/doc changes only.
 - If validation fails, stop before commit/push and leave a clear report.
 
 ## Canonical Outputs

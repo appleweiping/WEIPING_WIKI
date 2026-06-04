@@ -3,7 +3,7 @@ title: D-Drive Project Map
 type: concept
 status: active
 created: 2026-06-01
-updated: 2026-06-01
+updated: 2026-06-04
 tags:
   - local-projects
   - d-drive
@@ -31,7 +31,7 @@ For whole-computer routing across `C:/`, `D:/`, `G:/`, user-profile junctions, a
 | `D:/devtools` | Private local agent workstation: launchers, agent homes, runtimes, caches, logs, local health checks. | Edit only scoped infrastructure files. Keep runtime/log/cache/auth/db local and ignored. |
 | `D:/devtools-public` | Public-safe export of selected launchers, examples, docs, and safety checks. | Public repo. Run safety/history/pre-push gates before tag, commit, or push. |
 | `D:/agent-resources` | Public curated skill/resource library and implicit skill-routing index. | Public repo. Commit only provenance-cleared skills and docs. Keep unknown-license packs local-only. |
-| `D:/Research/vipin's knowledgebase` | `vipin wiki`: public operating contract and durable knowledge layer. | Maintain `wiki/`, adapters, index, log, and validation; keep the private wiki layer out of Git. |
+| `D:/Research/vipin's knowledgebase` | `WEIPING_WIKI` / `Weiping Wiki`: public operating contract and durable knowledge layer. Historical aliases: `vipin wiki`, `vipinknowledge`, `vipin-wiki`. | Maintain `wiki/`, adapters, index, log, and validation; keep the private wiki layer out of Git. |
 | `D:/agent-resources/skills/vipin/workstation-maintenance` | Shared workstation maintenance skill for inventory, classification, approved move batches, rollback, and cross-agent infrastructure sync. | Source of truth for physical C:/D:/G: organization workflow; exposed into Codex/Claude homes by local junctions. |
 
 ## Active Agent Substrate
@@ -41,7 +41,7 @@ For whole-computer routing across `C:/`, `D:/`, `G:/`, user-profile junctions, a
 | agentmemory | Active operational memory, signals, actions, checkpoints, and diagnostics. |
 | Agent Hub | Deprecated historical experiment; do not start, register, or depend on it for new work. |
 | Skills | Trigger by task intent. Inspect metadata, read matched `SKILL.md`, then act. |
-| Workstation maintenance | Use shared `workstation-maintenance` for physical drive organization; use `vipin-wiki` for public-safe maps and logs. |
+| Workstation maintenance | Use shared `workstation-maintenance` for physical drive organization; use `weiping-wiki` for public-safe maps and logs. `vipin-wiki` remains a historical alias. |
 | Git | Source-of-truth for file changes. Stage only scoped files and preserve unrelated dirty work. |
 
 ## Public And Private Boundaries
@@ -63,7 +63,7 @@ EXTRACTED: On 2026-06-01, a drive-root `workstation-maintenance` plan classified
 | Bucket | Examples | Rule |
 | --- | --- | --- |
 | Agent infrastructure | `D:/devtools`, `D:/devtools-public`, `D:/agent-resources` | Keep D-drive-first; separate public source from private runtime. |
-| Knowledge base | `D:/Research/vipin's knowledgebase` | Public wiki plus ignored private layer. |
+| Knowledge base | `D:/Research/vipin's knowledgebase` | WEIPING_WIKI public wiki plus ignored private layer. |
 | Research workbench | `D:/Research/*` project repos | Isolate from infra cleanup; modify only on explicit research task. |
 | Approved organization target | `D:/_Organized/Downloads`, `D:/_Organized/Media`, `D:/_Organized/Temp-Review`, `D:/_Organized/Coursework`, `D:/_Organized/Documents-Private`, `D:/_Organized/Games`, `D:/_Organized/Tools-Review` | Active target populated by approved `workstation-maintenance` batches and D-root move-with-junction organization on 2026-06-01; use ignored applied manifests for rollback if needed. Future use still goes through manifest/preflight gates. |
 | Portfolio/course archives | Moved roots under `D:/_Organized/Coursework/_RootDirs` and `D:/_Organized/Documents-Private/_RootDirs`; locked exceptions remain at `D:/` | Record public-safe metadata only unless explicitly asked. Old `D:/<name>` paths may be junctions and remain valid. |

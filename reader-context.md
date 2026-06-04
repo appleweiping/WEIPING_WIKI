@@ -1,12 +1,14 @@
 # Reader Context
 
-This file is the reader-specific layer for `vipin wiki`.
+This file is the reader-specific layer for `WEIPING_WIKI` / `Weiping Wiki`.
+
+Historical aliases include `vipin wiki`, `vipinknowledge`, and `vipin-wiki`; old references should resolve to the same knowledge system unless a page says otherwise.
 
 It exists so the knowledge base is not only about sources, but also about how Vipin prefers to read, compare, retain, and use knowledge.
 
 ## Reader Profile
 
-- Primary reader: Vipin
+- Primary reader: Weiping
 - Main working languages: Chinese and English
 - Preferred interaction style: concise but high-signal, with clear structure and durable outputs
 - Preferred knowledge medium: local markdown files that remain inspectable in Obsidian and Git
@@ -52,6 +54,6 @@ It exists so the knowledge base is not only about sources, but also about how Vi
 ## Long-Horizon Questions
 
 - how should uncertainty be represented in LLM-based recommendation systems?
-- what research map best organizes Vipin's current recommendation-paper library?
+- what research map best organizes Weiping's current recommendation-paper library?
 - which questions deserve their own topic pages versus one-off analyses?
 - what workflows make this wiki genuinely compounding over months, not just days?

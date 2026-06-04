@@ -1,6 +1,6 @@
 # Skill Upgrade Loop
 
-Use this when `vipin-wiki` itself is being improved.
+Use this when `weiping-wiki` itself is being improved. `vipin-wiki` is the historical alias and may still be the compatibility folder name.
 
 ## Upgrade Standard
 
@@ -11,9 +11,9 @@ A skill change is worthwhile only if it makes future agents less dependent on a 
 Before editing the skill, inspect:
 
 - current user request and failure mode
-- `.codex/skills/vipin-wiki/SKILL.md`
+- `.codex/skills/vipin-wiki/SKILL.md` (compatibility folder for the `weiping-wiki` skill)
 - relevant files in `.codex/skills/vipin-wiki/references/`
-- `wiki/concepts/vipinknowledge-maintenance-system.md`
+- `wiki/concepts/weiping-wiki-maintenance-system.md`
 - latest `python scripts/wiki.py maintain --scope whole-computer --json` report when relevant
 - `D:\devtools\codex\home\skills\.system\skill-creator\SKILL.md` for skill structure rules
 

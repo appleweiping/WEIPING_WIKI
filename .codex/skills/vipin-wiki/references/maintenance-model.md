@@ -1,6 +1,6 @@
-# Vipin Wiki Maintenance Model
+# WEIPING_WIKI Maintenance Model
 
-Use this reference when the task is broad, recurring, or about keeping `vipinknowledge` useful without a fresh prompt.
+Use this reference when the task is broad, recurring, or about keeping `WEIPING_WIKI` useful without a fresh prompt. Historical aliases include `vipin wiki`, `vipinknowledge`, and `vipin-wiki`.
 
 For focused procedures, prefer the smaller companion references:
 

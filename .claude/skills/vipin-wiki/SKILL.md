@@ -1,11 +1,11 @@
 ---
-name: vipin-wiki
-description: Maintain and upgrade `vipin wiki` / `vipinknowledge` as a whole-computer project map and self-maintaining knowledge system. Use for answering from the wiki, refreshing stale pages, running or reviewing weekly maintenance, routing local project roots across C:/D:/G:, classifying important vs low-value folders, protecting public/private boundaries, updating index/log/catalog, or improving the vipin-wiki skill and maintenance workflow so future agents do not need bespoke prompts. For physical C:/D:/G: file organization or D-root move-with-junction organization, pair this with the shared workstation-maintenance skill in D:\agent-resources.
+name: weiping-wiki
+description: Maintain and upgrade `WEIPING_WIKI` / `Weiping Wiki` as a whole-computer project map and self-maintaining knowledge system. Use for answering from the wiki, refreshing stale pages, running or reviewing weekly maintenance, routing local project roots across C:/D:/G:, classifying important vs low-value folders, protecting public/private boundaries, updating index/log/catalog, or improving the weiping-wiki skill and maintenance workflow so future agents do not need bespoke prompts. Historical aliases are `vipin wiki`, `vipinknowledge`, and `vipin-wiki`; the physical folder may keep the old name for compatibility. For physical C:/D:/G: file organization or D-root move-with-junction organization, pair this with the shared workstation-maintenance skill in D:\agent-resources.
 ---
 
-# Vipin Wiki Adapter
+# WEIPING_WIKI Adapter
 
-Read `AGENTS.md` first. This adapter makes Claude Code and OpenCode follow the same `vipinknowledge` workflow as Codex.
+Read `AGENTS.md` first. This adapter makes Claude Code and OpenCode follow the same `WEIPING_WIKI` workflow as Codex. Treat `vipin wiki`, `vipinknowledge`, and `vipin-wiki` as historical aliases.
 
 ## Start Here
 

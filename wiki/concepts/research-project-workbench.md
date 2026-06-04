@@ -3,7 +3,7 @@ title: Research Project Workbench
 type: concept
 status: active
 created: 2026-05-17
-updated: 2026-05-17
+updated: 2026-06-04
 tags:
   - research
   - project-workbench
@@ -19,7 +19,7 @@ source_pages:
 
 ## Purpose
 
-This page is the routing layer for Vipin's main local research repositories that need repeated agent work:
+This page is the routing layer for Weiping's main local research repositories that need repeated agent work:
 
 | Project | Local root | Role | Start page |
 | --- | --- | --- | --- |
@@ -28,13 +28,13 @@ This page is the routing layer for Vipin's main local research repositories that
 | [[truce-rec]] | `D:/Research/TRUCE-Rec` | CURE/TRUCE uncertainty-aware generative recommendation and Pony official baseline reuse | `AGENTS.md`, `docs/PROJECT_MEMORY.md`, `docs/RESEARCH_IDEA.md` |
 | [[tgl-rec]] | `D:/Research/TGL-Rec` | Phase 10 temporal graph-to-language evidence and Pony official baseline migration | `docs/codex_project_memory.md`, `docs/phase10_master_plan.md` |
 
-Vipin wiki is the upper-level workbench: it remembers routing, claim boundaries, collaboration norms, and cross-project context. Once work enters a target project, that project's own `AGENTS.md`, `.codex/skills`, canonical docs, and live git state take priority.
+WEIPING_WIKI is the upper-level workbench: it remembers routing, claim boundaries, collaboration norms, and cross-project context. Once work enters a target project, that project's own `AGENTS.md`, `.codex/skills`, canonical docs, and live git state take priority.
 
 ## Collaboration Priority
 
 - EXTRACTED: Codex is the main coordinator and the only writer for wiki changes in this repository.
 - EXTRACTED: User-facing collaboration should describe Opus, Sonnet, DeepSeek/Whale, and Codex parallel selves as partners rather than impersonal tools.
-- INFERRED: Project-local multi-agent rules do not conflict with Vipin wiki. Interpret them as: Codex coordinates; Opus/Sonnet/Whale or Codex parallel selves provide bounded review, exploration, or implementation perspectives; the target project's evidence gates decide claim status.
+- INFERRED: Project-local multi-agent rules do not conflict with WEIPING_WIKI. Interpret them as: Codex coordinates; Opus/Sonnet/Whale or Codex parallel selves provide bounded review, exploration, or implementation perspectives; the target project's evidence gates decide claim status.
 - EXTRACTED: For routed research repos, do not modify project files from the wiki workbench unless the user explicitly asks for project edits. Always inspect live git status first.
 
 ## Shared Evidence Rule

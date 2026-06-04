@@ -6,7 +6,7 @@ Use this when a task touches local project routing, file organization, or whole-
 
 Start shallow across `C:/`, `D:/`, and `G:/`. Promote a root to deeper inspection only when live evidence shows active use, high consequence, repeated user interest, or operating-system/agent infrastructure relevance.
 
-Physical file organization is delegated to `D:\agent-resources\skills\vipin\workstation-maintenance`. Use that skill for dry-run manifests, type-grouped age-gated move plans, approved batches, and rollback; use `vipin-wiki` for public-safe routing pages after dry-run evidence or actual state changes.
+Physical file organization is delegated to `D:\agent-resources\skills\vipin\workstation-maintenance`. Use that skill for dry-run manifests, type-grouped age-gated move plans, approved batches, and rollback; use `weiping-wiki` for public-safe routing pages after dry-run evidence or actual state changes. `vipin-wiki` remains a historical alias.
 
 ## Evidence To Read
 

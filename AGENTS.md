@@ -1,6 +1,8 @@
 # AGENTS.md
 
-This repository is a personal knowledge base called `vipin wiki`.
+This repository is a personal knowledge base called `WEIPING_WIKI` / `Weiping Wiki`.
+
+Historical aliases are `vipin wiki`, `vipinknowledge`, and `vipin-wiki`. Keep those aliases recognizable for old paths, prompts, wiki slugs, and automations, but use `WEIPING_WIKI` / `Weiping Wiki` for current identity and `weiping-wiki` for the current maintenance skill name.
 Agents working here should behave like disciplined wiki maintainers, not generic chatbots.
 
 The authoritative operating documents are:
@@ -40,7 +42,7 @@ The active collaboration layer is `agentmemory`, not Agent Hub.
 - Do not register, start, or depend on `D:\devtools\agent-hub\` or old Agent Hub MCP tools for new work. Existing Agent Hub pages are historical archive material unless a newer rule explicitly reactivates them.
 - Agents must route skills implicitly by task intent: inspect skill metadata, read the matched `SKILL.md`, and follow it before improvising on non-trivial work.
 - For whole-computer maintenance, project routing, local file organization, or old-content refresh tasks, read [[whole-computer-project-map]] first; use [[d-drive-project-map]] for D-drive infrastructure detail and research-isolation boundaries. Physical C:/D:/G: file organization must use the shared `workstation-maintenance` skill from `D:\agent-resources\skills\vipin\workstation-maintenance` before any move plan is trusted; use its full-plan, exact-batch, or D-root organization non-moving preflight before approval. If the user grants broad approval, execute currently passing low-risk batches without repeated trivial confirmations.
-- `vipinknowledge` continuous maintenance uses the `vipin-wiki` skill and `python scripts/wiki.py maintain --scope whole-computer --json` as the report-first command. Weekly automation may commit/push only scoped validated wiki/skill/script/doc changes when live evidence changed.
+- `WEIPING_WIKI` continuous maintenance uses the `weiping-wiki` skill and `python scripts/wiki.py maintain --scope whole-computer --json` as the report-first command. `vipin-wiki` is a historical alias that may still appear in old skill paths or automation snippets; preserve it as compatibility context while preferring the new name. Weekly automation may commit/push only scoped validated wiki/skill/script/doc changes when live evidence changed.
 - Actual file moves require a dry-run manifest, type-grouped age-gated move plan, user-approved batch ID, rollback manifest, and a hard exclusion for `D:\Research` resolved paths. D-drive root directory organization may use `New-DriveRootOrganizationPlan.ps1` plus `Invoke-DriveRootOrganizationPlan.ps1`; eligible roots move under `D:\_Organized\<bucket>\_RootDirs\` and keep old paths as NTFS junctions. If Windows locks a root, classify it and leave it in place until a later retry. Do not delete files during broad organization work.
 
 ## Mission
@@ -735,7 +737,7 @@ python scripts/wiki.py <command> [--root <path>] [options]
 | `lint` | Check broken links, orphans, leaks | Before push |
 | `search <query>` | Full-text search across wiki | Finding related pages |
 | `context <level>` | Build layered context packs | Handoffs, partner review, targeted retrieval |
-| `maintain --scope whole-computer` | Build ignored maintenance report with git, agentmemory, inventory, audit, health, and recommendations | Weekly `vipinknowledge` maintenance and broad project-map refresh |
+| `maintain --scope whole-computer` | Build ignored maintenance report with git, agentmemory, inventory, audit, health, and recommendations | Weekly `WEIPING_WIKI` maintenance and broad project-map refresh |
 | `obsidian <command>` | Generate and query Obsidian-compatible vault artifacts | Bases, Canvas, backlinks, outgoing links, search, quick switcher, command palette, file explorer, outline, preview, footnotes, tags, properties, tasks, daily/unique notes, random notes, word count, external links, format audit, slides, workspaces, and local-first vault parity |
 
 Rules:

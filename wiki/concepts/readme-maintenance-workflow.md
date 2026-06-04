@@ -3,7 +3,7 @@ title: README Maintenance Workflow
 type: concept
 status: active
 created: 2026-05-17
-updated: 2026-05-17
+updated: 2026-06-04
 tags:
   - wiki-workflow
   - maintenance
@@ -17,7 +17,7 @@ source_pages:
 
 ## Rule
 
-The root `README.md` is a living entry point for `vipin wiki`, not a one-time bootstrap file.
+The root `README.md` is a living entry point for `WEIPING_WIKI` / `Weiping Wiki`, not a one-time bootstrap file. Historical aliases such as `vipin wiki`, `vipinknowledge`, and `vipin-wiki` should appear only as compatibility context.
 
 Future agents should periodically refresh it when the wiki's structure, automation rules, major workflows, or public/private safety boundaries materially change.
 

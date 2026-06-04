@@ -3,7 +3,7 @@ title: Local CC Partner Agent Workflow
 type: concept
 status: active
 created: 2026-05-17
-updated: 2026-06-01
+updated: 2026-06-04
 tags:
   - agent-workflow
   - coding
@@ -36,7 +36,7 @@ OpenCode is installed and recorded in [[2026-05-17-opencode-cc-pixelcat-setup]].
 
 PixelCat is the required control plane for the local `cc` family setup. Before calling `D:\devtools\cc.cmd`, Codex should make sure the PixelCat proxy and upstream credential pool are available.
 
-Preferred check from the `vipin wiki` root:
+Preferred check from the `WEIPING_WIKI` root:
 
 ```powershell
 .\scripts\Test-LocalCcPartner.ps1

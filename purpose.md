@@ -1,6 +1,8 @@
 # purpose.md
 
-`vipin wiki` exists to become a serious long-term knowledge system rather than a dumping ground for files.
+`WEIPING_WIKI` / `Weiping Wiki` exists to become a serious long-term knowledge system rather than a dumping ground for files.
+
+Historical aliases: `vipin wiki`, `vipinknowledge`, and `vipin-wiki`. Keep them readable in old links and automation notes, but use `WEIPING_WIKI` for the current project identity.
 
 Language: English
 

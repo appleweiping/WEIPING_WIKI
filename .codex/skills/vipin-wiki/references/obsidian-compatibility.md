@@ -1,6 +1,6 @@
 # Obsidian Compatibility
 
-Use this reference when improving `vipinknowledge` with Obsidian-style local-first knowledge features.
+Use this reference when improving `WEIPING_WIKI` with Obsidian-style local-first knowledge features. `vipinknowledge` remains a historical alias for older vault artifacts and slugs.
 
 ## Evidence Boundary
 
@@ -33,7 +33,7 @@ python scripts/wiki.py obsidian report --json
 python scripts/wiki.py obsidian export --json
 python scripts/wiki.py obsidian commands --json
 python scripts/wiki.py obsidian quick "whole computer" --json
-python scripts/wiki.py obsidian backlinks vipinknowledge-maintenance-system --json
+python scripts/wiki.py obsidian backlinks weiping-wiki-maintenance-system --json
 python scripts/wiki.py obsidian outgoing index --json
 python scripts/wiki.py obsidian outline obsidian-feature-parity --json
 python scripts/wiki.py obsidian preview obsidian-feature-parity --json

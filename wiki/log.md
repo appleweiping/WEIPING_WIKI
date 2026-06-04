@@ -3,12 +3,33 @@ title: Log
 type: log
 status: active
 created: 2026-04-21
-updated: 2026-06-01
+updated: 2026-06-04
 tags:
   - log
 ---
 
 # Log
+
+## [2026-06-04 13:58] maintenance | WEIPING_WIKI rename and alias upgrade
+
+- Pages/files updated:
+  - `README.md`, `AGENTS.md`, `CLAUDE.md`, `.wiki-schema.md`, `purpose.md`, `reader-context.md`, `CONTRIBUTIONS.md`, `WORKFLOWS.md`, `.opencode/OPENCODE.md`
+  - `.codex/skills/vipin-wiki/SKILL.md`, `.claude/skills/vipin-wiki/SKILL.md`, `.claude/skills/README-skills-layout.md`
+  - [[weiping-wiki-maintenance-system]]
+  - [[vipinknowledge-maintenance-system]]
+  - [[whole-computer-project-map]]
+  - [[d-drive-project-map]]
+  - [[obsidian-feature-parity]]
+  - [[readme-maintenance-workflow]]
+  - [[local-cc-sidecar-agent-workflow]]
+  - [[research-project-workbench]]
+  - [[2026-06-04-weiping-wiki-rename-upgrade]]
+  - [[index]]
+- Notes:
+  - Upgraded the current repository identity to `WEIPING_WIKI` / `Weiping Wiki`.
+  - Preserved `vipin wiki`, `vipinknowledge`, and `vipin-wiki` as historical aliases for old paths, prompts, slugs, skill folders, and automation snippets.
+  - Kept the active collaboration model agentmemory-first and left repo-local dirty markdown `memory/` files untouched.
+  - Did not change research project evidence, experiment conclusions, datasets, checkpoints, server state, GitHub remotes, or filesystem paths.
 
 ## [2026-06-01 22:25] infrastructure | D-drive root organization and workstation-maintenance upgrade
 

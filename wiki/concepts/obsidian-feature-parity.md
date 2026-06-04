@@ -3,27 +3,27 @@ title: Obsidian Feature Parity
 type: concept
 status: active
 created: 2026-06-01
-updated: 2026-06-01
+updated: 2026-06-04
 tags:
   - obsidian
   - interoperability
   - knowledge-system
   - maintenance
 source_pages:
-  - vipinknowledge-maintenance-system
+  - weiping-wiki-maintenance-system
 ---
 
 # Obsidian Feature Parity
 
 ## Purpose
 
-EXTRACTED: `vipinknowledge` should borrow Obsidian's strongest local-first knowledge-system ideas without depending on Obsidian's proprietary core application.
+EXTRACTED: `WEIPING_WIKI` should borrow Obsidian's strongest local-first knowledge-system ideas without depending on Obsidian's proprietary core application.
 
 The repository now has an Obsidian-compatible layer:
 
 - `.obsidian/` vault settings for opening this repo directly in Obsidian.
 - `wiki/bases/*.base` views for database-like page slices.
-- `wiki/canvases/vipinknowledge-map.canvas` as a JSON Canvas visual route map.
+- `wiki/canvases/vipinknowledge-map.canvas` as a historical-name JSON Canvas visual route map.
 - `wiki/obsidian-dashboard.md` as a generated bookmarks, core-plugin coverage, tags, properties, and task dashboard.
 - `wiki/commands/obsidian-compatible-commands.md` as a generated command-palette page.
 - `wiki/slides/README.md` plus `obsidian slides` for note-derived slide decks.
@@ -32,7 +32,7 @@ The repository now has an Obsidian-compatible layer:
 
 ## Feature Mapping
 
-| Obsidian feature | VipinKnowledge adaptation |
+| Obsidian feature | WEIPING_WIKI adaptation |
 | --- | --- |
 | Audio recorder | Not cloned; media evidence belongs in `raw/attachments` and recording UI is app/hardware-specific |
 | Backlinks / outgoing links | `wiki/catalog.json` plus `python scripts/wiki.py obsidian backlinks/outgoing` |

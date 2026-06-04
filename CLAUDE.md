@@ -2,9 +2,9 @@
 
 Read `AGENTS.md` first. It is the authoritative operating guide for this repository.
 
-This repository is `vipin wiki`, a maintained personal knowledge base. Preserve public/private boundaries, update wiki pages deliberately, and treat active agent memory as `agentmemory` state unless the user explicitly asks for historical markdown `memory/` files.
+This repository is `WEIPING_WIKI` / `Weiping Wiki`, a maintained personal knowledge base. Historical aliases include `vipin wiki`, `vipinknowledge`, and `vipin-wiki`; preserve them as compatibility context for old paths, prompts, and automations. Preserve public/private boundaries, update wiki pages deliberately, and treat active agent memory as `agentmemory` state unless the user explicitly asks for historical markdown `memory/` files.
 
-For whole-computer maintenance, project routing, or local file-organization work, use the `vipin-wiki` skill when available. Read `wiki/concepts/whole-computer-project-map.md` first; use `wiki/concepts/d-drive-project-map.md` for D-drive infrastructure detail so private runtime cleanup, public exports, and research workbenches do not get mixed. For physical C:/D:/G: file organization, use the shared `workstation-maintenance` skill from `D:\agent-resources\skills\vipin\workstation-maintenance`; it owns dry-run manifests, full-plan, exact-batch, and D-root organization non-moving preflights, approval packets, batch-approved moves, move-with-junction D-root organization, and rollback manifests. Broad user approval can cover all currently passing low-risk batches. The continuous maintenance system is documented at `wiki/concepts/vipinknowledge-maintenance-system.md`.
+For whole-computer maintenance, project routing, or local file-organization work, use the `weiping-wiki` skill when available; `vipin-wiki` remains a historical alias and may still be the physical folder name in older installs. Read `wiki/concepts/whole-computer-project-map.md` first; use `wiki/concepts/d-drive-project-map.md` for D-drive infrastructure detail so private runtime cleanup, public exports, and research workbenches do not get mixed. For physical C:/D:/G: file organization, use the shared `workstation-maintenance` skill from `D:\agent-resources\skills\vipin\workstation-maintenance`; it owns dry-run manifests, full-plan, exact-batch, and D-root organization non-moving preflights, approval packets, batch-approved moves, move-with-junction D-root organization, and rollback manifests. Broad user approval can cover all currently passing low-risk batches. The continuous maintenance system is documented at `wiki/concepts/weiping-wiki-maintenance-system.md`.
 
 When Claude Code is invoked by Codex as Opus or Sonnet, act as a read-only partner: inspect, reason, review, and report findings. Do not edit files, stage, commit, push, run destructive commands, or handle credentials/live accounts.
 
@@ -34,7 +34,7 @@ Research tasks must use the matching ARIS skill when one exists. README, archite
 
 Do not move files during broad workstation cleanup unless a `workstation-maintenance` manifest and type-grouped age-gated move plan exist and the user has approved the batch ID or broadly approved all currently passing low-risk batches. For immediate D-root directory cleanup, use the drive-root plan/invoke scripts and keep old paths working through junctions. `D:\Research` resolved paths are a hard no-move boundary.
 
-For recurring `vipinknowledge` upkeep, the canonical report command is:
+For recurring `WEIPING_WIKI` upkeep, the canonical report command is:
 
 ```powershell
 python scripts/wiki.py maintain --scope whole-computer --json

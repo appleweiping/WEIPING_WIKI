@@ -2,9 +2,9 @@
 
 Read `AGENTS.md` first. It is the authoritative operating guide for this repository.
 
-This file provides OpenCode-specific context for operating inside `vipin wiki`.
+This file provides OpenCode-specific context for operating inside `WEIPING_WIKI` / `Weiping Wiki`.
 
-For whole-computer maintenance, project routing, or local file-organization work, use the `vipin-wiki` skill when available and read `wiki/concepts/whole-computer-project-map.md` first. Use `wiki/concepts/d-drive-project-map.md` for D-drive infrastructure detail, public exports, private runtime state, and research workbenches. For physical C:/D:/G: organization, use `D:\agent-resources\skills\vipin\workstation-maintenance` first; it owns dry-run manifests, full-plan, exact-batch, and D-root organization non-moving preflights, approval packets, approved move batches, D-root move-with-junction organization, and rollback manifests. Broad user approval can cover all currently passing low-risk batches. The continuous maintenance system is documented at `wiki/concepts/vipinknowledge-maintenance-system.md`.
+For whole-computer maintenance, project routing, or local file-organization work, use the `weiping-wiki` skill when available; `vipin-wiki` is a historical alias and may remain as a legacy folder or automation string. Read `wiki/concepts/whole-computer-project-map.md` first. Use `wiki/concepts/d-drive-project-map.md` for D-drive infrastructure detail, public exports, private runtime state, and research workbenches. For physical C:/D:/G: organization, use `D:\agent-resources\skills\vipin\workstation-maintenance` first; it owns dry-run manifests, full-plan, exact-batch, and D-root organization non-moving preflights, approval packets, approved move batches, D-root move-with-junction organization, and rollback manifests. Broad user approval can cover all currently passing low-risk batches. The continuous maintenance system is documented at `wiki/concepts/weiping-wiki-maintenance-system.md`.
 
 ## Identity
 

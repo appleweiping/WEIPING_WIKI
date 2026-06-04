@@ -1,6 +1,8 @@
 # Workflows
 
-`vipin wiki` follows an operating model inspired by the reference `llm-wiki-skill` repository, but adapted to this repository's public/private split.
+`WEIPING_WIKI` / `Weiping Wiki` follows an operating model inspired by the reference `llm-wiki-skill` repository, but adapted to this repository's public/private split.
+
+Historical aliases (`vipin wiki`, `vipinknowledge`, `vipin-wiki`) remain valid when reading old prompts, old slugs, and compatibility automation. New operating docs should prefer `WEIPING_WIKI` and the `weiping-wiki` skill name.
 
 ## Commands
 

@@ -3,12 +3,12 @@ title: Whole-Computer Project Map
 type: concept
 status: active
 created: 2026-06-01
-updated: 2026-06-01
+updated: 2026-06-04
 tags:
   - local-projects
   - computer-map
   - maintenance
-  - vipin-wiki
+  - weiping-wiki
 source_pages:
   - AGENTS.md
   - d-drive-project-map
@@ -68,7 +68,7 @@ EXTRACTED: A follow-up D-drive root organization pass on 2026-06-01 classified 5
 
 | Tier | What qualifies | Wiki treatment |
 | --- | --- | --- |
-| Tier 0: operating contract | `vipin wiki`, `AGENTS.md`, skill roots, agentmemory, `D:/devtools`, `D:/agent-resources`, `D:/devtools-public` | Detailed routing, current commands, safety gates, update rules, related pages, validation status. |
+| Tier 0: operating contract | `WEIPING_WIKI`, `AGENTS.md`, skill roots, agentmemory, `D:/devtools`, `D:/agent-resources`, `D:/devtools-public` | Detailed routing, current commands, safety gates, update rules, related pages, validation status. |
 | Tier 1: active projects | Research workbenches, active product/app/game/healthcare/company roots, current public exports | Dedicated entity/topic page or refreshed section with purpose, root, status, entry docs, safety boundary, last verified date. |
 | Tier 2: useful archives | Portfolio, coursework, study archives, old project roots, media packages, local backups | Public-safe summary of content nature, discovery clues, and edit caution. |
 | Tier 3: bulk/system/noise | OS folders, caches, downloads, package stores, toolchains, virtual machines, temp dirs, binaries | One-line bucket summary unless the user asks for storage cleanup or a specific file. |
@@ -80,7 +80,7 @@ When uncertain, start shallow. Promote a root to more detail only after live evi
 
 | Root | Purpose | First files/pages |
 | --- | --- | --- |
-| `D:/Research/vipin's knowledgebase` | `vipin wiki`, the maintained public crystallization layer and agent operating contract. | `AGENTS.md`, `.wiki-schema.md`, `purpose.md`, this page, `wiki/index.md`, `wiki/log.md`. |
+| `D:/Research/vipin's knowledgebase` | `WEIPING_WIKI` / `Weiping Wiki`, the maintained public crystallization layer and agent operating contract. Historical aliases: `vipin wiki`, `vipinknowledge`, `vipin-wiki`. | `AGENTS.md`, `.wiki-schema.md`, `purpose.md`, this page, `wiki/index.md`, `wiki/log.md`, [[weiping-wiki-maintenance-system]]. |
 | `D:/devtools` | Private local agent workstation: launchers, agent homes, runtimes, logs, caches, health checks. | Private README/ignore policy; public-safe summary in [[d-drive-project-map]]. |
 | `D:/devtools-public` | Clean public export of safe launchers, docs, templates, and safety checks. | README, safety gate scripts, Git tags. |
 | `D:/agent-resources` | Public curated skill/resource library and implicit skill-routing index. | README, `SKILL-INDEX.md`, provenance/license notes. |

@@ -1,4 +1,4 @@
 interface:
-  display_name: "Vipin Wiki"
-  short_description: "Maintain vipinknowledge, whole-computer project maps, and public-safe handoffs from workstation maintenance."
-  default_prompt: "Use $vipin-wiki to answer from, ingest into, maintain, or upgrade vipinknowledge and its whole-computer project map. Pair it with workstation-maintenance for physical C:/D:/G: file organization."
+  display_name: "WEIPING_WIKI"
+  short_description: "Maintain WEIPING_WIKI, whole-computer project maps, and public-safe handoffs from workstation maintenance."
+  default_prompt: "Use $weiping-wiki to answer from, ingest into, maintain, or upgrade WEIPING_WIKI and its whole-computer project map. $vipin-wiki is a historical alias. Pair it with workstation-maintenance for physical C:/D:/G: file organization."
