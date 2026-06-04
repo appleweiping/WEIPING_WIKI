@@ -17,6 +17,7 @@ source_pages:
 source_files:
   - .codex/skills/vipin-wiki/SKILL.md
   - .claude/skills/vipin-wiki/SKILL.md
+  - D:/devtools/codex/home/automations/maintain-vipinknowledge/automation.toml
   - scripts/wiki.py
   - scripts/wiki-maintain.ps1
 ---
@@ -35,6 +36,7 @@ The maintenance system has three jobs:
 - keep low-value/system/cache/download roots summarized instead of over-reading them
 - improve the `weiping-wiki` skill, scripts, and docs whenever maintenance becomes prompt-dependent; `vipin-wiki` remains a historical alias for old paths and prompts
 - coordinate with the shared `workstation-maintenance` skill when physical C:/D:/G: organization is required
+- keep the WEIPING agentic project constellation connected through public-safe route pages, optional artifact contracts, and validation commands without making repositories depend on each other's private runtime state
 
 ## Defaults
 
@@ -44,7 +46,7 @@ EXTRACTED: The default maintenance policy is weekly automatic maintenance, safe 
 | --- | --- |
 | Schedule | Weekly Tuesday afternoon local time |
 | Model | `gpt-5.5` |
-| Reasoning | `high` |
+| Reasoning | `xhigh` when supported; otherwise record the strongest accepted fallback |
 | Scan boundary | Shallow `C:/`, `D:/`, and `G:/` scan |
 | Deep reads | Only important roots and only entry evidence |
 | Commit policy | Commit and push scoped validated changes |
@@ -96,6 +98,8 @@ Use [[whole-computer-project-map]] first for all whole-computer maintenance. It 
 
 Use [[d-drive-project-map]] for D-drive infrastructure detail, [[local-active-project-roots]] for active non-research projects, [[local-project-roots]] for broader local roots, and [[research-project-workbench]] before repeated research project work.
 
+Use [[weiping-agentic-project-constellation]] when the maintenance task mentions `WEIPING_WIKI`, `devtools`, `AGENT_RESOURCE`, `AGENTIC_SCIENCE`, `WEIPING_LAB`, `WEIPING_COUNCIL`, `vipinknowledge`, `vipin-lab`, or `vipin-council` together.
+
 Important roots should record path, purpose, current activity status, first-read files, safety boundary, related wiki pages, and last verified evidence. Low-value roots should stay as bucket summaries.
 
 If the work involves moving files, generate the workstation manifest and conservative move plan first. Live move plans defer recent files and cap batch sizes by default; every batch can be preflighted together without moving files, and exact batches may be preflighted again immediately before approval. If the work involves immediate D-root directory organization, generate a drive-root organization plan and preflight it; eligible roots move under `D:/_Organized/<bucket>/_RootDirs` while old paths stay usable through junctions. When the user grants broad approval, proceed through all currently passing low-risk batches instead of asking for trivial per-batch confirmations. Update wiki pages after dry-run evidence or after an approved batch changes the filesystem. Public pages should summarize bucket-level state and safety rules, not raw sensitive file names.
@@ -116,17 +120,35 @@ EXTRACTED: Obvious same-session or cross-chat wiki/raw/memory/doc outputs should
 
 If validation fails, the automation stops before commit/push and leaves the report for a future agent.
 
+Recurring WEIPING_WIKI maintenance should be Codex-owned. It should not invoke CC/Claude/OpenCode partner review from the scheduled automation; use local evidence, Codex self-review, and validation gates unless the user explicitly scopes a separate partner review.
+
+## UUPF-Aided Skill Upgrades
+
+EXTRACTED: Major maintenance-skill redesigns should use UUPF from `D:/AGENTIC_SCIENCE/uupf/UniversalUpgradeForge.zip` in offline mode first. A valid UUPF planning pass should produce 108 iteration records, `FINAL_REPORT.md`, `ITERATION_LOG.md`, and `PROVENANCE.md` under ignored `.wiki-tmp/uupf-runs/`.
+
+UUPF reports are audit input, not automatic truth. The responsible agent still hand-applies concise changes, checks live project evidence, preserves public/private boundaries, and validates before commit.
+
+EXTRACTED: On 2026-06-04, UUPF was run in offline mode against the Codex `weiping-wiki` skill and the shared `workstation-maintenance` skill for 108 iterations each. The accepted durable outcome was curated rule/script/doc updates, not raw UUPF report publication.
+
+## Tight Links, Low Coupling
+
+EXTRACTED: WEIPING_WIKI should connect the important local projects tightly through routing maps, aliases, optional artifact paths, and source-of-truth entry docs.
+
+INFERRED: High coupling is a maintenance risk. A public route is acceptable when each repository can still run its own basic verification without another repository's private `.env`, local DB, runtime cache, generated UUPF report, or active workspace.
+
 ## Counterpoints And Gaps
 
 - The system is intentionally not a full-disk deep crawler; deep crawling would be slower, noisier, and riskier around private material.
 - The maintenance command produces evidence and recommendations, but curated wiki/skill edits still require agent judgment.
 - Whole-computer maps can drift as folders move or projects become active; future agents should rescan live evidence before making current-state claims.
 - CC-family review may be unavailable if local partner tooling or upstream credentials are down; in that case Codex should state the limitation and perform a bounded self-review.
+- Some important roots are still newly promoted in the maps; future automation should verify their current README/AGENTS/package evidence before claiming deep understanding.
 
 ## Related
 
 - [[whole-computer-project-map]]
 - [[d-drive-project-map]]
+- [[weiping-agentic-project-constellation]]
 - [[local-active-project-roots]]
 - [[local-project-roots]]
 - [[agentmemory-first-agent-collaboration]]

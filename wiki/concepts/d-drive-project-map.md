@@ -30,8 +30,11 @@ For whole-computer routing across `C:/`, `D:/`, `G:/`, user-profile junctions, a
 | --- | --- | --- |
 | `D:/devtools` | Private local agent workstation: launchers, agent homes, runtimes, caches, logs, local health checks. | Edit only scoped infrastructure files. Keep runtime/log/cache/auth/db local and ignored. |
 | `D:/devtools-public` | Public-safe export of selected launchers, examples, docs, and safety checks. | Public repo. Run safety/history/pre-push gates before tag, commit, or push. |
-| `D:/agent-resources` | Public curated skill/resource library and implicit skill-routing index. | Public repo. Commit only provenance-cleared skills and docs. Keep unknown-license packs local-only. |
-| `D:/Research/vipin's knowledgebase` | `WEIPING_WIKI` / `Weiping Wiki`: public operating contract and durable knowledge layer. Historical aliases: `vipin wiki`, `vipinknowledge`, `vipin-wiki`. | Maintain `wiki/`, adapters, index, log, and validation; keep the private wiki layer out of Git. |
+| `D:/AGENT_RESOURCE` / `D:/agent-resources` | Public curated skill/resource library and implicit skill-routing index. The lowercase path is a compatibility junction. | Public repo. Commit only provenance-cleared skills and docs. Keep unknown-license packs local-only. |
+| `D:/AGENTIC_SCIENCE` | Public agentic-science method repo. Currently contains UUPF, the Universal Upgrade Forge 108-pass audit/upgrade engine. | Treat UUPF as audit/planning evidence. Do not publish raw generated run reports without curation. |
+| `D:/Research/WEIPING_WIKI` / `D:/Research/vipin's knowledgebase` | `WEIPING_WIKI` / `Weiping Wiki`: public operating contract and durable knowledge layer. The older path is a compatibility junction. Historical aliases: `vipin wiki`, `vipinknowledge`, `vipin-wiki`. | Maintain `wiki/`, adapters, index, log, and validation; keep the private wiki layer out of Git. |
+| `D:/Research/WEIPING_LAB` / `D:/Research/vipin-lab` | Honest research workbench for project artifacts, evidence packets, validations, and research-state operations. | Route through its own README/skill before claims or edits. Do not make wiki maintenance depend on its private runtime state. |
+| `D:/Research/WEIPING_COUNCIL` / `D:/Research/vipin-council` | Multi-model deliberation runtime and companion review layer for research/lab artifacts. | Route through its own README/skill. Keep handoffs artifact-based and avoid hidden runtime coupling. |
 | `D:/agent-resources/skills/vipin/workstation-maintenance` | Shared workstation maintenance skill for inventory, classification, approved move batches, rollback, and cross-agent infrastructure sync. | Source of truth for physical C:/D:/G: organization workflow; exposed into Codex/Claude homes by local junctions. |
 
 ## Active Agent Substrate
@@ -42,7 +45,21 @@ For whole-computer routing across `C:/`, `D:/`, `G:/`, user-profile junctions, a
 | Agent Hub | Deprecated historical experiment; do not start, register, or depend on it for new work. |
 | Skills | Trigger by task intent. Inspect metadata, read matched `SKILL.md`, then act. |
 | Workstation maintenance | Use shared `workstation-maintenance` for physical drive organization; use `weiping-wiki` for public-safe maps and logs. `vipin-wiki` remains a historical alias. |
+| UUPF | Use `D:/AGENTIC_SCIENCE/uupf/UniversalUpgradeForge.zip` only as a planning/audit forge for skill and workflow upgrades. Run offline reports into ignored `.wiki-tmp/` and manually curate accepted changes. |
 | Git | Source-of-truth for file changes. Stage only scoped files and preserve unrelated dirty work. |
+
+## Agentic Project Constellation
+
+EXTRACTED: The current high-importance agentic roots form a constellation, not a monorepo. Keep their routes and handoff expectations tight, but keep implementation coupling low.
+
+- `WEIPING_WIKI` records public-safe maps, rules, aliases, first-read docs, and validation gates.
+- `D:/devtools` stores private local agent homes, launchers, automation TOMLs, runtime caches, and local configuration.
+- `D:/AGENT_RESOURCE` publishes reusable skills and resource indexes for multiple agents.
+- `D:/AGENTIC_SCIENCE` publishes UUPF and related agentic-science methods used to audit skills/workflows.
+- `D:/Research/WEIPING_LAB` owns research-workbench execution and evidence packets.
+- `D:/Research/WEIPING_COUNCIL` owns deliberation/review workflows around artifacts.
+
+Good links are stable paths, aliases, README/AGENTS/skill entrypoints, artifact formats, optional environment variables, and validation commands. Bad links are copied private configs, required local DB/cache state, generated UUPF run directories, hidden secrets, or edits to one repo merely because another repo was inspected.
 
 ## Public And Private Boundaries
 
@@ -62,8 +79,9 @@ EXTRACTED: On 2026-06-01, a drive-root `workstation-maintenance` plan classified
 
 | Bucket | Examples | Rule |
 | --- | --- | --- |
-| Agent infrastructure | `D:/devtools`, `D:/devtools-public`, `D:/agent-resources` | Keep D-drive-first; separate public source from private runtime. |
-| Knowledge base | `D:/Research/vipin's knowledgebase` | WEIPING_WIKI public wiki plus ignored private layer. |
+| Agent infrastructure | `D:/devtools`, `D:/devtools-public`, `D:/AGENT_RESOURCE` / `D:/agent-resources`, `D:/AGENTIC_SCIENCE` | Keep D-drive-first; separate public source, reusable methods, and private runtime. |
+| Knowledge base | `D:/Research/WEIPING_WIKI` / `D:/Research/vipin's knowledgebase` | WEIPING_WIKI public wiki plus ignored private layer. |
+| Research/agentic workbenches | `D:/Research/WEIPING_LAB`, `D:/Research/WEIPING_COUNCIL` | High-importance roots with their own operating docs; link by artifacts and route pages, not by private runtime state. |
 | Research workbench | `D:/Research/*` project repos | Isolate from infra cleanup; modify only on explicit research task. |
 | Approved organization target | `D:/_Organized/Downloads`, `D:/_Organized/Media`, `D:/_Organized/Temp-Review`, `D:/_Organized/Coursework`, `D:/_Organized/Documents-Private`, `D:/_Organized/Games`, `D:/_Organized/Tools-Review` | Active target populated by approved `workstation-maintenance` batches and D-root move-with-junction organization on 2026-06-01; use ignored applied manifests for rollback if needed. Future use still goes through manifest/preflight gates. |
 | Portfolio/course archives | Moved roots under `D:/_Organized/Coursework/_RootDirs` and `D:/_Organized/Documents-Private/_RootDirs`; locked exceptions remain at `D:/` | Record public-safe metadata only unless explicitly asked. Old `D:/<name>` paths may be junctions and remain valid. |
@@ -93,5 +111,6 @@ For D-drive tasks:
 - [[agentmemory-first-agent-collaboration]]
 - [[implicit-skill-routing]]
 - [[agent-skill-installation-workflow]]
+- [[weiping-agentic-project-constellation]]
 - [[local-project-roots]]
 - [[research-project-workbench]]

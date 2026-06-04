@@ -16,6 +16,24 @@ Before editing the skill, inspect:
 - `wiki/concepts/weiping-wiki-maintenance-system.md`
 - latest `python scripts/wiki.py maintain --scope whole-computer --json` report when relevant
 - `D:\devtools\codex\home\skills\.system\skill-creator\SKILL.md` for skill structure rules
+- UUPF under `D:\AGENTIC_SCIENCE\uupf\UniversalUpgradeForge.zip` when the user asks for a deep upgrade or the maintenance workflow itself is being redesigned
+
+## UUPF-Aided Upgrade
+
+For non-trivial upgrades, run UUPF in offline mode before editing:
+
+```powershell
+$out = ".wiki-tmp\uupf"
+Expand-Archive -LiteralPath "D:\AGENTIC_SCIENCE\uupf\UniversalUpgradeForge.zip" -DestinationPath $out -Force
+Push-Location "$out\UniversalUpgradeForge"
+$env:PYTHONIOENCODING = "utf-8"
+python -m uupgrade.cli doctor
+python -m uupgrade.cli plan "<target-skill-or-doc>" --goal "<upgrade-goal>" --iterations 108 --output "..\..\uupf-runs\<name>"
+python -m uupgrade.cli upgrade "<target-skill-or-doc>" --goal "<upgrade-goal>" --iterations 108 --provider offline --output "..\..\uupf-runs\<name>"
+Pop-Location
+```
+
+Use the reports as a structured audit checklist. UUPF offline runs do not prove the skill is upgraded and do not patch the original files. The responsible agent must still inspect live evidence, hand-apply concise changes, validate, and preserve provenance.
 
 ## Edit Pattern
 
@@ -25,6 +43,8 @@ Before editing the skill, inspect:
 - Update `agents/openai.yaml` when frontmatter trigger wording or user-facing prompt changes.
 - Add or update wiki documentation when the behavior is durable for all agents.
 - Update Claude/OpenCode adapters when the skill should trigger outside Codex.
+- Update maintenance automations when the recurring workflow, model, reasoning effort, root list, or validation gate changes.
+- Encode tight-but-low-coupling relationships: route pages, optional interfaces, artifact contracts, and degraded-state rules are good; hidden runtime dependencies and cross-repo private-state reads are not.
 
 ## Forward Test
 

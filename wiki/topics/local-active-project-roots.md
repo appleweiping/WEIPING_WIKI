@@ -3,7 +3,7 @@ title: Local Active Project Roots
 type: topic
 status: active
 created: 2026-06-01
-updated: 2026-06-01
+updated: 2026-06-04
 tags:
   - topic
   - local-projects
@@ -56,6 +56,18 @@ EXTRACTED: The entries below are based on a shallow live inventory plus top-leve
 
 `D:/Research` contains important research roots including Analog/AI4EDA, recommendation, AI4S, DoneBench, local agent projects, and this wiki. Do not use this page to enter experiments. Use [[research-project-workbench]] and the target project's own instructions, and do not modify datasets, checkpoints, logs, result files, or experiment progress during general maintenance.
 
+## Agentic Infrastructure Roots Under Research
+
+These roots live under `D:/Research` but are agentic infrastructure or research-workbench support projects, not experiment folders to tidy during broad maintenance.
+
+| Root | What it is | Read first | Safety boundary |
+| --- | --- | --- | --- |
+| `D:/Research/WEIPING_WIKI` / `D:/Research/vipin's knowledgebase` | Maintained public knowledge system, operating contract, wiki route map, and compatibility home for old `vipinknowledge` paths. | `AGENTS.md`, `.wiki-schema.md`, `purpose.md`, `.codex/skills/vipin-wiki/SKILL.md`, [[weiping-wiki-maintenance-system]]. | Public wiki is curated; ignored private layers, temporary reports, historical raw memory dumps, and secrets stay out of public pages and commits. |
+| `D:/Research/WEIPING_LAB` / `D:/Research/vipin-lab` | Honest research workbench for artifacts, evidence packets, validation reports, and reproducible research-state operations. | `README.md`, `CLAUDE.md`, `.codex/skills/weiping-lab/SKILL.md`, `docs/`, tests. | Do not edit lab state from wiki maintenance. Record public-safe routes and artifact contracts only unless the user explicitly scopes lab work. |
+| `D:/Research/WEIPING_COUNCIL` / `D:/Research/vipin-council` | Multi-model deliberation runtime and companion review layer around research/lab artifacts. | `README.md`, `CLAUDE.md`, `.codex/skills/weiping-council/SKILL.md`, backend/frontend docs, tests. | Keep council links artifact-based. Do not require private local DB/cache/runtime state from WEIPING_WIKI or WEIPING_LAB. |
+
+Use [[weiping-agentic-project-constellation]] for the maintained relationship model between these roots, `D:/devtools`, `D:/AGENT_RESOURCE`, and `D:/AGENTIC_SCIENCE`.
+
 ## Refresh Rules
 
 - Refresh this page when a root gains or loses README/AGENTS/CLAUDE/package evidence, when a root becomes active/inactive, or when a new high-use project appears.
@@ -74,6 +86,7 @@ EXTRACTED: The entries below are based on a shallow live inventory plus top-leve
 - [[whole-computer-project-map]]
 - [[local-project-roots]]
 - [[research-project-workbench]]
+- [[weiping-agentic-project-constellation]]
 - [[healthcare-projects]]
 - [[medora]]
 - [[weipingyan-portfolio]]

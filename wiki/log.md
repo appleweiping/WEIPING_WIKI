@@ -10,6 +10,28 @@ tags:
 
 # Log
 
+## [2026-06-04 17:20] maintenance | agentic constellation and UUPF maintenance upgrade
+
+- Pages/files updated:
+  - `AGENTS.md`, `README.md`, `CLAUDE.md`, `.opencode/OPENCODE.md`
+  - `.codex/skills/vipin-wiki/SKILL.md` and references
+  - `.claude/skills/vipin-wiki/SKILL.md`, `.claude/skills/README-skills-layout.md`
+  - [[weiping-wiki-maintenance-system]]
+  - [[weiping-agentic-project-constellation]]
+  - [[whole-computer-project-map]]
+  - [[d-drive-project-map]]
+  - [[local-active-project-roots]]
+  - [[codex-automation-model-policy]]
+  - [[index]]
+  - `D:/devtools/codex/home/automations/maintain-vipinknowledge/automation.toml`
+  - `D:/AGENT_RESOURCE/skills/vipin/workstation-maintenance`
+- Notes:
+  - Promoted the WEIPING agentic project constellation into a public-safe route map: `WEIPING_WIKI`, `devtools`, `devtools-public` / `DELVTOOLS_PUBLIC`, `AGENT_RESOURCE` / `agent-resources`, `AGENTIC_SCIENCE` / UUPF, `WEIPING_LAB` / `vipin-lab`, and `WEIPING_COUNCIL` / `vipin-council`.
+  - Kept the relationship model tight but low-coupling: maintain aliases, first-read docs, artifact handoff descriptions, and validation commands, but do not copy private runtime state, generated reports, caches, DBs, `.env` files, or external project internals into WEIPING_WIKI.
+  - Ran UUPF offline 108-pass upgrades as audit/planning input against the Codex `weiping-wiki` skill and the shared `workstation-maintenance` skill; accepted only curated script/doc/rule changes and kept raw UUPF reports ignored under `.wiki-tmp`.
+  - Updated the active Codex maintenance automation to the current WEIPING_WIKI identity, `gpt-5.5` with `xhigh` reasoning, Codex-only scheduled review, UUPF-offline audit rules, and scoped validation/commit gates.
+  - Hardened workstation-maintenance D-root protection for `D:/AGENT_RESOURCE`, `D:/AGENTIC_SCIENCE`, and `D:/DELVTOOLS_PUBLIC` in addition to the existing `D:/Research`, `D:/agent-resources`, `D:/devtools`, `D:/devtools-public`, and `D:/_Organized` boundaries.
+
 ## [2026-06-04 13:58] maintenance | WEIPING_WIKI rename and alias upgrade
 
 - Pages/files updated:

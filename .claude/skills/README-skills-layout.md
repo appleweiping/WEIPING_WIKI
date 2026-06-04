@@ -32,7 +32,7 @@ For whole-computer maintenance, project routing, or organization tasks, read `wi
 ## Routing Rules
 
 - Research audit, paper review, experiment audit, and citation work must use the corresponding ARIS skill when present.
-- Whole-computer maintenance, local project routing, wiki refresh, and `WEIPING_WIKI` skill upgrades should use `weiping-wiki`. `vipin-wiki` is a historical alias that may still appear in old skill folders or automation snippets.
+- Whole-computer maintenance, local project routing, wiki refresh, WEIPING agentic-constellation routing, and `WEIPING_WIKI` skill upgrades should use `weiping-wiki`. `vipin-wiki` is a historical alias that may still appear in old skill folders or automation snippets.
 - Physical C:/D:/G: file organization should use `workstation-maintenance`; `weiping-wiki` records only the public-safe routing/documentation updates afterward. Full-plan, exact-batch, and D-root organization preflights do not authorize movement by themselves.
 - README and public-repo presentation work should use `readme-blueprint-generator`.
 - Agent/tool/memory architecture work should use an agent architecture audit skill when present.
@@ -60,7 +60,7 @@ Codex uses `D:\Research\vipin's knowledgebase\.codex\skills\vipin-wiki\SKILL.md`
 python scripts/wiki.py maintain --scope whole-computer --json
 ```
 
-The command writes ignored reports under `.wiki-tmp/vipinknowledge-maintenance/` for historical compatibility; curated wiki/skill/doc changes still require validation, scoped staging, commit, and push.
+The command writes ignored reports under `.wiki-tmp/vipinknowledge-maintenance/` for historical compatibility; curated wiki/skill/doc changes still require validation, scoped staging, commit, and push. Recurring Codex maintenance should use `gpt-5.5` with `xhigh` reasoning when supported.
 
 ## Retired Agent Hub Boundary
 

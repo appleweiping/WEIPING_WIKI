@@ -76,15 +76,16 @@ This is the main catalog of the wiki.
 - [[feishu-material-access-workflow]] - API-first, browser-fallback workflow for connecting Feishu/Lark materials and shared forms to Codex.
 - [[readme-maintenance-workflow]] - Rule for periodically refreshing the root README as wiki structure and automation workflows evolve.
 - [[durable-agent-rule-memory]] - Rule that user-requested future-agent memories must be persisted into AGENTS/wiki rather than left only in chat.
-- [[codex-automation-model-policy]] - Hard rule that cron automations use `gpt-5.5` with high reasoning, not low or medium reasoning.
+- [[codex-automation-model-policy]] - Hard rule that cron automations use `gpt-5.5` with `xhigh` reasoning when supported, not low or medium reasoning.
 - [[agent-collaboration-tone-and-model-roles]] - User-facing collaboration rule for warmer partner language, Codex parallel selves, Opus/Sonnet roles, and DeepSeek Pro/Flash preferences.
 - [[agentmemory-first-agent-collaboration]] - Active collaboration model using agentmemory for memory, signals, actions, and handoffs while keeping the wiki as public crystallization.
 - [[implicit-skill-routing]] - Rule that agents should choose relevant skills from task intent and skill metadata, not only explicit user skill names.
-- [[weiping-wiki-maintenance-system]] - Continuous WEIPING_WIKI maintenance system for whole-computer project routing, workstation-maintenance handoff, D-root move-with-junction organization, weekly reports, skill self-upgrades, scoped auto commit/push gates, and historical `vipin-wiki` alias compatibility.
+- [[weiping-wiki-maintenance-system]] - Continuous WEIPING_WIKI maintenance system for whole-computer project routing, workstation-maintenance handoff, D-root move-with-junction organization, UUPF-aided skill upgrades, scoped auto commit/push gates, and tight-but-low-coupling agentic project links.
+- [[weiping-agentic-project-constellation]] - Route map for WEIPING_WIKI, devtools, AGENT_RESOURCE, AGENTIC_SCIENCE/UUPF, WEIPING_LAB, and WEIPING_COUNCIL with alias, junction, artifact-handoff, and low-coupling rules.
 - [[vipinknowledge-maintenance-system]] - Historical alias page that redirects old `vipinknowledge` / `vipin-wiki` maintenance links to [[weiping-wiki-maintenance-system]].
 - [[obsidian-feature-parity]] - Obsidian-compatible vault layer with Bases, Canvas, dashboard, commands, templates, backlinks, search, quick switcher, outline, preview, tags, properties, tasks, slides, and word-count commands.
 - [[whole-computer-project-map]] - First-stop routing map for whole-computer maintenance across C/D/G drives, importance-based depth, workstation move boundaries, D-root organized buckets, active roots, archives, and safety boundaries.
-- [[d-drive-project-map]] - First-stop routing map for D-drive agent infrastructure, public exports, private runtime state, D-root organized buckets, and research isolation.
+- [[d-drive-project-map]] - First-stop routing map for D-drive agent infrastructure, public exports, private runtime state, AGENT_RESOURCE/AGENTIC_SCIENCE/WEIPING_LAB/WEIPING_COUNCIL routes, D-root organized buckets, and research isolation.
 - [[local-active-project-roots]] - Detailed launch map for active non-research local project roots, including entry docs and safety boundaries.
 - [[model-collaboration-context-and-reference-intake]] - Rule that partner handoffs and external reference searches must carry enough context and depth to be genuinely useful, not toy summaries.
 - [[local-cc-sidecar-agent-workflow]] - Strict three-role Codex + Claude Code partner workflow with PixelCat/CC health check, upstream-credential failure handling, and read-only Opus/Sonnet prompts.

@@ -68,7 +68,7 @@ EXTRACTED: A follow-up D-drive root organization pass on 2026-06-01 classified 5
 
 | Tier | What qualifies | Wiki treatment |
 | --- | --- | --- |
-| Tier 0: operating contract | `WEIPING_WIKI`, `AGENTS.md`, skill roots, agentmemory, `D:/devtools`, `D:/agent-resources`, `D:/devtools-public` | Detailed routing, current commands, safety gates, update rules, related pages, validation status. |
+| Tier 0: operating contract | `WEIPING_WIKI`, `AGENTS.md`, skill roots, agentmemory, `D:/devtools`, `D:/AGENT_RESOURCE` / `D:/agent-resources`, `D:/AGENTIC_SCIENCE`, `D:/devtools-public` | Detailed routing, current commands, safety gates, update rules, related pages, validation status. |
 | Tier 1: active projects | Research workbenches, active product/app/game/healthcare/company roots, current public exports | Dedicated entity/topic page or refreshed section with purpose, root, status, entry docs, safety boundary, last verified date. |
 | Tier 2: useful archives | Portfolio, coursework, study archives, old project roots, media packages, local backups | Public-safe summary of content nature, discovery clues, and edit caution. |
 | Tier 3: bulk/system/noise | OS folders, caches, downloads, package stores, toolchains, virtual machines, temp dirs, binaries | One-line bucket summary unless the user asks for storage cleanup or a specific file. |
@@ -80,10 +80,13 @@ When uncertain, start shallow. Promote a root to more detail only after live evi
 
 | Root | Purpose | First files/pages |
 | --- | --- | --- |
-| `D:/Research/vipin's knowledgebase` | `WEIPING_WIKI` / `Weiping Wiki`, the maintained public crystallization layer and agent operating contract. Historical aliases: `vipin wiki`, `vipinknowledge`, `vipin-wiki`. | `AGENTS.md`, `.wiki-schema.md`, `purpose.md`, this page, `wiki/index.md`, `wiki/log.md`, [[weiping-wiki-maintenance-system]]. |
+| `D:/Research/WEIPING_WIKI` / `D:/Research/vipin's knowledgebase` | `WEIPING_WIKI` / `Weiping Wiki`, the maintained public crystallization layer and agent operating contract. Historical aliases: `vipin wiki`, `vipinknowledge`, `vipin-wiki`. | `AGENTS.md`, `.wiki-schema.md`, `purpose.md`, this page, `wiki/index.md`, `wiki/log.md`, [[weiping-wiki-maintenance-system]]. |
 | `D:/devtools` | Private local agent workstation: launchers, agent homes, runtimes, logs, caches, health checks. | Private README/ignore policy; public-safe summary in [[d-drive-project-map]]. |
 | `D:/devtools-public` | Clean public export of safe launchers, docs, templates, and safety checks. | README, safety gate scripts, Git tags. |
-| `D:/agent-resources` | Public curated skill/resource library and implicit skill-routing index. | README, `SKILL-INDEX.md`, provenance/license notes. |
+| `D:/AGENT_RESOURCE` / `D:/agent-resources` | Public curated skill/resource library and implicit skill-routing index. The lowercase path is a compatibility junction. | README, `SKILL-INDEX.md`, provenance/license notes. |
+| `D:/AGENTIC_SCIENCE` | Public agentic-science methods repo containing UUPF, a 108-pass audit/upgrade forge used for skill/workflow review. | `AGENTS.md`, `README.md`, `uupf/UniversalUpgradeForge.zip`; keep raw UUPF runs ignored and curated. |
+| `D:/Research/WEIPING_LAB` / `D:/Research/vipin-lab` | Honest research workbench for artifacts, evidence packets, validation reports, and research-state operations. | `README.md`, `CLAUDE.md`, `.codex/skills/weiping-lab/SKILL.md`, `docs/`, tests. |
+| `D:/Research/WEIPING_COUNCIL` / `D:/Research/vipin-council` | Multi-model deliberation runtime and companion review layer for lab/research artifacts. | `README.md`, `CLAUDE.md`, `.codex/skills/weiping-council/SKILL.md`, backend/frontend docs, tests. |
 | `C:/Users/admin/.claude`, `C:/Users/admin/.codex`, `C:/Users/admin/.openhands` | Junction entrypoints into D-drive agent homes. | Verify junction target before changing agent storage. |
 | `D:/agent-resources/skills/vipin/workstation-maintenance` | Shared skill for C:/D:/G: inventory, classification, batch-approved moves, rollback, and agent-infrastructure sync. | Read `SKILL.md`; dry-run first; broad user approval may cover all current low-risk preflighted batches. |
 
@@ -93,7 +96,8 @@ For active non-research project roots with more detailed entry docs, use [[local
 
 | Bucket | Examples | Rule |
 | --- | --- | --- |
-| Agent infrastructure | `D:/devtools`, `D:/devtools-public`, `D:/agent-resources`, `D:/.claude` | Keep runtime/log/cache/auth out of public Git; use [[d-drive-project-map]] for details. |
+| Agent infrastructure | `D:/devtools`, `D:/devtools-public`, `D:/AGENT_RESOURCE` / `D:/agent-resources`, `D:/AGENTIC_SCIENCE`, `D:/.claude` | Keep runtime/log/cache/auth out of public Git; use [[d-drive-project-map]] for details. |
+| Agentic workflow constellation | `D:/Research/WEIPING_WIKI`, `D:/Research/WEIPING_LAB`, `D:/Research/WEIPING_COUNCIL`, `D:/devtools`, `D:/AGENT_RESOURCE`, `D:/AGENTIC_SCIENCE` | Maintain tight public-safe routes, aliases, and artifact handoff descriptions. Do not copy private runtime state or require one repo's local DB/cache/generated reports for another repo to work. |
 | Research workbench | `D:/Research` | Route through [[research-project-workbench]]. Do not touch experiments during general maintenance. |
 | Organized files and moved D-root directories | `D:/_Organized/Downloads`, `D:/_Organized/Media`, `D:/_Organized/Temp-Review`, `D:/_Organized/Coursework`, `D:/_Organized/Documents-Private`, `D:/_Organized/Games`, `D:/_Organized/Tools-Review` | Current target for applied workstation moves. Root directories moved here keep old `D:/<name>` compatibility junctions; keep rollback manifests in ignored `.wiki-tmp` if reversal is needed. |
 | Product/app/project roots | `D:/Project`, `D:/frontend`, `D:/Company`, `D:/Idea` | Rescan live README/config/status before claims or edits. Create pages only for repeated/active projects. |
@@ -154,3 +158,4 @@ Deletion still requires explicit user approval. Most old content should be rewri
 - [[research-project-workbench]]
 - [[agentmemory-first-agent-collaboration]]
 - [[implicit-skill-routing]]
+- [[weiping-agentic-project-constellation]]

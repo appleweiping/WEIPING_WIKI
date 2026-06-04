@@ -33,6 +33,8 @@ Automation may commit and push only if all are true:
 - no unrelated dirty work is staged
 - no raw private or ignored runtime material is staged
 
+For WEIPING_WIKI recurring maintenance, cron automations should use `model = "gpt-5.5"` and `reasoning_effort = "xhigh"` when supported. The prompt must explicitly preserve unrelated dirty work and must not stage external project files merely because it inspected them.
+
 ## Stop Conditions
 
 Stop before staging when:
@@ -44,6 +46,18 @@ Stop before staging when:
 - sensitive material appears in a public candidate diff
 - only ignored report artifacts changed
 - a physical file move is proposed without a `workstation-maintenance` manifest, age-gated user-approved batch, and rollback manifest
+- a proposed cross-project link would make one repository depend on another repository's private `.env`, database, runtime cache, generated report, or active workspace state
+
+## Cross-Project Coupling Gate
+
+Before publishing or automating a relationship between WEIPING_WIKI, devtools, AGENT_RESOURCE, AGENTIC_SCIENCE, WEIPING_LAB, and WEIPING_COUNCIL, check:
+
+- Is the relationship recorded as routing, optional integration, artifact format, or validation command?
+- Can each repo still run its basic status/verification path when the neighbor repo is absent or degraded?
+- Are secrets, local DBs, generated reports, caches, and raw workspaces kept local to their owning repo?
+- Are historical aliases preserved as compatibility notes rather than new canonical names?
+
+If any answer is no, keep the relationship private or redesign it before committing.
 
 ## Agentmemory
 
