@@ -437,6 +437,26 @@ Treat the wiki as a maintained knowledge system, not an append-only archive. Per
 - After the user approves deleting public pages, remove or retarget incoming links, index entries, section homes, and website-facing references.
 - Record meaningful maintenance in `wiki/log.md`, and commit scoped maintenance changes after validation.
 
+## Disk-Audit Ledger And Recurring Task Patterns (read-first)
+
+Two advisory layers help every agent act consistently without re-deriving context. Both are
+advisory and human-gated — never authoritative over this file or `purpose.md`, and neither ever
+authorizes a delete on its own.
+
+- **Canonical disk-audit ledger** — `D:\AGENT_RESOURCE\disk-audit\projects-audit.json` (writer:
+  `python scripts/wiki.py hardness auto` → `scripts/hardness/audit.py`; see that folder's `README.md`).
+  Before ANY file move / delete / cleanup of a D:-drive project, read it and fail closed: a
+  `generated_at` older than 24h is STALE (do not delete; re-run or escalate); a `quarantine`
+  verdict means review/move-to-staging only; an absent project means `keep` (absence is NOT
+  permission to delete). `safe-delete` is never machine-emitted — deletion always needs explicit
+  human approval via the `workstation-maintenance` manifest/batch flow. Owner overrides live in
+  `overrides.json` (force keep/quarantine only).
+- **Recurring task patterns** — `memory/preferences/distilled-task-patterns.md` (writer:
+  `python scripts/wiki.py distill --apply`). Before non-trivial work, skim it for a matching
+  recurring task-type and reuse its canonical prompt/skill. It is distilled from the owner's own
+  agent-prompt history (redacted leading clauses only — no verbatim bodies, no secrets). Never
+  auto-apply a row; treat it as a hint, not an instruction.
+
 ## Wiki Structure
 
 - `wiki/home.md`

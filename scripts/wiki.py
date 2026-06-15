@@ -574,6 +574,106 @@ def cmd_obsidian(args):
         print(json.dumps(payload, ensure_ascii=False, indent=2))
 
 
+def cmd_hardness(args):
+    """project-hardness: build/refresh a project's .agent/ causal layer."""
+    # Import lazily so the rest of the CLI never depends on this package.
+    from hardness import engine
+
+    action = args.hardness_command
+    if action == "scan":
+        result = engine.scan(args.project, name=args.name, write=not args.no_write)
+        if getattr(args, "json", False):
+            print(json.dumps(result, ensure_ascii=False, indent=2))
+        else:
+            man = result.get("manifest", {})
+            print(f"Hardened '{man.get('project', args.project)}' -> {result.get('agent_dir')}")
+            print(f"  stats: {json.dumps(man.get('stats', {}))}")
+            print(f"  artifacts: {len(man.get('artifacts', []))} files")
+    elif action == "scan-all":
+        from hardness import discover
+        roots = args.root_dir or None
+        result = discover.scan_all(roots=roots, dry_run=args.dry_run)
+        if getattr(args, "json", False):
+            print(json.dumps(result, ensure_ascii=False, indent=2))
+        else:
+            verb = "Discovered" if args.dry_run else "Hardened"
+            print(f"{verb} {result['discovered']} project(s); "
+                  f"hardened {result['hardened']}, errors {result['errors']}")
+            for r in result["projects"]:
+                stats = json.dumps(r.get("stats", {})) if r.get("stats") else ""
+                print(f"  [{r['status']:>10}] {r['project']:<32} {stats} {r.get('error','')}")
+    elif action == "harden":
+        result = engine.harden(args.project, args.requirement, task_id=args.id)
+        if getattr(args, "json", False):
+            print(json.dumps(result, ensure_ascii=False, indent=2))
+        else:
+            print(f"Task hardened: {result['task_file']}")
+            spec = result["spec"]
+            print(f"  goal: {spec['clarified_goal']}")
+            print(f"  modules: {', '.join(m['name'] for m in spec['involved_modules'])}")
+            print(f"  risks: {len(spec['risk_points'])}; tests: {', '.join(spec['test_commands'])}")
+    elif action == "auto":
+        from hardness import auto
+        roots = args.root_dir or None
+        result = auto.auto_scan(roots=roots, threshold=args.threshold, dry_run=args.dry_run)
+        if getattr(args, "json", False):
+            print(json.dumps(result, ensure_ascii=False, indent=2))
+        else:
+            print(f"Checked {result['checked']}; hardened {result['hardened']}, "
+                  f"baselined {result['baselined']}, skipped {result['skipped']}, "
+                  f"errors {result['errors']}")
+            for r in result["projects"]:
+                if r.get("decision") not in ("skip", None) or r.get("status") == "error":
+                    tag = r.get("decision") or r.get("status")
+                    extra = " -> hardened" if r.get("hardened") else ""
+                    print(f"  [{tag:>20}] {r['project']}{extra} {r.get('error','')}")
+    elif action == "impact":
+        result = engine.impact(args.project, args.module)
+        print(json.dumps(result, ensure_ascii=False, indent=2))
+    elif action == "sync":
+        lessons = args.lesson or []
+        result = engine.sync(args.project, lessons, dry_run=not args.commit)
+        print(json.dumps(result, ensure_ascii=False, indent=2))
+    else:
+        raise SystemExit("Unknown hardness command")
+
+
+def cmd_distill(args):
+    """Feature A: distill the owner's recurring prompt patterns (advisory, human-gated).
+
+    Default = dry-run (writes only .wiki-tmp/distill-candidates.json). --apply is the
+    only mode that writes the curated, human-editable pattern table; it merges and never
+    clobbers pinned/edited rows.
+    """
+    import distill as _distill
+
+    result = _distill.distill(min_count=args.min_count, since_days=args.since_days)
+    root = Path(args.root).resolve()
+    cand_path = root / ".wiki-tmp" / "distill-candidates.json"
+    cand_path.parent.mkdir(parents=True, exist_ok=True)
+    cand_path.write_text(json.dumps(result, ensure_ascii=False, indent=2), encoding="utf-8")
+
+    if args.apply:
+        md_path = root / "memory" / "preferences" / "distilled-task-patterns.md"
+        md_path.parent.mkdir(parents=True, exist_ok=True)
+        prior = md_path.read_text(encoding="utf-8") if md_path.exists() else ""
+        md_path.write_text(_distill.render_apply(result, prior), encoding="utf-8")
+
+    if getattr(args, "json", False):
+        print(json.dumps(result, ensure_ascii=False, indent=2))
+    else:
+        print(f"distill: {result['turns_extracted']} owner turns "
+              f"({result['turns_dropped_redacted']} redaction-dropped); "
+              f"sources={result['sources_read']}")
+        print(f"  clusters (>= {result['min_count']}):")
+        for c in result["clusters"]:
+            print(f"    {c['count']:>4}  {c['pattern_key']:<20} "
+                  f"skill={c['suggested_skill'] or '-'}  projects={','.join(c['top_projects'])}")
+        print(f"  candidates -> {cand_path}")
+        print(f"  APPLIED -> memory/preferences/distilled-task-patterns.md" if args.apply
+              else "  (dry-run; re-run with --apply to write the curated pattern table)")
+
+
 def main():
     if hasattr(sys.stdout, "reconfigure"):
         sys.stdout.reconfigure(encoding="utf-8")
@@ -689,6 +789,46 @@ def main():
     p.add_argument("--json", action="store_true")
     p.add_argument("--fix", action="store_true", help="Auto-fix safe issues")
 
+    # hardness — project causal-layer engine
+    p = sub.add_parser("hardness", help="project-hardness: AI-readable causal layer for a project")
+    hsub = p.add_subparsers(dest="hardness_command", required=True)
+    hs = hsub.add_parser("scan", help="Scan a project and write its .agent/ tree")
+    hs.add_argument("project", help="Path to the target project root")
+    hs.add_argument("--name", help="Override project name")
+    hs.add_argument("--no-write", action="store_true", help="Analyze only, do not write .agent/")
+    hs.add_argument("--json", action="store_true")
+    hsa = hsub.add_parser("scan-all", help="Discover and harden every important project under D:")
+    hsa.add_argument("--root-dir", action="append", help="Override search root (repeatable)")
+    hsa.add_argument("--dry-run", action="store_true", help="List discovered projects, do not write")
+    hsa.add_argument("--json", action="store_true")
+    hau = hsub.add_parser("auto", help="Auto-incremental: harden only NEW or significantly-changed projects")
+    hau.add_argument("--root-dir", action="append", help="Override search root (repeatable)")
+    hau.add_argument("--threshold", type=int, default=15,
+                     help="Code-file count delta that counts as 'significant change' (default 15)")
+    hau.add_argument("--dry-run", action="store_true", help="Show decisions, do not write")
+    hau.add_argument("--json", action="store_true")
+    hh = hsub.add_parser("harden", help="Harden a vague requirement into a task spec")
+    hh.add_argument("project", help="Path to the target project root")
+    hh.add_argument("requirement", help="The free-text requirement to harden")
+    hh.add_argument("--id", help="Optional task id (default: timestamp)")
+    hh.add_argument("--json", action="store_true")
+    hi = hsub.add_parser("impact", help="Show blast radius of a module")
+    hi.add_argument("project", help="Path to the target project root")
+    hi.add_argument("module", help="Module name (as in architecture.md)")
+    hsy = hsub.add_parser("sync", help="Sync cross-project lessons to agentmemory (facts rejected)")
+    hsy.add_argument("project", help="Path to the target project root")
+    hsy.add_argument("--lesson", action="append", help="A cross-project lesson (repeatable)")
+    hsy.add_argument("--commit", action="store_true", help="Actually send (default: dry-run)")
+
+    # distill (Feature A: owner prompt-pattern distiller — advisory, human-gated)
+    pd = sub.add_parser("distill", help="Distill the owner's recurring prompt patterns (advisory)")
+    pd.add_argument("--apply", action="store_true",
+                    help="Write the curated pattern table (default: dry-run, .wiki-tmp only)")
+    pd.add_argument("--dry-run", action="store_true", help="Explicit dry-run (the default)")
+    pd.add_argument("--min-count", type=int, default=4, help="Min cluster size to emit (default 4)")
+    pd.add_argument("--since-days", type=int, default=180, help="Ignore turns older than N days (default 180)")
+    pd.add_argument("--json", action="store_true")
+
     args = parser.parse_args()
 
     commands = {
@@ -700,6 +840,8 @@ def main():
         "maintain": cmd_maintain,
         "obsidian": cmd_obsidian,
         "health": cmd_health,
+        "hardness": cmd_hardness,
+        "distill": cmd_distill,
     }
 
     if args.command in commands:
