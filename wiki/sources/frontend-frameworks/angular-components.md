@@ -30,7 +30,7 @@ source_pages:
 
 ## Summary
 
-Component infrastructure and Material Design components for Angular Official components for Angular $1](https://www.npmjs.com/package/@angular/cdk) $1](https://circleci.com/gh/angular/components) $1](https://gitter.im/angular/material2?utm source=badge&utm medium=badge&utm campaign=pr-badge) The Angular team builds and maintains both common UI components and tools to help you build your own custom components. The team maintains several npm packages. Package Description Docs ------------------------- ------------------------------------------------------------------------------------- ----------------- @angular/aria Collection of hea...
+Component infrastructure and Material Design components for Angular Official components for Angular \$1](https://www.npmjs.com/package/@angular/cdk) \$1](https://circleci.com/gh/angular/components) \$1](https://gitter.im/angular/material2?utm source=badge&utm medium=badge&utm campaign=pr-badge) The Angular team builds and maintains both common UI components and tools to help you build your own custom components. The team maintains several npm packages. Package Description Docs ------------------------- ------------------------------------------------------------------------------------- ----------------- @angular/aria Collection of hea...
 
 ## Reuse Profile
 

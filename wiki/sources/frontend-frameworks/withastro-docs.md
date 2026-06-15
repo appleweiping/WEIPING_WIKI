@@ -30,7 +30,7 @@ source_pages:
 
 ## Summary
 
-Astro documentation Astro Docs To all who come to this happy place: welcome. This is the repo for $1. This repo contains all the source code we use to build our docs site. $1](https://codesandbox.io/p/github/withastro/docs) $1](https://pr.new/github.com/withastro/docs) We are Astro Astro is an all-in-one web framework for building fast, content-focused websites. We want everyone to be successful building sites, and that means helping everyone understand how Astro works. You are Awesome You can also help make the docs awesome. Your feedback is welcome. Your writing, editing, translating, designing, and developing skills are welcome....
+Astro documentation Astro Docs To all who come to this happy place: welcome. This is the repo for \$1. This repo contains all the source code we use to build our docs site. \$1](https://codesandbox.io/p/github/withastro/docs) \$1](https://pr.new/github.com/withastro/docs) We are Astro Astro is an all-in-one web framework for building fast, content-focused websites. We want everyone to be successful building sites, and that means helping everyone understand how Astro works. You are Awesome You can also help make the docs awesome. Your feedback is welcome. Your writing, editing, translating, designing, and developing skills are welcome....
 
 ## Reuse Profile
 

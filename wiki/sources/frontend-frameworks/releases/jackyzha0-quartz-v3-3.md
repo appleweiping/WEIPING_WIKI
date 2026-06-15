@@ -37,7 +37,7 @@ source_pages:
 
 ## Summary
 
-Another 4 months, another Quartz release! It constantly blows me away that people consistently find Quartz useful to whatever they are working on. Some use it for taking notes in university lectures, tracking D&D campaigns, writing chemistry papers, and publishing novel research on tools for thought. Major Features - Semantic Search using Operand! A personally long-awaited personal feature, learn how to set it up $1 or $1 - SPA Routing (https://github.com/jackyzha0/quartz/pull/118) - Prevents having to reload the p...
+Another 4 months, another Quartz release! It constantly blows me away that people consistently find Quartz useful to whatever they are working on. Some use it for taking notes in university lectures, tracking D&D campaigns, writing chemistry papers, and publishing novel research on tools for thought. Major Features - Semantic Search using Operand! A personally long-awaited personal feature, learn how to set it up \$1 or \$1 - SPA Routing (https://github.com/jackyzha0/quartz/pull/118) - Prevents having to reload the p...
 
 ## Public Handling Notes
 

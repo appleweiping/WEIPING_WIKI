@@ -30,7 +30,7 @@ source_pages:
 
 ## Summary
 
-Next Generation Server Toolkit. Create web servers with everything you need and deploy them wherever you prefer. $1](https://deepwiki.com/nitrojs/nitro) Nitro [!NOTE] You’re viewing the v3 branch. For the current stable release, see $1. Nitro extends your Vite app with a production-ready server , designed to run anywhere . Add server routes, deploy across multiple platforms, and enjoy a zero-config experience. 📘 Docs: $1 Contributing See Check out the $1 to get started. License Released under the $1.
+Next Generation Server Toolkit. Create web servers with everything you need and deploy them wherever you prefer. \$1](https://deepwiki.com/nitrojs/nitro) Nitro [!NOTE] You’re viewing the v3 branch. For the current stable release, see \$1. Nitro extends your Vite app with a production-ready server , designed to run anywhere . Add server routes, deploy across multiple platforms, and enjoy a zero-config experience. 📘 Docs: \$1 Contributing See Check out the \$1 to get started. License Released under the \$1.
 
 ## Reuse Profile
 

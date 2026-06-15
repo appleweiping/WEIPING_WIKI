@@ -33,7 +33,7 @@ source_pages:
 
 ## Summary
 
-$1 [!IMPORTANT] This release patches two medium-severity vulnerabilities in proxy and redirect route rules. Users relying on either are strongly encouraged to upgrade. See $1 and $1 for details. 🚀 Enhancements - Add version meta ($1) 🩹 Fixes - route-rules: Reject out-of-scope requests ($1) - route-rules: Prevent open redirect via protocol-relative url bypass ($1) 🏡 Chore ❤️ Contributors - Pooya Parsa (@pi0) - Rihan Arfan (@RihanArfan)
+\$1 [!IMPORTANT] This release patches two medium-severity vulnerabilities in proxy and redirect route rules. Users relying on either are strongly encouraged to upgrade. See \$1 and \$1 for details. 🚀 Enhancements - Add version meta (\$1) 🩹 Fixes - route-rules: Reject out-of-scope requests (\$1) - route-rules: Prevent open redirect via protocol-relative url bypass (\$1) 🏡 Chore ❤️ Contributors - Pooya Parsa (@pi0) - Rihan Arfan (@RihanArfan)
 
 ## Public Handling Notes
 

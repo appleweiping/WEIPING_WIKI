@@ -30,14 +30,14 @@ source_pages:
 ## Release Ideas
 
 - fix: leave stale promises to wait for a later resolution, instead of rejecting ([#18180](https://github.com/sveltejs/svelte/pull/18180))
-- fix: keep dependencies of `$state.eager/pending` ([#18218](https://github.com/sveltejs/svelte/pull/18218))
+- fix: keep dependencies of `\$state.eager/pending` ([#18218](https://github.com/sveltejs/svelte/pull/18218))
 - fix: reapply context after transforming error during SSR ([#18099](https://github.com/sveltejs/svelte/pull/18099))
 - fix: don't rebase just-created batches ([#18117](https://github.com/sveltejs/svelte/pull/18117))
 - chore: allow `null` for `pending` in typings ([#18201](https://github.com/sveltejs/svelte/pull/18201))
 
 ## Summary
 
-Patch Changes - fix: leave stale promises to wait for a later resolution, instead of rejecting ($1) - fix: keep dependencies of $state.eager/pending ($1) - fix: reapply context after transforming error during SSR ($1) - fix: don't rebase just-created batches ($1) - chore: allow null for pending in typings ($1) - fix: flush eager effects in production ($1) - fix: rethrow error of failed iterable after calling return() ($1) - fix: account for proxified instance when updating bind:this ($1) - fix: ensure scheduled bat...
+Patch Changes - fix: leave stale promises to wait for a later resolution, instead of rejecting (\$1) - fix: keep dependencies of \$state.eager/pending (\$1) - fix: reapply context after transforming error during SSR (\$1) - fix: don't rebase just-created batches (\$1) - chore: allow null for pending in typings (\$1) - fix: flush eager effects in production (\$1) - fix: rethrow error of failed iterable after calling return() (\$1) - fix: account for proxified instance when updating bind:this (\$1) - fix: ensure scheduled bat...
 
 ## Public Handling Notes
 

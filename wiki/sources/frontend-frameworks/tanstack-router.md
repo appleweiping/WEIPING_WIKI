@@ -30,7 +30,7 @@ source_pages:
 
 ## Summary
 
-🤖 A client-first, server-capable, fully type-safe router and full-stack framework for the web (React and more). TanStack Router A modern router designed for type safety, data‑driven navigation, and seamless developer experience. - End‑to-end type safety (routes, params, loaders) - Schema‑driven search params with validation - Built‑in caching, prefetching & invalidation - Nested layouts, transitions & error boundaries $1 TanStack Start A full‑stack framework built on Router, designed for server rendering, streaming, and production‑ready deployments. - Full‑document SSR & streaming - Server functions & end‑to‑end type safety - Deplo...
+🤖 A client-first, server-capable, fully type-safe router and full-stack framework for the web (React and more). TanStack Router A modern router designed for type safety, data‑driven navigation, and seamless developer experience. - End‑to-end type safety (routes, params, loaders) - Schema‑driven search params with validation - Built‑in caching, prefetching & invalidation - Nested layouts, transitions & error boundaries \$1 TanStack Start A full‑stack framework built on Router, designed for server rendering, streaming, and production‑ready deployments. - Full‑document SSR & streaming - Server functions & end‑to‑end type safety - Deplo...
 
 ## Reuse Profile
 

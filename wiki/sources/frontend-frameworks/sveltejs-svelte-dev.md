@@ -29,7 +29,7 @@ source_pages:
 
 ## Summary
 
-The Svelte omnisite svelte.dev This is the repository behind $1, the official Svelte site, and the related packages that it relies on. Documentation PRs If you're creating a documentation PR, make sure you're targeting the right repository. More specifically, changes to content within apps/svelte.dev/content/docs are synced from other repositories, and documentation changes within those folder should therefore be made in those repositories: - docs/svelte - https://github.com/sveltejs/svelte - docs/kit - https://github.com/sveltejs/kit - docs/cli - https://github.com/sveltejs/cli - docs/ai - https://github.com/sveltejs/ai-tools The t...
+The Svelte omnisite svelte.dev This is the repository behind \$1, the official Svelte site, and the related packages that it relies on. Documentation PRs If you're creating a documentation PR, make sure you're targeting the right repository. More specifically, changes to content within apps/svelte.dev/content/docs are synced from other repositories, and documentation changes within those folder should therefore be made in those repositories: - docs/svelte - https://github.com/sveltejs/svelte - docs/kit - https://github.com/sveltejs/kit - docs/cli - https://github.com/sveltejs/cli - docs/ai - https://github.com/sveltejs/ai-tools The t...
 
 ## Reuse Profile
 

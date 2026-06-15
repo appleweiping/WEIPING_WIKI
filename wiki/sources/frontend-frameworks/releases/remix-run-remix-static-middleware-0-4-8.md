@@ -33,7 +33,7 @@ source_pages:
 
 ## Summary
 
-Patch Changes - Bumped @remix-run/ dependencies: - $1
+Patch Changes - Bumped @remix-run/ dependencies: - \$1
 
 ## Public Handling Notes
 

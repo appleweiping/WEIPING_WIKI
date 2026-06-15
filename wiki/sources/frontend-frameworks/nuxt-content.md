@@ -30,7 +30,7 @@ source_pages:
 
 ## Summary
 
-The file-based CMS for your Nuxt application, powered by Markdown and Vue components. $1](https://content.nuxt.com) Nuxt Content [![npm version][npm-version-src&#93;&#93;[npm-version-href] [![npm downloads][npm-downloads-src&#93;&#93;[npm-downloads-href] [![License][license-src&#93;&#93;[license-href] [![Nuxt][nuxt-src&#93;&#93;[nuxt-href] [![Volta][volta-src&#93;&#93;[volta-href] Nuxt Content reads the content/ directory in your project, parses .md , .yml , .csv or .json files and creates a powerful data layer for your application. Bonus, use Vue components in Markdown with the $1. - $1 - $1 - $1 Features - $1 support - Work in serverless and edge environments (Cloudflar...
+The file-based CMS for your Nuxt application, powered by Markdown and Vue components. \$1](https://content.nuxt.com) Nuxt Content [![npm version][npm-version-src&#93;&#93;[npm-version-href] [![npm downloads][npm-downloads-src&#93;&#93;[npm-downloads-href] [![License][license-src&#93;&#93;[license-href] [![Nuxt][nuxt-src&#93;&#93;[nuxt-href] [![Volta][volta-src&#93;&#93;[volta-href] Nuxt Content reads the content/ directory in your project, parses .md , .yml , .csv or .json files and creates a powerful data layer for your application. Bonus, use Vue components in Markdown with the \$1. - \$1 - \$1 - \$1 Features - \$1 support - Work in serverless and edge environments (Cloudflar...
 
 ## Reuse Profile
 

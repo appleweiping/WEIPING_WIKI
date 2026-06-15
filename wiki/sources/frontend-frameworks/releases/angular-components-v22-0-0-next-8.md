@@ -37,7 +37,7 @@ source_pages:
 
 ## Summary
 
-aria Commit Description -- -- $1](https://github.com/angular/components/commit/e3d84f2e0adb9254d804c10ba24e6c4528efad53) combobox: add test harnesses ( 33194) $1](https://github.com/angular/components/commit/0ca47b4a060595919fd2b2cd62d0097071c4795d) combobox: migrate simple-combobox directly into primary entrypoints ( 33206) $1](https://github.com/angular/components/commit/218a77cf946808ca966c131f56c393ef91c662b3) combobox: separates placeholder prefixes ( 33163) $1](https://github.com/angular/components/commit/4d0...
+aria Commit Description -- -- \$1](https://github.com/angular/components/commit/e3d84f2e0adb9254d804c10ba24e6c4528efad53) combobox: add test harnesses ( 33194) \$1](https://github.com/angular/components/commit/0ca47b4a060595919fd2b2cd62d0097071c4795d) combobox: migrate simple-combobox directly into primary entrypoints ( 33206) \$1](https://github.com/angular/components/commit/218a77cf946808ca966c131f56c393ef91c662b3) combobox: separates placeholder prefixes ( 33163) \$1](https://github.com/angular/components/commit/4d0...
 
 ## Public Handling Notes
 

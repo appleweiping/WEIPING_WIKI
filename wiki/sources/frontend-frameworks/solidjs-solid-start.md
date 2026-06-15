@@ -30,7 +30,7 @@ source_pages:
 
 ## Summary
 
-SolidStart, the Solid app framework $1](https://github.com/solidjs) $1](https://npmjs.com/package/@solidjs/start) $1](https://npmjs.com/package/@solidjs/start) $1](https://github.com/solidjs/solid-start) $1](https://discord.com/invite/solidjs) $1](https://reddit.com/r/solidjs) - For building apps with SolidStart, check the $1 and our $1 - For contributing to codebase, check $1 - For creating a new template, please head over to $1 [!IMPORTANT] This is the branch for the SolidStart 2.0.0-alpha that is currently under heavy development. Current SolidStart is maintained at $1. Prerequisites - Node.js : Use the version specified in .nvmr...
+SolidStart, the Solid app framework \$1](https://github.com/solidjs) \$1](https://npmjs.com/package/@solidjs/start) \$1](https://npmjs.com/package/@solidjs/start) \$1](https://github.com/solidjs/solid-start) \$1](https://discord.com/invite/solidjs) \$1](https://reddit.com/r/solidjs) - For building apps with SolidStart, check the \$1 and our \$1 - For contributing to codebase, check \$1 - For creating a new template, please head over to \$1 [!IMPORTANT] This is the branch for the SolidStart 2.0.0-alpha that is currently under heavy development. Current SolidStart is maintained at \$1. Prerequisites - Node.js : Use the version specified in .nvmr...
 
 ## Reuse Profile
 

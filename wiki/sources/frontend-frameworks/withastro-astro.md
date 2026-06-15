@@ -30,7 +30,7 @@ source_pages:
 
 ## Summary
 
-The web framework for content-driven websites. ⭐️ Star to support our work! !$1 Astro is a website build tool for the modern web &mdash; powerful developer experience meets lightweight output. $1](https://github.com/withastro/astro/actions/workflows/ci.yml) $1](https://github.com/withastro/astro/blob/main/LICENSE) $1](https://badge.fury.io/js/astro) Install The recommended way to install the latest version of Astro is by running the command below: You can also install Astro manually by running this command instead: Looking for help? Start with our $1 guide. Looking for quick examples? $1 right in your browser. Documentation Visit ou...
+The web framework for content-driven websites. ⭐️ Star to support our work! !\$1 Astro is a website build tool for the modern web &mdash; powerful developer experience meets lightweight output. \$1](https://github.com/withastro/astro/actions/workflows/ci.yml) \$1](https://github.com/withastro/astro/blob/main/LICENSE) \$1](https://badge.fury.io/js/astro) Install The recommended way to install the latest version of Astro is by running the command below: You can also install Astro manually by running this command instead: Looking for help? Start with our \$1 guide. Looking for quick examples? \$1 right in your browser. Documentation Visit ou...
 
 ## Reuse Profile
 

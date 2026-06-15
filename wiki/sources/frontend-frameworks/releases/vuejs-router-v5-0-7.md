@@ -37,7 +37,7 @@ source_pages:
 
 ## Summary
 
-🚀 Features - Upgrade to babel 8 - by @posva $1 - Make defineParamParser() more intuitive - by @posva $1 - Upgrade @vue/devtools-api - by @posva $1 - matcher : Hint at params: {} workaround in discarded params warning - by @posva and shanliuling in https://github.com/vuejs/router/issues/2689 $1 - param-parsers : Add include/exclude options - by @posva $1 🐞 Bug Fixes - matcher : - Finalize param token before processing escaped colon - by @babu-ch and @posva in https://github.com/vuejs/router/issues/2654 $1 - query...
+🚀 Features - Upgrade to babel 8 - by @posva \$1 - Make defineParamParser() more intuitive - by @posva \$1 - Upgrade @vue/devtools-api - by @posva \$1 - matcher : Hint at params: {} workaround in discarded params warning - by @posva and shanliuling in https://github.com/vuejs/router/issues/2689 \$1 - param-parsers : Add include/exclude options - by @posva \$1 🐞 Bug Fixes - matcher : - Finalize param token before processing escaped colon - by @babu-ch and @posva in https://github.com/vuejs/router/issues/2654 \$1 - query...
 
 ## Public Handling Notes
 

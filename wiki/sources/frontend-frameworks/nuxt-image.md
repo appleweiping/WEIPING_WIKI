@@ -30,7 +30,7 @@ source_pages:
 
 ## Summary
 
-Plug-and-play image optimization for Nuxt applications. $1](https://image.nuxt.com) [![npm version][npm-version-src&#93;&#93;[npm-version-href] [![npm downloads][npm-downloads-src&#93;&#93;[npm-downloads-href] [![License][license-src&#93;&#93;[license-href] [![Nuxt][nuxt-src&#93;&#93;[nuxt-href] [![Volta][volta-src&#93;&#93;[volta-href] $1](https://nuxt.care/?search=image) Nuxt Image Plug-and-play image optimization for Nuxt apps. Resize and transform your images using built-in optimizer or your favorite images CDN. - $1 - $1 Features - drop-in replacement for the native element - drop-in replacement for the native element. - Built-in image resizer and transformer with $1...
+Plug-and-play image optimization for Nuxt applications. \$1](https://image.nuxt.com) [![npm version][npm-version-src&#93;&#93;[npm-version-href] [![npm downloads][npm-downloads-src&#93;&#93;[npm-downloads-href] [![License][license-src&#93;&#93;[license-href] [![Nuxt][nuxt-src&#93;&#93;[nuxt-href] [![Volta][volta-src&#93;&#93;[volta-href] \$1](https://nuxt.care/?search=image) Nuxt Image Plug-and-play image optimization for Nuxt apps. Resize and transform your images using built-in optimizer or your favorite images CDN. - \$1 - \$1 Features - drop-in replacement for the native element - drop-in replacement for the native element. - Built-in image resizer and transformer with \$1...
 
 ## Reuse Profile
 

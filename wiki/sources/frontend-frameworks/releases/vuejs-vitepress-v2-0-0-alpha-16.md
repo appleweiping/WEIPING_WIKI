@@ -29,11 +29,11 @@ source_pages:
 
 ## Release Ideas
 
-- Please refer to $1 for details.
+- Please refer to \$1 for details.
 
 ## Summary
 
-Please refer to $1 for details.
+Please refer to \$1 for details.
 
 ## Public Handling Notes
 

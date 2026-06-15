@@ -1,6 +1,8 @@
 param(
     [string]$Root = ".",
-    [string]$QuartzRef = "v4"
+    [string]$QuartzRef = "v4",
+    # Pin to a verified-good Quartz commit so upstream v4 drift cannot silently break the build.
+    [string]$QuartzPin = "d25a6eabf96751ffca56f8a8139272def7a65041"
 )
 
 $ErrorActionPreference = "Stop"
@@ -86,8 +88,10 @@ if ((Test-Path $quartzPath) -and -not (Test-Path (Join-Path $quartzPath "package
     Remove-Item -LiteralPath $quartzPath -Recurse -Force
 }
 if (-not (Test-Path $quartzPath)) {
-    git clone --depth 1 --branch $QuartzRef https://github.com/jackyzha0/quartz.git $quartzPath
+    git clone --branch $QuartzRef https://github.com/jackyzha0/quartz.git $quartzPath
 }
+# Pin to the verified-good commit (full clone above makes the SHA reachable).
+git -C $quartzPath checkout $QuartzPin
 
 & $nodeCmd (Join-Path $rootPath "site\sync-content.mjs") $contentPath
 Copy-Item -LiteralPath (Join-Path $rootPath "site\quartz.config.ts") -Destination (Join-Path $quartzPath "quartz.config.ts") -Force

@@ -30,7 +30,7 @@ source_pages:
 
 ## Summary
 
-Instant-loading web apps, without effort Instant-loading web apps, without effort Qwik offers the fastest possible page load times - regardless of the complexity of your website. Qwik is so fast because it allows fully interactive sites to load with almost no JavaScript and $1. As users interact with the site, only the necessary parts of the site load on-demand. This $1 is what makes Qwik so quick. Getting Started - Understand the difference between $1 applications. - Learn about Qwik's high level $1. Resources - $1 - $1 - $1 - $1 - $1 - $1 - $1 Community - Ping us at $1 - Join our $1 community - Join all the $1 Development - See $1...
+Instant-loading web apps, without effort Instant-loading web apps, without effort Qwik offers the fastest possible page load times - regardless of the complexity of your website. Qwik is so fast because it allows fully interactive sites to load with almost no JavaScript and \$1. As users interact with the site, only the necessary parts of the site load on-demand. This \$1 is what makes Qwik so quick. Getting Started - Understand the difference between \$1 applications. - Learn about Qwik's high level \$1. Resources - \$1 - \$1 - \$1 - \$1 - \$1 - \$1 - \$1 Community - Ping us at \$1 - Join our \$1 community - Join all the \$1 Development - See \$1...
 
 ## Reuse Profile
 

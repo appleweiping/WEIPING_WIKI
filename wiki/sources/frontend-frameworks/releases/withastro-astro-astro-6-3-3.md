@@ -33,7 +33,7 @@ source_pages:
 
 ## Summary
 
-Patch Changes - $1 $1 Thanks $1! - Fixes a reflected XSS vulnerability where slot names on hydrated components were not HTML-escaped in SSR output
+Patch Changes - \$1 \$1 Thanks \$1! - Fixes a reflected XSS vulnerability where slot names on hydrated components were not HTML-escaped in SSR output
 
 ## Public Handling Notes
 

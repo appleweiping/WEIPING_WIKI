@@ -30,7 +30,7 @@ source_pages:
 
 ## Summary
 
-Next generation frontend tooling. It's fast! Vite ⚡ Next Generation Frontend Tooling - 💡 Instant Server Start - ⚡️ Lightning Fast HMR - 🛠️ Rich Features - 📦 Optimized Build - 🔩 Universal Plugin Interface - 🔑 Fully Typed APIs Vite (French word for "quick", pronounced $1, like "veet") is a build tool that aims to provide a faster and leaner development experience for modern web projects. It consists of two major parts: - A dev server that provides $1 over $1, for example extremely fast $1. - A build command that bundles your code with $1, pre-configured to output highly optimized static assets for production. In addition, Vite is...
+Next generation frontend tooling. It's fast! Vite ⚡ Next Generation Frontend Tooling - 💡 Instant Server Start - ⚡️ Lightning Fast HMR - 🛠️ Rich Features - 📦 Optimized Build - 🔩 Universal Plugin Interface - 🔑 Fully Typed APIs Vite (French word for "quick", pronounced \$1, like "veet") is a build tool that aims to provide a faster and leaner development experience for modern web projects. It consists of two major parts: - A dev server that provides \$1 over \$1, for example extremely fast \$1. - A build command that bundles your code with \$1, pre-configured to output highly optimized static assets for production. In addition, Vite is...
 
 ## Reuse Profile
 

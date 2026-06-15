@@ -29,11 +29,11 @@ source_pages:
 
 ## Release Ideas
 
-- compiler Commit Description -- -- $1](https://github.com/angular/angular/commit/c7aef8ec5dd12b5b1d4c703a61bd1dd43f998e18) enforce parentheses containing arguments for :host-context $1](https://github.com/angular/angular/...
+- compiler Commit Description -- -- \$1](https://github.com/angular/angular/commit/c7aef8ec5dd12b5b1d4c703a61bd1dd43f998e18) enforce parentheses containing arguments for :host-context \$1](https://github.com/angular/angular/...
 
 ## Summary
 
-compiler Commit Description -- -- $1](https://github.com/angular/angular/commit/c7aef8ec5dd12b5b1d4c703a61bd1dd43f998e18) enforce parentheses containing arguments for :host-context $1](https://github.com/angular/angular/commit/8a1533c9ad7c306e03d7c50676f87b56bade5bf6) preserve leading commas in animation definitions $1](https://github.com/angular/angular/commit/194f723f6620ea3cdf490b762ecbef8df6bb2c8a) remove dedicated support for legacy shadow DOM selectors $1](https://github.com/angular/angular/commit/4c25a42e988...
+compiler Commit Description -- -- \$1](https://github.com/angular/angular/commit/c7aef8ec5dd12b5b1d4c703a61bd1dd43f998e18) enforce parentheses containing arguments for :host-context \$1](https://github.com/angular/angular/commit/8a1533c9ad7c306e03d7c50676f87b56bade5bf6) preserve leading commas in animation definitions \$1](https://github.com/angular/angular/commit/194f723f6620ea3cdf490b762ecbef8df6bb2c8a) remove dedicated support for legacy shadow DOM selectors \$1](https://github.com/angular/angular/commit/4c25a42e988...
 
 ## Public Handling Notes
 

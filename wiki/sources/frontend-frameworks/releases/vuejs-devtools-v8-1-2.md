@@ -36,7 +36,7 @@ source_pages:
 
 ## Summary
 
-🚀 Features - Bump vite-plugin-vue-inspector to support vapor app - by @webfansplz in https://github.com/vuejs/devtools/issues/1096 $1 🐞 Bug Fixes - devtools-kit : Remove special handling for Router object - by @skirtles-code in https://github.com/vuejs/devtools/issues/1092 $1 - extension : Load devtools-background.js as type="module" - by @skirtles-code in https://github.com/vuejs/devtools/issues/1072 $1 - vite : Use TrustedScriptURL for overlay injection under Trusted Types CSP - by @ashishkr96 in https://github...
+🚀 Features - Bump vite-plugin-vue-inspector to support vapor app - by @webfansplz in https://github.com/vuejs/devtools/issues/1096 \$1 🐞 Bug Fixes - devtools-kit : Remove special handling for Router object - by @skirtles-code in https://github.com/vuejs/devtools/issues/1092 \$1 - extension : Load devtools-background.js as type="module" - by @skirtles-code in https://github.com/vuejs/devtools/issues/1072 \$1 - vite : Use TrustedScriptURL for overlay injection under Trusted Types CSP - by @ashishkr96 in https://github...
 
 ## Public Handling Notes
 

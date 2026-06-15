@@ -36,7 +36,7 @@ source_pages:
 
 ## Summary
 
-@angular/cli Commit Description -- -- $1](https://github.com/angular/angular-cli/commit/58c0978f658ee5fa7232abd8e2eb7f146e4eb6bb) add support for Node.js 26.0.0 $1](https://github.com/angular/angular-cli/commit/ff88f491da38493d6e06f3e4ac080d171c630ccd) restrict MCP workspace access to allowed client roots during resolution $1](https://github.com/angular/angular-cli/commit/a5e1e48db759e9ffcaa89f04504f5f93a1afdda4) update odd-numbered Node.js version warning condition for future releases @schematics/angular Commit De...
+@angular/cli Commit Description -- -- \$1](https://github.com/angular/angular-cli/commit/58c0978f658ee5fa7232abd8e2eb7f146e4eb6bb) add support for Node.js 26.0.0 \$1](https://github.com/angular/angular-cli/commit/ff88f491da38493d6e06f3e4ac080d171c630ccd) restrict MCP workspace access to allowed client roots during resolution \$1](https://github.com/angular/angular-cli/commit/a5e1e48db759e9ffcaa89f04504f5f93a1afdda4) update odd-numbered Node.js version warning condition for future releases @schematics/angular Commit De...
 
 ## Public Handling Notes
 

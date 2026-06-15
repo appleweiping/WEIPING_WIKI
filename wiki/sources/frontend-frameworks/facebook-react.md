@@ -30,7 +30,7 @@ source_pages:
 
 ## Summary
 
-The library for web and native user interfaces. $1 &middot; $1](https://github.com/facebook/react/blob/main/LICENSE) $1](https://www.npmjs.com/package/react) $1](https://github.com/facebook/react/actions/workflows/runtime build and test.yml) $1](https://github.com/facebook/react/actions/workflows/compiler typescript.yml) $1](https://legacy.reactjs.org/docs/how-to-contribute.html your-first-pull-request) React is a JavaScript library for building user interfaces. Declarative: React makes it painless to create interactive UIs. Design simple views for each state in your application, and React will efficiently update and render just the...
+The library for web and native user interfaces. \$1 &middot; \$1](https://github.com/facebook/react/blob/main/LICENSE) \$1](https://www.npmjs.com/package/react) \$1](https://github.com/facebook/react/actions/workflows/runtime build and test.yml) \$1](https://github.com/facebook/react/actions/workflows/compiler typescript.yml) \$1](https://legacy.reactjs.org/docs/how-to-contribute.html your-first-pull-request) React is a JavaScript library for building user interfaces. Declarative: React makes it painless to create interactive UIs. Design simple views for each state in your application, and React will efficiently update and render just the...
 
 ## Reuse Profile
 

@@ -30,7 +30,7 @@ source_pages:
 
 ## Summary
 
-🌱 a fast, batteries-included static-site generator that transforms Markdown content into fully functional websites Quartz v4 “[One] who works with the door open gets all kinds of interruptions, but [they] also occasionally gets clues as to what the world is and what might be important.” — Richard Hamming Quartz is a set of tools that helps you publish your $1 and notes as a website for free. 🔗 Read the documentation and get started: https://quartz.jzhao.xyz/ $1 Sponsors
+🌱 a fast, batteries-included static-site generator that transforms Markdown content into fully functional websites Quartz v4 “[One] who works with the door open gets all kinds of interruptions, but [they] also occasionally gets clues as to what the world is and what might be important.” — Richard Hamming Quartz is a set of tools that helps you publish your \$1 and notes as a website for free. 🔗 Read the documentation and get started: https://quartz.jzhao.xyz/ \$1 Sponsors
 
 ## Reuse Profile
 

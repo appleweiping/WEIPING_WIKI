@@ -30,7 +30,7 @@ source_pages:
 
 ## Summary
 
-The React documentation website react.dev This repo contains the source code and documentation powering $1. Getting started Prerequisites 1. Git 1. Node: any version starting with v16.8.0 or greater 1. Yarn: See $1 1. A fork of the repo (for any contributions) 1. A clone of the $1 on your local machine Installation 1. cd react.dev to go into the project root 3. yarn to install the website's npm dependencies Running locally 1. yarn dev to start the development server (powered by $1) 1. open http://localhost:3000 to open the site in your favorite browser Contributing Guidelines The documentation is divided into several sections with a...
+The React documentation website react.dev This repo contains the source code and documentation powering \$1. Getting started Prerequisites 1. Git 1. Node: any version starting with v16.8.0 or greater 1. Yarn: See \$1 1. A fork of the repo (for any contributions) 1. A clone of the \$1 on your local machine Installation 1. cd react.dev to go into the project root 3. yarn to install the website's npm dependencies Running locally 1. yarn dev to start the development server (powered by \$1) 1. open http://localhost:3000 to open the site in your favorite browser Contributing Guidelines The documentation is divided into several sections with a...
 
 ## Reuse Profile
 

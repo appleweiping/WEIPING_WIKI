@@ -33,7 +33,7 @@ source_pages:
 
 ## Summary
 
-React Server Components - Type hardening and performance improvements ($1 by @eps1lon and @unstubbable)
+React Server Components - Type hardening and performance improvements (\$1 by @eps1lon and @unstubbable)
 
 ## Public Handling Notes
 

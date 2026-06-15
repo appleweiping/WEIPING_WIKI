@@ -30,7 +30,7 @@ source_pages:
 
 ## Summary
 
-⚙️ Browser devtools extension for debugging Vue.js applications. Vue DevTools Unleash Vue Developer Experience Note: this repository is for Vue Devtools v7 (previously known as Vue Devtools Next). The now legacy v6 version has been moved to $1. Getting Started - $1 - $1 - $1 - $1 For more details, check out the documentation at $1. Sponsors Contribution Please make sure to read the $1 before making a pull request. Thank you to all the people who already contributed to Vue DevTools! -- License $1
+⚙️ Browser devtools extension for debugging Vue.js applications. Vue DevTools Unleash Vue Developer Experience Note: this repository is for Vue Devtools v7 (previously known as Vue Devtools Next). The now legacy v6 version has been moved to \$1. Getting Started - \$1 - \$1 - \$1 - \$1 For more details, check out the documentation at \$1. Sponsors Contribution Please make sure to read the \$1 before making a pull request. Thank you to all the people who already contributed to Vue DevTools! -- License \$1
 
 ## Reuse Profile
 

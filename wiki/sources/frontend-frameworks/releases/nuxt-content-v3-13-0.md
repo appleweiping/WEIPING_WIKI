@@ -34,7 +34,7 @@ source_pages:
 
 ## Summary
 
-🐞 Bug Fixes - Get mdc configs by calling mdc:configSources hook - by @danielroe and @farnabaz in https://github.com/nuxt/content/issues/3736 $1 - preview : Move formatDate/formatDateTime into runtime subtree - by @daresTheDevil in https://github.com/nuxt/content/issues/3749 $1 - Unauthenticated SQL injection ( 3765) $1
+🐞 Bug Fixes - Get mdc configs by calling mdc:configSources hook - by @danielroe and @farnabaz in https://github.com/nuxt/content/issues/3736 \$1 - preview : Move formatDate/formatDateTime into runtime subtree - by @daresTheDevil in https://github.com/nuxt/content/issues/3749 \$1 - Unauthenticated SQL injection ( 3765) \$1
 
 ## Public Handling Notes
 

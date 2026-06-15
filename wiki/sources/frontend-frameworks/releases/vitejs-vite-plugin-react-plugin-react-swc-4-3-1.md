@@ -29,11 +29,11 @@ source_pages:
 
 ## Release Ideas
 
-- Avoid esbuild warnings with Vite 8 $1 Fixes $1.
+- Avoid esbuild warnings with Vite 8 \$1 Fixes \$1.
 
 ## Summary
 
-Avoid esbuild warnings with Vite 8 $1 Fixes $1.
+Avoid esbuild warnings with Vite 8 \$1 Fixes \$1.
 
 ## Public Handling Notes
 

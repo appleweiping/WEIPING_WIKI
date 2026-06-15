@@ -29,11 +29,11 @@ source_pages:
 
 ## Release Ideas
 
-- @angular/cli Commit Description -- -- $1](https://github.com/angular/angular-cli/commit/bbd63b7a5a1049bc56b9ddf6edf6563a1f2d9ace) robustly parse npm manifest from array @angular/ssr Commit Description -- -- $1](https://g...
+- @angular/cli Commit Description -- -- \$1](https://github.com/angular/angular-cli/commit/bbd63b7a5a1049bc56b9ddf6edf6563a1f2d9ace) robustly parse npm manifest from array @angular/ssr Commit Description -- -- \$1](https://g...
 
 ## Summary
 
-@angular/cli Commit Description -- -- $1](https://github.com/angular/angular-cli/commit/bbd63b7a5a1049bc56b9ddf6edf6563a1f2d9ace) robustly parse npm manifest from array @angular/ssr Commit Description -- -- $1](https://github.com/angular/angular-cli/commit/eafe1a719fd3fecd5263e0a8371200b4b1ff4bb9) allow all hosts in common engine rendering options to prevent validation errors $1](https://github.com/angular/angular-cli/commit/7a116a80d7e6db341fd003737285d1a9db10ba6c) remove stateful flag from URL PARAMETER REGEXP
+@angular/cli Commit Description -- -- \$1](https://github.com/angular/angular-cli/commit/bbd63b7a5a1049bc56b9ddf6edf6563a1f2d9ace) robustly parse npm manifest from array @angular/ssr Commit Description -- -- \$1](https://github.com/angular/angular-cli/commit/eafe1a719fd3fecd5263e0a8371200b4b1ff4bb9) allow all hosts in common engine rendering options to prevent validation errors \$1](https://github.com/angular/angular-cli/commit/7a116a80d7e6db341fd003737285d1a9db10ba6c) remove stateful flag from URL PARAMETER REGEXP
 
 ## Public Handling Notes
 

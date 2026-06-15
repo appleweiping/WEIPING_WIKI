@@ -36,7 +36,7 @@ source_pages:
 
 ## Summary
 
-🚀 Features - Enable standard schema param parsers - by @posva $1 - Normalize param parsers once - by @posva $1 🐞 Bug Fixes - Track definePage imports per-file to fix named view race condition - by @posva $1 - Avoid double decoding hash on string location - by @posva $1 $1
+🚀 Features - Enable standard schema param parsers - by @posva \$1 - Normalize param parsers once - by @posva \$1 🐞 Bug Fixes - Track definePage imports per-file to fix named view race condition - by @posva \$1 - Avoid double decoding hash on string location - by @posva \$1 \$1
 
 ## Public Handling Notes
 

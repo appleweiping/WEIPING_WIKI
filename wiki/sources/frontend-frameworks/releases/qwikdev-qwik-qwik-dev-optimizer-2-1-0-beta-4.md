@@ -29,11 +29,11 @@ source_pages:
 
 ## Release Ideas
 
-- ✨ add worker$ support running heavy work in Web Workers (by [@Varixo](https://github.com/Varixo) in [#8572](https://github.com/QwikDev/qwik/pull/8572))
+- ✨ add worker\$ support running heavy work in Web Workers (by [@Varixo](https://github.com/Varixo) in [#8572](https://github.com/QwikDev/qwik/pull/8572))
 
 ## Summary
 
-Minor Changes - ✨ add worker$ support running heavy work in Web Workers (by $1 in $1)
+Minor Changes - ✨ add worker\$ support running heavy work in Web Workers (by \$1 in \$1)
 
 ## Public Handling Notes
 

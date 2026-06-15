@@ -37,7 +37,7 @@ source_pages:
 
 ## Summary
 
-$1 🚀 Enhancements - Add support for image helpers in nitro endpoints ($1) - ipx: Log the architecture of the build ($1) 🩹 Fixes - Remove layer0 and edgio providers ($1) - Add back layer0 and edgio providers (without) tests ($1) - cloudflare: Don't add baseURL if there are no operations ($1) - ipx: Always use ipx provider if external baseURL is provided ($1) - ipxStatic: Strip repeated slashes from image path ($1) - Avoid deep type instantiation ($1) 📖 Documentation - Fix typo ($1) - Fix link to runtime/providers...
+\$1 🚀 Enhancements - Add support for image helpers in nitro endpoints (\$1) - ipx: Log the architecture of the build (\$1) 🩹 Fixes - Remove layer0 and edgio providers (\$1) - Add back layer0 and edgio providers (without) tests (\$1) - cloudflare: Don't add baseURL if there are no operations (\$1) - ipx: Always use ipx provider if external baseURL is provided (\$1) - ipxStatic: Strip repeated slashes from image path (\$1) - Avoid deep type instantiation (\$1) 📖 Documentation - Fix typo (\$1) - Fix link to runtime/providers...
 
 ## Public Handling Notes
 

@@ -37,7 +37,7 @@ source_pages:
 
 ## Summary
 
-3.9.2 (2025-10-17) :bug: Bug Fix - docusaurus-plugin-content-docs - $1 fix(docs): add support for missing sidebar key front matter attribute ($1) - docusaurus-cssnano-preset - $1 fix(cssnano-preset): disable CSS counter minification ($1) - docusaurus-theme-search-algolia - $1 fix(theme-search-algolia): Fix Algolia AskAI validation logic ($1) - docusaurus-theme-translations - $1 fix(theme-translation): add missing Polish (pl) theme translations ($1) - docusaurus-theme-classic , docusaurus-theme-common - $1 fix(theme...
+3.9.2 (2025-10-17) :bug: Bug Fix - docusaurus-plugin-content-docs - \$1 fix(docs): add support for missing sidebar key front matter attribute (\$1) - docusaurus-cssnano-preset - \$1 fix(cssnano-preset): disable CSS counter minification (\$1) - docusaurus-theme-search-algolia - \$1 fix(theme-search-algolia): Fix Algolia AskAI validation logic (\$1) - docusaurus-theme-translations - \$1 fix(theme-translation): add missing Polish (pl) theme translations (\$1) - docusaurus-theme-classic , docusaurus-theme-common - \$1 fix(theme...
 
 ## Public Handling Notes
 

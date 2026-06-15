@@ -30,7 +30,7 @@ source_pages:
 
 ## Summary
 
-The all-in-one Vite plugin for React projects. Vite Plugin React See $1 and $1 Vite Plugin RSC See $1 Packages Package Version (click for changelogs) ----------------------------------------------------- :----------------------------------------------------------------------------------------------------------------------------------------- $1 $1](packages/plugin-react/CHANGELOG.md) $1 $1](packages/plugin-react-swc/CHANGELOG.md) $1 $1](packages/plugin-rsc/CHANGELOG.md) License $1.
+The all-in-one Vite plugin for React projects. Vite Plugin React See \$1 and \$1 Vite Plugin RSC See \$1 Packages Package Version (click for changelogs) ----------------------------------------------------- :----------------------------------------------------------------------------------------------------------------------------------------- \$1 \$1](packages/plugin-react/CHANGELOG.md) \$1 \$1](packages/plugin-react-swc/CHANGELOG.md) \$1 \$1](packages/plugin-rsc/CHANGELOG.md) License \$1.
 
 ## Reuse Profile
 

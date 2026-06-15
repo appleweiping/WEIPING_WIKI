@@ -30,7 +30,7 @@ source_pages:
 
 ## Summary
 
-Vite & Vue powered static site generator. VitePress 📝💨 $1](https://github.com/vuejs/vitepress/actions/workflows/test.yml) $1](https://www.npmjs.com/package/vitepress/v/next) $1](https://nightly.akryum.dev/vuejs/vitepress) $1](https://chat.vuejs.org) --- VitePress is a Vue-powered static site generator and a spiritual successor to $1, built on top of $1. Documentation To check out docs, visit $1. Changelog Detailed changes for each release are documented in the $1. Contribution Please make sure to read the $1 before making a pull request. License $1 Copyright (c) 2019-present, Yuxi (Evan) You Special Thanks This project would not b...
+Vite & Vue powered static site generator. VitePress 📝💨 \$1](https://github.com/vuejs/vitepress/actions/workflows/test.yml) \$1](https://www.npmjs.com/package/vitepress/v/next) \$1](https://nightly.akryum.dev/vuejs/vitepress) \$1](https://chat.vuejs.org) --- VitePress is a Vue-powered static site generator and a spiritual successor to \$1, built on top of \$1. Documentation To check out docs, visit \$1. Changelog Detailed changes for each release are documented in the \$1. Contribution Please make sure to read the \$1 before making a pull request. License \$1 Copyright (c) 2019-present, Yuxi (Evan) You Special Thanks This project would not b...
 
 ## Reuse Profile
 

@@ -33,7 +33,7 @@ source_pages:
 
 ## Summary
 
-Patch Changes - $1 $1 Thanks $1! - Fixes an issue where the smartypants option was ignored.
+Patch Changes - \$1 \$1 Thanks \$1! - Fixes an issue where the smartypants option was ignored.
 
 ## Public Handling Notes
 

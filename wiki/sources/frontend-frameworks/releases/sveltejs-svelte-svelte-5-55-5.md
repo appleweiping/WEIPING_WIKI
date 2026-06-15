@@ -34,7 +34,7 @@ source_pages:
 
 ## Summary
 
-Patch Changes - fix: don't mark deriveds while an effect is updating ($1) - fix: do not dispatch introstart event with animation of animate directive ($1)
+Patch Changes - fix: don't mark deriveds while an effect is updating (\$1) - fix: do not dispatch introstart event with animation of animate directive (\$1)
 
 ## Public Handling Notes
 

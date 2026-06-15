@@ -33,7 +33,7 @@ source_pages:
 
 ## Summary
 
-Patch Changes - fix: resolve paths to route files with the letter drive on Windows ($1)
+Patch Changes - fix: resolve paths to route files with the letter drive on Windows (\$1)
 
 ## Public Handling Notes
 

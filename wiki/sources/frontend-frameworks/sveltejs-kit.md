@@ -30,7 +30,7 @@ source_pages:
 
 ## Summary
 
-web development, streamlined $1](https://svelte.dev/chat) SvelteKit Web development, streamlined. Read the $1 to get started. Packages Package Changelog --------------------------------------------------------------------------- ------------------------------------------------------------- $1 $1 $1 $1 $1 $1 $1 $1 $1 $1 $1 $1 $1 $1 $1 $1 $1 $1 $1 $1 $1 are maintained by the community. Bug reporting Please make sure the issue you're reporting involves SvelteKit. Many issues related to how a project builds originate from $1, which is used to build a SvelteKit project. You can create a new Vite project with npm create vite@latest for cl...
+web development, streamlined \$1](https://svelte.dev/chat) SvelteKit Web development, streamlined. Read the \$1 to get started. Packages Package Changelog --------------------------------------------------------------------------- ------------------------------------------------------------- \$1 \$1 \$1 \$1 \$1 \$1 \$1 \$1 \$1 \$1 \$1 \$1 \$1 \$1 \$1 \$1 \$1 \$1 \$1 \$1 \$1 are maintained by the community. Bug reporting Please make sure the issue you're reporting involves SvelteKit. Many issues related to how a project builds originate from \$1, which is used to build a SvelteKit project. You can create a new Vite project with npm create vite@latest for cl...
 
 ## Reuse Profile
 

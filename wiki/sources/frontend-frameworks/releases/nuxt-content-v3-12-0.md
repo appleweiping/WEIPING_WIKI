@@ -37,7 +37,7 @@ source_pages:
 
 ## Summary
 
-🚀 Features - llms : Add related links to raw markdown endpoint - by @HugoRCD in https://github.com/nuxt/content/issues/3724 $1 🐞 Bug Fixes - syntax error with datetime fields and standardize date/datetime formats - by @maximepvrt in https://github.com/nuxt/content/issues/3698 $1 - Disable title extraction when contentHeading === false - by @farnabaz in https://github.com/nuxt/content/issues/3725 $1 - api : Do not forward accept encoding header - by @dargmuesli in https://github.com/nuxt/content/issues/3701 $1 - c...
+🚀 Features - llms : Add related links to raw markdown endpoint - by @HugoRCD in https://github.com/nuxt/content/issues/3724 \$1 🐞 Bug Fixes - syntax error with datetime fields and standardize date/datetime formats - by @maximepvrt in https://github.com/nuxt/content/issues/3698 \$1 - Disable title extraction when contentHeading === false - by @farnabaz in https://github.com/nuxt/content/issues/3725 \$1 - api : Do not forward accept encoding header - by @dargmuesli in https://github.com/nuxt/content/issues/3701 \$1 - c...
 
 ## Public Handling Notes
 

@@ -29,7 +29,7 @@ source_pages:
 
 ## Summary
 
-📄 Documentation for Vue 3 vuejs.org Contributing This site is built with $1 and depends on $1. Site content is written in Markdown format located in src . For simple edits, you can directly edit the file on GitHub and generate a Pull Request. For local development, $1 is preferred as package manager: This project requires Node.js to be v20 or higher. And it is recommended to enable corepack: Working on the content - See VitePress docs on supported $1 and the ability to $1. - See the $1 for our rules and recommendations on writing and maintaining documentation content. Working on the theme If changes need to be made for the theme, c...
+📄 Documentation for Vue 3 vuejs.org Contributing This site is built with \$1 and depends on \$1. Site content is written in Markdown format located in src . For simple edits, you can directly edit the file on GitHub and generate a Pull Request. For local development, \$1 is preferred as package manager: This project requires Node.js to be v20 or higher. And it is recommended to enable corepack: Working on the content - See VitePress docs on supported \$1 and the ability to \$1. - See the \$1 for our rules and recommendations on writing and maintaining documentation content. Working on the theme If changes need to be made for the theme, c...
 
 ## Reuse Profile
 

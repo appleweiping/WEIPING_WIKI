@@ -37,7 +37,7 @@ source_pages:
 
 ## Summary
 
-:bug: Bug Fixes ChatMessage: make actions slot accessible on touch devices ($1) Drawer: handle RTL mode ($1) ($1) Link: prevent double-prefixing with @nuxtjs/i18n auto-localization ($1) ($1) ProseImg: close zoom overlay on Escape key ($1) ProsePrompt: improve responsive ($1) :wave: New Contributors @ejfine made their first contribution in https://github.com/nuxt/ui/pull/5284 Full Changelog : https://github.com/nuxt/ui/compare/v4.7.0...v4.7.1
+:bug: Bug Fixes ChatMessage: make actions slot accessible on touch devices (\$1) Drawer: handle RTL mode (\$1) (\$1) Link: prevent double-prefixing with @nuxtjs/i18n auto-localization (\$1) (\$1) ProseImg: close zoom overlay on Escape key (\$1) ProsePrompt: improve responsive (\$1) :wave: New Contributors @ejfine made their first contribution in https://github.com/nuxt/ui/pull/5284 Full Changelog : https://github.com/nuxt/ui/compare/v4.7.0...v4.7.1
 
 ## Public Handling Notes
 

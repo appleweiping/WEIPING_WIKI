@@ -37,7 +37,7 @@ source_pages:
 
 ## Summary
 
-4.4.5 is the next patch release. 👉 Changelog $1 🔥 Performance - kit: Cache layer roots and short-circuit isIgnored relative ($1) 🩹 Fixes - vite: Resolve vite clientServer with ssr: false ($1) - nitro: Correct payload route rule for / + override ssr: true ($1) - nitro: Break recursive rendering deadlocks during prerender ($1) - vite: Drop redundant css link when entry styles are inlined ($1) - vite: Sort optimizeDeps.include in pre-bundle hint ($1) - nuxt: Only force suspense remount after first resolve ($1) - ki...
+4.4.5 is the next patch release. 👉 Changelog \$1 🔥 Performance - kit: Cache layer roots and short-circuit isIgnored relative (\$1) 🩹 Fixes - vite: Resolve vite clientServer with ssr: false (\$1) - nitro: Correct payload route rule for / + override ssr: true (\$1) - nitro: Break recursive rendering deadlocks during prerender (\$1) - vite: Drop redundant css link when entry styles are inlined (\$1) - vite: Sort optimizeDeps.include in pre-bundle hint (\$1) - nuxt: Only force suspense remount after first resolve (\$1) - ki...
 
 ## Public Handling Notes
 

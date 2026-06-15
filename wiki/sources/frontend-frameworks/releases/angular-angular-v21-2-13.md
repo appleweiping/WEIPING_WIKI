@@ -29,11 +29,11 @@ source_pages:
 
 ## Release Ideas
 
-- core Commit Description -- -- $1](https://github.com/angular/angular/commit/1c6553e97d9655d8c48fbf625987fae86f9cd947) disallow event attribute bindings in host bindings unconditionally platform-server Commit Description...
+- core Commit Description -- -- \$1](https://github.com/angular/angular/commit/1c6553e97d9655d8c48fbf625987fae86f9cd947) disallow event attribute bindings in host bindings unconditionally platform-server Commit Description...
 
 ## Summary
 
-core Commit Description -- -- $1](https://github.com/angular/angular/commit/1c6553e97d9655d8c48fbf625987fae86f9cd947) disallow event attribute bindings in host bindings unconditionally platform-server Commit Description -- -- $1](https://github.com/angular/angular/commit/629905d537f59dc3c264c49f6347e3599dea0215) add allowedHosts option to renderModule and renderApplication $1](https://github.com/angular/angular/commit/0b7192f4410d055191ac9b15bff57d1d0b9a644f) forward BEFORE APP SERIALIZED errors to ErrorHandler
+core Commit Description -- -- \$1](https://github.com/angular/angular/commit/1c6553e97d9655d8c48fbf625987fae86f9cd947) disallow event attribute bindings in host bindings unconditionally platform-server Commit Description -- -- \$1](https://github.com/angular/angular/commit/629905d537f59dc3c264c49f6347e3599dea0215) add allowedHosts option to renderModule and renderApplication \$1](https://github.com/angular/angular/commit/0b7192f4410d055191ac9b15bff57d1d0b9a644f) forward BEFORE APP SERIALIZED errors to ErrorHandler
 
 ## Public Handling Notes
 

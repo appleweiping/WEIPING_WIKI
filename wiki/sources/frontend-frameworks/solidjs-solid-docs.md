@@ -30,7 +30,7 @@ source_pages:
 
 ## Summary
 
-Official documentation for the Solid ecosystem Welcome to Solid's documentation! This is the repo for $1. This repo contains all the source code that we use to build our docs. $1](https://gitpod.io/ https://github.com/solidjs/solid-docs-next) $1](https://codesandbox.io/p/github/solidjs/solid-docs-next/) $1](https://stackblitz.com/github/solidjs/solid-docs-next) What is Solid? Solid is a JavaScript framework used for building high-performance user-interfaces. Using a reactive approach and component-based architecture, we want to empower developers in creating efficient and scalable web applications. Thank you for being here! You can...
+Official documentation for the Solid ecosystem Welcome to Solid's documentation! This is the repo for \$1. This repo contains all the source code that we use to build our docs. \$1](https://gitpod.io/ https://github.com/solidjs/solid-docs-next) \$1](https://codesandbox.io/p/github/solidjs/solid-docs-next/) \$1](https://stackblitz.com/github/solidjs/solid-docs-next) What is Solid? Solid is a JavaScript framework used for building high-performance user-interfaces. Using a reactive approach and component-based architecture, we want to empower developers in creating efficient and scalable web applications. Thank you for being here! You can...
 
 ## Reuse Profile
 

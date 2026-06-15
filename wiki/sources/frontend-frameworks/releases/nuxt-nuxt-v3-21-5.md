@@ -37,7 +37,7 @@ source_pages:
 
 ## Summary
 
-3.21.5 is the next patch release. 👉 Changelog $1 🔥 Performance - kit: Cache layer roots and short-circuit isIgnored relative ($1) 🩹 Fixes - nitro: Correct payload route rule for / + override ssr: true ($1) - nitro: Break recursive rendering deadlocks during prerender ($1) - vite: Drop redundant css link when entry styles are inlined ($1) - nuxt: Only force suspense remount after first resolve ($1) - kit: Read .env before resolving nuxt schema ($1) - nitro: Preserve serverHandlers array after nitro:config ($1) -...
+3.21.5 is the next patch release. 👉 Changelog \$1 🔥 Performance - kit: Cache layer roots and short-circuit isIgnored relative (\$1) 🩹 Fixes - nitro: Correct payload route rule for / + override ssr: true (\$1) - nitro: Break recursive rendering deadlocks during prerender (\$1) - vite: Drop redundant css link when entry styles are inlined (\$1) - nuxt: Only force suspense remount after first resolve (\$1) - kit: Read .env before resolving nuxt schema (\$1) - nitro: Preserve serverHandlers array after nitro:config (\$1) -...
 
 ## Public Handling Notes
 

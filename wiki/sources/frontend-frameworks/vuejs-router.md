@@ -30,7 +30,7 @@ source_pages:
 
 ## Summary
 
-🚦 The official router for Vue.js vue-router $1](https://npmx.dev/package/vue-router) $1](https://github.com/vuejs/router/actions/workflows/test.yml) $1](https://codecov.io/gh/vuejs/router) - This is the repository for Vue Router 4 (for Vue 3) - For Vue Router 3 (for Vue 2) see $1. To see what versions are currently supported, please refer to the $1. Supporting Vue Router Vue Router is part of the Vue Ecosystem and is an MIT-licensed open source project with its ongoing development made possible entirely by the support of Sponsors. If you would like to become a sponsor, please consider: - $1 - $1 Gold Sponsors Silver Sponsors Bronze...
+🚦 The official router for Vue.js vue-router \$1](https://npmx.dev/package/vue-router) \$1](https://github.com/vuejs/router/actions/workflows/test.yml) \$1](https://codecov.io/gh/vuejs/router) - This is the repository for Vue Router 4 (for Vue 3) - For Vue Router 3 (for Vue 2) see \$1. To see what versions are currently supported, please refer to the \$1. Supporting Vue Router Vue Router is part of the Vue Ecosystem and is an MIT-licensed open source project with its ongoing development made possible entirely by the support of Sponsors. If you would like to become a sponsor, please consider: - \$1 - \$1 Gold Sponsors Silver Sponsors Bronze...
 
 ## Reuse Profile
 

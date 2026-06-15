@@ -34,7 +34,7 @@ source_pages:
 
 ## Summary
 
-Patch Changes - chore: bump svelte and devalue ($1) - fix: prevent query.batch cross-talk ($1)
+Patch Changes - chore: bump svelte and devalue (\$1) - fix: prevent query.batch cross-talk (\$1)
 
 ## Public Handling Notes
 

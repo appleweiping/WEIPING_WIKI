@@ -222,6 +222,10 @@ def plain_summary(text: str, max_chars: int = 620) -> str:
     text = re.sub(r"^#{1,6}\s+", "", text, flags=re.MULTILINE)
     text = re.sub(r"\*{1,2}([^*]+)\*{1,2}", r"\1", text)
     text = re.sub(r"\s+", " ", text).strip()
+    # Escape bare `$` so stray ingest artifacts (e.g. failed `$1` link/image
+    # substitutions) can't be mis-parsed as KaTeX math spans — emoji or unknown
+    # chars trapped in such a span hard-fail the Quartz build ("No character metrics").
+    text = text.replace("$", "\\$")
     if len(text) <= max_chars:
         return text
     # Truncate at sentence boundary

@@ -33,7 +33,7 @@ source_pages:
 
 ## Summary
 
-🐞 Bug Fixes - Missing closing quote in generated import - by @zjy040525 and @posva in https://github.com/vuejs/router/issues/2688 $1 $1
+🐞 Bug Fixes - Missing closing quote in generated import - by @zjy040525 and @posva in https://github.com/vuejs/router/issues/2688 \$1 \$1
 
 ## Public Handling Notes
 

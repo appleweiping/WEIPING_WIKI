@@ -33,7 +33,7 @@ source_pages:
 
 ## Summary
 
-Patch Changes - $1 $1 Thanks $1! - Fixes CSS selector for text-autospace styles in Chromium browsers
+Patch Changes - \$1 \$1 Thanks \$1! - Fixes CSS selector for text-autospace styles in Chromium browsers
 
 ## Public Handling Notes
 

@@ -33,7 +33,7 @@ source_pages:
 
 ## Summary
 
-3.10.1 (2026-04-30) :bug: Bug Fix - docusaurus-bundler - $1 fix(bundler): fix v3 webpackbar bug due to webpack breaking change ($1) :wrench: Maintenance - docusaurus - $1 chore: cherry-pick commits for v3.10.1 patch release ($1) Committers: 1 - Sébastien Lorber ($1)
+3.10.1 (2026-04-30) :bug: Bug Fix - docusaurus-bundler - \$1 fix(bundler): fix v3 webpackbar bug due to webpack breaking change (\$1) :wrench: Maintenance - docusaurus - \$1 chore: cherry-pick commits for v3.10.1 patch release (\$1) Committers: 1 - Sébastien Lorber (\$1)
 
 ## Public Handling Notes
 

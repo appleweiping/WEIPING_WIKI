@@ -37,7 +37,7 @@ source_pages:
 
 ## Summary
 
-:sparkles: Highlights 📋 New Listbox component The $1 component is a selectable list of items with built-in search, virtualization, and rich item rendering. It's ideal when you want an always-visible list without the overlay behavior of SelectMenu . 🤖 New ProsePrompt component The $1 component displays pre-built AI prompts inside your docs with one-click copy and direct IDE integration. Users can copy the prompt to their clipboard or open it directly in Cursor or Windsurf via the actions prop. 🌍 Automatic Link lo...
+:sparkles: Highlights 📋 New Listbox component The \$1 component is a selectable list of items with built-in search, virtualization, and rich item rendering. It's ideal when you want an always-visible list without the overlay behavior of SelectMenu . 🤖 New ProsePrompt component The \$1 component displays pre-built AI prompts inside your docs with one-click copy and direct IDE integration. Users can copy the prompt to their clipboard or open it directly in Cursor or Windsurf via the actions prop. 🌍 Automatic Link lo...
 
 ## Public Handling Notes
 

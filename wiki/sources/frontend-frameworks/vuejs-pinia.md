@@ -30,7 +30,7 @@ source_pages:
 
 ## Summary
 
-🍍 Intuitive, type safe, light and flexible Store for Vue using the composition api with DevTools support Pinia Intuitive, type safe and flexible Store for Vue - 💡 Intuitive - 🔑 Type Safe - ⚙️ Devtools support - 🔌 Extensible - 🏗 Modular by design - 📦 Extremely light - ⛰️ Nuxt Module The latest version of pinia works with Vue 3. See the branch $1 for a version that works with Vue 2. Pinia is the most similar English pronunciation of the word pineapple in Spanish: piña . A pineapple is in reality a group of individual flowers that join together to create a multiple fruit. Similar to stores, each one is born individually, but they...
+🍍 Intuitive, type safe, light and flexible Store for Vue using the composition api with DevTools support Pinia Intuitive, type safe and flexible Store for Vue - 💡 Intuitive - 🔑 Type Safe - ⚙️ Devtools support - 🔌 Extensible - 🏗 Modular by design - 📦 Extremely light - ⛰️ Nuxt Module The latest version of pinia works with Vue 3. See the branch \$1 for a version that works with Vue 2. Pinia is the most similar English pronunciation of the word pineapple in Spanish: piña . A pineapple is in reality a group of individual flowers that join together to create a multiple fruit. Similar to stores, each one is born individually, but they...
 
 ## Reuse Profile
 

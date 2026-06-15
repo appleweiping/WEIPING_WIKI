@@ -67,7 +67,9 @@ jobs:
         uses: actions/checkout@v5
         with:
           repository: jackyzha0/quartz
-          ref: v4
+          # Pinned to a verified-good commit so upstream v4 drift cannot break deploys.
+          # Bump deliberately after testing build-site.ps1 locally.
+          ref: d25a6eabf96751ffca56f8a8139272def7a65041
           path: .quartz-build
 
       - name: Setup Node

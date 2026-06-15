@@ -29,11 +29,11 @@ source_pages:
 
 ## Release Ideas
 
-- For stable releases, please refer to $1 for details. For pre-releases, please refer to $1 of the minor branch.
+- For stable releases, please refer to \$1 for details. For pre-releases, please refer to \$1 of the minor branch.
 
 ## Summary
 
-For stable releases, please refer to $1 for details. For pre-releases, please refer to $1 of the minor branch.
+For stable releases, please refer to \$1 for details. For pre-releases, please refer to \$1 of the minor branch.
 
 ## Public Handling Notes
 

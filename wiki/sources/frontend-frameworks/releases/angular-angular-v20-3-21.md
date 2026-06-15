@@ -29,11 +29,11 @@ source_pages:
 
 ## Release Ideas
 
-- platform-server Commit Description -- -- $1](https://github.com/angular/angular/commit/f584840e2e50f751397cf3fad5258e18e857427e) add allowedHosts option to renderModule and renderApplication
+- platform-server Commit Description -- -- \$1](https://github.com/angular/angular/commit/f584840e2e50f751397cf3fad5258e18e857427e) add allowedHosts option to renderModule and renderApplication
 
 ## Summary
 
-platform-server Commit Description -- -- $1](https://github.com/angular/angular/commit/f584840e2e50f751397cf3fad5258e18e857427e) add allowedHosts option to renderModule and renderApplication
+platform-server Commit Description -- -- \$1](https://github.com/angular/angular/commit/f584840e2e50f751397cf3fad5258e18e857427e) add allowedHosts option to renderModule and renderApplication
 
 ## Public Handling Notes
 

@@ -37,7 +37,7 @@ source_pages:
 
 ## Summary
 
-This is an alpha version of Nuxt Image v2 👀 Highlights We'd love your feedback! This release contains quite a lot of changes, including (of course) breaking changes. It also brings a great deal of type safety, though we need to (and plan to!) improve the modifier types for each provider before release. 👉 Changelog $1 🚀 Enhancements - Add support for image helpers in nitro endpoints ($1) - deps: Upgrade to ipx v3 ($1) - ipx: Log the architecture of the build ($1) - ⚠️ Typed providers + modifiers ($1) - Add type f...
+This is an alpha version of Nuxt Image v2 👀 Highlights We'd love your feedback! This release contains quite a lot of changes, including (of course) breaking changes. It also brings a great deal of type safety, though we need to (and plan to!) improve the modifier types for each provider before release. 👉 Changelog \$1 🚀 Enhancements - Add support for image helpers in nitro endpoints (\$1) - deps: Upgrade to ipx v3 (\$1) - ipx: Log the architecture of the build (\$1) - ⚠️ Typed providers + modifiers (\$1) - Add type f...
 
 ## Public Handling Notes
 

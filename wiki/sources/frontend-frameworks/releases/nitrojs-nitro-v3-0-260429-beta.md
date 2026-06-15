@@ -34,7 +34,7 @@ source_pages:
 
 ## Summary
 
-$1 [!IMPORTANT] This release patches two medium-severity vulnerabilities in proxy and redirect route rules. Users relying on either are strongly encouraged to upgrade. See $1 and $1 for details. 🚀 Enhancements - tracing: Enable tracing channels for unstorage ($1) 🩹 Fixes - Accept ipv4-mapped ipv6 loopback in vfs handler ($1) - route-rules: Reject out-of-scope requests ($1) - route-rules: Prevent open redirect via protocol-relative url bypass ($1) - vite: Route browser asset loads to vite when sec-fetch-dest is ab...
+\$1 [!IMPORTANT] This release patches two medium-severity vulnerabilities in proxy and redirect route rules. Users relying on either are strongly encouraged to upgrade. See \$1 and \$1 for details. 🚀 Enhancements - tracing: Enable tracing channels for unstorage (\$1) 🩹 Fixes - Accept ipv4-mapped ipv6 loopback in vfs handler (\$1) - route-rules: Reject out-of-scope requests (\$1) - route-rules: Prevent open redirect via protocol-relative url bypass (\$1) - vite: Route browser asset loads to vite when sec-fetch-dest is ab...
 
 ## Public Handling Notes
 

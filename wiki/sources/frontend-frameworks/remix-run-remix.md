@@ -30,7 +30,7 @@ source_pages:
 
 ## Summary
 
-Build Better Websites. Create modern, resilient user experiences with web fundamentals. Welcome to Remix 3! This is the source repository for Remix 3. It is under active development. We published $1 earlier this year with some of our thoughts around Remix 3. It explains our philosophy for web development and why we think the time is right for something new. When working on Remix 3, we follow these principles: 1. Model-First Development . AI fundamentally shifts the human-computer interaction model for both user experience and developer workflows. Optimize the source code, documentation, tooling, and abstractions for LLMs. Additional...
+Build Better Websites. Create modern, resilient user experiences with web fundamentals. Welcome to Remix 3! This is the source repository for Remix 3. It is under active development. We published \$1 earlier this year with some of our thoughts around Remix 3. It explains our philosophy for web development and why we think the time is right for something new. When working on Remix 3, we follow these principles: 1. Model-First Development . AI fundamentally shifts the human-computer interaction model for both user experience and developer workflows. Optimize the source code, documentation, tooling, and abstractions for LLMs. Additional...
 
 ## Reuse Profile
 

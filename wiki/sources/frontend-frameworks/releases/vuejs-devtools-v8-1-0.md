@@ -29,11 +29,11 @@ source_pages:
 
 ## Release Ideas
 
-- No significant changes $1
+- No significant changes \$1
 
 ## Summary
 
-No significant changes $1
+No significant changes \$1
 
 ## Public Handling Notes
 

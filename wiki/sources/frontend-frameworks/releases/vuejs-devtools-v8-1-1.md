@@ -35,7 +35,7 @@ source_pages:
 
 ## Summary
 
-🚀 Features - overlay : Enhance style inspector button ux when enabled - by @skirtles-code in https://github.com/vuejs/devtools/issues/1069 $1 🐞 Bug Fixes - applet : Preserve active component when filtering - by @skirtles-code in https://github.com/vuejs/devtools/issues/1065 $1 - overlay : Use toggleEnabled to allow exiting in spector mode - by @SaKaNa-Y in https://github.com/vuejs/devtools/issues/1067 $1 $1
+🚀 Features - overlay : Enhance style inspector button ux when enabled - by @skirtles-code in https://github.com/vuejs/devtools/issues/1069 \$1 🐞 Bug Fixes - applet : Preserve active component when filtering - by @skirtles-code in https://github.com/vuejs/devtools/issues/1065 \$1 - overlay : Use toggleEnabled to allow exiting in spector mode - by @SaKaNa-Y in https://github.com/vuejs/devtools/issues/1067 \$1 \$1
 
 ## Public Handling Notes
 

@@ -36,7 +36,7 @@ source_pages:
 
 ## Summary
 
-Minor Changes - feat: allow 'submit' and 'hidden' form fields to accept numbers and booleans ($1) - feat: warn on unread form remote function validation issues ($1) Patch Changes - fix: abort navigation after async rendering if obsolete ($1) - fix: skip refreshing queries on full-page reload form submissions ($1)
+Minor Changes - feat: allow 'submit' and 'hidden' form fields to accept numbers and booleans (\$1) - feat: warn on unread form remote function validation issues (\$1) Patch Changes - fix: abort navigation after async rendering if obsolete (\$1) - fix: skip refreshing queries on full-page reload form submissions (\$1)
 
 ## Public Handling Notes
 

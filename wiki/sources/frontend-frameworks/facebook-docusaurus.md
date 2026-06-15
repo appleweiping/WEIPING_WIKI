@@ -30,7 +30,7 @@ source_pages:
 
 ## Summary
 
-Easy to maintain open source documentation websites. Docusaurus Introduction Docusaurus is a project for building, deploying, and maintaining open source project websites easily. Short on time? Check out our $1! Tip : use $1 to test Docusaurus immediately in a playground. - Simple to Start Docusaurus is built in a way so that it can $1 in as little time as possible. We've built Docusaurus to handle the website build process so you can focus on your project. - Localizable Docusaurus ships with $1 via CrowdIn. Empower and grow your international community by translating your documentation. - Customizable While Docusaurus ships with th...
+Easy to maintain open source documentation websites. Docusaurus Introduction Docusaurus is a project for building, deploying, and maintaining open source project websites easily. Short on time? Check out our \$1! Tip : use \$1 to test Docusaurus immediately in a playground. - Simple to Start Docusaurus is built in a way so that it can \$1 in as little time as possible. We've built Docusaurus to handle the website build process so you can focus on your project. - Localizable Docusaurus ships with \$1 via CrowdIn. Empower and grow your international community by translating your documentation. - Customizable While Docusaurus ships with th...
 
 ## Reuse Profile
 

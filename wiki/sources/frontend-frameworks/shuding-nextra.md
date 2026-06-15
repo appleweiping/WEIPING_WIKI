@@ -30,7 +30,7 @@ source_pages:
 
 ## Summary
 
-Simple, powerful and flexible site generation framework with everything you love from Next.js. Nextra Simple, powerful and flexible site generation framework with everything you love from Next.js. Documentation https://nextra.site Development Installation The Nextra repository uses $1 and $1. 1. Run corepack enable to enable Corepack. If the command above fails, run npm install -g corepack@latest to install the latest version of $1. 2. Run pnpm install to install the project's dependencies. Build nextra Watch mode: pnpm --filter nextra dev Build nextra-theme-docs Development You can also debug them together with a website locally. F...
+Simple, powerful and flexible site generation framework with everything you love from Next.js. Nextra Simple, powerful and flexible site generation framework with everything you love from Next.js. Documentation https://nextra.site Development Installation The Nextra repository uses \$1 and \$1. 1. Run corepack enable to enable Corepack. If the command above fails, run npm install -g corepack@latest to install the latest version of \$1. 2. Run pnpm install to install the project's dependencies. Build nextra Watch mode: pnpm --filter nextra dev Build nextra-theme-docs Development You can also debug them together with a website locally. F...
 
 ## Reuse Profile
 

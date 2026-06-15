@@ -37,7 +37,7 @@ source_pages:
 
 ## Summary
 
-$1 ✨ Highlights Experimental tracing channels. Nitro now has $1 for tracing request spans. Smarter dependency tracing. traceDeps picks up $1, backed by upstream nf3 improvements — a growing native-packages DB and automatic detection of optional dependencies mean fewer missing binaries in production bundles. H3 v2 updates Stricter streaming body-size checks, cookie utils with RFC 6265bis compliance, and a handful of request normalization fixes — including protection against path traversal via double-encoded segments...
+\$1 ✨ Highlights Experimental tracing channels. Nitro now has \$1 for tracing request spans. Smarter dependency tracing. traceDeps picks up \$1, backed by upstream nf3 improvements — a growing native-packages DB and automatic detection of optional dependencies mean fewer missing binaries in production bundles. H3 v2 updates Stricter streaming body-size checks, cookie utils with RFC 6265bis compliance, and a handful of request normalization fixes — including protection against path traversal via double-encoded segments...
 
 ## Public Handling Notes
 

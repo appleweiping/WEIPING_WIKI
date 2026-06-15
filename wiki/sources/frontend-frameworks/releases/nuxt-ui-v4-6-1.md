@@ -37,7 +37,7 @@ source_pages:
 
 ## Summary
 
-:bug: Bug Fixes ai: use part.state for streaming detection and deprecate isReasoningStreaming ($1) ChatMessage: hide files slot when no file parts exist ($1) ChatMessages: keep indicator visible until first content arrives ($1) ChatMessages: reset scroll icon when messages are cleared ($1) ($1) ChatPrompt: guard enter during composition ($1) ($1) DashboardSidebar: always pass collapsed: false in mobile menu slots ($1), closes $1 Modal/Slideover/Drawer: suppress reka ui title and description warnings ($1), closes $1...
+:bug: Bug Fixes ai: use part.state for streaming detection and deprecate isReasoningStreaming (\$1) ChatMessage: hide files slot when no file parts exist (\$1) ChatMessages: keep indicator visible until first content arrives (\$1) ChatMessages: reset scroll icon when messages are cleared (\$1) (\$1) ChatPrompt: guard enter during composition (\$1) (\$1) DashboardSidebar: always pass collapsed: false in mobile menu slots (\$1), closes \$1 Modal/Slideover/Drawer: suppress reka ui title and description warnings (\$1), closes \$1...
 
 ## Public Handling Notes
 

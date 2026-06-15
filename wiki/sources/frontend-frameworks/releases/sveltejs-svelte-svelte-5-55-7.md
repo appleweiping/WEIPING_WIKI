@@ -37,7 +37,7 @@ source_pages:
 
 ## Summary
 
-Patch Changes - fix: prevent XSS on hydratable from user contents ($1) - chore: bump devalue ($1) - fix: disallow empty attribute names during SSR ($1) - fix: harden regex ($1) - fix: move Svelte runtime properties to symbols ($1)
+Patch Changes - fix: prevent XSS on hydratable from user contents (\$1) - chore: bump devalue (\$1) - fix: disallow empty attribute names during SSR (\$1) - fix: harden regex (\$1) - fix: move Svelte runtime properties to symbols (\$1)
 
 ## Public Handling Notes
 

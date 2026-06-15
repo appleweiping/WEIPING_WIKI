@@ -30,7 +30,7 @@ source_pages:
 
 ## Summary
 
-The Intuitive Vue UI Library powered by Reka UI & Tailwind CSS. Nuxt UI [![npm version][npm-version-src&#93;&#93;[npm-version-href] [![npm downloads][npm-downloads-src&#93;&#93;[npm-downloads-href] [![License][license-src&#93;&#93;[license-href] [![Nuxt][nuxt-src&#93;&#93;[nuxt-href] Nuxt UI harnesses the combined strengths of $1, $1, and $1 to offer developers an unparalleled set of tools for creating sophisticated, accessible, and highly performant user interfaces. [!NOTE] You are on the v4 branch, check out the $1 for Nuxt UI v3 or $1 for Nuxt UI v2. Documentation Visit https://ui.nuxt.com to explore the documentation. Templates Kickstart your project with one...
+The Intuitive Vue UI Library powered by Reka UI & Tailwind CSS. Nuxt UI [![npm version][npm-version-src&#93;&#93;[npm-version-href] [![npm downloads][npm-downloads-src&#93;&#93;[npm-downloads-href] [![License][license-src&#93;&#93;[license-href] [![Nuxt][nuxt-src&#93;&#93;[nuxt-href] Nuxt UI harnesses the combined strengths of \$1, \$1, and \$1 to offer developers an unparalleled set of tools for creating sophisticated, accessible, and highly performant user interfaces. [!NOTE] You are on the v4 branch, check out the \$1 for Nuxt UI v3 or \$1 for Nuxt UI v2. Documentation Visit https://ui.nuxt.com to explore the documentation. Templates Kickstart your project with one...
 
 ## Reuse Profile
 

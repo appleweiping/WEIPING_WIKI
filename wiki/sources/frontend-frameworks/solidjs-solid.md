@@ -30,7 +30,7 @@ source_pages:
 
 ## Summary
 
-A declarative, efficient, and flexible JavaScript library for building user interfaces. $1](https://github.com/solidjs/solid/actions/workflows/main-ci.yml) $1](https://coveralls.io/github/solidjs/solid?branch=main) $1](https://www.npmjs.com/package/solid-js) $1](https://www.npmjs.com/package/solid-js) $1](https://discord.com/invite/solidjs) $1](https://www.reddit.com/r/solidjs/) $1 • $1 • $1 • $1 • $1 Solid is a declarative JavaScript library for creating user interfaces. Instead of using a Virtual DOM, it compiles its templates to real DOM nodes and updates them with fine-grained reactions. Declare your state and use it throughout...
+A declarative, efficient, and flexible JavaScript library for building user interfaces. \$1](https://github.com/solidjs/solid/actions/workflows/main-ci.yml) \$1](https://coveralls.io/github/solidjs/solid?branch=main) \$1](https://www.npmjs.com/package/solid-js) \$1](https://www.npmjs.com/package/solid-js) \$1](https://discord.com/invite/solidjs) \$1](https://www.reddit.com/r/solidjs/) \$1 • \$1 • \$1 • \$1 • \$1 Solid is a declarative JavaScript library for creating user interfaces. Instead of using a Virtual DOM, it compiles its templates to real DOM nodes and updates them with fine-grained reactions. Declare your state and use it throughout...
 
 ## Reuse Profile
 

@@ -33,7 +33,7 @@ source_pages:
 
 ## Summary
 
-In Norse mythology, Bifröst (/ˈbɪvrɒst/), is a burning rainbow bridge that reaches between Midgard (Earth) and Asgard, the realm of the gods. I am first to admit this is not the most exciting release from a feature standpoint. I was looking for cool code snippets but these changes are for the most part all under the hood. We are in that time period between the end of 1.x and the start of 2.0. We recently made our new reactive experiments public and continue to build those out in public with $1. We need to build for...
+In Norse mythology, Bifröst (/ˈbɪvrɒst/), is a burning rainbow bridge that reaches between Midgard (Earth) and Asgard, the realm of the gods. I am first to admit this is not the most exciting release from a feature standpoint. I was looking for cool code snippets but these changes are for the most part all under the hood. We are in that time period between the end of 1.x and the start of 2.0. We recently made our new reactive experiments public and continue to build those out in public with \$1. We need to build for...
 
 ## Public Handling Notes
 

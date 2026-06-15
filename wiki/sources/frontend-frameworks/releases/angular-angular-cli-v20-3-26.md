@@ -29,11 +29,11 @@ source_pages:
 
 ## Release Ideas
 
-- @angular/ssr Commit Description -- -- $1](https://github.com/angular/angular-cli/commit/7cc1871ee50d123853ddf6bd89857b354d647462) allow all hosts in common engine rendering options to prevent validation errors
+- @angular/ssr Commit Description -- -- \$1](https://github.com/angular/angular-cli/commit/7cc1871ee50d123853ddf6bd89857b354d647462) allow all hosts in common engine rendering options to prevent validation errors
 
 ## Summary
 
-@angular/ssr Commit Description -- -- $1](https://github.com/angular/angular-cli/commit/7cc1871ee50d123853ddf6bd89857b354d647462) allow all hosts in common engine rendering options to prevent validation errors
+@angular/ssr Commit Description -- -- \$1](https://github.com/angular/angular-cli/commit/7cc1871ee50d123853ddf6bd89857b354d647462) allow all hosts in common engine rendering options to prevent validation errors
 
 ## Public Handling Notes
 

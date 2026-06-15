@@ -30,7 +30,7 @@ source_pages:
 
 ## Summary
 
-web development for the rest of us $1](LICENSE.md) $1](https://svelte.dev/chat) What is Svelte? Svelte is a new way to build web applications. It's a compiler that takes your declarative components and converts them into efficient JavaScript that surgically updates the DOM. Learn more at the $1, or stop by the $1. Supporting Svelte Svelte is an MIT-licensed open source project with its ongoing development made possible entirely by fantastic volunteers. If you'd like to support their efforts, please consider: - $1. Funds donated via Open Collective will be used for compensating expenses related to Svelte's development such as hosting...
+web development for the rest of us \$1](LICENSE.md) \$1](https://svelte.dev/chat) What is Svelte? Svelte is a new way to build web applications. It's a compiler that takes your declarative components and converts them into efficient JavaScript that surgically updates the DOM. Learn more at the \$1, or stop by the \$1. Supporting Svelte Svelte is an MIT-licensed open source project with its ongoing development made possible entirely by fantastic volunteers. If you'd like to support their efforts, please consider: - \$1. Funds donated via Open Collective will be used for compensating expenses related to Svelte's development such as hosting...
 
 ## Reuse Profile
 

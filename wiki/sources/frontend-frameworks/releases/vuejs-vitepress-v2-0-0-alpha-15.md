@@ -29,11 +29,11 @@ source_pages:
 
 ## Release Ideas
 
-- Fixes a theme regression in v2-alpha.14. Please refer to $1 for details.
+- Fixes a theme regression in v2-alpha.14. Please refer to \$1 for details.
 
 ## Summary
 
-Fixes a theme regression in v2-alpha.14. Please refer to $1 for details.
+Fixes a theme regression in v2-alpha.14. Please refer to \$1 for details.
 
 ## Public Handling Notes
 

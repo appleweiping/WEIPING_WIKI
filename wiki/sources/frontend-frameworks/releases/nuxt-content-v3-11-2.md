@@ -33,7 +33,7 @@ source_pages:
 
 ## Summary
 
-🐞 Bug Fixes - studio : Fallback to env variable to detect ai feature - by @larbish in https://github.com/nuxt/content/issues/3713 $1 $1
+🐞 Bug Fixes - studio : Fallback to env variable to detect ai feature - by @larbish in https://github.com/nuxt/content/issues/3713 \$1 \$1
 
 ## Public Handling Notes
 

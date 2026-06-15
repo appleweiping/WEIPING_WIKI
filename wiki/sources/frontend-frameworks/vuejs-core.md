@@ -30,7 +30,7 @@ source_pages:
 
 ## Summary
 
-🖖 Vue.js is a progressive, incrementally-adoptable JavaScript framework for building UI on the web. vuejs/core $1](https://www.npmjs.com/package/vue) $1](https://github.com/vuejs/core/actions/workflows/ci.yml) $1](https://www.npmjs.com/package/vue) Getting Started Please follow the documentation at $1! Sponsors Vue.js is an MIT-licensed open source project with its ongoing development made possible entirely by the support of these awesome $1. If you'd like to join them, please consider $1. Special Sponsor Questions For questions and support please use $1 or $1. The issue list of this repo is exclusively for bug reports and feature...
+🖖 Vue.js is a progressive, incrementally-adoptable JavaScript framework for building UI on the web. vuejs/core \$1](https://www.npmjs.com/package/vue) \$1](https://github.com/vuejs/core/actions/workflows/ci.yml) \$1](https://www.npmjs.com/package/vue) Getting Started Please follow the documentation at \$1! Sponsors Vue.js is an MIT-licensed open source project with its ongoing development made possible entirely by the support of these awesome \$1. If you'd like to join them, please consider \$1. Special Sponsor Questions For questions and support please use \$1 or \$1. The issue list of this repo is exclusively for bug reports and feature...
 
 ## Reuse Profile
 

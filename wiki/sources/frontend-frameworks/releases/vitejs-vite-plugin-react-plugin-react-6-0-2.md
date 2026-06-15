@@ -29,11 +29,11 @@ source_pages:
 
 ## Release Ideas
 
-- Allow all options in reactCompilerPreset ($1) This is a type only change. Only compilationMode and target options were available for reactCompilerPreset .
+- Allow all options in reactCompilerPreset (\$1) This is a type only change. Only compilationMode and target options were available for reactCompilerPreset .
 
 ## Summary
 
-Allow all options in reactCompilerPreset ($1) This is a type only change. Only compilationMode and target options were available for reactCompilerPreset .
+Allow all options in reactCompilerPreset (\$1) This is a type only change. Only compilationMode and target options were available for reactCompilerPreset .
 
 ## Public Handling Notes
 

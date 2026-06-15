@@ -29,7 +29,7 @@ source_pages:
 
 ## Release Ideas
 
-- ✨ add worker$ support running heavy work in Web Workers (by [@Varixo](https://github.com/Varixo) in [#8572](https://github.com/QwikDev/qwik/pull/8572))
+- ✨ add worker\$ support running heavy work in Web Workers (by [@Varixo](https://github.com/Varixo) in [#8572](https://github.com/QwikDev/qwik/pull/8572))
 - fix(router): Node SSR no longer hangs when using `compression` (or other middleware that wraps `res.write` / `res.end`). (by [@maiieul](https://github.com/maiieul) in [#8620](https://github.com/QwikDev/qwik/pull/8620))
 - 🐞🩹 handle aborted Node response streams without crashing and resolve the Node response stream contract (by [@Varixo](https://github.com/Varixo) in [#8613](https://github.com/QwikDev/qwik/pull/8613))
 - fix(router): The Vite dev won't crash anymore when `src/entry.ssr` is missing (e.g. in monorepos) (by [@maiieul](https://github.com/maiieul) in [#8601](https://github.com/QwikDev/qwik/pull/8601))
@@ -37,7 +37,7 @@ source_pages:
 
 ## Summary
 
-Minor Changes - ✨ add worker$ support running heavy work in Web Workers (by $1 in $1) Patch Changes - fix(router): Node SSR no longer hangs when using compression (or other middleware that wraps res.write / res.end ). (by $1 in $1) - 🐞🩹 handle aborted Node response streams without crashing and resolve the Node response stream contract (by $1 in $1) - fix(router): The Vite dev won't crash anymore when src/entry.ssr is missing (e.g. in monorepos) (by $1 in $1) - 🐞🩹 handle callback-only response end in Vite HTML t...
+Minor Changes - ✨ add worker\$ support running heavy work in Web Workers (by \$1 in \$1) Patch Changes - fix(router): Node SSR no longer hangs when using compression (or other middleware that wraps res.write / res.end ). (by \$1 in \$1) - 🐞🩹 handle aborted Node response streams without crashing and resolve the Node response stream contract (by \$1 in \$1) - fix(router): The Vite dev won't crash anymore when src/entry.ssr is missing (e.g. in monorepos) (by \$1 in \$1) - 🐞🩹 handle callback-only response end in Vite HTML t...
 
 ## Public Handling Notes
 

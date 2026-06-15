@@ -37,7 +37,7 @@ source_pages:
 
 ## Summary
 
-4.4.3 is the next patch release. v4.4.4 was published with no changes due to an issue running the release script for v4.4.3. 👉 Changelog $1 🔥 Performance - nitro: Directly import nuxt package version ($1) - vite,webpack: Use vfs for manifest + vite node server ($1) - nuxt: Clean-up build hooks + emit gc'd snapshots ($1) - nuxt: Skip key watcher when useAsyncData key is static ($1) - kit: Parallelise module load + cache jiti instances ($1) - nuxt: Batch-resolve typescript hoist paths with cached base roots ($1) 🩹...
+4.4.3 is the next patch release. v4.4.4 was published with no changes due to an issue running the release script for v4.4.3. 👉 Changelog \$1 🔥 Performance - nitro: Directly import nuxt package version (\$1) - vite,webpack: Use vfs for manifest + vite node server (\$1) - nuxt: Clean-up build hooks + emit gc'd snapshots (\$1) - nuxt: Skip key watcher when useAsyncData key is static (\$1) - kit: Parallelise module load + cache jiti instances (\$1) - nuxt: Batch-resolve typescript hoist paths with cached base roots (\$1) 🩹...
 
 ## Public Handling Notes
 

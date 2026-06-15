@@ -37,7 +37,7 @@ source_pages:
 
 ## Summary
 
-We're excited to announce Nuxt Image v2 ! 🎉 This release focuses on TypeScript support, performance improvements, and better developer experience. 👀 Highlights [!NOTE] Nuxt Image v2 requires Nuxt 3.1+. If you're on Nuxt 3.0.x, you'll need to upgrade to at least 3.1 first. 🎯 TypeScript support The biggest change in v2 is full TypeScript support throughout the module ($1). Typed providers Image providers now use defineProvider for type-safe configuration: Type-safe configuration Module options are now fully typed....
+We're excited to announce Nuxt Image v2 ! 🎉 This release focuses on TypeScript support, performance improvements, and better developer experience. 👀 Highlights [!NOTE] Nuxt Image v2 requires Nuxt 3.1+. If you're on Nuxt 3.0.x, you'll need to upgrade to at least 3.1 first. 🎯 TypeScript support The biggest change in v2 is full TypeScript support throughout the module (\$1). Typed providers Image providers now use defineProvider for type-safe configuration: Type-safe configuration Module options are now fully typed....
 
 ## Public Handling Notes
 

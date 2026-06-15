@@ -29,11 +29,11 @@ source_pages:
 
 ## Release Ideas
 
-- material Commit Description -- -- $1](https://github.com/angular/components/commit/c3161985279bf49f9aae55b732fdd3b2872e1f7e) sidenav: mark content as inert while open $1](https://github.com/angular/components/commit/c2f1...
+- material Commit Description -- -- \$1](https://github.com/angular/components/commit/c3161985279bf49f9aae55b732fdd3b2872e1f7e) sidenav: mark content as inert while open \$1](https://github.com/angular/components/commit/c2f1...
 
 ## Summary
 
-material Commit Description -- -- $1](https://github.com/angular/components/commit/c3161985279bf49f9aae55b732fdd3b2872e1f7e) sidenav: mark content as inert while open $1](https://github.com/angular/components/commit/c2f1c5b035795079b155b9e60a290abe4d4c9537) sidenav: query not resolving multiple Commit Description -- -- $1](https://github.com/angular/components/commit/84f2afd24933c8742662ee6d12a6f3f98f5dea9e) remove developer preview tag from aria ( 33232)
+material Commit Description -- -- \$1](https://github.com/angular/components/commit/c3161985279bf49f9aae55b732fdd3b2872e1f7e) sidenav: mark content as inert while open \$1](https://github.com/angular/components/commit/c2f1c5b035795079b155b9e60a290abe4d4c9537) sidenav: query not resolving multiple Commit Description -- -- \$1](https://github.com/angular/components/commit/84f2afd24933c8742662ee6d12a6f3f98f5dea9e) remove developer preview tag from aria ( 33232)
 
 ## Public Handling Notes
 

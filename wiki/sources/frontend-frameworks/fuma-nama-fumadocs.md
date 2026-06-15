@@ -30,7 +30,7 @@ source_pages:
 
 ## Summary
 
-The beautiful & flexible React.js docs framework. !$1 The framework for building documentation websites in any React.js frameworks. Officially Supported: - Next.js - Vite: Tanstack Start, Waku, React Router 📘 Learn More: $1. Compatibility All packages are ESM only . Sticker !$1 Welcome to print it out :D Contributions Make sure to read the $1 before submitting a pull request.
+The beautiful & flexible React.js docs framework. !\$1 The framework for building documentation websites in any React.js frameworks. Officially Supported: - Next.js - Vite: Tanstack Start, Waku, React Router 📘 Learn More: \$1. Compatibility All packages are ESM only . Sticker !\$1 Welcome to print it out :D Contributions Make sure to read the \$1 before submitting a pull request.
 
 ## Reuse Profile
 

@@ -34,7 +34,7 @@ source_pages:
 
 ## Summary
 
-Patch Changes - Updated dependencies \$1, $1, $1, $1, $1, $1, $1, $1, $1, $1]: - @qwik.dev/core@2.0.0-beta.35
+Patch Changes - Updated dependencies \$1, \$1, \$1, \$1, \$1, \$1, \$1, \$1, \$1, \$1]: - @qwik.dev/core@2.0.0-beta.35
 
 ## Public Handling Notes
 

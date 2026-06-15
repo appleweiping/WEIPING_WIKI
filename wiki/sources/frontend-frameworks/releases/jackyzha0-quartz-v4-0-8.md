@@ -37,7 +37,7 @@ source_pages:
 
 ## Summary
 
-Another year, another Quartz major version. Introducing the long awaited v4 release of Quartz! As always, I'm really grateful to the Quartz community and my GitHub sponsors for the continued support. It's been a great two years and I can't wait to see what else lies ahead :) !$1 Documentation: https://quartz.jzhao.xyz/ Why I wasn’t happy with how difficult Quartz 3 was to setup -- especially for non-developers -- so I set out to make something easy to use enough for non-technical people to get going but also powerf...
+Another year, another Quartz major version. Introducing the long awaited v4 release of Quartz! As always, I'm really grateful to the Quartz community and my GitHub sponsors for the continued support. It's been a great two years and I can't wait to see what else lies ahead :) !\$1 Documentation: https://quartz.jzhao.xyz/ Why I wasn’t happy with how difficult Quartz 3 was to setup -- especially for non-developers -- so I set out to make something easy to use enough for non-technical people to get going but also powerf...
 
 ## Public Handling Notes
 

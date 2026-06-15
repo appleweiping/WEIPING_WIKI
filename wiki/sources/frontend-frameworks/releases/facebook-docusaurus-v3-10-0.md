@@ -37,7 +37,7 @@ source_pages:
 
 ## Summary
 
-3.10.0 (2026-04-07) :rocket: New Feature - docusaurus-types , docusaurus - $1 feat(core): add future.v4.mdx1CompatDisabledByDefault flag ($1) - $1 feat(core): promote siteConfig.storage to stable + add future.v4.siteStorageNamespacing flag [Claude] ($1) - $1 feat(core): support custom html elements in head tags ($1) - create-docusaurus - $1 feat(create-docusaurus): update init template to .mdx extension and strict MDX syntax ($1) - $1 feat(create-docusaurus): Newly initialized TS sites should use "strict: true" ($1...
+3.10.0 (2026-04-07) :rocket: New Feature - docusaurus-types , docusaurus - \$1 feat(core): add future.v4.mdx1CompatDisabledByDefault flag (\$1) - \$1 feat(core): promote siteConfig.storage to stable + add future.v4.siteStorageNamespacing flag [Claude] (\$1) - \$1 feat(core): support custom html elements in head tags (\$1) - create-docusaurus - \$1 feat(create-docusaurus): update init template to .mdx extension and strict MDX syntax (\$1) - \$1 feat(create-docusaurus): Newly initialized TS sites should use "strict: true" (\$1...
 
 ## Public Handling Notes
 
