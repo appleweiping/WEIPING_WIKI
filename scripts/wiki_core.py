@@ -1,11 +1,12 @@
 #!/usr/bin/env python
 from __future__ import annotations
 
+import datetime as dt
 import json
 import math
 import re
 from collections import Counter, defaultdict
-from dataclasses import asdict, dataclass
+from dataclasses import asdict, dataclass, field
 from pathlib import Path
 from typing import Iterable
 
@@ -13,6 +14,15 @@ from typing import Iterable
 WIKI_EXCLUDE_DIRS = {"_templates"}
 WIKI_EXCLUDE_STEMS = {"knowledge-graph"}
 LINK_RE = re.compile(r"\[\[([^\]]+)\]\]")
+# Typed-relation vocabulary from .wiki-schema.md (plus supersession). Matches a
+# relation word immediately preceding a wiki link, e.g. "supersedes [[old-page]]".
+RELATION_WORDS = (
+    "supersedes", "superseded-by", "supports", "contradicts",
+    "compares", "extends", "depends-on", "derived-from",
+)
+RELATION_RE = re.compile(
+    r"(?i)\b(" + "|".join(w.replace("-", "[ -]?") for w in RELATION_WORDS) + r")\b[\s:>\-]*\[\[([^\]]+)\]\]"
+)
 FRONTMATTER_RE = re.compile(r"^---\r?\n(.*?)\r?\n---\r?\n", re.DOTALL)
 TOKEN_RE = re.compile(r"[\w+\-/]+", re.UNICODE)
 CJK_RE = re.compile(r"[\u3400-\u9fff]")
@@ -51,6 +61,7 @@ class PageRecord:
     body_preview: str
     body_text: str
     search_text: str
+    typed_links: list = field(default_factory=list)
 
 
 def resolve_root(root: str | Path = ".") -> Path:
@@ -155,6 +166,12 @@ def parse_page(root: Path, path: Path) -> PageRecord:
         target = match.split("|", 1)[0].strip()
         if target:
             links.append(target)
+    typed_links = []
+    for rel_match in RELATION_RE.finditer(body):
+        relation = re.sub(r"[ ]+", "-", rel_match.group(1).lower())
+        rel_target = rel_match.group(2).split("|", 1)[0].strip()
+        if rel_target:
+            typed_links.append({"relation": relation, "target": rel_target})
 
     tags = _as_list(frontmatter.get("tags", []))
     aliases = sorted(set(_as_list(frontmatter.get("aliases", [])) + [legacy_page_id(path)]))
@@ -195,6 +212,7 @@ def parse_page(root: Path, path: Path) -> PageRecord:
         body_preview=compact_body[:280],
         body_text=compact_body,
         search_text=_compact_body(" ".join(search_parts)),
+        typed_links=typed_links,
     )
 
 
@@ -227,13 +245,21 @@ def build_catalog(root: Path) -> dict:
     for page in records:
         page.backlinks = sorted(set(backlinks.get(page.id, [])))
 
+    pages_out = []
+    for page in records:
+        page_dict = asdict(page)
+        # Keep the catalog lean: only emit typed_links for pages that use them.
+        if not page_dict.get("typed_links"):
+            page_dict.pop("typed_links", None)
+        pages_out.append(page_dict)
+
     return {
         "meta": {
             "root": str(root),
             "page_count": len(records),
             "id_scheme": "wiki-relative-path-without-extension",
         },
-        "pages": [asdict(page) for page in records],
+        "pages": pages_out,
     }
 
 
@@ -475,4 +501,319 @@ def lint_wiki(root: Path) -> dict:
         "missing_attribution": sorted(missing_attribution),
         "private_leaks": sorted(private_leaks),
         "catalog_status": catalog_freshness(root),
+    }
+
+
+# ──────────────────────────────────────────────────────────────────────────────
+# LLM Wiki v2 upgrade helpers (additive): link-graph, hybrid search, quality,
+# and memory-lifecycle (confidence / retention-decay / supersession).
+# All functions below are read-only and never mutate pages.
+# ──────────────────────────────────────────────────────────────────────────────
+
+# Ebbinghaus-style retention half-life per page type, in days. Durable subject
+# pages decay slowly; dated/transient notes decay fast. Reinforcement (a newer
+# `updated`/`last_confirmed`) resets the clock.
+TYPE_HALFLIFE_DAYS = {
+    "concept": 720,
+    "topic": 720,
+    "entity": 720,
+    "timeline": 540,
+    "analysis": 365,
+    "comparison": 365,
+    "synthesis": 365,
+    "overview": 540,
+    "query": 180,
+    "source": 150,
+}
+
+
+def build_link_graph(catalog: dict) -> dict:
+    """Build an undirected adjacency map from the catalog's resolved wiki links.
+
+    Uses the already-computed `resolved_links` (and their mirror `backlinks`) so
+    no page re-parsing is needed. Typed relations, when present, are exposed in a
+    parallel labelled-edge map for relation-filtered traversal.
+    """
+    pages = catalog.get("pages", [])
+    by_id = {p["id"]: p for p in pages}
+    adj: dict[str, set] = {p["id"]: set() for p in pages}
+    typed_edges: dict[str, list] = {p["id"]: [] for p in pages}
+
+    resolver, _ambiguous = None, None
+    for page in pages:
+        pid = page["id"]
+        for target in page.get("resolved_links", []):
+            if target in adj:
+                adj[pid].add(target)
+                adj[target].add(pid)
+        for rel in page.get("typed_links", []) or []:
+            target = rel.get("target", "")
+            # typed_links store the raw link text; map it onto a resolved id when possible
+            resolved = target if target in by_id else None
+            if resolved is None:
+                for cand in page.get("resolved_links", []):
+                    if cand.endswith("/" + target) or cand == target:
+                        resolved = cand
+                        break
+            if resolved and resolved in adj:
+                typed_edges[pid].append({"relation": rel.get("relation", ""), "target": resolved})
+
+    return {
+        "by_id": by_id,
+        "adj": {k: sorted(v) for k, v in adj.items()},
+        "typed_edges": typed_edges,
+    }
+
+
+def graph_neighbors(catalog: dict, page_id: str, depth: int = 1, relation: str | None = None) -> dict:
+    """BFS neighborhood of a page up to `depth` hops. Returns {id: hop_distance}."""
+    graph = build_link_graph(catalog)
+    adj = graph["adj"]
+    if relation:
+        # Restrict first-hop expansion to a specific typed relation.
+        adj = {k: [] for k in adj}
+        for src, edges in graph["typed_edges"].items():
+            adj[src] = [e["target"] for e in edges if e["relation"] == relation]
+    if page_id not in adj:
+        return {}
+    from collections import deque
+
+    visited = {page_id: 0}
+    queue = deque([(page_id, 0)])
+    while queue:
+        current, d = queue.popleft()
+        if d >= depth:
+            continue
+        for neighbor in adj.get(current, []):
+            if neighbor not in visited:
+                visited[neighbor] = d + 1
+                queue.append((neighbor, d + 1))
+    visited.pop(page_id, None)
+    return visited
+
+
+def graph_path(catalog: dict, src_id: str, dst_id: str, max_depth: int = 8) -> list | None:
+    """Shortest wiki-link path between two pages (BFS), or None."""
+    graph = build_link_graph(catalog)
+    adj = graph["adj"]
+    if src_id not in adj or dst_id not in adj:
+        return None
+    if src_id == dst_id:
+        return [src_id]
+    from collections import deque
+
+    prev = {src_id: None}
+    queue = deque([(src_id, 0)])
+    while queue:
+        current, d = queue.popleft()
+        if d >= max_depth:
+            continue
+        for neighbor in adj.get(current, []):
+            if neighbor not in prev:
+                prev[neighbor] = current
+                if neighbor == dst_id:
+                    path = [dst_id]
+                    node = current
+                    while node is not None:
+                        path.append(node)
+                        node = prev[node]
+                    return list(reversed(path))
+                queue.append((neighbor, d + 1))
+    return None
+
+
+def graph_stats(catalog: dict, top: int = 15) -> dict:
+    """Summary statistics for the wiki-link graph."""
+    graph = build_link_graph(catalog)
+    adj = graph["adj"]
+    by_id = graph["by_id"]
+    degrees = {pid: len(neigh) for pid, neigh in adj.items()}
+    edge_count = sum(degrees.values()) // 2
+    orphans = sorted(pid for pid, deg in degrees.items() if deg == 0)
+    hubs = sorted(degrees.items(), key=lambda kv: (-kv[1], kv[0]))[:top]
+    relation_counts: Counter = Counter()
+    for edges in graph["typed_edges"].values():
+        for edge in edges:
+            relation_counts[edge["relation"]] += 1
+    return {
+        "nodes": len(adj),
+        "edges": edge_count,
+        "avg_degree": round(sum(degrees.values()) / max(len(adj), 1), 2),
+        "orphan_count": len(orphans),
+        "orphans_sample": orphans[:top],
+        "top_hubs": [
+            {"id": pid, "degree": deg, "title": by_id.get(pid, {}).get("title", pid)}
+            for pid, deg in hubs
+        ],
+        "typed_relation_counts": dict(relation_counts),
+    }
+
+
+def search_catalog_graph(catalog: dict, query: str, top: int = 8, expand_weight: float = 0.5, k: int = 60) -> list[dict]:
+    """Hybrid search: BM25-lite ranking fused with 1-hop graph expansion via RRF.
+
+    Direct keyword hits are ranked by `search_catalog`; each hit then contributes
+    a discounted reciprocal-rank score to its wiki-link neighbors, so structurally
+    connected pages surface even when they don't match the query terms directly.
+    """
+    base = search_catalog(catalog, query, top=max(top * 3, 15))
+    if not base:
+        return []
+    graph = build_link_graph(catalog)
+    adj = graph["adj"]
+    by_id = graph["by_id"]
+    # Structural hub pages (index/home/log/section-homes) link to everything, so
+    # they would dominate neighbor expansion. Keep them only as direct BM25 hits.
+    structural = {
+        p["id"] for p in catalog.get("pages", [])
+        if p.get("legacy_id") in LINT_EXCLUDE_NAMES
+    }
+
+    rrf: dict[str, float] = defaultdict(float)
+    via: dict[str, str] = {}
+    base_scores = {r["id"]: r.get("score", 0.0) for r in base}
+    for rank, result in enumerate(base):
+        rid = result["id"]
+        rrf[rid] += 1.0 / (k + rank + 1)
+        via.setdefault(rid, "bm25")
+        for neighbor in adj.get(rid, []):
+            if neighbor in structural:
+                continue
+            rrf[neighbor] += expand_weight * (1.0 / (k + rank + 1))
+            via.setdefault(neighbor, "graph")
+
+    results = []
+    for pid, score in rrf.items():
+        page = by_id.get(pid)
+        if not page:
+            continue
+        results.append(
+            {
+                "score": round(score, 6),
+                "bm25": base_scores.get(pid, 0.0),
+                "id": pid,
+                "title": page.get("title", pid),
+                "type": page.get("type", ""),
+                "path": page.get("path", ""),
+                "via": via.get(pid, "graph"),
+                "preview": page.get("body_preview", ""),
+            }
+        )
+    results.sort(key=lambda item: (-item["score"], -item["bm25"], item["title"].lower()))
+    return results[:top]
+
+
+def quality_score(page: dict) -> float:
+    """Heuristic 0..1 content-quality score for a catalog page record."""
+    score = 0.0
+    if page.get("title"):
+        score += 0.12
+    if page.get("type"):
+        score += 0.08
+    word_count = page.get("word_count", 0)
+    if word_count >= 50:
+        score += 0.15
+    elif word_count >= 10:
+        score += 0.07
+    if page.get("source_pages") or page.get("source_files"):
+        score += 0.20
+    if page.get("resolved_links"):
+        score += 0.10
+    if page.get("backlinks"):
+        score += 0.15
+    debatable = page.get("type") in {"concept", "topic", "comparison", "analysis", "synthesis"}
+    if not debatable or page.get("has_counterpoints"):
+        score += 0.20
+    return round(min(score, 1.0), 3)
+
+
+def _parse_date(value: object) -> dt.date | None:
+    if not value:
+        return None
+    text = str(value).strip()[:10]
+    try:
+        return dt.date.fromisoformat(text)
+    except ValueError:
+        return None
+
+
+def retention_score(page_type: str, last_reinforced: dt.date | None, today: dt.date | None = None,
+                    confidence: float | None = None) -> float | None:
+    """Ebbinghaus retention R = exp(-ln2 * age / halflife), optionally scaled by confidence."""
+    if last_reinforced is None:
+        return None
+    today = today or dt.date.today()
+    halflife = TYPE_HALFLIFE_DAYS.get(page_type, 365)
+    age = max((today - last_reinforced).days, 0)
+    base = math.exp(-math.log(2) * age / halflife)
+    if confidence is not None:
+        base *= max(0.2, min(1.0, confidence))
+    return round(base, 4)
+
+
+def lifecycle_audit(root: Path, today: dt.date | None = None, stale_threshold: float = 0.35,
+                    top: int = 25) -> dict:
+    """Advisory memory-lifecycle audit: retention decay, confidence, supersession.
+
+    Read-only. Reads optional frontmatter fields (`confidence`, `last_confirmed`,
+    `superseded_by`) that pages may omit; absence is handled gracefully.
+    """
+    today = today or dt.date.today()
+    records = []
+    for path in sorted(wiki_pages(root)):
+        text = read_text(path)
+        fm = parse_frontmatter(text)
+        rel = path.relative_to(root).as_posix()
+        page_type = str(fm.get("type", infer_type_from_path(path)))
+        created = _parse_date(fm.get("created"))
+        updated = _parse_date(fm.get("updated"))
+        confirmed = _parse_date(fm.get("last_confirmed"))
+        reinforced = max([d for d in (created, updated, confirmed) if d], default=None)
+        confidence = None
+        conf_raw = fm.get("confidence")
+        if conf_raw is not None:
+            try:
+                confidence = float(conf_raw)
+            except (TypeError, ValueError):
+                confidence = None
+        retention = retention_score(page_type, reinforced, today, confidence)
+        superseded_by = fm.get("superseded_by") or None
+        records.append(
+            {
+                "path": rel,
+                "type": page_type,
+                "last_reinforced": reinforced.isoformat() if reinforced else None,
+                "age_days": (today - reinforced).days if reinforced else None,
+                "retention": retention,
+                "confidence": confidence,
+                "superseded_by": superseded_by,
+                "stale": retention is not None and retention < stale_threshold,
+            }
+        )
+
+    stale = sorted(
+        (r for r in records if r["stale"]),
+        key=lambda r: (r["retention"] if r["retention"] is not None else 1.0),
+    )
+    low_conf = sorted(
+        (r for r in records if r["confidence"] is not None and r["confidence"] < 0.5),
+        key=lambda r: r["confidence"],
+    )
+    superseded = [r for r in records if r["superseded_by"]]
+    no_date = [r for r in records if r["last_reinforced"] is None]
+
+    return {
+        "generated_for": today.isoformat(),
+        "stale_threshold": stale_threshold,
+        "total_pages": len(records),
+        "counts": {
+            "stale": len(stale),
+            "low_confidence": len(low_conf),
+            "superseded": len(superseded),
+            "no_date": len(no_date),
+        },
+        "stale_candidates": stale[:top],
+        "low_confidence": low_conf[:top],
+        "superseded": superseded[:top],
+        "no_date_sample": no_date[:top],
     }

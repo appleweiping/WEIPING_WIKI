@@ -77,6 +77,13 @@ python scripts/wiki.py obsidian export --json
 python scripts/wiki.py obsidian commands --json
 python scripts/wiki.py obsidian quick "whole-computer maintenance"
 python scripts/wiki.py obsidian backlinks weiping-wiki-maintenance-system
+python scripts/wiki.py crystallize --title "How to ingest sources" --type query --from-file notes.md
+python scripts/wiki.py lifecycle --json
+python scripts/wiki.py graph stats
+python scripts/wiki.py graph neighbors llm-wiki --depth 1
+python scripts/wiki.py search "llm wiki" --graph --semantic
+python scripts/wiki.py scrub raw/inbox/new-source.md
+python scripts/wiki.py health --fix --dry-run
 powershell .\scripts\computer-inventory.ps1
 powershell .\scripts\wiki-maintenance-audit.ps1
 powershell .\scripts\wiki-maintain.ps1 -Scope whole-computer -Json

@@ -31,6 +31,7 @@ Keep `WEIPING_WIKI` useful without a bespoke prompt. The system should answer fr
 - **Skill upgrade**: when this skill feels prompt-dependent, misses a repeatable step, or fails validation, update the skill and references in the same scoped maintenance pass.
 - **Automation run**: use `python scripts/wiki.py maintain --scope whole-computer --json` as the canonical report, then make curated wiki/skill/doc updates only when evidence changed.
 - **Agentic constellation maintenance**: maintain tight routing links among WEIPING_WIKI, devtools, agent-resources, AGENTIC_SCIENCE/UUPF, WEIPING_LAB, and WEIPING_COUNCIL while forbidding high coupling. Public pages may describe roles, aliases, entry docs, handoff artifacts, optional environment variables, and validation commands; they must not make one repository require another repository's private state, runtime cache, secrets, local DBs, or generated reports to function.
+- **LLM Wiki v2 toolset**: `wiki.py crystallize` (durable page from an outcome), `wiki.py lifecycle` (advisory confidence/retention/supersession audit), `wiki.py graph <stats|neighbors|path|export>` (wiki-link traversal), `wiki.py scrub` (pre-ingest secret/private-path scan), `health --fix` (non-destructive self-heal), and `search --graph` / `--semantic`. All additive and public-safe. See [[llm-wiki]] and [[2026-06-19-weiping-wiki-upgrade-audit]].
 
 ## Whole-Computer Depth
 

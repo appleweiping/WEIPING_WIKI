@@ -42,6 +42,10 @@ python scripts/wiki.py maintain --scope whole-computer --json
 
 Review the report, update only curated scoped files, validate, and preserve unrelated dirty work.
 
+### LLM Wiki v2 commands
+
+The unified CLI also provides these additive, public-safe commands: `crystallize` (turn a high-value outcome into a routed durable page), `lifecycle` (advisory confidence / Ebbinghaus retention-decay / supersession audit), `graph` (wiki-link traversal: `stats|neighbors|path|export`), `scrub` (pre-ingest secret/private-path scan), `health --fix [--dry-run]` (non-destructive self-heal), and `search --graph` / `--semantic`. See `wiki/concepts/llm-wiki.md` and `wiki/analyses/2026-06-19-weiping-wiki-upgrade-audit.md`.
+
 For major maintenance-skill redesigns, UUPF from `D:\AGENTIC_SCIENCE\uupf\UniversalUpgradeForge.zip` may be used in offline mode as audit/planning input. Raw UUPF reports are not proof and should stay ignored unless curated into public-safe notes.
 
 ## Multi-Agent Roles

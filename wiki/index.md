@@ -1359,3 +1359,10 @@ This is the main catalog of the wiki.
 - [[sources/codex-prompts/codex-automation-prompt-update-frontend-frameworks-public-corpus|Run the weekly update for the frontend project frameworks public corpus in th...]] - `codex-automation-prompt:update-frontend-frameworks-public-corpus`
 - [[sources/codex-prompts/codex-automation-prompt-update-karpathy-public-corpus|Run the Karpathy public corpus ingest workflow in the vipin wiki repository....]] - `codex-automation-prompt:update-karpathy-public-corpus`
 - [[sources/codex-prompts/codex-automation-prompt-weekly-openai-cookbook-wiki-ingest|Refresh the OpenAI Cookbook mirror in vipin wiki. Work in D:/Research/vipin's...]] - `codex-automation-prompt:weekly-openai-cookbook-wiki-ingest`
+
+<!-- crystallize:auto:start -->
+## Recently Crystallized
+
+- [[2026-06-19-weiping-wiki-upgrade-audit]] — WEIPING_WIKI Upgrade Audit (2026-06-19)
+- [[2026-06-19-llm-wiki-v2-pattern]] — LLM Wiki v2 source note (2026-06-19)
+<!-- crystallize:auto:end -->

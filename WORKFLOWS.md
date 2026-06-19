@@ -17,7 +17,7 @@ Historical aliases (`vipin wiki`, `vipinknowledge`, `vipin-wiki`) remain valid w
 - `digest`
   Produces a durable synthesis, comparison, timeline, or memo from multiple maintained pages.
 - `search`
-  Searches a machine-readable wiki catalog rather than only scanning raw markdown by hand.
+  Searches a machine-readable wiki catalog rather than only scanning raw markdown by hand. Optional `--graph` fuses BM25 with 1-hop wiki-link expansion (reciprocal rank fusion); `--semantic` adds best-effort agentmemory vector search with graceful fallback.
 - `context`
   Builds layered context packs so future sessions can load just enough repository state.
 - `lint`
@@ -32,6 +32,12 @@ Historical aliases (`vipin wiki`, `vipinknowledge`, `vipin-wiki`) remain valid w
   Saves a high-value chat outcome back into the wiki as a durable page.
 - `site`
   Publishes the public `wiki/` layer as a Quartz website without treating generated pages as source material.
+- `lifecycle`
+  Advisory memory-lifecycle audit (confidence, Ebbinghaus retention decay, supersession). `python scripts/wiki.py lifecycle [--json] [--apply]`. Report-first; `--apply` only stamps optional date fields.
+- `graph`
+  Query the wiki-link knowledge graph built from the catalog: `python scripts/wiki.py graph <stats|neighbors|path|export>`.
+- `scrub`
+  Privacy filter-on-ingest: scan a file for secrets/private paths before it becomes a page. `python scripts/wiki.py scrub <file> [--apply]` (`--apply` writes a redacted copy, never overwrites the original).
 
 ## Default Query Contract
 

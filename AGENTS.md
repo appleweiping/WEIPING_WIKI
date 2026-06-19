@@ -507,6 +507,8 @@ Recommended fields:
 - `source_files`
 - `source_pages`
 
+Optional lifecycle fields (consumed by `wiki.py lifecycle`): `confidence` (0–1 or a taxonomy label), `last_confirmed` (ISO date of last re-verification), `source_count` (int), `superseded_by` (wiki id). All optional; pages omitting them are handled gracefully.
+
 When pages make substantive claims, prefer using the confidence taxonomy from `.wiki-schema.md`:
 
 - `EXTRACTED`
@@ -759,6 +761,10 @@ python scripts/wiki.py <command> [--root <path>] [options]
 | `context <level>` | Build layered context packs | Handoffs, partner review, targeted retrieval |
 | `maintain --scope whole-computer` | Build ignored maintenance report with git, agentmemory, inventory, audit, health, and recommendations | Weekly `WEIPING_WIKI` maintenance and broad project-map refresh |
 | `obsidian <command>` | Generate and query Obsidian-compatible vault artifacts | Bases, Canvas, backlinks, outgoing links, search, quick switcher, command palette, file explorer, outline, preview, footnotes, tags, properties, tasks, daily/unique notes, random notes, word count, external links, format audit, slides, workspaces, and local-first vault parity |
+| `crystallize` | Turn a high-value outcome into a routed durable page (updates index/log/catalog, lint-gated) | Preserving reusable Q&A, analyses, syntheses |
+| `lifecycle` | Advisory memory-lifecycle audit: confidence, Ebbinghaus retention decay, supersession | Periodic staleness/confidence review (report-first) |
+| `graph <stats\|neighbors\|path\|export>` | Query the wiki-link knowledge graph built from the catalog | Navigation, blast-radius, discovery |
+| `scrub <file>` | Scan a source for secrets/private paths before ingest (report-first; `--apply` writes a redacted copy) | Pre-ingest privacy filter |
 
 Rules:
 - All agents must use `python scripts/wiki.py` as the primary automation tool, regardless of whether they run on Windows, Linux, or CI.

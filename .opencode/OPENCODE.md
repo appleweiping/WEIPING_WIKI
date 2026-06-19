@@ -15,6 +15,8 @@ OpenCode is a CC-family fusion agent: Opus-level reasoning through the OpenCode 
 1. **Answer lane first.** Use `wiki/index.md`, `wiki/catalog.json`, `scripts/wiki.py search`, and the smallest relevant maintained pages to answer quickly.
 2. **Durable lane second.** If the exchange has reusable value, crystallize it into `wiki/`, update index/log/catalog, validate, commit, and push scoped changes.
 
+The unified CLI provides the LLM Wiki v2 toolset: `wiki.py crystallize`, `lifecycle`, `graph`, `scrub`, `health --fix`, and `search --graph` / `--semantic`. See `wiki/analyses/2026-06-19-weiping-wiki-upgrade-audit.md`.
+
 ## Active Memory
 
 Use `agentmemory` as the active memory and coordination substrate:

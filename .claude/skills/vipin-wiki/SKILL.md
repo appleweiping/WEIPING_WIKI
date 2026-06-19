@@ -26,6 +26,11 @@ python scripts/wiki.py context L1 --query "whole-computer maintenance"
 python scripts/wiki.py catalog
 python scripts/wiki.py lint
 python scripts/wiki.py health --json
+python scripts/wiki.py crystallize --title "..." --type query --from-file notes.md
+python scripts/wiki.py lifecycle --json
+python scripts/wiki.py graph neighbors llm-wiki --depth 1
+python scripts/wiki.py search "<query>" --graph --semantic
+python scripts/wiki.py scrub raw/inbox/<new-source>
 powershell .\scripts\Test-PrePushSafety.ps1
 ```
 

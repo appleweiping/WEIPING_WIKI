@@ -3,13 +3,14 @@ title: LLM Wiki
 type: concept
 status: active
 created: 2026-04-21
-updated: 2026-04-22
+updated: 2026-06-19
 tags:
   - concept
   - knowledge-base
   - llm
 source_pages:
   - 2026-04-21-llm-wiki-pattern
+  - 2026-06-19-llm-wiki-v2-pattern
 ---
 
 # LLM Wiki
@@ -50,6 +51,21 @@ Instead of retrieving raw chunks from source documents every time a question is 
 - divergence check: important pages should preserve counterarguments and data gaps
 - structured catalog and search: index files remain useful, but machine-readable cataloging helps at larger scale
 
+## LLM Wiki v2 Extensions
+
+The pattern was extended with production lessons from the agentmemory engine (see [[2026-06-19-llm-wiki-v2-pattern]]). The v2 modules, and how WEIPING_WIKI implements each:
+
+- **Memory lifecycle** — numeric confidence, Ebbinghaus retention decay, and explicit supersession, via the advisory `wiki.py lifecycle` audit over optional `confidence` / `last_confirmed` / `superseded_by` frontmatter.
+- **Typed knowledge graph + traversal** — `wiki.py graph` (stats/neighbors/path/export) over the catalog's resolved links, plus typed relations parsed from the schema relation vocabulary.
+- **Hybrid search** — the existing BM25-lite ranking gains `search --graph` (1-hop neighbor fusion via reciprocal rank fusion) and `search --semantic` (best-effort agentmemory vector search).
+- **Self-healing lint** — `health --fix` applies non-destructive repairs (rebuild stale catalog, inject missing `title`/`type`/`created`); `health` also reports a per-page quality score.
+- **Crystallization** — `wiki.py crystallize` turns a high-value outcome into a routed, durable page with index/log/catalog updates and lint gating.
+- **Privacy filter-on-ingest** — `wiki.py scrub` flags secrets and private paths before a source becomes a page.
+- **Event-driven hooks** — optional `scripts/hooks/session-start.py` and `session-end.py` helpers.
+- **Covered by agentmemory** — consolidation tiers, mesh-sync, contradiction-heal, and graph query come from the active [[agentmemory-first-agent-collaboration|agentmemory]] layer rather than being reimplemented in the wiki.
+
+See [[2026-06-19-weiping-wiki-upgrade-audit]] for the full audit and verification.
+
 ## Counterpoints and Gaps
 
 - at larger scale, handwritten markdown indexes alone may become fragile
@@ -60,7 +76,10 @@ Instead of retrieving raw chunks from source documents every time a question is 
 
 - [[vipin]]
 - [[2026-04-21-llm-wiki-pattern]]
+- [[2026-06-19-llm-wiki-v2-pattern]]
 - [[2026-04-21-vipin-wiki-bootstrap]]
 - [[2026-04-22-karpathy-llm-wiki-zh-compilation]]
+- [[2026-06-19-weiping-wiki-upgrade-audit]]
+- [[agentmemory-first-agent-collaboration]]
 - [[personal-knowledge-systems]]
 
