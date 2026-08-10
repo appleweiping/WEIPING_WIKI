@@ -1,3 +1,5 @@
+
+
 <div align="center">
 <img src="banner.png" alt="Weiping Wiki" width="720" />
 </div>
@@ -59,6 +61,7 @@ Primary skill roots:
 | `D:\AGENT_RESOURCE` / `D:\agent-resources` | Shared reusable skill/resource library. The lowercase path is a compatibility junction. |
 | `D:\agent-resources\skills\vipin\workstation-maintenance` | Shared C:/D:/G: inventory, batch-move, rollback, and agent-infrastructure sync workflow. |
 | `.codex/skills/` | Codex project-local skills, including ARIS research audit workflows. |
+| `skill/` | Compatibility mirror of `.codex/skills/`; older agent references may use this path. |
 | `.claude/skills/` | Claude Code / OpenCode-visible project skills. |
 
 Research-audit work remains strict: use the appropriate ARIS skill and preserve evidence labels, baseline boundaries, and experiment integrity.
