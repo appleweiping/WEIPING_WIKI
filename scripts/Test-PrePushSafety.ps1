@@ -62,12 +62,15 @@ foreach ($relative in $files) {
     if (-not $exists) {
         continue
     }
-    $item = Get-Item -LiteralPath $full
+    # Unix PowerShell treats dotfiles as hidden provider items.  -Force is
+    # required even for an explicitly addressed path, otherwise a tracked
+    # .gitignore can pass Test-Path above and then fail Get-Item.
+    $item = Get-Item -LiteralPath $full -Force
     if ($item.Length -gt 5MB) {
         continue
     }
     try {
-        $text = Get-Content -LiteralPath $full -Raw -ErrorAction Stop
+        $text = Get-Content -LiteralPath $full -Raw -Force -ErrorAction Stop
     } catch {
         continue
     }
