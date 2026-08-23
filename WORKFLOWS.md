@@ -19,7 +19,7 @@ Historical aliases (`vipin wiki`, `vipinknowledge`, `vipin-wiki`) remain valid w
 - `search`
   Searches a machine-readable wiki catalog rather than only scanning raw markdown by hand. Optional `--graph` fuses BM25 with 1-hop wiki-link expansion (reciprocal rank fusion); `--semantic` adds best-effort agentmemory vector search with graceful fallback.
 - `context`
-  Builds layered context packs so future sessions can load just enough repository state.
+  Builds layered context packs so future sessions can load just enough repository state. L2/query packs validate catalog/page/content integrity, fall back read-only for stale/corrupt/tampered caches, reject public-path escapes, emit heading-aware evidence with pack-local citations and page SHA-256, and enforce explicit context budgets. Provenance is rebound from live pages; unsafe local/private paths are omitted with counts. `--graph` adds a bounded, seed-balanced one-hop discovery lane and `--json` serves agent pipelines with structured stderr errors.
 - `lint`
   Checks broken links, orphan pages, index coverage, and public/private leaks.
 - `status`
@@ -45,7 +45,7 @@ Questions use a fast-answer-first contract:
 
 1. Load the lightweight route: `wiki/index.md`, `wiki/catalog.json`, and recent log context.
 2. Search with `scripts/wiki-search.py` or `scripts/wiki-context.py query` when needed.
-3. Open only the top maintained pages needed for a grounded answer.
+3. Use `python scripts/wiki.py context L2 --query "..." --graph` to assemble citation-ready excerpts, then open full L3 pages only when the evidence pack is insufficient.
 4. Answer the user before running slower ingest, batch synthesis, graph generation, or broad lint.
 5. Crystallize reusable answers after the quick answer, then update `wiki/index.md` and `wiki/log.md`.
 
@@ -92,7 +92,7 @@ The wiki is the durable memory.
 - `L1`
   Stable navigation documents such as `wiki/index.md`.
 - `L2`
-  Full-text search results and candidate pages relevant to a specific question.
+  Citation-ready, heading-scoped excerpts from relevant public pages, with authoritative paths, content digests, public-safe provenance, retrieval route, and bounded graph expansion. The excerpt budget is controlled by `--max-chars` and `--max-source-chars`; `--json` is available for machine consumers and keeps successful stdout free of diagnostics.
 - `L3`
   Full page contents loaded only when a task truly needs them.
 

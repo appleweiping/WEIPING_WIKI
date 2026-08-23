@@ -6,7 +6,7 @@ Usage:
     python scripts/wiki.py catalog [--stdout]
     python scripts/wiki.py lint [--json]
     python scripts/wiki.py search <query> [--top N]
-    python scripts/wiki.py context <level> [--query Q]
+    python scripts/wiki.py context <level> [--query Q] [--graph] [--max-chars N] [--json]
     python scripts/wiki.py maintain --scope whole-computer [--json]
     python scripts/wiki.py obsidian <report|export|search|quick|commands|backlinks|outgoing|outline|preview|tags|properties|tasks|daily|unique|random|word-count|footnotes|files|external-links|format-report|slides>
     python scripts/wiki.py health [--json] [--fix] [--dry-run]
@@ -40,7 +40,7 @@ from wiki_core import (
     build_status,
     catalog_freshness,
     lint_wiki,
-    load_catalog,
+    load_catalog_if_fresh,
     resolve_root,
     search_catalog,
     search_catalog_graph,
@@ -57,6 +57,47 @@ from wiki_core import (
     infer_type_from_path,
     read_text,
 )
+
+
+_JSON_ERROR_MODE = False
+
+
+def _emit_json_error(code: str, message: str) -> None:
+    print(
+        json.dumps(
+            {"ok": False, "error": {"code": code, "message": str(message)}},
+            ensure_ascii=False,
+        ),
+        file=sys.stderr,
+    )
+
+
+class _WikiArgumentParser(argparse.ArgumentParser):
+    def error(self, message):
+        if _JSON_ERROR_MODE:
+            _emit_json_error("usage_error", message)
+            raise SystemExit(2)
+        super().error(message)
+
+
+def _normalize_root_option(argv: list[str]) -> list[str]:
+    """Accept the documented global ``--root`` before or after a command."""
+    roots: list[str] = []
+    remaining: list[str] = []
+    index = 0
+    while index < len(argv):
+        token = argv[index]
+        if token == "--root" and index + 1 < len(argv):
+            roots.extend([token, argv[index + 1]])
+            index += 2
+            continue
+        if token.startswith("--root="):
+            roots.append(token)
+            index += 1
+            continue
+        remaining.append(token)
+        index += 1
+    return roots + remaining
 
 
 def cmd_status(args):
@@ -112,12 +153,8 @@ def cmd_lint(args):
 
 def _load_fresh_catalog(root):
     """Load catalog.json, rebuilding it in-memory (no write) when stale/missing."""
-    if catalog_freshness(root) == "fresh":
-        try:
-            return load_catalog(root)
-        except SystemExit:
-            pass
-    return build_catalog(root)
+    catalog, _state = load_catalog_if_fresh(root)
+    return catalog if catalog is not None else build_catalog(root)
 
 
 def cmd_search(args):
@@ -164,16 +201,33 @@ def cmd_context(args):
     spec.loader.exec_module(module)
 
     level = args.level.lower()
+    if args.json and level not in {"l2", "query"}:
+        raise SystemExit("context --json is supported only for L2/query")
+    if level in {"l2", "query"} or (level == "l1" and args.query):
+        if args.top < 1:
+            raise SystemExit("context --top must be at least 1")
+        if args.max_chars < 200:
+            raise SystemExit("context --max-chars must be at least 200")
+        if args.max_source_chars < 80:
+            raise SystemExit("context --max-source-chars must be at least 80")
+    query_options = {
+        "graph": args.graph,
+        "max_chars": args.max_chars,
+        "max_source_chars": args.max_source_chars,
+        "as_json": args.json,
+    }
     if level == "l0":
         output = module.l0_pack(root)
     elif level == "l1":
         output = module.l1_pack(root)
         if args.query:
-            output = output.rstrip() + "\n\n---\n\n" + module.query_pack(root, args.query, args.top)
+            output = output.rstrip() + "\n\n---\n\n" + module.query_pack(
+                root, args.query, args.top, **query_options
+            )
     elif level in {"l2", "query"}:
         if not args.query:
             raise SystemExit("context L2/query requires --query")
-        output = module.query_pack(root, args.query, args.top)
+        output = module.query_pack(root, args.query, args.top, **query_options)
     elif level in {"l3", "page"}:
         page_id = args.page or args.query
         if not page_id:
@@ -1120,11 +1174,14 @@ def _apply_health_fixes(root: Path, dry_run: bool = False) -> list:
     return actions
 
 
-def main():
+def main(argv: list[str] | None = None):
+    global _JSON_ERROR_MODE
     if hasattr(sys.stdout, "reconfigure"):
         sys.stdout.reconfigure(encoding="utf-8")
 
-    parser = argparse.ArgumentParser(
+    raw_args = list(sys.argv[1:] if argv is None else argv)
+    _JSON_ERROR_MODE = "--json" in raw_args
+    parser = _WikiArgumentParser(
         prog="wiki.py",
         description="Unified wiki CLI for vipin wiki",
     )
@@ -1156,6 +1213,10 @@ def main():
     p.add_argument("--query", help="Search query or page id, depending on level")
     p.add_argument("--page", help="Page id for L3/page context")
     p.add_argument("--top", type=int, default=6)
+    p.add_argument("--graph", action="store_true", help="Include 1-hop wiki-link expansion in L2/query")
+    p.add_argument("--max-chars", type=int, default=12000, help="Total L2 excerpt character budget")
+    p.add_argument("--max-source-chars", type=int, default=2400, help="Per-page L2 excerpt limit")
+    p.add_argument("--json", action="store_true", help="Structured L2/query output")
 
     # maintain
     p = sub.add_parser("maintain", help="Build a VipinKnowledge maintenance report")
@@ -1324,7 +1385,7 @@ def main():
     psc.add_argument("--apply", action="store_true", help="Write a redacted copy (never overwrites the original)")
     psc.add_argument("--out", help="Output path for the redacted copy")
 
-    args = parser.parse_args()
+    args = parser.parse_args(_normalize_root_option(raw_args))
 
     commands = {
         "status": cmd_status,
@@ -1343,10 +1404,21 @@ def main():
         "scrub": cmd_scrub,
     }
 
-    if args.command in commands:
-        commands[args.command](args)
-    else:
-        parser.print_help()
+    try:
+        if args.command in commands:
+            commands[args.command](args)
+        else:
+            parser.print_help()
+    except SystemExit as exc:
+        if _JSON_ERROR_MODE and isinstance(exc.code, str):
+            _emit_json_error("invalid_request", exc.code)
+            raise SystemExit(2) from None
+        raise
+    except Exception as exc:
+        if _JSON_ERROR_MODE:
+            _emit_json_error("runtime_error", str(exc))
+            raise SystemExit(1) from None
+        raise
 
 
 if __name__ == "__main__":

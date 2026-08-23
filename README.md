@@ -72,6 +72,8 @@ python scripts/wiki.py catalog
 python scripts/wiki.py lint
 python scripts/wiki.py search "agentmemory"
 python scripts/wiki.py context L1 --query "whole-computer maintenance"
+python scripts/wiki.py context L2 --query "uncertainty recommendation" --graph --max-chars 12000
+python scripts/wiki.py context L2 --query "uncertainty recommendation" --graph --json
 python scripts/wiki.py maintain --scope whole-computer --json
 python scripts/wiki.py obsidian export --json
 python scripts/wiki.py obsidian commands --json
@@ -99,6 +101,25 @@ powershell D:\agent-resources\skills\vipin\workstation-maintenance\scripts\Invok
 The file move-plan command defaults to a 30-day age gate and 100-item batch cap for live manifests; recent files are deferred for review instead of placed in executable batches. `Test-MovePlanBatches.ps1` is a non-moving readiness check for every proposed batch, not approval to move files. D-root organization plans move eligible immediate root directories under `D:\_Organized\<bucket>\_RootDirs\` and leave old paths as junctions; locked roots stay classified in place until a later retry. Once broad approval is granted, future agents should execute currently passing low-risk batches without asking for trivial per-batch confirmations.
 
 Compatibility wrappers still exist for older workflows, but `scripts/wiki.py` is the canonical surface.
+
+## Evidence-First Context Packs
+
+`context L2` now returns citation-ready evidence instead of title-only previews. It validates catalog structure, page bindings, content digests, and corpus integrity; a missing, stale, corrupt, or tampered cache is rebuilt read-only in memory without mutating the repository. Catalog generation and retrieval reject Markdown paths that resolve outside the public `wiki/` tree. Retrieval ranks public pages, reserves a seed-balanced minority of the result set for one-hop graph discoveries, selects the most relevant heading-scoped excerpt, and enforces both total and per-source character budgets.
+
+Every excerpt carries a pack-local citation (`[W1]`, `[W2]`, ...), authoritative `wiki/` path, retrieval route, section, and page SHA-256. Provenance is rebound from the live page rather than trusted from catalog metadata. Safe repository-relative source paths and public HTTP(S) locators may be emitted; absolute/UNC/drive-relative paths, traversal, URL credentials/query strings, and private-layer paths are omitted with counts. This prevents a default context pack from publishing workstation layout or private provenance merely because it exists in maintainer frontmatter.
+
+Use `--json` for agent pipelines. Successful JSON mode keeps stdout machine-parseable; usage and runtime failures return a JSON error object on stderr with a non-zero exit status. The documented `--root` option works both before and after the command.
+
+The implementation is dependency-free and locally adapted from four complementary public patterns; no upstream source code is copied:
+
+- [Microsoft GraphRAG local search](https://microsoft.github.io/graphrag/query/local_search/) combines graph relationships with ranked text units and filters them into a bounded context window.
+- [LlamaIndex CitationQueryEngine](https://docs.llamaindex.ai/en/stable/api_reference/query_engine/citation/) exposes citation granularity and source-node metadata.
+- [Quartz backlinks](https://quartz.jzhao.xyz/features/backlinks) and [graph view](https://quartz.jzhao.xyz/features/graph-view) make linked-note neighborhoods navigable.
+- [Khoj search](https://docs.khoj.dev/features/search/) demonstrates local knowledge search over document chunks while keeping self-hosting viable.
+
+Graph expansion is deliberately a minority of the pack: direct lexical evidence remains primary, and high-degree generic hubs are discounted. `--max-chars` limits the sum of excerpt text; metadata is emitted separately so downstream agents can audit what they received.
+
+The `Wiki quality` GitHub Actions workflow runs on both Linux and Windows, compiles every Python script, runs the full standard-library unit suite, enforces public-wiki link/privacy gates, smoke-tests structured evidence output against the real corpus (including provenance safety and deterministic budgets), runs the secret/path safety check, and verifies that read-only retrieval never rewrites `wiki/catalog.json`.
 
 ## Knowledge Workflows
 

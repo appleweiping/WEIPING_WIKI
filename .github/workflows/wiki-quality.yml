@@ -1,0 +1,138 @@
+name: Wiki quality
+
+on:
+  pull_request:
+    paths:
+      - "scripts/**"
+      - "wiki/**"
+      - ".codex/skills/vipin-wiki/**"
+      - ".claude/skills/vipin-wiki/**"
+      - ".wiki-schema.md"
+      - "AGENTS.md"
+      - "CLAUDE.md"
+      - "purpose.md"
+      - "README.md"
+      - "WORKFLOWS.md"
+      - ".github/workflows/wiki-quality.yml"
+  push:
+    branches:
+      - main
+    paths:
+      - "scripts/**"
+      - "wiki/**"
+      - ".codex/skills/vipin-wiki/**"
+      - ".claude/skills/vipin-wiki/**"
+      - ".wiki-schema.md"
+      - "AGENTS.md"
+      - "CLAUDE.md"
+      - "purpose.md"
+      - "README.md"
+      - "WORKFLOWS.md"
+      - ".github/workflows/wiki-quality.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: wiki-quality-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  verify:
+    name: Verify (${{ matrix.os }})
+    runs-on: ${{ matrix.os }}
+    timeout-minutes: 15
+    strategy:
+      fail-fast: false
+      matrix:
+        os:
+          - ubuntu-latest
+          - windows-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+
+      - name: Set up Python
+        uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97 # v7.0.0
+        with:
+          python-version: "3.12"
+
+      - name: Compile and run unit tests
+        run: |
+          python -m compileall -q scripts
+          python -m unittest discover -s scripts -p "test*.py" -v
+
+      - name: Enforce public-wiki lint gates
+        shell: python
+        run: |
+          import sys
+          from pathlib import Path
+
+          sys.path.insert(0, "scripts")
+          from wiki_core import lint_wiki
+
+          report = lint_wiki(Path(".").resolve())
+          fatal = ("broken_links", "ambiguous_links", "missing_from_index", "private_leaks")
+          failures = {key: report.get(key, []) for key in fatal if report.get(key)}
+          if failures:
+              for key, items in failures.items():
+                  print(f"::error title={key}::{len(items)} issue(s)")
+                  for item in items[:20]:
+                      print(f"- {item}")
+              raise SystemExit(1)
+          print("Public wiki lint gates passed.")
+
+      - name: Smoke-test citation-ready context output
+        shell: python
+        run: |
+          import json
+          import re
+          import subprocess
+          import sys
+
+          command = [
+              sys.executable,
+              "scripts/wiki.py",
+              "context",
+              "L2",
+              "--query",
+              "LLM recommendation uncertainty",
+              "--top",
+              "3",
+              "--graph",
+              "--json",
+              "--max-chars",
+              "2400",
+              "--max-source-chars",
+              "900",
+              "--root",
+              ".",
+          ]
+          result = subprocess.run(command, capture_output=True, text=True, check=False)
+          assert result.returncode == 0, result.stderr
+          assert result.stderr == "", result.stderr
+          payload = json.loads(result.stdout)
+          assert payload["returned"] >= 2, payload
+          assert payload["excerpt_chars_used"] <= payload["excerpt_char_budget"], payload
+          for index, item in enumerate(payload["citations"], 1):
+              assert item["citation_id"] == f"W{index}", item
+              assert item["path"].startswith("wiki/"), item
+              assert re.fullmatch(r"[0-9a-f]{64}", item["page_sha256"]), item
+              assert item["excerpt"], item
+              for source in item["source_pages"] + item["source_files"]:
+                  assert not re.match(r"(?i)^[a-z]:[\\/]", source), item
+                  assert not source.startswith(("/", "\\", "~")), item
+                  assert ".." not in source.replace("\\", "/").split("/"), item
+                  assert "wiki-private" not in source.casefold(), item
+                  assert "raw/private-" not in source.casefold(), item
+          print("Evidence-pack smoke test passed.")
+
+      - name: Safety and repository cleanliness
+        shell: pwsh
+        run: |
+          ./scripts/Test-PrePushSafety.ps1 -Path . -SkipHistory -ScanUntracked
+          git diff --check
+          git diff --exit-code -- wiki/catalog.json
