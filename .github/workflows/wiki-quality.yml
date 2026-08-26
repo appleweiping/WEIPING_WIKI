@@ -4,6 +4,7 @@ on:
   pull_request:
     paths:
       - "scripts/**"
+      - "site/**"
       - "wiki/**"
       - ".codex/skills/vipin-wiki/**"
       - ".claude/skills/vipin-wiki/**"
@@ -13,12 +14,15 @@ on:
       - "purpose.md"
       - "README.md"
       - "WORKFLOWS.md"
+      - ".github/workflows/deploy.yml"
+      - ".github/workflows/pages-health.yml"
       - ".github/workflows/wiki-quality.yml"
   push:
     branches:
       - main
     paths:
       - "scripts/**"
+      - "site/**"
       - "wiki/**"
       - ".codex/skills/vipin-wiki/**"
       - ".claude/skills/vipin-wiki/**"
@@ -28,6 +32,8 @@ on:
       - "purpose.md"
       - "README.md"
       - "WORKFLOWS.md"
+      - ".github/workflows/deploy.yml"
+      - ".github/workflows/pages-health.yml"
       - ".github/workflows/wiki-quality.yml"
   workflow_dispatch:
 

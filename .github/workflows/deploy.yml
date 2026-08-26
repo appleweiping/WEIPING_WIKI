@@ -14,10 +14,7 @@ on:
     - cron: "17 3 * * 0"
   workflow_dispatch:
 
-permissions:
-  contents: read
-  pages: write
-  id-token: write
+permissions: {}
 
 concurrency:
   group: pages
@@ -26,9 +23,15 @@ concurrency:
 jobs:
   build:
     runs-on: ubuntu-latest
+    timeout-minutes: 30
+    permissions:
+      contents: read
+      pages: read
     steps:
       - name: Checkout wiki
-        uses: actions/checkout@v5
+        uses: actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09 # v5
+        with:
+          persist-credentials: false
 
       - name: Validate wiki catalog and lint gates
         run: |
@@ -64,16 +67,17 @@ jobs:
           PY
 
       - name: Checkout Quartz
-        uses: actions/checkout@v5
+        uses: actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09 # v5
         with:
           repository: jackyzha0/quartz
           # Pinned to a verified-good commit so upstream v4 drift cannot break deploys.
           # Bump deliberately after testing build-site.ps1 locally.
           ref: d25a6eabf96751ffca56f8a8139272def7a65041
           path: .quartz-build
+          persist-credentials: false
 
       - name: Setup Node
-        uses: actions/setup-node@v5
+        uses: actions/setup-node@a0853c24544627f65ddf259abe73b1d18a591444 # v5
         with:
           node-version: 22
           cache: npm
@@ -92,9 +96,15 @@ jobs:
           cp site/quartz.layout.ts .quartz-build/quartz.layout.ts
           cp site/custom.scss .quartz-build/quartz/styles/custom.scss
 
+      - name: Resolve GitHub Pages URL
+        id: pages
+        uses: actions/configure-pages@45bfe0192ca1faeb007ade9deae92b16b8254a0d # v6
+
       - name: Build Quartz
         run: npx quartz build -d content -o public
         working-directory: .quartz-build
+        env:
+          QUARTZ_BASE_URL: ${{ steps.pages.outputs.base_url }}
 
       - name: Verify Quartz artifact
         run: |
@@ -113,11 +123,8 @@ jobs:
             exit 1
           fi
 
-      - name: Setup Pages
-        uses: actions/configure-pages@v6
-
       - name: Upload Pages artifact
-        uses: actions/upload-pages-artifact@v4
+        uses: actions/upload-pages-artifact@7b1f4a764d45c48632c6b24a0339c27f5614fb0b # v4
         with:
           path: .quartz-build/public
 
@@ -127,23 +134,42 @@ jobs:
       url: ${{ steps.deployment.outputs.page_url }}
     needs: build
     runs-on: ubuntu-latest
+    timeout-minutes: 20
+    permissions:
+      pages: write
+      id-token: write
     steps:
       - name: Deploy to GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@v5
+        uses: actions/deploy-pages@cd2ce8fcbc39b97be8ca5fce6e763baed58fa128 # v5
 
       - name: Verify deployed site
         run: |
+          set -u
+
           url="${{ steps.deployment.outputs.page_url }}"
+          last_status="not requested"
+          last_url="${url}"
           for i in {1..12}; do
-            curl -LfsS "${url}?deploy-check=${GITHUB_RUN_ID}-${i}" -o /tmp/site.html || true
-            if grep -q 'id="quartz-root"' /tmp/site.html && grep -q 'Command Center' /tmp/site.html; then
-              echo "Verified Quartz wiki home at ${url}"
-              exit 0
+            if response="$(curl --location --silent --show-error \
+              --connect-timeout 5 --max-time 20 \
+              --output /tmp/site.html \
+              --write-out '%{http_code}\t%{url_effective}' \
+              "${url}?deploy-check=${GITHUB_RUN_ID}-${i}")"; then
+              IFS=$'\t' read -r last_status last_url <<< "${response}"
+              if [[ "${last_status}" == "200" ]] \
+                && grep -Fq 'id="quartz-root"' /tmp/site.html \
+                && grep -Fq 'Command Center' /tmp/site.html; then
+                echo "Verified Quartz wiki home at ${last_url}"
+                exit 0
+              fi
+            else
+              last_status="transport error"
             fi
+            echo "Deployment not ready (attempt ${i}/12, status: ${last_status}, URL: ${last_url})."
             sleep 10
           done
-          echo "Deployed site did not serve the Quartz wiki home." >&2
+          echo "Deployed site did not serve the Quartz wiki home (last status: ${last_status}, URL: ${last_url})." >&2
           echo "First headings seen:" >&2
           grep -oE '<h[12][^>]*>[^<]+' /tmp/site.html | head -10 >&2 || true
           exit 1

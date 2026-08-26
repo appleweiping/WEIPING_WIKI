@@ -7,6 +7,7 @@ on:
 
 permissions:
   contents: read
+  pages: read
 
 concurrency:
   group: pages-health
@@ -15,25 +16,107 @@ concurrency:
 jobs:
   verify:
     runs-on: ubuntu-latest
+    timeout-minutes: 5
     steps:
+      - name: Resolve GitHub Pages URL
+        id: pages
+        uses: actions/configure-pages@45bfe0192ca1faeb007ade9deae92b16b8254a0d # v6
+
       - name: Verify public site is Quartz
+        env:
+          PAGES_URL: ${{ steps.pages.outputs.base_url }}
         run: |
-          url="https://appleweiping.github.io/vipin-wiki/"
-          curl -LfsS "${url}?health-check=${GITHUB_RUN_ID}" -o /tmp/site.html
+          set -euo pipefail
 
-          grep -q 'id="quartz-root"' /tmp/site.html
-          grep -q 'Command Center' /tmp/site.html
-          grep -q 'postscript.js' /tmp/site.html
-          grep -q 'contentIndex.json' /tmp/site.html
-
-          if grep -q 'markdown-body' /tmp/site.html; then
-            echo "Site is being served as GitHub Markdown/README instead of Quartz." >&2
+          if [[ -z "${PAGES_URL}" ]]; then
+            echo "::error title=Pages metadata unavailable::GitHub Pages did not return a base URL."
             exit 1
           fi
 
-          if grep -q 'Operating Contract' /tmp/site.html; then
-            echo "Site root appears to be README.md instead of wiki/home.md." >&2
+          url="${PAGES_URL%/}/"
+          page=/tmp/site.html
+          failed=0
+
+          if ! response="$(curl --location --silent --show-error \
+            --retry 3 --retry-delay 2 --retry-all-errors \
+            --retry-max-time 45 --connect-timeout 5 --max-time 20 \
+            --output "${page}" \
+            --write-out '%{http_code}\t%{url_effective}' \
+            "${url}?health-check=${GITHUB_RUN_ID}")"; then
+            echo "::error title=Pages request failed::Could not fetch ${url} after retries."
             exit 1
           fi
 
-          echo "Pages health check passed: ${url} is serving the Quartz wiki home."
+          IFS=$'\t' read -r status effective_url <<< "${response}"
+          if [[ "${status}" != "200" ]]; then
+            echo "::error title=Pages request failed::${effective_url} returned HTTP ${status}."
+            exit 1
+          fi
+
+          require_marker() {
+            local marker="$1"
+            local label="$2"
+            if ! grep -Fq "${marker}" "${page}"; then
+              echo "::error title=Missing Quartz marker::${label} was not found at ${effective_url}."
+              failed=1
+            fi
+          }
+
+          reject_marker() {
+            local marker="$1"
+            local message="$2"
+            if grep -Fq "${marker}" "${page}"; then
+              echo "::error title=Unexpected page content::${message}"
+              failed=1
+            fi
+          }
+
+          check_asset() {
+            local asset="$1"
+            local asset_response
+            local asset_status
+            local asset_url
+
+            if ! asset_response="$(curl --location --silent --show-error \
+              --retry 3 --retry-delay 2 --retry-all-errors \
+              --retry-max-time 45 --connect-timeout 5 --max-time 20 \
+              --range 0-0 \
+              --output /dev/null \
+              --write-out '%{http_code}\t%{url_effective}' \
+              "${url}${asset}")"; then
+              echo "::error title=Quartz asset unavailable::Could not fetch ${url}${asset} after retries."
+              failed=1
+              return
+            fi
+
+            IFS=$'\t' read -r asset_status asset_url <<< "${asset_response}"
+            if [[ "${asset_status}" != "200" && "${asset_status}" != "206" ]]; then
+              echo "::error title=Quartz asset unavailable::${asset_url} returned HTTP ${asset_status}."
+              failed=1
+            fi
+          }
+
+          require_marker 'id="quartz-root"' 'Quartz root element'
+          require_marker 'Command Center' 'wiki home marker'
+          require_marker 'postscript.js' 'Quartz client script reference'
+          require_marker 'contentIndex.json' 'Quartz search index reference'
+
+          reject_marker 'markdown-body' 'Site is being served as GitHub Markdown/README instead of Quartz.'
+          reject_marker 'Operating Contract' 'Site root appears to be README.md instead of wiki/home.md.'
+
+          check_asset 'postscript.js'
+          check_asset 'static/contentIndex.json'
+
+          if (( failed != 0 )); then
+            exit 1
+          fi
+
+          {
+            echo "### Pages health check passed"
+            echo
+            echo "- Site: ${effective_url}"
+            echo "- Quartz home markers: present"
+            echo "- Client script and content index: reachable"
+          } >> "${GITHUB_STEP_SUMMARY}"
+
+          echo "Pages health check passed: ${effective_url} is serving the Quartz wiki home."

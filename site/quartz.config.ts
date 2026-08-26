@@ -1,15 +1,20 @@
 import { QuartzConfig } from "./quartz/cfg"
 import * as Plugin from "./quartz/plugins"
 
+const configuredBaseUrl = process.env.QUARTZ_BASE_URL?.trim()
+const baseUrl =
+  configuredBaseUrl?.replace(/^https?:\/\//, "").replace(/\/+$/, "") ||
+  "appleweiping.github.io/WEIPING_WIKI"
+
 const config: QuartzConfig = {
   configuration: {
-    pageTitle: "vipin wiki",
+    pageTitle: "Weiping Wiki",
     pageTitleSuffix: "",
     enableSPA: true,
     enablePopovers: true,
     analytics: null,
     locale: "en-US",
-    baseUrl: "appleweiping.github.io/vipin-wiki",
+    baseUrl,
     ignorePatterns: [
       "**/_templates/**",
       "**/*.json",
